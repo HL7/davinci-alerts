@@ -38,5 +38,5 @@ logging,progress
 topofpage,TRUE
 allviews,TRUE
 mappings,FALSE
-npm-name,l7.fhir.us.davinci-alerts
+npm-name,hl7.fhir.us.davinci-alerts
 version,4.0.0

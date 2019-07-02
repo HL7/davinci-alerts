@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="l7.fhir.us.davinci-alerts-0.0.0"/>
+  <id value="hl7.fhir.us.davinci-alerts-0.0.0"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
     <valueString value="/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/resources"/>
   </extension>
@@ -14,7 +14,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
     <valueString value="/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/pages"/>
   </extension>
-  <url value="http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/l7.fhir.us.davinci-alerts-0.0.0"/>
+  <url value="http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts-0.0.0"/>
   <version value="0.0.0"/>
   <name value="DaVinciAlerts"/>
   <title value="Da Vinci Alerts"/>
@@ -33,7 +33,7 @@
     </coding>
   </jurisdiction>
   <copyright value="Used by permission of HL7 International - Clinical Decision Support Work Group, all rights reserved Creative Commons License"/>
-  <packageId value="l7.fhir.us.davinci-alerts"/>
+  <packageId value="hl7.fhir.us.davinci-alerts"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.0"/>
   <fhirVersion value="4.0.0"/>

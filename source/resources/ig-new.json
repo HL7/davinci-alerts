@@ -1,6 +1,6 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "l7.fhir.us.davinci-alerts-0.0.0",
+  "id" : "hl7.fhir.us.davinci-alerts-0.0.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
     "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/resources"
@@ -17,7 +17,7 @@
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
     "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/pages"
   }],
-  "url" : "http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/l7.fhir.us.davinci-alerts-0.0.0",
+  "url" : "http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts-0.0.0",
   "version" : "0.0.0",
   "name" : "DaVinciAlerts",
   "title" : "Da Vinci Alerts",
@@ -36,7 +36,7 @@
     }]
   }],
   "copyright" : "Used by permission of HL7 International - Clinical Decision Support Work Group, all rights reserved Creative Commons License",
-  "packageId" : "l7.fhir.us.davinci-alerts",
+  "packageId" : "hl7.fhir.us.davinci-alerts",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.0",
   "4.0.0"],
