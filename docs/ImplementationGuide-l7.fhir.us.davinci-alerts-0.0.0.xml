@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="l7.fhir.us.davinci-alerts-0.0.0"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>DaVinciAlerts</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/l7.fhir.us.davinci-alerts-0.0.0</pre></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/l7.fhir.us.davinci-alerts-0.0.0"/>
+  <version value="0.0.0"/>
+  <name value="DaVinciAlerts"/>
+  <title value="Da Vinci Alerts"/>
+  <status value="draft"/>
+  <publisher value="HL7 International - Clinical Decision Support Work Group"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cds/index.cfm"/>
+    </telecom>
+  </contact>
+  <copyright value="Used by permission of HL7 International - Clinical Decision Support Work Group, all rights reserved Creative Commons License"/>
+  <packageId value="l7.fhir.us.davinci-alerts"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.0"/>
+  <definition>
+    <grouping>
+      <name value="base"/>
+    </grouping>
+    <grouping id="alerts-communication-spreadsheet.xml">
+      <name value="AlertsCommunication"/>
+    </grouping>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CapabilityStatement-server.html"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/server"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CodeSystem-blah-codes.html"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/blah-codes"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CapabilityStatement-client.html"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/client"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-blah-codes.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/blah-codes"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-alerts-communication.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/alerts-communication"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <page>
+      <nameUrl value="index.html"/>
+      <title value="Home"/>
+      <generation value="markdown"/>
+      <page>
+        <nameUrl value="guidance.html"/>
+        <title value="General Guidance"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="profiles.html"/>
+        <title value="Profiles and Extensions"/>
+        <generation value="markdown"/>
+        <page>
+          <nameUrl value="StructureDefinition-alerts-communication.html"/>
+          <title value="StructureDefinition Alerts Communication"/>
+          <generation value="generated"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="operations.html"/>
+        <title value="Operations"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="terminology.html"/>
+        <title value="Terminology"/>
+        <generation value="markdown"/>
+        <page>
+          <nameUrl value="ValueSet-blah-codes.html"/>
+          <title value="ValueSet Blah Codes"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="CodeSystem-blah-codes.html"/>
+          <title value="CodeSystem Blah Codes"/>
+          <generation value="generated"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="searchparameters.html"/>
+        <title value="Search Parameters"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="capstatements.html"/>
+        <title value="Capability Statements"/>
+        <generation value="markdown"/>
+        <page>
+          <nameUrl value="CapabilityStatement-server.html"/>
+          <title value="CapabilityStatement Server"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="CapabilityStatement-client.html"/>
+          <title value="CapabilityStatement Client"/>
+          <generation value="generated"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="security.html"/>
+        <title value="Security"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="downloads.html"/>
+        <title value="Downloads"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="all-examples.html"/>
+        <title value="All Examples"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="toc.html"/>
+        <title value="Table of Contents"/>
+        <generation value="html"/>
+      </page>
+    </page>
+  </definition>
+</ImplementationGuide>
