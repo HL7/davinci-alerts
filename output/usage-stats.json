@@ -1,0 +1,34 @@
+{
+  "package": "hl7.fhir.us.davinci-alerts",
+  "version": "0.0.0",
+  "fhirVersion": "4.0.0",
+  "extensions": [],
+  "profiles": {
+    "Communication": [
+      {
+        "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/alerts-communication",
+        "title": "Davinci Alerts Communication Profile"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation": [
+      "CapabilityStatement.rest.resource.interaction"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ]
+  }
+}
