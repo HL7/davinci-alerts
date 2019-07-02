@@ -16,3 +16,13 @@ Since this is a push transaction, the solution may require some additional work 
 http://confluence.hl7.org:8090/pages/viewpage.action?pageId=51225446
 
 ---
+
+Note: a build takes 2-3 minutes after a commit to complete. You can...
+
+Check the build progress on [Zulip committers notification stream](https://chat.fhir.org/#narrow/stream/179297-committers.2Fnotification/topic/ig-build)
+
+Find your rendered IG automatically available at
+http://build.fhir.org/ig/HL7/davinci-alerts/branches/master/index.html
+
+Find debugging info about the build
+http://build.fhir.org/ig/HL7/davinci-alerts/branches/master/build.log
