@@ -23,7 +23,7 @@ The following Table summarizes the Alert Scenarios and the Resources that may be
 
 {% include examplebutton_default.html example="example" b_title = "Example Button bar" %}
 
-
+FOO
 
 blah blah blah
 
