@@ -1,5 +1,5 @@
 Configuration Parameter,Configuration Value ( use '|' for lists)
-onlyJson,TRUE
+onlyJson,FALSE
 igtemplate-dir,/Users/ehaas/Documents/FHIR/Davinci-Alerts/
 working-dir,/Users/ehaas/Documents/FHIR/Davinci-Alerts/
 title,Da Vinci Alerts

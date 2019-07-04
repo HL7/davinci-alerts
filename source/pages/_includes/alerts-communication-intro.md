@@ -1,25 +1,44 @@
+{% assign base_id = {{page.id}} %}
+{% assign base_type = {{site.data.structuredefinitions.[base_id].type}} %}
 
-{% assign id = {{page.id}} %}
-source file: source/pages/\_includes/{{id}}-intro.md
+This profile sets minimum expectations for the [{{base_type}}] resource to record, search and fetch [resource content] associated with a patient.  It identifies the mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the {{base_type}} resource when using this profile.
 
-{{site.data.structuredefinitions.[id].description}}
+**Example Usage Scenarios:**
 
-#### Scope and Usage
+The following are example usage scenarios for the {{base_type}}
+ profile:
 
-scope and usage text here
+-   foo
+-   bar
 
-#### Mandatory Data Elements and Terminology
+### Mandatory and Must Support Data Elements
 
-The following data-elements are mandatory (i.e data MUST be present). blah blah blah
+The following data-elements are mandatory (i.e data MUST be present) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.
 
-**must have:**
+**Each {{{base_type}} must have:**
 
-1. blah
-1. blah
-1. blah
+1.  a status
+1.  a category code of `alert`
+1.  a patient
+1.  a code representing the purpose of the alert
+1.  the Encounter
+1.  who sent the alert
 
-**Additional Profile specific implementation guidance:**
+**Each {{base_type}} must support:**
 
-#### Examples
+1.  a business identifier
+1.  an alert priority code
+1.  coverage information
+1.  who received the alert
+1.  supporting information in the form of free text or references to attachment(s) or resource(s) for the recipient.
 
-- list examples here
+
+**Profile specific implementation guidance:**
+
+- ...todo...
+
+### Examples
+
+- [{{base_type}}-example](Communication-example-1.html)
+
+{% include link-list.md %}

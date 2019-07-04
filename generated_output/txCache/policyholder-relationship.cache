@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/policyholder-relationship",
+  "code" : "self"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7.org/fhir/policyholder-relationship\" is not known for the code \"self\"; The code provided (http://hl7.org/fhir/policyholder-relationship#self) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------

@@ -11,3 +11,5 @@
 [FHIR Version 3.0.1]: {{site.data.fhir.path}} "FHIR Specification Home Page"
 [Examples]: all-examples.html
 [Security]: security.html
+[Must Support]: http://hl7.org/fhir/us/core/general-guidance.html#must-support
+[Formal Profile Definition]: #profile

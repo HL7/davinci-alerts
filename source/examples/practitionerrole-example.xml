@@ -1,0 +1,40 @@
+<PractitionerRole xmlns="http://hl7.org/fhir">
+    <id value="example"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+    </meta>
+    <practitioner>
+        <reference value="Practitioner/Practitioner-1011"/>
+        <display value="Brenda Jennings Richard MD"/>
+    </practitioner>
+    <organization>
+        <reference value="Organization/acme-lab"/>
+        <display value="Acme Lab"/>
+    </organization>
+    <code>
+        <coding>
+            <system value="http://nucc.org/provider-taxonomy"/>
+            <code value="261QP2300X"/>
+            <display value="Primary Care"/>
+        </coding>
+    </code>
+    <specialty>
+        <coding>
+            <system value="http://nucc.org/provider-taxonomy"/>
+            <code value="208D00000X"/>
+            <display value="General Practice"/>
+        </coding>
+    </specialty>
+    <location>
+        <reference value="Location/hl7east"/>
+        <display value="Health Level Seven International"/>
+    </location>
+    <endpoint>
+        <reference value="http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71"/>
+        <display value="Westwood Physicians Organization ADT"/>
+    </endpoint>
+    <endpoint>
+        <reference value="http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71"/>
+        <display value="Brenda.Jennings.Richard.MD@direct.example.org"/>
+    </endpoint>
+</PractitionerRole>
