@@ -9,7 +9,7 @@
 	<class>
 		<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
 		<code value="AMB"/>
-		<display value="ambulatory"/> 
+		<display value="ambulatory"/>
 	</class>
 	<type>
 		<coding>
@@ -25,4 +25,9 @@
 		<start value="2015-11-01T17:00:14-05:00"/>
 		<end value="2015-11-01T18:00:14-05:00"/>
 	</period>
+	<location>
+		<location>
+			<reference value="Location/hl7east"/>
+		</location>
+	</location>
 </Encounter>

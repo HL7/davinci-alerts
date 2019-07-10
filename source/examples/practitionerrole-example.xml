@@ -4,11 +4,11 @@
         <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
     </meta>
     <practitioner>
-        <reference value="Practitioner/Practitioner-1011"/>
+        <reference value="Practitioner/example-1"/>
         <display value="Brenda Jennings Richard MD"/>
     </practitioner>
     <organization>
-        <reference value="Organization/acme-lab"/>
+        <reference value="Organization/example-2"/>
         <display value="Acme Lab"/>
     </organization>
     <code>

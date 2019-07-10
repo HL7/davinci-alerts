@@ -23,6 +23,9 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.  the patient encounter
 1.  who sent the alert
 
+Note to Balloters: We are actively seeking input on whether a code representing the purpose of the alert is needed ('Communication.topic').  This concept can be obtained from the associated Encounter resource.  In FHIR, however, context conduction is not assumed and resources must form a complete representation by themselves. The question is whether a coded topic is simply redundant or is the Communication resource an incomplete record of a communication without it.
+{:.note-to-balloters}
+
 **Each {{base_type}} must support:**
 
 1.  a business identifier

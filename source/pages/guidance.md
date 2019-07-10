@@ -44,7 +44,7 @@ FHIR resources can be used to transport patient information relevant to a specif
 
 ### Alert Bundle
 
-Whether as a direct push based transaction or via subscription notification, a common “Alert Bundle” is the FHIR object that is exchanged. This bundle is a `transaction` type bundle that is POSTed to the Alert Receiver's or Intermediary's FHIR endpoint. The complete set of content to make up an Alert Bundle includes the [DaVinci Communication Resource Profile] which provides the necessary context for the alert reason together with various resources pointed to or indirectly connected to the Communication profile, all gathered together into a Bundle for transport and persistence.  Resources associated with the following list of Communication references SHALL be included in the Bundle:
+Whether as a direct push based transaction or via subscription notification, a common “Alert Bundle” is the FHIR object that is exchanged. This bundle is a [`transaction`] type bundle that is POSTed to the Alert Receiver's or Intermediary's FHIR endpoint. The complete set of content to make up an Alert Bundle includes the [DaVinci Communication Resource Profile] which provides the necessary context for the alert reason together with various resources pointed to or indirectly connected to the Communication profile, all gathered together into a Bundle for transport and persistence.  Resources associated with the following list of Communication references SHALL be included in the Bundle:
 
 - `Communication.subject` (Patient resource)
 - `Communication.encounter` (Encounter Resource )
@@ -75,12 +75,13 @@ The Alert Sender notifies the Alert Receiver by pushing the Alert Bundle using t
 
 `POST [base] {?_format=[mime-type]}`
 
-{% include examplebutton_default.html example="push_example" b_title = "Click Here To See Example PUSH Alert Notification (edited for brevity)" %}
+{% include examplebutton_default.html example="push_example" b_title = "Click Here To See Example PUSH Alert Notification" %}
 
 ### FHIR Subscription Based Notification
 
 {:.note-to-balloters}
-Note to Balloters: We are actively seeking input on what additional work is needed to determine the best way to implement subscriptions for alert notification:
+Note to Balloters: We are actively seeking input on what additional work is needed to determine the best way to implement subscriptions for alert notification.  This project recognizes the impact of the Argonaut work on Subscription for R5 and is considering what approach to take to align with that work.
+<br /><br />
 current proposals include:
 <br /><br />
 \1. criteria based on searching the resource that corresponds to the alert event  (for example Encounter for admit/discharge) with the expectation that the subscriber would perform a subsequent query to fetch the supporting data.

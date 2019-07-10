@@ -22,7 +22,7 @@ TODO narrative...
 
 {% include img-portrait.html img="admit_intermediary_flow.svg" caption="Figure 3" %}
 
-{% include examplebutton.html example="example" b_title = "Click Here To See Example PUSH Alert Notification (edited for brevity)" %}
+{% include examplebutton_default.html example="example" b_title = "Click Here To See Example PUSH Alert Notification (edited for brevity)" %}
 <br />
 
 {% include link-list.md %}

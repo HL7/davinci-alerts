@@ -60,6 +60,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Practitioner/example-1"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Bundle/admit-01"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -85,6 +91,12 @@
     <resource>
       <reference>
         <reference value="Coverage/example-1"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Location/hl7east"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>

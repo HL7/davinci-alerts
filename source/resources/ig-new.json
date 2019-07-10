@@ -64,6 +64,12 @@
     },
     {
       "reference" : {
+        "reference" : "Practitioner/example-1"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "Bundle/admit-01"
       },
       "exampleBoolean" : true
@@ -89,6 +95,12 @@
     {
       "reference" : {
         "reference" : "Coverage/example-1"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Location/hl7east"
       },
       "exampleBoolean" : true
     },
