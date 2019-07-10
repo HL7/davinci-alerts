@@ -15,7 +15,10 @@ active: guidance
 ### Introduction
 {:.self-link}
 
-Da Vinci Alerts are transacted either using a FHIR RESTful push or FHIR subscriptions
+FHIR resources can be used to transport patient information relevant to a specific event (e.g. admission, discharge, change in treatment, new diagnosis) to another provider or the health plan to communicate the details of where care was delivered and help to ensure timely follow-up as needed.  This information can be used to build an encounter record in the receiving system with appropriate provenance and make it available to CDS and other local services. Da Vinci Alerts are transacted either using one of the following interactions:
+
+1. A FHIR RESTful push directly to “registered” Alert Receiver or via an Alert Intermediary.  
+1. A FHIR based subscription with notifications being sent to a subscriber who is the Alert Receiver or Alert Intermediary.
 
 ### Preconditions and Assumptions
 
@@ -38,34 +41,53 @@ Da Vinci Alerts are transacted either using a FHIR RESTful push or FHIR subscrip
 - Alerts are transacted either using a FHIR RESTful push or FHIR subscriptions.
 - The “Alert Bundle” is the FHIR object that is exchanged for all alert transactions.
   - The [DaVinci Communication Resource Profile] is always part of the bundle and provides the necessary context for the alert reason.
-  - All supporting data (resources) for each kind of alert is referenced in `Communication.payload` and included in the bundle.
-  - type ‘transaction’
-  - Graph of resources is use case dependent
+
+### Alert Bundle
+
+Whether as a direct push based transaction or via subscription notification, a common “Alert Bundle” is the FHIR object that is exchanged. This bundle is a `transaction` type bundle that is POSTed to the Alert Receiver's or Intermediary's FHIR endpoint. The complete set of content to make up an Alert Bundle includes the [DaVinci Communication Resource Profile] which provides the necessary context for the alert reason together with various resources pointed to or indirectly connected to the Communication profile, all gathered together into a Bundle for transport and persistence.  Resources associated with the following list of Communication references SHALL be included in the Bundle:
+
+- `Communication.subject` (Patient resource)
+- `Communication.encounter` (Encounter Resource )
+-  All supporting data (resources) for each kind of alert is referenced in `Communication.payload`
 
 The following Table summarizes the Alert Scenarios and the Resources that may be referenced in the [Da Vinci Communication Profile] payload element and included in the alert Bundle:
 
 {% include alert_scenarios.md %}
 {: .grid}
 
+### Push Alert Notification
 
-{% include examplebutton_default.html example="example" b_title = "Example Button bar" %}
+The FHIR RESTful PUSH transaction provides a way for a Alert Sender to submit data-of-interest for a particular alert to the Alert Receiver. There is no expectation that the data submitted represents all the data required by the the Alert Reveiver, only that the data is known to be relevant to the triggering event.
 
-FOO
+The table in the previous section list the relevant resources to be included in the Alert Bundle and referenced in the `Communication.payload` element for a particular Alert scenario.   The Alert Receiver simply accepts the submitted data and there is no further expectations. The response to this transaction interactions are defined in the base [FHIR specification].
 
-blah blah blah
+Note to Balloters: We are actively seeking input on what expectations should be defined for Alert delivery
+{:.note-to-balloters}
 
-### More Stuff
+{% include img.html img="push_transaction.svg" caption="Figure 4" %}
 
-inline json example exploiting Rouge to highlight inline comment (errors in json):
+##### Usage
+{:.no_toc}
 
-~~~json
-{
-"foo":  "bar"  \\adding comment here is shown as a error in jekyll,
-"foo2":  "bar2"
-}
-~~~
+The Alert Sender notifies the Alert Receiver by pushing the Alert Bundle using the `transaction` interaction as follows:
 
-#### And More Stuff
+`POST [base] {?_format=[mime-type]}`
+
+{% include examplebutton.html example="example" b_title = "Click Here To See Example PUSH Alert Notification (edited for brevity)" %}
+
+### FHIR Subscription Based Notification
+
+{:.note-to-balloters}
+Note to Balloters: We are actively seeking input on what additional work is needed to determine the best way to implement subscriptions for alert notification:
+current proposals include:
+<br />
+\- criteria based on searching the resource that corresponds to the alert event  (for example Encounter for admit/discharge) with the expectation that the subscriber would perform a subsequent query to fetch the supporting data.
+<br />
+\- criteria based on searching the resource that corresponds to the alert event  (for example Encounter for admit/discharge) **plus** a graph definition to inform the server what Alert Bundle to return with the resource using the [$graph operation]
+<br />
+\- criteria based on searching `Encounter.status` and/or `Encounter.class`**plus** a graph definition to inform the server what Alert Bundle to return with the resource using the [$graph operation]
+<br />
+\- criteria based on searching `Communication.topic` **plus** a graph definition to inform the server what Alert Bundle to return with the resource using the [$graph operation]
 
 
 ---

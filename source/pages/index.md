@@ -136,19 +136,19 @@ There are many potential actors for the roles listed above:
 
 -  *See the [Framework] page for a detailed description of the technical workflow and API guidance*
 
-An event or request triggers an Alert Sender to notify either an Alert Intermediary or Recipient by pushing an "Alert Bundle" object.  This guide defines 2 types of push notifications: 1) a FHIR RESTful POST/PUT to a FHIR endpoint. 2) a FHIR subscription publisher notification to a subscriber endpoint. The basic process diagrams in figure 2 shows the process where the Alert Sender transact directly with the Alert Recipient.  Figure 3 shows the process where the the Alert Sender transact with the Alert Intermediary (akd clearinghouse) which in turn interacts with the Alert Recipient.  Although not represented in the figure, there may be multiple Alert Intermediaries.
+An event or request triggers an Alert Sender to notify either an Alert Intermediary or Recipient by pushing an "Alert Bundle" object.  This guide defines 2 types of push notifications: 1) a FHIR RESTful POST/PUT to a FHIR endpoint. 2) a FHIR subscription publisher notification to a subscriber endpoint. The basic process diagrams in figure 2 shows the process where the Alert Sender transact directly with the Alert Recipient.  Figure 3 shows the process where the the Alert Sender transact with the Alert Intermediary (aka clearinghouse) which in turn interacts with the Alert Recipient.  Although not represented in the figure, there may be multiple Alert Intermediaries.
 
 {% include img-portrait.html img="basic_process.svg" caption="Figure 2" %}
 
 1. Event or request by patient or Healthcare Facility triggers an alert to be sent to an Alert Recipient.
 1. The Alert Sender notifies the Alert Recipient by pushing an "Alert" bundle which includes the Da Vinci Communication Profile and use case dependent supporting resources.
 
-{% include img-portrait.html img="basic_process_intermediary.svg"
+{% include img-portrait.html img="basic_process_int.svg"
  caption="Figure 3" %}
 
 1. Event or request by patient or Healthcare Facility triggers an alert to be sent to an Alert Intermediary ( e.g. clearinghouse).
 1. The Alert Sender notifies the Alert Intermediary by pushing an "Alert" bundle which includes the Da Vinci Communication Profile and use case dependent supporting resources.
-1. The Alert Intermediary subsquently notifies the Alert Recipient by pushing the "Alert" bundle to them.
+1. The Alert Intermediary subsequently notifies the Alert Recipient by pushing the "Alert" bundle to them.
 
 
 ---

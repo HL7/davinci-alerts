@@ -1,0 +1,10 @@
+
+    <!-- ============ Home Page =============== -->
+    <page><nameUrl value="index.html"/><title value="Home"/><generation value="markdown"/>
+
+      <!-- ============ Guidance Page =============== -->
+      <page><nameUrl value="guidance.html"/><title value="General Guidance"/><generation value="markdown"/></page>
+
+
+      <!-- ============ UseCases Page =============== -->
+      <page><nameUrl value="usecases.html"/><title value="Use Cases"/><generation value="markdown"/></page>

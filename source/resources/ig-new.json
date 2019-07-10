@@ -132,6 +132,11 @@
         "generation" : "markdown"
       },
       {
+        "nameUrl" : "usecases.html",
+        "title" : "Use Cases",
+        "generation" : "markdown"
+      },
+      {
         "nameUrl" : "profiles.html",
         "title" : "Profiles and Extensions",
         "generation" : "markdown",

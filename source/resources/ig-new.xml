@@ -128,6 +128,11 @@
         <generation value="markdown"/>
       </page>
       <page>
+        <nameUrl value="usecases.html"/>
+        <title value="Use Cases"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <nameUrl value="profiles.html"/>
         <title value="Profiles and Extensions"/>
         <generation value="markdown"/>
