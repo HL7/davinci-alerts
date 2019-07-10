@@ -63,7 +63,7 @@ The FHIR RESTful PUSH transaction provides a way for a Alert Sender to submit da
 
 The table in the previous section list the relevant resources to be included in the Alert Bundle and referenced in the `Communication.payload` element for a particular Alert scenario.   The Alert Receiver simply accepts the submitted data and there is no further expectations. The response to this transaction interactions are defined in the base [FHIR specification].
 
-Note to Balloters: We are actively seeking input on what expectations should be defined for Alert delivery
+Note to Balloters: We are actively seeking input on what expectations should be defined for Alert delivery. Specifically sender side error handling and receiver side error handling.
 {:.note-to-balloters}
 
 {% include img.html img="push_transaction.svg" caption="Figure 4" %}
