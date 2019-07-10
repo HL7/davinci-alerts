@@ -63,12 +63,13 @@ generated for each patient separately
 Implementation of FHIR R4
 
 ### *Out Of Scope* for the Alert Implementation Guide
-
+- “Endpoint Discovery” and maintenance
 - Creation of the FHIR equivalent of v2 Messaging
+- Distribution beyond FHIR Endpoints (e.g. SMS, email)
 - Bidirectional Work, such as Gaps in Care
 - Alerts without an event
 - Any notification that requires workflow management such as Task
-- Complex content?
+- Complex content
 
 ### Scenarios
 
@@ -98,11 +99,22 @@ will continue on this in future versions of the Implementation Guide.
 -   Work Comp Initial/Visits/Services
 -   Changes in Care Team
 
-### Alert Actors
+### Roles and Actors
 
-There are many potential actors that can generate or receive alerts in
-the healthcare space. Some of those potential actors are listed below:
+#### Alert Roles
 
+- **Alert Sender** - the system responsible for sending the alert, typically operated by the facility or organization where the event occurred
+- **Alert Recipient** – the system responsible for receiving generated alerts from Alert Senders
+-  **Interested Entity** – a system that is interested in receiving alerts for specific events, providers, patients or other predefined criteria
+- **Alert Intermediary** (aka ClearingHouse)– a system that can act a a central point to receive alerts from multiple Alert Senders and distribute alerts to Alert Recipients based on previously defined subscription policies
+
+#### Alert Actors
+
+There are many potential actors for the roles listed above:
+
+{% include img-portrait.html img="alert_actors.svg" caption="Figure 1" %}
+
+<!--
 -   Patient/Caregivers
 -   Care Team - Provider defined treatment relationship
 -   Post-Acute Care Facilities
@@ -118,6 +130,26 @@ the healthcare space. Some of those potential actors are listed below:
 -   HIE/HIN
 -   Social Services
 -   Community Care
+-->
+
+### Workflow Overview
+
+-  *See the [Framework] page for a detailed description of the technical workflow and API guidance*
+
+An event or request triggers an Alert Sender to notify either an Alert Intermediary or Recipient by pushing an "Alert Bundle" object.  This guide defines 2 types of push notifications: 1) a FHIR RESTful POST/PUT to a FHIR endpoint. 2) a FHIR subscription publisher notification to a subscriber endpoint. The basic process diagrams in figure 2 shows the process where the Alert Sender transact directly with the Alert Recipient.  Figure 3 shows the process where the the Alert Sender transact with the Alert Intermediary (akd clearinghouse) which in turn interacts with the Alert Recipient.  Although not represented in the figure, there may be multiple Alert Intermediaries.
+
+{% include img-portrait.html img="basic_process.svg" caption="Figure 2" %}
+
+1. Event or request by patient or Healthcare Facility triggers an alert to be sent to an Alert Recipient.
+1. The Alert Sender notifies the Alert Recipient by pushing an "Alert" bundle which includes the Da Vinci Communication Profile and use case dependent supporting resources.
+
+{% include img-portrait.html img="basic_process_intermediary.svg"
+ caption="Figure 3" %}
+
+1. Event or request by patient or Healthcare Facility triggers an alert to be sent to an Alert Intermediary ( e.g. clearinghouse).
+1. The Alert Sender notifies the Alert Intermediary by pushing an "Alert" bundle which includes the Da Vinci Communication Profile and use case dependent supporting resources.
+1. The Alert Intermediary subsquently notifies the Alert Recipient by pushing the "Alert" bundle to them.
+
 
 ---
 

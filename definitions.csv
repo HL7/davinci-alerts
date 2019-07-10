@@ -7,6 +7,7 @@ status,draft
 publisher,HL7 International - Clinical Decision Support Work Group
 contact.system,url
 contact.value,http://www.hl7.org/Special/committees/cds/index.cfm
+license,
 extensions,
 searches,
 codesystems,
@@ -37,6 +38,5 @@ tool,jekyll
 logging,progress
 topofpage,TRUE
 allviews,TRUE
-mappings,FALSE
 npm-name,hl7.fhir.us.davinci-alerts
 version,4.0.0

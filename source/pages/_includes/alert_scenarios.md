@@ -1,5 +1,5 @@
 {:.grid}
-| ﻿Alert Scenarios                                                   | Resources to include                                                                      | Notes |
+| ﻿Alert Scenarios                                                   | Resources to include in addition to Patient and Encounter                                                                     | Notes |
 |-------------------------------------------------------------------|-------------------------------------------------------------------------------------------|-------|
 | Emergency and Inpatient Admissions                                | US Core R4 Condition                                                                      |       |
 | Emergency and Inpatient Discharges                                | US Core R4 Condition                                                                      |       |

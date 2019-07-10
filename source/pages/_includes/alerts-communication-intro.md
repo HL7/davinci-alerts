@@ -8,8 +8,7 @@ This profile sets minimum expectations for the [{{base_type}}] resource to recor
 The following are example usage scenarios for the {{base_type}}
  profile:
 
--   foo
--   bar
+- Included in the Alert notification bundle when a patient is admitted or discharged.
 
 ### Mandatory and Must Support Data Elements
 
@@ -21,7 +20,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.  a category code of `alert`
 1.  a patient
 1.  a code representing the purpose of the alert
-1.  the Encounter
+1.  the patient encounter
 1.  who sent the alert
 
 **Each {{base_type}} must support:**
@@ -30,12 +29,12 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.  an alert priority code
 1.  coverage information
 1.  who received the alert
-1.  supporting information in the form of free text or references to attachment(s) or resource(s) for the recipient.
+1.  what supporting information was included in the notification in the form of free text or references to attachment(s) or resource(s) for the recipient.
 
 
 **Profile specific implementation guidance:**
 
-- ...todo...
+- The [Alert Scenario] table lists the Resources that may be referenced in the Da Vinci Communication Profile payload element and included in the alert Bundle.
 
 ### Examples
 
