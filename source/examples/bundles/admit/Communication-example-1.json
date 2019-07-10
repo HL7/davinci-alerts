@@ -1,0 +1,76 @@
+{
+  "resourceType": "Communication",
+  "id": "example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/alerts-communication"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-1</p><p><b>meta</b>: </p><p><b>identifier</b>: 2345678901</p><p><b>status</b>: completed</p><p><b>category</b>: Alert <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/communication-category code 'alert' = 'Alert)</span></p><p><b>priority</b>: routine</p><p><b>subject</b>: <a href=\"Patient-example.html\">Generated Summary: id: example; Medical Record Number = 1032702 (USUAL); active; Amy V. Shaw ; ph: 555-555-5555(HOME), amy.shaw@example.com; gender: female; birthDate: Feb 20, 2007</a></p><p><b>topic</b>: Blah <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/davinci-alerts/CodeSystem/blah-codes code 'blah' = 'Blah)</span></p><p><b>about</b>: <a href=\"Coverage-example-1.html\">Generated Summary: id: example-1; DZW9200000000; status: active; <span title=\"Codes: {http://hl7.org/fhir/v3/ActCode HIP}\">health insurance plan policy</span>; subscriberId: DZW9200000000; <span title=\"Codes: {http://hl7.org/fhir/policyholder-relationship self}\">Self</span>; period: Jan 1, 2016, 12:00:00 AM --&gt; (ongoing)</a></p><p><b>encounter</b>: <a href=\"Encounter-example-1.html\">Generated Summary: id: example-1; status: finished; <span title=\"{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">ambulatory</span>; <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99201}\">Office Visit</span>; period: Nov 1, 2015, 2:00:14 PM --&gt; Nov 1, 2015, 3:00:14 PM</a></p><p><b>sent</b>: Jul 4, 2019, 7:01:10 PM</p><p><b>recipient</b>: <a href=\"PractitionerRole-example.html\">Generated Summary: id: example; <span title=\"Codes: {http://nucc.org/provider-taxonomy 261QP2300X}\">Primary Care</span>; <span title=\"Codes: {http://nucc.org/provider-taxonomy 208D00000X}\">General Practice</span></a></p><p><b>sender</b>: <a href=\"Organization-example-2.html\">Generated Summary: id: example-2; 1407071236, 121111111; active; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span>; name: Acme Clinic; ph: (+1) 734-677-7777, customer-service@acme-clinic.org</a></p><blockquote><p><b>payload</b></p><p><b>content</b>: Admit to xyz</p></blockquote><blockquote><p><b>payload</b></p><p><b>content</b>: <a href=\"Encounter-example-1.html\">Generated Summary: id: example-1; status: finished; <span title=\"{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">ambulatory</span>; <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99201}\">Office Visit</span>; period: Nov 1, 2015, 2:00:14 PM --&gt; Nov 1, 2015, 3:00:14 PM</a></p></blockquote><blockquote><p><b>payload</b></p><p><b>content</b>: <a href=\"Condition-example.html\">Generated Summary: id: example; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span>; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span>; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}\">Problem</span>; <span title=\"Codes: {http://snomed.info/sct 442311008}\">Single liveborn, born in hospital</span>; onset: Aug 10, 2016, 12:00:00 AM</a></p></blockquote></div>"
+  },
+  "identifier": [
+    {
+      "system": "urn:oid:1.3.4.5.6.7",
+      "value": "2345678901"
+    }
+  ],
+  "status": "completed",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/communication-category",
+          "code": "alert"
+        }
+      ],
+      "text": "Alert"
+    }
+  ],
+  "priority": "routine",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "topic": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/blah-codes",
+        "code": "blah"
+      }
+    ],
+    "text": "Blah"
+  },
+  "about": [
+    {
+      "reference": "Coverage/example-1"
+    }
+  ],
+  "encounter": {
+    "reference": "Encounter/example-1"
+  },
+  "sent": "2019-07-04T18:01:10-08:00",
+  "recipient": [
+    {
+      "reference": "PractitionerRole/example"
+    }
+  ],
+  "sender": {
+    "reference": "Organization/example-2"
+  },
+  "payload": [
+    {
+      "contentString": "Admit to xyz"
+    },
+    {
+      "contentReference": {
+        "reference": "Encounter/example-1"
+      }
+    },
+    {
+      "contentReference": {
+        "reference": "Condition/example"
+      }
+    }
+  ]
+}

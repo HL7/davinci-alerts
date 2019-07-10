@@ -60,13 +60,19 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Bundle/admit-01"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Patient/example"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Communication/communication-1"/>
+        <reference value="Communication/example-1"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>

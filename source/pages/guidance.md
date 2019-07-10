@@ -55,6 +55,8 @@ The following Table summarizes the Alert Scenarios and the Resources that may be
 {% include alert_scenarios.md %}
 {: .grid}
 
+[Example of an Alert Bundle](Bundle-admit-01.html) for a patient admission.
+
 ### Push Alert Notification
 
 The FHIR RESTful PUSH transaction provides a way for a Alert Sender to submit data-of-interest for a particular alert to the Alert Receiver. There is no expectation that the data submitted represents all the data required by the the Alert Reveiver, only that the data is known to be relevant to the triggering event.
@@ -73,21 +75,21 @@ The Alert Sender notifies the Alert Receiver by pushing the Alert Bundle using t
 
 `POST [base] {?_format=[mime-type]}`
 
-{% include examplebutton.html example="example" b_title = "Click Here To See Example PUSH Alert Notification (edited for brevity)" %}
+{% include examplebutton_default.html example="push_example" b_title = "Click Here To See Example PUSH Alert Notification (edited for brevity)" %}
 
 ### FHIR Subscription Based Notification
 
 {:.note-to-balloters}
 Note to Balloters: We are actively seeking input on what additional work is needed to determine the best way to implement subscriptions for alert notification:
 current proposals include:
-<br />
-\- criteria based on searching the resource that corresponds to the alert event  (for example Encounter for admit/discharge) with the expectation that the subscriber would perform a subsequent query to fetch the supporting data.
-<br />
-\- criteria based on searching the resource that corresponds to the alert event  (for example Encounter for admit/discharge) **plus** a graph definition to inform the server what Alert Bundle to return with the resource using the [$graph operation]
-<br />
-\- criteria based on searching `Encounter.status` and/or `Encounter.class`**plus** a graph definition to inform the server what Alert Bundle to return with the resource using the [$graph operation]
-<br />
-\- criteria based on searching `Communication.topic` **plus** a graph definition to inform the server what Alert Bundle to return with the resource using the [$graph operation]
+<br /><br />
+\1. criteria based on searching the resource that corresponds to the alert event  (for example Encounter for admit/discharge) with the expectation that the subscriber would perform a subsequent query to fetch the supporting data.
+<br /><br />
+\2. criteria based on searching the resource that corresponds to the alert event  (for example Encounter for admit/discharge) **plus** a graph definition to inform the server what Alert Bundle to return with the resource using the [$graph operation]
+<br /><br />
+\3. criteria based on searching `Encounter.status` and/or `Encounter.class`**plus** a graph definition to inform the server what Alert Bundle to return with the resource using the [$graph operation]
+<br /><br />
+\4. criteria based on searching `Communication.topic` **plus** a graph definition to inform the server what Alert Bundle to return with the resource using the [$graph operation]
 
 
 ---

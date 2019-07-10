@@ -39,5 +39,6 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 ### Examples
 
 - [{{base_type}}-example](Communication-example-1.html)
+- [Communication Example in Alert Bundle](Bundle-admit-01.html)
 
 {% include link-list.md %}

@@ -41,9 +41,11 @@
     <resource>
       <reference><reference value="PractitionerRole/example"/></reference><exampleBoolean value="true"/></resource>
     <resource>
+      <reference><reference value="Bundle/admit-01"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
       <reference><reference value="Patient/example"/></reference><exampleBoolean value="true"/></resource>
     <resource>
-      <reference><reference value="Communication/communication-1"/></reference><exampleBoolean value="true"/></resource>
+      <reference><reference value="Communication/example-1"/></reference><exampleBoolean value="true"/></resource>
     <resource>
       <reference><reference value="Organization/example-2"/></reference><exampleBoolean value="true"/></resource>
     <resource>
@@ -61,15 +63,15 @@
     <resource>
       <reference><reference value="StructureDefinition/alerts-communication"/></reference><exampleBoolean value="false"/></resource>
 
-    <!-- ============ Home Page =============== -->
-    <page><nameUrl value="index.html"/><title value="Home"/><generation value="markdown"/>
 
-      <!-- ============ Guidance Page =============== -->
-      <page><nameUrl value="guidance.html"/><title value="General Guidance"/><generation value="markdown"/></page>
+        <!-- ============ Home Page =============== -->
+        <page><nameUrl value="index.html"/><title value="Home"/><generation value="markdown"/>
 
+          <!-- ============ Guidance Page =============== -->
+          <page><nameUrl value="guidance.html"/><title value="General Guidance"/><generation value="markdown"/></page>
 
-      <!-- ============ UseCases Page =============== -->
-      <page><nameUrl value="usecases.html"/><title value="Use Cases"/><generation value="markdown"/></page>
+          <!-- ============ UseCases Page =============== -->
+          <page><nameUrl value="usecases.html"/><title value="Use Cases"/><generation value="markdown"/></page>
 
       <!-- ============ Profiles Page =============== -->
       <page><nameUrl value="profiles.html"/><title value="Profiles and Extensions"/><generation value="markdown"/>

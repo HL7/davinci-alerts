@@ -64,13 +64,19 @@
     },
     {
       "reference" : {
+        "reference" : "Bundle/admit-01"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "Patient/example"
       },
       "exampleBoolean" : true
     },
     {
       "reference" : {
-        "reference" : "Communication/communication-1"
+        "reference" : "Communication/example-1"
       },
       "exampleBoolean" : true
     },
