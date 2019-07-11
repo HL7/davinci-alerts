@@ -44,6 +44,8 @@ FHIR resources can be used to transport patient information relevant to a specif
 
 ### Alert Bundle
 
+The FHIR resources used in Da Vinci Alert transactions form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resource graphs. The FHIR Alert resource graph for the admit and discharge use case is shown in [Figure 2-1]
+
 Whether as a direct push based transaction or via subscription notification, a common “Alert Bundle” is the FHIR object that is exchanged. This bundle is a [`transaction`] type bundle that is POSTed to the Alert Receiver's or Intermediary's FHIR endpoint. The complete set of content to make up an Alert Bundle includes the [DaVinci Communication Resource Profile] which provides the necessary context for the alert reason together with various resources pointed to or indirectly connected to the Communication profile, all gathered together into a Bundle for transport and persistence.  Resources associated with the following list of Communication references SHALL be included in the Bundle:
 
 - `Communication.subject` (Patient resource)
