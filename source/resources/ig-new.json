@@ -112,7 +112,7 @@
     },
     {
       "reference" : {
-        "reference" : "CapabilityStatement/server"
+        "reference" : "CapabilityStatement/alert-sender"
       },
       "exampleBoolean" : false
     },
@@ -124,13 +124,19 @@
     },
     {
       "reference" : {
-        "reference" : "CapabilityStatement/client"
+        "reference" : "CodeSystem/communication-topic"
       },
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "ValueSet/blah-codes"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/communication-topic"
       },
       "exampleBoolean" : false
     },
@@ -147,11 +153,6 @@
       "page" : [{
         "nameUrl" : "guidance.html",
         "title" : "General Guidance",
-        "generation" : "markdown"
-      },
-      {
-        "nameUrl" : "usecases.html",
-        "title" : "Use Cases",
         "generation" : "markdown"
       },
       {
@@ -179,8 +180,18 @@
           "generation" : "generated"
         },
         {
+          "nameUrl" : "ValueSet-communication-topic.html",
+          "title" : "ValueSet Communication Topic",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "CodeSystem-blah-codes.html",
           "title" : "CodeSystem Blah Codes",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "CodeSystem-communication-topic.html",
+          "title" : "CodeSystem Communication Topic",
           "generation" : "generated"
         }]
       },
@@ -194,13 +205,8 @@
         "title" : "Capability Statements",
         "generation" : "markdown",
         "page" : [{
-          "nameUrl" : "CapabilityStatement-server.html",
-          "title" : "CapabilityStatement Server",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "CapabilityStatement-client.html",
-          "title" : "CapabilityStatement Client",
+          "nameUrl" : "CapabilityStatement-alert-sender.html",
+          "title" : "CapabilityStatement Alert Sender",
           "generation" : "generated"
         }]
       },

@@ -2,7 +2,7 @@ title: Da Vinci Alerts
 copyrightyear: "2019" # copyright date for footer
 historypath: "#" # complete path to IG history file use "history" for an example of what this page would look like
 changelink: https://github.com/HL7/davinci-alerts/issues #http://hl7.org/fhir-issues  # for hl7 guides
-summaries: false #true if want custom profile summaries in summary tab
+summaries: trouble #true if want custom profile summaries in summary tab
 diff2: false # true if want to show intermediate differentials - probably never use this.
 build: ci  # choice of ci|ballot|version
 ballot:    #STU version of IG ( if needed for publishing HL7 guides)
@@ -10,10 +10,10 @@ hl7_version:  # not sure what this is for
 hl7_ig: true #  'true'  if HL7 ig
 showXML: false  #'true' if want xml tab'
 showTTL: false  #'true' if want ttl tab'
-showMappings: StructureMap  # 'true' if want to display mappings tab'
+showMappings: true  # 'true' if want to display mappings tab'
 showDefs: false  # 'true' if want to display Definitions tab'
 showExamples: false  # 'true' if want to display Examples tab -currently no template for it'
-showPsuedoJson: true # 'true' if want to display Psuedo JSON profile view'
+showPsuedoJson: false # 'true' if want to display Psuedo JSON profile view'
 showPsuedoXML: # 'true' if want to display Psuedo JSON profile view'
 default_profile_view: 1  # choice of 0|1|2|3 for summary|differential|full|all views in profile
 example_types:  # for matching type to Type

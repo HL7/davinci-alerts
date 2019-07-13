@@ -1,0 +1,32 @@
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-CURRENT/valueset.xsd">
+	<id value="communication-topic"/>
+	<url value="http://hl7.org/fhir/us/davinci-alerts/ValueSet/communication-topic"/>
+	<version value="0.0.0"/>
+	<name value="CommunicationTopicValueSet"/>
+	<title value="Da Vinci Communication Topic ValueSet"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<date value="2019-07-12"/>
+	<publisher value="Da Vinci Project"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.hl7.org/Special/committees/cds/index.cfm"/>
+		</telecom>
+	</contact>
+	<description value="Concepts describing the purpose of the Da Vinci Alert Communication Profile.  These concepts represent a 'starter set' an will be supplemented with additional concept in future versions"/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+			<display value="United States of America"/>
+		</coding>
+	</jurisdiction>
+	<purpose value="Provide Alert Receivers with coded alert context"/>
+	<copyright value="This Content is created by the Da Vinci project and HL7. No copyright acknowledgement is needed, nor are there any license terms to adhere to"/>
+	<compose>
+		<include>
+			<system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/communication-topic"/>
+		</include>
+	</compose>
+</ValueSet>

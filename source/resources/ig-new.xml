@@ -108,7 +108,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/server"/>
+        <reference value="CapabilityStatement/alert-sender"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -120,13 +120,19 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/client"/>
+        <reference value="CodeSystem/communication-topic"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/blah-codes"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/communication-topic"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -143,11 +149,6 @@
       <page>
         <nameUrl value="guidance.html"/>
         <title value="General Guidance"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="usecases.html"/>
-        <title value="Use Cases"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -175,8 +176,18 @@
           <generation value="generated"/>
         </page>
         <page>
+          <nameUrl value="ValueSet-communication-topic.html"/>
+          <title value="ValueSet Communication Topic"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="CodeSystem-blah-codes.html"/>
           <title value="CodeSystem Blah Codes"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="CodeSystem-communication-topic.html"/>
+          <title value="CodeSystem Communication Topic"/>
           <generation value="generated"/>
         </page>
       </page>
@@ -190,13 +201,8 @@
         <title value="Capability Statements"/>
         <generation value="markdown"/>
         <page>
-          <nameUrl value="CapabilityStatement-server.html"/>
-          <title value="CapabilityStatement Server"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="CapabilityStatement-client.html"/>
-          <title value="CapabilityStatement Client"/>
+          <nameUrl value="CapabilityStatement-alert-sender.html"/>
+          <title value="CapabilityStatement Alert Sender"/>
           <generation value="generated"/>
         </page>
       </page>

@@ -1,7 +1,7 @@
 {% assign base_id = {{page.id}} %}
 {% assign base_type = {{site.data.structuredefinitions.[base_id].type}} %}
 
-This profile sets minimum expectations for the [{{base_type}}] resource to record, search and fetch [resource content] associated with a patient.  It identifies the mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the {{base_type}} resource when using this profile.
+{{site.data.structuredefinitions.[base_id].description}}  This profile sets minimum expectations for the [{{base_type}}] resource to record the necessary context for the alert notifications.   It identifies the mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the {{base_type}} resource.
 
 **Example Usage Scenarios:**
 
