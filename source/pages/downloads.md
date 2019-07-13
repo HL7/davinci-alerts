@@ -33,7 +33,4 @@ A downloadable version of this IG is available so it can be hosted locally:
 
 - [Downloadable Copy](full-ig.zip)
 
-add link list to bottom of each page....
-<!-- {% raw %}>{% include link-list.md %} {% endraw %}-->
-
 {% include link-list.md %}

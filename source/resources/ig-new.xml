@@ -114,19 +114,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/blah-codes"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="CodeSystem/communication-topic"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/blah-codes"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -171,18 +159,8 @@
         <title value="Terminology"/>
         <generation value="markdown"/>
         <page>
-          <nameUrl value="ValueSet-blah-codes.html"/>
-          <title value="ValueSet Blah Codes"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="ValueSet-communication-topic.html"/>
           <title value="ValueSet Communication Topic"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="CodeSystem-blah-codes.html"/>
-          <title value="CodeSystem Blah Codes"/>
           <generation value="generated"/>
         </page>
         <page>

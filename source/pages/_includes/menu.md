@@ -16,20 +16,20 @@
   <ul class="dropdown-menu">
 
     <li>
-      <a href="profiles.html">Profiles and Logical Models</a>
+      <a href="profiles.html">Profiles<!-- and Logical Models--></a>
     </li>
 
     <!-- <li>
     <a href="extensions.html">Extensions</a>
   </li>-->
 
-  <li>
+  <!--<li>
     <a href="searchparameters.html">Search Parameters</a>
-  </li>
+  </li>-->
 
-  <li>
+  <!--<li>
     <a href="operations.html">Operations</a>
-  </li>
+  </li>-->
 
   <!--   <li>
   <a href="structuremaps.html">Mappings</a>

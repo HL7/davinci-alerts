@@ -118,19 +118,7 @@
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/blah-codes"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "CodeSystem/communication-topic"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/blah-codes"
       },
       "exampleBoolean" : false
     },
@@ -175,18 +163,8 @@
         "title" : "Terminology",
         "generation" : "markdown",
         "page" : [{
-          "nameUrl" : "ValueSet-blah-codes.html",
-          "title" : "ValueSet Blah Codes",
-          "generation" : "generated"
-        },
-        {
           "nameUrl" : "ValueSet-communication-topic.html",
           "title" : "ValueSet Communication Topic",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "CodeSystem-blah-codes.html",
-          "title" : "CodeSystem Blah Codes",
           "generation" : "generated"
         },
         {

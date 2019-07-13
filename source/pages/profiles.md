@@ -11,6 +11,7 @@ The following Profiles for FHIR *resources* have been defined for this implement
 
 <br />
 
+<!-- {% raw %}
 ### Datatype Profiles
 
 The following Profiles for FHIR *datatypes* have been defined for this implementation guide.
@@ -18,7 +19,7 @@ The following Profiles for FHIR *datatypes* have been defined for this implement
 {% for sd_hash in site.data.structuredefinitions -%}
   {%- assign sd = sd_hash[1] -%}
   {%- if sd.kind  == "complex-type" and sd.type != "Extension" -%}
-    - [{{sd.name}}]({{sd.path}})
+    - [{{sd.name}}]  ({{sd.path}})
   {%- endif -%}
 {%- endfor -%}
 
@@ -31,7 +32,6 @@ These extensions have been defined for this implementation guide.
 
 {% include list-extensions.xhtml %}
 
+{% endraw %} -->
 
 {% include link-list.md %}
-
-<br />

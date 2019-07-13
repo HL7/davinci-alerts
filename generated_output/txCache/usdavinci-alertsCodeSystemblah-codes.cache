@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/blah-codes",
+  "code" : "blah"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7.org/fhir/us/davinci-alerts/CodeSystem/blah-codes\" is not known for the code \"blah\"; The code provided (http://hl7.org/fhir/us/davinci-alerts/CodeSystem/blah-codes#blah) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
