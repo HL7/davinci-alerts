@@ -2,7 +2,7 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="blah-codes"/>
 <url value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/blah-codes"/>
-<version value="0.0.0"/>
+<version value="0.1.0"/>
 <name value="BlahCodes"/>
 <status value="draft"/>
 <experimental value="false"/>

@@ -1,6 +1,6 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "hl7.fhir.us.davinci-alerts-0.0.0",
+  "id" : "hl7.fhir.us.davinci-alerts-0.1.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
     "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/resources"
@@ -17,8 +17,8 @@
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
     "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/pages"
   }],
-  "url" : "http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts-0.0.0",
-  "version" : "0.0.0",
+  "url" : "http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts-0.1.0",
+  "version" : "0.1.0",
   "name" : "DaVinciAlerts",
   "title" : "Da Vinci Alerts",
   "status" : "draft",
@@ -44,7 +44,7 @@
     "id" : "uscore",
     "uri" : "http://hl7.org/fhir/us/core",
     "packageId" : "hl7.fhir.us.core",
-    "version" : "current"
+    "version" : "3.0.0"
   }],
   "definition" : {
     "grouping" : [{
@@ -158,7 +158,12 @@
       "generation" : "markdown",
       "page" : [{
         "nameUrl" : "guidance.html",
-        "title" : "General Guidance",
+        "title" : "Framework",
+        "generation" : "markdown"
+      },
+      {
+        "nameUrl" : "usecases.html",
+        "title" : "Use Cases",
         "generation" : "markdown"
       },
       {

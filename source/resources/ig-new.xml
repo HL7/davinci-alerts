@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="hl7.fhir.us.davinci-alerts-0.0.0"/>
+  <id value="hl7.fhir.us.davinci-alerts-0.1.0"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
     <valueString value="/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/resources"/>
   </extension>
@@ -14,8 +14,8 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
     <valueString value="/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/pages"/>
   </extension>
-  <url value="http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts-0.0.0"/>
-  <version value="0.0.0"/>
+  <url value="http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts-0.1.0"/>
+  <version value="0.1.0"/>
   <name value="DaVinciAlerts"/>
   <title value="Da Vinci Alerts"/>
   <status value="draft"/>
@@ -40,7 +40,7 @@
   <dependsOn id="uscore">
     <uri value="http://hl7.org/fhir/us/core"/>
     <packageId value="hl7.fhir.us.core"/>
-    <version value="current"/>
+    <version value="3.0.0"/>
   </dependsOn>
   <definition>
     <grouping>
@@ -154,7 +154,12 @@
       <generation value="markdown"/>
       <page>
         <nameUrl value="guidance.html"/>
-        <title value="General Guidance"/>
+        <title value="Framework"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="usecases.html"/>
+        <title value="Use Cases"/>
         <generation value="markdown"/>
       </page>
       <page>

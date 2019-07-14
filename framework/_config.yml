@@ -1,12 +1,12 @@
 title: Da Vinci Alerts
 copyrightyear: "2019" # copyright date for footer
-historypath: "#" # complete path to IG history file use "history" for an example of what this page would look like
+historypath: "http://hl7.org/fhir/us/davinci-alerts/history.cfml" # complete path to IG history file use "history" for an example of what this page would look like
 changelink: https://github.com/HL7/davinci-alerts/issues #http://hl7.org/fhir-issues  # for hl7 guides
 summaries: trouble #true if want custom profile summaries in summary tab
 diff2: false # true if want to show intermediate differentials - probably never use this.
 build: ci  # choice of ci|ballot|version
-ballot:    #STU version of IG ( if needed for publishing HL7 guides)
-hl7_version:  # not sure what this is for
+ballot: STU1    #STU version of IG ( if needed for publishing HL7 guides)
+hl7_version: "0.1.0"  # not sure what this is for
 hl7_ig: true #  'true'  if HL7 ig
 showXML: false  #'true' if want xml tab'
 showTTL: false  #'true' if want ttl tab'

@@ -1,8 +1,10 @@
 <Coverage xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file://Mac/Home/Documents/FHIR/XML_Schema/R4_fhir-all-xsd/fhir-all.xsd">
 	<id value="example-1"/>
+	<!-- TODO discuss if want to use this or other Coverage profile for alerts
 	<meta>
 		<profile value="http://fhir.org/guides/argonaut-scheduling/StructureDefinition/argo-coverage"/>
 	</meta>
+-->
 	<identifier>
 		<system value="https://www.anthem.com/ca"/>
 		<value value="DZW9200000000"/>
@@ -10,7 +12,7 @@
 	<status value="active"/>
 	<type>
 		<coding>
-			<system value="http://hl7.org/fhir/v3/ActCode"/>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
 			<code value="HIP"/>
 			<display value="health insurance plan policy"/>
 		</coding>
@@ -25,7 +27,7 @@
 	</beneficiary>
 	<relationship>
 		<coding>
-			<system value="http://hl7.org/fhir/policyholder-relationship"/>
+			<system value="http://terminology.hl7.org/CodeSystem/subscriber-relationship"/>
 			<code value="self"/>
 			<display value="Self"/>
 		</coding>

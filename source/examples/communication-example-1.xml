@@ -22,13 +22,14 @@
 	</subject>
 	<topic>
 		<coding>
-			<system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/blah-codes"/>
-			<code value="blah"/>
+			<system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/communication-topic"/>
+			<code value="alert-admit-inpatient"/>
 		</coding>
-		<text value="Blah"/>
+		<text value="Alert Admit Inpatient"/>
 	</topic>
 	<about>
 		<reference value="Coverage/example-1"/>
+		<type value="Coverage"/>
 	</about>
 	<encounter>
 		<reference value="Encounter/example-1"/>

@@ -1,7 +1,7 @@
 <ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-CURRENT/valueset.xsd">
 	<id value="communication-topic"/>
 	<url value="http://hl7.org/fhir/us/davinci-alerts/ValueSet/communication-topic"/>
-	<version value="0.0.0"/>
+	<version value="0.1.0"/>
 	<name value="CommunicationTopicValueSet"/>
 	<title value="Da Vinci Communication Topic ValueSet"/>
 	<status value="active"/>

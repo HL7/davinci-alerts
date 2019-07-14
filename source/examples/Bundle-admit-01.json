@@ -278,7 +278,8 @@
                 },
                 "about": [
                     {
-                        "reference": "Coverage/example-1"
+                        "reference": "Coverage/example-1",
+                        "type": "Coverage"
                     }
                 ],
                 "category": [
@@ -333,11 +334,11 @@
                 "topic": {
                     "coding": [
                         {
-                            "code": "blah",
-                            "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/blah-codes"
+                            "code": "alert-admit-inpatient",
+                            "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/communication-topic"
                         }
                     ],
-                    "text": "Blah"
+                    "text": "Alert Admit Inpatient"
                 },
                 "resourceType": "Communication"
             }

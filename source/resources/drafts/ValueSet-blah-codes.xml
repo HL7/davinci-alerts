@@ -2,7 +2,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="blah-codes"/>
 <url value="http://hl7.org/fhir/us/davinci-alerts/ValueSet/blah-codes"/>
-<version value="0.0.0"/>
+<version value="0.1.0"/>
 <name value="BlahCodes"/>
 <status value="draft"/>
 <date value="2018-03-13T08:16:34-07:00"/>

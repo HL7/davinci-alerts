@@ -6,7 +6,7 @@
 [Conformance Requirements for Client]: CapabilityStatement-client.html "Conformance Requirements for Client Page"
 [Capability Statements]: capstatements.html
 [Terminology]: terminology.html "Terminology Page"
-[Profiles and Extensions]: profiles.html "Profiles and Extensions Page"
+[Profiles]: profiles.html "Profiles and Extensions Page"
 [Operations]: operations.html "Operations Page"
 [Examples]: all-examples.html
 [Security]: security.html

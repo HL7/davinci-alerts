@@ -30,11 +30,15 @@
         <display value="Health Level Seven International"/>
     </location>
     <endpoint>
+      <!-- comment out endpoint resource to pass qa for this version of ig
         <reference value="http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71"/>
+      -->
         <display value="Westwood Physicians Organization ADT"/>
     </endpoint>
     <endpoint>
+      <!-- comment out endpoint resource to pass qa for this version of ig
         <reference value="http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71"/>
+      -->
         <display value="Brenda.Jennings.Richard.MD@direct.example.org"/>
     </endpoint>
 </PractitionerRole>
