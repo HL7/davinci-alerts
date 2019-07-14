@@ -112,7 +112,25 @@
     },
     {
       "reference" : {
+        "reference" : "CapabilityStatement/alert-intermediary-client"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "CapabilityStatement/alert-sender"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CapabilityStatement/alert-recipient"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CapabilityStatement/alert-intermediary-server"
       },
       "exampleBoolean" : false
     },
@@ -183,8 +201,23 @@
         "title" : "Capability Statements",
         "generation" : "markdown",
         "page" : [{
+          "nameUrl" : "CapabilityStatement-alert-intermediary-client.html",
+          "title" : "CapabilityStatement Alert Intermediary Client",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "CapabilityStatement-alert-sender.html",
           "title" : "CapabilityStatement Alert Sender",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "CapabilityStatement-alert-recipient.html",
+          "title" : "CapabilityStatement Alert Recipient",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "CapabilityStatement-alert-intermediary-server.html",
+          "title" : "CapabilityStatement Alert Intermediary Server",
           "generation" : "generated"
         }]
       },

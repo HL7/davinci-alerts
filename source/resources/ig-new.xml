@@ -108,7 +108,25 @@
     </resource>
     <resource>
       <reference>
+        <reference value="CapabilityStatement/alert-intermediary-client"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="CapabilityStatement/alert-sender"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CapabilityStatement/alert-recipient"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CapabilityStatement/alert-intermediary-server"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -179,8 +197,23 @@
         <title value="Capability Statements"/>
         <generation value="markdown"/>
         <page>
+          <nameUrl value="CapabilityStatement-alert-intermediary-client.html"/>
+          <title value="CapabilityStatement Alert Intermediary Client"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="CapabilityStatement-alert-sender.html"/>
           <title value="CapabilityStatement Alert Sender"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="CapabilityStatement-alert-recipient.html"/>
+          <title value="CapabilityStatement Alert Recipient"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="CapabilityStatement-alert-intermediary-server.html"/>
+          <title value="CapabilityStatement Alert Intermediary Server"/>
           <generation value="generated"/>
         </page>
       </page>
