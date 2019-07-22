@@ -13,7 +13,7 @@ active: usecases
 
 ###  Introduction
 
-The use case demonstrates the protocols by the Da Vinci Alerts are transacted between an Alert Sender/Intermediary and an Alert Recipient/Intermediary.
+This use case demonstrates how the Da Vinci Alerts IG framework is implemented to transact an alert between an Alert Sender/Intermediary and an Alert Recipient/Intermediary.
 
 ### Use Case Background
 
@@ -23,7 +23,10 @@ The Provider is notified when:
 
 - A Patient is admitted to the hospital for inpatient or emergency care
 - A Patient is discharged from the hospital
+
+<!--
 - A Patient is transferred from one care unit to another
+-->
 
 ### Graph of FHIR Resources
 
@@ -33,9 +36,9 @@ The following resource graph in figure 7 defines the resources that support the 
 
 ### Push Alert Notification
 
-In the following interaction shown in figures 8 and 9, the HealthCare facility is acting in the role of the Alert Sender and the Alert Recipient can be any of the actors listed in figure 1 on the home page.  To notify the Alert Recipients/Intermediary of an ADT event, the Alert Sender uses a FHIR RESTful push to submit the Alert Bundle to appropiate FHIR endpoints. As shown in figure 3, when an Intermediary successfully receives the notifications, it then subsequently notifies the the Alert Recipients using the same push protocol.
+In the following interaction shown in figures 8 and 9, the HealthCare facility is acting in the role of the Alert Sender and the Alert Recipient can be any of the actors listed in figure 1 on the home page.  To notify the Alert Recipients/Intermediary of an ADT event, the Alert Sender uses $notify operation to submit the Alert Bundle to appropriate FHIR endpoints. As shown in figure 3, when an Intermediary successfully receives the notifications, it can subsequently redistribute the data the end users.  Note that the intermediaries may customize the content based on the end user (for example, withholding data that a particular care team member does not need).
 
-Note to Balloters: We are actively seeking input on whether this guide should limit the expectations of how Alert Intermediaries forward the alerts to the Alert Recievers.  For example using existing data transport protocols such as Direct, SMS or V2 messaging.
+Note to Balloters: We are actively seeking input on whether this guide should limit the expectations of how Alert Intermediaries forward the alerts to the Alert Recipients.  For example using existing data transport protocols such as Direct, SMS or V2 messaging.
 {:.note-to-balloters}
 
 {% include img-portrait.html img="admit_flow.svg" caption="Figure 8" %}
@@ -50,6 +53,8 @@ Note to Balloters: We are actively seeking input on whether this guide should li
 {% include examplebutton_default.html example="notify-example" b_title = "Click Here To See Example PUSH Alert Notification" %}
 <br />
 
+<!--{% raw %}
+
 ### FHIR Subscription Based Notification
 
 The interaction diagram in figure 5 and 6 on the [Framework] page illustrates the sequences of events for subscribing for ADT Alerts and the subsequent notifications when the the event occurs.
@@ -57,5 +62,6 @@ The interaction diagram in figure 5 and 6 on the [Framework] page illustrates th
 {:.note-to-balloters}
 Note to Balloters: We are actively seeking input on what additional work is needed to determine the best way to implement subscriptions for alert notification. See the [FHIR Subscription Based Notification] framework for further details.
 
+{% endraw %}-->
 
 {% include link-list.md %}

@@ -17,7 +17,8 @@ active: guidance
 
 FHIR resources can be used to transport patient information relevant to a specific event (e.g. admission, discharge, change in treatment, new diagnosis) to another provider or the health plan to communicate the details of where care was delivered and help to ensure timely follow-up as needed.  This information can be used to build an encounter record in the receiving system with appropriate provenance and make it available to CDS and other local services. *For the initial phase*, alerts are transacted using the Da Vinci [`$notify`] operation to to push directly to “registered” Alert Recipient or Alert Intermediary.
 
-This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and revision to the Subscription resource for FHIR R5. In a future version this guide, a subscription based notification is planned which will align with the outcomes of the Argonaut project.
+This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5. In a future version this guide, a subscription based notification is planned which will align with the outcomes of the Argonaut project.
+{:.note-to-balloters}
 
 ### Preconditions and Assumptions
 
@@ -35,14 +36,14 @@ This project recognizes the impact of the [Argonaut Clinical Data Subscriptions]
 #### Assumptions
 - Based on FHIR R4 and US Core R4 profiles where applicable
 - Alerts are transacted to an operation endpoint ($notify).
-- The “Alert Bundle” is the FHIR object that is exchanged for all alert transactions.
-  - The [DaVinci Communication Resource Profile] is always part of the bundle and provides the necessary context for the alert reason.
+- The Da Vinci Alerts Bundle Profile is the FHIR object that is exchanged for all alert transactions.
+  - The Da Vinci Alerts Communication Profile is always part of the bundle and provides the necessary context for the alert reason.
 
 ### Alert Bundle
 
 The FHIR resources used in Da Vinci Alert transactions form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resource graphs. The FHIR Alert resource graph for the admit and discharge use case is shown in [Figure 7]
 
-For every alert notification, the FHIR object that is exchanged is the [Da Vinci Alert Bundle Profile]. This bundle is a [`transaction`] type bundle that is POSTed to the Alert Recipient's or Intermediary's FHIR endpoint via a the $notify operation. The complete set of content to make up an Alert Bundle includes the [Da Vinci Communication Resource Profile] which provides the necessary context for the alert reason together with various resources pointed to or indirectly connected to the Communication profile, all gathered together into a Bundle for transport and persistence.  Resources associated with the following list of Communication references SHALL be included in the Bundle:
+For every alert notification, the FHIR object that is exchanged is the [Da Vinci Alert Bundle Profile]. This bundle is a [`transaction`] type bundle that is POSTed to the Alert Recipient's or Intermediary's FHIR endpoint via a the $notify operation. The complete set of content to make up an Alert Bundle includes the [Da Vinci Alerts Communication Profile] which provides the necessary context for the alert reason together with various resources pointed to or indirectly connected to the Communication profile, all gathered together into a Bundle for transport and persistence.  Resources associated with the following list of Communication references SHALL be included in the Bundle:
 
 - `Communication.subject` (Patient resource)
 - `Communication.encounter` (Encounter Resource )
@@ -62,7 +63,7 @@ Note to Balloters: The resources listed for scenarios that are not part of the i
 
 The [`$notify`] operation provides a way for an Alert Sender to submit data-of-interest in an Alert Bundle to the Alert Recipient. There is no expectation that the data submitted represents all the data required by the the Alert Recipient, only that the data is known to be relevant to the triggering event.
 
-The table in the previous section list the relevant resources to be included in the Alert Bundle and referenced in the `Communication.payload` element for a particular Alert scenario.   The Alert Recipient simply accepts and process the submitted data and there is no further expectations. The  response to the `$notify` operation and the transaction Bundle are defined in the base [FHIR specification].
+The table in the previous section list the relevant resources to be included in the Alert Bundle and referenced in the `Communication.payload` element for a particular Alert scenario.   The Alert Recipient simply accepts and process the submitted data and there is no further expectations. The response to the `$notify` operation and the transaction Bundle are defined in the FHIR specification.
 
 Note to Balloters: We are actively seeking input on what expectations should be defined for error handling and and whether there is a need to support "Guaranteed Delivery"
 {:.note-to-balloters}
@@ -72,13 +73,13 @@ Note to Balloters: We are actively seeking input on what expectations should be 
 ##### Usage
 {:.no_toc}
 
-The Alert Sender notifies the Alert Recipient by pushing the Alert Bundle using the `transaction` interaction as follows:
+The `$notify` operation is invoked by the Alert Sender using the `POST` syntax with Alert Bundle in the request body:
 
 `POST [base]Communication/$notify`
 
 {% include examplebutton_default.html example="notify-example" b_title = "Click Here To See Example PUSH Alert Notification" %}
 
-<!--
+<!--{% raw %}
 ### FHIR Subscription Based Notification
 
 {:.note-to-balloters}
@@ -113,7 +114,7 @@ Figure 6 depicts additional subscription interactions for the Alert Intermediary
 <br />
 
 
--->
+{% endraw %}-->
 ---
 
 {% include link-list.md %}

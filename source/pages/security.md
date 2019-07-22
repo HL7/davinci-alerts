@@ -9,4 +9,7 @@ In order to be responsible stewards of data, we will need to follow the data gov
 
 [The FHIR Security and Privacy Module] describes how to protect a patients privacy through de-Identification, pseudonymization, anonymization. FHIR does not mandate a single technical approach to security and privacy; rather, the specification provides a set of building blocks that can be applied to create secure, private systems.
 
+Note to Balloters: We are actively seeking input on security approaches that DaVinci and particularly this IG should adhere to  We are aware of the planned FHIR Data Segmentation for Privacy project.
+{:.note-to-balloters}
+
 {% include link-list.md %}
