@@ -81,11 +81,13 @@ framework as defined may support the other scenarios as listed below and work
 will continue on this in future versions of the Implementation Guide.
 
 #### Initial Phase:
+{:.no_toc}
 
 -   Emergency and Inpatient Admissions
 -   Emergency and Inpatient Discharges
 
 #### Potential Future scenarios to be defined in cooperation with the appropriate HL7 International Working Groups:
+{:.no_toc}
 
 -   Lab Results
 -   Problem with Treatment -- such as drug recall, device recall/issue
