@@ -44,9 +44,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 - [Use cases]\: Exemplar use cases are presented to demonstrate how to implement the framework for a particular event notification.
     - [Admission/Discharge]\: This example shows how to implement an alert for a patient admission.
 - [Profiles]\: This page lists the set of Profiles that are defined in this guide to exchange quality data.
-<!--
-- [Profiles and Extensions]\: This page lists the set of Profiles and Extension that are defined in this guide to exchange quality data.
-- [Operations]\: This page lists the standard FHIR and DEQM defined Operations that are used in the DEQM transactions to exchange quality data.-->
+- [Operations]\: This page lists the standard FHIR and DEQM defined Operations that are used in the DEQM transactions to exchange quality data.
 - [Capability Statements]\: This set of pages describes the expected FHIR capabilities of the various DEQM actors.
 - [Security]\: General security requirements and recommendations for {{site.title}} actors.
 - [Examples]\: List of links to all the examples used in this guide.
@@ -56,7 +54,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 ## Background
 
 
-### *In Scope* for the Initial Version of Alert Implementation Guide
+### *In Scope*
 
 - There must be an event that drives the generation of the Alert
 - The event can be for one or more patients but the Alert will be
@@ -64,7 +62,7 @@ generated for each patient separately
 - The Alert will be based on FHIR R4 and where possible US Core
 Implementation of FHIR R4
 
-### *Out Of Scope* for the Alert Implementation Guide
+### *Out Of Scope*
 - “Endpoint Discovery” and maintenance
 - Creation of the FHIR equivalent of v2 Messaging
 - Distribution beyond FHIR Endpoints (e.g. SMS, email)
@@ -75,15 +73,20 @@ Implementation of FHIR R4
 
 ### Scenarios
 
-Alerts can be generated for many scenarios. The [2019 CMS (need full name)NPRM]
+Alerts can be generated for many scenarios. The [2019 CMS 45 CFR Part 156 NPRM]
 focuses on hospitalization due to significant issues that can occur if a patient
 is not followed appropriately after acute care. The initial version of the Alert
 Implementation Guide will focus on the Admission and Discharge Scenarios. The
 framework as defined may support the other scenarios as listed below and work
 will continue on this in future versions of the Implementation Guide.
 
+#### Initial Phase:
+
 -   Emergency and Inpatient Admissions
 -   Emergency and Inpatient Discharges
+
+#### Potential Future scenarios to be defined in cooperation with the appropriate HL7 International Working Groups:
+
 -   Lab Results
 -   Problem with Treatment -- such as drug recall, device recall/issue
 -   Encounter/Visit Notification
@@ -138,19 +141,19 @@ There are many potential actors for the roles listed above:
 
 -  *See the [Framework] page for a detailed description of the technical workflow and API guidance*
 
-An event or request triggers an Alert Sender to notify either an Alert Intermediary or Recipient by pushing an "Alert Bundle" object.  This guide defines 2 types of push notifications: 1) a FHIR RESTful POST/PUT to a FHIR endpoint. 2) a FHIR subscription publisher notification to a subscriber endpoint. The basic process diagrams in figure 2 shows the process where the Alert Sender transact directly with the Alert Recipient.  Figure 3 shows the process where the the Alert Sender transact with the Alert Intermediary (aka clearinghouse) which in turn interacts with the Alert Recipient.  Although not represented in the figure, there may be multiple Alert Intermediaries.
+An event or request triggers an Alert Sender to notify either an Alert Intermediary or Recipient with an "Alert Bundle" object.  This version of the guide defines single type of push notification: a named [operation] to a FHIR endpoint.  The basic process diagrams in figure 2 shows the process where the Alert Sender transact directly with the Alert Recipient.  Figure 3 shows the process where the the Alert Sender transact with the Alert Intermediary (aka clearinghouse) which in turn interacts with the Alert Recipient.  Although not represented in the figure, there may be multiple Alert Intermediaries.
 
 {% include img-portrait.html img="basic_process.svg" caption="Figure 2" %}
 
-1. Event or request by patient or Healthcare Facility triggers an alert to be sent to an Alert Recipient.
-1. The Alert Sender notifies the Alert Recipient by pushing an "Alert" bundle which includes the Da Vinci Communication Profile and use case dependent supporting resources.
+1. A specific event or request by patient or Healthcare Facility triggers an alert to be sent to an Alert Recipient.
+1. The Alert Sender notifies the Alert Recipient by pushing an "Alert" bundle which includes common resources across all Alerts and use case dependent supporting resources.
 
 {% include img-portrait.html img="basic_process_int.svg"
  caption="Figure 3" %}
 
 1. Event or request by patient or Healthcare Facility triggers an alert to be sent to an Alert Intermediary ( e.g. clearinghouse).
-1. The Alert Sender notifies the Alert Intermediary by pushing an "Alert" bundle which includes the Da Vinci Communication Profile and use case dependent supporting resources.
-1. The Alert Intermediary subsequently notifies the Alert Recipient by pushing the "Alert" bundle to them.
+1. The Alert Sender notifies the Alert Intermediary by pushing an "Alert" bundle which includes common resources across all Alerts and use case dependent supporting resources.
+1. The Alert Intermediary is responsible for the redistribution of the dat and may customize the data based on end user.
 
 
 ---

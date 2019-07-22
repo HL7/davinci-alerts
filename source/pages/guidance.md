@@ -1,5 +1,5 @@
 ---
-title: General Guidance and Definitions
+title: Framework
 layout: default
 active: guidance
 
@@ -15,10 +15,9 @@ active: guidance
 ### Introduction
 {:.self-link}
 
-FHIR resources can be used to transport patient information relevant to a specific event (e.g. admission, discharge, change in treatment, new diagnosis) to another provider or the health plan to communicate the details of where care was delivered and help to ensure timely follow-up as needed.  This information can be used to build an encounter record in the receiving system with appropriate provenance and make it available to CDS and other local services. Da Vinci Alerts are transacted either using one of the following interactions:
+FHIR resources can be used to transport patient information relevant to a specific event (e.g. admission, discharge, change in treatment, new diagnosis) to another provider or the health plan to communicate the details of where care was delivered and help to ensure timely follow-up as needed.  This information can be used to build an encounter record in the receiving system with appropriate provenance and make it available to CDS and other local services. *For the initial phase*, alerts are transacted using the Da Vinci [`$notify`] operation to to push directly to “registered” Alert Recipient or Alert Intermediary.
 
-1. A FHIR RESTful push directly to “registered” Alert Recipient or via an Alert Intermediary.  
-1. A FHIR based subscription with notifications being sent to a subscriber who is the Alert Recipient or Alert Intermediary.
+This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and revision to the Subscription resource for FHIR R5. In a future version this guide, a subscription based notification is planned which will align with the outcomes of the Argonaut project.
 
 ### Preconditions and Assumptions
 
@@ -27,26 +26,23 @@ FHIR resources can be used to transport patient information relevant to a specif
 - There is an event that drives the generation of the Alert.
 - An Alert will be generated for each patient separately.
   - The event can be for one or more patients
-- FHIR R4 RESTful endpoints exist for all actors.
-  - Note that this is a requirement for FHIR RESTful Push transactions and for RestHook channel transactions when using the FHIR subscriptions.  It is not required for other type of subscription channels or FHIR messaging.
+- The Alert Sender has access to the Alert Recipients/Intermediary FHIR endpoints.
 - System level trust exists between the actors.
   - Clients have been authorized by the servers.
   - It is assumed that consent is managed elsewhere.
-- “Endpoint Discovery” i.e., a curated list of where to forward the data  is actively maintained and managed by the Alert Senders and Intermediaries.  These interactions are outside the scope of this specification.
-   - Note that this is needed when transacting alerts using FHIR RESTful push notifications.
-
+- A secure information transport mechanism exists between the actors.
 
 #### Assumptions
 - Based on FHIR R4 and US Core R4 profiles where applicable
-- Alerts are transacted either using a FHIR RESTful push or FHIR subscriptions.
+- Alerts are transacted to an operation endpoint ($notify).
 - The “Alert Bundle” is the FHIR object that is exchanged for all alert transactions.
   - The [DaVinci Communication Resource Profile] is always part of the bundle and provides the necessary context for the alert reason.
 
 ### Alert Bundle
 
-The FHIR resources used in Da Vinci Alert transactions form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resource graphs. The FHIR Alert resource graph for the admit and discharge use case is shown in [Figure 2-1]
+The FHIR resources used in Da Vinci Alert transactions form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resource graphs. The FHIR Alert resource graph for the admit and discharge use case is shown in [Figure 7]
 
-Whether as a direct push based transaction or via subscription notification, a common “Alert Bundle” is the FHIR object that is exchanged. This bundle is a [`transaction`] type bundle that is POSTed to the Alert Recipient's or Intermediary's FHIR endpoint. The complete set of content to make up an Alert Bundle includes the [DaVinci Communication Resource Profile] which provides the necessary context for the alert reason together with various resources pointed to or indirectly connected to the Communication profile, all gathered together into a Bundle for transport and persistence.  Resources associated with the following list of Communication references SHALL be included in the Bundle:
+For every alert notification, the FHIR object that is exchanged is the [Da Vinci Alert Bundle Profile]. This bundle is a [`transaction`] type bundle that is POSTed to the Alert Recipient's or Intermediary's FHIR endpoint via a the $notify operation. The complete set of content to make up an Alert Bundle includes the [Da Vinci Communication Resource Profile] which provides the necessary context for the alert reason together with various resources pointed to or indirectly connected to the Communication profile, all gathered together into a Bundle for transport and persistence.  Resources associated with the following list of Communication references SHALL be included in the Bundle:
 
 - `Communication.subject` (Patient resource)
 - `Communication.encounter` (Encounter Resource )
@@ -57,15 +53,18 @@ The following Table summarizes the Alert Scenarios and the Resources that may be
 {% include alert_scenarios.md %}
 {: .grid}
 
+Note to Balloters: The resources listed for scenarios that are not part of the initial phase are suggestions and will be reviewed and updated when these scenarios are added in future iterations of this IG.
+{:.note-to-balloters}
+
 [Example of an Alert Bundle](Bundle-admit-01.html) for a patient admission.
 
 ### Push Alert Notification
 
-The FHIR RESTful PUSH transaction provides a way for a Alert Sender to submit data-of-interest for a particular alert to the Alert Recipient. There is no expectation that the data submitted represents all the data required by the the Alert Reveiver, only that the data is known to be relevant to the triggering event.
+The [`$notify`] operation provides a way for an Alert Sender to submit data-of-interest in an Alert Bundle to the Alert Recipient. There is no expectation that the data submitted represents all the data required by the the Alert Recipient, only that the data is known to be relevant to the triggering event.
 
-The table in the previous section list the relevant resources to be included in the Alert Bundle and referenced in the `Communication.payload` element for a particular Alert scenario.   The Alert Recipient simply accepts the submitted data and there is no further expectations. The response to this transaction interactions are defined in the base [FHIR specification].
+The table in the previous section list the relevant resources to be included in the Alert Bundle and referenced in the `Communication.payload` element for a particular Alert scenario.   The Alert Recipient simply accepts and process the submitted data and there is no further expectations. The  response to the `$notify` operation and the transaction Bundle are defined in the base [FHIR specification].
 
-Note to Balloters: We are actively seeking input on what expectations should be defined for Alert delivery. Specifically sender side error handling and receiver side error handling.
+Note to Balloters: We are actively seeking input on what expectations should be defined for error handling and and whether there is a need to support "Guaranteed Delivery"
 {:.note-to-balloters}
 
 {% include img.html img="push_transaction.svg" caption="Figure 4" %}
@@ -75,10 +74,11 @@ Note to Balloters: We are actively seeking input on what expectations should be 
 
 The Alert Sender notifies the Alert Recipient by pushing the Alert Bundle using the `transaction` interaction as follows:
 
-`POST [base] {?_format=[mime-type]}`
+`POST [base]Communication/$notify`
 
 {% include examplebutton_default.html example="notify-example" b_title = "Click Here To See Example PUSH Alert Notification" %}
 
+<!--
 ### FHIR Subscription Based Notification
 
 {:.note-to-balloters}
@@ -113,7 +113,7 @@ Figure 6 depicts additional subscription interactions for the Alert Intermediary
 <br />
 
 
-
+-->
 ---
 
 {% include link-list.md %}

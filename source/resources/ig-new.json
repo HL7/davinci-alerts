@@ -176,7 +176,12 @@
       "generation" : "markdown",
       "page" : [{
         "nameUrl" : "guidance.html",
-        "title" : "General Guidance",
+        "title" : "Framework",
+        "generation" : "markdown"
+      },
+      {
+        "nameUrl" : "usecases.html",
+        "title" : "Use Cases",
         "generation" : "markdown"
       },
       {
@@ -218,11 +223,6 @@
           "title" : "CodeSystem Communication Topic",
           "generation" : "generated"
         }]
-      },
-      {
-        "nameUrl" : "searchparameters.html",
-        "title" : "Search Parameters",
-        "generation" : "markdown"
       },
       {
         "nameUrl" : "capstatements.html",

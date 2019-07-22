@@ -171,7 +171,12 @@
       <generation value="markdown"/>
       <page>
         <nameUrl value="guidance.html"/>
-        <title value="General Guidance"/>
+        <title value="Framework"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="usecases.html"/>
+        <title value="Use Cases"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -213,11 +218,6 @@
           <title value="CodeSystem Communication Topic"/>
           <generation value="generated"/>
         </page>
-      </page>
-      <page>
-        <nameUrl value="searchparameters.html"/>
-        <title value="Search Parameters"/>
-        <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="capstatements.html"/>
