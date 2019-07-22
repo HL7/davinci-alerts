@@ -47,7 +47,7 @@ Note to Balloters: We are actively seeking input on whether this guide should li
 ---
 
 **Example Transaction**
-{% include examplebutton_default.html example="push_example" b_title = "Click Here To See Example PUSH Alert Notification" %}
+{% include examplebutton_default.html example="notify-example" b_title = "Click Here To See Example PUSH Alert Notification" %}
 <br />
 
 ### FHIR Subscription Based Notification

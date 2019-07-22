@@ -42,6 +42,11 @@
     <packageId value="hl7.fhir.us.core"/>
     <version value="3.0.0"/>
   </dependsOn>
+  <dependsOn id="hrex">
+    <uri value="http://hl7.org/fhir/us/davinci-hrex"/>
+    <packageId value="hl7.fhir.us.davinci-hrex"/>
+    <version value="0.1.0"/>
+  </dependsOn>
   <definition>
     <grouping>
       <name value="base"/>
@@ -114,6 +119,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/communication-topic"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="CapabilityStatement/alert-sender"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -121,6 +132,18 @@
     <resource>
       <reference>
         <reference value="CapabilityStatement/alert-recipient"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/alerts-bundle"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="OperationDefinition/notify"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -138,12 +161,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/communication-topic"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/alerts-communication"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -154,18 +171,18 @@
       <generation value="markdown"/>
       <page>
         <nameUrl value="guidance.html"/>
-        <title value="Framework"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="usecases.html"/>
-        <title value="Use Cases"/>
+        <title value="General Guidance"/>
         <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="profiles.html"/>
         <title value="Profiles and Extensions"/>
         <generation value="markdown"/>
+        <page>
+          <nameUrl value="StructureDefinition-alerts-bundle.html"/>
+          <title value="StructureDefinition Alerts Bundle"/>
+          <generation value="generated"/>
+        </page>
         <page>
           <nameUrl value="StructureDefinition-alerts-communication.html"/>
           <title value="StructureDefinition Alerts Communication"/>
@@ -176,6 +193,11 @@
         <nameUrl value="operations.html"/>
         <title value="Operations"/>
         <generation value="markdown"/>
+        <page>
+          <nameUrl value="OperationDefinition-notify.html"/>
+          <title value="OperationDefinition Notify"/>
+          <generation value="generated"/>
+        </page>
       </page>
       <page>
         <nameUrl value="terminology.html"/>

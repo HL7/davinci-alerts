@@ -1,8 +1,14 @@
 ---
 # jekyll header
 active: operations
-title: Operations
+title: Operations defined as part of this Guide
 layout: default
 ---
 
-   operations page
+### Operation Definitions
+
+The following Operations have been defined for this implementation guide.
+
+{% include list-operationdefinitions.xhtml %}
+
+<br />

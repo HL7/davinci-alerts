@@ -16,3 +16,5 @@
 [Push Alert Notification]: guidance.html#push-alert-notification
 [FHIR Subscription Based Notification]:guidance.html#fhir-subscription-based-notification
 [The FHIR Security and Privacy Module]:{{site.data.fhir.path}}secpriv-module.html#6.0
+[Bundle]: {{site.data.fhir.path}}bundle.html
+[transaction]: {{site.data.fhir.path}}http.html#transaction

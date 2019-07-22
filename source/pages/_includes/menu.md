@@ -27,9 +27,9 @@
     <a href="searchparameters.html">Search Parameters</a>
   </li>-->
 
-  <!--<li>
+  <li>
     <a href="operations.html">Operations</a>
-  </li>-->
+  </li>
 
   <!--   <li>
   <a href="structuremaps.html">Mappings</a>

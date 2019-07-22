@@ -45,6 +45,12 @@
     "uri" : "http://hl7.org/fhir/us/core",
     "packageId" : "hl7.fhir.us.core",
     "version" : "3.0.0"
+  },
+  {
+    "id" : "hrex",
+    "uri" : "http://hl7.org/fhir/us/davinci-hrex",
+    "packageId" : "hl7.fhir.us.davinci-hrex",
+    "version" : "0.1.0"
   }],
   "definition" : {
     "grouping" : [{
@@ -118,6 +124,12 @@
     },
     {
       "reference" : {
+        "reference" : "ValueSet/communication-topic"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "CapabilityStatement/alert-sender"
       },
       "exampleBoolean" : false
@@ -125,6 +137,18 @@
     {
       "reference" : {
         "reference" : "CapabilityStatement/alert-recipient"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/alerts-bundle"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "OperationDefinition/notify"
       },
       "exampleBoolean" : false
     },
@@ -142,12 +166,6 @@
     },
     {
       "reference" : {
-        "reference" : "ValueSet/communication-topic"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "StructureDefinition/alerts-communication"
       },
       "exampleBoolean" : false
@@ -158,12 +176,7 @@
       "generation" : "markdown",
       "page" : [{
         "nameUrl" : "guidance.html",
-        "title" : "Framework",
-        "generation" : "markdown"
-      },
-      {
-        "nameUrl" : "usecases.html",
-        "title" : "Use Cases",
+        "title" : "General Guidance",
         "generation" : "markdown"
       },
       {
@@ -171,6 +184,11 @@
         "title" : "Profiles and Extensions",
         "generation" : "markdown",
         "page" : [{
+          "nameUrl" : "StructureDefinition-alerts-bundle.html",
+          "title" : "StructureDefinition Alerts Bundle",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "StructureDefinition-alerts-communication.html",
           "title" : "StructureDefinition Alerts Communication",
           "generation" : "generated"
@@ -179,7 +197,12 @@
       {
         "nameUrl" : "operations.html",
         "title" : "Operations",
-        "generation" : "markdown"
+        "generation" : "markdown",
+        "page" : [{
+          "nameUrl" : "OperationDefinition-notify.html",
+          "title" : "OperationDefinition Notify",
+          "generation" : "generated"
+        }]
       },
       {
         "nameUrl" : "terminology.html",

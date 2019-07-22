@@ -30,10 +30,10 @@ broken-links,warning
 gen-examples,FALSE
 do-transforms,FALSE
 canonicalBase,http://hl7.org/fhir/us/davinci-alerts
-dependencyList.name,uscore
-dependencyList.location,http://hl7.org/fhir/us/core
-dependencyList.package,hl7.fhir.us.core
-dependencyList.version,3.0.0
+dependencyList.name,uscore|hrex
+dependencyList.location,http://hl7.org/fhir/us/core|http://hl7.org/fhir/us/davinci-hrex
+dependencyList.package,hl7.fhir.us.core|hl7.fhir.us.davinci-hrex
+dependencyList.version,3.0.0|0.1.0
 special-urls,
 tool,jekyll
 logging,progress

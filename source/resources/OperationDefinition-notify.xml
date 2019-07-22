@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OperationDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-CURRENT/valueset.xsd">
+	<id value="notify"/>
+	<text>
+		<status value="generated"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h2>Notify</h2>
+			<p>OPERATION: Notify</p>
+			<p>The official URL for this operation definition is:
+			</p>
+			<pre>http://hl7.org/fhir/us/davinci-alerts/OperationDefinition/notify</pre>
+			<div>
+				<p>The notify operation is used to alert the recipient of a specific patient event (e.g. admission, discharge, change in treatment, new diagnosis). There is no expectation that the data submitted represents all the data required by the the recipient,
+					only that the data is known to be relevant to the triggering event.</p></div>
+			<p>URL: [base]/Communication/$notify</p>
+			<p>Parameters</p>
+			<table class="grid">
+				<tr>
+					<td>
+						<b>Use</b>
+					</td>
+					<td>
+						<b>Name</b>
+					</td>
+					<td>
+					
+					
+					</td>
+					<td>
+						<b>Type</b>
+					</td>
+					<td>
+						<b>Binding</b>
+					</td>
+					<td>
+						<b>Documentation</b>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>resource</td>
+					<td>1..*</td>
+					<td>
+						canonical(<a href="StructureDefinition-alerts-bundle.html">Da Vinci Alerts Bundle Profile</a>)
+				</td><td/>
+				<td>
+					<div>
+						<p>The Da Vinci Alert Bundle which contains the individual resources that make up the data-of-interest for the event</p></div>
+				</td>
+			</tr>
+		</table>
+		<div>
+			<p>The effect of invoking this operation is that the submitted data is posted to the receiving system and can be used by the recipient to take subsequent actions</p></div>
+	</div>
+	</text>
+		<url value="http://hl7.org/fhir/us/davinci-alerts/OperationDefinition/notify"/>
+		<version value="0.1.0"/>
+		<name value="Notify"/>
+		<title value="Da Vinci Notify Operation"/>
+		<status value="active"/>
+		<kind value="operation"/>
+		<date value="2019-07-21T22:36:22+00:00"/>
+		<publisher value="HL7 International - Clinical Decision Support Work Group"/>
+		<contact>
+			<telecom>
+				<system value="url"/>
+				<value value="http://www.hl7.org/Special/committees/cds/index.cfm"/>
+			</telecom>
+		</contact>
+		<description
+			value="The notify operation is used to alert the recipient of a specific patient event (e.g. admission, discharge, change in treatment, new diagnosis). There is no expectation that the data submitted represents all the data required by the the recipient, only that the data is known to be relevant to the triggering event."/>
+		<code value="notify"/>
+		<comment value="The effect of invoking this operation is that the submitted data is posted to the receiving system and can be used by the recipient to take subsequent actions"/>
+		<resource value="Communication"/>
+		<system value="false"/>
+		<type value="true"/>
+		<instance value="false"/>
+		<parameter>
+			<name value="resource"/>
+			<use value="in"/>
+			<min value="1"/>
+			<max value="*"/>
+			<documentation value="The Da Vinci Alert Bundle which contains the individual resources that make up the data-of-interest for the event"/>
+			<type value="canonical"/>
+			<targetProfile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/alerts-bundle"></targetProfile>
+		</parameter>
+	</OperationDefinition>

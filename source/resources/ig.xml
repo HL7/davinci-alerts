@@ -38,22 +38,19 @@
     <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/patient"/>|<exampleBoolean value="true|false"/>
   </resource>   -->
   <!--  <groupingId value="[id]"/>  0..1 Grouping this is part of -->
-  <!-- insert resources --><resource><reference><reference value="Encounter/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="PractitionerRole/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Practitioner/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/admit-01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Patient/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Communication/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Organization/example-2"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Coverage/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Location/hl7east"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Condition/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="CapabilityStatement/alert-intermediary-client"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/alert-sender"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/alert-recipient"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/alert-intermediary-server"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CodeSystem/communication-topic"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/communication-topic"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/alerts-communication"/></reference><exampleBoolean value="false"/></resource>
+  <!-- insert resources --><resource><reference><reference value="Encounter/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="PractitionerRole/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Practitioner/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/admit-01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Patient/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Communication/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Organization/example-2"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Coverage/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Location/hl7east"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Condition/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="CapabilityStatement/alert-intermediary-client"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/communication-topic"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/alert-sender"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/alert-recipient"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/alerts-bundle"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="OperationDefinition/notify"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/alert-intermediary-server"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CodeSystem/communication-topic"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/alerts-communication"/></reference><exampleBoolean value="false"/></resource>
 
-      <!-- ============ Home Page =============== -->
-      <page><nameUrl value="index.html"/><title value="Home"/><generation value="markdown"/>
+    <!-- ============ Home Page =============== -->
+  <page><nameUrl value="index.html"/><title value="Home"/><generation value="markdown"/>
 
-        <!-- ============ Guidance Page =============== -->
-        <page><nameUrl value="guidance.html"/><title value="Framework"/><generation value="markdown"/></page>
-
-        <!-- ============ UseCases Page =============== -->
-        <page><nameUrl value="usecases.html"/><title value="Use Cases"/><generation value="markdown"/></page>
+    <!-- ============ Guidance Page =============== -->
+    <page><nameUrl value="guidance.html"/><title value="General Guidance"/><generation value="markdown"/></page>
 
     <!-- ============ Profiles Page =============== -->
     <page><nameUrl value="profiles.html"/><title value="Profiles and Extensions"/><generation value="markdown"/>
 
      <!-- ============ Profiles and examples=============== -->
-     <!-- insert profiles --><page><nameUrl value="StructureDefinition-alerts-communication.html"/><title value="StructureDefinition Alerts Communication"/><generation value="generated"/></page>
+     <!-- insert profiles --><page><nameUrl value="StructureDefinition-alerts-bundle.html"/><title value="StructureDefinition Alerts Bundle"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-alerts-communication.html"/><title value="StructureDefinition Alerts Communication"/><generation value="generated"/></page>
     <!-- ============ End Profiles and examples=============== -->
 
     <!-- ============ Extensions and examples =============== -->
@@ -65,7 +62,7 @@
     <page><nameUrl value="operations.html"/><title value="Operations"/><generation value="markdown"/>
 
     <!-- ============ Operations and examples  =============== -->
-    <!-- insert operationdefinitions -->
+    <!-- insert operationdefinitions --><page><nameUrl value="OperationDefinition-notify.html"/><title value="OperationDefinition Notify"/><generation value="generated"/></page>
     <!-- ============ End Operations and examples  =============== -->
 
     </page>

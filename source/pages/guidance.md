@@ -77,7 +77,7 @@ The Alert Sender notifies the Alert Recipient by pushing the Alert Bundle using 
 
 `POST [base] {?_format=[mime-type]}`
 
-{% include examplebutton_default.html example="push_example" b_title = "Click Here To See Example PUSH Alert Notification" %}
+{% include examplebutton_default.html example="notify-example" b_title = "Click Here To See Example PUSH Alert Notification" %}
 
 ### FHIR Subscription Based Notification
 

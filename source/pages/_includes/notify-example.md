@@ -3,11 +3,11 @@
 
 **Scenario:**
 
-Provider X acting in the role of Alert Sender notifies Payer Z who is acting in the role Alert Recipient that Patient Y has been admitted.  The body of the request is an Alert Bundle containing the required Communication profiles and required resources for this Alert event use case.  An HTTP Status success code is returned on successful submission.
+Patient Y has been admitted to Provider X 's facility.  Acting in the role of Alert Sender Provider X alerts Payer Z who is acting in the role Alert Recipient of the admission.  The Alert is transacted as the `$notify` operation. Since there is only a single resource parameter, the body of the operation is an Alert Bundle containing the required Alert Communication profile and required resources for this Alert event use case.  An HTTP Status success code is returned on successful submission and a Bundle with type `transaction-response` that contains one entry for each entry in the request, in the same order, with the outcome of processing the entry.
 
-**Push Alert Notification using `POST`**
+**Push Alert Notification using the $notify operation**
 
-`POST [base]`
+`POST [base]Communication/$notify`
 
 **Request body**
 
