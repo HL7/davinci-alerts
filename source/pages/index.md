@@ -41,8 +41,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 - [Home]\: The home page provides the introduction and background for the Da Vinci Alert Project.
 
 - [Framework]\: These pages provide guidance on the set of FHIR transactions and the FHIR artifacts used in to provide a general framework to enable alert notifications.
-- [Use cases]\: Exemplar use cases are presented to demonstrate how to implement the framework for a particular event notification.
-    - [Admission/Discharge]\: This example shows how to implement an alert for a patient admission.
+- [Use cases]\: The Admission/Discharge example shows how to implement an alert use the framework.
 - [Profiles]\: This page lists the set of Profiles that are defined in this guide to exchange quality data.
 - [Operations]\: This page lists the standard FHIR and DEQM defined Operations that are used in the DEQM transactions to exchange quality data.
 - [Capability Statements]\: This set of pages describes the expected FHIR capabilities of the various DEQM actors.
