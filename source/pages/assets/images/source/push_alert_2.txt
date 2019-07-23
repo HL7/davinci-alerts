@@ -1,0 +1,37 @@
+#text for https://sequencediagram.org/
+# add viewbox attribute to svg file for img sizing
+
+title Push Alert Notification with Intermediary
+
+participant Alert Sender (server)
+
+participant Alert Intermediary (client/server)
+
+participant Alert Intermediary $notify endpoint
+
+participant Alert Recipient A
+participant Alert Recipient B
+participant Alert Recipient C
+
+note over Alert Sender (server):An event or request\n triggers an alert\n notification
+
+note right of Alert Sender (server):Create an Alert Bundle
+
+
+Alert Sender (server)->Alert Intermediary $notify endpoint:intitiates $notify operation
+
+Alert Intermediary $notify endpoint-->Alert Sender (server):Response (200)
+
+note over Alert Intermediary (client/server): Process Alert Bundle
+
+Alert Intermediary (client/server)->Alert Sender (server):Optionally GET additional data
+
+note over Alert Sender (server): Process Search
+
+Alert Sender (server)-->Alert Intermediary (client/server):Return Bundle of search results (200)
+
+note over Alert Intermediary (client/server): Process Search Results
+
+Alert Intermediary (client/server) -> Alert Recipient A: distribute Alert information
+Alert Intermediary (client/server) -> Alert Recipient B: distribute Alert information
+Alert Intermediary (client/server) -> Alert Recipient C: distribute Alert information

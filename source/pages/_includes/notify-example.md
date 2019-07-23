@@ -219,18 +219,18 @@ An HTTP Status success code is returned on successful submission and a Bundle wi
                   "status" : "finished",
                   "class" : {
                     "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-                    "code" : "AMB",
-                    "display" : "ambulatory"
+                    "code" : "IMP",
+                    "display" : "inpatient encounter"
                   },
                   "type" : [
                     {
                       "coding" : [
                         {
                           "system" : "http://www.ama-assn.org/go/cpt",
-                          "code" : "99201"
+                          "code" : "99234"
                         }
                       ],
-                      "text" : "Office Visit"
+                      "text" : "inpatient hospital care"
                     }
                   ],
                   "subject" : {

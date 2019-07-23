@@ -1,0 +1,36 @@
+#text for https://sequencediagram.org/
+# add viewbox attribute to svg file for img sizing
+
+title Subscription workflow - No Intermediary
+
+participant Alert Sender (server) participant Alert Recipient (client)
+
+note over Alert Recipient (client):Client determines\ndesired alert
+notification.
+
+note over Alert Recipient (client):Client creates endpoint\
+
+participant Alert Recipient (client) Endpoint 123 Alert Recipient
+(client)-->*Alert Recipient (client) Endpoint 123:
+
+Alert Recipient (client)->Alert Sender (server):Create Subscription\nEndpoint:
+'client_a/notifications/some_alert/123'
+
+note right of Alert Sender (server):Create subscription record\n - State:
+'requested'
+
+Alert Sender (server)-->Alert Recipient (client):Response (201)
+
+Alert Sender (server)->Alert Recipient (client) Endpoint 123: Handshake
+request:\nIs this a valid notification endpoint\nfor id: 'some_alert_123'?
+
+Alert Recipient (client) Endpoint 123-->Alert Sender (server):Response (200)
+
+note right of Alert Sender (server):Change subscription state to 'active'
+
+Alert Sender (server) -> Alert Recipient (client) Endpoint 123: Alert
+Notification\nPayload = "Alert Bundle"**
+
+Alert Recipient (client) Endpoint 123-->Alert Sender (server):Response (201)
+
+note over Alert Recipient (client): Process Alert Bundle

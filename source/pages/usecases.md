@@ -36,10 +36,7 @@ The following resource graph in figure 7 defines the resources that support the 
 
 ### Push Alert Notification
 
-In the following interaction shown in figures 8 and 9, the HealthCare facility is acting in the role of the Alert Sender and the Alert Recipient can be any of the actors listed in figure 1 on the home page.  To notify the Alert Recipients/Intermediary of an ADT event, the Alert Sender uses $notify operation to submit the Alert Bundle to appropriate FHIR endpoints. As shown in figure 3, when an Intermediary successfully receives the notifications, it can subsequently redistribute the data the end users.  Note that the intermediaries may customize the content based on the end user (for example, withholding data that a particular care team member does not need).
-
-Note to Balloters: We are actively seeking input on whether this guide should limit the expectations of how Alert Intermediaries forward the alerts to the Alert Recipients.  For example using existing data transport protocols such as Direct, SMS or V2 messaging.
-{:.note-to-balloters}
+In the following interaction shown in figures 8 and 9, the HealthCare facility is acting in the role of the Alert Sender and the Alert Recipient can be any of the actors listed in figure 1 on the home page.  To notify the Alert Recipients/Intermediary of an admit or discharge event, the Alert Sender uses $notify operation to submit the Alert Bundle to appropriate FHIR endpoints. As shown in figure 3, when an Intermediary successfully receives the notifications, it subsequently redistributes the data the end users.
 
 {% include img-portrait.html img="admit_flow.svg" caption="Figure 8" %}
 

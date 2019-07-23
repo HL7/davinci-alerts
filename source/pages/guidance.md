@@ -101,22 +101,28 @@ Note to Balloters: The resources listed for scenarios that are not part of the i
 
 ### Push Alert Notification
 
-{% include img.html img="push_alert_1.svg" caption="Figure 4a" %}
-
-As shown in Figure 4a and 4b, When an event or request triggers an alert, the Alert Sender creates an Alert bundle and notifies the Alert Recipient or Alert Intermediary.  The [Da Vinci Notify Operation] operation is used to notify and push alert information to the them.  The body of this operation is a Parameter resource consisting of a single parameter with two nested parts containing:
+As shown in Figure 4a and 4b, When an event or request triggers an alert, the Alert Sender creates an Alert bundle and notifies the Alert Recipient or Alert Intermediary using the [Da Vinci Notify Operation] operation. The body of this operation is a Parameter resource consisting of a single parameter with two nested parts containing:
 
 1. The Alert Bundle containing the required Alert Communication profile and required resources for this Alert event use case. The table in the previous section lists for each alert scenario, the relevant resources to be included in the Alert Bundle and referenced in the `Communication.payload` element.
 
-1. The [Da Vinci Alerts Endpoint Profile] which is intended only for the *direct* recipient of the operation and provides the recipient with the technical details for getting additional information from the medical record for the alert.  The Endpoint SHALL NOT be distributed by the Alert Intermediary to Alert Recipients.
+1. The [Da Vinci Alerts Endpoint Profile] which is intended only for the *direct* recipient of the operation and provides the recipient with the technical details for getting additional information from the medical record for the alert.
 
     Note that an authentication token may be supplied in `Endpoint.header` by the Alert Sender to allow direct recipients of the Alert (whether an Alert Recipient or Alert Intermediary) to access additional information. This and other supplied headers, if any are given, are appended to the GET request. Sending these tokens has obvious security consequences. The server and client are responsible for ensuring that the content is appropriately secured.
 
-In the context of the `$notify` operation, the Alert Recipient is treated as a ["black box"] and simply accepts and process the submitted data and there is no further expectations. The response to the operation and the transaction Bundle are defined in the FHIR specification.
+In the context of the `$notify` operation, the Alert Recipient/Intermediary is treated as a ["black box"] and simply accepts and process the submitted data and there is no further expectations. The response to the operation and the transaction Bundle are defined in the FHIR specification.
 
 Note to Balloters: We are actively seeking input on what expectations should be defined for error handling and and whether there is a need to support ["reliable delivery"]
 {:.note-to-balloters}
 
-Since the parameter can repeat a single operation transaction may contain multiple alerts. There is no expectation that the data submitted represents all the data required by the the Alert Recipient, only that the data is known to be relevant to the triggering event.  Using the Alerts Endpoint data, additional information from the patient's medical record can be obtained by performing FHIR RESTful searches.
+Since the parameter can repeat a single operation transaction may contain multiple alerts. There is no expectation that the data submitted represents all the data required by the Alert Recipient/Intermediary, only that the data is known to be relevant to the triggering event. The Alert Recipient/Intermediary can optionally fetch additional information from the patient's medical record using FHIR RESTful searches.  The endpoint for this search may be known or supplied via the $notify operation payload.
+
+As shown in figure 4b, after the Alert Intermediary successfully receives the notification, processes the Alert Bundle and optionally searches and process the seach results, it redistributes the data the end users.  It may use the `$notify` operation to do this, however the original Endpoint SHALL NOT be distributed.  Note that the Alert Intermediary may customize the content based on the end user (for example, withholding data that a particular care team member does not need).
+
+Note to Balloters: We are actively seeking input on whether this guide should define the expectations of how Alert Intermediaries distribute the alert information to the Alert Recipients.  For example using existing data transport protocols such as Direct, SMS or V2 messaging.
+{:.note-to-balloters}
+
+{% include img.html img="push_alert_1.svg" caption="Figure 4a" %}
+{% include img.html img="push_alert_2.svg" caption="Figure 4b" %}
 
 #### APIs
 {:.no_toc}
