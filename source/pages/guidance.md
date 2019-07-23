@@ -61,19 +61,27 @@ Note to Balloters: The resources listed for scenarios that are not part of the i
 
 ### Push Alert Notification
 
-The [`$notify`] operation provides a way for an Alert Sender to submit data-of-interest in an Alert Bundle to the Alert Recipient. There is no expectation that the data submitted represents all the data required by the the Alert Recipient, only that the data is known to be relevant to the triggering event.
+{% include img.html img="push_transaction.svg" caption="Figure 4" %}
 
-The table in the previous section list the relevant resources to be included in the Alert Bundle and referenced in the `Communication.payload` element for a particular Alert scenario.   The Alert Recipient simply accepts and process the submitted data and there is no further expectations. The response to the `$notify` operation and the transaction Bundle are defined in the FHIR specification.
+As shown in Figure 4, When an event or request triggers an alert the Alert Sender notifies the Alert Recipient or Alert Intermediary. The  [`$notify`] operation is used to notify and push alert information to the them. The body of this operation is a Parameter resource consisting of a single parameter with two nested parts containing:
+
+1. The [Da Vinci Alerts Endpoint Profile] which provides the recipient with the technical details of an endpoint for getting additional information from the medical record for this event.
+
+    Note that an authentication token may be supplied in `Endpoint.header` by the Alert Sender to allow direct recipients of the Alert (whether an Alert Recipient or Alert Intermediary) to access additional information. This and other supplied headers, if any are given, are appended to the GET request. Sending these tokens has obvious security consequences. The server and client are responsible for ensuring that the content is appropriately secured.
+
+1. The Alert Bundle containing the required Alert Communication profile and required resources for this Alert event use case.
+
+Since the parameter can repeat a single operation transaction may contain multiple alerts. The table in the previous section lists for each alert scenario, the relevant resources to be included in the Alert Bundle and referenced in the `Communication.payload` element.  There is no expectation that the data submitted represents all the data required by the the Alert Recipient, only that the data is known to be relevant to the triggering event.  Using the Alerts Endpoint data, additional information from the patient's medical record can be obtained by performing FHIR RESTful searches.
+
+The Alert Recipient simply accepts and process the submitted data and there is no further expectations. The response to the `$notify` operation and the transaction Bundle are defined in the FHIR specification.
 
 Note to Balloters: We are actively seeking input on what expectations should be defined for error handling and and whether there is a need to support "Guaranteed Delivery"
 {:.note-to-balloters}
 
-{% include img.html img="push_transaction.svg" caption="Figure 4" %}
-
 ##### Usage
 {:.no_toc}
 
-The `$notify` operation is invoked by the Alert Sender using the `POST` syntax with Alert Bundle in the request body:
+The `$notify` operation is invoked by the Alert Sender using the `POST` syntax with Parameter resource in the request body.  
 
 `POST [base]Communication/$notify`
 

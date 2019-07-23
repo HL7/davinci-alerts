@@ -27,3 +27,4 @@
 [Figure 7]: usecases.html#graph-of-fhir-resources
 [Da Vinci Alerts Communication Profile]: StructureDefinition-alerts-communication.html
 [Da Vinci Alerts Bundle Profile]: StructureDefinition-alerts-communication.html
+[Da Vinci Alerts Endpoint Profile]: StructureDefinition-alerts-endpoint.html
