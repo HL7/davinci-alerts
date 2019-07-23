@@ -154,7 +154,7 @@ An event or request triggers an Alert Sender to notify either an Alert Intermedi
 
 1. Event or request by patient or Healthcare Facility triggers an alert to be sent to an Alert Intermediary ( e.g. clearinghouse).
 1. The Alert Sender notifies the Alert Intermediary by pushing an "Alert" bundle which includes common resources across all Alerts and use case dependent supporting resources.
-1. The Alert Intermediary is responsible for the redistribution of the dat and may customize the data based on end user.
+1. The Alert Intermediary is responsible for the redistribution of the data.  Note that it may customize the data based on end user.
 
 
 ---

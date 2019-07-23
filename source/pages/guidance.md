@@ -20,6 +20,46 @@ FHIR resources can be used to transport patient information relevant to a specif
 This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5. In a future version this guide, a subscription based notification is planned which will align with the outcomes of the Argonaut project.
 {:.note-to-balloters}
 
+### Must Support
+
+All elements in the Da Vinci Alert profiles have a [MustSupport flag]. Systems claiming to conform to a profile must "support" the element as defined herein:
+
+#### This guide adopts the following definitions of Must Support for all *direct* transactions between the Alert Sender and Alert Recipient or Alert Intermediary
+{:.no_toc}
+
+*Must Support* on any data element SHALL be interpreted as follows:
+
+* As part of the alert notification or a query result as specified by the [Da Vinci Alert Sender CapabilityStatement], the Alert Sender SHALL be capable of including the data elements defined in the Da Vinci Alert profiles that have a MustSupport flag.
+
+* Alert Recipient/Intermediary SHALL be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. In other words Alert Recipient/Intermediary SHOULD be capable of processing the data elements (display, store, etc).
+
+* In situations where information on a particular data element is not present and the reason for absence is unknown, Alert Sender SHALL NOT include the data elements in the resource instance returned as part of the query results.
+
+* When receiving an alert notification or querying Alert Senders, the Alert Recipient/Intermediary SHALL interpret missing data elements within resource instances as data not present in the US Core Responder's systems.
+
+* In situations where information on a particular data element is missing and the US Core Responder knows the precise reason for the absence of data, Alert Sender SHALL send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
+
+* Alert Recipient/Intermediary SHALL be able to process resource instances containing data elements asserting missing information.
+
+* NOTE: *Alert Sender* = Server and *Alert Recipient/Intermediary* = Client
+
+#### This guide adopts the following definitions of Must Support for all transactions between the Alert Intermediary and Alert Recipient
+{:.no_toc}
+
+*Must Support* on any data element SHALL be interpreted as follows:
+
+- As part of the alert notification or a query result as specified by the [Da Vinci Intermediary Server CapabilityStatement], the Alert Sender SHALL be capable of including the data elements defined in the Da Vinci Alert profiles that have a MustSupport flag.
+
+- The Alert Recipient SHALL be capable of processing resource instances containing the data elements the data elements defined in the Da Vinci Alert profiles that have a MustSupport flag without generating an error or causing the application to fail. In other words, the Alert Recipient SHOULD be capable of processing the data elements (displaying, storing, etc).
+
+- In situations where information on a particular data element is not needed or considered protected information the Alert Intermediary MAY remove the data elements in the resource instance returned as part of the query results. The Alert Intermediary MAY send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
+
+- The Alert Recipient SHALL be able to process resource instances containing missing data elements and data elements asserting missing information.
+
+* NOTE: *Alert Intermediary* = Server and *Alert Recipient* = Client
+
+
+
 ### Preconditions and Assumptions
 
 #### Preconditions
@@ -61,27 +101,37 @@ Note to Balloters: The resources listed for scenarios that are not part of the i
 
 ### Push Alert Notification
 
-{% include img.html img="push_transaction.svg" caption="Figure 4" %}
+{% include img.html img="push_alert_1.svg" caption="Figure 4a" %}
 
-As shown in Figure 4, When an event or request triggers an alert the Alert Sender notifies the Alert Recipient or Alert Intermediary. The  [`$notify`] operation is used to notify and push alert information to the them. The body of this operation is a Parameter resource consisting of a single parameter with two nested parts containing:
+As shown in Figure 4a and 4b, When an event or request triggers an alert, the Alert Sender creates an Alert bundle and notifies the Alert Recipient or Alert Intermediary.  The [Da Vinci Notify Operation] operation is used to notify and push alert information to the them.  The body of this operation is a Parameter resource consisting of a single parameter with two nested parts containing:
 
-1. The [Da Vinci Alerts Endpoint Profile] which provides the recipient with the technical details of an endpoint for getting additional information from the medical record for this event.
+1. The Alert Bundle containing the required Alert Communication profile and required resources for this Alert event use case. The table in the previous section lists for each alert scenario, the relevant resources to be included in the Alert Bundle and referenced in the `Communication.payload` element.
+
+1. The [Da Vinci Alerts Endpoint Profile] which is intended only for the *direct* recipient of the operation and provides the recipient with the technical details for getting additional information from the medical record for the alert.  The Endpoint SHALL NOT be distributed by the Alert Intermediary to Alert Recipients.
 
     Note that an authentication token may be supplied in `Endpoint.header` by the Alert Sender to allow direct recipients of the Alert (whether an Alert Recipient or Alert Intermediary) to access additional information. This and other supplied headers, if any are given, are appended to the GET request. Sending these tokens has obvious security consequences. The server and client are responsible for ensuring that the content is appropriately secured.
 
-1. The Alert Bundle containing the required Alert Communication profile and required resources for this Alert event use case.
+In the context of the `$notify` operation, the Alert Recipient is treated as a ["black box"] and simply accepts and process the submitted data and there is no further expectations. The response to the operation and the transaction Bundle are defined in the FHIR specification.
 
-Since the parameter can repeat a single operation transaction may contain multiple alerts. The table in the previous section lists for each alert scenario, the relevant resources to be included in the Alert Bundle and referenced in the `Communication.payload` element.  There is no expectation that the data submitted represents all the data required by the the Alert Recipient, only that the data is known to be relevant to the triggering event.  Using the Alerts Endpoint data, additional information from the patient's medical record can be obtained by performing FHIR RESTful searches.
-
-The Alert Recipient simply accepts and process the submitted data and there is no further expectations. The response to the `$notify` operation and the transaction Bundle are defined in the FHIR specification.
-
-Note to Balloters: We are actively seeking input on what expectations should be defined for error handling and and whether there is a need to support "Guaranteed Delivery"
+Note to Balloters: We are actively seeking input on what expectations should be defined for error handling and and whether there is a need to support ["reliable delivery"]
 {:.note-to-balloters}
 
-##### Usage
+Since the parameter can repeat a single operation transaction may contain multiple alerts. There is no expectation that the data submitted represents all the data required by the the Alert Recipient, only that the data is known to be relevant to the triggering event.  Using the Alerts Endpoint data, additional information from the patient's medical record can be obtained by performing FHIR RESTful searches.
+
+#### APIs
 {:.no_toc}
 
-The `$notify` operation is invoked by the Alert Sender using the `POST` syntax with Parameter resource in the request body.  
+The following Da Vinci Alert FHIR artifacts are used in this transaction:
+
+- [Da Vinci Alerts Bundle Profile]
+- [Da Vinci Alerts Communication Profile]
+- [Da Vinci Alerts Endpoint Profile]
+- [Da Vinci Notify Operation]
+
+#### Usage
+{:.no_toc}
+
+The `$notify` operation is invoked by the Alert Sender using the `POST` syntax with Parameter resource in the request body:
 
 `POST [base]Communication/$notify`
 

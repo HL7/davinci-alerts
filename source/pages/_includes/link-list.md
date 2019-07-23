@@ -10,7 +10,7 @@
 [Operations]: operations.html "Operations Page"
 [Examples]: all-examples.html
 [Security]: security.html
-[Must Support]: http://hl7.org/fhir/us/core/general-guidance.html#must-support
+[Must Support]: guidance.html#must-support
 [Formal Profile Definition]: #profile
 [Communication]: {{site.data.fhir.path}}communication.html
 [Push Alert Notification]: guidance.html#push-alert-notification
@@ -21,6 +21,7 @@
 [`transaction`]: {{site.data.fhir.path}}http.html#transaction
 [operation]: {{site.data.fhir.path}}operations.html
 [2019 CMS 45 CFR Part 156 NPRM]: https://www.govinfo.gov/content/pkg/FR-2019-03-04/pdf/2019-02200.pdf
+[Da Vinci Notify Operation]: OperationDefinition-notify.html
 [`$notify`]: OperationDefinition-notify.html
 [Argonaut Clinical Data Subscriptions]: http://argonautwiki.hl7.org/index.php?title=Argonaut_2019_Projects#Clinical_Data_Subscriptions
 [Da Vinci Alert Bundle Profile]: StructureDefinition-alerts-bundle.html
@@ -28,3 +29,8 @@
 [Da Vinci Alerts Communication Profile]: StructureDefinition-alerts-communication.html
 [Da Vinci Alerts Bundle Profile]: StructureDefinition-alerts-communication.html
 [Da Vinci Alerts Endpoint Profile]: StructureDefinition-alerts-endpoint.html
+["black box"]: https://en.wikipedia.org/wiki/Black_box
+["reliable delivery"]: https://en.wikipedia.org/wiki/Reliable_messaging
+[MustSupport flag]: {{site.data.fhir.path}}profiling.html#mustsupport
+[Da Vinci Alert Sender CapabilityStatement]: CapabilityStatement-alert-sender.html
+[Da Vinci Alert Intermediary Server CapabilityStatement]: CapabilityStatement-alert-intermediary-server.html
