@@ -17,6 +17,7 @@
 [FHIR Subscription Based Notification]: guidance.html#fhir-subscription-based-notification
 [The FHIR Security and Privacy Module]:{{site.data.fhir.path}}secpriv-module.html#6.0
 [Bundle]: {{site.data.fhir.path}}bundle.html
+[Endpoint]: {{site.data.fhir.path}}bundle.html
 [`transaction`]: {{site.data.fhir.path}}http.html#transaction
 [operation]: {{site.data.fhir.path}}operations.html
 [2019 CMS 45 CFR Part 156 NPRM]: https://www.govinfo.gov/content/pkg/FR-2019-03-04/pdf/2019-02200.pdf

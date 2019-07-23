@@ -53,6 +53,18 @@
     </grouping>
     <resource>
       <reference>
+        <reference value="Parameters/admit-1"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Endpoint/example-1"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Encounter/example-1"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -161,6 +173,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/alerts-endpoint"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/alerts-communication"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -171,7 +189,7 @@
       <generation value="markdown"/>
       <page>
         <nameUrl value="guidance.html"/>
-        <title value="Framework"/>
+        <title value="General Guidance"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -186,6 +204,11 @@
         <page>
           <nameUrl value="StructureDefinition-alerts-bundle.html"/>
           <title value="StructureDefinition Alerts Bundle"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-alerts-endpoint.html"/>
+          <title value="StructureDefinition Alerts Endpoint"/>
           <generation value="generated"/>
         </page>
         <page>

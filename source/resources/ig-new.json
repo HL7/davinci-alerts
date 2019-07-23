@@ -58,6 +58,18 @@
     }],
     "resource" : [{
       "reference" : {
+        "reference" : "Parameters/admit-1"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Endpoint/example-1"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "Encounter/example-1"
       },
       "exampleBoolean" : true
@@ -166,6 +178,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/alerts-endpoint"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/alerts-communication"
       },
       "exampleBoolean" : false
@@ -176,7 +194,7 @@
       "generation" : "markdown",
       "page" : [{
         "nameUrl" : "guidance.html",
-        "title" : "Framework",
+        "title" : "General Guidance",
         "generation" : "markdown"
       },
       {
@@ -191,6 +209,11 @@
         "page" : [{
           "nameUrl" : "StructureDefinition-alerts-bundle.html",
           "title" : "StructureDefinition Alerts Bundle",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-alerts-endpoint.html",
+          "title" : "StructureDefinition Alerts Endpoint",
           "generation" : "generated"
         },
         {
