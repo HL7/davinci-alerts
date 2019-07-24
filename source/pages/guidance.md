@@ -15,7 +15,7 @@ active: guidance
 ### Introduction
 {:.self-link}
 
-FHIR resources can be used to transport patient information relevant to a specific event (e.g. admission, discharge, change in treatment, new diagnosis) to another provider or the health plan to communicate the details of where care was delivered and help to ensure timely follow-up as needed.  This information can be used to build an encounter record in the receiving system with appropriate provenance and make it available to CDS and other local services. *For the initial phase*, alerts are transacted using the Da Vinci [`$notify`] operation to to push directly to “registered” Alert Recipient or Alert Intermediary.
+FHIR resources can be used to transport patient information relevant to a specific event (e.g. admission, discharge, change in treatment, new diagnosis) to another provider or the health plan to communicate the details of where care was delivered and help to ensure timely follow-up as needed.  This information can be used to build an encounter record in the receiving system with appropriate provenance and make it available to CDS and other local services. *For the initial phase*, alerts are transacted using the Da Vinci [`$notify`] operation to push directly to “registered” Alert Recipient or Alert Intermediary.
 
 This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5. In a future version this guide, a subscription based notification is planned which will align with the outcomes of the Argonaut project.
 {:.note-to-balloters}
@@ -66,7 +66,7 @@ All elements in the Da Vinci Alert profiles have a [MustSupport flag]. Systems c
 
 - There is an event that drives the generation of the Alert.
 - An Alert will be generated for each patient separately.
-  - The event can be for one or more patients
+  - The event can be for one or more patients.
 - The Alert Sender has access to the Alert Recipients/Intermediary FHIR endpoints.
 - System level trust exists between the actors.
   - Clients have been authorized by the servers.
@@ -74,14 +74,14 @@ All elements in the Da Vinci Alert profiles have a [MustSupport flag]. Systems c
 - A secure information transport mechanism exists between the actors.
 
 #### Assumptions
-- Based on FHIR R4 and US Core R4 profiles where applicable
+- Based on FHIR R4 and US Core R4 profiles where applicable.
 - Alerts are transacted to an operation endpoint ($notify).
 - The Da Vinci Alerts Bundle Profile is the FHIR object that is exchanged for all alert transactions.
   - The Da Vinci Alerts Communication Profile is always part of the bundle and provides the necessary context for the alert reason.
 
 ### Alert Bundle
 
-The FHIR resources used in Da Vinci Alert transactions form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resource graphs. The FHIR Alert resource graph for the admit and discharge use case is shown in [Figure 7]
+The FHIR resources used in Da Vinci Alert transactions form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resource graphs. The FHIR Alert resource graph for the admit and discharge use case is shown in [Figure 7].
 
 For every alert notification, the FHIR object that is exchanged is the [Da Vinci Alert Bundle Profile]. This bundle is a [`transaction`] type bundle that is POSTed to the Alert Recipient's or Intermediary's FHIR endpoint via a the $notify operation. The complete set of content to make up an Alert Bundle includes the [Da Vinci Alerts Communication Profile] which provides the necessary context for the alert reason together with various resources pointed to or indirectly connected to the Communication profile, all gathered together into a Bundle for transport and persistence.  Resources associated with the following list of Communication references SHALL be included in the Bundle:
 
@@ -109,7 +109,7 @@ As shown in Figure 4a and 4b, When an event or request triggers an alert, the Al
 
     Note that an authentication token may be supplied in `Endpoint.header` by the Alert Sender to allow direct recipients of the Alert (whether an Alert Recipient or Alert Intermediary) to access additional information. This and other supplied headers, if any are given, are appended to the GET request. Sending these tokens has obvious security consequences. The server and client are responsible for ensuring that the content is appropriately secured.
 
-In the context of the `$notify` operation, the Alert Recipient/Intermediary is treated as a ["black box"] and simply accepts and process the submitted data and there is no further expectations. The response to the operation and the transaction Bundle are defined in the FHIR specification.
+In the context of the `$notify` operation, the Alert Recipient/Intermediary is treated as a ["black box"] and simply accepts and processes the submitted data and there are no further expectations. The response to the operation and the transaction Bundle are defined in the FHIR specification.
 
 Note to Balloters: We are actively seeking input on what expectations should be defined for error handling and and whether there is a need to support ["reliable delivery"]
 {:.note-to-balloters}

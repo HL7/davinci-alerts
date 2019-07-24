@@ -15,9 +15,9 @@ active: home
 The HL7 Da Vinci Project has recognized a need for communication of
 Alerts between payers, providers and other actors in the healthcare
 space. Alerts are defined as a need to notify another party of an event
-that would affect one or more patient's care. Alerts allow actors in the
+that would affect one or more patient's care. Alerts allow actors participating in the
 patient's healthcare to take actions and intervene earlier to assure the
-patient is better cared for. This can also result in reduced costs
+patient is better cared for. This can also result in reduced costs.
 
 It is important that the framework allow for only appropriate alerts to
 be sent at the appropriate time and with just the right amount of
@@ -75,22 +75,24 @@ Implementation of FHIR R4
 Alerts can be generated for many scenarios. The [2019 CMS 45 CFR Part 156 NPRM]
 focuses on hospitalization due to significant issues that can occur if a patient
 is not followed appropriately after acute care. The initial version of the Alert
-Implementation Guide will focus on the Admission and Discharge Scenarios. The
+Implementation Guide will focus on the Admission and Discharge Scenarios, basically anything that would create an encounter in a patient care record. The
 framework as defined may support the other scenarios as listed below and work
-will continue on this in future versions of the Implementation Guide.
+will continue on this in future versions of the Implementation Guide in collaboration with domain experts for each scenario.
 
 #### Initial Phase:
 {:.no_toc}
 
 -   Emergency and Inpatient Admissions
--   Emergency and Inpatient Discharges
+-	Admission for Observation
+-	Admisssion for special services, such as outpatient surgery
+-   Encounter/Visit Notification for ambulatory services
+-   Discharges/Visit ends
 
 #### Potential Future scenarios to be defined in cooperation with the appropriate HL7 International Working Groups:
 {:.no_toc}
 
 -   Lab Results
 -   Problem with Treatment -- such as drug recall, device recall/issue
--   Encounter/Visit Notification
 -   Public Health Notification
 -   Scheduled Appointment/Pre-Admit
 -   Referral
@@ -111,8 +113,8 @@ will continue on this in future versions of the Implementation Guide.
 
 - **Alert Sender** - the system responsible for sending the alert, typically operated by the facility or organization where the event occurred
 - **Alert Recipient** – the system responsible for receiving generated alerts from Alert Senders
--  **Interested Entity** – a system that is interested in receiving alerts for specific events, providers, patients or other predefined criteria
-- **Alert Intermediary** (aka ClearingHouse)– a system that can act a a central point to receive alerts from multiple Alert Senders and distribute alerts to Alert Recipients based on previously defined subscription policies
+- **Interested Entity** – a system that is interested in receiving alerts for specific events, providers, patients or other predefined criteria
+- **Alert Intermediary** (e.g. ClearingHouse or HIE/HIN)– a system that can act as a central point to receive alerts from multiple Alert Senders and distribute alerts to Alert Recipients based on previously defined subscription policies
 
 #### Alert Actors
 
@@ -142,19 +144,19 @@ There are many potential actors for the roles listed above:
 
 -  *See the [Framework] page for a detailed description of the technical workflow and API guidance*
 
-An event or request triggers an Alert Sender to notify either an Alert Intermediary or Recipient with an "Alert Bundle" object.  This version of the guide defines single type of push notification: a named [operation] to a FHIR endpoint.  The basic process diagrams in figure 2 shows the process where the Alert Sender transact directly with the Alert Recipient.  Figure 3 shows the process where the the Alert Sender transact with the Alert Intermediary (aka clearinghouse) which in turn interacts with the Alert Recipient.  Although not represented in the figure, there may be multiple Alert Intermediaries.
+An event or request triggers an Alert Sender to notify either an Alert Intermediary or Recipient with an "Alert Bundle" object.  This version of the guide defines a single type of push notification: a named [operation] to a FHIR endpoint.  The basic process diagrams in Figure 2 shows the process where the Alert Sender transacts directly with the Alert Recipient.  Figure 3 shows the process where the Alert Sender transacts with the Alert Intermediary (aka clearinghouse) which in turn interacts with the Alert Recipient.  Although not represented in the figure, there may be multiple Alert Intermediaries.
 
 {% include img-portrait.html img="basic_process.svg" caption="Figure 2" %}
 
 1. A specific event or request by patient or Healthcare Facility triggers an alert to be sent to an Alert Recipient.
-1. The Alert Sender notifies the Alert Recipient by pushing an "Alert" bundle which includes common resources across all Alerts and use case dependent supporting resources.
+2. The Alert Sender notifies the Alert Recipient by pushing an "Alert" bundle which includes common resources across all Alerts and use case dependent supporting resources.
 
 {% include img-portrait.html img="basic_process_int.svg"
  caption="Figure 3" %}
 
 1. Event or request by patient or Healthcare Facility triggers an alert to be sent to an Alert Intermediary ( e.g. clearinghouse).
-1. The Alert Sender notifies the Alert Intermediary by pushing an "Alert" bundle which includes common resources across all Alerts and use case dependent supporting resources.
-1. The Alert Intermediary is responsible for the redistribution of the data.  Note that it may customize the data based on end user.
+2. The Alert Sender notifies the Alert Intermediary by pushing an "Alert" bundle which includes common resources across all Alerts and use case dependent supporting resources.
+3. The Alert Intermediary is responsible for the redistribution of the data.  Note that it may customize the data based on end user needs.
 
 
 ---
