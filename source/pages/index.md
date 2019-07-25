@@ -84,7 +84,7 @@ will continue on this in future versions of the Implementation Guide in collabor
 
 -   Emergency and Inpatient Admissions
 -	Admission for Observation
--	Admisssion for special services, such as outpatient surgery
+-	Admission for special services, such as outpatient surgery
 -   Encounter/Visit Notification for ambulatory services
 -   Discharges/Visit ends
 
