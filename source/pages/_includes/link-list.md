@@ -1,3 +1,5 @@
+[^1]: In addition to Patient and Encounter which are included in all Alert Bundles.
+[^2]: Minimum set of the patient's Resources that are Available for Optional Subsequent Queries.
 [Home]: index.html "Home Page"
 [Framework]: guidance.html  "General Framework Page"
 [Use cases]: usecases.html
