@@ -14,7 +14,7 @@
 			<value value="http://www.hl7.org/Special/committees/cds/index.cfm"/>
 		</telecom>
 	</contact>
-	<description value="Concepts describing the purpose of the Da Vinci Alert Communication Profile.  These concepts represent a 'starter set' an will be supplemented with additional concept in future versions"/>
+	<description value="Concepts describing the purpose of the Da Vinci Alert Communication Profile.  These concepts represent a 'starter set' an will be supplemented with additional concept in future versions. Note that there is no v2 equivalent to these codes, however there is a relationship between these alert topic codes and codes used in the resources that describe the events the alert is about. For example in the admission scenario the code alert-admit-er is used when a patient is admitted to the Emergency Department; in the encouter resource describing this event, the encounter.class will use the code EMER indicating that. A similar relationship exists for the discharge scenarios, only this time it is indicating wehre the patient is discharged to, so corresponds to codes in encounter.hospitalization.dischargeDisposition element."/>
 	<jurisdiction>
 		<coding>
 			<system value="urn:iso:std:iso:3166"/>
@@ -22,14 +22,14 @@
 			<display value="United States of America"/>
 		</coding>
 	</jurisdiction>
-	<copyright value="This Content is created by the Da Vinci project and HL7. No copyright acknowledgement is needed, nor are there any license terms to adhere to"></copyright>
+	<copyright value="This Content is created by the Da Vinci project and HL7. No copyright acknowledgement is needed, nor are there any license terms to adhere to."></copyright>
 	<caseSensitive value="true"/>
 	<hierarchyMeaning value="is-a"/>
 	<content value="complete"/>
 	<count value="35"/>
 	<property>
 		<code value="abstract"/>
-		<description value="True if an element is considered &#39;abstract&#39; - in other words, the code is not for use as a real concept"/>
+		<description value="True if an element is considered &#39;abstract&#39; - in other words, the code is not for use as a real concept."/>
 		<type value="boolean"/>
 	</property>
 	<concept>
@@ -65,7 +65,7 @@
 	<concept>
 		<code value="alert"/>
 		<display value="Alert"/>
-		<definition value="The purpose or content is an alert or a notification about an event. Usage Note: This is a high level code and should not be used in the value set - it is a grouper code for notifications of any kind"/>
+		<definition value="The purpose or content is an alert or a notification about an event. Usage Note: This is a high level code and should not be used in the value set - it is a grouper code for notifications of any kind."/>
 		<property>
 			<code value="abstract"/>
 			<valueBoolean value="true"/>
@@ -82,57 +82,57 @@
 			<concept>
 				<code value="alert-admit-inpatient"/>
 				<display value="Alert Admit Inpatient"/>
-				<definition value="The purpose or content is an alert or a notification about an admission to a hosptial or equivalent facility.  Usage Note: This child code corresponds to the Encounter.class code 'IMP'"/>
+				<definition value="The purpose or content is an alert or a notification about an admission to a hosptial or equivalent facility.  Usage Note: This child code corresponds to the Encounter.class code 'IMP'."/>
 			</concept>
 			<concept>
 				<code value="alert-admit-forobservation"/>
 				<display value="Alert Admit for Observation"/>
-				<definition value="The purpose or content is an alert or a notification about an admission for observation, because they require a significant period of treatment and monitoring to determine whether or not their condition warrants an inpatient admission or discharge. In the majority of cases the decision about admission or discharge will occur within a time period determined by local, regional or national regulation, often between 24 and 48 hours.  Usage Note: This child code corresponds to the Encounter.class code 'OBSENC'"/>
+				<definition value="The purpose or content is an alert or a notification about an admission for observation, because they require a significant period of treatment and monitoring to determine whether or not their condition warrants an inpatient admission or discharge. In the majority of cases the decision about admission or discharge will occur within a time period determined by local, regional or national regulation, often between 24 and 48 hours.  Usage Note: This child code corresponds to the Encounter.class code 'OBSENC'."/>
 			</concept>
 			<concept>
 				<code value="alert-admit-ambulatory"/>
 				<display value="Alert Admit Ambulatory"/>
-				<definition value="The purpose or content is an alert or a notification about an admission to a healthcare facility (e.g. a practitioner, aTMs office, clinic setting, or hospital) on a nonresident basis. The term ambulatory usually implies that the patient has come to the location and is not assigned to a bed. Sometimes referred to as an outpatient encounter.  Usage Note: This child code corresponds to the Encounter.class code 'AMB'"/>
+				<definition value="The purpose or content is an alert or a notification about an admission to a healthcare facility (e.g. a practitioner, aTMs office, clinic setting, or hospital) on a nonresident basis. The term ambulatory usually implies that the patient has come to the location and is not assigned to a bed. Sometimes referred to as an outpatient encounter.  Usage Note: This child code corresponds to the Encounter.class code 'AMB'."/>
 			</concept>
 			<concept>
 				<code value="alert-pre-admit"/>
 				<display value="Alert Pre-admit"/>
-				<definition value="The purpose or content is an alert or a notification about upcoming services at a healtcare facility.   Usage Note: This child code corresponds to the Encounter.class code 'PRENC'"/>
+				<definition value="The purpose or content is an alert or a notification about upcoming services at a healtcare facility.   Usage Note: This child code corresponds to the Encounter.class code 'PRENC'."/>
 			</concept>
 			<concept>
 				<code value="alert-admit-short-stay"/>
 				<display value="Alert Admit Short Stay"/>
-				<definition value="The purpose or content is an alert or a notification about an admission to to a health care facility for a predetermined length of time, usually less than 24 hours.  Usage Note: This child code corresponds to the Encounter.class code 'SS'"/>
+				<definition value="The purpose or content is an alert or a notification about an admission to to a health care facility for a predetermined length of time, usually less than 24 hours.  Usage Note: This child code corresponds to the Encounter.class code 'SS'."/>
 			</concept>
 		</concept>
 		<concept>
 			<code value="alert-discharge"/>
 			<display value="Alert Discharge"/>
-			<definition value="The purpose or content is an alert or a notification about a discharge.  Usage Note: The included child codes correspond to the Encounter.hosptialization.dischargeDisposition codes drawn from FHIR code ssytem discharge-disposition"/>
+			<definition value="The purpose or content is an alert or a notification about a discharge.  Usage Note: The included child codes correspond to the encounter.hospitalization.dischargeDisposition codes drawn from FHIR code system discharge-disposition."/>
 			<concept>
 				<code value="alert-discharge-home"/>
 				<display value="Alert Discharge Home"/>
-				<definition value="The purpose or content is an alert or a notification about an admission to to a health care facility for a predetermined length of time, usually less than 24 hours.  Usage Note: This child code corresponds to the Encounter.hosptialization.dischargeDisposition code 'home'"/>
+				<definition value="The purpose or content is an alert or a notification about an admission to to a health care facility for a predetermined length of time, usually less than 24 hours.  Usage Note: This child code corresponds to the encounter.hospitalization.dischargeDisposition code 'home'."/>
 			</concept>
 			<concept>
 				<code value="alert-discharge-skilled-nursing"/>
 				<display value="Alert Discharge Skilled Nursing"/>
-				<definition value="The purpose or content is an alert or a notification about a discharge to the patient's home environment.  Usage Note: This child code corresponds to the Encounter.hosptialization.dischargeDisposition code 'snf'"/>
+				<definition value="The purpose or content is an alert or a notification about a discharge to the patient's home environment.  Usage Note: This child code corresponds to the encounter.hospitalization.dischargeDisposition code 'snf'."/>
 			</concept>
 			<concept>
 				<code value="alert-discharge-longterm-care"/>
 				<display value="Alert Discharge Longterm Care"/>
-				<definition value="The purpose or content is an alert or a notification about a discharge to a long-term care facility.  Usage Note: This child code corresponds to the Encounter.hosptialization.dischargeDisposition code 'long'"/>
+				<definition value="The purpose or content is an alert or a notification about a discharge to a long-term care facility.  Usage Note: This child code corresponds to the encounter.hospitalization.dischargeDisposition code 'long'."/>
 			</concept>
 			<concept>
 				<code value="alert-discharge-desceased"/>
 				<display value="Alert Discharge Desceased"/>
-				<definition value="The purpose or content is an alert or a notification that the patiened died during the encounter.  Usage Note: This child code corresponds to the Encounter.hosptialization.dischargeDisposition code 'exp'"/>
+				<definition value="The purpose or content is an alert or a notification that the patiened died during the encounter.  Usage Note: This child code corresponds to the encounter.hospitalization.dischargeDisposition code 'exp'."/>
 			</concept>
 			<concept>
 				<code value="alert-discharge-rehab"/>
 				<display value="Alert Discharge Rehab"/>
-				<definition value="The purpose or content is an alert or a notification about a discharge to a post-acute care rehabilitation facility.  Usage Note: This child code corresponds to the Encounter.hosptialization.dischargeDisposition code 'rehab'"/>
+				<definition value="The purpose or content is an alert or a notification about a discharge to a post-acute care rehabilitation facility.  Usage Note: This child code corresponds to the encounter.hospitalization.dischargeDisposition code 'rehab'."/>
 			</concept>
 		</concept>
 		<concept>
