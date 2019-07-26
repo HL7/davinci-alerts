@@ -36,7 +36,7 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>endpoint</td>
+					<td>alert</td>
 					<td>1..*</td>
 					<td/>
 					<td/>
@@ -48,7 +48,7 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>endpoint.alert-endpoint</td>
+					<td>alert.alert-endpoint</td>
 					<td>0..1</td>
 					<td>
 						canonical(<a href="StructureDefinition-alerts-endpoint.html">Da Vinci Alerts Endpoint Profile</a>)
@@ -62,7 +62,7 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>endpoint.alert-bundle</td>
+					<td>alert.alert-bundle</td>
 					<td>1..1</td>
 					<td>
 						canonical(<a href="StructureDefinition-alerts-bundle.html">Da Vinci Alerts Bundle Profile</a>)
@@ -102,7 +102,7 @@
 	<type value="true"/>
 	<instance value="false"/>
 	<parameter>
-		<name value="endpoint"/>
+		<name value="alert"/>
 		<use value="in"/>
 		<min value="1"/>
 		<max value="*"/>
@@ -112,7 +112,7 @@
 			<use value="in"/>
 			<min value="0"/>
 			<max value="1"/>
-			<documentation value="The Da Vinci Alert Endpoint which contains the technical details of an endpoint for getting additional information from the medical record for the event"/>
+			<documentation value="The Da Vinci Alert Endpoint which contains the technical details of an alert for getting additional information from the medical record for the event"/>
 			<type value="canonical"/>
 			<targetProfile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/alerts-endpoint"/>
 		</part>
