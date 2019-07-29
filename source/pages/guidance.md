@@ -74,6 +74,7 @@ All elements in the Da Vinci Alert profiles have a [MustSupport flag]. Systems c
 - A secure information transport mechanism exists between the actors.
 
 #### Assumptions
+
 - Based on FHIR R4 and US Core R4 profiles where applicable.
 - Alerts are transacted to an operation endpoint ($notify).
 - The Da Vinci Alerts Bundle Profile is the FHIR object that is exchanged for all alert transactions.

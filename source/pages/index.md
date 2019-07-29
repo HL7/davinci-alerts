@@ -15,24 +15,9 @@ active: home
 The HL7 Da Vinci Project has recognized a need for communication of
 Alerts between payers, providers and other actors in the healthcare
 space. Alerts are defined as a need to notify another party of an event
-that would affect one or more patient's care. Alerts allow actors participating in the
+that would affect patient care. Alerts allow actors participating in the
 patient's healthcare to take actions and intervene earlier to assure the
 patient is better cared for. This can also result in reduced costs.
-
-It is important that the framework allow for only appropriate alerts to
-be sent at the appropriate time and with just the right amount of
-information. This will serve to reduce alert fatigue. Because FHIR is a
-web standard, the burden of communicating the alert is also reduced.
-
-The work of this Implementation Guide is to define a FHIR framework for
-
-1.  Identifying that an event/trigger has occurred
-1.  Using a FHIR bundle to relay the alert to an interested actor
-
-While an alert may generate workflow on the receiver's part, the Alert
-is not a part of that workflow. As such, the sender of an Alert, should
-not expect any additional response outside of the standard FHIR
-functionality.
 
 ## How to read this Guide
 
@@ -50,24 +35,33 @@ This Guide is divided into several pages which are listed at the top of each pag
 - [Downloads]\: This page provides links to downloadable artifacts.
 
 
-## Background
+## Scope and Usage
 
+The work of this Implementation Guide is to:
 
-### *In Scope*
+1.  Define a technical framework for sending alert data to the appropriate actors when triggered by an event or request.
+1.  Define what data is transacted.
+1.  Define a FHIR Bundle that is a common data model exchanged for all alert transactions.
 
-- There must be an event that drives the generation of the Alert
-- The event can be for one or more patients but the Alert will be
-generated for each patient separately
-- The Alert will be based on FHIR R4 and where possible US Core
-Implementation of FHIR R4
+It is important that the framework allow for only appropriate alerts to
+be sent at the appropriate time and with just the right amount of
+information. This will serve to reduce alert fatigue. It is anticipated that the burden of communicating the alert is also reduced by using FHIR.
 
-### *Out Of Scope*
+While an alert may generate workflow on the receiver's part, the Alert
+is not a part of that workflow. As such, the sender of an Alert, should
+not expect any additional response outside of the standard FHIR
+functionality.
+
+### Out Of Scope
+
+The following items are out of scope for this implementation guide:
+
 - “Endpoint Discovery” and maintenance
 - Creation of the FHIR equivalent of v2 Messaging
 - Distribution beyond FHIR Endpoints (e.g. SMS, email)
 - Bidirectional Work, such as Gaps in Care
 - Alerts without an event
-- Any notification that requires workflow management such as Task
+- Any alert notification that requires workflow management such as Task
 - Complex content
 
 ### Scenarios
@@ -107,16 +101,16 @@ will continue on this in future versions of the Implementation Guide in collabor
 -   Work Comp Initial/Visits/Services
 -   Changes in Care Team
 
-### Roles and Actors
+## Roles and Actors
 
-#### Alert Roles
+### Alert Roles
 
 - **Alert Sender** - the system responsible for sending the alert, typically operated by the facility or organization where the event occurred
 - **Alert Recipient** – the system responsible for receiving generated alerts from Alert Senders
-- **Interested Entity** – a system that is interested in receiving alerts for specific events, providers, patients or other predefined criteria
+<!-- - **Interested Entity** – a system that is interested in receiving alerts for specific events, providers, patients or other predefined criteria --
 - **Alert Intermediary** (e.g. ClearingHouse or HIE/HIN)– a system that can act as a central point to receive alerts from multiple Alert Senders and distribute alerts to Alert Recipients based on previously defined subscription policies
 
-#### Alert Actors
+### Alert Actors
 
 There are many potential actors for the roles listed above:
 
@@ -140,11 +134,11 @@ There are many potential actors for the roles listed above:
 -   Community Care
 -->
 
-### Workflow Overview
+## Workflow Overview
 
 -  *See the [Framework] page for a detailed description of the technical workflow and API guidance*
 
-An event or request triggers an Alert Sender to notify either an Alert Intermediary or Recipient with an "Alert Bundle" object.  This version of the guide defines a single type of push notification: a named [operation] to a FHIR endpoint.  The basic process diagrams in Figure 2 shows the process where the Alert Sender transacts directly with the Alert Recipient.  Figure 3 shows the process where the Alert Sender transacts with the Alert Intermediary (aka clearinghouse) which in turn interacts with the Alert Recipient.  Although not represented in the figure, there may be multiple Alert Intermediaries.
+An event or request triggers an Alert Sender to notify either an Alert Intermediary or Recipient with an "Alert Bundle" object.  This version of the guide defines a single type of push alert notification: a named [operation] to a FHIR endpoint.  The basic process diagrams in Figure 2 shows the process where the Alert Sender transacts directly with the Alert Recipient.  Figure 3 shows the process where the Alert Sender transacts with the Alert Intermediary (aka clearinghouse) which in turn interacts with the Alert Recipient.  Although not represented in the figure, there may be multiple Alert Intermediaries.
 
 {% include img-portrait.html img="basic_process.svg" caption="Figure 2" %}
 
