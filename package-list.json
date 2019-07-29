@@ -16,7 +16,7 @@
          "date": "2019-09-01",
          "desc": "STU1 For Comment Ballot",
          "changes": "",
-         "path": "http://hl7.org/fhir/us/davinci-alerts/STU1/index.html",
+         "path": "http://hl7.org/fhir/us/davinci-alerts/2019Sep/index.html",
          "status": "ballot",
          "sequence": "STU1",
          "fhir-version" : "4.0.0"
