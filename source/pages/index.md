@@ -107,7 +107,7 @@ will continue on this in future versions of the Implementation Guide in collabor
 
 - **Alert Sender** - the system responsible for sending the alert, typically operated by the facility or organization where the event occurred
 - **Alert Recipient** – the system responsible for receiving generated alerts from Alert Senders
-<!-- - **Interested Entity** – a system that is interested in receiving alerts for specific events, providers, patients or other predefined criteria --
+<!-- - **Interested Entity** – a system that is interested in receiving alerts for specific events, providers, patients or other predefined criteria -->
 - **Alert Intermediary** (e.g. ClearingHouse or HIE/HIN)– a system that can act as a central point to receive alerts from multiple Alert Senders and distribute alerts to Alert Recipients based on previously defined subscription policies
 
 ### Alert Actors

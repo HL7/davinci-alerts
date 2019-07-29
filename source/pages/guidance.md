@@ -35,13 +35,13 @@ All elements in the Da Vinci Alert profiles have a [MustSupport flag]. Systems c
 
 * In situations where information on a particular data element is not present and the reason for absence is unknown, Alert Sender SHALL NOT include the data elements in the resource instance returned as part of the query results.
 
-* When receiving an alert notification or querying Alert Senders, the Alert Recipient/Intermediary SHALL interpret missing data elements within resource instances as data not present in the US Core Responder's systems.
+* When receiving an alert notification or querying Alert Senders, the Alert Recipient/Intermediary SHALL interpret missing data elements within resource instances as data not present in the Alert Sender's systems.
 
-* In situations where information on a particular data element is missing and the US Core Responder knows the precise reason for the absence of data, Alert Sender SHALL send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
+* In situations where information on a particular data element is missing and the Alert Sender knows the precise reason for the absence of data, Alert Sender SHALL send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
 
 * Alert Recipient/Intermediary SHALL be able to process resource instances containing data elements asserting missing information.
 
-* NOTE: *Alert Sender* = Server and *Alert Recipient/Intermediary* = Client
+<!-- * NOTE: *Alert Sender* = Server and *Alert Recipient/Intermediary* = Client -->
 
 #### This guide adopts the following definitions of Must Support for all transactions between the Alert Intermediary and Alert Recipient
 {:.no_toc}
@@ -56,7 +56,7 @@ All elements in the Da Vinci Alert profiles have a [MustSupport flag]. Systems c
 
 - The Alert Recipient SHALL be able to process resource instances containing missing data elements and data elements asserting missing information.
 
-* NOTE: *Alert Intermediary* = Server and *Alert Recipient* = Client
+<!-- * NOTE: *Alert Intermediary* = Server and *Alert Recipient* = Client -->
 
 
 
@@ -71,6 +71,7 @@ All elements in the Da Vinci Alert profiles have a [MustSupport flag]. Systems c
 - System level trust exists between the actors.
   - Clients have been authorized by the servers.
   - It is assumed that consent is managed elsewhere.
+  - Patient consent allows exchange of data between the relevant systems.
 - A secure information transport mechanism exists between the actors.
 
 #### Assumptions
