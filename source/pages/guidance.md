@@ -29,7 +29,7 @@ All elements in the Da Vinci Alert profiles have a [MustSupport flag]. Systems c
 
 *Must Support* on any data element SHALL be interpreted as follows:
 
-* As part of the alert notification or a query result as specified by the [Da Vinci Alert Sender CapabilityStatement], the Alert Sender SHALL be capable of including the data elements defined in the Da Vinci Alert profiles that have a MustSupport flag.
+* As part of the alert notification or a query result as specified by the [Da Vinci Alerts CapabilityStatements], the Alert Sender SHALL be capable of including the data elements defined in the Da Vinci Alert profiles that have a MustSupport flag.
 
 * Alert Recipient/Intermediary SHALL be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. In other words Alert Recipient/Intermediary SHOULD be capable of processing the data elements (display, store, etc).
 
