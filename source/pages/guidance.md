@@ -33,13 +33,13 @@ All elements in the Da Vinci Alert profiles have a [MustSupport flag]. Systems c
 
 * Alert Recipient/Intermediary SHALL be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. In other words Alert Recipient/Intermediary SHOULD be capable of processing the data elements (display, store, etc).
 
-* In situations where information on a particular data element is not present and the reason for absence is unknown, Alert Sender SHALL NOT include the data elements in the resource instance returned as part of the query results.
+* In situations where information on a particular data element is not present and the reason for absence is unknown, Alert Sender SHALL NOT include the data elements in the resource instance returned as part of a $notify alert notification or a query response.
 
-* When receiving an alert notification or querying Alert Senders, the Alert Recipient/Intermediary SHALL interpret missing data elements within resource instances as data not present in the Alert Sender's systems.
+* When receiving an alert notification or a query response from the Alert Sender, the Alert Recipient/Intermediary SHALL interpret missing data elements within resource instances as data not present in the Alert Sender's systems.
 
-* In situations where information on a particular data element is missing and the Alert Sender knows the precise reason for the absence of data, Alert Sender SHALL send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
+* In situations where information on a particular data element is missing and the Alert Sender knows the precise reason for the absence of data, Alert Sender SHALL provide the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
 
-* Alert Recipient/Intermediary SHALL be able to process resource instances containing data elements asserting missing information.
+* Alert Recipient/Intermediary SHALL be able to process resource instances containing data elements asserting missing information without generating an error or causing the application to fail.
 
 <!-- * NOTE: *Alert Sender* = Server and *Alert Recipient/Intermediary* = Client -->
 
@@ -52,9 +52,9 @@ All elements in the Da Vinci Alert profiles have a [MustSupport flag]. Systems c
 
 - The Alert Recipient SHALL be capable of processing resource instances containing the data elements the data elements defined in the Da Vinci Alert profiles that have a MustSupport flag without generating an error or causing the application to fail. In other words, the Alert Recipient SHOULD be capable of processing the data elements (displaying, storing, etc).
 
-- In situations where information on a particular data element is not needed or considered protected information the Alert Intermediary MAY remove the data elements in the resource instance returned as part of the query results. The Alert Intermediary MAY send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
+- In situations where information on a particular data element is not needed or considered protected information the Alert Intermediary MAY remove the data elements in the resource instance when distributing the alert notification or responding to an Alert Recipient's query. The Alert Intermediary MAY provide the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
 
-- The Alert Recipient SHALL be able to process resource instances containing missing data elements and data elements asserting missing information.
+- The Alert Recipient SHALL be able to process resource instances containing missing data elements and data elements asserting missing information without generating an error or causing the application to fail.
 
 <!-- * NOTE: *Alert Intermediary* = Server and *Alert Recipient* = Client -->
 
@@ -85,6 +85,9 @@ All elements in the Da Vinci Alert profiles have a [MustSupport flag]. Systems c
 
 The FHIR resources used in Da Vinci Alert transactions form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resource graphs. The FHIR Alert resource graph for the admit and discharge use case is shown in [Figure 7].
 
+{:.note-to-balloters}
+Note to Balloters: We are seeking input on the Bundle type to use this context.   Both `transaction`, and `collection` were considerd.  Although `transaction` (and `transaction-response`) provides some additional confirmation of delivery, the required .request.method element places additional expectations on the server responding to the `$notify` transaction.  In contrast, the `collection` type imposes no processing obligations or behavioral rules beyond persistence, including any confirmation confirmation of delivery beyond the http status.
+
 For every alert notification, the FHIR object that is exchanged is the [Da Vinci Alert Bundle Profile]. This bundle is a [`transaction`] type bundle that is POSTed to the Alert Recipient's or Intermediary's FHIR endpoint via a the $notify operation. The complete set of content to make up an Alert Bundle includes the [Da Vinci Alerts Communication Profile] which provides the necessary context for the alert reason together with various resources pointed to or indirectly connected to the Communication profile, all gathered together into a Bundle for transport and persistence.  Resources associated with the following list of Communication references SHALL be included in the Bundle:
 
 - `Communication.subject` (Patient resource)
@@ -93,13 +96,49 @@ For every alert notification, the FHIR object that is exchanged is the [Da Vinci
 
 The following Table summarizes the Alert Scenarios and the Resources that may be referenced in the [Da Vinci Communication Profile] payload element and included in the alert Bundle:
 
-{% include alert_scenarios.md %}
 {: .grid}
+| ﻿Alert Scenarios | Resources in Alert Bundle<sup>(1)</sup> | Searchable Resources<sup>(2)</sup> |
+|---|---|---|
+| Emergency and Inpatient Admissions | US Core R4 Condition |Location, Coverage, Practitioner (sender), Organization (sender), PractitionerRole (sender)|
+| Emergency and Inpatient Discharges | US Core R4 Condition |Location, Coverage, Practitioner (sender), Organization (sender), PractitionerRole (sender) |
 
-Note to Balloters: The resources listed for scenarios that are not part of the initial phase are suggestions and will be reviewed and updated when these scenarios are added in future iterations of this IG.
-{:.note-to-balloters}
+---
 
 [Example of an Alert Bundle](Bundle-admit-01.html) for a patient admission.
+
+---
+
+{:.note-to-balloters}
+Note to Balloters: These scenarios may be added in future iterations of this IG.
+
+{:.note-to-balloters .grid}
+| ﻿Alert Scenarios | Resources in Alert Bundle<sup>(1)</sup> | Searchable Resources<sup>(2)</sup> |
+|---|---|---|
+| Lab Results | US Core R4 DiagnosticReport, US Core R4 Observation, US Core R4 DocumentReference |TBD... |
+| Problem with Treatment – such as drug recall, device recall/issue | US Core R4 Medication, US Core R4 AdverseEvent, US Core R4 Device | TBD... |
+| Encounter/Visit Notification | no additional |TBD...  |
+| Public Health Notification | US Core R4 Condition |TBD...  |
+| Scheduled Appointment/Pre-Admit | R4 Appointment |TBD...  |
+| Referral | R4 ServiceRequest, R4 Practitioner |TBD...  |
+| Ordered Device/Biometric/Patient (i.e. Fit Bit) | R4 DeviceRequest |TBD...  |
+| Treatment Start/End | US Core R4 MedicationAdministration |TBD...  |
+| Change in Social Determinants of Health | R4 Observation |TBD...  |
+| Birth/Death | No additional resource |TBD... |
+| Coverage Start/End | DEQM Coverage |TBD...  |
+| Notification of Prior Authorization (Pended to Approved/Denied) | R4 ClaimResponse |TBD...  |
+| Pharmacy (Pickup, Restock, Dispense) | US Core R4 Medication, US Core R4 MedicationDispense, R4 SupplyDelivery, R4 SupplyRequest |TBD...  |
+| Notification of New Condition | US Core R4 Condition |TBD...  |
+| Work Comp Initial/Visits/Services | US Core R4 Condition, R4 Coverage |TBD...  |
+| Changes in Care Team | US Core R4 Practitioner, R4 RelatedPerson, R4 CareTeam | TBD... |
+
+---
+
+footnotes:
+
+(1): In addition to Patient and Encounter which are included in all Alert Bundles.
+
+(2): Minimum set of the patient's Resources that are Available for Optional Subsequent Queries.
+
 
 ### Push Alert Notification
 

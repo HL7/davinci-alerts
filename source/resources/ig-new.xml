@@ -125,7 +125,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/alert-intermediary-client"/>
+        <reference value="CapabilityStatement/alert-receiver"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -137,13 +137,13 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/alert-sender"/>
+        <reference value="CapabilityStatement/alert-initiator"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/alert-recipient"/>
+        <reference value="CapabilityStatement/query-requester"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -161,7 +161,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/alert-intermediary-server"/>
+        <reference value="CapabilityStatement/query-responder"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -189,7 +189,7 @@
       <generation value="markdown"/>
       <page>
         <nameUrl value="guidance.html"/>
-        <title value="General Guidance"/>
+        <title value="Framework"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -243,27 +243,32 @@
         </page>
       </page>
       <page>
+        <nameUrl value="searchparameters.html"/>
+        <title value="Search Parameters"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <nameUrl value="capstatements.html"/>
         <title value="Capability Statements"/>
         <generation value="markdown"/>
         <page>
-          <nameUrl value="CapabilityStatement-alert-intermediary-client.html"/>
-          <title value="CapabilityStatement Alert Intermediary Client"/>
+          <nameUrl value="CapabilityStatement-alert-receiver.html"/>
+          <title value="CapabilityStatement Alert Receiver"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="CapabilityStatement-alert-sender.html"/>
-          <title value="CapabilityStatement Alert Sender"/>
+          <nameUrl value="CapabilityStatement-alert-initiator.html"/>
+          <title value="CapabilityStatement Alert Initiator"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="CapabilityStatement-alert-recipient.html"/>
-          <title value="CapabilityStatement Alert Recipient"/>
+          <nameUrl value="CapabilityStatement-query-requester.html"/>
+          <title value="CapabilityStatement Query Requester"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="CapabilityStatement-alert-intermediary-server.html"/>
-          <title value="CapabilityStatement Alert Intermediary Server"/>
+          <nameUrl value="CapabilityStatement-query-responder.html"/>
+          <title value="CapabilityStatement Query Responder"/>
           <generation value="generated"/>
         </page>
       </page>

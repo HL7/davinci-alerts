@@ -1,5 +1,3 @@
-{:.grid}
-
 | ﻿Alert Scenarios | Resources in Alert Bundle<sup>(1)</sup> | Searchable Resources<sup>(2)</sup> |
 |---|---|---|
 | Emergency and Inpatient Admissions | US Core R4 Condition |Location, Coverage, Practitioner (sender), Organization (sender), PractitionerRole (sender)|

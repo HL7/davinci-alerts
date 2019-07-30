@@ -40,29 +40,27 @@ This Guide is divided into several pages which are listed at the top of each pag
 The work of this Implementation Guide is to:
 
 1.  Define a technical framework for sending alert data to the appropriate actors when triggered by an event or request.
-1.  Define what data is transacted.
+1.  Define the minimal data elements needed to support the information needs that are appropriate for 80% of users.  Users requiring more data may follow up with additional queries.
 1.  Define a FHIR Bundle that is a common data model exchanged for all alert transactions.
 
 It is important that the framework allow for only appropriate alerts to
 be sent at the appropriate time and with just the right amount of
-information. This will serve to reduce alert fatigue. It is anticipated that the burden of communicating the alert is also reduced by using FHIR.
-
-While an alert may generate workflow on the receiver's part, the Alert
-is not a part of that workflow. As such, the sender of an Alert, should
-not expect any additional response outside of the standard FHIR
-functionality.
+information. This will serve to reduce alert fatigue. It is anticipated that the burden of communicating the alert is also reduced by using FHIR.  
 
 ### Out Of Scope
 
 The following items are out of scope for this implementation guide:
-
+- What constitutes a trigger (nature of the event as defined in
+your organization)
+   - Including alerts without an event
 - “Endpoint Discovery” and maintenance
 - Creation of the FHIR equivalent of v2 Messaging
 - Distribution beyond FHIR Endpoints (e.g. SMS, email)
 - Bidirectional Work, such as Gaps in Care
-- Alerts without an event
 - Any alert notification that requires workflow management such as Task
 - Complex content
+- Besides the standard http response, the Alert Recipient's workflow upon receipt of alert.
+   - Note, the Alert Recipient may initiate a FHIR RESTful query for additional data.
 
 ### Scenarios
 
@@ -82,7 +80,9 @@ will continue on this in future versions of the Implementation Guide in collabor
 -   Encounter/Visit Notification for ambulatory services
 -   Discharges/Visit ends
 
-#### Potential Future scenarios to be defined in cooperation with the appropriate HL7 International Working Groups:
+#### Potential Future Scenarios
+
+These scenarios may be defined in cooperation with the appropriate HL7 International Working Group for inclusion in a future version of this guide:
 {:.no_toc}
 
 -   Lab Results

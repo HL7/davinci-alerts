@@ -130,7 +130,7 @@
     },
     {
       "reference" : {
-        "reference" : "CapabilityStatement/alert-intermediary-client"
+        "reference" : "CapabilityStatement/alert-receiver"
       },
       "exampleBoolean" : false
     },
@@ -142,13 +142,13 @@
     },
     {
       "reference" : {
-        "reference" : "CapabilityStatement/alert-sender"
+        "reference" : "CapabilityStatement/alert-initiator"
       },
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CapabilityStatement/alert-recipient"
+        "reference" : "CapabilityStatement/query-requester"
       },
       "exampleBoolean" : false
     },
@@ -166,7 +166,7 @@
     },
     {
       "reference" : {
-        "reference" : "CapabilityStatement/alert-intermediary-server"
+        "reference" : "CapabilityStatement/query-responder"
       },
       "exampleBoolean" : false
     },
@@ -194,7 +194,7 @@
       "generation" : "markdown",
       "page" : [{
         "nameUrl" : "guidance.html",
-        "title" : "General Guidance",
+        "title" : "Framework",
         "generation" : "markdown"
       },
       {
@@ -248,27 +248,32 @@
         }]
       },
       {
+        "nameUrl" : "searchparameters.html",
+        "title" : "Search Parameters",
+        "generation" : "markdown"
+      },
+      {
         "nameUrl" : "capstatements.html",
         "title" : "Capability Statements",
         "generation" : "markdown",
         "page" : [{
-          "nameUrl" : "CapabilityStatement-alert-intermediary-client.html",
-          "title" : "CapabilityStatement Alert Intermediary Client",
+          "nameUrl" : "CapabilityStatement-alert-receiver.html",
+          "title" : "CapabilityStatement Alert Receiver",
           "generation" : "generated"
         },
         {
-          "nameUrl" : "CapabilityStatement-alert-sender.html",
-          "title" : "CapabilityStatement Alert Sender",
+          "nameUrl" : "CapabilityStatement-alert-initiator.html",
+          "title" : "CapabilityStatement Alert Initiator",
           "generation" : "generated"
         },
         {
-          "nameUrl" : "CapabilityStatement-alert-recipient.html",
-          "title" : "CapabilityStatement Alert Recipient",
+          "nameUrl" : "CapabilityStatement-query-requester.html",
+          "title" : "CapabilityStatement Query Requester",
           "generation" : "generated"
         },
         {
-          "nameUrl" : "CapabilityStatement-alert-intermediary-server.html",
-          "title" : "CapabilityStatement Alert Intermediary Server",
+          "nameUrl" : "CapabilityStatement-query-responder.html",
+          "title" : "CapabilityStatement Query Responder",
           "generation" : "generated"
         }]
       },

@@ -34,5 +34,4 @@
 ["black box"]: https://en.wikipedia.org/wiki/Black_box
 ["reliable delivery"]: https://en.wikipedia.org/wiki/Reliable_messaging
 [MustSupport flag]: {{site.data.fhir.path}}profiling.html#mustsupport
-[Da Vinci Alert Sender CapabilityStatement]: CapabilityStatement-alert-sender.html
-[Da Vinci Alert Intermediary Server CapabilityStatement]: CapabilityStatement-alert-intermediary-server.html
+[Da Vinci Alerts CapabilityStatements]: capstatements.html
