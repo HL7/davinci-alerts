@@ -3,16 +3,16 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="hl7.fhir.us.davinci-alerts-0.1.0"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/resources"/>
+    <valueString value="/Users/rhausam/git-repo/davinci-alerts/source/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/examples"/>
+    <valueString value="/Users/rhausam/git-repo/davinci-alerts/source/examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-Alerts/framework"/>
+    <valueString value="/Users/rhausam/git-repo/davinci-alerts/framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/pages"/>
+    <valueString value="/Users/rhausam/git-repo/davinci-alerts/source/pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts-0.1.0"/>
   <version value="0.1.0"/>
