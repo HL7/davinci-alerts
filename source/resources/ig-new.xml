@@ -107,6 +107,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Bundle/201908121155.55-admit-01"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Coverage/example-1"/>
       </reference>
       <exampleBoolean value="true"/>

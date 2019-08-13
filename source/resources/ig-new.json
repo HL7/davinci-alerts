@@ -112,6 +112,12 @@
     },
     {
       "reference" : {
+        "reference" : "Bundle/201908121155.55-admit-01"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "Coverage/example-1"
       },
       "exampleBoolean" : true
