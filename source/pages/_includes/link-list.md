@@ -35,3 +35,4 @@
 ["reliable delivery"]: https://en.wikipedia.org/wiki/Reliable_messaging
 [MustSupport flag]: {{site.data.fhir.path}}profiling.html#mustsupport
 [Da Vinci Alerts CapabilityStatements]: capstatements.html
+[FHIR Messaging paradigm]: {{site.data.fhir.path}}messaging.html

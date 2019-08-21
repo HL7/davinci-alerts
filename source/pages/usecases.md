@@ -67,7 +67,7 @@ Using the [FHIR Messaging paradigm] to send a *Da Vinci Alert Message Bundle* to
 
 ### Graph of FHIR Resources
 
-The following resource graph in figure 8 defines the resources that support the admission and discharge alerts use case using FHIR messaging. MessageHeader, Patient, Encounter, and Condition are the primary resources (indicated by the black borders) which are messaged in the Da Vinci Alert Message Bundle to notify the provider of when the event has occurred. The Endpoint Resource can be optionally included in the bundle to allow the Recipient to optionally query other associated resources such as Location, Practitioner and Organization  through a subsequent FHIR read or search interaction (TODO this needs further testing and discusion).  Note that the boxes with several resources inside them represents a choice.
+The following resource graph in figure 8 defines the resources that support the admission and discharge alerts use case using FHIR messaging. MessageHeader, Patient, Encounter, and Condition are the primary resources (indicated by the black borders) which are messaged in the Da Vinci Alert Message Bundle to notify the provider of when the event has occurred. The Endpoint Resource can be optionally included in the bundle to allow the Recipient to optionally query other associated resources such as Location, Practitioner and Organization  through a subsequent FHIR read or search interaction (TODO this needs further testing and discussion).  Note that the boxes with several resources inside them represents a choice.
 
 {% include img-portrait.html img="admit_message_graph.svg" caption="Figure 8" %}
 
@@ -75,9 +75,19 @@ Note:
 
 - \* it is questionable whether Encounter.diagnosis.condition has been implemented by the EHR vendors - need to discuss with vendors.
 - \** There is no Practitioner.endpoint element and an extension may be needed to implement.
-- \*** MessageDefinition may be used to formally define the Message content for a given event.
+- \*** MessageDefinition is used to formally define the Message content for a given event (e.g, an inpatient admission or discharge).  It defines the event and the focal and non focal Resources/Profiles that make up the message:
 
-[Example Da Vinci Alert Message Bundle](Bundle-201908121155.55-admit-01.html)
+    - [Example Da Vinci Alert MessageDefinition](MessageDefinition-admit-1.html)
+
+    The GraphDefinition is referenced by the MessageDefinition and it defines the links between the all resources that are contained within the message.
+
+    - [Example Da Vinci Alert GraphDefinition](GraphDefinition-admit-1.html)
+
+
+The Bundle can be transacted similarly to the Alert bundle by posting to an operation endpoint using a RESTful POST transaction:
+
+- [Example Da Vinci Alert Message Bundle](Bundle-201908201155.55-admit-01.html)
+
 
 **Example Transaction**
 The following transaction show an example of using the `$process-message` operation to send a Da Vinci Alert Message Bundle:
@@ -87,8 +97,14 @@ The following transaction show an example of using the `$process-message` operat
 
 ### Comparison of the Communication Profile to the MessageHeader Profile
 
-In the figure below the key elements in the Da Vinci Communication Profile are mapped to theire equivalent elements in the MessageHeader resource in order to compare and contrast these FHIR object for this use case.
+The MessageHeader is the first resource in the Da Vinci Alert Message Bundle and serves the same function as Communication resources in the Alert Bundle above, providing the necessary context for the alert reason together with various resources pointed to or indirectly connected to it:
+
+- [Example Da Vinci Alert MessageHeader](MessageHeader-admit-1.html)
+
+In the figure below the key elements in the Da Vinci Communication Profile are mapped to their equivalent elements in the MessageHeader resource in order to compare and contrast these FHIR object for this use case.
 
 {% include img-portrait.html img="comm_msg_map.svg" caption="Figure 9" %}
+
+
 
 {% include link-list.md %}

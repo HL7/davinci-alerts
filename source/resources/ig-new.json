@@ -3,19 +3,19 @@
   "id" : "hl7.fhir.us.davinci-alerts-0.1.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/rhausam/git-repo/davinci-alerts/source/resources"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/rhausam/git-repo/davinci-alerts/source/examples"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/rhausam/git-repo/davinci-alerts/framework"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-Alerts/framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/rhausam/git-repo/davinci-alerts/source/pages"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/pages"
   }],
   "url" : "http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts-0.1.0",
   "version" : "0.1.0",
@@ -106,13 +106,13 @@
     },
     {
       "reference" : {
-        "reference" : "Organization/example-2"
+        "reference" : "Device/example"
       },
       "exampleBoolean" : true
     },
     {
       "reference" : {
-        "reference" : "Bundle/201908121155.55-admit-01"
+        "reference" : "Organization/example-2"
       },
       "exampleBoolean" : true
     },
@@ -130,7 +130,31 @@
     },
     {
       "reference" : {
+        "reference" : "MessageHeader/admit-1"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "Condition/example"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Bundle/201908201155.55-admit-01"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "GraphDefinition/admit-1"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "MessageDefinition/admit-1"
       },
       "exampleBoolean" : true
     },
@@ -200,12 +224,7 @@
       "generation" : "markdown",
       "page" : [{
         "nameUrl" : "guidance.html",
-        "title" : "Framework",
-        "generation" : "markdown"
-      },
-      {
-        "nameUrl" : "usecases.html",
-        "title" : "Use Cases",
+        "title" : "General Guidance",
         "generation" : "markdown"
       },
       {

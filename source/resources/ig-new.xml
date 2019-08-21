@@ -3,16 +3,16 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="hl7.fhir.us.davinci-alerts-0.1.0"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/rhausam/git-repo/davinci-alerts/source/resources"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/rhausam/git-repo/davinci-alerts/source/examples"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/rhausam/git-repo/davinci-alerts/framework"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-Alerts/framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/rhausam/git-repo/davinci-alerts/source/pages"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts-0.1.0"/>
   <version value="0.1.0"/>
@@ -101,13 +101,13 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Organization/example-2"/>
+        <reference value="Device/example"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/201908121155.55-admit-01"/>
+        <reference value="Organization/example-2"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -125,7 +125,31 @@
     </resource>
     <resource>
       <reference>
+        <reference value="MessageHeader/admit-1"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Condition/example"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/201908201155.55-admit-01"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="GraphDefinition/admit-1"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MessageDefinition/admit-1"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -195,12 +219,7 @@
       <generation value="markdown"/>
       <page>
         <nameUrl value="guidance.html"/>
-        <title value="Framework"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="usecases.html"/>
-        <title value="Use Cases"/>
+        <title value="General Guidance"/>
         <generation value="markdown"/>
       </page>
       <page>
