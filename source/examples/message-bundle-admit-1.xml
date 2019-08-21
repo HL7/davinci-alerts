@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bundle xmlns="http://hl7.org/fhir">
-	<id value="201908201155.55-admit-01"/>
+	<id value="message-admit-01"/>
 	<type value="message"/>
 	<timestamp value="2019-08-21T08:08:47Z"/>
 	<entry>
@@ -17,7 +17,7 @@
 				</eventCoding>
 				<destination>
 					<name value="Acme Message Gateway"/>
-					<!--   this is to indicate to the Acme Message Gateway that this particular message 
+					<!--   this is to indicate to the Acme Message Gateway that this particular message
        is intended for Practitioner "xcda"   -->
 					<target>
 						<display value="Device/example"/>

@@ -88,7 +88,7 @@
     },
     {
       "reference" : {
-        "reference" : "Bundle/admit-01"
+        "reference" : "Bundle/communication-alert-admit-01"
       },
       "exampleBoolean" : true
     },
@@ -142,7 +142,7 @@
     },
     {
       "reference" : {
-        "reference" : "Bundle/201908201155.55-admit-01"
+        "reference" : "Bundle/message-admit-01"
       },
       "exampleBoolean" : true
     },
@@ -224,7 +224,12 @@
       "generation" : "markdown",
       "page" : [{
         "nameUrl" : "guidance.html",
-        "title" : "General Guidance",
+        "title" : "Framework",
+        "generation" : "markdown"
+      },
+      {
+        "nameUrl" : "usecases.html",
+        "title" : "Use Cases",
         "generation" : "markdown"
       },
       {

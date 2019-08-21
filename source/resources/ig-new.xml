@@ -83,7 +83,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/admit-01"/>
+        <reference value="Bundle/communication-alert-admit-01"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -137,7 +137,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/201908201155.55-admit-01"/>
+        <reference value="Bundle/message-admit-01"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -219,7 +219,12 @@
       <generation value="markdown"/>
       <page>
         <nameUrl value="guidance.html"/>
-        <title value="General Guidance"/>
+        <title value="Framework"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="usecases.html"/>
+        <title value="Use Cases"/>
         <generation value="markdown"/>
       </page>
       <page>
