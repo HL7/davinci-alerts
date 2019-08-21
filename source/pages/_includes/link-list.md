@@ -29,7 +29,7 @@
 [Da Vinci Alert Bundle Profile]: StructureDefinition-alerts-bundle.html
 [Figure 7]: usecases.html#graph-of-fhir-resources
 [Da Vinci Alerts Communication Profile]: StructureDefinition-alerts-communication.html
-[Da Vinci Alerts Bundle Profile]: StructureDefinition-alerts-communication.html
+[Da Vinci Alerts Bundle Profile]: StructureDefinition-alerts-bundle.html
 [Da Vinci Alerts Endpoint Profile]: StructureDefinition-alerts-endpoint.html
 ["black box"]: https://en.wikipedia.org/wiki/Black_box
 ["reliable delivery"]: https://en.wikipedia.org/wiki/Reliable_messaging

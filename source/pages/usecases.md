@@ -17,7 +17,7 @@ This use case demonstrates how the Da Vinci Alerts IG framework is implemented t
 
 ### Use Case Background
 
-Having the ability to send a notifications to update physicians and care management teams when a patient is admitted to a hospital or discharged from the hospital is key to improving patient care. These notifications improve post-discharge transitions, promote communication between providers and encourage follow up care.
+Having the ability to send a notifications to update physicians and care management teams when a patient is admitted to a hospital or discharged from the hospital is key to improving patient care. The intent of these alerts is not to replace existing data exchange mechanisms, for example the discharge summary; but rather to notify of the discharge event and provide enough data to gather more information, if desired. These notifications improve post-discharge transitions, promote communication between providers and encourage follow up care.
 
 The Provider is notified when:
 
@@ -84,5 +84,11 @@ The following transaction show an example of using the `$process-message` operat
 
 {% include examplebutton_default.html example="process-message-example" b_title = "Click Here To See Example Alert Notification" %}
 <br />
+
+### Comparison of the Communication Profile to the MessageHeader Profile
+
+In the figure below the key elements in the Da Vinci Communication Profile are mapped to theire equivalent elements in the MessageHeader resource in order to compare and contrast these FHIR object for this use case.
+
+{% include img-portrait.html img="comm_msg_map.svg" caption="Figure 9" %}
 
 {% include link-list.md %}

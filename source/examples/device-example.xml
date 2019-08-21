@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Device xmlns="http://hl7.org/fhir">
+	<id value="example"/>
+	<identifier>
+		<system value="http://goodcare.org/devices/id"/>
+		<value value="345675"/>
+	</identifier>
+</Device>
