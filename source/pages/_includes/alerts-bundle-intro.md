@@ -9,7 +9,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Each {{{base_type}} must have:**
 
-1. a type code of `transaction`
+1. a type code of `collection`
 1. a Da Vinci Alerts Communication Profile
 1. a request method of `POST`
 
@@ -25,6 +25,6 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 ### Examples
 
-- [Alert Bundle Example](Bundle-admit-01.html)
+- [Alert Bundle Example](Bundle-communication-alert-admit-01.html)
 
 {% include link-list.md %}

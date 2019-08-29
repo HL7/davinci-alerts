@@ -88,7 +88,7 @@ The FHIR resources used in Da Vinci Alert transactions form a network through th
 {:.note-to-balloters}
 Note to Balloters: We are seeking input on the Bundle type to use this context.   Both `transaction`, and `collection` were considered.  Although `transaction` (and `transaction-response`) provides some additional confirmation of delivery, the required .request.method element places additional expectations on the server responding to the `$notify` transaction.  In contrast, the `collection` type imposes no processing obligations or behavioral rules beyond persistence, including any confirmation confirmation of delivery beyond the http status.
 
-For every alert notification, the FHIR object that is exchanged is the [Da Vinci Alert Bundle Profile]. This bundle is a [`transaction`] type bundle that is POSTed to the Alert Recipient's or Intermediary's FHIR endpoint via a the $notify operation. The complete set of content to make up an Alert Bundle includes the [Da Vinci Alerts Communication Profile] which provides the necessary context for the alert reason together with various resources pointed to or indirectly connected to the Communication profile, all gathered together into a Bundle for transport and persistence.  Resources associated with the following list of Communication references SHALL be included in the Bundle:
+For every alert notification, the FHIR object that is exchanged is the [Da Vinci Alert Bundle Profile]. This bundle is a [`collection`] type bundle that is POSTed to the Alert Recipient's or Intermediary's FHIR endpoint via a the $notify operation. The complete set of content to make up an Alert Bundle includes the [Da Vinci Alerts Communication Profile] which provides the necessary context for the alert reason together with various resources pointed to or indirectly connected to the Communication profile, all gathered together into a Bundle for transport and persistence.  Resources associated with the following list of Communication references SHALL be included in the Bundle:
 
 - `Communication.subject` (Patient resource)
 - `Communication.encounter` (Encounter Resource )
@@ -104,7 +104,7 @@ The following Table summarizes the Alert Scenarios and the Resources that may be
 
 ---
 
-[Example of an Alert Bundle](Bundle-admit-01.html) for a patient admission.
+[Example of an Alert Bundle](Bundle-communication-alert-admit-01.html) for a patient admission.
 
 ---
 
@@ -150,7 +150,7 @@ As shown in Figure 4a and 4b, When an event or request triggers an alert, the Al
 
     Note that an authentication token may be supplied in `Endpoint.header` by the Alert Sender to allow direct recipients of the Alert (whether an Alert Recipient or Alert Intermediary) to access additional information. This and other supplied headers, if any are given, are appended to the GET request. Sending these tokens has obvious security consequences. The server and client are responsible for ensuring that the content is appropriately secured.
 
-In the context of the `$notify` operation, the Alert Recipient/Intermediary is treated as a ["black box"] and simply accepts and processes the submitted data and there are no further expectations. The response to the operation and the transaction Bundle are defined in the FHIR specification.
+In the context of the `$notify` operation, the Alert Recipient/Intermediary is treated as a ["black box"] and simply accepts and processes the submitted data and there are no further expectations. The response to the operation and the collection Bundle are defined in the FHIR specification.
 
 Note to Balloters: We are actively seeking input on what expectations should be defined for error handling and and whether there is a need to support ["reliable delivery"]
 {:.note-to-balloters}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>Enter your title here</title>
+	</head>
+	<body>
+	<h3>REST Hook</h3>
+	<p>
+When a topic meets the criteria, the server
+<code>POST</code>s an event notification to the nominated URL as shown in the following examples. Note that the server must append the headers, if any are given, to the POST request that it makes to the client.
+</p>
+<p>
+This example uses an event notification with an empty payload to alert the subscriber that new results
+are available:
+</p>
+	<p>Request:</p>
+	<code>POST [base] {?_format=[mime-type]}</code>
+	<p>Request Payload</p>
+	<pre class="json" fragment="Bundle">
+  {
+    "resourceType": "Bundle",
+    "id": "notification-empty",
+    "meta": {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/subscription-event-count",
+          "valueUnsignedInt": 1
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/bundle-event-count",
+          "valueUnsignedInt": 1
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/subscription-status",
+          "valueCode": "active"
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/subscription-topic-url",
+          "valueUrl": "https://example.org/baseR4/Topic/admission"
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/subscription-url",
+          "valueUrl": "https://example.org/Subscription/cb2dce51-a1f5-40b4-a98b-c934eae368e8"
+        }
+      ]
+    },
+    "type": "history",
+    "timestamp": "2019-08-07T10:24:13.1882432-05:00"
+  }
+</pre>
+	<p>
+Since the content element is set to <code>empty</code>, the data in the resources is only available through the REST API which helps consolidate authorization and authentication logic.  When the subscriber receives a POST to its nominated endpoint it may queries the server to fetch all the relevant resources based on the Topic. The parameter <code>&amp;_since=:last</code> (where :last is replaced by the time at which the client last checked) may be appended to the query fetch the most recent resources. For example, in this example the topic is patient admission, and the subscriber may fetch the most recent Encounters for a patient or group of patients.
+</p>
+	<p>
+In this example, the event notification contains the only the ids for resource. This provide the subscriber with the id for fetching the data.
+</p>
+	<p>Request:</p>
+	<code>POST [base] {?_format=[mime-type]}</code>
+	<p>Request Payload</p>
+	<pre class="json" fragment="Bundle">
+  {
+    "resourceType": "Bundle",
+    "id": "notification-id-only",
+    "meta": {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/subscription-event-count",
+          "valueUnsignedInt": 2
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/bundle-event-count",
+          "valueUnsignedInt": 1
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/subscription-status",
+          "valueCode": "active"
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/subscription-topic-url",
+          "valueUrl": "https://example.org/baseR4/Topic/admission"
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/subscription-url",
+          "valueUrl": "https://example.org/Subscription/cb2dce51-a1f5-40b4-a98b-c934eae368e8"
+        }
+      ]
+    },
+    "type": "history",
+    "timestamp": "2019-08-07T10:24:13.1882432-05:00",
+    "entry": [
+      {
+        "fullUrl": "https://example.org/baseR4/Encounter/2",
+        "request": {
+          "method": "PUT",
+          "url": "Encounter/2"
+        },
+        "response": {
+          "status": "201"
+        }
+      }
+    ]
+  }
+</pre>
+	<p>
+Since the content element is set to <code>id-only</code>, like in the first scenario, the data in the resources is only available through the REST API which helps consolidate authorization and authentication logic.  When the subscriber receives a POST to its nominated endpoint it may queries the server to fetch all the relevant resources using the supplied resource ids. For example, in this example the topic is patient admission, and the subscriber may fetch the Encounter(s) for a patient or group of patients.
+</p>
+	<p>
+In this example, the event notification contains the the entire resource. This is usually appropriate for defining routing rules within a managed eco-system such as a healthcare institution.
+</p>
+	<p>Request:</p>
+	<code>POST [base] {?_format=[mime-type]}</code>
+	<p>Request Payload</p>
+	</body>
+</html>

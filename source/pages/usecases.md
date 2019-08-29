@@ -86,7 +86,7 @@ Note:
 
 The Bundle can be transacted similarly to the Alert bundle by posting to an operation endpoint using a RESTful POST transaction:
 
-- [Example Da Vinci Alert Message Bundle](Bundle-201908201155.55-admit-01.html)
+- [Example Da Vinci Alert Message Bundle](Bundle-message-admit-01.html)
 
 
 **Example Transaction**

@@ -7,25 +7,27 @@
 	</eventCoding>
 	<destination>
 		<name value="Acme Message Gateway"/>
-		<!--   this is to indicate to the Acme Message Gateway that this particular message 
-       is intended for Practitioner "xcda"   -->
+		<!-- this is to indicate to the Acme Message Gateway that this particular message is intended for Practitioner "xcda" -->
 		<target>
 			<display value="Device/example"/>
 		</target>
 		<endpoint value="llp:10.11.12.14:5432"/>
 		<receiver>
-			<reference value="http://acme.com/ehr/fhir/PractitionerRole/example"/>
+			<!-- this is an absolute reference to the receiver (causes an error in the ig-publisher) <reference value="http://acme.com/ehr/fhir/PractitionerRole/example"/> -->
+			<display value="Acme Message Gateway"/>
 		</receiver>
 	</destination>
 	<sender>
-		<reference value="http://acme.com/ehr/fhir/Organization/example-2"/>
+		<reference value="Organization/example-2"/>
 	</sender>
-	<!--     <timestamp value="2012-01-04T09:10:14Z"/>   -->
+	<!-- <timestamp value="2012-01-04T09:10:14Z"/> -->
 	<enterer>
-		<reference value="http://acme.com/ehr/fhir/Practitioner/example-1"/>
+		<!-- <reference value="http://acme.com/ehr/fhir/Practitioner/example-1"/> -->
+		<display value="Dr Smith"/>
 	</enterer>
 	<author>
-		<reference value="http://acme.com/ehr/fhir/Practitioner/example-1"/>
+		<!-- <reference value="http://acme.com/ehr/fhir/Practitioner/example-1"/> -->
+		<display value="Dr Smith"/>
 	</author>
 	<source>
 		<name value="Acme Central Patient Registry"/>
@@ -37,9 +39,9 @@
 		</contact>
 		<endpoint value="llp:10.11.12.13:5432"/>
 	</source>
-	<!--   Here's the payload, the resource that this alert concerns   -->
+	<!-- Here's the payload, the resource that this alert concerns -->
 	<focus>
-		<reference value="http://acme.com/ehr/fhir/Encounter/example-1"/>
+		<reference value="Encounter/example-1"/>
 	</focus>
-	<definition value="http://acme.com/ehr/fhir/messagedefinition/admit-1"/>
+	<definition value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/admit-1"/>
 </MessageHeader>

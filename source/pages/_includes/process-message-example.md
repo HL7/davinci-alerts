@@ -496,7 +496,7 @@ An HTTP Status success code is returned on successful submission.
         "id" : "9ac634f6-b6c2-42ff-b3f6-8b650ec345f4",
         "meta" : {
           "profile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-endpoint"
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/alerts-endpoint"
           ]
         },
         "text" : {

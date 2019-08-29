@@ -8,9 +8,11 @@
 		<resource>
 			<MessageHeader>
 				<id value="267b18ce-3d37-4581-9baa-6fada338038b"/>
+				<!--  TODO make profile
 				<meta>
 					<profile value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/alert"/>
 				</meta>
+			   -->
 				<eventCoding>
 					<system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/communication-topic"/>
 					<code value="alert-admit"/>
@@ -24,18 +26,27 @@
 					</target>
 					<endpoint value="llp:10.11.12.14:5432"/>
 					<receiver>
+						<!--  this is an absolute reference to the receiver  (causes an error in the ig-publisher)
 						<reference value="http://acme.com/ehr/fhir/PractitionerRole/example"/>
+					-->
+					<display value = "Acme Message Gateway"/>
 					</receiver>
 				</destination>
 				<sender>
-					<reference value="7221aa91-d9e1-44fa-8b90-c5a8c7caeade"/>
+					<reference value="urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade"/>
 				</sender>
 				<!--     <timestamp value="2012-01-04T09:10:14Z"/>   -->
 				<enterer>
+					<!--
 					<reference value="http://acme.com/ehr/fhir/Practitioner/example-1"/>
+				-->
+				<display value = "Dr Smith"/>
 				</enterer>
 				<author>
+					<!--
 					<reference value="http://acme.com/ehr/fhir/Practitioner/example-1"/>
+				-->
+				<display value = "Dr Smith"/>
 				</author>
 				<source>
 					<name value="Acme Central Patient Registry"/>
@@ -49,9 +60,9 @@
 				</source>
 				<!--   Here's the payload, the resource that this alert concerns   -->
 				<focus>
-					<reference value="http://acme.com/ehr/fhir/Encounter/example-1"/>
+					<reference value="urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7"/>
 				</focus>
-				<definition value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/alert-admit"/>
+				<definition value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/admit-1"/>
 			</MessageHeader>
 		</resource>
 	</entry>
@@ -77,7 +88,7 @@
 					<text value="Inpatient hospital care"/>
 				</type>
 				<subject>
-					<reference value="e442c924-df77-47fa-838f-24a8253bbdd4"/>
+					<reference value="urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4"/>
 				</subject>
 				<period>
 					<start value="2015-11-01T17:00:14-05:00"/>
@@ -85,7 +96,7 @@
 				</period>
 				<diagnosis>
 					<condition>
-						<reference value="54f0ea3f-dc89-4e71-8d98-8774a5add41e">			</reference>
+						<reference value="urn:uuid:54f0ea3f-dc89-4e71-8d98-8774a5add41e"></reference>
 					</condition>
 				</diagnosis>
 				<location>
@@ -284,7 +295,7 @@
 					<text value="Single liveborn, born in hospital"/>
 				</code>
 				<subject>
-					<reference value="e442c924-df77-47fa-838f-24a8253bbdd4"/>
+					<reference value="urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4"/>
 					<display value="Amy V. Shaw"/>
 				</subject>
 				<onsetDateTime value="2016-08-10"/>
@@ -312,12 +323,12 @@
 					</coding>
 				</type>
 				<subscriber>
-					<reference value="e442c924-df77-47fa-838f-24a8253bbdd4"/>
+					<reference value="urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4"/>
 					<display value="First M LastName Jr"/>
 				</subscriber>
 				<subscriberId value="DZW9200000000"/>
 				<beneficiary>
-					<reference value="e442c924-df77-47fa-838f-24a8253bbdd4"/>
+					<reference value="urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4"/>
 				</beneficiary>
 				<relationship>
 					<coding>
@@ -387,7 +398,7 @@
 					<country value="USA"/>
 				</address>
 				<endpoint>
-					<reference value="9ac634f6-b6c2-42ff-b3f6-8b650ec345f4"/>
+					<reference value="urn:uuid:9ac634f6-b6c2-42ff-b3f6-8b650ec345f4"/>
 					<display value="Acme Hospital EHR FHIR R4 Server"/>
 				</endpoint>
 			</Organization>
@@ -399,7 +410,7 @@
 			<Endpoint>
 				<id value="9ac634f6-b6c2-42ff-b3f6-8b650ec345f4"/>
 				<meta>
-					<profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-endpoint"/>
+					<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/alerts-endpoint"/>
 				</meta>
 				<status value="active"/>
 				<connectionType>
@@ -444,7 +455,7 @@
 					<min value="1"/>
 					<max value="1"/>
 				</focus>
-				<graph value="http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/143332"/>
+				<graph value="http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/admit-1"/>
 			</MessageDefinition>
 		</resource>
 	</entry>

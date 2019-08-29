@@ -42,6 +42,6 @@ Note to Balloters: We are actively seeking input on whether a code representing 
 ### Examples
 
 - [{{base_type}}-example](Communication-example-1.html)
-- [Communication Example in Alert Bundle](Bundle-admit-01.html)
+- [Communication Example in Alert Bundle](Bundle-communication-alert-admit-01.html)
 
 {% include link-list.md %}

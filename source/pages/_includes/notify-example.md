@@ -8,7 +8,7 @@ Patient Y has been admitted to Provider X 's facility.  Acting in the role of Al
 1. The Alert Endpoint which provides the recipient with the technical details of an endpoint for getting additional information from the medical record for this event.
 1. The Alert Bundle containing the required Alert Communication profile and required resources for this Alert event use case.
 
-An HTTP Status success code is returned on successful submission and a Bundle with type `transaction-response` that contains one entry for each entry in the request, in the same order, with the outcome of processing the entry.
+An HTTP Status success code is returned on successful submission<!-- and a Bundle with type `transaction-response` that contains one entry for each entry in the request, in the same order, with the outcome of processing the entry.-->
 
 **Push Alert Notification using the $notify operation**
 
@@ -50,7 +50,7 @@ An HTTP Status success code is returned on successful submission and a Bundle wi
           "resource" : {
             "resourceType" : "Bundle",
             "id" : "admit-01",
-            "type" : "transaction",
+            "type" : "collection",
             "entry" : [
               {
                 "fullUrl" : "urn:uuid:3852d906-a361-11e9-86cd-a4d18ccf5172",
@@ -409,7 +409,7 @@ An HTTP Status success code is returned on successful submission and a Bundle wi
 HTTP/1.1 200 OK
 [other headers]
 ~~~
-
+<!--
 **Response body**
 
 ~~~
@@ -459,3 +459,4 @@ HTTP/1.1 200 OK
     ]
 }
 ~~~
+-->

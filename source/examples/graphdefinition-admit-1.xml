@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GraphDefinition xmlns="http://hl7.org/fhir">
 <id value="admit-1"></id>
-	<url value="http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/alert-admit"/>
-	<name value="Da Vinci Alert Admit Graph Definition"/>
+	<url value="http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/admit-1"/>
+	<name value="AlertAdmit"/>
 	<status value="active"/>
 	<date value="2019-08-21"/>
 	<publisher value="Da Vinci Project"/>
@@ -15,7 +15,9 @@
 	<description value="Defines Da Vinci Alerts patient admission notication message bundle graph"/>
 	<!--    this graph starts with a MessageHeader -->
 	<start value="MessageHeader"/>
-	<profile value="http://hl7.org/fhir/us/davinci-alerts/MessageHeader/alert"/>
+<!--
+		<profile value="http://hl7.org/fhir/us/davinci-alerts/MessageHeader/admit-1"/>
+-->
 	<!--    define the MessageHeader links    -->
 	<link>
 		<path value="MessageHeader.focus"/>
@@ -64,12 +66,14 @@
 		</target>
 	</link>
 	<link>
-		<path value="MessageHeader.defniition"/>
+		<path value="MessageHeader.definition"/>
 		<min value="0"/>
 		<max value="1"/>
 		<target>
 			<type value="MessageDefinition"/>
+<!--
 			<profile value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/alert"/>
+-->
 		</target>
 	</link>
 	<link>
@@ -102,7 +106,7 @@
 				<max value="1"/>
 				<target>
 					<type value="Endpoint"/>
-					<profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-endpoint"/>
+					<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/alerts-endpoint"/>
 				</target>
 			</link>
 		</target>
@@ -115,7 +119,7 @@
 				<max value="1"/>
 				<target>
 					<type value="Endpoint"/>
-					<profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-endpoint"/>
+					<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/alerts-endpoint"/>
 				</target>
 			</link>
 		</target>
@@ -128,7 +132,7 @@
 				<max value="1"/>
 				<target>
 					<type value="Endpoint"/>
-					<profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-endpoint"/>
+					<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/alerts-endpoint"/>
 				</target>
 			</link>
 		</target>
