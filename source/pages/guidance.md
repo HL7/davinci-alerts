@@ -184,6 +184,57 @@ The `$notify` operation is invoked by the Alert Sender using the `POST` syntax w
 
 {% include examplebutton_default.html example="notify-example" b_title = "Click Here To See Example PUSH Alert Notification" %}
 
+## FHIR Messaging
+
+An alternative consideration is to use the [FHIR Messaging paradigm] to send a Da Vinci Alert Message Bundle to the Recipient. There are several transport mechanisms that can be used. One way is to use the $process-message operation on FHIR Server Restful endpoint. This is analogous to the Alert Bundle $notify operation above using the $process-message operation in place of the $notify and a Da Vinci Alert Message Bundle structure instead of the Alert Bundle:
+
+{% include img.html img="$process_message_wf.svg" caption="Figure 5" %}
+
+The same Da Vinci Alert Message Bundle structure can be re-used as the notification payload for FHIR Subscription based alerts since a subscriber can register to receive [notifications by messaging]:
+
+{% include img.html img="subscription_messaging_wf.svg" caption="Figure 6" %}
+
+
+### Graph of FHIR Resources for Messaging
+
+The following resource graph in figure 8 defines the resources that support the admission and discharge alerts use case using FHIR messaging. MessageHeader, Patient, Encounter, and Condition are the primary resources (indicated by the black borders) which are messaged in the Da Vinci Alert Message Bundle to notify the provider of when the event has occurred. The Endpoint Resource can be optionally included in the bundle to allow the Recipient to optionally query other associated resources such as Location, Practitioner and Organization  through a subsequent FHIR read or search interaction (TODO this needs further testing and discussion).  Note that the boxes with several resources inside them represents a choice.
+
+{% include img-portrait.html img="admit_message_graph.svg" caption="Figure 8" %}
+
+Note:
+
+- \* it is questionable whether Encounter.diagnosis.condition has been implemented by the EHR vendors - need to discuss with vendors.
+- \** There is no Practitioner.endpoint element and an extension may be needed to implement.
+- \*** MessageDefinition is used to formally define the Message content for a given event (e.g, an inpatient admission or discharge).  It defines the event and the focal and non focal Resources/Profiles that make up the message:
+
+    - [Example Da Vinci Alert MessageDefinition](MessageDefinition-admit-1.html)
+
+    The GraphDefinition is referenced by the MessageDefinition and it defines the links between the all resources that are contained within the message.
+
+    - [Example Da Vinci Alert GraphDefinition](GraphDefinition-admit-1.html)
+
+
+The Bundle can be transacted similarly to the Alert bundle by posting to an operation endpoint using a RESTful POST transaction:
+
+- [Example Da Vinci Alert Message Bundle](Bundle-message-admit-01.html)
+
+
+**Example Transaction**
+The following transaction show an example of using the `$process-message` operation to send a Da Vinci Alert Message Bundle:
+
+{% include examplebutton_default.html example="process-message-example" b_title = "Click Here To See Example Alert Notification" %}
+<br />
+
+### Comparison of the Communication Profile to the MessageHeader Profile
+
+The Messag eHeader is the first resource in the Da Vinci Alert Message Bundle and serves the same function as Communication resources in the Alert Bundle above, providing the necessary context for the alert reason together with various resources pointed to or indirectly connected to it:
+
+{% include img-portrait.html img="comm_msg_map.svg" caption="Figure 9" %}
+
+- [Example Da Vinci Alert MessageHeader](MessageHeader-admit-1.html)
+
+
+
 <!--{% raw %}
 ### FHIR Subscription Based Notification
 

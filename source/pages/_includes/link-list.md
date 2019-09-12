@@ -37,3 +37,4 @@
 [Da Vinci Alerts CapabilityStatements]: capstatements.html
 [FHIR Messaging paradigm]: {{site.data.fhir.path}}messaging.html
 [`$process-message`]: {{site.data.fhir.path}}messageheader-operation-process-message.html
+[notifications by messaging]: {{site.data.fhir.path}}subscription.html#messaging
