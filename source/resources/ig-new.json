@@ -1,26 +1,26 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "hl7.fhir.us.davinci-alerts-0.1.0",
+  "id" : "hl7.fhir.us.davinci-notifications-0.1.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/resources"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-Notifications/source/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/examples"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-Notifications/source/examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-Alerts/framework"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-Notifications/framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-Alerts/source/pages"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-Notifications/source/pages"
   }],
-  "url" : "http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts-0.1.0",
+  "url" : "http://hl7.org/fhir/us/davinci-notifications/ImplementationGuide/hl7.fhir.us.davinci-notifications-0.1.0",
   "version" : "0.1.0",
-  "name" : "DaVinciAlerts",
-  "title" : "Da Vinci Alerts",
+  "name" : "DaVinciUnsolicitedNotifications",
+  "title" : "Da Vinci Unsolicited Notifications",
   "status" : "draft",
   "publisher" : "HL7 International - Clinical Decision Support Work Group",
   "contact" : [{
@@ -36,10 +36,10 @@
     }]
   }],
   "copyright" : "Used by permission of HL7 International - Clinical Decision Support Work Group, all rights reserved Creative Commons License",
-  "packageId" : "hl7.fhir.us.davinci-alerts",
+  "packageId" : "hl7.fhir.us.davinci-notifications",
   "license" : "CC0-1.0",
-  "fhirVersion" : ["4.0.0",
-  "4.0.0"],
+  "fhirVersion" : ["4.0.1",
+  "4.0.1"],
   "dependsOn" : [{
     "id" : "uscore",
     "uri" : "http://hl7.org/fhir/us/core",
@@ -57,12 +57,6 @@
       "name" : "base"
     }],
     "resource" : [{
-      "reference" : {
-        "reference" : "Parameters/admit-1"
-      },
-      "exampleBoolean" : true
-    },
-    {
       "reference" : {
         "reference" : "Endpoint/example-1"
       },
@@ -88,19 +82,7 @@
     },
     {
       "reference" : {
-        "reference" : "Bundle/communication-alert-admit-01"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
         "reference" : "Patient/example"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "Communication/example-1"
       },
       "exampleBoolean" : true
     },
@@ -184,18 +166,6 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/alerts-bundle"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "OperationDefinition/notify"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "CapabilityStatement/query-responder"
       },
       "exampleBoolean" : false
@@ -203,18 +173,6 @@
     {
       "reference" : {
         "reference" : "CodeSystem/communication-topic"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/alerts-endpoint"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/alerts-communication"
       },
       "exampleBoolean" : false
     }],
@@ -229,38 +187,18 @@
       },
       {
         "nameUrl" : "usecases.html",
-        "title" : "Use Cases",
+        "title" : "Admit/Discharge Use Case",
         "generation" : "markdown"
       },
       {
         "nameUrl" : "profiles.html",
-        "title" : "Profiles and Extensions",
-        "generation" : "markdown",
-        "page" : [{
-          "nameUrl" : "StructureDefinition-alerts-bundle.html",
-          "title" : "StructureDefinition Alerts Bundle",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-alerts-endpoint.html",
-          "title" : "StructureDefinition Alerts Endpoint",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-alerts-communication.html",
-          "title" : "StructureDefinition Alerts Communication",
-          "generation" : "generated"
-        }]
+        "title" : "Profiles",
+        "generation" : "markdown"
       },
       {
         "nameUrl" : "operations.html",
         "title" : "Operations",
-        "generation" : "markdown",
-        "page" : [{
-          "nameUrl" : "OperationDefinition-notify.html",
-          "title" : "OperationDefinition Notify",
-          "generation" : "generated"
-        }]
+        "generation" : "markdown"
       },
       {
         "nameUrl" : "terminology.html",

@@ -1,5 +1,5 @@
 ---
-title: Da Vinci Alerts
+title: Da Vinci Unsolicited Notifications
 layout: default
 active: home
 ---
@@ -12,12 +12,11 @@ active: home
 
 <!-- end TOC -->
 
-The HL7 Da Vinci Project has recognized a need for communication of
-Alerts between payers, providers and other actors in the healthcare
-space. Alerts are defined as a need to notify another party of an event
-that would affect patient care. Alerts allow actors participating in the
+Providers (members of a care team) and Payers may need to be alerted when activities occur that impact a patients care. This may be as traditional as admission to or discharge from a care setting (ED, Hospital, etc.) but may also include changes in treatment (e.g. medications) or patient status (new diagnosis). This information will improve care management and care coordination as well as act as the trigger for quality programs and other patient focused activities (e.g. risk adjustment).  It would allow actors participating in the
 patient's healthcare to take actions and intervene earlier to assure the
-patient is better cared for. This can also result in reduced costs.
+patient is better cared for and can also result in reduced costs.
+
+The HL7 Da Vinci Project has recognized the need to provide a FHIR based standard for adoption by both providers and payers for the communication of relevant notifications to support the real-time exchange of notifications that impact patient care and value based or risk based services.  This Guide defines a FHIR messaging based paradigm and framework to establish consistently adoptable and reproducible methods to exchange notifications. This framework is demonstrated using the patient admission and discharge event use case to generate unsolicited notifications to the care team.
 
 ## How to read this Guide
 
@@ -25,8 +24,9 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - [Home]\: The home page provides the introduction and background for the Da Vinci Alert Project.
 
-- [Framework]\: These pages provide guidance on the set of FHIR transactions and the FHIR artifacts used in to provide a general framework to enable alert notifications.
-- [Use cases]\: The Admission/Discharge example shows how to implement an alert use the framework.
+- [Framework]\: These pages provide guidance on the set of FHIR transactions and the FHIR artifacts used in a general framework to enable unsolicited notifications to careteam members.
+- [Use cases]\: The Admission/Discharge use case is used to show how to implement an unsolicited notification using the framework.
+
 - [Profiles]\: This page lists the set of Profiles that are defined in this guide to exchange quality data.
 - [Operations]\: This page lists the standard FHIR and DEQM defined Operations that are used in the DEQM transactions to exchange quality data.
 - [Capability Statements]\: This set of pages describes the expected FHIR capabilities of the various DEQM actors.

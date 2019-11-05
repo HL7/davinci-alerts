@@ -7,7 +7,7 @@
     <a href="guidance.html">Framework</a>
   </li>
   <li>
-    <a href="usecases.html">Use Cases</a>
+    <a href="usecases.html">Admit/Discharge Use Case</a>
   </li>
   <li class="dropdown">
     <a href="#" data-toggle="dropdown" class="dropdown-toggle">FHIR Artifacts<b class="caret">
@@ -21,17 +21,17 @@
 
     <!-- <li>
     <a href="extensions.html">Extensions</a>
-  </li>-->
+  </li>
 
-  <!--<li>
+  <li>
     <a href="searchparameters.html">Search Parameters</a>
-  </li>-->
+  </li>
 
   <li>
     <a href="operations.html">Operations</a>
   </li>
 
-  <!--   <li>
+   <li>
   <a href="structuremaps.html">Mappings</a>
 </li>-->
 

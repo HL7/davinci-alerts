@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Hidden IG for de facto IG publishing-->
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="hl7.fhir.us.davinci-alerts-0.1.0"/>
-  <url value="http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts-0.1.0"/>
+  <id value="hl7.fhir.us.davinci-notifications-0.1.0"/>
+  <url value="http://hl7.org/fhir/us/davinci-notifications/ImplementationGuide/hl7.fhir.us.davinci-notifications-0.1.0"/>
   <version value="0.1.0"/>
-  <name value="DaVinciAlerts"/>
-  <title value="Da Vinci Alerts"/>
+  <name value="DaVinciUnsolicitedNotifications"/>
+  <title value="Da Vinci Unsolicited Notifications"/>
   <status value="draft"/>
   <publisher value="HL7 International - Clinical Decision Support Work Group"/>
 
@@ -18,9 +18,9 @@
   </contact>
   <copyright value="Used by permission of HL7 International - Clinical Decision Support Work Group, all rights reserved Creative Commons License"/>
   <!-- 0..1 Use and/or publishing restrictions -->
- <packageId value="hl7.fhir.us.davinci-alerts"/> <!-- 0..1 NPM Package name for IG -->
+ <packageId value="hl7.fhir.us.davinci-notifications"/> <!-- 0..1 NPM Package name for IG -->
 <license value="CC0-1.0"/> <!--*****HARDCODED********* 0..1 SPDX license code for this IG (or not-open-source) -->
-<fhirVersion value="4.0.0"/> <!-- 0..1 FHIR Version this Implementation Guide targets -->
+<fhirVersion value="4.0.1"/> <!-- 0..1 FHIR Version this Implementation Guide targets -->
  <definition>
   <!--  <grouping>  0..* Grouping used to present related resources in the IG -->
   <!-- <name value="[string]"/> 1..1 Descriptive name for the package -->
@@ -38,22 +38,22 @@
     <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/patient"/>|<exampleBoolean value="true|false"/>
   </resource>   -->
   <!--  <groupingId value="[id]"/>  0..1 Grouping this is part of -->
-  <!-- insert resources --><resource><reference><reference value="Parameters/admit-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Endpoint/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Encounter/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="PractitionerRole/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Practitioner/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/communication-alert-admit-01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Patient/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Communication/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Device/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Organization/example-2"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Coverage/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Location/hl7east"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MessageHeader/admit-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Condition/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/message-admit-01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="GraphDefinition/admit-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MessageDefinition/admit-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="CapabilityStatement/alert-receiver"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/communication-topic"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/alert-initiator"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/query-requester"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/alerts-bundle"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="OperationDefinition/notify"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/query-responder"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CodeSystem/communication-topic"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/alerts-endpoint"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/alerts-communication"/></reference><exampleBoolean value="false"/></resource>
+  <!-- insert resources --><resource><reference><reference value="Endpoint/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Encounter/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="PractitionerRole/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Practitioner/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Patient/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Device/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Organization/example-2"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Coverage/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Location/hl7east"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MessageHeader/admit-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Condition/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/message-admit-01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="GraphDefinition/admit-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MessageDefinition/admit-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="CapabilityStatement/alert-receiver"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/communication-topic"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/alert-initiator"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/query-requester"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/query-responder"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CodeSystem/communication-topic"/></reference><exampleBoolean value="false"/></resource>
 
-  <!-- ============ Home Page =============== -->
+    <!-- ============ Home Page =============== -->
   <page><nameUrl value="index.html"/><title value="Home"/><generation value="markdown"/>
 
-    <!-- ============ Guidance Page =============== -->
-    <page><nameUrl value="guidance.html"/><title value="Framework"/><generation value="markdown"/></page>
+  <!-- ============ Guidance Page =============== -->
+  <page><nameUrl value="guidance.html"/><title value="Framework"/><generation value="markdown"/></page>
 
-    <!-- ============ UseCases Page =============== -->
-    <page><nameUrl value="usecases.html"/><title value="Use Cases"/><generation value="markdown"/></page>
+  <!-- ============ Use Case Page =============== -->
+  <page><nameUrl value="usecases.html"/><title value="Admit/Discharge Use Case"/><generation value="markdown"/></page>
 
-    <!-- ============ Profiles Page =============== -->
-    <page><nameUrl value="profiles.html"/><title value="Profiles and Extensions"/><generation value="markdown"/>
+  <!-- =========== Profiles Page =============== -->
+  <page><nameUrl value="profiles.html"/><title value="Profiles"/><generation value="markdown"/>
 
      <!-- ============ Profiles and examples=============== -->
-     <!-- insert profiles --><page><nameUrl value="StructureDefinition-alerts-bundle.html"/><title value="StructureDefinition Alerts Bundle"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-alerts-endpoint.html"/><title value="StructureDefinition Alerts Endpoint"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-alerts-communication.html"/><title value="StructureDefinition Alerts Communication"/><generation value="generated"/></page>
+     <!-- insert profiles -->
     <!-- ============ End Profiles and examples=============== -->
 
     <!-- ============ Extensions and examples =============== -->
@@ -65,7 +65,7 @@
     <page><nameUrl value="operations.html"/><title value="Operations"/><generation value="markdown"/>
 
     <!-- ============ Operations and examples  =============== -->
-    <!-- insert operationdefinitions --><page><nameUrl value="OperationDefinition-notify.html"/><title value="OperationDefinition Notify"/><generation value="generated"/></page>
+    <!-- insert operationdefinitions -->
     <!-- ============ End Operations and examples  =============== -->
 
     </page>

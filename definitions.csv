@@ -2,7 +2,7 @@ Configuration Parameter,Configuration Value ( use '|' for lists)
 onlyJson,FALSE
 igtemplate-dir,/Users/ehaas/Documents/FHIR/Davinci-Alerts/
 working-dir,/Users/ehaas/Documents/FHIR/Davinci-Alerts/
-title,Da Vinci Alerts
+title,Da Vinci Unsolicited Notifications
 status,draft
 publisher,HL7 International - Clinical Decision Support Work Group
 contact.system,url
@@ -22,14 +22,14 @@ paths.output,output
 paths.txCache,generated_output/txCache
 paths.qa,generated_output/qa
 paths.specification,http://hl7.org/fhir/R4/
-paths.history,http://hl7.org/fhir/us/davinci-alerts/history.cfml
+paths.history,http://hl7.org/fhir/us/davinci-notifications/history.cfml
 jurisdiction,US
 sct-edition,http://snomed.info/sct/731000124108
 no-inactive-codes,FALSE
 broken-links,warning
 gen-examples,FALSE
 do-transforms,FALSE
-canonicalBase,http://hl7.org/fhir/us/davinci-alerts
+canonicalBase,http://hl7.org/fhir/us/davinci-notifications
 dependencyList.name,uscore|hrex
 dependencyList.location,http://hl7.org/fhir/us/core|http://hl7.org/fhir/us/davinci-hrex
 dependencyList.package,hl7.fhir.us.core|hl7.fhir.us.davinci-hrex
@@ -39,5 +39,5 @@ tool,jekyll
 logging,progress
 topofpage,TRUE
 allviews,TRUE
-npm-name,hl7.fhir.us.davinci-alerts
-version,4.0.0
+npm-name,hl7.fhir.us.davinci-notifications
+version,4.0.1
