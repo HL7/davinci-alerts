@@ -62,7 +62,7 @@ All elements in the Da Vinci Notification profiles have a [MustSupport flag]. Sy
 - There is an event that drives the generation of the Notification.
 - An Notification will be generated for each patient separately.
   - The event can be for one or more patients.
-- The Notification Sender has access to the Notification Recipients/Intermediary FHIR endpoints.
+- The Sender has access to the Recipients/Intermediary FHIR endpoints.
 - System level trust exists between the actors.
   - Clients have been authorized by the servers.
   - It is assumed that consent is managed elsewhere.
@@ -72,9 +72,9 @@ All elements in the Da Vinci Notification profiles have a [MustSupport flag]. Sy
 #### Assumptions
 
 - Based on FHIR R4 and US Core R4 profiles where applicable.
-- Notifications are transacted to an operation endpoint ($process-message).
-- The Da Vinci Notifications Bundle Profile is the FHIR object that is exchanged for all alert transactions.
-  - The Da Vinci Notifications Communication Profile is always part of the bundle and provides the necessary context for the alert reason.
+- Notifications are transacted to teh process-message operation endpoint.
+- The Da Vinci Notifications Message Bundle Profile is the FHIR object that is exchanged for all alert transactions.
+  - The first resource in the bundle is the MessageHeader resource. The MessageHeader resource has a code - the message event - that identifies the reason for the notification.
 
 ### Notification Bundle
 
