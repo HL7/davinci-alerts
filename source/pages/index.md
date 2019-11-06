@@ -135,8 +135,8 @@ There are many potential actors for the roles listed above:
 
 ## Workflow Overview
 
-See the [Framework] page for a detailed description of the technical workflow and API guidance
-{:. stu-note}
+See the [Framework] page for a detailed description of the technical workflow and API guidance.
+{:.stu-note}
 
 
 {% include img-portrait.html img="basic_process.svg" caption="Figure 2" %}
