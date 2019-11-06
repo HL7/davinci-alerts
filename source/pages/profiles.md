@@ -7,6 +7,9 @@ active: profiles
 
 The following Profiles for FHIR *resources* have been defined for this implementation guide.
 
+- [Da Vinci Notification Message Bundle]
+- [Da Vinci Notifications MessageHeader Profile]
+
 <!-- {% raw %}
 {% include list-profiles.xhtml %}
 {% endraw %} -->
