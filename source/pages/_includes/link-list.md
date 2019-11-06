@@ -41,3 +41,4 @@
 [FHIR Artifacts]: artifacts.html
 [FHIR Messaging paradigm]: {{site.data.fhir.path}}messaging.html
 [FHIR message]: {{site.data.fhir.path}}messaging.html
+[FHIR messaging]: {{site.data.fhir.path}}messaging.html
