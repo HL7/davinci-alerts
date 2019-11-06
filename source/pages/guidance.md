@@ -78,11 +78,13 @@ All elements in the Da Vinci Notification profiles have a [MustSupport flag]. Sy
 
 ### The Da Vinci Notification Message Bundle
 
-For every notification, the FHIR object that is exchanged is the [Da Vinci Notification Message Bundle]. It consists of a Bundle identified by the type "message", with the first resource in the bundle being a MessageHeader resource. The first resource in the bundle is the MessageHeader resource. The MessageHeader resource has a code - the message event - that identifies the reason for the notification.  The MessageHeader also carries additional notification metadata. The other resources in the bundle depend on the notification scenario and form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resource graphs. The FHIR Notification resource graph for the admit and discharge use case is shown in [Figure 7].
+For every notification, the FHIR object that is exchanged is the [Da Vinci Notification Message Bundle]. It consists of a Bundle identified by the type "message", with the first resource in the bundle being a MessageHeader resource. The first resource in the bundle is the MessageHeader resource. The MessageHeader resource has a code - the message event - that identifies the reason for the notification.  The MessageHeader also carries additional notification metadata. The other resources in the bundle depend on the notification scenario and form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resource graphs. The FHIR Notification resource graph for the admit and discharge use case is shown in [Figure 3].
 
-{% include img-portrait.html img="admit_message_graph.svg" caption="Figure 7" %}
+{% include img-portrait.html img="admit_message_graph.svg" caption="Figure 3" %}
 
 Note:
+
+This resource graph defines the resources that support the admission and discharge alerts use case using FHIR messaging. MessageHeader, Pzatient, Encounter, and Condition are the primary resources (indicated by the black borders) which are messaged in the Da Vinci Notification Message Bundle to notify the provider of when the event has occurred. The Endpoint Resource can be optionally included in the bundle to allow the Recipient to optionally query other associated resources such as Location, Practitioner and Organization  through a subsequent FHIR read or search interaction (TODO this needs further testing and discussion).  Note that the boxes with several resources inside them represents a choice.
 
 - \* it is questionable whether Encounter.diagnosis.condition has been implemented by the EHR vendors - need to discuss with vendors.
 - \** There is no Practitioner.endpoint element and an extension may be needed to implement.
@@ -157,21 +159,6 @@ Seeking input on whether or not to document how to  transmit endpoint data inten
 Note to Balloters: We are actively seeking input on whether this guide should define the expectations of how Notification Intermediaries distribute the alert information to the Notification Recipients. For example using existing data transport protocols such as Direct, SMS or V2 messaging.
 {:.note-to-balloters}
 
-
-
-
-
-Note to Balloters: We are actively seeking input on what expectations should be defined for error handling and and whether there is a need to support ["reliable delivery"]
-{:.note-to-balloters}
-
-As shown in figure 4, after the Notification Intermediary successfully receives the notification, processes the Notification Bundle and optionally searches and process the seach results, it redistributes the data the end users.  It may use the `$process-message` operation to do this, however the original Endpoint SHALL NOT be distributed.  Note that the Notification Intermediary may customize the content based on the end user (for example, withholding data that a particular care team member does not need).
-
-Note to Balloters: We are actively seeking input on whether this guide should define the expectations of how Notification Intermediaries distribute the alert information to the Notification Recipients. For example using existing data transport protocols such as Direct, SMS or V2 messaging.
-{:.note-to-balloters}
-
-
-
-
 #### APIs
 {:.no_toc}
 
@@ -188,6 +175,11 @@ The `$process-message` operation is invoked by the Notification Sender using the
 `POST [base]Communication/$process-message`
 
 {% include examplebutton_default.html example="notify-example" b_title = "Click Here To See Example PUSH Notification Notification" %}
+
+### Reliable Delivery
+
+Note to Balloters: We are actively seeking input on what expectations should be defined for error handling and and whether there is a need to support ["reliable delivery"]
+{:.note-to-balloters}
 
 ## FHIR Messaging
 
