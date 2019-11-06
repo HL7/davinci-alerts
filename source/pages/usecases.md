@@ -1,5 +1,5 @@
 ---
-title: Da Vinci Alerts Patient Admit/Discharge Use Case
+title: Da Vinci Notifications Patient Admit/Discharge Use Case
 layout: default
 active: usecases
 ---
@@ -13,7 +13,7 @@ active: usecases
 
 ###  Introduction
 
-This use case demonstrates how the Da Vinci Alerts IG framework is implemented to transact an alert between an Alert Sender/Intermediary and an Alert Recipient/Intermediary.
+This use case demonstrates how the Da Vinci Notifications IG framework is implemented to transact an alert between an Notification Sender/Intermediary and an Notification Recipient/Intermediary.
 
 ### Use Case Background
 
@@ -30,13 +30,13 @@ The Provider is notified when:
 
 ### Graph of FHIR Resources
 
-The following resource graph in figure 7 defines the resources that support the admission and discharge alerts use case.  Communication, Patient, Encounter, and Condition are the primary resources (indicated by the black borders) which are transacted in the Alert Bundle to notify the provider of when the event has occurred. The other associated resources such as Location, Practitioner and Organization can be accessed after receiving the notification through a subsequent FHIR read or search interaction.  Note that the boxes with several resources inside them represents a choice.
+The following resource graph in figure 7 defines the resources that support the admission and discharge alerts use case.  Communication, Patient, Encounter, and Condition are the primary resources (indicated by the black borders) which are transacted in the Notification Bundle to notify the provider of when the event has occurred. The other associated resources such as Location, Practitioner and Organization can be accessed after receiving the notification through a subsequent FHIR read or search interaction.  Note that the boxes with several resources inside them represents a choice.
 
-{% include img-portrait.html img="Alert for Admission and Discharge Resource Graph.svg" caption="Figure 7" %}
+{% include img-portrait.html img="Notification for Admission and Discharge Resource Graph.svg" caption="Figure 7" %}
 
-### Push Alert Notification
+### Push Notification Notification
 
-In the following interaction shown in figures 8 and 9, the HealthCare facility is acting in the role of the Alert Sender and the Alert Recipient can be any of the actors listed in figure 1 on the home page.  To notify the Alert Recipients/Intermediary of an admit or discharge event, the Alert Sender uses $notify operation to submit the Alert Bundle to appropriate FHIR endpoints. As shown in figure 3, when an Intermediary successfully receives the notifications, it subsequently redistributes the data the end users.
+In the following interaction shown in figures 8 and 9, the HealthCare facility is acting in the role of the Notification Sender and the Notification Recipient can be any of the actors listed in figure 1 on the home page.  To notify the Notification Recipients/Intermediary of an admit or discharge event, the Notification Sender uses $notify operation to submit the Notification Bundle to appropriate FHIR endpoints. As shown in figure 3, when an Intermediary successfully receives the notifications, it subsequently redistributes the data the end users.
 
 {% include img-portrait.html img="admit_flow.svg" caption="Figure 8" %}
 
@@ -47,14 +47,14 @@ In the following interaction shown in figures 8 and 9, the HealthCare facility i
 ---
 
 **Example Transaction**
-{% include examplebutton_default.html example="notify-example" b_title = "Click Here To See Example PUSH Alert Notification" %}
+{% include examplebutton_default.html example="notify-example" b_title = "Click Here To See Example PUSH Notification Notification" %}
 <br />
 
 <!--{% raw %}
 
 ### FHIR Subscription Based Notification
 
-The interaction diagram in figure 5 and 6 on the [Framework] page illustrates the sequences of events for subscribing for ADT Alerts and the subsequent notifications when the the event occurs.
+The interaction diagram in figure 5 and 6 on the [Framework] page illustrates the sequences of events for subscribing for ADT Notifications and the subsequent notifications when the the event occurs.
 
 {:.note-to-balloters}
 Note to Balloters: We are actively seeking input on what additional work is needed to determine the best way to implement subscriptions for alert notification. See the [FHIR Subscription Based Notification] framework for further details.
