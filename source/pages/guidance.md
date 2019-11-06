@@ -181,7 +181,6 @@ The `$process-message` operation is invoked by the  Sender using the `POST` synt
 The following transaction show an example of using the `$process-message` operation to send a Da Vinci Notification Message Bundle:
 
 {% include examplebutton_default.html example="process-message-example" b_title = "Click Here To See Example Notification Notification" %}
-<br />
 
 ### Reliable Delivery
 
