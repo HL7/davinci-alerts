@@ -30,7 +30,7 @@ The Provider is notified when:
 
 ### Graph of FHIR Resources
 
-The following resource graph in figure 7 defines the resources that support the admission and discharge notifications use case.  Communication, Patient, Encounter, and Condition are the primary resources (indicated by the black borders) which are transacted in the Notification Bundle to notify the provider of when the event has occurred. The other associated resources such as Location, Practitioner and Organization can be accessed after receiving the notification through a subsequent FHIR read or search interaction.  Note that the boxes with several resources inside them represents a choice.
+The following resource graph in the figure defines the resources that support the admission and discharge notifications use case.  Communication, Patient, Encounter, and Condition are the primary resources (indicated by the black borders) which are transacted in the Notification Bundle to notify the provider of when the event has occurred. The other associated resources such as Location, Practitioner and Organization can be accessed after receiving the notification through a subsequent FHIR read or search interaction.  Note that the boxes with several resources inside them represents a choice.
 
 {% include img-portrait.html img="Notification for Admission and Discharge Resource Graph.svg" caption="Figure 7" %}
 
@@ -38,7 +38,25 @@ The following resource graph in figure 7 defines the resources that support the 
 
 In the following interaction shown in figures 8 and 9, the HealthCare facility is acting in the role of the Notification Sender and the Notification Recipient can be any of the actors listed in figure 1 on the home page.  To notify the Notification Recipients/Intermediary of an admit or discharge event, the Notification Sender uses $notify operation to submit the Notification Bundle to appropriate FHIR endpoints. As shown in figure 3, when an Intermediary successfully receives the notifications, it subsequently redistributes the data the end users.
 
-{% include img-portrait.html img="admit_flow.svg" caption="Figure 8" %}
+{% include img-portrait.html img="admit_message_graph.svg" caption="Figure 3" %}
+
+Figure Notes:
+
+This resource graph defines the resources that support the admission and discharge alerts use case using FHIR messaging. MessageHeader, Patient, Encounter, and Condition are the primary resources (indicated by the black borders) which are messaged in the Da Vinci Notification Message Bundle to notify the provider of when the event has occurred. The Endpoint Resource can be optionally included in the bundle to allow the Recipient to optionally query other associated resources such as Location, Practitioner and Organization  through a subsequent FHIR read or search interaction (TODO this needs further testing and discussion).  Note that the boxes with several resources inside them represents a choice.
+
+- \* it is questionable whether Encounter.diagnosis.condition has been implemented by the EHR vendors - need to discuss with vendors.
+- \** There is no Practitioner.endpoint element and an extension may be needed to implement.
+- \*** MessageDefinition is used to formally define the Message content for a given event (e.g, an inpatient admission or discharge).  It defines the event and the focal and non focal Resources/Profiles that make up the message:
+
+    - [Example Da Vinci Notification MessageDefinition](MessageDefinition-admit-1.html)
+
+    The GraphDefinition is referenced by the MessageDefinition and it defines the links between the all resources that are contained within the message.
+
+    - [Example Da Vinci Notification GraphDefinition](GraphDefinition-admit-1.html)
+
+**Example Da Vinci Notification Message Bundle**
+
+- [Example Da Vinci Notification Message Bundle](Bundle-message-admit-01.html)
 
 ---
 
