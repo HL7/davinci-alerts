@@ -82,6 +82,18 @@ For every notification, the FHIR object that is exchanged is the [Da Vinci Notif
 
 {% include img-portrait.html img="admit_message_graph.svg" caption="Figure 7" %}
 
+Note:
+
+- \* it is questionable whether Encounter.diagnosis.condition has been implemented by the EHR vendors - need to discuss with vendors.
+- \** There is no Practitioner.endpoint element and an extension may be needed to implement.
+- \*** MessageDefinition is used to formally define the Message content for a given event (e.g, an inpatient admission or discharge).  It defines the event and the focal and non focal Resources/Profiles that make up the message:
+
+    - [Example Da Vinci Notification MessageDefinition](MessageDefinition-admit-1.html)
+
+    The GraphDefinition is referenced by the MessageDefinition and it defines the links between the all resources that are contained within the message.
+
+    - [Example Da Vinci Notification GraphDefinition](GraphDefinition-admit-1.html)
+
 
 Resources that associated SHALL be included in *all* Da Vinci Notification Message Bundle:
 
