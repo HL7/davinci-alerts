@@ -146,8 +146,8 @@ As shown in figure 4b, after the Notification Intermediary successfully receives
 Note to Balloters: We are actively seeking input on whether this guide should define the expectations of how Notification Intermediaries distribute the alert information to the Notification Recipients.  For example using existing data transport protocols such as Direct, SMS or V2 messaging.
 {:.note-to-balloters}
 
-{% include img.html img="push_alert_1.svg" caption="Figure 4a" %}
-{% include img.html img="push_alert_2.svg" caption="Figure 4b" %}
+{% include img.html img="$process_message_wf.svg" caption="Figure 4" %}
+
 
 #### APIs
 {:.no_toc}
@@ -172,7 +172,7 @@ The `$process-message` operation is invoked by the Notification Sender using the
 
 An alternative consideration is to use the [FHIR Messaging paradigm] to send a Da Vinci Notification Message Bundle to the Recipient. There are several transport mechanisms that can be used. One way is to use the $process-message operation on FHIR Server Restful endpoint. This is analogous to the Notification Bundle $process-message operation above using the $process-message operation in place of the $process-message and a Da Vinci Notification Message Bundle structure instead of the Notification Bundle:
 
-{% include img.html img="$process_message_wf.svg" caption="Figure 5" %}
+
 
 The same Da Vinci Notification Message Bundle structure can be re-used as the notification payload for FHIR Subscription based alerts since a subscriber can register to receive [notifications by messaging]:
 
