@@ -13,7 +13,7 @@ active: usecases
 
 ###  Introduction
 
-This use case demonstrates how the Da Vinci Notifications IG framework is implemented to transact an alert between an Notification Sender/Intermediary and an Notification Recipient/Intermediary.
+This use case demonstrates how the Da Vinci Notifications IG framework is implemented to transact an alert between a Sender and a Recipient/Intermediary.
 
 ### Use Case Background
 
