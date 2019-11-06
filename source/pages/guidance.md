@@ -74,7 +74,7 @@ All elements in the Da Vinci Notification profiles have a [MustSupport flag]. Sy
 - Based on FHIR R4 and US Core R4 profiles where applicable.
 - Notifications are transacted to teh process-message operation endpoint.
 - The Da Vinci Notification Message Bundle Profile is the FHIR object that is exchanged for all alert transactions.
-  -
+
 
 ### The Da Vinci Notification Message Bundle
 
