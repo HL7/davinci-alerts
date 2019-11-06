@@ -90,16 +90,13 @@ Resources that associated SHALL be included in *all* Da Vinci Notification Messa
  In addition to Patient and Encounter which are included in all Notification Bundles, the following tables summarizes the additional Resources that directly or indirectly referenced  and included in the message or avialable in a subsequent query by the Intermediary or Recipient
 
 {: .grid}
-| ﻿Notification Scenarios | Resources in Notification Bundle<sup>(1)</sup> | Searchable Resources<sup>(2)</sup> |
+| ﻿Notification Scenarios | Resources in Notification Bundle | Searchable Resources|
 |---|---|---|
 | Emergency and Inpatient Admissions | US Core R4 Condition |Location, Coverage, Practitioner (sender), Organization (sender), PractitionerRole (sender)|
 | Emergency and Inpatient Discharges | US Core R4 Condition |Location, Coverage, Practitioner (sender), Organization (sender), PractitionerRole (sender) |
 
 ---
 
-[Example of an Notification Bundle](Bundle-communication-alert-admit-01.html) for a patient admission.
-
----
 
 {:.note-to-balloters}
 Note to Balloters: These scenarios may be added in future iterations of this IG.
@@ -124,13 +121,7 @@ Note to Balloters: These scenarios may be added in future iterations of this IG.
 | Work Comp Initial/Visits/Services | US Core R4 Condition, R4 Coverage |TBD...  |
 | Changes in Care Team | US Core R4 Practitioner, R4 RelatedPerson, R4 CareTeam | TBD... |
 
----
 
-footnotes:
-
-(1): In addition to Patient and Encounter which are included in all Notification Bundles.
-
-(2): Minimum set of the patient's Resources that are Available for Optional Subsequent Queries.
 
 
 ### Push Notification Notification
