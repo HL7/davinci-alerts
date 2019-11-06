@@ -188,50 +188,6 @@ The following transaction show an example of using the `$process-message` operat
 Note to Balloters: We are actively seeking input on what expectations should be defined for error handling and and whether there is a need to support ["reliable delivery"]
 {:.note-to-balloters}
 
-<!--{% raw %}
-### Comparison of the Communication Profile to the MessageHeader Profile
-
-The Messag eHeader is the first resource in the Da Vinci Notification Message Bundle and serves the same function as Communication resources in the Notification Bundle above, providing the necessary context for the alert reason together with various resources pointed to or indirectly connected to it:
-
-{% include img-portrait.html img="comm_msg_map.svg" caption="Figure 9" %}
-
-- [Example Da Vinci Notification MessageHeader](MessageHeader-admit-1.html)
-
-### FHIR Subscription Based Notification
-
-{:.note-to-balloters}
-Note to Balloters: We are actively seeking input on what additional work is needed to determine the best way to implement subscriptions for alert notification.  This project recognizes the impact of the Argonaut work on Subscription for R5 and is considering what approach to take to align with that work.
-<br /><br />
-current proposals include:
-<br /><br />
-\1. criteria based on searching the resource that corresponds to the alert event  (for example Encounter for admit/discharge) with the expectation that the subscriber would perform a subsequent query to fetch the supporting data.
-<br /><br />
-\2. criteria based on searching the resource that corresponds to the alert event  (for example Encounter for admit/discharge) **plus** a graph definition to inform the server what Notification Bundle to return with the resource using the [$graph operation]
-<br /><br />
-\3. criteria based on searching `Encounter.status` and/or `Encounter.class`**plus** a graph definition to inform the server what Notification Bundle to return with the resource using the [$graph operation]
-<br /><br />
-\4. criteria based on searching `Communication.topic` **plus** a graph definition to inform the server what Notification Bundle to return with the resource using the [$graph operation]
-
-<br />
-
-The interaction diagram in figure 5 illustrates the sequences of events for subscribing for alerts and the subsequent notifications when the the event occurs.  The server (in a subscription protocol more commonly known as a the subscription publisher) can be either the Notification Sender or the Notification Intermediary. The client (in a subscription protocol more commonly known as a the subscriber) can be either the Notification Recipient or the Notification Intermediary.
-
-{% include img-portrait-med.html img="basic_sub.svg" caption="Figure 5" %}
-
----
-
-Figure 6 depicts additional subscription interactions for the Notification Intermediary when transacting with multiple servers.
-
-{% include img-portrait-med.html img="add_intermediary_interactions.svg" caption="Figure 6" %}
-
----
-
-**Example Transaction**
-{% include examplebutton_default.html example="example" b_title = "Click Here To See Example Subscription Notification Notification" %}
-<br />
-
-
-{% endraw %}-->
 ---
 
 {% include link-list.md %}
