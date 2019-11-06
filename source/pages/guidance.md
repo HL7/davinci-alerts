@@ -134,12 +134,6 @@ As shown in Figure 4, When an event or request triggers a notification, the Send
 Note that for this guide the $process-message input parameters "async" and "response-url" are not used because there is no expectation for a notification response message to be returned from the Recipient or Intermediary to the Sender.
 {:.stu-note}
 
-1. The Notification Bundle containing the required Notification Communication profile and required resources for this Notification event use case. The table in the previous section lists for each alert scenario, the relevant resources to be included in the Notification Bundle and referenced in the `Communication.payload` element.
-
-1. The [Da Vinci Notifications Endpoint Profile] which is intended only for the *direct* recipient of the operation and provides the recipient with the technical details for getting additional information from the medical record for the alert.
-
-    Note that an authentication token may be supplied in `Endpoint.header` by the Notification Sender to allow direct recipients of the Notification (whether an Notification Recipient or Notification Intermediary) to access additional information. This and other supplied headers, if any are given, are appended to the GET request. Sending these tokens has obvious security consequences. The server and client are responsible for ensuring that the content is appropriately secured.
-
 In the context of the `$process-message` operation, the Notification Recipient/Intermediary is treated as a ["black box"] and simply accepts and processes the submitted data and there are no further expectations. The response to the operation and the collection Bundle are defined in the FHIR specification.
 
 Note to Balloters: We are actively seeking input on what expectations should be defined for error handling and and whether there is a need to support ["reliable delivery"]
@@ -149,7 +143,7 @@ Since the parameter can repeat a single operation transaction may contain multip
 
 As shown in figure 4, after the Notification Intermediary successfully receives the notification, processes the Notification Bundle and optionally searches and process the seach results, it redistributes the data the end users.  It may use the `$process-message` operation to do this, however the original Endpoint SHALL NOT be distributed.  Note that the Notification Intermediary may customize the content based on the end user (for example, withholding data that a particular care team member does not need).
 
-Note to Balloters: We are actively seeking input on whether this guide should define the expectations of how Notification Intermediaries distribute the alert information to the Notification Recipients.  For example using existing data transport protocols such as Direct, SMS or V2 messaging.
+Note to Balloters: We are actively seeking input on whether this guide should define the expectations of how Notification Intermediaries distribute the alert information to the Notification Recipients. For example using existing data transport protocols such as Direct, SMS or V2 messaging.
 {:.note-to-balloters}
 
 {% include img.html img="$process_message_wf.svg" caption="Figure 4" %}
@@ -164,7 +158,7 @@ The following Da Vinci Notification FHIR artifacts are used in this transaction:
 - [Da Vinci Notifications MessageHeader Profile]
 
 
-Whether transmitting Endpoint via a Vinci Notifications Endpoint Profile information to provide subsequent query capability is in scope
+Seeking input on whether or not to document how to  transmit endpoint data intended only for the *direct* recipient of the operation and to provides the recipient with the technical details for getting additional information from the medical record for the alert - Note that this has serious security implications as it may contain sensitive access information.
 {:.note-to-balloters}
 
 #### Usage
