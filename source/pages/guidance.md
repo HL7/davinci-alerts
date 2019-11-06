@@ -17,7 +17,7 @@ topofpage: true
 FHIR resources can be used to transport patient information relevant to a specific event (e.g. admission, discharge, change in treatment, new diagnosis) to another provider or the health plan to communicate the details of where care was delivered and help to ensure timely follow-up as needed.  The intent is to provide the minimally required information in the notification, for the Receiver to know, if the notification is of interest and give enough information to be able to request more from the Sender, if desired. This information can be used to build an encounter record in the receiving system with appropriate provenance and make it available to CDS and other local services. The following framework documents how notifications are transacted using [FHIR messaging] and the [`$process-message`] operation to push directly to “registered” Recipients and Intermediaries.
 
 This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5.  it is anticipated that an equivalent subscription based notification paradigm can be implemented as an alternate to the messsaging based approach documented in this guide.
-{:.note-to-balloters}
+{:.stu-notes}
 
 ### Must Support
 
@@ -82,7 +82,7 @@ For every notification, the FHIR object that is exchanged is the [Da Vinci Notif
 
 {% include img-portrait.html img="admit_message_graph.svg" caption="Figure 3" %}
 
-Note:
+Figure Notes:
 
 This resource graph defines the resources that support the admission and discharge alerts use case using FHIR messaging. MessageHeader, Patient, Encounter, and Condition are the primary resources (indicated by the black borders) which are messaged in the Da Vinci Notification Message Bundle to notify the provider of when the event has occurred. The Endpoint Resource can be optionally included in the bundle to allow the Recipient to optionally query other associated resources such as Location, Practitioner and Organization  through a subsequent FHIR read or search interaction (TODO this needs further testing and discussion).  Note that the boxes with several resources inside them represents a choice.
 
@@ -180,7 +180,7 @@ The `$process-message` operation is invoked by the  Sender using the `POST` synt
 **Example Transaction**
 The following transaction show an example of using the `$process-message` operation to send a Da Vinci Notification Message Bundle:
 
-{% include examplebutton_default.html example="process-message-example" b_title = "Click Here To See Example Notification Notification" %}
+{% include examplebutton_default.html example="process-message-example" b_title = "Click Here To See Example Notification " %}
 
 ### Reliable Delivery
 
