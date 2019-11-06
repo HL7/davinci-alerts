@@ -95,7 +95,7 @@ Note:
     - [Example Da Vinci Notification GraphDefinition](GraphDefinition-admit-1.html)
 
 
-Resources that associated SHALL be included in *all* Da Vinci Notification Message Bundle:
+Resources that associated SHALL be included in *all* Da Vinci Notification Message Bundles:
 
 - *MessageHeader*
 - *Encounter* referenced by `MessageHeader.focus`
@@ -143,8 +143,9 @@ Note to Balloters: These scenarios may be added in future iterations of this IG.
 
 As shown in Figure 4, When an event or request triggers a notification, the Sender creates a Da Vinci Notification Message Bundle and notifies the Recipient or Intermediary using the `$process-message` operation.
 
-- For this guide the $process-message input parameters "async" and "response-url" are not used because there is no expectation for a notification response message to be returned from the Recipient or Intermediary to the Sender.
--  The body of this operation is the message bundle itself.
+{% include img.html img="$process_message_wf.svg" caption="Figure 4" %}
+
+- For this guide there is no expectation for a notification response message to be returned from the Recipient or Intermediary to the Sender. Therefore, the $process-message input parameters "async" and "response-url" are not used and the body of this operation is the message bundle itself.
 - In the context of the `$process-message` operation, the Recipient/Intermediary is treated as a ["black box"] and simply accepts and processes the submitted data and there are no further expectations beyond the http level response as defined in the in the FHIR specification.
 -There is no expectation that the data submitted represents all the data required by the Notification Recipient/Intermediary, only that the data is known to be relevant to the triggering event. The Notification Recipient/Intermediary can optionally fetch additional information from the patient's medical record using FHIR RESTful searches.  The endpoint for this search may be known or supplied via the $process-message operation payload.
 
@@ -157,7 +158,7 @@ Note to Balloters: We are actively seeking input on whether this guide should de
 {:.note-to-balloters}
 
 
-{% include img.html img="$process_message_wf.svg" caption="Figure 4" %}
+
 
 
 Note to Balloters: We are actively seeking input on what expectations should be defined for error handling and and whether there is a need to support ["reliable delivery"]
