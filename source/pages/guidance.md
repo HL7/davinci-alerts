@@ -80,6 +80,9 @@ All elements in the Da Vinci Notification profiles have a [MustSupport flag]. Sy
 
 For every notification, the FHIR object that is exchanged is the [Da Vinci Notification Message Bundle]. It consists of a Bundle identified by the type "message", with the first resource in the bundle being a MessageHeader resource. The first resource in the bundle is the MessageHeader resource. The MessageHeader resource has a code - the message event - that identifies the reason for the notification.  The MessageHeader also carries additional notification metadata. The other resources in the bundle depend on the notification scenario and form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resource graphs. The FHIR Notification resource graph for the admit and discharge use case is shown in [Figure 7].
 
+{% include img-portrait.html img="admit_message_graph.svg" caption="Figure 7" %}
+
+
 Resources that associated SHALL be included in *all* Da Vinci Notification Message Bundle:
 
 - MessageHeader
@@ -124,7 +127,7 @@ Note to Balloters: These scenarios may be added in future iterations of this IG.
 
 
 
-### Push Notification Notification
+### Pushing Notifications to the Sender or Intermediary
 
 As shown in Figure 4, When an event or request triggers a notification, the Sender creates a Da Vinci Notification Message Bundle and notifies the Recipient or Intermediary using the `$process-message` operation. The body of this operation is the message bundle itself.
 
