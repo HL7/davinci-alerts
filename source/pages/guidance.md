@@ -126,7 +126,10 @@ Note to Balloters: These scenarios may be added in future iterations of this IG.
 
 ### Push Notification Notification
 
-As shown in Figure 4a and 4b, When an event or request triggers an alert, the Notification Sender creates an Notification bundle and notifies the Notification Recipient or Notification Intermediary using the [Da Vinci Notify Operation] operation. The body of this operation is a Parameter resource consisting of a single parameter with two nested parts containing:
+As shown in Figure 4, When an event or request triggers a notification, the Sender creates a Da Vinci Notification Message Bundle and notifies the Recipient or Intermediary using the `$process-message` operation. The body of this operation is the message bundle itself.
+
+Note that for this guide the $process-message input parameters "async" and "response-url" are not used because there is no expectation for a notification response message to be returned from the Recipient or Intermediary to the Sender.
+{:.stu-note}
 
 1. The Notification Bundle containing the required Notification Communication profile and required resources for this Notification event use case. The table in the previous section lists for each alert scenario, the relevant resources to be included in the Notification Bundle and referenced in the `Communication.payload` element.
 
@@ -141,7 +144,7 @@ Note to Balloters: We are actively seeking input on what expectations should be 
 
 Since the parameter can repeat a single operation transaction may contain multiple alerts. There is no expectation that the data submitted represents all the data required by the Notification Recipient/Intermediary, only that the data is known to be relevant to the triggering event. The Notification Recipient/Intermediary can optionally fetch additional information from the patient's medical record using FHIR RESTful searches.  The endpoint for this search may be known or supplied via the $process-message operation payload.
 
-As shown in figure 4b, after the Notification Intermediary successfully receives the notification, processes the Notification Bundle and optionally searches and process the seach results, it redistributes the data the end users.  It may use the `$process-message` operation to do this, however the original Endpoint SHALL NOT be distributed.  Note that the Notification Intermediary may customize the content based on the end user (for example, withholding data that a particular care team member does not need).
+As shown in figure 4, after the Notification Intermediary successfully receives the notification, processes the Notification Bundle and optionally searches and process the seach results, it redistributes the data the end users.  It may use the `$process-message` operation to do this, however the original Endpoint SHALL NOT be distributed.  Note that the Notification Intermediary may customize the content based on the end user (for example, withholding data that a particular care team member does not need).
 
 Note to Balloters: We are actively seeking input on whether this guide should define the expectations of how Notification Intermediaries distribute the alert information to the Notification Recipients.  For example using existing data transport protocols such as Direct, SMS or V2 messaging.
 {:.note-to-balloters}
