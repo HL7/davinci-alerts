@@ -62,7 +62,7 @@ In the following interaction shown in figures 8 and 9, the HealthCare facility i
 ---
 
 **Example Transaction**
-{% include examplebutton_default.html example="notify-example" b_title = "Click Here To See Example PUSH Notification Notification" %}
+{% include examplebutton_default.html example="process-message-example" b_title = "Click Here To See Example Notification " %}
 <br />
 
 <!--{% raw %}
