@@ -135,22 +135,19 @@ There are many potential actors for the roles listed above:
 
 ## Workflow Overview
 
--  *See the [Framework] page for a detailed description of the technical workflow and API guidance*
+See the [Framework] page for a detailed description of the technical workflow and API guidance
+{:. stu-note}
 
-An event or request triggers  a FHIR "notification message" to be sent from a Sender (aka source application) to a Intermediary or Recipient (aka destination application).   The notification message consists of a Bundle identified by the type "message", with the first resource in the bundle being a MessageHeader resource. The MessageHeader resource has a code - the notification event - that identifies the event or request, and carries additional notification metadata. The other resources in the bundle depend on the type of the notification. This guide defines a single RESTful interactions to a FHIR endpoint using the [$process-message].  The operation accepts the notification message and processes it according the Sender or Intermediary internal business rules.  The basic process diagrams in Figure 2 shows the process where the  Sender transacts directly with the  Recipient.  Figure 3 shows the process where the  Sender transacts with the  Intermediary (aka clearinghouse) which in turn interacts with the  Recipient.  Although not represented in the figure, there may be multiple Intermediaries.
 
 {% include img-portrait.html img="basic_process.svg" caption="Figure 2" %}
 
-1. A specific event or request by patient or Healthcare Facility triggers a notification to be sent to an Recipient.
-2. The  Sender notifies the  Recipient by pushing a notification message which includes common resources across all notifications and use case dependent supporting resources.
+1. An event or request triggers a [FHIR "notification message"] to be sent from a Sender (aka source application) to a Intermediary or Recipient (aka destination application).  The notification message includes common resources across all notifications and use case dependent supporting resources.
+2. The Sender notifies the  Recipient by pushing a notification message to a FHIR endpoint using the [$process-message] operation. The operation accepts the notification message and processes it according the Sender or Intermediary internal business rules.
+
+Figure 3 shows the process where the  Sender transacts with the  Intermediary (aka clearinghouse) which in turn interacts with the  Recipient.  The  Intermediary is responsible for the redistribution of the data.  Note that it may customize the data based on end user needs.  Although not represented in the figure, there may be multiple Intermediaries.
 
 {% include img-portrait.html img="basic_process_int.svg"
  caption="Figure 3" %}
-
-1. Event or request by patient or Healthcare Facility triggers an notification to be sent to an Intermediary ( e.g. clearinghouse).
-2. The  Sender notifies the  Intermediary by pushing a notification message which includes common resources across all Alerts and use case dependent supporting resources.
-3. The  Intermediary is responsible for the redistribution of the data.  Note that it may customize the data based on end user needs.
-
 
 ---
 <br />
