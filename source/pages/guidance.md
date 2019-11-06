@@ -73,23 +73,21 @@ All elements in the Da Vinci Notification profiles have a [MustSupport flag]. Sy
 
 - Based on FHIR R4 and US Core R4 profiles where applicable.
 - Notifications are transacted to teh process-message operation endpoint.
-- The Da Vinci Notifications Message Bundle Profile is the FHIR object that is exchanged for all alert transactions.
-  - The first resource in the bundle is the MessageHeader resource. The MessageHeader resource has a code - the message event - that identifies the reason for the notification.
+- The Da Vinci Notification Message Bundle Profile is the FHIR object that is exchanged for all alert transactions.
+  -
 
-### Notification Bundle
+### The Da Vinci Notification Message Bundle
 
-The FHIR resources used in Da Vinci Notification transactions form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resource graphs. The FHIR Notification resource graph for the admit and discharge use case is shown in [Figure 7].
+For every notification, the FHIR object that is exchanged is the [Da Vinci Notification Message Bundle]. It consists of a Bundle identified by the type "message", with the first resource in the bundle being a MessageHeader resource. The first resource in the bundle is the MessageHeader resource. The MessageHeader resource has a code - the message event - that identifies the reason for the notification.  The MessageHeader also carries additional notification metadata. The other resources in the bundle depend on the notification scenario and form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resource graphs. The FHIR Notification resource graph for the admit and discharge use case is shown in [Figure 7].
 
-{:.note-to-balloters}
-Note to Balloters: We are seeking input on the Bundle type to use this context.   Both `transaction`, and `collection` were considered.  Although `transaction` (and `transaction-response`) provides some additional confirmation of delivery, the required .request.method element places additional expectations on the server responding to the `$process-message` transaction.  In contrast, the `collection` type imposes no processing obligations or behavioral rules beyond persistence, including any confirmation confirmation of delivery beyond the http status.
+Resources that associated SHALL be included in *all* Da Vinci Notification Message Bundle:
 
-For every alert notification, the FHIR object that is exchanged is the [Da Vinci Notification Bundle Profile]. This bundle is a [`collection`] type bundle that is POSTed to the Notification Recipient's or Intermediary's FHIR endpoint via a the $process-message operation. The complete set of content to make up an Notification Bundle includes the [Da Vinci Notifications Communication Profile] which provides the necessary context for the alert reason together with various resources pointed to or indirectly connected to the Communication profile, all gathered together into a Bundle for transport and persistence.  Resources associated with the following list of Communication references SHALL be included in the Bundle:
+- MessageHeader
+- Encounter Resource referenced by `MessageHeader.focus`
+- Patient resource referenced by `Encounter.subject`
+-  All supporting data (resources) for each kind of notification that is referenced in `MessageHeader.focus`
 
-- `Communication.subject` (Patient resource)
-- `Communication.encounter` (Encounter Resource )
--  All supporting data (resources) for each kind of alert is referenced in `Communication.payload`
-
-The following Table summarizes the Notification Scenarios and the Resources that may be referenced in the [Da Vinci Communication Profile] payload element and included in the alert Bundle:
+ In addition to Patient and Encounter which are included in all Notification Bundles, the following tables summarizes the additional Resources that directly or indirectly referenced  and included in the message or avialable in a subsequent query by the Intermediary or Recipient
 
 {: .grid}
 | ﻿Notification Scenarios | Resources in Notification Bundle<sup>(1)</sup> | Searchable Resources<sup>(2)</sup> |
