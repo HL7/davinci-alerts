@@ -85,9 +85,9 @@ For every notification, the FHIR object that is exchanged is the [Da Vinci Notif
 
 Resources that associated SHALL be included in *all* Da Vinci Notification Message Bundle:
 
-- MessageHeader
-- Encounter Resource referenced by `MessageHeader.focus`
-- Patient resource referenced by `Encounter.subject`
+- *MessageHeader*
+- *Encounter* referenced by `MessageHeader.focus`
+- *Patient* referenced by `Encounter.subject`
 -  All supporting data (resources) for each kind of notification that is referenced in `MessageHeader.focus`
 
  In addition to Patient and Encounter which are included in all Notification Bundles, the following tables summarizes the additional Resources that directly or indirectly referenced  and included in the message or avialable in a subsequent query by the Intermediary or Recipient
