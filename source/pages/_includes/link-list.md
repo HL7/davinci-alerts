@@ -39,3 +39,5 @@
 [`$process-message`]: {{site.data.fhir.path}}messageheader-operation-process-message.html
 [notifications by messaging]: {{site.data.fhir.path}}subscription.html#messaging
 [FHIR Artifacts]: artifacts.html
+[FHIR Messaging paradigm]: {{site.data.fhir.path}}messaging.html
+[FHIR message]: {{site.data.fhir.path}}messaging.html

@@ -141,10 +141,10 @@ See the [Framework] page for a detailed description of the technical workflow an
 
 {% include img-portrait.html img="basic_process.svg" caption="Figure 2" %}
 
-1. An event or request triggers a [FHIR "notification message"] to be sent from a Sender (aka source application) to a Intermediary or Recipient (aka destination application).  The notification message includes common resources across all notifications and use case dependent supporting resources.
+1. An event or request triggers a [FHIR message] to be sent from a Sender (aka source application) to a Intermediary or Recipient (aka destination application).  The notification message includes common resources across all notifications and use case dependent supporting resources.
 2. The Sender notifies the  Recipient by pushing a notification message to a FHIR endpoint using the [$process-message] operation. The operation accepts the notification message and processes it according the Sender or Intermediary internal business rules.
 
-Figure 3 shows the process where the  Sender transacts with the  Intermediary (aka clearinghouse) which in turn interacts with the  Recipient.  The  Intermediary is responsible for the redistribution of the data.  Note that it may customize the data based on end user needs.  Although not represented in the figure, there may be multiple Intermediaries.
+Figure 3 shows the process where the  Sender transacts with the  Intermediary which in turn interacts with the  Recipient.  The  Intermediary is responsible for the redistribution of the data.  Note that it may customize the data based on end user needs.  Although not represented in the figure, there may be multiple Intermediaries.
 
 {% include img-portrait.html img="basic_process_int.svg"
  caption="Figure 3" %}
