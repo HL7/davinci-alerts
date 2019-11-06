@@ -129,24 +129,34 @@ Note to Balloters: These scenarios may be added in future iterations of this IG.
 
 ### Pushing Notifications to the Sender or Intermediary
 
-As shown in Figure 4, When an event or request triggers a notification, the Sender creates a Da Vinci Notification Message Bundle and notifies the Recipient or Intermediary using the `$process-message` operation. The body of this operation is the message bundle itself.
+As shown in Figure 4, When an event or request triggers a notification, the Sender creates a Da Vinci Notification Message Bundle and notifies the Recipient or Intermediary using the `$process-message` operation.
 
-Note that for this guide the $process-message input parameters "async" and "response-url" are not used because there is no expectation for a notification response message to be returned from the Recipient or Intermediary to the Sender.
-{:.stu-note}
+- For this guide the $process-message input parameters "async" and "response-url" are not used because there is no expectation for a notification response message to be returned from the Recipient or Intermediary to the Sender.
+-  The body of this operation is the message bundle itself.
+- In the context of the `$process-message` operation, the Recipient/Intermediary is treated as a ["black box"] and simply accepts and processes the submitted data and there are no further expectations beyond the http level response as defined in the in the FHIR specification.
+-There is no expectation that the data submitted represents all the data required by the Notification Recipient/Intermediary, only that the data is known to be relevant to the triggering event. The Notification Recipient/Intermediary can optionally fetch additional information from the patient's medical record using FHIR RESTful searches.  The endpoint for this search may be known or supplied via the $process-message operation payload.
 
-In the context of the `$process-message` operation, the Notification Recipient/Intermediary is treated as a ["black box"] and simply accepts and processes the submitted data and there are no further expectations. The response to the operation and the collection Bundle are defined in the FHIR specification.
+Seeking input on whether or not to document how to  transmit endpoint data intended only for the *direct* recipient of the operation and to provides the recipient with the technical details for getting additional information from the medical record for the alert - Note that this has serious security implications as it may contain sensitive access information.
+{:.note-to-balloters}
+
+- Not shown in figure 4, after the Intermediary successfully receives the notification, processes it and optionally searches and process the search results, it redistributes the data the end users.  It **MAY** use FHIR messagins and the `$process-message` operation to do this.  Note that the Notification Intermediary **MAY** customize the content based on the end user (for example, withholding data that a particular care team member does not need).
+
+Note to Balloters: We are actively seeking input on whether this guide should define the expectations of how Notification Intermediaries distribute the alert information to the Notification Recipients. For example using existing data transport protocols such as Direct, SMS or V2 messaging.
+{:.note-to-balloters}
+
+
+{% include img.html img="$process_message_wf.svg" caption="Figure 4" %}
+
 
 Note to Balloters: We are actively seeking input on what expectations should be defined for error handling and and whether there is a need to support ["reliable delivery"]
 {:.note-to-balloters}
-
-Since the parameter can repeat a single operation transaction may contain multiple alerts. There is no expectation that the data submitted represents all the data required by the Notification Recipient/Intermediary, only that the data is known to be relevant to the triggering event. The Notification Recipient/Intermediary can optionally fetch additional information from the patient's medical record using FHIR RESTful searches.  The endpoint for this search may be known or supplied via the $process-message operation payload.
 
 As shown in figure 4, after the Notification Intermediary successfully receives the notification, processes the Notification Bundle and optionally searches and process the seach results, it redistributes the data the end users.  It may use the `$process-message` operation to do this, however the original Endpoint SHALL NOT be distributed.  Note that the Notification Intermediary may customize the content based on the end user (for example, withholding data that a particular care team member does not need).
 
 Note to Balloters: We are actively seeking input on whether this guide should define the expectations of how Notification Intermediaries distribute the alert information to the Notification Recipients. For example using existing data transport protocols such as Direct, SMS or V2 messaging.
 {:.note-to-balloters}
 
-{% include img.html img="$process_message_wf.svg" caption="Figure 4" %}
+
 
 
 #### APIs
@@ -156,10 +166,6 @@ The following Da Vinci Notification FHIR artifacts are used in this transaction:
 
 - [Da Vinci Notification Message Bundle]
 - [Da Vinci Notifications MessageHeader Profile]
-
-
-Seeking input on whether or not to document how to  transmit endpoint data intended only for the *direct* recipient of the operation and to provides the recipient with the technical details for getting additional information from the medical record for the alert - Note that this has serious security implications as it may contain sensitive access information.
-{:.note-to-balloters}
 
 #### Usage
 {:.no_toc}
