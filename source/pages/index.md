@@ -16,7 +16,7 @@ Providers (members of a care team) and Payers may need to be alerted when activi
 patient's healthcare to take actions and intervene earlier to assure the
 patient is better cared for and can also result in reduced costs.
 
-The HL7 Da Vinci Project has recognized the need to provide a FHIR based standard for adoption by both providers and payers for the communication of relevant notifications to support the real-time exchange of notifications that impact patient care and value based or risk based services.  This Guide defines a FHIR messaging based paradigm and framework to establish consistently adoptable and reproducible methods to exchange notifications. This framework is demonstrated using the patient admission and discharge event use case to generate unsolicited notifications to the care team.
+The HL7 Da Vinci Project has recognized the need to provide a FHIR based standard for adoption by both providers and payers for the communication of relevant notifications to support the real-time exchange of information that impacts patient care and value based or risk based services.  It is anticipated that the burden of communicating the notifation is also reduced by using FHIR.   This Guide defines a FHIR messaging based paradigm and framework to establish consistently adoptable and reproducible methods to exchange notifications. This framework is demonstrated using the patient admission and discharge event use case to generate unsolicited notifications to the care team.
 
 ## How to read this Guide
 
@@ -26,26 +26,28 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - [Framework]\: These pages provide guidance on the set of FHIR transactions and the FHIR artifacts used in a general framework to enable unsolicited notifications to careteam members.
 - [Use cases]\: The Admission/Discharge use case is used to show how to implement an unsolicited notification using the framework.
-
-- [Profiles]\: This page lists the set of Profiles that are defined in this guide to exchange quality data.
-- [Operations]\: This page lists the standard FHIR and DEQM defined Operations that are used in the DEQM transactions to exchange quality data.
-- [Capability Statements]\: This set of pages describes the expected FHIR capabilities of the various DEQM actors.
+- [FHIR Artifacts]\: These pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
+  - [Profiles]\: This page lists the set of Profiles that are defined in this guide to exchange quality data.
+  - [Terminology]\: This page lists the value sets and code system defined for this guide.
+  - [Capability Statements]\: This set of pages describes the expected FHIR capabilities of the various DEQM actors.
 - [Security]\: General security requirements and recommendations for {{site.title}} actors.
 - [Examples]\: List of links to all the examples used in this guide.
 - [Downloads]\: This page provides links to downloadable artifacts.
-
 
 ## Scope and Usage
 
 The work of this Implementation Guide is to:
 
-1.  Define a technical framework for sending alert data to the appropriate actors when triggered by an event or request.
-1.  Define the minimal data elements needed to support the information needs that are appropriate for 80% of users.  Users requiring more data may follow up with additional queries.
-1.  Define a FHIR Bundle that is a common data model exchanged for all alert transactions.
+1.  Define a technical framework for sending unsolicited notifications to the appropriate actors when triggered by an event or request.
+    -  Define a common FHIR messaging Bundle that is exchanged for all Notifications.
+    -  Define the FHIR transactions and minimum operational behavior for the relevant Actors
+1.  Define how to define and share the minimal data elements needed to support the information needs for an initial set of Use Case starting with the patient admission and discharge event use case.  
+1.  Define a how users requiring more data may follow up with additional queries.
+1. Describe basic Security and Privacy considerations
 
-It is important that the framework allow for only appropriate alerts to
+It is important that the framework allow for only appropriate notification to
 be sent at the appropriate time and with just the right amount of
-information. This will serve to reduce alert fatigue. It is anticipated that the burden of communicating the alert is also reduced by using FHIR.  
+information. This will serve to avoid "notification fatigue".
 
 ### Out Of Scope
 
@@ -57,19 +59,19 @@ your organization)
 - Creation of the FHIR equivalent of v2 Messaging
 - Distribution beyond FHIR Endpoints (e.g. SMS, email)
 - Bidirectional Work, such as Gaps in Care
-- Any alert notification that requires workflow management such as Task
+- Any notification that requires workflow management such as Task
 - Complex content
 - Besides the standard http response, the Alert Recipient's workflow upon receipt of alert.
-   - Note, the Alert Recipient may initiate a FHIR RESTful query for additional data.
+   - Note, the Notification Recipient may initiate a FHIR RESTful query for additional data.
 
 ### Scenarios
 
-Alerts can be generated for many scenarios. The [2019 CMS 45 CFR Part 156 NPRM]
+Notifications can be generated for many scenarios. The [2019 CMS 45 CFR Part 156 NPRM]
 focuses on hospitalization due to significant issues that can occur if a patient
-is not followed appropriately after acute care. The initial version of the Alert
+is not followed appropriately after acute care. The initial version of this
 Implementation Guide will focus on the Admission and Discharge Scenarios, basically anything that would create an encounter in a patient care record. The
 framework as defined may support the other scenarios as listed below and work
-will continue on this in future versions of the Implementation Guide in collaboration with domain experts for each scenario.
+will continue on this in future versions of the Implementation Guide or supplemental or compantion guides in collaboration with domain experts for each scenario.
 
 #### Initial Phase:
 {:.no_toc}
