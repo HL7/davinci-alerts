@@ -154,10 +154,12 @@ Note to Balloters: We are actively seeking input on whether this guide should de
 
 The following Da Vinci Notification FHIR artifacts are used in this transaction:
 
-- [Da Vinci Notifications Bundle Profile]
-- [Da Vinci Notifications Communication Profile]
-- [Da Vinci Notifications Endpoint Profile]
-- [Da Vinci Notify Operation]
+- [Da Vinci Notification Message Bundle]
+- [Da Vinci Notifications MessageHeader Profile]
+
+
+Whether transmitting Endpoint via a Vinci Notifications Endpoint Profile information to provide subsequent query capability is in scope
+{:.note-to-balloters}
 
 #### Usage
 {:.no_toc}
