@@ -96,6 +96,7 @@ This resource graph defines the resources that support the admission and dischar
 
     - [Example Da Vinci Notification GraphDefinition](GraphDefinition-admit-1.html)
 
+**Example Da Vinci Notification Message Bundle**
 
 - [Example Da Vinci Notification Message Bundle](Bundle-message-admit-01.html)
 
@@ -176,60 +177,17 @@ The `$process-message` operation is invoked by the  Sender using the `POST` synt
 
 `POST [base]$process-message`
 
-{% include examplebutton_default.html example="process-message-example" b_title = "Click Here To See Example Notification Notification" %}
-<br />
-
-
 **Example Transaction**
 The following transaction show an example of using the `$process-message` operation to send a Da Vinci Notification Message Bundle:
 
-
+{% include examplebutton_default.html example="process-message-example" b_title = "Click Here To See Example Notification Notification" %}
+<br />
 
 ### Reliable Delivery
 
 Note to Balloters: We are actively seeking input on what expectations should be defined for error handling and and whether there is a need to support ["reliable delivery"]
 {:.note-to-balloters}
 
-## FHIR Messaging
-
-An alternative consideration is to use the [FHIR Messaging paradigm] to send a Da Vinci Notification Message Bundle to the Recipient. There are several transport mechanisms that can be used. One way is to use the $process-message operation on FHIR Server Restful endpoint. This is analogous to the Notification Bundle $process-message operation above using the $process-message operation in place of the $process-message and a Da Vinci Notification Message Bundle structure instead of the Notification Bundle:
-
-
-
-The same Da Vinci Notification Message Bundle structure can be re-used as the notification payload for FHIR Subscription based alerts since a subscriber can register to receive [notifications by messaging]:
-
-{% include img.html img="subscription_messaging_wf.svg" caption="Figure 6" %}
-
-
-### Graph of FHIR Resources for Messaging
-
-The following resource graph in figure 8 defines the resources that support the admission and discharge alerts use case using FHIR messaging. MessageHeader, Patient, Encounter, and Condition are the primary resources (indicated by the black borders) which are messaged in the Da Vinci Notification Message Bundle to notify the provider of when the event has occurred. The Endpoint Resource can be optionally included in the bundle to allow the Recipient to optionally query other associated resources such as Location, Practitioner and Organization  through a subsequent FHIR read or search interaction (TODO this needs further testing and discussion).  Note that the boxes with several resources inside them represents a choice.
-
-{% include img-portrait.html img="admit_message_graph.svg" caption="Figure 8" %}
-
-Note:
-
-- \* it is questionable whether Encounter.diagnosis.condition has been implemented by the EHR vendors - need to discuss with vendors.
-- \** There is no Practitioner.endpoint element and an extension may be needed to implement.
-- \*** MessageDefinition is used to formally define the Message content for a given event (e.g, an inpatient admission or discharge).  It defines the event and the focal and non focal Resources/Profiles that make up the message:
-
-    - [Example Da Vinci Notification MessageDefinition](MessageDefinition-admit-1.html)
-
-    The GraphDefinition is referenced by the MessageDefinition and it defines the links between the all resources that are contained within the message.
-
-    - [Example Da Vinci Notification GraphDefinition](GraphDefinition-admit-1.html)
-
-
-The Bundle can be transacted similarly to the Notification bundle by posting to an operation endpoint using a RESTful POST transaction:
-
-- [Example Da Vinci Notification Message Bundle](Bundle-message-admit-01.html)
-
-
-**Example Transaction**
-The following transaction show an example of using the `$process-message` operation to send a Da Vinci Notification Message Bundle:
-
-{% include examplebutton_default.html example="process-message-example" b_title = "Click Here To See Example Notification Notification" %}
-<br />
 <!--{% raw %}
 ### Comparison of the Communication Profile to the MessageHeader Profile
 
@@ -238,9 +196,6 @@ The Messag eHeader is the first resource in the Da Vinci Notification Message Bu
 {% include img-portrait.html img="comm_msg_map.svg" caption="Figure 9" %}
 
 - [Example Da Vinci Notification MessageHeader](MessageHeader-admit-1.html)
-
-
-
 
 ### FHIR Subscription Based Notification
 
