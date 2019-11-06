@@ -12,11 +12,9 @@ active: home
 
 <!-- end TOC -->
 
-Providers (members of a care team) and Payers may need to be alerted when activities occur that impact a patients care. This may be as traditional as admission to or discharge from a care setting (ED, Hospital, etc.) but may also include changes in treatment (e.g. medications) or patient status (new diagnosis). This information will improve care management and care coordination as well as act as the trigger for quality programs and other patient focused activities (e.g. risk adjustment).  It would allow actors participating in the
-patient's healthcare to take actions and intervene earlier to assure the
-patient is better cared for and can also result in reduced costs.
+The communication of relevant notifications to support the real-time exchange of information that impacts patient care and value based or risk based services.  Providers (members of a care team) and Payers may need to be alerted when activities occur that impact a patients care. This may be as traditional as admission to or discharge from a care setting (ED, Hospital, etc.) but may also include changes in treatment (e.g. medications) or patient status (new diagnosis). This information will improve care management and care coordination as well as act as the trigger for quality programs and other patient focused activities (e.g. risk adjustment).  It would allow actors participating in the patient's healthcare to take actions and intervene earlier to assure the patient is better cared for and can also result in reduced costs.
 
-The HL7 Da Vinci Project has recognized the need to provide a FHIR based standard for adoption by both providers and payers for the communication of relevant notifications to support the real-time exchange of information that impacts patient care and value based or risk based services.  It is anticipated that the burden of communicating the notifation is also reduced by using FHIR.   This Guide defines a FHIR messaging based paradigm and framework to establish consistently adoptable and reproducible methods to exchange notifications. This framework is demonstrated using the patient admission and discharge event use case to generate unsolicited notifications to the care team.
+The [2019 CMS 45 CFR Part 156 NPRM] focuses on hospitalization notifications due to significant issues that can occur if a patient is not followed appropriately after acute care. The HL7 Da Vinci Project has responded to this need by supporting the effort to provide a FHIR based standard for adoption by both providers and payers.  It is anticipated that the burden of communicating the notification is also reduced by using FHIR.   This Guide defines a FHIR messaging based paradigm and framework to establish consistently adoptable and reproducible methods to exchange notifications. This framework is demonstrated using the patient admission and discharge event use case to generate unsolicited notifications to the care team.
 
 ## How to read this Guide
 
@@ -66,25 +64,24 @@ your organization)
 
 ### Scenarios
 
-Notifications can be generated for many scenarios. The [2019 CMS 45 CFR Part 156 NPRM]
-focuses on hospitalization due to significant issues that can occur if a patient
-is not followed appropriately after acute care. The initial version of this
-Implementation Guide will focus on the Admission and Discharge Scenarios, basically anything that would create an encounter in a patient care record. The
-framework as defined may support the other scenarios as listed below and work
-will continue on this in future versions of the Implementation Guide or supplemental or compantion guides in collaboration with domain experts for each scenario.
+Notifications can be generated for many scenarios.
 
-#### Initial Phase:
+#### Initial Phase
 {:.no_toc}
 
--   Emergency and Inpatient Admissions
--	Admission for Observation
--	Admission for special services, such as outpatient surgery
--   Encounter/Visit Notification for ambulatory services
--   Discharges/Visit ends
+The initial version of this
+Implementation Guide will focus on these Admission and Discharge Scenarios, basically anything that would create an encounter in a patient care record.
+
+- Emergency and Inpatient Admissions
+- Admission for Observation
+- Admission for special services, such as outpatient surgery
+- Encounter/Visit Notification for ambulatory services
+- Discharges/Visit ends
 
 #### Potential Future Scenarios
 
-These scenarios may be defined in cooperation with the appropriate HL7 International Working Group for inclusion in a future version of this guide:
+The framework as defined can support the other scenarios as listed below.  Work is planned to document them in future publications in collaboration with domain experts such as public health.:
+
 {:.no_toc}
 
 -   Lab Results
@@ -105,14 +102,14 @@ These scenarios may be defined in cooperation with the appropriate HL7 Internati
 
 ## Roles and Actors
 
-### Alert Roles
+### Roles
 
-- **Alert Sender** - the system responsible for sending the alert, typically operated by the facility or organization where the event occurred
-- **Alert Recipient** – the system responsible for receiving generated alerts from Alert Senders
-<!-- - **Interested Entity** – a system that is interested in receiving alerts for specific events, providers, patients or other predefined criteria -->
-- **Alert Intermediary** (e.g. ClearingHouse or HIE/HIN)– a system that can act as a central point to receive alerts from multiple Alert Senders and distribute alerts to Alert Recipients based on previously defined subscription policies
+- **Sender** - the system responsible for sending the notifications, typically operated by the facility or organization where the event occurred
+- **Recipient** – the system responsible for receiving generated notifications from Senders
+<!-- - **Interested Entity** – a system that is interested in receiving notificationss for specific events, providers, patients or other predefined criteria -->
+- **Intermediary** (e.g. ClearingHouse or HIE/HIN)– a system that can act as a central point to receive notifications from multiple Senders and distribute them to Recipients based on previously defined forwarding policies
 
-### Alert Actors
+### Actors
 
 There are many potential actors for the roles listed above:
 
@@ -140,19 +137,19 @@ There are many potential actors for the roles listed above:
 
 -  *See the [Framework] page for a detailed description of the technical workflow and API guidance*
 
-An event or request triggers an Alert Sender to notify either an Alert Intermediary or Recipient with an "Alert Bundle" object.  This version of the guide defines a single type of push alert notification: a named [operation] to a FHIR endpoint.  The basic process diagrams in Figure 2 shows the process where the Alert Sender transacts directly with the Alert Recipient.  Figure 3 shows the process where the Alert Sender transacts with the Alert Intermediary (aka clearinghouse) which in turn interacts with the Alert Recipient.  Although not represented in the figure, there may be multiple Alert Intermediaries.
+An event or request triggers  a FHIR "notification message" to be sent from a Sender (aka source application) to a Intermediary or Recipient (aka destination application).   The notification message consists of a Bundle identified by the type "message", with the first resource in the bundle being a MessageHeader resource. The MessageHeader resource has a code - the notification event - that identifies the event or request, and carries additional notification metadata. The other resources in the bundle depend on the type of the notification. This guide defines a single RESTful interactions to a FHIR endpoint using the [$process-message].  The operation accepts the notification message and processes it according the Sender or Intermediary internal business rules.  The basic process diagrams in Figure 2 shows the process where the  Sender transacts directly with the  Recipient.  Figure 3 shows the process where the  Sender transacts with the  Intermediary (aka clearinghouse) which in turn interacts with the  Recipient.  Although not represented in the figure, there may be multiple Intermediaries.
 
 {% include img-portrait.html img="basic_process.svg" caption="Figure 2" %}
 
-1. A specific event or request by patient or Healthcare Facility triggers an alert to be sent to an Alert Recipient.
-2. The Alert Sender notifies the Alert Recipient by pushing an "Alert" bundle which includes common resources across all Alerts and use case dependent supporting resources.
+1. A specific event or request by patient or Healthcare Facility triggers a notification to be sent to an Recipient.
+2. The  Sender notifies the  Recipient by pushing a notification message which includes common resources across all notifications and use case dependent supporting resources.
 
 {% include img-portrait.html img="basic_process_int.svg"
  caption="Figure 3" %}
 
-1. Event or request by patient or Healthcare Facility triggers an alert to be sent to an Alert Intermediary ( e.g. clearinghouse).
-2. The Alert Sender notifies the Alert Intermediary by pushing an "Alert" bundle which includes common resources across all Alerts and use case dependent supporting resources.
-3. The Alert Intermediary is responsible for the redistribution of the data.  Note that it may customize the data based on end user needs.
+1. Event or request by patient or Healthcare Facility triggers an notification to be sent to an Intermediary ( e.g. clearinghouse).
+2. The  Sender notifies the  Intermediary by pushing a notification message which includes common resources across all Alerts and use case dependent supporting resources.
+3. The  Intermediary is responsible for the redistribution of the data.  Note that it may customize the data based on end user needs.
 
 
 ---
