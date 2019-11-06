@@ -41,21 +41,18 @@ All elements in the Da Vinci Notification profiles have a [MustSupport flag]. Sy
 * Notification Recipient/Intermediary SHALL be able to process resource instances containing data elements asserting missing information without generating an error or causing the application to fail.
 
 
-#### This guide adopts the following definitions of Must Support for all transactions between the Notification Intermediary and Notification Recipient
+#### This guide adopts the following definitions of Must Support for all transactions between the Intermediary and Recipient
 {:.no_toc}
 
 *Must Support* on any data element SHALL be interpreted as follows:
 
-- As part of the alert notification or a query result as specified by the [Da Vinci Intermediary Server CapabilityStatement], the Notification Sender SHALL be capable of including the data elements defined in the Da Vinci Notification profiles that have a MustSupport flag.
+- As part of the alert notification or a query result as specified by the [Da Vinci Intermediary Server CapabilityStatement], the  Sender SHALL be capable of including the data elements defined in the Da Vinci Notification profiles that have a MustSupport flag.
 
-- The Notification Recipient SHALL be capable of processing resource instances containing the data elements the data elements defined in the Da Vinci Notification profiles that have a MustSupport flag without generating an error or causing the application to fail. In other words, the Notification Recipient SHOULD be capable of processing the data elements (displaying, storing, etc).
+- The  Recipient SHALL be capable of processing resource instances containing the data elements the data elements defined in the Da Vinci Notification profiles that have a MustSupport flag without generating an error or causing the application to fail. In other words, the Recipient SHOULD be capable of processing the data elements (displaying, storing, etc).
 
-- In situations where information on a particular data element is not needed or considered protected information the Notification Intermediary MAY remove the data elements in the resource instance when distributing the alert notification or responding to an Notification Recipient's query. The Notification Intermediary MAY provide the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
+- In situations where information on a particular data element is not needed or considered protected information the Intermediary MAY remove the data elements in the resource instance when distributing the alert notification or responding to an n Recipient's query. The Intermediary MAY provide the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
 
-- The Notification Recipient SHALL be able to process resource instances containing missing data elements and data elements asserting missing information without generating an error or causing the application to fail.
-
-<!-- * NOTE: *Notification Intermediary* = Server and *Notification Recipient* = Client -->
-
+- The Recipient SHALL be able to process resource instances containing missing data elements and data elements asserting missing information without generating an error or causing the application to fail.
 
 
 ### Preconditions and Assumptions
