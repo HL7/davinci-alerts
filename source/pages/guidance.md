@@ -84,7 +84,7 @@ For every notification, the FHIR object that is exchanged is the [Da Vinci Notif
 
 Note:
 
-This resource graph defines the resources that support the admission and discharge alerts use case using FHIR messaging. MessageHeader, Pzatient, Encounter, and Condition are the primary resources (indicated by the black borders) which are messaged in the Da Vinci Notification Message Bundle to notify the provider of when the event has occurred. The Endpoint Resource can be optionally included in the bundle to allow the Recipient to optionally query other associated resources such as Location, Practitioner and Organization  through a subsequent FHIR read or search interaction (TODO this needs further testing and discussion).  Note that the boxes with several resources inside them represents a choice.
+This resource graph defines the resources that support the admission and discharge alerts use case using FHIR messaging. MessageHeader, Patient, Encounter, and Condition are the primary resources (indicated by the black borders) which are messaged in the Da Vinci Notification Message Bundle to notify the provider of when the event has occurred. The Endpoint Resource can be optionally included in the bundle to allow the Recipient to optionally query other associated resources such as Location, Practitioner and Organization  through a subsequent FHIR read or search interaction (TODO this needs further testing and discussion).  Note that the boxes with several resources inside them represents a choice.
 
 - \* it is questionable whether Encounter.diagnosis.condition has been implemented by the EHR vendors - need to discuss with vendors.
 - \** There is no Practitioner.endpoint element and an extension may be needed to implement.
@@ -96,6 +96,11 @@ This resource graph defines the resources that support the admission and dischar
 
     - [Example Da Vinci Notification GraphDefinition](GraphDefinition-admit-1.html)
 
+
+- [Example Da Vinci Notification Message Bundle](Bundle-message-admit-01.html)
+
+#### Associated Resources for Notification Scenarios
+{:.no_toc}
 
 Resources that associated SHALL be included in *all* Da Vinci Notification Message Bundles:
 
@@ -149,7 +154,7 @@ As shown in Figure 4, When an event or request triggers a notification, the Send
 
 - For this guide there is no expectation for a notification response message to be returned from the Recipient or Intermediary to the Sender. Therefore, the $process-message input parameters "async" and "response-url" are not used and the body of this operation is the message bundle itself.
 - In the context of the `$process-message` operation, the Recipient/Intermediary is treated as a ["black box"] and simply accepts and processes the submitted data and there are no further expectations beyond the http level response as defined in the in the FHIR specification.
--There is no expectation that the data submitted represents all the data required by the Notification Recipient/Intermediary, only that the data is known to be relevant to the triggering event. The Notification Recipient/Intermediary can optionally fetch additional information from the patient's medical record using FHIR RESTful searches.  The endpoint for this search may be known or supplied via the $process-message operation payload.
+- There is no expectation that the data submitted represents all the data required by the Notification Recipient/Intermediary, only that the data is known to be relevant to the triggering event. The Notification Recipient/Intermediary can optionally fetch additional information from the patient's medical record using FHIR RESTful searches.  The endpoint for this search may be known or supplied via the $process-message operation payload.
 
 Seeking input on whether or not to document how to  transmit endpoint data intended only for the *direct* recipient of the operation and to provides the recipient with the technical details for getting additional information from the medical record for the alert - Note that this has serious security implications as it may contain sensitive access information.
 {:.note-to-balloters}
@@ -170,11 +175,18 @@ The following Da Vinci Notification FHIR artifacts are used in this transaction:
 #### Usage
 {:.no_toc}
 
-The `$process-message` operation is invoked by the Notification Sender using the `POST` syntax with Parameter resource in the request body:
+The `$process-message` operation is invoked by the  Sender using the `POST` syntax with notification message bundle resource in the request body:
 
-`POST [base]Communication/$process-message`
+`POST [base]$process-message`
 
-{% include examplebutton_default.html example="notify-example" b_title = "Click Here To See Example PUSH Notification Notification" %}
+{% include examplebutton_default.html example="process-message-example" b_title = "Click Here To See Example Notification Notification" %}
+<br />
+
+
+**Example Transaction**
+The following transaction show an example of using the `$process-message` operation to send a Da Vinci Notification Message Bundle:
+
+
 
 ### Reliable Delivery
 
@@ -221,7 +233,7 @@ The following transaction show an example of using the `$process-message` operat
 
 {% include examplebutton_default.html example="process-message-example" b_title = "Click Here To See Example Notification Notification" %}
 <br />
-
+<!--{% raw %}
 ### Comparison of the Communication Profile to the MessageHeader Profile
 
 The Messag eHeader is the first resource in the Da Vinci Notification Message Bundle and serves the same function as Communication resources in the Notification Bundle above, providing the necessary context for the alert reason together with various resources pointed to or indirectly connected to it:
@@ -232,7 +244,7 @@ The Messag eHeader is the first resource in the Da Vinci Notification Message Bu
 
 
 
-<!--{% raw %}
+
 ### FHIR Subscription Based Notification
 
 {:.note-to-balloters}
