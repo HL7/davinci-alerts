@@ -23,15 +23,15 @@ This project recognizes the impact of the [Argonaut Clinical Data Subscriptions]
 
 #### Preconditions
 
-- There is an event that drives the generation of the Notification.
+- There is an event or request that drives the generation of the Notification.
 - An Notification will be generated for each patient separately.
   - The event can be for one or more patients.
 - The Sender has access to the Recipients/Intermediary FHIR endpoints.
-- System level trust exists between the actors.
+- System level trust exists between the actors (refer to the [Security] Page for additional guidance).
   - Clients have been authorized by the servers.
   - It is assumed that consent is managed elsewhere.
   - Patient consent allows exchange of data between the relevant systems.
-- A secure information transport mechanism exists between the actors.
+- A secure information transport mechanism exists between the actors(refer to the [Security] Page for additional guidance).
 
 #### Assumptions
 
