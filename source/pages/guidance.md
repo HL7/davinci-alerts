@@ -64,7 +64,7 @@ Thes requirements are illustrated in figure 3 below.  See the [Admit/Discharge U
 
 #### How to define the Message Bundle
 
-The set of resources within the message and there relationship to each other can be represented as an interconnected graph of resources as Figure 3 below illustrates (note that this a simplified and incomplete representation of the possible resources in message):  
+The set of resources within the message and their relationship to each other can be represented as an interconnected graph of resources as Figure 3 below illustrates (note that this a simplified and incomplete representation of the possible resources in message):  
 
 {% include img-portrait.html img="generic_message_graph.svg" caption="Figure 3" %}
 
