@@ -44,7 +44,7 @@ This project recognizes the impact of the [Argonaut Clinical Data Subscriptions]
 
 For every notification, the FHIR object that is exchanged is the [Da Vinci Notification Message Bundle]. It consists of a Bundle identified by the type "message", with the first resource in the bundle being a [MessageHeader] resource. The MessageHeader resource has a code - the message event - that identifies the reason for the notification.  The MessageHeader also carries additional notification metadata. The other resources in the bundle depend on the notification scenario and form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references.
 
-#### What Gos in the Message Bundle
+#### What is in the Message Bundle
 {:.no_toc}
 
 <!--
