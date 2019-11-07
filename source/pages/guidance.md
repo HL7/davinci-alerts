@@ -60,7 +60,7 @@ The following resources **SHALL** be included in *all* Da Vinci Notification Mes
    - For example, *Patient*, *Provider*
 1.   *All* resources needed for the Receiver or Intermediary to be able to process the message *provided* that the resources have a traversal path to or `MessageHeader.focus` resource.
 
-Thes requirements are illustrated in figure 3 below.  See the [Admit/Discharge Use Case] for an example of the required resources for that use case.
+These requirements are illustrated in figure 3 below.  See the [Admit/Discharge Use Case] for an example of the required resources for that use case.
 
 #### How to define the Message Bundle
 
