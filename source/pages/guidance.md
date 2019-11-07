@@ -64,10 +64,9 @@ See the [Admit/Discharge Use Case] for an example of the required resources for 
 
 #### Profiling Bundles vs. MessageDefinition and GraphDefinition
 
-The set of resources within the message and there relationship to each other can be represented as tree-like graph of resources as illustrated in figure 3 below:  
+The set of resources within the message and there relationship to each other can be represented as an interconnected graph of resources as Figure 3 below illustrates (note that this a simplified and incompleted representation of possible resources in message):  
 
 {% include img-portrait.html img="generic_message_graph.svg" caption="Figure 3" %}
-
 
 This structure can be formally defined using one of two alternate FHIR objects:
 
