@@ -56,9 +56,9 @@ The following resources **SHALL** be included in *all* Da Vinci Notification Mes
 1. *MessageHeader*
 1. The event or request resource referenced by `MessageHeader.focus`
   - For example, the *Encounter* for admissions notification
-1.  *All* resources directly referenced by the resource from bullet 2.
+1.  *All* resources directly referenced by the bullet 2 resource.
    - For example, *Patient*, *Provider*
-1.   *All* resources needed for the Receiver or Intermediary to be able to process the message that have a traversal path to or from the resource from bullet 2.
+1.   *All* resources needed for the Receiver or Intermediary to be able to process the message provided that the resources have a traversal path to or bullet 2 resource.
 
 See the [Admit/Discharge Use Case] for an example of the required resources for this use case.
 
