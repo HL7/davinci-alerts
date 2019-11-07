@@ -30,6 +30,15 @@ The Provider is notified when:
 
 ### Graph of FHIR Resources
 
+the following tables summarizes the additional Resources that directly or indirectly referenced  and included in the message or available in a subsequent query by the Intermediary or Recipient
+
+{: .grid}
+| ﻿Notification Scenarios | Resources in Notification Bundle | Searchable Resources|
+|---|---|---|
+| Emergency and Inpatient Admissions | US Core R4 Condition |Location, Coverage, Practitioner (sender), Organization (sender), PractitionerRole (sender)|
+| Emergency and Inpatient Discharges | US Core R4 Condition |Location, Coverage, Practitioner (sender), Organization (sender), PractitionerRole (sender) |
+
+
 This resource graph defines the resources that support the admission and discharge alerts use case using FHIR messaging. MessageHeader, Patient, Encounter, and Condition are the primary resources (indicated by the black borders) which are messaged in the Da Vinci Notification Message Bundle to notify the provider of when the event has occurred. The Endpoint Resource can be optionally included in the bundle to allow the Recipient to optionally query other associated resources such as Location, Practitioner and Organization  through a subsequent FHIR read or search interaction (TODO this needs further testing and discussion).  Note that the boxes with several resources inside them represents a choice.
 
 {% include img-portrait.html img="admit_message_graph.svg" caption="Figure 3" %}

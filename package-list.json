@@ -6,7 +6,7 @@
    "list": [
       {
          "version": "current",
-         "desc": "Continuous Integration Build for FHIR STU1 (latest in version control)",
+         "descmd": "Continuous Integration Build for FHIR STU1 (latest in version control)",
          "path": "http://build.fhir.org/ig/HL7/davinci-alerts",
          "status": "ci-build",
          "current": true
@@ -14,7 +14,7 @@
       {
          "version": "0.1.0",
          "date": "2019-09-01",
-         "desc": "STU1 For Comment Ballot",
+         "descmd": "STU1 For Comment Ballot",
          "changes": "",
          "path": "http://hl7.org/fhir/us/davinci-alerts/2019Sep/index.html",
          "status": "ballot",
