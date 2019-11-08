@@ -53,7 +53,7 @@ Adding these additional components results in the following resource graph showi
 
 {% include img-portrait.html img="admit_message_graph3.svg" caption="Figure 5" %}
 
-Note that a Admit/Discharge Bundle may contain more or less resources than this graph illustrates since:  
+Note that an Admit/Discharge Bundle may contain more or less resources than this graph illustrates since:  
 a) having additional resources in the message bundle is not prohibited as long as the resources are reference by or reference another resource in the message bundle and  
 b) not all the resources listed above may be present in the source system. (For a more detailed discussion of when required resources may be absent, see the section on [Must Support])
 {:.highlight-note}

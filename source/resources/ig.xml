@@ -7,16 +7,16 @@
   <name value="DaVinciUnsolicitedNotifications"/>
   <title value="Da Vinci Unsolicited Notifications"/>
   <status value="draft"/>
-  <publisher value="HL7 International - Clinical Decision Support Work Group"/>
+  <publisher value="HL7 International - Infrastructure and Messaging Work Group"/>
 
 
 <contact><!-- 0..* ContactDetail Contact details for the publisher -->
     <telecom>
       <system value="url"/>
-      <value value="http://www.hl7.org/Special/committees/cds/index.cfm"/>
+      <value value="http://www.hl7.org/Special/committees/inm/index.cfm"/>
     </telecom>
   </contact>
-  <copyright value="Used by permission of HL7 International - Clinical Decision Support Work Group, all rights reserved Creative Commons License"/>
+  <copyright value="Used by permission of HL7 International, all rights reserved Creative Commons License"/>
   <!-- 0..1 Use and/or publishing restrictions -->
  <packageId value="hl7.fhir.us.davinci-notifications"/> <!-- 0..1 NPM Package name for IG -->
 <license value="CC0-1.0"/> <!--*****HARDCODED********* 0..1 SPDX license code for this IG (or not-open-source) -->

@@ -84,12 +84,14 @@ The following resources **SHALL** be included in *all* Da Vinci Notification Mes
 These requirements are illustrated in figure 3 below.  See the [Admit/Discharge Use Case] for an example of the required resources for that use case.
 
 #### How to define the Message Bundle
+{:.no_toc}
 
 The set of resources within the message and their relationship to each other can be represented as an interconnected graph of resources as Figure 3 below illustrates (note that this a simplified and incomplete representation of the possible resources in message):  
 
 {% include img-portrait.html img="generic_message_graph.svg" caption="Figure 3" %}
 
 ##### Profiling Bundles vs. MessageDefinition and GraphDefinition
+{:.no_toc}
 
 This structure can be formally defined using one of two alternate FHIR objects:
 

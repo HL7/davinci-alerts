@@ -11,7 +11,7 @@
 	<contact>
 		<telecom>
 			<system value="url"/>
-			<value value="http://www.hl7.org/Special/committees/cds/index.cfm"/>
+			<value value="http://www.hl7.org/Special/committees/inm/index.cfm"/>
 		</telecom>
 	</contact>
 	<description value="Concepts describing the purpose of the Da Vinci Alert Communication Profile.  These concepts represent a 'starter set' an will be supplemented with additional concept in future versions. Note that there is no v2 equivalent to these codes, however there is a relationship between these alert topic codes and codes used in the resources that describe the events the alert is about. For example in the admission scenario the code alert-admit-er is used when a patient is admitted to the Emergency Department; in the encouter resource describing this event, the encounter.class will use the code EMER indicating that. A similar relationship exists for the discharge scenarios, only this time it is indicating where the patient is discharged to, so corresponds to codes in encounter.hospitalization.dischargeDisposition element."/>

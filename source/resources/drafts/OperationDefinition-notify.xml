@@ -87,11 +87,11 @@
 	<status value="active"/>
 	<kind value="operation"/>
 	<date value="2019-07-21T22:36:22+00:00"/>
-	<publisher value="HL7 International - Clinical Decision Support Work Group"/>
+	<publisher value="HL7 International - Infrastructure and Messaging Work Group"/>
 	<contact>
 		<telecom>
 			<system value="url"/>
-			<value value="http://www.hl7.org/Special/committees/cds/index.cfm"/>
+			<value value="http://www.hl7.org/Special/committees/inm/index.cfm"/>
 		</telecom>
 	</contact>
 	<description value="The notify operation is used to alert the recipient of a specific patient event (e.g. admission, discharge, change in treatment, new diagnosis). There is no expectation that the data submitted represents all the data required by the the recipient, only that the data is known to be relevant to the triggering event."/>
