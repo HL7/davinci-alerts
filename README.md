@@ -1,5 +1,5 @@
 # davinci-alerts repository
-## Da Vinci Unsolicited Notifications Implementation Guide
+## [Da Vinci Unsolicited Notifications Implementation Guide](http://build.fhir.org/ig/HL7/davinci-alerts/branches/master/index.html)
 
 ### Background
 
