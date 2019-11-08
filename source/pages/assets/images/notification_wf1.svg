@@ -1,0 +1,77 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0.0 0.0 472.0 374.0"><defs/>
+  <g><g/><g/><g/><g/>
+    <g><rect fill="white" stroke="none" x="0" y="0" width="472" height="374"/></g>
+    <g>
+      <text fill="black" stroke="none" font-family="sans-serif" font-size="16.5pt" font-style="normal" font-weight="normal" text-decoration="normal" x="133.76594470099937" y="26.3876361" text-anchor="start" dominant-baseline="alphabetic">Notification Workflow</text>
+    </g><g/>
+    <g><path
+      fill="none"
+      stroke="black"
+      paint-order="fill stroke markers"
+      d=" M 105.95114875238282 103.26361593799999 L 105.95114875238282 374.176679898"
+      stroke-miterlimit="10"
+      stroke-width="1.4659797833333332"
+      stroke-dasharray="13.532121076923076,5.863919133333333"/><path
+      fill="none"
+      stroke="black"
+      paint-order="fill stroke markers"
+      d=" M 366.999830920612 103.26361593799999 L 366.999830920612 374.176679898"
+      stroke-miterlimit="10"
+      stroke-width="1.4659797833333332"
+      stroke-dasharray="13.532121076923076,5.863919133333333"/></g>
+    <g><path fill="none" stroke="none"/>
+      <g><path
+        fill="white"
+        stroke="black"
+        paint-order="fill stroke markers"
+        d=" M 63.22773943432032 55.765870957999994 L 148.67455807044533 55.765870957999994 L 148.67455807044533 103.26361593799999 L 63.22773943432032 103.26361593799999 L 63.22773943432032 55.765870957999994 Z"
+        stroke-miterlimit="10"
+        stroke-width="2.814681184"
+        stroke-dasharray=""/></g>
+      <g><g/>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="82.31479621332032" y="85.67185853800001" text-anchor="start" dominant-baseline="alphabetic">Sender</text>
+      </g><path fill="none" stroke="none"/>
+      <g><path
+        fill="white"
+        stroke="black"
+        paint-order="fill stroke markers"
+        d=" M 274.58066659766666 55.765870957999994 L 459.41899524355733 55.765870957999994 L 459.41899524355733 103.26361593799999 L 274.58066659766666 103.26361593799999 L 274.58066659766666 55.765870957999994 Z"
+        stroke-miterlimit="10"
+        stroke-width="2.814681184"
+        stroke-dasharray=""/></g>
+      <g><g/>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="293.6677233766667" y="85.67185853800001" text-anchor="start" dominant-baseline="alphabetic">Recipient/Intermediary</text>
+      </g>
+    </g>
+    <g><path
+      fill="white"
+      stroke="black"
+      paint-order="fill stroke markers"
+      d=" M 8.7958787 138.447130738 L 187.27383714476565 138.447130738 L 203.10641880476564 154.279712398 L 203.10641880476564 196.49993015799998 L 8.7958787 196.49993015799998 L 8.7958787 138.447130738 M 187.27383714476565 138.447130738 L 187.27383714476565 154.279712398 L 203.10641880476564 154.279712398"
+      stroke-miterlimit="10"
+      stroke-width="1.4659797833333332"
+      stroke-dasharray=""/>
+      <g>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="33.42433906000001" y="163.07559109800002" text-anchor="start" dominant-baseline="alphabetic">1) An event or request</text>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="33.42433906000001" y="180.66734849800002" text-anchor="start" dominant-baseline="alphabetic">
+          triggers a notification</text>
+      </g>
+      <g>
+        <g><rect fill="white" stroke="none" x="126.76806167571614" y="222.88756625799996" width="219.4148563215625" height="22.86928462"/></g>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="129.40682528571614" y="238.72014791799998" text-anchor="start" dominant-baseline="alphabetic">2) sends "unsolicited notification"</text>
+      </g>
+      <g><path fill="none" stroke="black" paint-order="fill stroke markers" d=" M 105.95114875238282 245.75685087799997 L 364.06787135394535 245.75685087799997" stroke-miterlimit="10" stroke-width="1.4659797833333332" stroke-dasharray=""/>
+        <g transform="translate(366.999830920612,245.75685087799997) translate(-366.999830920612,-245.75685087799997)"><path fill="black" stroke="none" paint-order="stroke fill markers" d=" M 352.34003308727864 238.4269519613333 L 366.999830920612 245.75685087799997 L 352.34003308727864 253.08674979466664 Z"/></g>
+      </g><path
+        fill="white"
+        stroke="black"
+        paint-order="fill stroke markers"
+        d=" M 270.25974488922526 272.144486978 L 447.90733529199866 272.144486978 L 463.7399169519987 287.977068638 L 463.7399169519987 312.60552899799995 L 270.25974488922526 312.60552899799995 L 270.25974488922526 272.144486978 M 447.90733529199866 272.144486978 L 447.90733529199866 287.977068638 L 463.7399169519987 287.977068638"
+        stroke-miterlimit="10"
+        stroke-width="1.4659797833333332"
+        stroke-dasharray=""/>
+      <g>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="294.8882052492253" y="296.77294733799994" text-anchor="start" dominant-baseline="alphabetic">3) Process notification</text>
+      </g>
+    </g><g/><g/></g>
+</svg>

@@ -1,7 +1,7 @@
 #text for https://sequencediagram.org/
-# add viewbox attribute to svg file for img sizing
+# add viewbox attribute to svg file for img sizing viewBox="0.0 0.0 829.0 740.0">
 
-title Push Alert Notification without Intermediary
+title Push Notification Message
 
 participant Alert Sender
 
@@ -9,20 +9,20 @@ participant Alert Recipient
 
 participant Alert Recipient $process-message endpoint
 
-note over Alert Sender:An event or request\n triggers an alert\n notification
+note over Alert Sender:1) An event or request\n triggers a notification
 
-note right of Alert Sender:Create Da Vinci Alert Message Bundle
+note right of Alert Sender:2) Create Da Vinci Notification\n Message Bundle
 
-Alert Sender->Alert Recipient $process-message endpoint:intitiates $process-message operation
+Alert Sender->Alert Recipient $process-message endpoint:3) initiates $process-message operation
 
-Alert Recipient $process-message endpoint-->Alert Sender:Response (200)
+Alert Recipient $process-message endpoint-->Alert Sender:4) Response (200)
 
-note over Alert Recipient: Process Da Vinci Alert Message Bundle
+note over Alert Recipient: 4) Process Da Vinci Notification\n Message Bundle
 
-Alert Recipient->Alert Sender:Optionally GET additional data
+Alert Recipient->Alert Sender:5) Optionally GET additional data
 
-note over Alert Sender: Process Search
+note over Alert Sender:6) Process Search
 
-Alert Sender-->Alert Recipient:Return Bundle of search results (200)
+Alert Sender-->Alert Recipient:7) Return Bundle of search results (200)
 
-note over Alert Recipient: Process Search Results
+note over Alert Recipient:8) Process Search Results

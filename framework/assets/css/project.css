@@ -602,7 +602,7 @@ a[href$=".sch"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".x
   #background-color: yellow;
   color: red;
   font-weight: bold;}
-.note-to-balloters, .stu-note{
+.note-to-balloters, .stu-note, .highlight-note{
     margin: 5px;
     padding: 10px;
     border-left-style: solid;

@@ -21,7 +21,10 @@ This project recognizes the impact of the [Argonaut Clinical Data Subscriptions]
 
 ### Preconditions and Assumptions
 
-#### Preconditions
+
+<div class="row">
+<div class="col-sm-6" markdown="1" style="background-color: Lightcyan;">
+**Preconditions**
 
 - There is an event or request that drives the generation of the Notification.
 - An Notification will be generated for each patient separately.
@@ -33,12 +36,24 @@ This project recognizes the impact of the [Argonaut Clinical Data Subscriptions]
   - Patient consent allows exchange of data between the relevant systems.
 - A secure information transport mechanism exists between the actors(refer to the [Security] Page for additional guidance).
 
-#### Assumptions
+----
+
+</div>
+<div class="col-sm-6" markdown = "1" style="background-color: WhiteSmoke;">
+**Assumptions**
+
+---
 
 - Based on FHIR R4 and US Core R4 profiles where applicable.
-- Notifications are transacted to teh process-message operation endpoint.
+- Notifications are transacted to the `$process-message` operation endpoint.
 - The Da Vinci Notification Message Bundle Profile is the FHIR object that is exchanged for all alert transactions.
 
+---
+
+</div>
+
+</div>
+<br/>
 
 ### The Da Vinci Notification Message Bundle
 
@@ -54,11 +69,17 @@ The message bundle **SHALL** include the MessageHeader resource and the resource
 The following resources **SHALL** be included in *all* Da Vinci Notification Message Bundles:
 
 1. *MessageHeader*
-1. The event or request resource referenced by `MessageHeader.focus`
+1. The event or request resource referenced by MessageHeader.focus
   - For example, the *Encounter* for admissions notification
+
+The following resources **SHALL** be included in *all* Da Vinci Notification Message Bundles *if* present in source system (see definition of [Must Support] below):
+
+1. US Core *Organization*, *Practitioner*, or *PractionerRole* referenced by `MessageHeader.sender`
+1. US Core *Organization*, *Practitioner*, or *PractionerRole* referenced by `MessageHeader.responsible`
+1. US Core *Practitioner*, or *PractionerRole* referenced by `MessageHeader.author`
 1.  *All* resources directly referenced by the `MessageHeader.focus` resource.
    - For example, *Patient*, *Provider*
-1.   *All* resources needed for the Receiver or Intermediary to be able to process the message *provided* that the resources have a traversal path to or `MessageHeader.focus` resource.
+1.  *All* resources needed for the Receiver or Intermediary to be able to process the message *provided* that the resources have a traversal path to or from `MessageHeader.focus` resource.
 
 These requirements are illustrated in figure 3 below.  See the [Admit/Discharge Use Case] for an example of the required resources for that use case.
 
@@ -113,7 +134,7 @@ Note to Balloters: These scenarios may be added in future iterations of this IG.
 
 
 
-### Pushing Notifications to the Sender or Intermediary
+### Pushing Unsolicited Notifications to the Receiver or Intermediary
 
 As shown in Figure 4, When an event or request triggers a notification, the Sender creates a Da Vinci Notification Message Bundle and notifies the Recipient or Intermediary using the `$process-message` operation.
 
@@ -123,7 +144,7 @@ As shown in Figure 4, When an event or request triggers a notification, the Send
 - In the context of the `$process-message` operation, the Recipient/Intermediary is treated as a ["black box"] and simply accepts and processes the submitted data and there are no further expectations beyond the http level response as defined in the in the FHIR specification.
 - There is no expectation that the data submitted represents all the data required by the Notification Recipient/Intermediary, only that the data is known to be relevant to the triggering event. The Notification Recipient/Intermediary can optionally fetch additional information from the patient's medical record using FHIR RESTful searches.  The endpoint for this search may be known or supplied via the $process-message operation payload.
 
-Seeking input on whether or not to document how to  transmit endpoint data intended only for the *direct* recipient of the operation and to provides the recipient with the technical details for getting additional information from the medical record for the alert - Note that this has serious security implications as it may contain sensitive access information.
+We are actively seeking input input on whether or not to document how to  transmit endpoint data intended only for the *direct* recipient of the operation and to provides the recipient with the technical details for getting additional information from the medical record for the alert - Note that this has serious security implications as it may contain sensitive access information.
 {:.note-to-balloters}
 
 - Not shown in figure 4, after the Intermediary successfully receives the notification, processes it and optionally searches and process the search results, it redistributes the data the end users.  It **MAY** use FHIR messaging and the `$process-message` operation to do this or some other messaging protocol such as Direct, SMS or V2 messaging.  Note that the Notification Intermediary **MAY** customize the content based on the end user (for example, withholding data that a particular care team member does not need).
@@ -144,13 +165,17 @@ The `$process-message` operation is invoked by the  Sender using the `POST` synt
 `POST [base]$process-message`
 
 **Example Transaction**
+
+See the [Admit/Discharge Use Case] page for a detailed description of how this example was created.
+{:.highlight-note}
+
 The following transaction show an example of using the `$process-message` operation to send a Da Vinci Notification Message Bundle:
 
 {% include examplebutton_default.html example="process-message-example" b_title = "Click Here To See Example Notification " %}
 
 ### Reliable Delivery
 
-Note to Balloters: We are actively seeking input on what expectations should be defined for error handling and and whether there is a need to support ["reliable delivery"]
+We are actively seeking input on what expectations should be defined for error handling and and whether there is a need to support ["reliable delivery"]
 {:.note-to-balloters}
 
 ### Must Support

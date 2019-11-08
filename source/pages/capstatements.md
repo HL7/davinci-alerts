@@ -10,19 +10,19 @@ active: capstatements
 
 end TOC -->
 
-There are 4 Capability Statements defined to describe the expectations for Da Vinci Alerts implementation guide:
+There are 4 Capability Statements defined to describe the expectations for this implementation guide:
 
 {% include list-capabilitystatements.xhtml %}
 
 <br />
 
-### The following table summarizes how these CapabilityStatements applies to each Da Vinci Alerts Actor
+### The following table summarizes how these CapabilityStatements applies to each Da Vinci Notification Actor
 
 |Actor|server-mode|client-mode|
 |---|---|---|
-|Alert Sender |Da Vinci Alerts Query Responder | Da Vinci Alerts Initiator|
-|Alert Intermediary |Da Vinci Alerts Receiver,Da Vinci Alerts Query Responder|Da Vinci Alerts QueryRequester, Da Vinci Alerts Initiator|
-|Alert Recipient |Da Vinci Alerts Receiver | Da Vinci Alerts Query Requester|
+|Sender |Da Vinci Notification Query Responder | Da Vinci Notification Initiator|
+|Intermediary |Da Vinci Notification Receiver,Da Vinci Notification Query Responder|Da Vinci Notification QueryRequester, Da Vinci Notification Initiator|
+|Recipient |Da Vinci Notification Receiver | Da Vinci Notification Query Requester|
 {: .grid}
 
 <br />

@@ -13,7 +13,7 @@ active: usecases
 
 ###  Introduction
 
-This use case demonstrates how the Da Vinci Notifications IG framework is implemented to transact an notification between a Sender and a Recipient/Intermediary.
+This use case demonstrates how the Da Vinci Notifications IG framework is used to define the Da Vinci Notification Bundle for admissions and discharge and how to send a notification between a Sender and a Recipient/Intermediary.
 
 ### Use Case Background
 
@@ -28,51 +28,77 @@ The Provider is notified when:
 - A Patient is transferred from one care unit to another
 -->
 
-### Graph of FHIR Resources
+### FHIR Resources for Admission and Discharge Notification
 
-the following tables summarizes the additional Resources that directly or indirectly referenced  and included in the message or available in a subsequent query by the Intermediary or Recipient
+To carry information regarding admission and discharge event messages, the required resources for the message Bundle need to be defined.  The core components of the Bundle are defined in the [Framework] page and include the *MessageHeader* and the "root" resource represented by the  `MessageHeader.focus`.  For admissions and discharge *Encounter* (US Core Encounter) is the focus of the event as shown in figure 3:
+
+{% include img-portrait.html img="admit_message_graph1.svg" caption="Figure 3" %}
+
+The other "required if present" resources defined in the framework are those referenced by `MessageHeader.author`, `MessageHeader.responsible`, `MessageHeader.sender` and by referenced by the US Core Encounter Profile. These combine to make up a 'generic' Encounter message bundle structure illustrated in figure 4 below:
+
+
+{% include img-portrait.html img="admit_message_graph2.svg" caption="Figure 4" %}
+
+The following additional resources (or rather profiles) have been determined to be "required if present" by the Da Vinci community to fulfill the data item requirements specific to admissions and discharge.
+
 
 {: .grid}
-| ﻿Notification Scenarios | Resources in Notification Bundle | Searchable Resources|
-|---|---|---|
-| Emergency and Inpatient Admissions | US Core R4 Condition |Location, Coverage, Practitioner (sender), Organization (sender), PractitionerRole (sender)|
-| Emergency and Inpatient Discharges | US Core R4 Condition |Location, Coverage, Practitioner (sender), Organization (sender), PractitionerRole (sender) |
+| ﻿Notification Scenarios | Additional Resource Requirements |
+|---|---|
+| Emergency and Inpatient Admissions | US Core Condition,  Da Vinci HRex Coverage |
+| Emergency and Inpatient Discharges |  US Core Condition, Da Vinci HRex Coverage |
 
 
-This resource graph defines the resources that support the admission and discharge alerts use case using FHIR messaging. MessageHeader, Patient, Encounter, and Condition are the primary resources (indicated by the black borders) which are messaged in the Da Vinci Notification Message Bundle to notify the provider of when the event has occurred. The Endpoint Resource can be optionally included in the bundle to allow the Recipient to optionally query other associated resources such as Location, Practitioner and Organization  through a subsequent FHIR read or search interaction (TODO this needs further testing and discussion).  Note that the boxes with several resources inside them represents a choice.
+Adding these additional components results in the following resource graph showing all the required resources and their relationships for the admission and discharge notification use case:
 
-{% include img-portrait.html img="admit_message_graph.svg" caption="Figure 3" %}
+{% include img-portrait.html img="admit_message_graph3.svg" caption="Figure 5" %}
 
+Note that a Admit/Discharge Bundle may contain more or less resources than this graph illustrates since:  
+a) having additional resources in the message bundle is not prohibited as long as the resources are reference by or reference another resource in the message bundle and  
+b) not all the resources listed above may be present in the source system. (For a more detailed discussion of when required resources may be absent, see the section on [Must Support])
+{:.highlight-note}
+
+MessageDefinition and GraphDefinition can be used to formally define this resource graph for the admission and discharge event:
+
+- [Example Da Vinci Notification MessageDefinition](MessageDefinition-admit-1.html)
+
+- [Example Da Vinci Notification GraphDefinition](GraphDefinition-admit-1.html)
+
+Alternatively a Bundle Profile can be used to define the structure:
+
+- [Example Da Vinci StructureDefinition Profile Admit Message Bundle](StructureDefinition-profile-admit-message-01.html)
+
+<!--
 - \* it is questionable whether Encounter.diagnosis.condition has been implemented by the EHR vendors - need to discuss with vendors.
 - \** There is no Practitioner.endpoint element and an extension may be needed to implement.
 - \*** MessageDefinition is used to formally define the Message content for a given event (e.g, an inpatient admission or discharge).  It defines the event and the focal and non focal Resources/Profiles that make up the message:
+-->
 
-    - [Example Da Vinci Notification MessageDefinition](MessageDefinition-admit-1.html)
+### Da Vinci Notification Message Bundle
 
-    The GraphDefinition is referenced by the MessageDefinition and it defines the links between the all resources that are contained within the message.
+Once the contents of the bundle has been defined the admission and discharge notification message Bundle can be assembled.  Figure 5 illustrates how some of the data items corresponded to the resource in the message bundle.
 
-    - [Example Da Vinci Notification GraphDefinition](GraphDefinition-admit-1.html)
+{% include img-portrait.html img="bundle_graphic.svg" caption="Figure 4" %}
 
 **Example Da Vinci Notification Message Bundle**
 
 - [Example Da Vinci Notification Message Bundle](Bundle-message-admit-01.html)
 
+### Pushing Unsolicited Admit/Discharge Notification
 
-### Push Notification Notification
+In the following interaction shown in figures 8, the HealthCare facility is acting in the role of the Notification Sender and the Notification Recipient can be any of the actors listed in figure 1 on the home page.  To notify the Notification Recipients/Intermediary of an admit or discharge event, the Notification Sender uses $process-message operation to submit the Notification Message to appropriate FHIR endpoints. Not shown in figure 8 is that when the Intermediary successfully receives and processes the notifications, it subsequently forwards the data the end users.
 
-In the following interaction shown in figures 8 and 9, the HealthCare facility is acting in the role of the Notification Sender and the Notification Recipient can be any of the actors listed in figure 1 on the home page.  To notify the Notification Recipients/Intermediary of an admit or discharge event, the Notification Sender uses $notify operation to submit the Notification Bundle to appropriate FHIR endpoints. As shown in figure 3, when an Intermediary successfully receives the notifications, it subsequently redistributes the data the end users.
-
-{% include img-portrait.html img="admit_flow.svg" caption="Figure 8" %}
-
----
-
-{% include img-portrait.html img="admit_intermediary_flow.svg" caption="Figure 9" %}
+{% include img-portrait.html img="$process_message_admit_wf.svg" caption="Figure 8" %}
 
 ---
 
 **Example Transaction**
+
+The following transaction show an example of using the `$process-message` operation to send a Da Vinci Admission Notification Message Bundle to a Recipient:
+
 {% include examplebutton_default.html example="process-message-example" b_title = "Click Here To See Example Notification " %}
-<br />
+
+---
 
 <!--{% raw %}
 
