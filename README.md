@@ -1,4 +1,4 @@
-# davinci-alerts
+# davinci-alerts repository
 ## Da Vinci Unsolicited Notifications Implementation Guide
 
 ### Background
