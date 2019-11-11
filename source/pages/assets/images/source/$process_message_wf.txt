@@ -3,26 +3,26 @@
 
 title Push Notification Message
 
-participant Alert Sender
+participant Sender
 
-participant Alert Recipient
+participant Recipient/Intermediary
 
-participant Alert Recipient $process-message endpoint
+participant Recipient/Intermediary $process-message endpoint
 
-note over Alert Sender:1) An event or request\n triggers a notification
+note over Sender:1) An event or request\n triggers a notification
 
-note right of Alert Sender:2) Create Da Vinci Notification\n Message Bundle
+note right of Sender:2) Create Da Vinci Notification\n Message Bundle
 
-Alert Sender->Alert Recipient $process-message endpoint:3) initiates $process-message operation
+Sender->Recipient/Intermediary $process-message endpoint:3) initiates $process-message operation
 
-Alert Recipient $process-message endpoint-->Alert Sender:4) Response (200)
+Recipient/Intermediary $process-message endpoint-->Sender:4) Response (200)
 
-note over Alert Recipient: 4) Process Da Vinci Notification\n Message Bundle
+note over Recipient/Intermediary: 4) Process Da Vinci Notification\n Message Bundle
 
-Alert Recipient->Alert Sender:5) Optionally GET additional data
+Recipient/Intermediary->Sender:5) Optionally GET additional data
 
-note over Alert Sender:6) Process Search
+note over Sender:6) Process Search
 
-Alert Sender-->Alert Recipient:7) Return Bundle of search results (200)
+Sender-->Recipient/Intermediary:7) Return Bundle of search results (200)
 
-note over Alert Recipient:8) Process Search Results
+note over Recipient/Intermediary:8) Process Search Results

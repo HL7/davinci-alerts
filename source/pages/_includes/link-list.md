@@ -14,7 +14,9 @@
 [Security]: security.html
 [Must Support]: guidance.html#must-support
 [Formal Profile Definition]: #profile
-[Communication]: {{site.data.fhir.path}}communication.html
+[MessageHeader]: {{site.data.fhir.path}}messageheader.html
+[MessageDefinition]: {{site.data.fhir.path}}messagedefinition.html
+[GraphDefinition]: {{site.data.fhir.path}}graphdefinition.html
 [Push Alert Notification]: guidance.html#push-alert-notification
 [FHIR Subscription Based Notification]: guidance.html#fhir-subscription-based-notification
 [The FHIR Security and Privacy Module]:{{site.data.fhir.path}}secpriv-module.html#6.0
@@ -23,13 +25,9 @@
 [`collection`]: {{site.data.fhir.path}}http.html#collection
 [operation]: {{site.data.fhir.path}}operations.html
 [2019 CMS 45 CFR Part 156 NPRM]: https://www.govinfo.gov/content/pkg/FR-2019-03-04/pdf/2019-02200.pdf
-[Da Vinci Notify Operation]: OperationDefinition-notify.html
-[`$notify`]: OperationDefinition-notify.html
 [Argonaut Clinical Data Subscriptions]: http://argonautwiki.hl7.org/index.php?title=Argonaut_2019_Projects#Clinical_Data_Subscriptions
-[Da Vinci Alert Bundle Profile]: StructureDefinition-alerts-bundle.html
-[Figure 7]: usecases.html#graph-of-fhir-resources
-[Da Vinci Alerts Communication Profile]: StructureDefinition-alerts-communication.html
-[Da Vinci Alerts Bundle Profile]: StructureDefinition-alerts-bundle.html
+[Da Vinci Notification Message Bundle Profile]: StructureDefinition-profile-notification-bundle.html
+[Da Vinci Notification MessageHeader Profile]: StructureDefinition-profile-notification-messageheader.html
 [Da Vinci Alerts Endpoint Profile]: StructureDefinition-alerts-endpoint.html
 ["black box"]: https://en.wikipedia.org/wiki/Black_box
 ["reliable delivery"]: https://en.wikipedia.org/wiki/Reliable_messaging
@@ -42,3 +40,4 @@
 [FHIR Messaging paradigm]: {{site.data.fhir.path}}messaging.html
 [FHIR message]: {{site.data.fhir.path}}messaging.html
 [FHIR messaging]: {{site.data.fhir.path}}messaging.html
+[Profiling]: {{site.data.fhir.path}}profiling.html

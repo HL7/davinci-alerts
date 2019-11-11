@@ -7,12 +7,9 @@ active: profiles
 
 The following Profiles for FHIR *resources* have been defined for this implementation guide.
 
-- [Da Vinci Notification Message Bundle]
-- [Da Vinci Notifications MessageHeader Profile]
+{% include list-simple-profiles.xhtml %}
 
 <!-- {% raw %}
-{% include list-profiles.xhtml %}
-{% endraw %} -->
 
 {% for sd_hash in site.data.structuredefinitions -%}
   {%- assign sd = sd_hash[1] -%}
@@ -20,6 +17,8 @@ The following Profiles for FHIR *resources* have been defined for this implement
     - [{{sd.name}}]({{sd.path}})
   {%- endif -%}
 {%- endfor -%}
+
+{% endraw %} -->
 
 <br />
 
@@ -29,8 +28,8 @@ The following Profiles for FHIR *resources* have been defined for this implement
 
 These extensions have been defined for this implementation guide.
 
-
 {% include list-extensions.xhtml %}
+
 {% endraw %} -->
 
 {% include link-list.md %}

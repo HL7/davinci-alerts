@@ -17,7 +17,7 @@ topofpage: true
 FHIR resources can be used to transport patient information relevant to a specific event (e.g. admission, discharge, change in treatment, new diagnosis) to another provider or the health plan to communicate the details of where care was delivered and help to ensure timely follow-up as needed.  The intent is to provide the minimally required information in the notification, for the Receiver to know, if the notification is of interest and give enough information to be able to request more from the Sender, if desired. This information can be used to build an encounter record in the receiving system with appropriate provenance and make it available to CDS and other local services. The following framework documents how notifications are transacted using [FHIR messaging] and the [`$process-message`] operation to push directly to “registered” Recipients and Intermediaries.
 
 This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5.  it is anticipated that an equivalent subscription based notification paradigm can be implemented as an alternate to the messsaging based approach documented in this guide.
-{:.stu-notes}
+{:.stu-note}
 
 ### Preconditions and Assumptions
 
@@ -95,13 +95,13 @@ The set of resources within the message and their relationship to each other can
 
 This structure can be formally defined using one of two alternate FHIR objects:
 
-1. The [MessageDefinition] and [GraphDefinition] resources.  The GraphDefinition is referenced by the MessageDefinition and it defines the links between the all resources that are contained within the message.
+1. The [MessageDefinition] and [GraphDefinition] resources.  The GraphDefinition is referenced by the MessageDefinition and it defines the links between the all resources that are contained within the messaging bundle.
 
     [Example Da Vinci Notification MessageDefinition](MessageDefinition-admit-1.html)
 
     [Example Da Vinci Notification GraphDefinition](GraphDefinition-admit-1.html)
 
-2. Profiling the Bundle Resource and each of the resources.
+2. [Profiling] the Bundle Resource and each of the resources.
 
     [Example Da Vinci Notification Message Bundle Profile](StructureDefinition-Profile-message-admit-01.html)
 
@@ -154,10 +154,15 @@ We are actively seeking input input on whether or not to document how to  transm
 #### APIs
 {:.no_toc}
 
-The following Da Vinci Notification FHIR artifacts are used in this transaction:
+One of the following sets of Da Vinci Notification FHIR artifacts are used in this transaction:
 
-- [Da Vinci Notification Message Bundle]
+- [Da Vinci Notification Message Bundle Profile]
 - [Da Vinci Notifications MessageHeader Profile]
+- A Use Case Specific MessageDefinition and GraphDefinition
+
+ - Use Case Specific Bundle Profile derived from the:
+   - [Da Vinci Notification Message Bundle Profile]
+   - [Da Vinci Notifications MessageHeader Profile] 
 
 #### Usage
 {:.no_toc}

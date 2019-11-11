@@ -35,7 +35,7 @@
       "code" : "US"
     }]
   }],
-  "copyright" : "Used by permission of HL7 International, all rights reserved Creative Commons License",
+  "copyright" : "Used by permission of HL7 International - Infrastructure and Messaging Work Group, all rights reserved Creative Commons License",
   "packageId" : "hl7.fhir.us.davinci-notifications",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.1",
@@ -148,7 +148,7 @@
     },
     {
       "reference" : {
-        "reference" : "ValueSet/communication-topic"
+        "reference" : "ValueSet/notification-event"
       },
       "exampleBoolean" : false
     },
@@ -166,13 +166,25 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/notifications-messageheader"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "CapabilityStatement/query-responder"
       },
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/communication-topic"
+        "reference" : "CodeSystem/notification-event"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/notifications-bundle"
       },
       "exampleBoolean" : false
     }],
@@ -182,18 +194,23 @@
       "generation" : "markdown",
       "page" : [{
         "nameUrl" : "guidance.html",
-        "title" : "Framework",
-        "generation" : "markdown"
-      },
-      {
-        "nameUrl" : "usecases.html",
-        "title" : "Admit/Discharge Use Case",
+        "title" : "General Guidance",
         "generation" : "markdown"
       },
       {
         "nameUrl" : "profiles.html",
-        "title" : "Profiles",
-        "generation" : "markdown"
+        "title" : "Profiles and Extensions",
+        "generation" : "markdown",
+        "page" : [{
+          "nameUrl" : "StructureDefinition-notifications-messageheader.html",
+          "title" : "StructureDefinition Notifications MessageHeader",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-notifications-bundle.html",
+          "title" : "StructureDefinition Notifications Bundle",
+          "generation" : "generated"
+        }]
       },
       {
         "nameUrl" : "operations.html",
@@ -205,13 +222,13 @@
         "title" : "Terminology",
         "generation" : "markdown",
         "page" : [{
-          "nameUrl" : "ValueSet-communication-topic.html",
-          "title" : "ValueSet Communication Topic",
+          "nameUrl" : "ValueSet-notification-event.html",
+          "title" : "ValueSet Notification Event",
           "generation" : "generated"
         },
         {
-          "nameUrl" : "CodeSystem-communication-topic.html",
-          "title" : "CodeSystem Communication Topic",
+          "nameUrl" : "CodeSystem-notification-event.html",
+          "title" : "CodeSystem Notification Event",
           "generation" : "generated"
         }]
       },
@@ -251,13 +268,13 @@
         "generation" : "markdown"
       },
       {
-        "nameUrl" : "downloads.html",
-        "title" : "Downloads",
+        "nameUrl" : "all-examples.html",
+        "title" : "All Examples",
         "generation" : "markdown"
       },
       {
-        "nameUrl" : "all-examples.html",
-        "title" : "All Examples",
+        "nameUrl" : "downloads.html",
+        "title" : "Downloads",
         "generation" : "markdown"
       },
       {

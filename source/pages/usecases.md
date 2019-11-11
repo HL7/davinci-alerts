@@ -76,7 +76,7 @@ Alternatively a Bundle Profile can be used to define the structure:
 
 ### Da Vinci Notification Message Bundle
 
-Once the contents of the bundle has been defined the admission and discharge notification message Bundle can be assembled.  Figure 5 illustrates how some of the data items corresponded to the resource in the message bundle.
+Once the contents of the bundle has been defined the admission and discharge notification message Bundle can be assembled.  Figure 5 illustrates how some of the amdity and discharge data elements corresponded to the resource in the message bundle.
 
 {% include img-portrait.html img="bundle_graphic.svg" caption="Figure 4" %}
 

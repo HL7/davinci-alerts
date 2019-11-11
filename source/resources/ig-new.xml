@@ -32,7 +32,7 @@
       <code value="US"/>
     </coding>
   </jurisdiction>
-  <copyright value="Used by permission of HL7 International, all rights reserved Creative Commons License"/>
+  <copyright value="Used by permission of HL7 International - Infrastructure and Messaging Work Group, all rights reserved Creative Commons License"/>
   <packageId value="hl7.fhir.us.davinci-notifications"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
@@ -143,7 +143,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/communication-topic"/>
+        <reference value="ValueSet/notification-event"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -161,13 +161,25 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/notifications-messageheader"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="CapabilityStatement/query-responder"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/communication-topic"/>
+        <reference value="CodeSystem/notification-event"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/notifications-bundle"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -177,18 +189,23 @@
       <generation value="markdown"/>
       <page>
         <nameUrl value="guidance.html"/>
-        <title value="Framework"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="usecases.html"/>
-        <title value="Admit/Discharge Use Case"/>
+        <title value="General Guidance"/>
         <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="profiles.html"/>
-        <title value="Profiles"/>
+        <title value="Profiles and Extensions"/>
         <generation value="markdown"/>
+        <page>
+          <nameUrl value="StructureDefinition-notifications-messageheader.html"/>
+          <title value="StructureDefinition Notifications MessageHeader"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-notifications-bundle.html"/>
+          <title value="StructureDefinition Notifications Bundle"/>
+          <generation value="generated"/>
+        </page>
       </page>
       <page>
         <nameUrl value="operations.html"/>
@@ -200,13 +217,13 @@
         <title value="Terminology"/>
         <generation value="markdown"/>
         <page>
-          <nameUrl value="ValueSet-communication-topic.html"/>
-          <title value="ValueSet Communication Topic"/>
+          <nameUrl value="ValueSet-notification-event.html"/>
+          <title value="ValueSet Notification Event"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="CodeSystem-communication-topic.html"/>
-          <title value="CodeSystem Communication Topic"/>
+          <nameUrl value="CodeSystem-notification-event.html"/>
+          <title value="CodeSystem Notification Event"/>
           <generation value="generated"/>
         </page>
       </page>
@@ -246,13 +263,13 @@
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="downloads.html"/>
-        <title value="Downloads"/>
+        <nameUrl value="all-examples.html"/>
+        <title value="All Examples"/>
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="all-examples.html"/>
-        <title value="All Examples"/>
+        <nameUrl value="downloads.html"/>
+        <title value="Downloads"/>
         <generation value="markdown"/>
       </page>
       <page>
