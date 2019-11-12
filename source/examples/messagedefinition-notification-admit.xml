@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MessageDefinition xmlns="http://hl7.org/fhir">
 	<id value="notification-admit"/>
+	<meta>
+	<profile
+					 value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-messagedefinition"/>
+</meta>
 	<url value="http://hl7.org/fhir/us/davinci-notifications/MessageDefinition/notification-admit"/>
 	<name value="NotificationAdmit"/>
 	<title value="Da Vinci Notification Admit Message Definition"/>

@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GraphDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-CURRENT/fhir-all.xsd">
 	<id value="admit-discharge"/>
+	<!-- custom text with table sincel ig-pub generator not able to render correctly -->
+	<text>
+     <status value="generated"/>
+     <div xmlns="http://www.w3.org/1999/xhtml">
+			 <p><b>Generated Narrative with Details</b></p><p><b>id</b>: admit-discharge</p><p><b>url</b>: <a href="http://hl7.org/fhir/us/davinci-notifications/GraphDefinition/admit-discharge">http://hl7.org/fhir/us/davinci-notifications/GraphDefinition/admit-discharge</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: NotificationAdmitDischarge</p><p><b>status</b>: active</p><p><b>date</b>: Aug 21, 2019, 12:00:00 AM</p><p><b>publisher</b>: Da Vinci Project</p><p><b>contact</b>: </p><p><b>description</b>: Defines message bundle graph for Da Vinci Notifications patient admission and discharge notification scenarios</p><p><b>jurisdiction</b>: United States of America <span style="background: LightGoldenRodYellow">(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United States of America'})</span></p><p><b>start</b>: MessageHeader</p><p><b>profile</b>: <a href="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-messageheader">http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-messageheader</a></p><p><b>Links</b>:
+			 <table class="grid"><thead><tr><th>Link</th><th>Source Profile</th><th>Path</th><th>Target Profile</th><th>Min</th><th>Max</th></tr></thead><tbody><tr><td>1</td><td>Da Vinci Notification MessageHeader Profile</td><td>MessageHeader.focus</td><td>US Core Encounter Profile</td><td>1</td><td>1</td></tr><tr><td>2</td><td>US Core Encounter Profile</td><td>Encounter.location</td><td>US Core Location Profile</td><td>1</td><td>*</td></tr><tr><td>3</td><td>US Core Encounter Profile</td><td>Encounter.participant.individual</td><td>US Core Practitioner Profile</td><td>0</td><td>*</td></tr><tr><td>4</td><td>US Core Encounter Profile</td><td>Encounter.subject</td><td>US Core Patient Profile</td><td>1</td><td>1</td></tr><tr><td>5</td><td>Da Vinci HRex Coverage Profile</td><td>Coverage.beneficary</td><td>US Core Patient Profile</td><td>0</td><td>1</td></tr><tr><td>6</td><td>US Core Condition Profile</td><td>Condition.encounter</td><td>US Core Encounter Profile</td><td>0</td><td>*</td></tr><tr><td>12</td><td>Da Vinci Notification MessageHeader Profile</td><td>MessageHeader.sender</td><td>US Core Practitioner Profile|US Core PractitionerRole Profile|US Core Organization Profile</td><td>0</td><td>1</td></tr><tr><td>12</td><td>Da Vinci Notification MessageHeader Profile</td><td>MessageHeader.responsible</td><td>US Core Practitioner Profile|US Core PractitionerRole Profile|US Core Organization Profile</td><td>0</td><td>1</td></tr><tr><td>13</td><td>Da Vinci Notification MessageHeader Profile</td><td>MessageHeader.author</td><td>US Core Practitioner Profile|US Core PractitionerRole Profile</td><td>0</td><td>1</td></tr></tbody></table></p>
+			</div>
+   </text>
+	 	<!--  end custom text-->
 	<url value="http://hl7.org/fhir/us/davinci-notifications/GraphDefinition/admit-discharge"/>
 	<name value="NotificationAdmitDischarge"/>
 	<status value="active"/>
@@ -32,19 +41,10 @@
 				<target>
 					<type value="Location"/>
 					<profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"/>
-					<link>
-						<min value="0"/>
-						<max value="*"/>
-						<target>
-							<type value="Condition"/>
-							<params value="target={encounter}"/>
-							<profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
-						</target>
-					</link>
 				</target>
 			</link>
 			<link>
-				<path value="Encounter.practitioner"/>
+				<path value="Encounter.participant.individual"/>
 				<min value="0"/>
 				<max value="*"/>
 				<target>
@@ -68,6 +68,15 @@
 							<profile value="http://hl7.org/fhir/us/davinci-hrex/StructureDefinition/hrex-coverage"/>
 						</target>
 					</link>
+				</target>
+			</link>
+			<link>
+				<min value="0"/>
+				<max value="*"/>
+				<target>
+					<type value="Condition"/>
+					<params value="target={encounter}"/>
+					<profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
 				</target>
 			</link>
 		</target>
@@ -150,7 +159,7 @@
 -->
 		</target>
 	</link>
-	
+
 		<link>
 		<path value="MessageHeader.author"/>
 		<min value="0"/>
