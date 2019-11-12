@@ -44,7 +44,7 @@
     "id" : "uscore",
     "uri" : "http://hl7.org/fhir/us/core",
     "packageId" : "hl7.fhir.us.core",
-    "version" : "3.0.0"
+    "version" : "3.1.0"
   },
   {
     "id" : "hrex",
@@ -57,12 +57,6 @@
       "name" : "base"
     }],
     "resource" : [{
-      "reference" : {
-        "reference" : "MessageDefinition/notification-admit"
-      },
-      "exampleBoolean" : true
-    },
-    {
       "reference" : {
         "reference" : "Endpoint/example-1"
       },
@@ -83,12 +77,6 @@
     {
       "reference" : {
         "reference" : "Practitioner/example-1"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "GraphDefinition/admit-discharge"
       },
       "exampleBoolean" : true
     },
@@ -142,7 +130,19 @@
     },
     {
       "reference" : {
+        "reference" : "MessageDefinition/notification-admit"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "CapabilityStatement/notification-initiator"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "GraphDefinition/admit-discharge"
       },
       "exampleBoolean" : false
     },
@@ -220,6 +220,21 @@
         {
           "nameUrl" : "StructureDefinition-notifications-messagedefinition.html",
           "title" : "StructureDefinition Notifications MessageDefinition",
+          "generation" : "generated"
+        }]
+      },
+      {
+        "nameUrl" : "bundles.html",
+        "title" : "Bundle Definitions",
+        "generation" : "markdown",
+        "page" : [{
+          "nameUrl" : "MessageDefinition-notification-admit.html",
+          "title" : "MessageDefinition Notification Admit",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "GraphDefinition-admit-discharge.html",
+          "title" : "GraphDefinition Admit Discharge",
           "generation" : "generated"
         }]
       },

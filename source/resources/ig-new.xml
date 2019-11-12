@@ -40,7 +40,7 @@
   <dependsOn id="uscore">
     <uri value="http://hl7.org/fhir/us/core"/>
     <packageId value="hl7.fhir.us.core"/>
-    <version value="3.0.0"/>
+    <version value="3.1.0"/>
   </dependsOn>
   <dependsOn id="hrex">
     <uri value="http://hl7.org/fhir/us/davinci-hrex"/>
@@ -51,12 +51,6 @@
     <grouping>
       <name value="base"/>
     </grouping>
-    <resource>
-      <reference>
-        <reference value="MessageDefinition/notification-admit"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
     <resource>
       <reference>
         <reference value="Endpoint/example-1"/>
@@ -78,12 +72,6 @@
     <resource>
       <reference>
         <reference value="Practitioner/example-1"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="GraphDefinition/admit-discharge"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -137,7 +125,19 @@
     </resource>
     <resource>
       <reference>
+        <reference value="MessageDefinition/notification-admit"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="CapabilityStatement/notification-initiator"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="GraphDefinition/admit-discharge"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -215,6 +215,21 @@
         <page>
           <nameUrl value="StructureDefinition-notifications-messagedefinition.html"/>
           <title value="StructureDefinition Notifications MessageDefinition"/>
+          <generation value="generated"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="bundles.html"/>
+        <title value="Bundle Definitions"/>
+        <generation value="markdown"/>
+        <page>
+          <nameUrl value="MessageDefinition-notification-admit.html"/>
+          <title value="MessageDefinition Notification Admit"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="GraphDefinition-admit-discharge.html"/>
+          <title value="GraphDefinition Admit Discharge"/>
           <generation value="generated"/>
         </page>
       </page>

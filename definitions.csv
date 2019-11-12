@@ -33,7 +33,7 @@ canonicalBase,http://hl7.org/fhir/us/davinci-notifications
 dependencyList.name,uscore|hrex
 dependencyList.location,http://hl7.org/fhir/us/core|http://hl7.org/fhir/us/davinci-hrex
 dependencyList.package,hl7.fhir.us.core|hl7.fhir.us.davinci-hrex
-dependencyList.version,3.0.0|0.1.0
+dependencyList.version,3.1.0|0.1.0
 special-urls,
 tool,jekyll
 logging,progress

@@ -21,6 +21,26 @@
  <packageId value="hl7.fhir.us.davinci-notifications"/> <!-- 0..1 NPM Package name for IG -->
 <license value="CC0-1.0"/> <!--*****HARDCODED********* 0..1 SPDX license code for this IG (or not-open-source) -->
 <fhirVersion value="4.0.1"/> <!-- 0..1 FHIR Version this Implementation Guide targets -->
+ <!-- <dependsOn>   0..* Another Implementation guide this depends on
+  <uri> 1..1 canonical(ImplementationGuide) Identity of the IG that this depends on </uri>
+  <packageId value="[id]"/> 0..1 NPM Package name for IG this depends on
+  <version value="[string]"/> 0..1 Version of the IG
+ </dependsOn> -->
+ <!-- insert dependency -->
+<dependsOn>  <!-- 0..* Another Implementation guide this depends on -->
+  <uri value="http://hl7.org/fhir/us/davinci-hrex"><!-- 1..1 canonical(ImplementationGuide) Identity of the IG that this depends on --></uri>
+  <packageId value="hl7.fhir.us.davinci-hrex"/><!-- 0..1 NPM Package name for IG this depends on -->
+  <version value="0.1.0"/><!-- 0..1 Version of the IG -->
+ </dependsOn>
+<dependsOn>  <!-- 0..* Another Implementation guide this depends on -->
+  <uri value="http://hl7.org/fhir/us/core"><!-- 1..1 canonical(ImplementationGuide) Identity of the IG that this depends on --></uri>
+  <packageId value="hl7.fhir.us.core"/><!-- 0..1 NPM Package name for IG this depends on -->
+  <version value="3.1.0"/><!-- 0..1 Version of the IG -->
+ </dependsOn>
+ <!-- <global>  0..* Profiles that apply globally
+  <type value="[code]"/> 1..1 Type this profile applies to
+  <profile> 1..1 canonical(StructureDefinition) Profile that all resources must conform to</profile>
+ </global> -->
  <definition>
   <!--  <grouping>  0..* Grouping used to present related resources in the IG -->
   <!-- <name value="[string]"/> 1..1 Descriptive name for the package -->
@@ -38,7 +58,7 @@
     <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/patient"/>|<exampleBoolean value="true|false"/>
   </resource>   -->
   <!--  <groupingId value="[id]"/>  0..1 Grouping this is part of -->
-  <!-- insert resources --><resource><reference><reference value="MessageDefinition/notification-admit"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Endpoint/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Encounter/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="PractitionerRole/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Practitioner/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="GraphDefinition/admit-discharge"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Patient/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Device/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Organization/example-2"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Coverage/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Location/hl7east"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MessageHeader/admit-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Condition/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/message-admit-01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="CapabilityStatement/notification-initiator"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/notification-event"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/query-requester"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/notification-receiver"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/notifications-messageheader"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/query-responder"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CodeSystem/notification-event"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/notifications-bundle"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/notifications-messagedefinition"/></reference><exampleBoolean value="false"/></resource>
+  <!-- insert resources --><resource><reference><reference value="Endpoint/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Encounter/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="PractitionerRole/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Practitioner/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Patient/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Device/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Organization/example-2"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Coverage/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Location/hl7east"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MessageHeader/admit-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Condition/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/message-admit-01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MessageDefinition/notification-admit"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/notification-initiator"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="GraphDefinition/admit-discharge"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/notification-event"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/query-requester"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/notification-receiver"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/notifications-messageheader"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/query-responder"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CodeSystem/notification-event"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/notifications-bundle"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/notifications-messagedefinition"/></reference><exampleBoolean value="false"/></resource>
 
     <!-- ============ Home Page =============== -->
   <page><nameUrl value="index.html"/><title value="Home"/><generation value="markdown"/>
@@ -58,6 +78,20 @@
     <!-- ============ End Extensions and examples =============== -->
 
       </page>
+
+     <!-- ============ Bundle Definitions Page =============== -->
+     <page><nameUrl value="bundles.html"/><title value="Bundle Definitions"/><generation value="markdown"/>
+
+     <!-- ============ MessagedDefinitions  =============== -->
+     <!-- insert messagedefinitions --><page><nameUrl value="MessageDefinition-notification-admit.html"/><title value="MessageDefinition Notification Admit"/><generation value="generated"/></page>
+     <!-- ============ End MessagedDefinitions  =============== -->
+
+      <!-- ============ GraphDefinitions  =============== -->
+      <!-- insert graphdefinitions --><page><nameUrl value="GraphDefinition-admit-discharge.html"/><title value="GraphDefinition Admit Discharge"/><generation value="generated"/></page>
+      <!-- ============ EndGraphDefinitions  =============== -->
+
+     </page>
+
     <!-- ============ Operations Page =============== -->
     <page><nameUrl value="operations.html"/><title value="Operations"/><generation value="markdown"/>
 

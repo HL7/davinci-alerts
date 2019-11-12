@@ -20,7 +20,7 @@
     </li>
 
     <li>
-      <a href="bundle_definitions.html">Message Definitions<!-- and Logical Models--></a>
+      <a href="bundles.html">Message Definitions<!-- and Logical Models--></a>
     </li>
 
     <!-- <li>

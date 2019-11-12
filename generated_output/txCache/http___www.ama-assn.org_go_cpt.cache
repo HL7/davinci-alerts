@@ -79,3 +79,31 @@ v: {
   "error" : "The code system \"http://www.ama-assn.org/go/cpt\" in the include in \"http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type\" is not known; The code system \"http://www.ama-assn.org/go/cpt\" is not known for the code \"99234\"; The code provided (http://www.ama-assn.org/go/cpt#99234, (inpatient hospital care)) is not  valid in the value set USCoreEncounterType"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://www.ama-assn.org/go/cpt",
+    "code" : "99234"
+  }],
+  "text" : "Inpatient hospital care"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "308335008"
+      }]
+    },
+    {
+      "system" : "http://www.ama-assn.org/go/cpt"
+    }]
+  }
+}, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://www.ama-assn.org/go/cpt\" in the include in \"http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type\" is not known; The code system \"http://www.ama-assn.org/go/cpt\" is not known for the code \"99234\"; The code provided (http://www.ama-assn.org/go/cpt#99234, (Inpatient hospital care)) is not  valid in the value set USCoreEncounterType"
+}
+-------------------------------------------------------------------------------------
