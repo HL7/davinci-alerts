@@ -1,6 +1,6 @@
 <Coverage xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file://Mac/Home/Documents/FHIR/XML_Schema/R4_fhir-all-xsd/fhir-all.xsd">
 	<id value="example-1"/>
-	<!-- TODO discuss if want to use this or other Coverage profile for alerts
+	<!-- TODO discuss if want to use this or other Coverage profile for notifications
 	<meta>
 		<profile value="http://fhir.org/guides/argonaut-scheduling/StructureDefinition/argo-coverage"/>
 	</meta>

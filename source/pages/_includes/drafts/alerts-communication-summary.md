@@ -16,7 +16,7 @@ with an [example](http://hl7.org/fhir/R4/terminologies.html#example)
 1.  A Patient Reference  in `Communication.subject`
 1.  A  CodeableConcept  in `Communication.topic`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
- binding to [Da Vinci Communication Topic ValueSet](ValueSet-communication-topic.html)
+ binding to [Da Vinci Communication Topic ValueSet](ValueSet-notification-event.html)
 1.  A Encounter Reference  in `Communication.encounter`
 1.  A Sender Reference  in `Communication.sender`
 

@@ -58,6 +58,12 @@
     }],
     "resource" : [{
       "reference" : {
+        "reference" : "MessageDefinition/notification-admit"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "Endpoint/example-1"
       },
       "exampleBoolean" : true
@@ -77,6 +83,12 @@
     {
       "reference" : {
         "reference" : "Practitioner/example-1"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "GraphDefinition/admit-discharge"
       },
       "exampleBoolean" : true
     },
@@ -130,19 +142,7 @@
     },
     {
       "reference" : {
-        "reference" : "GraphDefinition/admit-1"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "MessageDefinition/admit-1"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "CapabilityStatement/alert-receiver"
+        "reference" : "CapabilityStatement/notification-initiator"
       },
       "exampleBoolean" : false
     },
@@ -154,13 +154,13 @@
     },
     {
       "reference" : {
-        "reference" : "CapabilityStatement/alert-initiator"
+        "reference" : "CapabilityStatement/query-requester"
       },
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CapabilityStatement/query-requester"
+        "reference" : "CapabilityStatement/notification-receiver"
       },
       "exampleBoolean" : false
     },
@@ -253,18 +253,18 @@
         "title" : "Capability Statements",
         "generation" : "markdown",
         "page" : [{
-          "nameUrl" : "CapabilityStatement-alert-receiver.html",
-          "title" : "CapabilityStatement Alert Receiver",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "CapabilityStatement-alert-initiator.html",
-          "title" : "CapabilityStatement Alert Initiator",
+          "nameUrl" : "CapabilityStatement-notification-initiator.html",
+          "title" : "CapabilityStatement Notification Initiator",
           "generation" : "generated"
         },
         {
           "nameUrl" : "CapabilityStatement-query-requester.html",
           "title" : "CapabilityStatement Query Requester",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "CapabilityStatement-notification-receiver.html",
+          "title" : "CapabilityStatement Notification Receiver",
           "generation" : "generated"
         },
         {

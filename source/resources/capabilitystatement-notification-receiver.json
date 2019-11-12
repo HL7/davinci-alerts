@@ -1,7 +1,7 @@
 {
-    "id": "alert-initiator",
+    "id": "notification-receiver",
     "text": {
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">Alert Initiator CapabilityStatement</h2><ul><li>FHIR Version: 4.0.0</li><li>Supported formats: xml, json</li><li>Published: 2019-07-29</li><li>Published by: HL7 International - Infrastructure and Messaging Work Group</li></ul><p><p>This CapabilityStatement describes the expected capabilities of a client that is capable of sending an alert by initiating the Da Vinci Notify Operation.</p></p><h3 class=\"no_toc\" id=\"igs\">SHALL Support the Following Implementation Guides:</h3><ul><li><a href=\"http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core-3.0.0\">http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core-3.0.0</a></li></ul><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>The Da Vinci Alerts $notify Initiator <strong>SHALL</strong>:</p><ol><li>Support at least one use case defined in this Guide and listed in the <a href=\"index.html#scenarios\">Scenarios</a> Section.</li><li>Implement the RESTful behavior according to the FHIR specification.</li><li>Support json source formats for all Da Vinci Alert interactions.</li><li>Declare a CapabilityStatement identifying the scenarios, transactions and profiles supported.</li></ol><p>The Da Vinci Alerts $notify Initiator <strong>SHOULD</strong>:</p><ol><li>Support xml source formats for all Da Vinci Alert interactions.</li><li>Identify the Da Vinci Alert or US Core profiles supported as part of the FHIR <code>meta.profile</code> attribute for each instance.</li></ol><p id=\"security\"><strong>Security:</strong></p><ol><li>For general security consideration refer to the <a href=\"http://build.fhir.org/secpriv-module.html\">Security and Privacy Considerations</a>.</li><li>For security considerations specific to this guide refer to the  <a href=\"security.html\">Security</a> page for requirements and recommendations.</li></ol><p><strong>Summary of System Wide Interactions</strong></p><li><strong>MAY</strong> support the\t<code>transaction</code> interaction.</li><li><strong>MAY</strong> support the\t<code>batch</code> interaction.</li><li><strong>MAY</strong> support the\t<code>search-system</code> interaction.</li><li><strong>MAY</strong> support the\t<code>history-system</code> interaction.</li><h3 class=\"no_toc\" id=\"resource--details\">RESTful Capabilities by Resource/Profile:</h3><p><strong>Summary of Search Criteria</strong></p><table class=\"grid\"><thead><tr><th>Resource Type</th><th>Supported Profiles</th><th>Supported Searches</th><th>Supported <code>_includes</code></th><th>Supported <code>_revincludes</code></th><th>Supported Operations</th></tr></thead><tbody><tr><td><a href=\"#bundle\">Bundle</a></td><td><a href=\"StructureDefinition-alerts-bundle.html\">Da Vinci Alerts Bundle Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#communication\">Communication</a></td><td><a href=\"StructureDefinition-alerts-communication.html\">Da Vinci Alerts Communication Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t$notify\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#coverage\">Coverage</a></td><td><a href=\"http://hl7.org/implement/standards/fhir/us/davinci-hrex/2019Jun/StructureDefinition-hrex-coverage.html\">HRex Coverage Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#endpoint\">Endpoint</a></td><td><a href=\"StructureDefinition-alerts-endpoint.html\">Da Vinci Alerts Endpoint Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr></tbody></table><br></br><h4 class=\"no_toc\" id=\"bundle\">Bundle</h4><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-alerts-bundle.html\">Da Vinci Alerts Bundle Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHOULD</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>.</li><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>MAY</strong> be capable of fetching a Bundle resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Bundle/[id]</code>\n\t\t\t\t</li><br></br></ul><hr></hr><h4 class=\"no_toc\" id=\"communication\">Communication</h4><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-alerts-communication.html\">Da Vinci Alerts Communication Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHOULD</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>.</li><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Operation  Summary:</p><ul><li><strong>SHALL</strong> support the \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"OperationDefinition-notify.html\">$notify</a> operation\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p><p>A server <strong>SHALL</strong> be capable of invoking the $notify operation to alert the Alert Recipient or Alert Intermediary of a patient event.</p><p><code>GET [base]/Communication/$notify</code></p></p></li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>MAY</strong> be capable of fetching a Communication resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Communication/[id]</code>\n\t\t\t\t</li><br></br></ul><hr></hr><h4 class=\"no_toc\" id=\"coverage\">Coverage</h4><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"http://hl7.org/implement/standards/fhir/us/davinci-hrex/2019Jun/StructureDefinition-hrex-coverage.html\">HRex Coverage Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHOULD</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>.</li><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>MAY</strong> be capable of fetching a Coverage resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Coverage/[id]</code>\n\t\t\t\t</li><br></br></ul><hr></hr><h4 class=\"no_toc\" id=\"endpoint\">Endpoint</h4><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-alerts-endpoint.html\">Da Vinci Alerts Endpoint Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>MAY</strong> be capable of fetching a Endpoint resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Endpoint/[id]</code>\n\t\t\t\t</li><br></br></ul><hr></hr><br></br></div>",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">Notification Receiver CapabilityStatement</h2><ul><li>FHIR Version: 4.0.0</li><li>Supported formats: xml, json</li><li>Published: 2019-07-29</li><li>Published by: HL7 International - Infrastructure and Messaging Work Group</li></ul><p><p>This CapabilityStatement describes the expected capabilities of a server that is capable of receiving an notification transacted with the Da Vinci Notify Operation.</p></p><h3 class=\"no_toc\" id=\"igs\">SHALL Support the Following Implementation Guides:</h3><ul><li><a href=\"http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core-3.0.0\">http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core-3.0.0</a></li></ul><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>Da Vinci Notifications $notify Receiver <strong>SHALL</strong>:</p><ol><li>Support at least one use case defined in this Guide and listed in the <a href=\"index.html#scenarios\">Scenarios</a> Section.</li><li>Implement the RESTful behavior according to the FHIR specification.</li><li>Support json source formats for all Da Vinci Notification interactions.</li><li>Declare a CapabilityStatement identifying the scenarios, transactions and profiles supported.</li></ol><p>Da Vinci Notifications $notify Receiver <strong>SHOULD</strong>:</p><ol><li>Support xml source formats for all Da Vinci Notification interactions.</li><li>Identify the Da Vinci Notification or US Core profiles supported as part of the FHIR <code>meta.profile</code> attribute for each instance.</li></ol><p id=\"security\"><strong>Security:</strong></p><ol><li>For general security consideration refer to the <a href=\"http://build.fhir.org/secpriv-module.html\">Security and Privacy Considerations</a>.</li><li>For security considerations specific to this guide refer to the  <a href=\"security.html\">Security</a> page for requirements and recommendations.</li><li>A server <strong>SHALL</strong> reject any unauthorized requests by returning an <code>HTTP 401</code> unauthorized response code.</li></ol><p><strong>Summary of System Wide Interactions</strong></p><li><strong>SHALL</strong> support the\t<code>transaction</code> interaction.</li><li><strong>MAY</strong> support the\t<code>batch</code> interaction.</li><li><strong>MAY</strong> support the\t<code>search-system</code> interaction.</li><li><strong>MAY</strong> support the\t<code>history-system</code> interaction.</li><h3 class=\"no_toc\" id=\"resource--details\">RESTful Capabilities by Resource/Profile:</h3><p><strong>Summary of Search Criteria</strong></p><table class=\"grid\"><thead><tr><th>Resource Type</th><th>Supported Profiles</th><th>Supported Searches</th><th>Supported <code>_includes</code></th><th>Supported <code>_revincludes</code></th><th>Supported Operations</th></tr></thead><tbody><tr><td><a href=\"#bundle\">Bundle</a></td><td><a href=\"StructureDefinition-notifications-bundle.html\">Da Vinci Notifications Bundle Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#communication\">Communication</a></td><td><a href=\"StructureDefinition-notifications-communication.html\">Da Vinci Notifications Communication Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t$notify\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#coverage\">Coverage</a></td><td><a href=\"http://hl7.org/implement/standards/fhir/us/davinci-hrex/2019Jun/StructureDefinition-hrex-coverage.html\">HRex Coverage Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#endpoint\">Endpoint</a></td><td><a href=\"StructureDefinition-notifications-endpoint.html\">Da Vinci Notifications Endpoint Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr></tbody></table><br></br><h4 class=\"no_toc\" id=\"bundle\">Bundle</h4><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-notifications-bundle.html\">Da Vinci Notifications Bundle Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Server <strong>MAY</strong> be capable of returning a Bundle resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Bundle/[id]</code>\n\t\t\t\t</li><br></br></ul><hr></hr><h4 class=\"no_toc\" id=\"communication\">Communication</h4><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-notifications-communication.html\">Da Vinci Notifications Communication Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Operation  Summary:</p><ul><li><strong>SHALL</strong> support the \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"OperationDefinition-notify.html\">$notify</a> operation\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p><p>A server <strong>SHALL</strong> be capable of receiving and responding to the $notify operation with the appropriate http response.</p><p><code>GET [base]/Communication/$notify</code></p></p></li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Server <strong>MAY</strong> be capable of returning a Communication resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Communication/[id]</code>\n\t\t\t\t</li><br></br></ul><hr></hr><h4 class=\"no_toc\" id=\"coverage\">Coverage</h4><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"http://hl7.org/implement/standards/fhir/us/davinci-hrex/2019Jun/StructureDefinition-hrex-coverage.html\">HRex Coverage Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Server <strong>MAY</strong> be capable of returning a Coverage resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Coverage/[id]</code>\n\t\t\t\t</li><br></br></ul><hr></hr><h4 class=\"no_toc\" id=\"endpoint\">Endpoint</h4><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-notifications-endpoint.html\">Da Vinci Notifications Endpoint Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Server <strong>MAY</strong> be capable of returning a Endpoint resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Endpoint/[id]</code>\n\t\t\t\t</li><br></br></ul><hr></hr><br></br></div>",
         "status": "generated"
     },
     "contact": [
@@ -15,7 +15,7 @@
         }
     ],
     "date": "2019-07-29",
-    "description": "This CapabilityStatement describes the expected capabilities of a client that is capable of sending an alert by initiating the Da Vinci Notify Operation.",
+    "description": "This CapabilityStatement describes the expected capabilities of a server that is capable of receiving an notification transacted with the Da Vinci Notify Operation.",
     "experimental": false,
     "fhirVersion": "4.0.0",
     "format": [
@@ -23,7 +23,7 @@
         "json"
     ],
     "implementationGuide": [
-        "http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts-0.1.0",
+        "http://hl7.org/fhir/us/davinci-notifications/ImplementationGuide/hl7.fhir.us.davinci-notifications-0.1.0",
         "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core-3.0.0"
     ],
     "jurisdiction": [
@@ -37,23 +37,24 @@
         }
     ],
     "kind": "requirements",
-    "name": "AlertInitiatorCapabilityStatement",
+    "name": "NotificationReceiverCapabilityStatement",
     "patchFormat": [
         "application/json-patch+json"
     ],
     "publisher": "HL7 International - Infrastructure and Messaging Work Group",
     "rest": [
         {
-            "documentation": "The Da Vinci Alerts $notify Initiator **SHALL**:\n\n1. Support at least one use case defined in this Guide and listed in the [Scenarios](index.html#scenarios) Section.\n1. Implement the RESTful behavior according to the FHIR specification.\n1. Support json source formats for all Da Vinci Alert interactions.\n1. Declare a CapabilityStatement identifying the scenarios, transactions and profiles supported.\n\nThe Da Vinci Alerts $notify Initiator **SHOULD**:\n\n1. Support xml source formats for all Da Vinci Alert interactions.\n1. Identify the Da Vinci Alert or US Core profiles supported as part of the FHIR `meta.profile` attribute for each instance.",
+            "documentation": "Da Vinci Notifications $notify Receiver **SHALL**:\n\n1. Support at least one use case defined in this Guide and listed in the [Scenarios](index.html#scenarios) Section.\n1. Implement the RESTful behavior according to the FHIR specification.\n1. Support json source formats for all Da Vinci Notification interactions.\n1. Declare a CapabilityStatement identifying the scenarios, transactions and profiles supported.\n\nDa Vinci Notifications $notify Receiver **SHOULD**:\n\n1. Support xml source formats for all Da Vinci Notification interactions.\n1. Identify the Da Vinci Notification or US Core profiles supported as part of the FHIR `meta.profile` attribute for each instance.",
             "interaction": [
                 {
                     "extension": [
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                            "valueCode": "MAY"
+                            "valueCode": "SHALL"
                         }
                     ],
-                    "code": "transaction"
+                    "code": "transaction",
+                    "documentation": "A common  `transaction`  type \u201cNotification Bundle\u201d is the FHIR object that is exchanged between the Da Vinci Notification Actors."
                 },
                 {
                     "extension": [
@@ -83,7 +84,7 @@
                     "code": "history-system"
                 }
             ],
-            "mode": "client",
+            "mode": "server",
             "resource": [
                 {
                     "extension": [
@@ -160,7 +161,7 @@
                             "extension": [
                                 {
                                     "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                                    "valueCode": "SHOULD"
+                                    "valueCode": "MAY"
                                 }
                             ],
                             "code": "history-instance"
@@ -180,7 +181,7 @@
                         "resolves"
                     ],
                     "supportedProfile": [
-                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/alerts-bundle"
+                        "http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-bundle"
                     ],
                     "type": "Bundle"
                 },
@@ -259,7 +260,7 @@
                             "extension": [
                                 {
                                     "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                                    "valueCode": "SHOULD"
+                                    "valueCode": "MAY"
                                 }
                             ],
                             "code": "history-instance"
@@ -282,8 +283,8 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/davinci-alerts/OperationDefinition/notify",
-                            "documentation": "A server **SHALL** be capable of invoking the $notify operation to alert the Alert Recipient or Alert Intermediary of a patient event.\n\n`GET [base]/Communication/$notify`",
+                            "definition": "http://hl7.org/fhir/us/davinci-notifications/OperationDefinition/notify",
+                            "documentation": "A server **SHALL** be capable of receiving and responding to the $notify operation with the appropriate http response.\n\n`GET [base]/Communication/$notify`",
                             "name": "notify"
                         }
                     ],
@@ -292,7 +293,7 @@
                         "resolves"
                     ],
                     "supportedProfile": [
-                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/alerts-communication"
+                        "http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-communication"
                     ],
                     "type": "Communication"
                 },
@@ -300,7 +301,7 @@
                     "extension": [
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                            "valueCode": "MAY"
+                            "valueCode": "SHALL"
                         }
                     ],
                     "interaction": [
@@ -371,7 +372,7 @@
                             "extension": [
                                 {
                                     "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                                    "valueCode": "SHOULD"
+                                    "valueCode": "MAY"
                                 }
                             ],
                             "code": "history-instance"
@@ -490,19 +491,19 @@
                         "resolves"
                     ],
                     "supportedProfile": [
-                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/alerts-endpoint"
+                        "http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-endpoint"
                     ],
                     "type": "Endpoint"
                 }
             ],
             "security": {
-                "description": "1. For general security consideration refer to the [Security and Privacy Considerations](http://build.fhir.org/secpriv-module.html). \n1. For security considerations specific to this guide refer to the  [Security](security.html) page for requirements and recommendations.\n"
+                "description": "1. For general security consideration refer to the [Security and Privacy Considerations](http://build.fhir.org/secpriv-module.html). \n1. For security considerations specific to this guide refer to the  [Security](security.html) page for requirements and recommendations.\n1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code."
             }
         }
     ],
     "status": "active",
-    "title": "Alert Initiator CapabilityStatement",
-    "url": "http://hl7.org/fhir/us/davinci-alerts/CapabilityStatement/alert-initiator",
+    "title": "Notification Receiver CapabilityStatement",
+    "url": "http://hl7.org/fhir/us/davinci-notifications/CapabilityStatement/notification-receiver",
     "version": "0.0.0",
     "resourceType": "CapabilityStatement"
 }

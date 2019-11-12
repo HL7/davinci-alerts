@@ -892,15 +892,15 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s71"><Data ss:Type="String">id</Data></Cell>
-    <Cell ss:StyleID="s72"><Data ss:Type="String">alerts-communication</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">notifications-communication</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s73"><Data ss:Type="String">name</Data></Cell>
-    <Cell ss:StyleID="s74"><Data ss:Type="String">AlertsCommunication</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">NotificationsCommunication</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s73"><Data ss:Type="String">display</Data></Cell>
-    <Cell ss:StyleID="s75"><Data ss:Type="String">Da Vinci Alerts Communication Profile</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Da Vinci Notifications Communication Profile</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s73"><Data ss:Type="String">author.name</Data></Cell>
@@ -916,8 +916,8 @@
    <Row ss:AutoFitHeight="0" ss:Height="53.0625">
     <Cell ss:StyleID="s73"><Data ss:Type="String">description</Data></Cell>
     <Cell
-     ss:Formula="=&quot;The &quot;&amp;R[-4]C&amp;&quot; is a record of the alert communicated by the alert Sender as part of an alert Bundle.  It provide the context of what the alert is about.&quot;"><Data
-      ss:Type="String">The Da Vinci Alerts Communication Profile is a record of the alert communicated by the alert Sender as part of an alert Bundle.  It provide the context of what the alert is about.</Data></Cell>
+     ss:Formula="=&quot;The &quot;&amp;R[-4]C&amp;&quot; is a record of the notification communicated by the notification Sender as part of an notification Bundle.  It provide the context of what the notification is about.&quot;"><Data
+      ss:Type="String">The Da Vinci Notifications Communication Profile is a record of the notification communicated by the notification Sender as part of an notification Bundle.  It provide the context of what the notification is about.</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s73"><Data ss:Type="String">status</Data></Cell>
@@ -929,7 +929,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s73"><Data ss:Type="String">published.structure</Data></Cell>
-    <Cell ss:StyleID="s72"><Data ss:Type="String">alerts-communication</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">notifications-communication</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s73"><Data ss:Type="String">version</Data></Cell>
@@ -937,8 +937,8 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s73"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="s79" ss:HRef="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/template-extension-"><Data
-      ss:Type="String">http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-</Data></Cell>
+    <Cell ss:StyleID="s79" ss:HRef="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/template-extension-"><Data
+      ss:Type="String">http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s80"><Data ss:Type="String">introduction</Data></Cell>
@@ -988,10 +988,10 @@
    <ProtectScenarios>False</ProtectScenarios>
   </WorksheetOptions>
  </Worksheet>
- <Worksheet ss:Name="alerts-communication">
+ <Worksheet ss:Name="notifications-communication">
   <Names>
    <NamedRange ss:Name="_FilterDatabase"
-    ss:RefersTo="='alerts-communication'!R1C5:R101C27" ss:Hidden="1"/>
+    ss:RefersTo="='notifications-communication'!R1C5:R101C27" ss:Hidden="1"/>
   </Names>
   <Table ss:ExpandedColumnCount="27" ss:ExpandedRowCount="102" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s84" ss:DefaultColumnWidth="65.25"
@@ -1027,7 +1027,7 @@
       ss:Author=""><ss:Data xmlns="http://www.w3.org/TR/REC-html40"><Font
         html:Face="Tahoma" x:Family="Swiss" html:Size="8" html:Color="#000000">Not published</Font><Font
         html:Color="#000000">       </Font></ss:Data></Comment></Cell>
-    <Cell ss:StyleID="s88"><Data ss:Type="String">DaVinciAlertMapping</Data><Comment
+    <Cell ss:StyleID="s88"><Data ss:Type="String">DaVinciNotificationMapping</Data><Comment
       ss:Author=""><ss:Data xmlns="http://www.w3.org/TR/REC-html40"><Font
         html:Face="Tahoma" x:Family="Swiss" html:Size="8" html:Color="#000000">Change column name to one from mappingSpaces.xml.  Add more if needed</Font><Font
         html:Color="#000000">       </Font></ss:Data></Comment></Cell>
@@ -1131,8 +1131,8 @@
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s72" ss:Formula="=Metadata!R[1]C[1]"><Data ss:Type="String">AlertsCommunication</Data></Cell>
-    <Cell ss:Formula="=Metadata!R[2]C"><Data ss:Type="String">Da Vinci Alerts Communication Profile</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=Metadata!R[1]C[1]"><Data ss:Type="String">NotificationsCommunication</Data></Cell>
+    <Cell ss:Formula="=Metadata!R[2]C"><Data ss:Type="String">Da Vinci Notifications Communication Profile</Data></Cell>
     <Cell ss:StyleID="s93"/>
     <Cell ss:StyleID="s94"/>
     <Cell ss:StyleID="s95"><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1462,7 +1462,7 @@
     <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="33">
-    <Cell ss:Index="3" ss:StyleID="s105"><Data ss:Type="String">Mapping was not correct fixed one slice  to 'alert'</Data></Cell>
+    <Cell ss:Index="3" ss:StyleID="s105"><Data ss:Type="String">Mapping was not correct fixed one slice  to 'notification'</Data></Cell>
     <Cell ss:StyleID="s106"><Data ss:Type="String">Event(type)</Data></Cell>
     <Cell ss:StyleID="s107"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s108"><Data ss:Type="String" x:Ticked="1">coding.code, coding.system</Data><NamedCell
@@ -1495,7 +1495,7 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:Index="3" ss:StyleID="s105"/>
     <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s107"><Data ss:Type="String">alert</Data><NamedCell
+    <Cell ss:StyleID="s107"><Data ss:Type="String">notification</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s108"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s108"><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1603,7 +1603,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s111"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s110"><Data ss:Type="String">alert</Data><NamedCell
+    <Cell ss:StyleID="s110"><Data ss:Type="String">notification</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1833,7 +1833,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:Index="3" ss:StyleID="s105"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Alert date/time</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Notification date/time</Data></Cell>
     <Cell ss:StyleID="s107"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s108"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s108"><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -2038,8 +2038,8 @@
     <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="3" ss:StyleID="s106"><Data ss:Type="String">need discussion Alert description and Supporting Info -  resources pushed to recipient - e.g. Encounter and Condition</Data></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Alert description</Data></Cell>
+    <Cell ss:Index="3" ss:StyleID="s106"><Data ss:Type="String">need discussion Notification description and Supporting Info -  resources pushed to recipient - e.g. Encounter and Condition</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Notification description</Data></Cell>
     <Cell ss:StyleID="s107"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s108"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s108"><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -3975,10 +3975,10 @@
    <ProtectScenarios>False</ProtectScenarios>
   </WorksheetOptions>
  </Worksheet>
- <Worksheet ss:Name="alerts-communication-Inv">
+ <Worksheet ss:Name="notifications-communication-Inv">
   <Names>
    <NamedRange ss:Name="_FilterDatabase"
-    ss:RefersTo="='alerts-communication-Inv'!R1C1:R1C7" ss:Hidden="1"/>
+    ss:RefersTo="='notifications-communication-Inv'!R1C1:R1C7" ss:Hidden="1"/>
   </Names>
   <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="50" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s129" ss:DefaultColumnWidth="65.25"
@@ -6472,12 +6472,12 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s117"><Data ss:Type="String">CommunicationTopic</Data></Cell>
-    <Cell ss:StyleID="s110"><Data ss:Type="String"> &#10;Codes describing the purpose of the Alert</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String"> &#10;Codes describing the purpose of the Notification</Data></Cell>
     <Cell ss:StyleID="s139"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s139"><Data ss:Type="String">extensible</Data></Cell>
     <Cell ss:StyleID="s139"><Data ss:Type="String">yes</Data></Cell>
-    <Cell ss:StyleID="s159" ss:HRef="http://hl7.org/fhir/us/davinci-alerts/ValueSet/blah-codes"><Data
-      ss:Type="String">http://hl7.org/fhir/us/davinci-alerts/ValueSet/communication-topic</Data></Cell>
+    <Cell ss:StyleID="s159" ss:HRef="http://hl7.org/fhir/us/davinci-notifications/ValueSet/blah-codes"><Data
+      ss:Type="String">http://hl7.org/fhir/us/davinci-notifications/ValueSet/communication-topic</Data></Cell>
     <Cell ss:StyleID="s139"/>
     <Cell ss:StyleID="s139"/>
     <Cell ss:StyleID="s139"/>

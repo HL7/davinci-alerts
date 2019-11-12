@@ -349,7 +349,7 @@ An HTTP Status success code is returned on successful submission<!-- and a Bundl
                   "topic" : {
                     "coding" : [
                       {
-                        "system" : "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/communication-topic",
+                        "system" : "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event",
                         "code" : "alert-admit-inpatient"
                       }
                     ],

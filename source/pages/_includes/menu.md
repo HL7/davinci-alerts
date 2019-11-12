@@ -19,6 +19,10 @@
       <a href="profiles.html">Profiles<!-- and Logical Models--></a>
     </li>
 
+    <li>
+      <a href="bundle_definitions.html">Message Definitions<!-- and Logical Models--></a>
+    </li>
+
     <!-- <li>
     <a href="extensions.html">Extensions</a>
   </li>

@@ -53,6 +53,12 @@
     </grouping>
     <resource>
       <reference>
+        <reference value="MessageDefinition/notification-admit"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Endpoint/example-1"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -72,6 +78,12 @@
     <resource>
       <reference>
         <reference value="Practitioner/example-1"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="GraphDefinition/admit-discharge"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -125,19 +137,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="GraphDefinition/admit-1"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="MessageDefinition/admit-1"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CapabilityStatement/alert-receiver"/>
+        <reference value="CapabilityStatement/notification-initiator"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -149,13 +149,13 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/alert-initiator"/>
+        <reference value="CapabilityStatement/query-requester"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/query-requester"/>
+        <reference value="CapabilityStatement/notification-receiver"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -248,18 +248,18 @@
         <title value="Capability Statements"/>
         <generation value="markdown"/>
         <page>
-          <nameUrl value="CapabilityStatement-alert-receiver.html"/>
-          <title value="CapabilityStatement Alert Receiver"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="CapabilityStatement-alert-initiator.html"/>
-          <title value="CapabilityStatement Alert Initiator"/>
+          <nameUrl value="CapabilityStatement-notification-initiator.html"/>
+          <title value="CapabilityStatement Notification Initiator"/>
           <generation value="generated"/>
         </page>
         <page>
           <nameUrl value="CapabilityStatement-query-requester.html"/>
           <title value="CapabilityStatement Query Requester"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="CapabilityStatement-notification-receiver.html"/>
+          <title value="CapabilityStatement Notification Receiver"/>
           <generation value="generated"/>
         </page>
         <page>

@@ -7,9 +7,9 @@
 			<h2>Notify</h2>
 			<p>OPERATION: Notify</p>
 			<p>The official URL for this operation definition is: </p>
-			<pre>http://hl7.org/fhir/us/davinci-alerts/OperationDefinition/notify</pre>
+			<pre>http://hl7.org/fhir/us/davinci-notifications/OperationDefinition/notify</pre>
 			<div>
-				<p>The notify operation is used to alert the recipient of a specific patient event (e.g. admission, discharge, change in treatment, new diagnosis). There is no expectation that the data submitted represents all the data required by the the recipient, only that the data is known to be relevant to the triggering event.</p>
+				<p>The notify operation is used to notification the recipient of a specific patient event (e.g. admission, discharge, change in treatment, new diagnosis). There is no expectation that the data submitted represents all the data required by the the recipient, only that the data is known to be relevant to the triggering event.</p>
 			</div>
 			<p>URL: [base]/Communication/$notify</p>
 			<p>Parameters</p>
@@ -36,41 +36,41 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>alert</td>
+					<td>notification</td>
 					<td>1..*</td>
 					<td/>
 					<td/>
 					<td>
 						<div>
-							<p>One or more Vinci Alerts composed of the Alert Bundle profile and optionally an Alert Endpoint</p>
+							<p>One or more Vinci Notifications composed of the Notification Bundle profile and optionally an Notification Endpoint</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>alert.alert-endpoint</td>
+					<td>notification.notification-endpoint</td>
 					<td>0..1</td>
 					<td>
-						canonical(<a href="StructureDefinition-alerts-endpoint.html">Da Vinci Alerts Endpoint Profile</a>)
+						canonical(<a href="StructureDefinition-notifications-endpoint.html">Da Vinci Notifications Endpoint Profile</a>)
 					</td>
 					<td/>
 					<td>
 						<div>
-							<p>The Da Vinci Alert Endpoint which contains the technical details of an endpoint for getting additional information from the medical record for the event</p>
+							<p>The Da Vinci Notification Endpoint which contains the technical details of an endpoint for getting additional information from the medical record for the event</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>alert.alert-bundle</td>
+					<td>notification.notification-bundle</td>
 					<td>1..1</td>
 					<td>
-						canonical(<a href="StructureDefinition-alerts-bundle.html">Da Vinci Alerts Bundle Profile</a>)
+						canonical(<a href="StructureDefinition-notifications-bundle.html">Da Vinci Notifications Bundle Profile</a>)
 					</td>
 					<td/>
 					<td>
 						<div>
-							<p>The Da Vinci Alert Bundle which contains the individual resources that make up the data-of-interest for the event</p>
+							<p>The Da Vinci Notification Bundle which contains the individual resources that make up the data-of-interest for the event</p>
 						</div>
 					</td>
 				</tr>
@@ -80,7 +80,7 @@
 			</div>
 		</div>
 	</text>
-	<url value="http://hl7.org/fhir/us/davinci-alerts/OperationDefinition/notify"/>
+	<url value="http://hl7.org/fhir/us/davinci-notifications/OperationDefinition/notify"/>
 	<version value="0.1.0"/>
 	<name value="Notify"/>
 	<title value="Da Vinci Notify Operation"/>
@@ -94,7 +94,7 @@
 			<value value="http://www.hl7.org/Special/committees/inm/index.cfm"/>
 		</telecom>
 	</contact>
-	<description value="The notify operation is used to alert the recipient of a specific patient event (e.g. admission, discharge, change in treatment, new diagnosis). There is no expectation that the data submitted represents all the data required by the the recipient, only that the data is known to be relevant to the triggering event."/>
+	<description value="The notify operation is used to notification the recipient of a specific patient event (e.g. admission, discharge, change in treatment, new diagnosis). There is no expectation that the data submitted represents all the data required by the the recipient, only that the data is known to be relevant to the triggering event."/>
 	<code value="notify"/>
 	<comment value="The effect of invoking this operation is that the submitted data is posted to the receiving system and can be used by the recipient to take subsequent actions"/>
 	<resource value="Communication"/>
@@ -102,28 +102,28 @@
 	<type value="true"/>
 	<instance value="false"/>
 	<parameter>
-		<name value="alert"/>
+		<name value="notification"/>
 		<use value="in"/>
 		<min value="1"/>
 		<max value="*"/>
-		<documentation value="One or more Vinci Alerts composed of the Alert Bundle profile and optionally an Alert Endpoint"/>
+		<documentation value="One or more Vinci Notifications composed of the Notification Bundle profile and optionally an Notification Endpoint"/>
 		<part>
-			<name value="alert-endpoint"/>
+			<name value="notification-endpoint"/>
 			<use value="in"/>
 			<min value="0"/>
 			<max value="1"/>
-			<documentation value="The Da Vinci Alert Endpoint which contains the technical details of an alert for getting additional information from the medical record for the event"/>
+			<documentation value="The Da Vinci Notification Endpoint which contains the technical details of an notification for getting additional information from the medical record for the event"/>
 			<type value="canonical"/>
-			<targetProfile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/alerts-endpoint"/>
+			<targetProfile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-endpoint"/>
 		</part>
 		<part>
-			<name value="alert-bundle"/>
+			<name value="notification-bundle"/>
 			<use value="in"/>
 			<min value="1"/>
 			<max value="1"/>
-			<documentation value="The Da Vinci Alert Bundle which contains the individual resources that make up the data-of-interest for the event"/>
+			<documentation value="The Da Vinci Notification Bundle which contains the individual resources that make up the data-of-interest for the event"/>
 			<type value="canonical"/>
-			<targetProfile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/alerts-bundle"/>
+			<targetProfile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-bundle"/>
 		</part>
 	</parameter>
 </OperationDefinition>

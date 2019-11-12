@@ -881,15 +881,15 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s72"><Data ss:Type="String">id</Data></Cell>
-    <Cell ss:StyleID="s73"><Data ss:Type="String">alerts-endpoint</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">notifications-endpoint</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">name</Data></Cell>
-    <Cell ss:StyleID="s75"><Data ss:Type="String">AlertsEndpoint</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">NotificationsEndpoint</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">display</Data></Cell>
-    <Cell ss:StyleID="s76"><Data ss:Type="String">Da Vinci Alerts Endpoint Profile</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Da Vinci Notifications Endpoint Profile</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">author.name</Data></Cell>
@@ -905,8 +905,8 @@
    <Row ss:AutoFitHeight="0" ss:Height="53.0625">
     <Cell ss:StyleID="s74"><Data ss:Type="String">description</Data></Cell>
     <Cell
-     ss:Formula="=&quot;The &quot;&amp;R[-4]C&amp;&quot; MAY be  exchanged as part of an alert notifications.  The Endpoint contains the technical details of an endpoint for getting additional information from the medical record for the event.&quot;"><Data
-      ss:Type="String">The Da Vinci Alerts Endpoint Profile MAY be  exchanged as part of an alert notifications.  The Endpoint contains the technical details of an endpoint for getting additional information from the medical record for the event.</Data></Cell>
+     ss:Formula="=&quot;The &quot;&amp;R[-4]C&amp;&quot; MAY be  exchanged as part of an notification notifications.  The Endpoint contains the technical details of an endpoint for getting additional information from the medical record for the event.&quot;"><Data
+      ss:Type="String">The Da Vinci Notifications Endpoint Profile MAY be  exchanged as part of an notification notifications.  The Endpoint contains the technical details of an endpoint for getting additional information from the medical record for the event.</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">status</Data></Cell>
@@ -918,7 +918,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">published.structure</Data></Cell>
-    <Cell ss:StyleID="s73"><Data ss:Type="String">alerts-endpoint</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">notifications-endpoint</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">version</Data></Cell>
@@ -926,8 +926,8 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="s79" ss:HRef="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/template-extension-"><Data
-      ss:Type="String">http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-</Data></Cell>
+    <Cell ss:StyleID="s79" ss:HRef="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/template-extension-"><Data
+      ss:Type="String">http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s80"><Data ss:Type="String">introduction</Data></Cell>
@@ -977,10 +977,10 @@
    <ProtectScenarios>False</ProtectScenarios>
   </WorksheetOptions>
  </Worksheet>
- <Worksheet ss:Name="alerts-endpoint">
+ <Worksheet ss:Name="notifications-endpoint">
   <Names>
    <NamedRange ss:Name="_FilterDatabase"
-    ss:RefersTo="='alerts-endpoint'!R1C4:R108C26" ss:Hidden="1"/>
+    ss:RefersTo="='notifications-endpoint'!R1C4:R108C26" ss:Hidden="1"/>
   </Names>
   <Table ss:ExpandedColumnCount="26" ss:ExpandedRowCount="109" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s84" ss:DefaultColumnWidth="65.25"
@@ -1115,8 +1115,8 @@
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s93" ss:Formula="=Metadata!R[1]C[1]"><Data ss:Type="String">AlertsEndpoint</Data></Cell>
-    <Cell ss:Formula="=Metadata!R[2]C"><Data ss:Type="String">Da Vinci Alerts Endpoint Profile</Data></Cell>
+    <Cell ss:StyleID="s93" ss:Formula="=Metadata!R[1]C[1]"><Data ss:Type="String">NotificationsEndpoint</Data></Cell>
+    <Cell ss:Formula="=Metadata!R[2]C"><Data ss:Type="String">Da Vinci Notifications Endpoint Profile</Data></Cell>
     <Cell ss:StyleID="s94"/>
     <Cell ss:StyleID="s95"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s96"><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -3992,10 +3992,10 @@
    <ProtectScenarios>False</ProtectScenarios>
   </WorksheetOptions>
  </Worksheet>
- <Worksheet ss:Name="alerts-endpoint-Inv">
+ <Worksheet ss:Name="notifications-endpoint-Inv">
   <Names>
    <NamedRange ss:Name="_FilterDatabase"
-    ss:RefersTo="='alerts-endpoint-Inv'!R1C1:R1C7" ss:Hidden="1"/>
+    ss:RefersTo="='notifications-endpoint-Inv'!R1C1:R1C7" ss:Hidden="1"/>
   </Names>
   <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="50" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s130" ss:DefaultColumnWidth="65.25"

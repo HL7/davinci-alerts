@@ -20,8 +20,6 @@ The following Profiles for FHIR *resources* have been defined for this implement
 
 {% endraw %} -->
 
-<br />
-
 <!-- {% raw %}
 
 ### Extensions
@@ -31,5 +29,7 @@ These extensions have been defined for this implementation guide.
 {% include list-extensions.xhtml %}
 
 {% endraw %} -->
+
+<br />
 
 {% include link-list.md %}

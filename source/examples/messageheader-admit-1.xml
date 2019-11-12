@@ -2,8 +2,8 @@
 <MessageHeader xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-CURRENT/valueset.xsd">
 	<id value="admit-1"/>
 	<eventCoding>
-		<system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/communication-topic"/>
-		<code value="alert-admit"/>
+		<system value="http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event"/>
+		<code value="notification-admit"/>
 	</eventCoding>
 	<destination>
 		<name value="Acme Message Gateway"/>
@@ -39,9 +39,9 @@
 		</contact>
 		<endpoint value="llp:10.11.12.13:5432"/>
 	</source>
-	<!-- Here's the payload, the resource that this alert concerns -->
+	<!-- Here's the payload, the resource that this notification concerns -->
 	<focus>
 		<reference value="Encounter/example-1"/>
 	</focus>
-	<definition value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/admit-1"/>
+	<definition value="http://hl7.org/fhir/us/davinci-notifications/MessageDefinition/notification-admit"/>
 </MessageHeader>

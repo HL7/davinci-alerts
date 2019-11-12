@@ -1,5 +1,5 @@
 {
-  "id": "communication-alert-admit-01",
+  "id": "communication-notification-admit-01",
   "entry": [
     {
       "fullUrl": "urn:uuid:3852d906-a361-11e9-86cd-a4d18ccf5172",
@@ -257,7 +257,7 @@
       "resource": {
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/alerts-communication"
+            "http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-communication"
           ]
         },
         "about": [
@@ -270,11 +270,11 @@
           {
             "coding": [
               {
-                "code": "alert",
+                "code": "notification",
                 "system": "http://terminology.hl7.org/CodeSystem/communication-category"
               }
             ],
-            "text": "Alert"
+            "text": "Notification"
           }
         ],
         "encounter": {
@@ -318,11 +318,11 @@
         "topic": {
           "coding": [
             {
-              "code": "alert-admit-inpatient",
-              "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/communication-topic"
+              "code": "notification-admit-inpatient",
+              "system": "http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event"
             }
           ],
-          "text": "Alert Admit Inpatient"
+          "text": "Notification Admit Inpatient"
         },
         "resourceType": "Communication"
       }
