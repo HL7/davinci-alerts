@@ -160,7 +160,19 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/admit-notification"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "CapabilityStatement/query-requester"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/discharge-notification"
       },
       "exampleBoolean" : false
     },
@@ -214,6 +226,16 @@
         "title" : "Profiles and Extensions",
         "generation" : "markdown",
         "page" : [{
+          "nameUrl" : "StructureDefinition-admit-notification.html",
+          "title" : "StructureDefinition Admit Notification",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-discharge-notification.html",
+          "title" : "StructureDefinition Discharge Notification",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "StructureDefinition-notifications-messageheader.html",
           "title" : "StructureDefinition Notifications MessageHeader",
           "generation" : "generated"

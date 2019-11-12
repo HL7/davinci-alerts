@@ -155,7 +155,19 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/admit-notification"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="CapabilityStatement/query-requester"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/discharge-notification"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -208,6 +220,16 @@
         <nameUrl value="profiles.html"/>
         <title value="Profiles and Extensions"/>
         <generation value="markdown"/>
+        <page>
+          <nameUrl value="StructureDefinition-admit-notification.html"/>
+          <title value="StructureDefinition Admit Notification"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-discharge-notification.html"/>
+          <title value="StructureDefinition Discharge Notification"/>
+          <generation value="generated"/>
+        </page>
         <page>
           <nameUrl value="StructureDefinition-notifications-messageheader.html"/>
           <title value="StructureDefinition Notifications MessageHeader"/>
