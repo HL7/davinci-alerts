@@ -17,14 +17,15 @@ This use case demonstrates how the Da Vinci Notifications IG framework is used t
 
 ### Use Case Background
 
-Having the ability to send a notifications to update physicians and care management teams when a patient is admitted to a hospital or discharged from the hospital is key to improving patient care. The intent of these notifications is not to replace existing data exchange mechanisms, for example the discharge summary; but rather to notify of the discharge event and provide enough data to gather more information, if desired. These notifications improve post-discharge transitions, promote communication between providers and encourage follow up care.
+Having the ability to send a notifications to update physicians and care management teams when a patient is admitted to a hospital or discharged from the hospital is key to improving patient care. The intent of these notifications is *not* to replace existing data exchange mechanisms, for example the discharge summary; but rather to notify of the discharge event and provide enough data to gather more information, if desired. These notifications improve post-discharge transitions, promote communication between providers and encourage follow up care.  Figure X illustrates how some of the admit and discharge data elements corresponded to the resource in the message bundle.
 
+{% include img-portrait.html img="bundle_graphic.svg" caption="Figure X" %}
+
+<!--
 The Provider is notified when:
 
 - A Patient is admitted to the hospital for inpatient or emergency care
 - A Patient is discharged from the hospital
-
-<!--
 - A Patient is transferred from one care unit to another
 -->
 
@@ -73,12 +74,6 @@ Alternatively a Bundle Profile can be used to define the structure:
 - \** There is no Practitioner.endpoint element and an extension may be needed to implement.
 - \*** MessageDefinition is used to formally define the Message content for a given event (e.g, an inpatient admission or discharge).  It defines the event and the focal and non focal Resources/Profiles that make up the message:
 -->
-
-### Da Vinci Notification Message Bundle
-
-Once the contents of the bundle has been defined the admission and discharge notification message Bundle can be assembled.  Figure 5 illustrates how some of the amdity and discharge data elements corresponded to the resource in the message bundle.
-
-{% include img-portrait.html img="bundle_graphic.svg" caption="Figure 4" %}
 
 **Example Da Vinci Notification Message Bundle**
 

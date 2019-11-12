@@ -1,8 +1,7 @@
 **Bundle**
 
 #### Summary of the Mandatory Requirements
-1.  A  code  in `Bundle.type`
-with a fixed value "message"
+1.  A  code  in `Bundle.type`  = the fixed value  "message"
 
 #### Summary of the Unsupported Elements
 1. `Bundle.total`

@@ -183,6 +183,12 @@
       </reference>
       <exampleBoolean value="false"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/notifications-messagedefinition"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
     <page>
       <nameUrl value="index.html"/>
       <title value="Home"/>
@@ -204,6 +210,11 @@
         <page>
           <nameUrl value="StructureDefinition-notifications-bundle.html"/>
           <title value="StructureDefinition Notifications Bundle"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-notifications-messagedefinition.html"/>
+          <title value="StructureDefinition Notifications MessageDefinition"/>
           <generation value="generated"/>
         </page>
       </page>
