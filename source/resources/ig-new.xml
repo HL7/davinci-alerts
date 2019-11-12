@@ -167,6 +167,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/discharge-notification-bundle"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/discharge-notify-messageheader"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -229,6 +235,11 @@
         <page>
           <nameUrl value="StructureDefinition-admit-notify-messageheader.html"/>
           <title value="StructureDefinition Admit Notify MessageHeader"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-discharge-notification-bundle.html"/>
+          <title value="StructureDefinition Discharge Notification Bundle"/>
           <generation value="generated"/>
         </page>
         <page>

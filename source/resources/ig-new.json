@@ -172,6 +172,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/discharge-notification-bundle"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/discharge-notify-messageheader"
       },
       "exampleBoolean" : false
@@ -234,6 +240,11 @@
         "page" : [{
           "nameUrl" : "StructureDefinition-admit-notify-messageheader.html",
           "title" : "StructureDefinition Admit Notify MessageHeader",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-discharge-notification-bundle.html",
+          "title" : "StructureDefinition Discharge Notification Bundle",
           "generation" : "generated"
         },
         {
