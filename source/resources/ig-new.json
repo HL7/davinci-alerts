@@ -211,6 +211,12 @@
         "reference" : "StructureDefinition/notifications-messagedefinition"
       },
       "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/admit-notification-bundle"
+      },
+      "exampleBoolean" : false
     }],
     "page" : {
       "nameUrl" : "index.html",
@@ -248,6 +254,11 @@
         {
           "nameUrl" : "StructureDefinition-notifications-messagedefinition.html",
           "title" : "StructureDefinition Notifications MessageDefinition",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-admit-notification-bundle.html",
+          "title" : "StructureDefinition Admit Notification Bundle",
           "generation" : "generated"
         }]
       },
