@@ -71,7 +71,7 @@ example_types:  # for matching type to Type
 - Flag
 - Goal
 - Group
-- GraphDefinition
+#- GraphDefinition
 - GuidanceResponse
 - HealthcareService
 - ImagingStudy
@@ -104,7 +104,7 @@ example_types:  # for matching type to Type
 - MedicinalProductPackaged
 - MedicinalProductPharmaceutical
 - MedicinalProductUndesirableEffect
-- MessageDefinition
+#- MessageDefinition
 - MessageHeader
 - NutritionOrder
 - Observation

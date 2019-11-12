@@ -148,6 +148,12 @@
     },
     {
       "reference" : {
+        "reference" : "MessageDefinition/notification-discharge"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "ValueSet/notification-event"
       },
       "exampleBoolean" : false
@@ -230,6 +236,11 @@
         "page" : [{
           "nameUrl" : "MessageDefinition-notification-admit.html",
           "title" : "MessageDefinition Notification Admit",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "MessageDefinition-notification-discharge.html",
+          "title" : "MessageDefinition Notification Discharge",
           "generation" : "generated"
         },
         {

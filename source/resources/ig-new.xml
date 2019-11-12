@@ -143,6 +143,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="MessageDefinition/notification-discharge"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/notification-event"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -225,6 +231,11 @@
         <page>
           <nameUrl value="MessageDefinition-notification-admit.html"/>
           <title value="MessageDefinition Notification Admit"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="MessageDefinition-notification-discharge.html"/>
+          <title value="MessageDefinition Notification Discharge"/>
           <generation value="generated"/>
         </page>
         <page>
