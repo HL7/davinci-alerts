@@ -1,8 +1,7 @@
+{% assign base_id = {{page.id}} %}
+{% assign base_type = {{site.data.structuredefinitions.[base_id].type}} %}
 
-{% assign id = {{page.id}} %}
-source file: source/pages/\_includes/{{id}}-intro.md
-
-{{site.data.structuredefinitions.[id].description}}
+{{site.data.structuredefinitions.[base_id].description}}
 
 ### Mandatory and Must Support Data Elements
 
@@ -10,7 +9,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Each {{{base_type}} must have:**
 
-1. An event code of "notification-admit"
+1. An event code of "notification-discharge"
 1. A reference to US Core Encounter Profile for the event focus
 
 ### Examples
