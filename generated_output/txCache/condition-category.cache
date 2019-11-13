@@ -32,9 +32,9 @@ v: {
   }
 }, "lang":"null"}####
 v: {
-  "display" : "Problem List Item",
-  "severity" : null,
-  "error" : ""
+  "display" : "",
+  "severity" : "error",
+  "error" : "Unknown code system http://hl7.org/fhir/us/core/CodeSystem/condition-category"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
