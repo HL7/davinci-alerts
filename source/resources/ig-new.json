@@ -58,7 +58,7 @@
     }],
     "resource" : [{
       "reference" : {
-        "reference" : "MessageHeader/admit-1"
+        "reference" : "MessageHeader/admit-notification-messageheader-01"
       },
       "exampleBoolean" : true
     },
@@ -76,6 +76,18 @@
     },
     {
       "reference" : {
+        "reference" : "Bundle/discharge-notification-message-bundle-01"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Bundle/admit-notification-message-bundle-01"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "Encounter/admit-discharge-notification-encounter-01"
       },
       "exampleBoolean" : true
@@ -83,12 +95,6 @@
     {
       "reference" : {
         "reference" : "Condition/admit-discharge-notification-condition-01"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "Bundle/message-admit-01"
       },
       "exampleBoolean" : true
     },
@@ -166,12 +172,6 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/notifications-messageheader-src"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "CapabilityStatement/query-responder"
       },
       "exampleBoolean" : false
@@ -242,11 +242,6 @@
         {
           "nameUrl" : "StructureDefinition-admit-discharge-notification-coverage.html",
           "title" : "StructureDefinition Admit Discharge Notification Coverage",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-notifications-messageheader-src.html",
-          "title" : "StructureDefinition Notifications MessageHeader Src",
           "generation" : "generated"
         },
         {

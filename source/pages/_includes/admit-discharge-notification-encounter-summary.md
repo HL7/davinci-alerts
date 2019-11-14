@@ -1,6 +1,10 @@
-**MessageHeader**
+**Encounter**
 
 #### Summary of the Mandatory Requirements
-1.  A  Coding  in `MessageHeader.eventCoding`
-1. One or more Focus References  in `MessageHeader.focus`
-   - which must have at least  one or more Focus Reference values  in `MessageHeader.focus`
+1.  A Patient Reference  in `Encounter.subject`
+
+#### Summary of the Must Support Requirements
+1. One or more  Participants  in `Encounter.participant`
+   - which should have an Individual Reference value  in `Encounter.participant.individual`
+1. One or more  Locations  in `Encounter.location`
+   - which must have a Location Reference value  in `Encounter.location.location`
