@@ -6,7 +6,7 @@
 
 **Additional Profile specific implementation guidance:**
 
-Note that for the admission/discharge scenario, the `Coverage.beneficiary` is a "reverse link" to the Encounter resource and cannot be traversed from the MessageHeader within the Message Bundle.
+Note that for the admission/discharge scenario, the `Coverage.beneficiary` is a "reverse link" to the Encounter resource and cannot be traversed from the MessageHeader within the Message Bundle.  There is no mechanism to enforce profiles in a message on a reverse link except via GraphDefinition.
 
 ### Examples
 
