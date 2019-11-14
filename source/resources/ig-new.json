@@ -58,67 +58,31 @@
     }],
     "resource" : [{
       "reference" : {
-        "reference" : "Endpoint/example-1"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "Encounter/example-1"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "PractitionerRole/example"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "Practitioner/example-1"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "Patient/example"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "Device/example"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "Organization/example-2"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "Coverage/example-1"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "Location/hl7east"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
         "reference" : "MessageHeader/admit-1"
       },
       "exampleBoolean" : true
     },
     {
       "reference" : {
-        "reference" : "Condition/example"
+        "reference" : "MessageHeader/discharge-notification-messageheader-01"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Coverage/admit-discharge-notification-coverage-01"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Encounter/admit-discharge-notification-encounter-01"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Condition/admit-discharge-notification-condition-01"
       },
       "exampleBoolean" : true
     },
@@ -202,6 +166,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/notifications-messageheader-src"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "CapabilityStatement/query-responder"
       },
       "exampleBoolean" : false
@@ -272,6 +242,11 @@
         {
           "nameUrl" : "StructureDefinition-admit-discharge-notification-coverage.html",
           "title" : "StructureDefinition Admit Discharge Notification Coverage",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-notifications-messageheader-src.html",
+          "title" : "StructureDefinition Notifications MessageHeader Src",
           "generation" : "generated"
         },
         {

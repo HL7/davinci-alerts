@@ -19,6 +19,6 @@ none
 
 ### Examples
 
-- [Notification Message Bundle Example](Bundle-communication-alert-admit-01.html)
+- [{{base_type}} Example]({{base_type}}-{{base_id}}-01.html)
 
 {% include link-list.md %}

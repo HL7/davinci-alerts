@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MessageHeader xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-CURRENT/valueset.xsd">
+	<id value="discharge-notification-messageheader-01"/>
+	<eventCoding>
+		<system value="http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event"/>
+		<code value="notification-discharge"/>
+	</eventCoding>
+	<destination>
+		<name value="Acme Message Gateway"/>
+		<!-- this is to indicate to the Acme Message Gateway that this particular message is intended for Practitioner "xcda" -->
+		<target>
+			<display value="Device/example"/>
+		</target>
+		<endpoint value="llp:10.11.12.14:5432"/>
+		<receiver>
+			<!-- this is an absolute reference to the receiver (causes an error in the ig-publisher) <reference value="http://acme.com/ehr/fhir/PractitionerRole/example"/> -->
+			<display value="Acme Message Gateway"/>
+		</receiver>
+	</destination>
+	<sender>
+		<reference value="Organization/example-2"/>
+	</sender>
+	<!-- <timestamp value="2012-01-04T09:10:14Z"/> -->
+	<enterer>
+		<!-- <reference value="http://acme.com/ehr/fhir/Practitioner/example-1"/> -->
+		<display value="Dr Smith"/>
+	</enterer>
+	<author>
+		<!-- <reference value="http://acme.com/ehr/fhir/Practitioner/example-1"/> -->
+		<display value="Dr Smith"/>
+	</author>
+	<source>
+		<name value="Acme Central Patient Registry"/>
+		<software value="FooBar Patient Manager"/>
+		<version value="3.1.45.AABB"/>
+		<contact>
+			<system value="phone"/>
+			<value value="+1 (555) 123 4567"/>
+		</contact>
+		<endpoint value="llp:10.11.12.13:5432"/>
+	</source>
+	<!-- Here's the payload, the resource that this notification concerns -->
+	<focus>
+		<reference value="Encounter/example-1"/>
+	</focus>
+	<definition value="http://hl7.org/fhir/us/davinci-notifications/MessageDefinition/notification-admit"/>
+</MessageHeader>

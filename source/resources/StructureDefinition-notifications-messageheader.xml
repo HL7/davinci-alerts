@@ -72,6 +72,10 @@
 			</type>
 			<mustSupport value="true"/>
 		</element>
+		<element id="MessageHeader.source">
+			<path value="MessageHeader.source"/>
+			<mustSupport value="true"/>
+		</element>
 		<element id="MessageHeader.responsible">
 			<path value="MessageHeader.responsible"/>
 			<min value="0"/>

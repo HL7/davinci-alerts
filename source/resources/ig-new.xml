@@ -53,67 +53,31 @@
     </grouping>
     <resource>
       <reference>
-        <reference value="Endpoint/example-1"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Encounter/example-1"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="PractitionerRole/example"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Practitioner/example-1"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Patient/example"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Device/example"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Organization/example-2"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Coverage/example-1"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Location/hl7east"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="MessageHeader/admit-1"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Condition/example"/>
+        <reference value="MessageHeader/discharge-notification-messageheader-01"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Coverage/admit-discharge-notification-coverage-01"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Encounter/admit-discharge-notification-encounter-01"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/admit-discharge-notification-condition-01"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -197,6 +161,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/notifications-messageheader-src"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="CapabilityStatement/query-responder"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -267,6 +237,11 @@
         <page>
           <nameUrl value="StructureDefinition-admit-discharge-notification-coverage.html"/>
           <title value="StructureDefinition Admit Discharge Notification Coverage"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-notifications-messageheader-src.html"/>
+          <title value="StructureDefinition Notifications MessageHeader Src"/>
           <generation value="generated"/>
         </page>
         <page>

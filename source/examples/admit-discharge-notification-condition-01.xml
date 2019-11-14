@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Condition xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-current/fhir-all.xsd">
-  <id value="example"/>
+  <id value="admit-discharge-notification-condition-01"/>
   <meta>
-    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
+    <profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-discharge-notification-condition"/>
   </meta>
   <clinicalStatus>
     <coding>
@@ -37,8 +37,12 @@
     <text value="Single liveborn, born in hospital"/>
   </code>
   <subject>
-    <reference value="Patient/example"/>
+    <reference value="urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4"/>
     <display value="Amy V. Shaw"/>
   </subject>
+  <encounter>
+    <reference value="urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7"/>
+  </encounter>
+
   <onsetDateTime value="2016-08-10"/>
 </Condition>
