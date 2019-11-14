@@ -12,6 +12,7 @@ The following Profiles for FHIR *resources* have been defined for this implement
 - [Da Vinci Notifications MessageHeader Profile](StructureDefinition-notifications-messageheader.html)
 - [Da Vinci Notifications Bundle Profile](StructureDefinition-notifications-bundle.html)
 - [Da Vinci Notifications MessageDefinition Profile](StructureDefinition-notifications-messagedefinition.html)
+- [Da Vinci Notifications GraphDefinition Profile](StructureDefinition-notifications-graphdefinition.html)
 
 **Da Vinci Admission/Discharge Notification Profiles**
 
@@ -34,15 +35,13 @@ The following Profiles for FHIR *resources* have been defined for this implement
 
 {% endraw %} -->
 
-<!-- {% raw %}
+
 
 ### Extensions
 
-These extensions have been defined for this implementation guide.
+The following Extensions have been defined for this implementation guide.
 
-{% include list-extensions.xhtml %}
-
-{% endraw %} -->
+{% include list-simple-extensions.xhtml %}
 
 <br />
 

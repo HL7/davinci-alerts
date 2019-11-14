@@ -16,7 +16,7 @@
   <ul class="dropdown-menu">
 
     <li>
-      <a href="profiles.html">Profiles<!-- and Logical Models--></a>
+      <a href="profiles.html">Profiles and Extensions</a>
     </li>
 
     <li>

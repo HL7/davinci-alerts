@@ -51,3 +51,5 @@
 [Da Vinci Notifications MessageDefinition Profile]: StructureDefinition-notifications-messagedefinition.html
 [Da Vinci Notifications MessageHeader Profile]: StructureDefinition-notifications-messageheader.html
 [HRex Coverage Profile]: http://hl7.org/fhir/us/davinci-hrex/2019Jun/StructureDefinition-hrex-coverage.html
+[Da Vinci Notifications Must Support Extension]: StructureDefinition-extension-mustSupport.html
+[ElementDefinition.mustSupport]: {{site.data.fhir.path}}elementdefinition-definitions.html#ElementDefinition.mustSupport

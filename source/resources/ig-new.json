@@ -148,6 +148,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/notifications-graphdefinition"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "GraphDefinition/admit-discharge"
       },
       "exampleBoolean" : false
@@ -246,6 +252,11 @@
         "page" : [{
           "nameUrl" : "StructureDefinition-admit-discharge-notification-condition.html",
           "title" : "StructureDefinition Admit Discharge Notification Condition",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-notifications-graphdefinition.html",
+          "title" : "StructureDefinition Notifications GraphDefinition",
           "generation" : "generated"
         },
         {

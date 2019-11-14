@@ -143,6 +143,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/notifications-graphdefinition"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="GraphDefinition/admit-discharge"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -241,6 +247,11 @@
         <page>
           <nameUrl value="StructureDefinition-admit-discharge-notification-condition.html"/>
           <title value="StructureDefinition Admit Discharge Notification Condition"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-notifications-graphdefinition.html"/>
+          <title value="StructureDefinition Notifications GraphDefinition"/>
           <generation value="generated"/>
         </page>
         <page>
