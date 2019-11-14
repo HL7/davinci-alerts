@@ -12,6 +12,10 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 1. A reference(s) to US Core Encounter Profile(s) which will be bundled in the message.
 
+**Additional Profile specific implementation guidance:**
+
+Note that for the admission/discharge scenario, `Condition.encounter` is a "reverse link" to the Encounter resource and cannot be traversed from the MessageHeader within the Message Bundle.
+
 ### Examples
 
 - [{{base_type}} Example]({{base_type}}-{{base_id}}-01.html)
