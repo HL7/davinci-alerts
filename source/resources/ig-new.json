@@ -142,6 +142,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/admit-discharge-notification-condition"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "GraphDefinition/admit-discharge"
       },
       "exampleBoolean" : false
@@ -160,7 +166,7 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/admit-notify-messageheader"
+        "reference" : "StructureDefinition/admit-discharge-notification-encounter"
       },
       "exampleBoolean" : false
     },
@@ -172,13 +178,7 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/discharge-notification-bundle"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/discharge-notify-messageheader"
+        "reference" : "StructureDefinition/discharge-notification-messageheader"
       },
       "exampleBoolean" : false
     },
@@ -190,7 +190,7 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/notifications-messageheader"
+        "reference" : "StructureDefinition/admit-discharge-notification-coverage"
       },
       "exampleBoolean" : false
     },
@@ -208,6 +208,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/admit-notification-messageheader"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/notifications-bundle"
       },
       "exampleBoolean" : false
@@ -220,7 +226,7 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/admit-notification-bundle"
+        "reference" : "StructureDefinition/notifications-messageheader"
       },
       "exampleBoolean" : false
     }],
@@ -238,23 +244,28 @@
         "title" : "Profiles and Extensions",
         "generation" : "markdown",
         "page" : [{
-          "nameUrl" : "StructureDefinition-admit-notify-messageheader.html",
-          "title" : "StructureDefinition Admit Notify MessageHeader",
+          "nameUrl" : "StructureDefinition-admit-discharge-notification-condition.html",
+          "title" : "StructureDefinition Admit Discharge Notification Condition",
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-discharge-notification-bundle.html",
-          "title" : "StructureDefinition Discharge Notification Bundle",
+          "nameUrl" : "StructureDefinition-admit-discharge-notification-encounter.html",
+          "title" : "StructureDefinition Admit Discharge Notification Encounter",
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-discharge-notify-messageheader.html",
-          "title" : "StructureDefinition Discharge Notify MessageHeader",
+          "nameUrl" : "StructureDefinition-discharge-notification-messageheader.html",
+          "title" : "StructureDefinition Discharge Notification MessageHeader",
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-notifications-messageheader.html",
-          "title" : "StructureDefinition Notifications MessageHeader",
+          "nameUrl" : "StructureDefinition-admit-discharge-notification-coverage.html",
+          "title" : "StructureDefinition Admit Discharge Notification Coverage",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-admit-notification-messageheader.html",
+          "title" : "StructureDefinition Admit Notification MessageHeader",
           "generation" : "generated"
         },
         {
@@ -268,8 +279,8 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-admit-notification-bundle.html",
-          "title" : "StructureDefinition Admit Notification Bundle",
+          "nameUrl" : "StructureDefinition-notifications-messageheader.html",
+          "title" : "StructureDefinition Notifications MessageHeader",
           "generation" : "generated"
         }]
       },

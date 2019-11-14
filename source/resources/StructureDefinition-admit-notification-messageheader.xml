@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-4.0.1/fhir-all.xsd">
+	<id value="admit-notification-messageheader"/>
+	<url value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-notify-messageheader"/>
+	<version value="0.1.0"/>
+	<name value="AdmitNotificationMessageHeader"/>
+	<title value="Da Vinci Admit Notification MessageHeader Profile"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<date value="2019-11-12T00:00:00-08:00"/>
+	<publisher value="Health eData Inc"/>
+	<description value="The Da Vinci Admit Notification MessageHeader Profile builds on  the [Da Vinci Notifications MessageHeader Profile] and sets minimum expectations for the FHIR [MessageHeader] resource to record the necessary context for Da Vinci admit notification messaging scenario.  The event code is &quot;notification-admit&quot; and the focus of the event is the [US Core Encounter Profile]."/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+			<display value="United States of America"/>
+		</coding>
+	</jurisdiction>
+	<fhirVersion value="4.0.1"/>
+	<kind value="resource"/>
+	<abstract value="false"/>
+	<type value="MessageHeader"/>
+	<baseDefinition value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-messageheader"/>
+	<derivation value="constraint"/>
+	<differential>
+		<element id="MessageHeader">
+			<path value="MessageHeader"/>
+			<mustSupport value="false"/>
+		</element>
+		<element id="MessageHeader.eventCoding">
+			<path value="MessageHeader.eventCoding"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
+			<patternCoding>
+				<system value="http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event"/>
+				<code value="notification-admit"/>
+				<display value="Notification admit"/>
+			</patternCoding>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MessageHeader.focus">
+			<path value="MessageHeader.focus"/>
+			<slicing>
+				<discriminator>
+					<type value="profile"/>
+					<path value="$this"/>
+				</discriminator>
+				<rules value="open"/>
+			</slicing>
+			<min value="1"/>
+			<max value="*"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MessageHeader.focus:admit-notification">
+			<path value="MessageHeader.focus"/>
+			<sliceName value="admit-notification"/>
+			<min value="1"/>
+			<max value="*"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/>
+				<aggregation value="bundled"></aggregation>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+	</differential>
+</StructureDefinition>

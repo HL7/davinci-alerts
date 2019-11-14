@@ -137,6 +137,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/admit-discharge-notification-condition"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="GraphDefinition/admit-discharge"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -155,7 +161,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/admit-notify-messageheader"/>
+        <reference value="StructureDefinition/admit-discharge-notification-encounter"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -167,13 +173,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/discharge-notification-bundle"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/discharge-notify-messageheader"/>
+        <reference value="StructureDefinition/discharge-notification-messageheader"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -185,7 +185,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/notifications-messageheader"/>
+        <reference value="StructureDefinition/admit-discharge-notification-coverage"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -203,6 +203,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/admit-notification-messageheader"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/notifications-bundle"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -215,7 +221,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/admit-notification-bundle"/>
+        <reference value="StructureDefinition/notifications-messageheader"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -233,23 +239,28 @@
         <title value="Profiles and Extensions"/>
         <generation value="markdown"/>
         <page>
-          <nameUrl value="StructureDefinition-admit-notify-messageheader.html"/>
-          <title value="StructureDefinition Admit Notify MessageHeader"/>
+          <nameUrl value="StructureDefinition-admit-discharge-notification-condition.html"/>
+          <title value="StructureDefinition Admit Discharge Notification Condition"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-discharge-notification-bundle.html"/>
-          <title value="StructureDefinition Discharge Notification Bundle"/>
+          <nameUrl value="StructureDefinition-admit-discharge-notification-encounter.html"/>
+          <title value="StructureDefinition Admit Discharge Notification Encounter"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-discharge-notify-messageheader.html"/>
-          <title value="StructureDefinition Discharge Notify MessageHeader"/>
+          <nameUrl value="StructureDefinition-discharge-notification-messageheader.html"/>
+          <title value="StructureDefinition Discharge Notification MessageHeader"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-notifications-messageheader.html"/>
-          <title value="StructureDefinition Notifications MessageHeader"/>
+          <nameUrl value="StructureDefinition-admit-discharge-notification-coverage.html"/>
+          <title value="StructureDefinition Admit Discharge Notification Coverage"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-admit-notification-messageheader.html"/>
+          <title value="StructureDefinition Admit Notification MessageHeader"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -263,8 +274,8 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-admit-notification-bundle.html"/>
-          <title value="StructureDefinition Admit Notification Bundle"/>
+          <nameUrl value="StructureDefinition-notifications-messageheader.html"/>
+          <title value="StructureDefinition Notifications MessageHeader"/>
           <generation value="generated"/>
         </page>
       </page>

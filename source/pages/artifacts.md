@@ -4,6 +4,7 @@ layout: default
 ---
 
 - [Profiles]
+- [Message Definitions]
 - [Terminology]
 - [Capability Statements]
 

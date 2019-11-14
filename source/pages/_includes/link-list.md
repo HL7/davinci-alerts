@@ -41,9 +41,13 @@
 [FHIR message]: {{site.data.fhir.path}}messaging.html
 [FHIR messaging]: {{site.data.fhir.path}}messaging.html
 [Profiling]: {{site.data.fhir.path}}profiling.html
+[US Core Patient Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-patient.html
+[US Core Condition Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-condition.html
+[US Core Location Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-location.html
 [US Core Encounter Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-encounter.html
 [Da Vinci Admit Notification MessageHeader Profile]: StructureDefinition-admit-notification-message-header.html
-[Da Vinci Discharge Notification MessageHeader Profile]: StructureDefinition-discharge-notification-messageheader.html 
+[Da Vinci Discharge Notification MessageHeader Profile]: StructureDefinition-discharge-notification-messageheader.html
 [Da Vinci Notifications Bundle Profile]: StructureDefinition-notifications-bundle.html
 [Da Vinci Notifications MessageDefinition Profile]: StructureDefinition-notifications-messagedefinition.html
 [Da Vinci Notifications MessageHeader Profile]: StructureDefinition-notifications-messageheader.html
+[HRex Coverage Profile]: http://hl7.org/fhir/us/davinci-hrex/2019Jun/StructureDefinition-hrex-coverage.html

@@ -9,27 +9,21 @@ The following Profiles for FHIR *resources* have been defined for this implement
 
 **Base Da Vinci Notification Profiles**
 
+- [Da Vinci Notifications MessageHeader Profile](StructureDefinition-notifications-message-header.html)
 - [Da Vinci Notifications Bundle Profile](StructureDefinition-notifications-bundle.html)
-- [Da Vinci Notifications MessageDefinition Profile](StructureDefinition-admit-notifications-messagedefinition.html)
-- [Da Vinci Notifications MessageHeader Profile](StructureDefinition-admit-notifications-messageheader.html) 
+- [Da Vinci Notifications MessageDefinition Profile](StructureDefinition-notifications-message-definition.html)
 
-**Da Vinci Admission Notification Profiles**
+**Da Vinci Admission/Discharge Notification Profiles**
 
-- [Da Vinci Admit Notification Bundle Profile](StructureDefinition-admit-notification-bundle.html)
-- [Da Vinci Admit Notification MessageHeader Profile](StructureDefinition-admit-notify-messageheader.html)
-
-**Da Vinci Discharge Notification Profiles**
-
-- [Da Vinci Discharge Notification Bundle Profile](StructureDefinition-discharge-notification-bundle.html)
-- [Da Vinci Discharge Notification MessageHeader Profile](StructureDefinition-discharge-notify-messageheader.html)
-
-
+- [Da Vinci Admit Notification MessageHeader Profile](StructureDefinition-admit-notification-messageheader.html)
+- [Da Vinci Discharge Notification MessageHeader Profile](StructureDefinition-discharge-notification-messageheader.html)
+- [Da Vinci Admit/Discharge Notification Condition Profile](StructureDefinition-admit-discharge-notification-condition.html)
+- [Da Vinci Admit/Discharge Notification Coverage Profile](StructureDefinition-admit-discharge-notification-coverage.html)
+- [Da Vinci Admit/Discharge Notification Encounter Profile](StructureDefinition-admit-discharge-notification-encounter.html)
 
 
 <!-- {% raw %}
 {% include list-simple-profiles.xhtml %}
-
-
 
 {% for sd_hash in site.data.structuredefinitions -%}
   {%- assign sd = sd_hash[1] -%}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-4.0.1/fhir-all.xsd">
+	<id value="admit-discharge-notification-encounter"/>
+	<url value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-discharge-notification-encounter"/>
+	<version value="0.1.0"/>
+	<name value="AdmitDischargeNotificationEncounterProfile"/>
+	<title value="Da Vinci Admit/Discharge Notification Encounter Profile"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<date value="2019-11-12T00:00:00-08:00"/>
+	<publisher value="Health eData Inc"/>
+	<description value="The Da Vinci Admit Notification Coverage Profile is based on the [US Core Encounter Profile] and and constrains the resources referenced by the `Encounter.Subject`,`Encounter.Location`, and `Encounter.participant.individual`  to be found in the same message Bundle.  In addition, the Location reference is constrained to the [US Core Location Profile]"/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+			<display value="United States of America"/>
+		</coding>
+	</jurisdiction>
+	<fhirVersion value="4.0.1"/>
+	<kind value="resource"/>
+	<abstract value="false"/>
+	<type value="Encounter"/>
+	<baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/>
+	<derivation value="constraint"/>
+	<differential>
+		<element id="Encounter">
+			<path value="Encounter"/>
+		</element>
+		<element id="Encounter.subject">
+			<path value="Encounter.subject"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+				<aggregation value="bundled"/>
+			</type>
+		</element>
+		<element id="Encounter.participant">
+			<path value="Encounter.participant"/>
+		</element>
+		<element id="Encounter.participant.individual">
+			<path value="Encounter.participant.individual"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+				<aggregation value="bundled"/>
+			</type>
+		</element>
+		<element id="Encounter.location">
+			<path value="Encounter.location"/>
+		</element>
+		<element id="Encounter.location.location">
+			<path value="Encounter.location.location"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"/>
+				<aggregation value="bundled"/>
+			</type>
+		</element>
+	</differential>
+</StructureDefinition>

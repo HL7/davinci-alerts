@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-4.0.1/fhir-all.xsd">
+	<id value="admit-discharge-notification-coverage"/>
+
+
+	<url value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-discharge-notification-coverage"/>
+	<version value="0.1.0"/>
+	<name value="AdmitDischargeNotificationCoverageProfile"/>
+	<title value="Da Vinci Admit/Discharge Notification Coverage Profile"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<date value="2019-11-12T00:00:00-08:00"/>
+	<publisher value="Health eData Inc"/>
+	<description value="The Da Vinci Admit Notification Coverage Profile is based on the [HRex Coverage Profile] and constrains the Patient resource referenced by the `Coverage.beneficiary` element to be found in the same message Bundle."/>
+	<fhirVersion value="4.0.1"/>
+
+	<kind value="resource"/>
+	<abstract value="false"/>
+	<type value="Coverage"/>
+	<baseDefinition value="http://hl7.org/fhir/us/davinci-hrex/StructureDefinition/hrex-coverage"/>
+	<derivation value="constraint"/>
+
+	<differential>
+			<element id="Coverage">
+			<path value="Coverage"/>
+		</element>
+		<element id="Coverage.beneficiary">
+			<path value="Coverage.beneficiary"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+				<aggregation value="bundled"></aggregation>
+			</type>
+		</element>
+	</differential>
+</StructureDefinition>
