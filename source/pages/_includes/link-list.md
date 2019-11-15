@@ -1,8 +1,6 @@
-[^1]: In addition to Patient and Encounter which are included in all Alert Bundles.
-[^2]: Minimum set of the patient's Resources that are Available for Optional Subsequent Queries.
 [Home]: index.html "Home Page"
 [Framework]: guidance.html  "General Framework Page"
-[Use cases]: usecases.html
+[Admit/Discharge Use case]: usecases.html
 [Downloads]: downloads.html "Downloads Page"
 [Conformance Requirements for Server]: CapabilityStatement-server.html "Conformance Requirements for Server Page"
 [Conformance Requirements for Client]: CapabilityStatement-client.html "Conformance Requirements for Client Page"
@@ -26,9 +24,6 @@
 [operation]: {{site.data.fhir.path}}operations.html
 [2019 CMS 45 CFR Part 156 NPRM]: https://www.govinfo.gov/content/pkg/FR-2019-03-04/pdf/2019-02200.pdf
 [Argonaut Clinical Data Subscriptions]: http://argonautwiki.hl7.org/index.php?title=Argonaut_2019_Projects#Clinical_Data_Subscriptions
-[Da Vinci Notification Message Bundle Profile]: StructureDefinition-profile-notification-bundle.html
-[Da Vinci Notification MessageHeader Profile]: StructureDefinition-profile-notification-messageheader.html
-[Da Vinci Alerts Endpoint Profile]: StructureDefinition-alerts-endpoint.html
 ["black box"]: https://en.wikipedia.org/wiki/Black_box
 ["reliable delivery"]: https://en.wikipedia.org/wiki/Reliable_messaging
 [MustSupport flag]: {{site.data.fhir.path}}profiling.html#mustsupport
@@ -38,18 +33,25 @@
 [notifications by messaging]: {{site.data.fhir.path}}subscription.html#messaging
 [FHIR Artifacts]: artifacts.html
 [FHIR Messaging paradigm]: {{site.data.fhir.path}}messaging.html
-[FHIR message]: {{site.data.fhir.path}}messaging.html
 [FHIR messaging]: {{site.data.fhir.path}}messaging.html
 [Profiling]: {{site.data.fhir.path}}profiling.html
 [US Core Patient Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-patient.html
 [US Core Condition Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-condition.html
 [US Core Location Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-location.html
 [US Core Encounter Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-encounter.html
-[Da Vinci Admit Notification MessageHeader Profile]: StructureDefinition-admit-notification-message-header.html
-[Da Vinci Discharge Notification MessageHeader Profile]: StructureDefinition-discharge-notification-messageheader.html
-[Da Vinci Notifications Bundle Profile]: StructureDefinition-notifications-bundle.html
-[Da Vinci Notifications MessageDefinition Profile]: StructureDefinition-notifications-messagedefinition.html
-[Da Vinci Notifications MessageHeader Profile]: StructureDefinition-notifications-messageheader.html
 [HRex Coverage Profile]: http://hl7.org/fhir/us/davinci-hrex/2019Jun/StructureDefinition-hrex-coverage.html
 [Da Vinci Notifications Must Support Extension]: StructureDefinition-extension-mustSupport.html
 [ElementDefinition.mustSupport]: {{site.data.fhir.path}}elementdefinition-definitions.html#ElementDefinition.mustSupport
+[Da Vinci Notifications MessageHeader Profile]: StructureDefinition-notifications-messageheader.html
+[Da Vinci Notifications Bundle Profile]: StructureDefinition-notifications-bundle.html
+[Da Vinci Notifications MessageDefinition Profile]: StructureDefinition-notifications-messagedefinition.html
+[Da Vinci Notifications GraphDefinition Profile]: StructureDefinition-notifications-graphdefinition.html
+[Da Vinci Admit Notification MessageHeader Profile]: StructureDefinition-admit-notification-messageheader.html
+[Da Vinci Discharge Notification MessageHeader Profile]: StructureDefinition-discharge-notification-messageheader.html
+[Da Vinci Admit/Discharge Notification Condition Profile]: StructureDefinition-admit-discharge-notification-condition.html
+[Da Vinci Admit/Discharge Notification Coverage Profile]: StructureDefinition-admit-discharge-notification-coverage.html
+[Da Vinci Admit/Discharge Notification Encounter Profile]: (StructureDefinition-a dmit-discharge-notification-encounter.html)
+[FHIR message Bundle]: {{site.data.fhir.path}}bundle.html#message
+[Da Vinci Notification Event ValueSet]: ValueSet-notification-event.html
+[Da Vinci Notification Event CodeSystem]: CodeSystem-notification-event.html
+[Example Transaction]: usecases.html#example-transaction

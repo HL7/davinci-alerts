@@ -13,7 +13,7 @@ topofpage: true
 
 <!-- end TOC -->
 
-The communication of relevant notifications to support the real-time exchange of information that impacts patient care and value based or risk based services.  Providers (members of a care team) and Payers may need to be alerted when activities occur that impact a patients care. This may be as traditional as admission to or discharge from a care setting (ED, Hospital, etc.) but may also include changes in treatment (e.g. medications) or patient status (new diagnosis). This information will improve care management and care coordination as well as act as the trigger for quality programs and other patient focused activities (e.g. risk adjustment).  It would allow actors participating in the patient's healthcare to take actions and intervene earlier to assure the patient is better cared for and can also result in reduced costs.
+The communication of relevant notifications to support the real-time exchange of information that impacts patient care and value based or risk based services.  Providers and Payers may need to be alerted when activities occur that impact a patients care. This may be as traditional as a notification of an admission to or a discharge from a care setting. It also includes notifications about changes in treatment such as a new or different medication, or  changes in patient status like a new diagnosis. These notifications provide information that can improve care management and care coordination as well as act as the trigger for quality programs and other patient focused activities (for example, risk adjustment).  By allowing the patient's healthcare providers to be better informed and able to take actions and intervene earlier, the twin goals of better patient care and reduced cost of care may be met.
 
 The [2019 CMS 45 CFR Part 156 NPRM] focuses on hospitalization notifications due to significant issues that can occur if a patient is not followed appropriately after acute care. The HL7 Da Vinci Project has responded to this need by supporting the effort to provide a FHIR based standard for adoption by both providers and payers.  It is anticipated that the burden of communicating the notification is also reduced by using FHIR.   This Guide defines a FHIR messaging based paradigm and framework to establish consistently adoptable and reproducible methods to exchange notifications. This framework is demonstrated using the patient admission and discharge event use case to generate unsolicited notifications to the care team.
 
@@ -24,7 +24,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 - [Home]\: The home page provides the introduction and background for the Da Vinci Alert Project.
 
 - [Framework]\: These pages provide guidance on the set of FHIR transactions and the FHIR artifacts used in a general framework to enable unsolicited notifications to careteam members.
-- [Use cases]\: The Admission/Discharge use case is used to show how to implement an unsolicited notification using the framework.
+- [Admit/Discharge Use case]\: The Admission/Discharge use case is used to show how to implement an unsolicited notification using the framework.
 - [FHIR Artifacts]\: These pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
   - [Profiles]\: This page lists the set of Profiles that are defined in this guide to exchange quality data.
   - [Terminology]\: This page lists the value sets and code system defined for this guide.
@@ -35,7 +35,13 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 ### Scope and Usage
 
-The goal of this Implementation Guide is define a technical framework for sending unsolicited notifications to the appropriate actors when triggered by an event or request. It is important that the framework allow for only appropriate notification to be sent at the appropriate time and with just the right amount of information. This will serve to avoid "notification fatigue".  The following table summarizes the scope of this guide:
+The goal of this Implementation Guide is define a technical framework for sending unsolicited  notifications to the appropriate actors when triggered by an event or request.  The notifications should provides enough information to understand what the notification is about and to enable the Recipient to determine if and what addition steps they need to take in response to the notification.  For example, additional steps may include:
+
+- a request for more information from the Sender through a FHIR RESTful query
+- creation of an encounter record in the receiving system with appropriate provenance
+- making the information available to CDS and other local services.
+
+The following table summarizes the technical scope of this guide:
 
 <div class="row">
 <div class="col-sm-6" markdown="1" style="background-color: Lightcyan;">
@@ -71,12 +77,13 @@ your organization)
 
 </div>
 
+<!--
+The triggering of a notification allow for the appropriate notification to be sent at the appropriate time to provide important information to the end users without overwhelming the them causing "notification fatigue".
+-->
+
 #### Scenarios
 
 Notifications can be generated for many scenarios.
-
-##### Initial Phase
-{:.no_toc}
 
 The initial version of this
 Implementation Guide will focus on *Admission and Discharge* Scenarios, in other words, anything that would create an encounter in a patient care record.  However, this framework is intendend to support other scenarios such as those listed below.  Work is planned to document them in future publications in collaboration with domain experts such as public health.
@@ -187,17 +194,18 @@ There are many potential actors for the roles listed above:
 See the [Framework] page for a detailed description of the technical workflow and API guidance.
 {:.highlight-note}
 
+Figure 1 below illustrates the general notification workflow of a Sender sending an unsolicited notification to a Receiver or Intermediary when triggered by an event or request.
 
-{% include img.html img="notification_wf1.svg" caption="Figure 2" %}
+{% include img.html img="notification_wf1.svg" caption="Figure 1" %}
 
 1. An event or request triggers a notification to be sent from a Sender (aka source application) to a Recipient or Intermediary (aka destination application).  The notification includes common information shared across all Da Vinci notifications and use case dependent information.
 2. The Sender notifies the Recipient by sending an "unsolicited" notification to the Recipient's FHIR endpoint.
 3. The notification is processed according the Receiver or Intermediary internal business rules.
 
-Figure 3 shows the process where the Sender sends an unsolicited notification to an Intermediary which in turn forwards the notification to the Recipient. In this case, the Intermediary is responsible for the redistribution of the data.  Note that it may customize the data based on end user needs.  Although not represented in the figure, there may be multiple Intermediaries.
+Figure 2 shows the process where the Sender sends an unsolicited notification to an Intermediary which in turn forwards the notification to the Recipient. In this case, the Intermediary is responsible for the redistribution of the data.  Note that it may customize the data based on end user needs.  Although not represented in the figure, there may be multiple Intermediaries.
 
 {% include img.html img="notification_wf2.svg"
- caption="Figure 3" %}
+ caption="Figure 2" %}
 
 ---
 <br />

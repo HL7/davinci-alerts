@@ -9,18 +9,18 @@ The following Profiles for FHIR *resources* have been defined for this implement
 
 **Base Da Vinci Notification Profiles**
 
-- [Da Vinci Notifications MessageHeader Profile](StructureDefinition-notifications-messageheader.html)
-- [Da Vinci Notifications Bundle Profile](StructureDefinition-notifications-bundle.html)
-- [Da Vinci Notifications MessageDefinition Profile](StructureDefinition-notifications-messagedefinition.html)
-- [Da Vinci Notifications GraphDefinition Profile](StructureDefinition-notifications-graphdefinition.html)
+- [Da Vinci Notifications MessageHeader Profile]
+- [Da Vinci Notifications Bundle Profile]
+- [Da Vinci Notifications MessageDefinition Profile]
+- [Da Vinci Notifications GraphDefinition Profile]
 
 **Da Vinci Admission/Discharge Notification Profiles**
 
-- [Da Vinci Admit Notification MessageHeader Profile](StructureDefinition-admit-notification-messageheader.html)
-- [Da Vinci Discharge Notification MessageHeader Profile](StructureDefinition-discharge-notification-messageheader.html)
-- [Da Vinci Admit/Discharge Notification Condition Profile](StructureDefinition-admit-discharge-notification-condition.html)
-- [Da Vinci Admit/Discharge Notification Coverage Profile](StructureDefinition-admit-discharge-notification-coverage.html)
-- [Da Vinci Admit/Discharge Notification Encounter Profile](StructureDefinition-admit-discharge-notification-encounter.html)
+- [Da Vinci Admit Notification MessageHeader Profile]
+- [Da Vinci Discharge Notification MessageHeader Profile]
+- [Da Vinci Admit/Discharge Notification Condition Profile]
+- [Da Vinci Admit/Discharge Notification Coverage Profile]
+- [Da Vinci Admit/Discharge Notification Encounter Profile]
 
 
 <!-- {% raw %}
@@ -41,7 +41,7 @@ The following Profiles for FHIR *resources* have been defined for this implement
 
 The following Extensions have been defined for this implementation guide.
 
-{% include list-simple-extensions.xhtml %}
+- [Da Vinci Notifications Must Support Extension]
 
 <br />
 

@@ -10,6 +10,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Each {{{base_type}} must have:**
 
 1. A code for the type of event
+1. the message source application
 1. A reference to the event's focus resource(s) which will be bundled in the message.
 
 **Each {{base_type}} must support:**
@@ -21,7 +22,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Additional Profile specific implementation guidance:**
 
-none
+The `destination.endpoint` and `source.endpoint` can be in any form of url the server understands (usually, https: or mllp:). The URI is allowed to be relative; in which case, it is relative to the server end-point
 
 ### Examples
 
