@@ -212,12 +212,12 @@
       "generation" : "markdown",
       "page" : [{
         "nameUrl" : "guidance.html",
-        "title" : "General Guidance",
+        "title" : "Framework",
         "generation" : "markdown"
       },
       {
         "nameUrl" : "profiles.html",
-        "title" : "Profiles and Extensions",
+        "title" : "Admit/Discharge Use Case",
         "generation" : "markdown",
         "page" : [{
           "nameUrl" : "StructureDefinition-admit-discharge-notification-condition.html",
@@ -286,11 +286,6 @@
         }]
       },
       {
-        "nameUrl" : "operations.html",
-        "title" : "Operations",
-        "generation" : "markdown"
-      },
-      {
         "nameUrl" : "terminology.html",
         "title" : "Terminology",
         "generation" : "markdown",
@@ -304,11 +299,6 @@
           "title" : "CodeSystem Notification Event",
           "generation" : "generated"
         }]
-      },
-      {
-        "nameUrl" : "searchparameters.html",
-        "title" : "Search Parameters",
-        "generation" : "markdown"
       },
       {
         "nameUrl" : "capstatements.html",

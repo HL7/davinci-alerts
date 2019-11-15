@@ -207,12 +207,12 @@
       <generation value="markdown"/>
       <page>
         <nameUrl value="guidance.html"/>
-        <title value="General Guidance"/>
+        <title value="Framework"/>
         <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="profiles.html"/>
-        <title value="Profiles and Extensions"/>
+        <title value="Admit/Discharge Use Case"/>
         <generation value="markdown"/>
         <page>
           <nameUrl value="StructureDefinition-admit-discharge-notification-condition.html"/>
@@ -281,11 +281,6 @@
         </page>
       </page>
       <page>
-        <nameUrl value="operations.html"/>
-        <title value="Operations"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
         <nameUrl value="terminology.html"/>
         <title value="Terminology"/>
         <generation value="markdown"/>
@@ -299,11 +294,6 @@
           <title value="CodeSystem Notification Event"/>
           <generation value="generated"/>
         </page>
-      </page>
-      <page>
-        <nameUrl value="searchparameters.html"/>
-        <title value="Search Parameters"/>
-        <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="capstatements.html"/>

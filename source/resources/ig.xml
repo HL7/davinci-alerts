@@ -64,10 +64,10 @@
   <page><nameUrl value="index.html"/><title value="Home"/><generation value="markdown"/>
 
     <!-- ============ Guidance Page =============== -->
-    <page><nameUrl value="guidance.html"/><title value="General Guidance"/><generation value="markdown"/></page>
+    <page><nameUrl value="guidance.html"/><title value="Framework"/><generation value="markdown"/></page>
 
     <!-- ============ Profiles Page =============== -->
-    <page><nameUrl value="profiles.html"/><title value="Profiles and Extensions"/><generation value="markdown"/>
+    <page><nameUrl value="profiles.html"/><title value="Admit/Discharge Use Case"/><generation value="markdown"/>
 
      <!-- ============ Profiles and examples=============== -->
      <!-- insert profiles --><page><nameUrl value="StructureDefinition-admit-discharge-notification-condition.html"/><title value="StructureDefinition Admit Discharge Notification Condition"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-notifications-graphdefinition.html"/><title value="StructureDefinition Notifications GraphDefinition"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-admit-discharge-notification-encounter.html"/><title value="StructureDefinition Admit Discharge Notification Encounter"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-discharge-notification-messageheader.html"/><title value="StructureDefinition Discharge Notification MessageHeader"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-admit-discharge-notification-coverage.html"/><title value="StructureDefinition Admit Discharge Notification Coverage"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-admit-notification-messageheader.html"/><title value="StructureDefinition Admit Notification MessageHeader"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-notifications-bundle.html"/><title value="StructureDefinition Notifications Bundle"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-notifications-messagedefinition.html"/><title value="StructureDefinition Notifications MessageDefinition"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-notifications-messageheader.html"/><title value="StructureDefinition Notifications MessageHeader"/><generation value="generated"/></page>
@@ -92,14 +92,6 @@
 
      </page>
 
-    <!-- ============ Operations Page =============== -->
-    <page><nameUrl value="operations.html"/><title value="Operations"/><generation value="markdown"/>
-
-    <!-- ============ Operations and examples  =============== -->
-    <!-- insert operationdefinitions -->
-    <!-- ============ End Operations and examples  =============== -->
-
-    </page>
     <!-- ============ Terminology Page =============== -->
 
     <page><nameUrl value="terminology.html"/><title value="Terminology"/><generation value="markdown"/>
@@ -115,14 +107,6 @@
     <!-- insert conceptmaps -->
     <!-- ============ End ConceptMaps   =============== -->
 
-    </page>
-
-    <!-- ============ SearchParameter Page =============== -->
-    <page><nameUrl value="searchparameters.html"/><title value="Search Parameters"/><generation value="markdown"/>
-
-  <!-- ============ SearchParameters =============== -->
-  <!-- insert searchparameters -->
-  <!-- ============ End SearchParameters  =============== -->
     </page>
 
     <!-- ============ CapabilityStatement Page =============== -->
