@@ -32,7 +32,7 @@ Formats: <a href="{{[type]}}-{{[id]}}.html">Narrative</a>, <a href="{{[type]}}-{
 
 <h2>{{[type]}}-{{[id]}}</h2>
 
-
+{% if site.showIntro %}
 <!-- introductiontext here-->
 <a name="introduction"> </a>
 
@@ -47,7 +47,7 @@ Formats: <a href="{{[type]}}-{{[id]}}.html">Narrative</a>, <a href="{{[type]}}-{
 
 <h5>Example: <a href="{{[title]}}.example.html">{{[title]}} Example</a></h5>
 {% endraw %}-->
-
+{% endif %}
 
 <a name="profile"> </a>
 <h3>Formal Views of Profile Content</h3>
@@ -78,7 +78,7 @@ This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basep
 
 <!--  ********remove the tabs editing purposes if status draft ********* -->
 
-{% if site.data.structuredefinitions.{{[id]}}.status == "active" %}
+{% unless site.showDevView %}
 
 <div id="tabs">
 
@@ -127,6 +127,9 @@ This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basep
 {% if site.showPsuedoXML%}
  <div id="tabs-xml">
   <div id="xml">
+    <!-- ***todo get copy button to behave inside tab *******
+       <button id="copy-button" class="btn-default btn-sm" data-clipboard-target="#json-inner">Copy</button>
+    -->
    <div id="xml-inner">
 {% include {{[type]}}-{{[id]}}-pseudo-xml.xhtml %}
    </div>
@@ -138,6 +141,9 @@ This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basep
 {% if site.showPsuedoJson%}
  <div id="tabs-json">
   <div id="json">
+    <!-- ***todo get copy button to behave inside tab *******
+       <button id="copy-button" class="btn-default btn-sm" data-clipboard-target="#json-inner">Copy</button>
+    -->
    <div id="json-inner">
      <pre class="spec">
       {% include {{[type]}}-{{[id]}}-pseudo-json.xhtml %}
@@ -147,11 +153,11 @@ This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basep
  </div>
 {% endif %}
 
-{% endif %}
+{% endunless %}
 
 
  <div id="tabs-all"  class = "no-external">
-<!-- =======Summary======== -->
+<!-- =======All Views View ======== -->
 {% unless "{{[id]}}" contains "extension"%}
   <div id="all-tbl-summ">
     <div id="all-tbl-summ-inner">
@@ -191,34 +197,33 @@ This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basep
 {% endunless %}
 <!-- =======XML and JSON ======== -->
 
-
-    {% if showPsuedoJson %}
+    {% if site.showPsuedoXML %}
         <div id="all-xml">
          <p><b>XML Template</b></p>
          <div id="all-xml-inner">
-      {% include {{[type]}}-{{[id]}}-pseudo-xml.xhtml %}
-         </div>
-        </div>
-    {% endif %}
-
-    {% if showPsuedoXML %}
-        <div id="all-json">
-         <p><b>JSON Template</b></p>
-         <div id="all-json-inner">
             <pre class="spec">
-             {% include {{[type]}}-{{[id]}}-pseudo-json.xhtml %}
+             {% include {{[type]}}-{{[id]}}-pseudo-xml.xhtml %}
             </pre>
         </div>
       </div>
     {% endif %}
 
-
+    {% if site.showPsuedoJson %}
+        <div id="all-json">
+         <p><b>JSON Template</b></p>
+         <div id="all-json-inner">
+      <pre class="spec">
+      {% include {{[type]}}-{{[id]}}-pseudo-json.xhtml %}
+      </pre>
+         </div>
+        </div>
+    {% endif %}
  </div>
 </div>
 
 <br />
 
-{% if site.data.structuredefinitions.{{[id]}}.kind == "resource" %}
+{% if site.data.structuredefinitions.{{[id]}}.kind == "resource" and site.showQuickStart %}
 
 <a name="downloads"> </a>
 <p>Downloads: StructureDefinition: (<a href="{{[type]}}-{{[id]}}.xml" download>XML</a>, <a href="{{[type]}}-{{[id]}}.json" download>JSON</a>), Schema:  <a href="{{[id]}}.sch" download>XML Schematron</a></p>

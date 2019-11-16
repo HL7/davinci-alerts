@@ -62,3 +62,4 @@
 [Da Vinci Notification Discharge Message Definition]: MessageDefinition-notification-discharge.html
 [Bundle Admit Notification Message Bundle 01]: Bundle-admit-notification-message-bundle-01.html
 [Bundle Discharge Notification Message Bundle 01]: Bundle-discharge-notification-message-bundle-01.html
+[aggregation]: {{site.data.fhir.path}}elementdefinition-definitions.html#ElementDefinition.aggregation

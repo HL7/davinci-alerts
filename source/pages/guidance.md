@@ -79,16 +79,19 @@ For all Da Vinci Notification Message Bundles, the following resources are manda
 **Each Bundle must have:**
 
 1. *MessageHeader*
-1. The event or request resource referenced by MessageHeader.focus
+1. The event or request resource referenced by `MessageHeader.focus`
   - For example, the *Encounter* for admissions notification
 
-**Each MessageHeader must support:**
+**Each Bundle must support:**
 
 1. US Core *Organization*, *Practitioner*, or *PractionerRole* referenced by `MessageHeader.sender`
 1. US Core *Organization*, *Practitioner*, or *PractionerRole* referenced by `MessageHeader.responsible`
 1. US Core *Practitioner*, or *PractionerRole* referenced by `MessageHeader.author`
-1.  *All* resources directly referenced by the `MessageHeader.focus` resource.
-   - For example, *Patient*, *Provider*
+1. *All* resources directly referenced by the `MessageHeader.focus` resource. Implementers should carefully consider what information they are willing to share and only include those reference elements for the use case in the focus resources. This can be formally defined by profiling the focus resource.  For example the admit/discharge use case focal resource is the [US Core Encounter Profile].
+
+   Implementers that use FHIR as their persistence layer may need to modify those resources before assembling the message bundle to avoid sending sensitive or unnecessary data.
+   {:.highlight-note}
+
 1.  *All* resources needed for the Receiver or Intermediary to be able to interpret the notification and process the message *provided* that the resources have a traversal path to or from `MessageHeader.focus` resource.  These requirements are use case specific and need to be determined by the implementation community based on their data requirements.
 
 #### How to define the Message Bundle
@@ -112,7 +115,7 @@ and [Da Vinci Notifications Bundle Profile] are used to define the base constrai
 ##### FHIR Profiles
 {:.no_toc}
 
-In this method all the profiles that populate the Bundle get enforced by their references and the fact their aggregation is constrained is 'bundled'.  This means that these references to only resources that populate the same bundle.  Therefore, starting with the MessageHeader profile, the profiled resources within the bundle form a chain of links that define the bundle.
+In this method all the profiles that populate the Bundle get enforced by their references and the fact their [aggregation] is constrained to 'bundled'.  This means that these references to only resources that populate the same bundle.  Therefore, starting with the MessageHeader profile, the profiled resources within the bundle form a chain of links that define the bundle.
 
 Use case specific Da Vinci Notification Bundles can be derived from the:
 
@@ -121,7 +124,7 @@ Use case specific Da Vinci Notification Bundles can be derived from the:
 
 See the Admit/Discharge use case for an example of defining a Bundle using this method.
 
-FHIR profiling is more mature mechanism and broadly supported by the implementation community, reference implementations, and validation tooling.  It however may require more artifacts than using MessageDefintion/GraphDefinition. As well, there is no mechanism to enforce profiles in a message on a reverse link because “reverse links” cannot be traversed forward from the MessageHeader.
+FHIR profiling is more mature mechanism and broadly supported by the implementation community, reference implementations, and validation tooling.  However,there is no mechanism to enforce profiles in a message on a reverse link because “reverse links” cannot be traversed forward from the MessageHeader. It may also require more artifacts than using MessageDefintion/GraphDefinition.
 {:.highlight-note}
 
 
@@ -140,7 +143,7 @@ Use case specific Da Vinci Notification Bundles can be derived from the:
 
 See the Admit/Discharge use case for an example of defining a Bundle using this method.
 
-MessageDefinition and GraphDefinition are immature resources and may have breaking changes in future version of FHIR.  At the time of this publication, the implementation community, reference implementations, and validation tooling does not currently fully support them.
+MessageDefinition and GraphDefinition are immature resources and may have breaking changes in future version of FHIR.  At the time of this publication, the implementation community, reference implementations, and validation tooling does not fully support them.
 {:.highlight-note}
 
 
@@ -248,7 +251,7 @@ All elements in the Da Vinci Notification profiles have a [MustSupport flag]. Sy
 
 #### GraphDefinition
 
-All elements in the Da Vinci Notification GraphDefinition have a [MustSupport flag]. Systems claiming to conform to a GraphDefinition must "support" the link as defined below:
+All elements in the Da Vinci Notification GraphDefinition have a [Da Vinci Notifications Must Support Extension]. Systems claiming to conform to a GraphDefinition must "support" the link as defined below:
 
 ##### This guide adopts the following definitions of Must Support for all *direct* transactions between the Sender and Recipient or Intermediary
 {:.no_toc}

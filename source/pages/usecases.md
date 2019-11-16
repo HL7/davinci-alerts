@@ -101,15 +101,15 @@ The Following MessageDefinition and GraphDefinition can be used to formally defi
 - \*** MessageDefinition is used to formally define the Message content for a given event (e.g, an inpatient admission or discharge).  It defines the event and the focal and non focal Resources/Profiles that make up the message:
 -->
 
-### Da Vinci Notification Message Bundle
+### Da Vinci Notification Message Bundle Examples
 
-The admit and discharge Da Vinci Notification Bundles can be assembled based on any of the above definitions.
+A Da Vinci Notification Bundles such as these examples can be assembled based on any of the above definitions.
 
 {% include list-simple-bundles.xhtml %}
 
 ### Pushing Unsolicited Admit/Discharge Notification
 
-In the following interaction shown in figures 9, the HealthCare facility is acting in the role of the Notification Sender and the Notification Recipient can be any of the actors listed in figure 1 on the home page.  To notify the Notification Recipients/Intermediary of an admit or discharge event, the Notification Sender uses $process-message operation to submit the Notification Message to appropriate FHIR endpoints. Not shown in figure 9 is that when the Intermediary successfully receives and processes the notifications, it subsequently forwards the data the end users.
+In the interaction shown in figures 9, the HealthCare facility is acting in the role of the Notification Sender and the Notification Recipient can be any of the actors listed on the home page.  To notify the Notification Recipients/Intermediary of an admit or discharge event, the Notification Sender uses $process-message operation to submit the Notification Message to appropriate FHIR endpoints. Not shown in figure 9 is that when the Intermediary successfully receives and processes the notifications, it subsequently forwards the data the end users.
 
 {% include img-portrait.html img="$process_message_admit_wf.svg" caption="Figure 9" %}
 
