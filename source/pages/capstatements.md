@@ -16,12 +16,12 @@ There are 4 Capability Statements defined to describe the expectations for this 
 
 <br />
 
-### The following table summarizes how these CapabilityStatements applies to each Da Vinci Notification Actor
+### The following table summarizes how these CapabilityStatements applies to the Da Vinci Notification Actors
 
 |Actor|server-mode|client-mode|
 |---|---|---|
-|Sender |Da Vinci Notification Query Responder | Da Vinci Notification Initiator|
-|Intermediary |Da Vinci Notification Receiver,Da Vinci Notification Query Responder|Da Vinci Notification QueryRequester, Da Vinci Notification Initiator|
+|Sender |Da Vinci Notification Query Responder | Da Vinci Notification Sender|
+|Intermediary |Da Vinci Notification Receiver,Da Vinci Notification Query Responder|Da Vinci Notification QueryRequester, Da Vinci Notification Sender|
 |Recipient |Da Vinci Notification Receiver | Da Vinci Notification Query Requester|
 {: .grid}
 
