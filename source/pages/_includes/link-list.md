@@ -60,3 +60,5 @@
 [Messageheader Discharge Notification Messageheader 01]: MessageHeader-discharge-notification-messageheader-01.html
 [Da Vinci Notification Admit Message Definition]: MessageDefinition-notification-admit.html
 [Da Vinci Notification Discharge Message Definition]: MessageDefinition-notification-discharge.html
+[Bundle Admit Notification Message Bundle 01]: Bundle-admit-notification-message-bundle-01.html
+[Bundle Discharge Notification Message Bundle 01]: Bundle-discharge-notification-message-bundle-01.html
