@@ -1,33 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MessageHeader xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-CURRENT/valueset.xsd">
+<MessageHeader xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-4.0.1/fhir-all.xsd">
 	<id value="discharge-notification-messageheader-01"/>
+	<meta>
+		<profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/discharge-notification-messageheader"/>
+	</meta>
 	<eventCoding>
 		<system value="http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event"/>
 		<code value="notification-discharge"/>
+		<display value="Notification discharge"/>
 	</eventCoding>
 	<destination>
 		<name value="Acme Message Gateway"/>
 		<!-- this is to indicate to the Acme Message Gateway that this particular message is intended for Practitioner "xcda" -->
-		<target>
-			<display value="Device/example"/>
-		</target>
-		<endpoint value="llp:10.11.12.14:5432"/>
-		<receiver>
-			<!-- this is an absolute reference to the receiver (causes an error in the ig-publisher) <reference value="http://acme.com/ehr/fhir/PractitionerRole/example"/> -->
-			<display value="Acme Message Gateway"/>
-		</receiver>
+		<endpoint value="https://example.org/Endpoints/P123"/>
 	</destination>
 	<sender>
-		<reference value="Organization/example-2"/>
+		<reference value="urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade"/>
+		<display value="Saint Luke W Endpoint"/>
 	</sender>
-	<!-- <timestamp value="2012-01-04T09:10:14Z"/> -->
+	<!--
 	<enterer>
-		<!-- <reference value="http://acme.com/ehr/fhir/Practitioner/example-1"/> -->
+		<reference value="http://acme.com/ehr/fhir/Practitioner/example-1"/>
 		<display value="Dr Smith"/>
 	</enterer>
+-->
 	<author>
-		<!-- <reference value="http://acme.com/ehr/fhir/Practitioner/example-1"/> -->
-		<display value="Dr Smith"/>
+		<reference value="urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59"/>
+		<display value="Ronald Bone"/>
 	</author>
 	<source>
 		<name value="Acme Central Patient Registry"/>
@@ -37,11 +36,18 @@
 			<system value="phone"/>
 			<value value="+1 (555) 123 4567"/>
 		</contact>
-		<endpoint value="llp:10.11.12.13:5432"/>
+		<endpoint value="https://example.org/Endpoints/P456"/>
 	</source>
+	<responsible>
+		<reference value="urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade"/>
+		<display value="Saint Luke W Endpoint"/>
+	</responsible>
 	<!-- Here's the payload, the resource that this notification concerns -->
 	<focus>
-		<reference value="Encounter/example-1"/>
+		<reference value="urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7"/>
+		<display value="Inpatient Encounter"/>
 	</focus>
+	<!--
 	<definition value="http://hl7.org/fhir/us/davinci-notifications/MessageDefinition/notification-admit"/>
+-->
 </MessageHeader>

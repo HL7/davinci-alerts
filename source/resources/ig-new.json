@@ -106,7 +106,7 @@
     },
     {
       "reference" : {
-        "reference" : "CapabilityStatement/notification-initiator"
+        "reference" : "CapabilityStatement/notification-sender"
       },
       "exampleBoolean" : false
     },
@@ -118,7 +118,7 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/notifications-graphdefinition"
+        "reference" : "StructureDefinition/extension-mustSupport"
       },
       "exampleBoolean" : false
     },
@@ -305,7 +305,7 @@
         "title" : "Capability Statements",
         "generation" : "markdown",
         "page" : [{
-          "nameUrl" : "CapabilityStatement-notification-initiator.html",
+          "nameUrl" : "CapabilityStatement-notification-sender.html",
           "title" : "CapabilityStatement Notification Initiator",
           "generation" : "generated"
         },

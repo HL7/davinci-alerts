@@ -32,6 +32,7 @@ none
 
 ### Examples
 
-- [{{base_type}} Example]({{base_type}}-{{base_id}}-01.html)
+- [Da Vinci Notification Admit Message Definition]
+- [Da Vinci Notification Discharge Message Definition]
 
 {% include link-list.md %}

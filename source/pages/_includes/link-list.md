@@ -50,8 +50,13 @@
 [Da Vinci Discharge Notification MessageHeader Profile]: StructureDefinition-discharge-notification-messageheader.html
 [Da Vinci Admit/Discharge Notification Condition Profile]: StructureDefinition-admit-discharge-notification-condition.html
 [Da Vinci Admit/Discharge Notification Coverage Profile]: StructureDefinition-admit-discharge-notification-coverage.html
-[Da Vinci Admit/Discharge Notification Encounter Profile]: (StructureDefinition-a dmit-discharge-notification-encounter.html)
+[Da Vinci Admit/Discharge Notification Encounter Profile]: StructureDefinition-admit-discharge-notification-encounter.html
 [FHIR message Bundle]: {{site.data.fhir.path}}bundle.html#message
 [Da Vinci Notification Event ValueSet]: ValueSet-notification-event.html
 [Da Vinci Notification Event CodeSystem]: CodeSystem-notification-event.html
 [Example Transaction]: usecases.html#example-transaction
+[NotificationAdmitDischarge]: GraphDefinition-admit-discharge.html
+[Messageheader Admit Notification Messageheader 01]: MessageHeader-admit-notification-messageheader-01.html
+[Messageheader Discharge Notification Messageheader 01]: MessageHeader-discharge-notification-messageheader-01.html
+[Da Vinci Notification Admit Message Definition]: MessageDefinition-notification-admit.html
+[Da Vinci Notification Discharge Message Definition]: MessageDefinition-notification-discharge.html

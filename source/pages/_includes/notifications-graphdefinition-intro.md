@@ -14,6 +14,6 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 ### Examples
 
-- [{{base_type}} Example]({{base_type}}-{{base_id}}-01.html
+- [NotificationAdmitDischarge]
 
 {% include link-list.md %}

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GraphDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-CURRENT/fhir-all.xsd">
+<GraphDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-4.0.1/fhir-all.xsd">
 	<id value="admit-discharge"/>
 	<meta>
 		<profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-graphdefinition"/>
 	</meta>
-
 	<!-- custom text with table sincel ig-pub generator not able to render correctly -->
 	<text>
 		<status value="generated"/>
@@ -45,6 +44,7 @@
 			</p>
 			<p>
 				<b>Links</b>:
+							</p>
 				<table class="grid">
 					<thead>
 						<tr>
@@ -142,7 +142,6 @@
 					</tbody>
 				</table>
 
-			</p>
 		</div>
 	</text>
 	<!-- end custom text-->
@@ -163,7 +162,9 @@
 	<profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-messageheader"/>
 	<!-- define the MessageHeader links -->
 	<link>
-		<extension url="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-mustSupport"><valueCode value="true"/></extension>
+		<extension url="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-mustSupport">
+			<valueBoolean value="true"/>
+		</extension>
 		<path value="MessageHeader.focus"/>
 		<min value="1"/>
 		<max value="1"/>
@@ -172,7 +173,9 @@
 			<profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/>
 			<!-- and inside this target any more links -->
 			<link>
-				<extension url="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-mustSupport"><valueCode value="true"/></extension>
+				<extension url="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-mustSupport">
+					<valueBoolean value="true"/>
+				</extension>
 				<path value="Encounter.location"/>
 				<min value="1"/>
 				<max value="*"/>
@@ -182,7 +185,9 @@
 				</target>
 			</link>
 			<link>
-				<extension url="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-mustSupport"><valueCode value="true"/></extension>
+				<extension url="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-mustSupport">
+					<valueBoolean value="true"/>
+				</extension>
 				<path value="Encounter.participant.individual"/>
 				<min value="0"/>
 				<max value="*"/>
@@ -192,7 +197,9 @@
 				</target>
 			</link>
 			<link>
-				<extension url="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-mustSupport"><valueCode value="true"/></extension>
+				<extension url="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-mustSupport">
+					<valueBoolean value="true"/>
+				</extension>
 				<path value="Encounter.subject"/>
 				<min value="1"/>
 				<max value="1"/>
@@ -200,7 +207,9 @@
 					<type value="Patient"/>
 					<profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
 					<link>
-						<extension url="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-mustSupport"><valueCode value="true"/></extension>
+						<extension url="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-mustSupport">
+							<valueBoolean value="true"/>
+						</extension>
 						<min value="0"/>
 						<max value="1"/>
 						<target>
@@ -212,7 +221,9 @@
 				</target>
 			</link>
 			<link>
-				<extension url="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-mustSupport"><valueCode value="true"/></extension>
+				<extension url="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-mustSupport">
+					<valueBoolean value="true"/>
+				</extension>
 				<min value="0"/>
 				<max value="*"/>
 				<target>
@@ -225,7 +236,9 @@
 	</link>
 	<!-- <link> <path value="MessageHeader.definition"/> <min value="0"/> <max value="1"/> <target> <type value="MessageDefinition"/> <profile value="http://hl7.org/fhir/us/davinci-notifications/MessageDefinition/notification"/> </target> </link> -->
 	<link>
-		<extension url="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-mustSupport"><valueCode value="true"/></extension>
+		<extension url="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-mustSupport">
+			<valueBoolean value="true"/>
+		</extension>
 		<path value="MessageHeader.sender"/>
 		<min value="0"/>
 		<max value="1"/>
@@ -243,7 +256,9 @@
 		</target>
 	</link>
 	<link>
-		<extension url="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-mustSupport"><valueCode value="true"/></extension>
+		<extension url="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-mustSupport">
+			<valueBoolean value="true"/>
+		</extension>
 		<path value="MessageHeader.responsible"/>
 		<min value="0"/>
 		<max value="1"/>
@@ -263,9 +278,10 @@
 			<!-- <link> <path value="Organization.endpoint"/> <min value="0"/> <max value="1"/> <target> <type value="Endpoint"/> <profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-endpoint"/> </target> </link> -->
 		</target>
 	</link>
-
 	<link>
-		<extension url="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-mustSupport"><valueCode value="true"/></extension>
+		<extension url="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-mustSupport">
+			<valueBoolean value="true"/>
+		</extension>
 		<path value="MessageHeader.author"/>
 		<min value="0"/>
 		<max value="1"/>

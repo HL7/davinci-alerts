@@ -1,67 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-4.0.1/fhir-all.xsd">
+<Bundle xmlns="http://hl7.org/fhir">
 	<id value="discharge-notification-message-bundle-01"/>
+	<meta>
+		<profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-bundle"/>
+	</meta>
 	<type value="message"/>
 	<timestamp value="2019-11-14T08:08:47Z"/>
+
 	<entry>
-		<fullUrl value="urn:uuid:267b18ce-3d37-4581-9baa-6fada338038c"/>
+		<fullUrl value="urn:uuid:267b18ce-3d37-4581-9baa-6fada338038b"/>
 		<resource>
-<MessageHeader xmlns="http://hl7.org/fhir">
-  <id value="267b18ce-3d37-4581-9baa-6fada338038c"/>
-  <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: discharge-notification-messageheader-01</p><p><b>event</b>: Notification Discharge (Details: http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event code notification-discharge = 'Notification Discharge', stated as 'null')</p><h3>Destinations</h3><table class="grid"><tr><td>-</td><td><b>Name</b></td><td><b>Target</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td>*</td><td>Acme Message Gateway</td><td>Device/example</td><td><a href="llp:10.11.12.14:5432">llp:10.11.12.14:5432</a></td><td>Acme Message Gateway</td></tr></table><p><b>sender</b>: <a href="Organization/example-2">Organization/example-2</a></p><p><b>enterer</b>: Dr Smith</p><p><b>author</b>: Dr Smith</p><h3>Sources</h3><table class="grid"><tr><td>-</td><td><b>Name</b></td><td><b>Software</b></td><td><b>Version</b></td><td><b>Contact</b></td><td><b>Endpoint</b></td></tr><tr><td>*</td><td>Acme Central Patient Registry</td><td>FooBar Patient Manager</td><td>3.1.45.AABB</td><td>ph: +1 (555) 123 4567</td><td><a href="llp:10.11.12.13:5432">llp:10.11.12.13:5432</a></td></tr></table><p><b>focus</b>: <a href="Encounter/example-1">Encounter/example-1</a></p><p><b>definition</b>: <a href="http://hl7.org/fhir/us/davinci-notifications/MessageDefinition/notification-admit">http://hl7.org/fhir/us/davinci-notifications/MessageDefinition/notification-admit</a></p></div>
-  </text>
-  <eventCoding>
-    <system value="http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event"/>
-    <code value="notification-discharge"/>
-  </eventCoding>
-  <destination>
-    <name value="Acme Message Gateway"/>
-  <!--  this is to indicate to the Acme Message Gateway that this particular message is intended for Practitioner "xcda"  -->
-    <target>
-      <display value="Device/example"/>
-    </target>
-    <endpoint value="llp:10.11.12.14:5432"/>
-    <receiver>
-    <!--  this is an absolute reference to the receiver (causes an error in the ig-publisher) <reference value="http://acme.com/ehr/fhir/PractitionerRole/example"/>  -->
-      <display value="Acme Message Gateway"/>
-    </receiver>
-  </destination>
-  <sender>
-    <reference value="Organization/example-2"/>
-  </sender>
-<!--  <timestamp value="2012-01-04T09:10:14Z"/>  -->
-  <enterer>
-  <!--  <reference value="http://acme.com/ehr/fhir/Practitioner/example-1"/>  -->
-    <display value="Dr Smith"/>
-  </enterer>
-  <author>
-  <!--  <reference value="http://acme.com/ehr/fhir/Practitioner/example-1"/>  -->
-    <display value="Dr Smith"/>
-  </author>
-  <source>
-    <name value="Acme Central Patient Registry"/>
-    <software value="FooBar Patient Manager"/>
-    <version value="3.1.45.AABB"/>
-    <contact>
-      <system value="phone"/>
-      <value value="+1 (555) 123 4567"/>
-    </contact>
-    <endpoint value="llp:10.11.12.13:5432"/>
-  </source>
-<!--  Here's the payload, the resource that this notification concerns  -->
-  <focus>
-    <reference value="Encounter/example-1"/>
-  </focus>
-  <definition value="http://hl7.org/fhir/us/davinci-notifications/MessageDefinition/notification-admit"/>
-</MessageHeader>
-		</resource>
+
+			<MessageHeader>
+
+				<meta>
+					<profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/discharge-notification-messageheader"/>
+				</meta>
+				<eventCoding>
+					<system value="http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event"/>
+					<code value="notification-discharge"/>
+					<display value="Notification discharge"/>
+				</eventCoding>
+				<destination>
+					<name value="Acme Message Gateway"/>
+					<!-- this is to indicate to the Acme Message Gateway that this particular message is intended for Practitioner "xcda" -->
+					<endpoint value="https://example.org/Endpoints/P123"/>
+				</destination>
+				<sender>
+					<reference value="urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade"/>
+					<display value="Saint Luke W Endpoint"/>
+				</sender>
+				<!--
+				<enterer>
+					<reference value="http://acme.com/ehr/fhir/Practitioner/example-1"/>
+					<display value="Dr Smith"/>
+				</enterer>
+			-->
+				<author>
+					<reference value="urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59"/>
+					<display value="Ronald Bone"/>
+				</author>
+				<source>
+					<name value="Acme Central Patient Registry"/>
+					<software value="FooBar Patient Manager"/>
+					<version value="3.1.45.AABB"/>
+					<contact>
+						<system value="phone"/>
+						<value value="+1 (555) 123 4567"/>
+					</contact>
+					<endpoint value="https://example.org/Endpoints/P456"/>
+				</source>
+				<responsible>
+					<reference value="urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade"/>
+					<display value="Saint Luke W Endpoint"/>
+				</responsible>
+				<!-- Here's the payload, the resource that this notification concerns -->
+				<focus>
+					<reference value="urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7"/>
+					<display value="Inpatient Encounter"/>
+				</focus>
+				<!--
+				<definition value="http://hl7.org/fhir/us/davinci-notifications/MessageDefinition/notification-admit"/>
+			-->
+			</MessageHeader>
+				</resource>
 	</entry>
+
 	<entry>
 		<fullUrl value="urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7"/>
 		<resource>
-<Encounter xmlns="http://hl7.org/fhir">
-  <id value="a33d1eed-c4ad-4def-8087-042b7ac0f2b7"/>
+<Encounter>
+
   <meta>
     <lastUpdated value="2017-05-26T11:56:57.250-04:00"/>
     <profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-discharge-notification-encounter"/>
@@ -119,8 +128,8 @@
 		<entry>
 		<fullUrl value="urn:uuid:75ea28b5-74b8-4d9c-9eb5-cfdc10b48fa"/>
 		<resource>
-<Location xmlns="http://hl7.org/fhir">
-  <id value="75ea28b5-74b8-4d9c-9eb5-cfdc10b48fa"/>
+<Location>
+
   <meta>
     <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"/>
   </meta>
@@ -159,8 +168,8 @@
 			<entry>
 		<fullUrl value="urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59"/>
 		<resource>
-<Practitioner xmlns="http://hl7.org/fhir">
-  <id value="e4b71aed-1c54-4f85-bea0-48444aa31f59"/>
+<Practitioner>
+
   <meta>
     <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
   </meta>
@@ -194,7 +203,7 @@
 		<fullUrl value="urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4"/>
 		<resource>
 			<Patient>
-				<id value="e442c924-df77-47fa-838f-24a8253bbdd4"/>
+
 				<meta>
 					<profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
 				</meta>
@@ -340,38 +349,38 @@
 		<entry>
 		<fullUrl value="urn:uuid:c470de5b-345c-4945-bc4a-cbdec7d86f54"/>
 		<resource>
-<Coverage xmlns="http://hl7.org/fhir">
-  <id value="c470de5b-345c-4945-bc4a-cbdec7d86f54"/>
+<Coverage>
+
   <meta>
-    <profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-messagedefinition"/>
+    <profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-discharge-notification-coverage"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: admit-discharge-notification-coverage-01</p><p><b>meta</b>: </p><p><b>identifier</b>:     DZW9200000000</p><p><b>status</b>:     active</p><p><b>type</b>: health insurance plan policy <span style="background: LightGoldenRodYellow">(Details : {    http://terminology.hl7.org/CodeSystem/v3-ActCode code '    HIP' = 'health insurance plan policy', given as 'health insurance plan policy'})</span></p><p><b>subscriber</b>: <a href="    urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4">    urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4</a></p><p><b>subscriberId</b>:     DZW9200000000</p><p><b>beneficiary</b>: <a href="    urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4">    urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4</a></p><p><b>relationship</b>:     Self <span style="background: LightGoldenRodYellow">(Details : {    http://terminology.hl7.org/CodeSystem/subscriber-relationship code '    self' = 'Self', given as '    Self'})</span></p><p><b>period</b>: Jan 1, 2016, 12:00:00 AM --&gt; (ongoing)</p><p><b>payor</b>: Anthem Blue Cross of California</p><h3>Classes</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Value</b></td><td><b>Name</b></td></tr><tr><td>*</td><td>Plan <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'plan' = 'Plan)</span></td><td>1FZQ</td><td>Bronze D HSA</td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: admit-discharge-notification-coverage-01</p><p><b>meta</b>: </p><p><b>identifier</b>:     DZW9200000000</p><p><b>status</b>:     active</p><p><b>type</b>: health insurance plan policy <span style="background: LightGoldenRodYellow">(Details : {    http://terminology.hl7.org/CodeSystem/v3-ActCode code '    HIP' = 'health insurance plan policy', given as 'health insurance plan policy'})</span></p><p><b>subscriber</b>: <a href="urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4">    urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4</a></p><p><b>subscriberId</b>:     DZW9200000000</p><p><b>beneficiary</b>: <a href="urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4">    urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4</a></p><p><b>relationship</b>:     Self <span style="background: LightGoldenRodYellow">(Details : {    http://terminology.hl7.org/CodeSystem/subscriber-relationship code '    self' = 'Self', given as '    Self'})</span></p><p><b>period</b>: Jan 1, 2016, 12:00:00 AM --&gt; (ongoing)</p><p><b>payor</b>: Anthem Blue Cross of California</p><h3>Classes</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Value</b></td><td><b>Name</b></td></tr><tr><td>*</td><td>Plan <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'plan' = 'Plan)</span></td><td>1FZQ</td><td>Bronze D HSA</td></tr></table></div>
   </text>
   <identifier>
-    <system value="    https://www.anthem.com/ca"/>
-    <value value="    DZW9200000000"/>
+    <system value="https://www.anthem.com/ca"/>
+    <value value="DZW9200000000"/>
   </identifier>
-  <status value="    active"/>
+  <status value="active"/>
   <type>
     <coding>
-      <system value="    http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
-      <code value="    HIP"/>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <code value="HIP"/>
       <display value="health insurance plan policy"/>
     </coding>
   </type>
   <subscriber>
-    <reference value="    urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4"/>
+    <reference value="urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4"/>
   </subscriber>
-  <subscriberId value="    DZW9200000000"/>
+  <subscriberId value="DZW9200000000"/>
   <beneficiary>
-    <reference value="    urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4"/>
+    <reference value="urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4"/>
   </beneficiary>
   <relationship>
     <coding>
-      <system value="    http://terminology.hl7.org/CodeSystem/subscriber-relationship"/>
-      <code value="    self"/>
-      <display value="    Self"/>
+      <system value="http://terminology.hl7.org/CodeSystem/subscriber-relationship"/>
+      <code value="self"/>
+      <display value="Self"/>
     </coding>
   </relationship>
   <period>
@@ -396,8 +405,8 @@
 	<entry>
 		<fullUrl value="urn:uuid:54f0ea3f-dc89-4e71-8d98-8774a5add41e"/>
 		<resource>
-<Condition xmlns="http://hl7.org/fhir">
-  <id value="54f0ea3f-dc89-4e71-8d98-8774a5add41e"/>
+<Condition>
+
   <meta>
     <profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-discharge-notification-condition"/>
   </meta>
@@ -450,8 +459,8 @@
 	<entry>
 		<fullUrl value="urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade"/>
 		<resource>
-<Organization xmlns="http://hl7.org/fhir">
-  <id value="7221aa91-d9e1-44fa-8b90-c5a8c7caeade"/>
+<Organization>
+
   <meta>
     <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
   </meta>
@@ -469,7 +478,7 @@
   </text>
   <contained>
     <Endpoint>
-      <id value="75"/>
+      <id value="direct"/>
       <status value="active"/>
       <connectionType>
         <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
@@ -477,7 +486,7 @@
       </connectionType>
       <name value="Dr. Ronald Bone Direct Address"/>
       <managingOrganization>
-        <reference value="Organization/example-organization-2"/>
+        <reference value="urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade"/>
       </managingOrganization>
       <payloadType>
         <coding>
@@ -517,7 +526,7 @@
     <postalCode value="64111"/>
   </address>
   <endpoint>
-    <reference value="#75"/>
+    <reference value="#direct"/>
   </endpoint>
 </Organization>
 		</resource>

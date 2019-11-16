@@ -19,6 +19,7 @@ none
 
 ### Examples
 
-- [{{base_type}} Example]({{base_type}}-{{base_id}}-01.html)
+- [Bundle Admit Notification Message Bundle 01]
+- [Bundle Discharge Notification Message Bundle 01]
 
 {% include link-list.md %}

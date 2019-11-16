@@ -101,7 +101,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/notification-initiator"/>
+        <reference value="CapabilityStatement/notification-sender"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -113,7 +113,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/notifications-graphdefinition"/>
+        <reference value="StructureDefinition/extension-mustSupport"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -300,7 +300,7 @@
         <title value="Capability Statements"/>
         <generation value="markdown"/>
         <page>
-          <nameUrl value="CapabilityStatement-notification-initiator.html"/>
+          <nameUrl value="CapabilityStatement-notification-sender.html"/>
           <title value="CapabilityStatement Notification Initiator"/>
           <generation value="generated"/>
         </page>

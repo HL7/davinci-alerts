@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MessageHeader xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-4.0.1/fhir-all.xsd">
 	<id value="admit-notification-messageheader-01"/>
+	<meta>
+		<profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-notification-messageheader"/>
+	</meta>
 	<eventCoding>
 		<system value="http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event"/>
 		<code value="notification-admit"/>
@@ -9,14 +12,7 @@
 	<destination>
 		<name value="Acme Message Gateway"/>
 		<!-- this is to indicate to the Acme Message Gateway that this particular message is intended for Practitioner "xcda" -->
-		<target>
-			<display value="Device/example"/>
-		</target>
 		<endpoint value="https://example.org/Endpoints/P123"/>
-		<receiver>
-			<!-- this is an absolute reference to the receiver (causes an error in the ig-publisher) <reference value="http://acme.com/ehr/fhir/PractitionerRole/example"/> -->
-			<display value="Acme Message Gateway"/>
-		</receiver>
 	</destination>
 	<sender>
 		<reference value="urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade"/>

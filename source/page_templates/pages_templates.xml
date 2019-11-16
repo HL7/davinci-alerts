@@ -4,5 +4,4 @@
 <!-- ============ Use Case Page =============== -->
 <page><nameUrl value="usecases.html"/><title value="Admit/Discharge Use Case"/><generation value="markdown"/></page>
 
-
 <!-- get rid of search, opdef -->

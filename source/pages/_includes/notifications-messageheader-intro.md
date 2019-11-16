@@ -26,6 +26,7 @@ The `destination.endpoint` and `source.endpoint` can be in any form of url the s
 
 ### Examples
 
-- [{{base_type}} Example]({{base_type}}-{{base_id}}-01.html)
+- [Messageheader Admit Notification Messageheader 01]
+- [Messageheader Discharge Notification Messageheader 01]
 
 {% include link-list.md %}

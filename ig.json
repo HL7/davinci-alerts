@@ -1,1 +1,240 @@
-{"broken-links": "warning", "working-dir": "/Users/ehaas/Documents/FHIR/Davinci-Alerts/", "contact": [{"system": "url", "value": "http://www.hl7.org/Special/committees/inm/index.cfm"}], "do-transforms": "false", "dependencyList": [{"name": "uscore", "package": "hl7.fhir.us.core", "version": "3.1.0", "location": "http://hl7.org/fhir/us/core"}, {"name": "hrex", "package": "hl7.fhir.us.davinci-hrex", "version": "0.1.0", "location": "http://hl7.org/fhir/us/davinci-hrex"}], "status": "draft", "tool": "jekyll", "publisher": "HL7 International - Infrastructure and Messaging Work Group", "igtemplate-dir": "/Users/ehaas/Documents/FHIR/Davinci-Alerts/", "resources": {"StructureDefinition/admit-discharge-notification-encounter": {"source": "StructureDefinition-admit-discharge-notification-encounter.xml", "defns": "StructureDefinition-admit-discharge-notification-encounter-definitions.html", "base": "StructureDefinition-admit-discharge-notification-encounter.html"}, "CapabilityStatement/query-requester": {"source": "capabilitystatement-query-requester.json", "base": "CapabilityStatement-query-requester.html"}, "MessageHeader/discharge-notification-messageheader-01": {"source": "discharge-notification-messageheader-01.xml", "base": "MessageHeader-discharge-notification-messageheader-01.html"}, "Encounter/admit-discharge-notification-encounter-01": {"source": "admit-discharge-notification-encounter-01.xml", "base": "Encounter-admit-discharge-notification-encounter-01.html"}, "MessageDefinition/notification-discharge": {"source": "messagedefinition-notification-discharge.xml", "base": "MessageDefinition-notification-discharge.html"}, "Condition/admit-discharge-notification-condition-01": {"source": "admit-discharge-notification-condition-01.xml", "base": "Condition-admit-discharge-notification-condition-01.html"}, "MessageDefinition/notification-admit": {"source": "messagedefinition-notification-admit.xml", "base": "MessageDefinition-notification-admit.html"}, "Bundle/discharge-notification-message-bundle-01": {"source": "discharge-notification-message-bundle-01.xml", "base": "Bundle-discharge-notification-message-bundle-01.html"}, "StructureDefinition/notifications-messagedefinition": {"defns": "StructureDefinition-notifications-messagedefinition-definitions.html", "base": "StructureDefinition-notifications-messagedefinition.html"}, "StructureDefinition/notifications-bundle": {"defns": "StructureDefinition-notifications-bundle-definitions.html", "base": "StructureDefinition-notifications-bundle.html"}, "StructureDefinition/notifications-graphdefinition": {"defns": "StructureDefinition-notifications-graphdefinition-definitions.html", "base": "StructureDefinition-notifications-graphdefinition.html"}, "CapabilityStatement/notification-initiator": {"source": "capabilitystatement-notification-initiator.json", "base": "CapabilityStatement-notification-initiator.html"}, "Coverage/admit-discharge-notification-coverage-01": {"source": "admit-discharge-notification-coverage-01.xml", "base": "Coverage-admit-discharge-notification-coverage-01.html"}, "CodeSystem/notification-event": {"source": "CodeSystem-notification-event.xml", "base": "CodeSystem-notification-event.html"}, "GraphDefinition/admit-discharge": {"source": "graphdefinition-admit-discharge.xml", "base": "GraphDefinition-admit-discharge.html"}, "StructureDefinition/notifications-messageheader": {"source": "StructureDefinition-notifications-messageheader.xml", "defns": "StructureDefinition-notifications-messageheader-definitions.html", "base": "StructureDefinition-notifications-messageheader.html"}, "CapabilityStatement/notification-receiver": {"source": "capabilitystatement-notification-receiver.json", "base": "CapabilityStatement-notification-receiver.html"}, "ValueSet/notification-event": {"source": "ValueSet-notification-event.xml", "base": "ValueSet-notification-event.html"}, "StructureDefinition/admit-discharge-notification-coverage": {"source": "StructureDefinition-admit-discharge-notification-coverage.xml", "defns": "StructureDefinition-admit-discharge-notification-coverage-definitions.html", "base": "StructureDefinition-admit-discharge-notification-coverage.html"}, "StructureDefinition/admit-discharge-notification-condition": {"source": "StructureDefinition-admit-discharge-notification-condition.xml", "defns": "StructureDefinition-admit-discharge-notification-condition-definitions.html", "base": "StructureDefinition-admit-discharge-notification-condition.html"}, "MessageHeader/admit-notification-messageheader-01": {"source": "admit-notification-messageheader-01.xml", "base": "MessageHeader-admit-notification-messageheader-01.html"}, "StructureDefinition/admit-notification-messageheader": {"source": "StructureDefinition-admit-notification-messageheader.xml", "defns": "StructureDefinition-admit-notification-messageheader-definitions.html", "base": "StructureDefinition-admit-notification-messageheader.html"}, "StructureDefinition/discharge-notification-messageheader": {"source": "StructureDefinition-discharge-notification-messageheader.xml", "defns": "StructureDefinition-discharge-notification-messageheader-definitions.html", "base": "StructureDefinition-discharge-notification-messageheader.html"}, "Bundle/admit-notification-message-bundle-01": {"source": "admit-notification-message-bundle-01.xml", "base": "Bundle-admit-notification-message-bundle-01.html"}, "CapabilityStatement/query-responder": {"source": "capabilitystatement-query-responder.json", "base": "CapabilityStatement-query-responder.html"}}, "swagger": [{"capabilities": "server", "mode": "single"}], "version": "4.0.1", "fixed-business-version": "0.1.0", "pub_url": "ehaas@healthedatainc.com", "jurisdiction": "US", "title": "Da Vinci Unsolicited Notifications", "logging": ["progress"], "canonicalBase": "http://hl7.org/fhir/us/davinci-notifications", "gen-examples": "false", "paths": {"resources": ["source/resources", "source/examples"], "history": "http://hl7.org/fhir/us/davinci-notifications/history.cfml", "temp": "generated_output/temp", "txCache": "generated_output/txCache", "pages": ["framework", "source/pages"], "qa": "generated_output/qa", "specification": "http://hl7.org/fhir/R4/", "output": "output"}, "npm-name": "hl7.fhir.us.davinci-notifications", "spreadsheets": ["notifications-messagedefinition-spreadsheet.xml", "notifications-bundle-spreadsheet.xml", "notifications-graphedefinition-spreadsheet.xml"], "extraTemplates": ["mappings"], "allviews": "true", "defaults": {"MessageHeader": {"template-base": "ex.html"}, "Encounter": {"template-base": "ex.html"}, "ConceptMap": {"template-base": "base.html"}, "StructureMap": {"profiles": false, "script": false, "template-base": "ex.html", "content": false}, "Condition": {"template-base": "ex.html"}, "CodeSystem": {"template-base": "base.html"}, "CapabilityStatement": {"template-base": "base.html"}, "Bundle": {"template-base": "ex.html"}, "SearchParameter": {"template-base": "base.html"}, "ValueSet": {"template-base": "base.html"}, "OperationDefinition": {"template-base": "base.html"}, "Any": {"swagger": "true", "template-format": "format.html", "template-base": "base.html"}, "StructureDefinition": {"template-defns": "sd-definitions.html", "template-base": "sd.html", "template-mappings": "sd-mappings.html"}, "Coverage": {"template-base": "ex.html"}}, "license": "CC0-1.0", "source": "ig.xml", "name": "DaVinciUnsolicitedNotifications", "topofpage": "true", "sct-edition": "http://snomed.info/sct/731000124108", "no-inactive-codes": "false"}
+{
+  "broken-links": "warning",
+  "working-dir": "/Users/ehaas/Documents/FHIR/Davinci-Alerts/",
+  "contact": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org/Special/committees/inm/index.cfm"
+    }
+  ],
+  "do-transforms": "false",
+  "dependencyList": [
+    {
+      "name": "uscore",
+      "package": "hl7.fhir.us.core",
+      "version": "3.1.0",
+      "location": "http://hl7.org/fhir/us/core"
+    },
+    {
+      "name": "hrex",
+      "package": "hl7.fhir.us.davinci-hrex",
+      "version": "0.1.0",
+      "location": "http://hl7.org/fhir/us/davinci-hrex"
+    }
+  ],
+  "status": "draft",
+  "tool": "jekyll",
+  "publisher": "HL7 International - Infrastructure and Messaging Work Group",
+  "igtemplate-dir": "/Users/ehaas/Documents/FHIR/Davinci-Alerts/",
+  "resources": {
+    "StructureDefinition/admit-discharge-notification-encounter": {
+      "source": "StructureDefinition-admit-discharge-notification-encounter.xml",
+      "defns": "StructureDefinition-admit-discharge-notification-encounter-definitions.html",
+      "base": "StructureDefinition-admit-discharge-notification-encounter.html"
+    },
+    "StructureDefinition/extension-mustSupport": {
+      "defns": "StructureDefinition-extension-mustSupport-definitions.html",
+      "base": "StructureDefinition-extension-mustSupport.html"
+    },
+    "CapabilityStatement/query-requester": {
+      "source": "capabilitystatement-query-requester.json",
+      "base": "CapabilityStatement-query-requester.html"
+    },
+    "MessageHeader/discharge-notification-messageheader-01": {
+      "source": "discharge-notification-messageheader-01.xml",
+      "base": "MessageHeader-discharge-notification-messageheader-01.html"
+    },
+    "Encounter/admit-discharge-notification-encounter-01": {
+      "source": "admit-discharge-notification-encounter-01.xml",
+      "base": "Encounter-admit-discharge-notification-encounter-01.html"
+    },
+    "MessageDefinition/notification-discharge": {
+      "source": "messagedefinition-notification-discharge.xml",
+      "base": "MessageDefinition-notification-discharge.html"
+    },
+    "Condition/admit-discharge-notification-condition-01": {
+      "source": "admit-discharge-notification-condition-01.xml",
+      "base": "Condition-admit-discharge-notification-condition-01.html"
+    },
+    "MessageDefinition/notification-admit": {
+      "source": "messagedefinition-notification-admit.xml",
+      "base": "MessageDefinition-notification-admit.html"
+    },
+    "Bundle/discharge-notification-message-bundle-01": {
+      "source": "discharge-notification-message-bundle-01.xml",
+      "base": "Bundle-discharge-notification-message-bundle-01.html"
+    },
+    "StructureDefinition/notifications-messagedefinition": {
+      "defns": "StructureDefinition-notifications-messagedefinition-definitions.html",
+      "base": "StructureDefinition-notifications-messagedefinition.html"
+    },
+    "StructureDefinition/notifications-bundle": {
+      "defns": "StructureDefinition-notifications-bundle-definitions.html",
+      "base": "StructureDefinition-notifications-bundle.html"
+    },
+    "StructureDefinition/notifications-graphdefinition": {
+      "defns": "StructureDefinition-notifications-graphdefinition-definitions.html",
+      "base": "StructureDefinition-notifications-graphdefinition.html"
+    },
+    "CapabilityStatement/notification-initiator": {
+      "source": "capabilitystatement-notification-initiator.json",
+      "base": "CapabilityStatement-notification-initiator.html"
+    },
+    "Coverage/admit-discharge-notification-coverage-01": {
+      "source": "admit-discharge-notification-coverage-01.xml",
+      "base": "Coverage-admit-discharge-notification-coverage-01.html"
+    },
+    "CodeSystem/notification-event": {
+      "source": "CodeSystem-notification-event.xml",
+      "base": "CodeSystem-notification-event.html"
+    },
+    "GraphDefinition/admit-discharge": {
+      "source": "graphdefinition-admit-discharge.xml",
+      "base": "GraphDefinition-admit-discharge.html"
+    },
+    "StructureDefinition/notifications-messageheader": {
+      "source": "StructureDefinition-notifications-messageheader.xml",
+      "defns": "StructureDefinition-notifications-messageheader-definitions.html",
+      "base": "StructureDefinition-notifications-messageheader.html"
+    },
+    "CapabilityStatement/notification-receiver": {
+      "source": "capabilitystatement-notification-receiver.json",
+      "base": "CapabilityStatement-notification-receiver.html"
+    },
+    "ValueSet/notification-event": {
+      "source": "ValueSet-notification-event.xml",
+      "base": "ValueSet-notification-event.html"
+    },
+    "StructureDefinition/admit-discharge-notification-coverage": {
+      "source": "StructureDefinition-admit-discharge-notification-coverage.xml",
+      "defns": "StructureDefinition-admit-discharge-notification-coverage-definitions.html",
+      "base": "StructureDefinition-admit-discharge-notification-coverage.html"
+    },
+    "StructureDefinition/admit-discharge-notification-condition": {
+      "source": "StructureDefinition-admit-discharge-notification-condition.xml",
+      "defns": "StructureDefinition-admit-discharge-notification-condition-definitions.html",
+      "base": "StructureDefinition-admit-discharge-notification-condition.html"
+    },
+    "MessageHeader/admit-notification-messageheader-01": {
+      "source": "admit-notification-messageheader-01.xml",
+      "base": "MessageHeader-admit-notification-messageheader-01.html"
+    },
+    "StructureDefinition/admit-notification-messageheader": {
+      "source": "StructureDefinition-admit-notification-messageheader.xml",
+      "defns": "StructureDefinition-admit-notification-messageheader-definitions.html",
+      "base": "StructureDefinition-admit-notification-messageheader.html"
+    },
+    "StructureDefinition/discharge-notification-messageheader": {
+      "source": "StructureDefinition-discharge-notification-messageheader.xml",
+      "defns": "StructureDefinition-discharge-notification-messageheader-definitions.html",
+      "base": "StructureDefinition-discharge-notification-messageheader.html"
+    },
+    "Bundle/admit-notification-message-bundle-01": {
+      "source": "admit-notification-message-bundle-01.xml",
+      "base": "Bundle-admit-notification-message-bundle-01.html"
+    },
+    "CapabilityStatement/query-responder": {
+      "source": "capabilitystatement-query-responder.json",
+      "base": "CapabilityStatement-query-responder.html"
+    }
+  },
+  "swagger": [
+    {
+      "capabilities": "server",
+      "mode": "single"
+    }
+  ],
+  "version": "4.0.1",
+  "fixed-business-version": "0.1.0",
+  "pub_url": "ehaas@healthedatainc.com",
+  "jurisdiction": "US",
+  "title": "Da Vinci Unsolicited Notifications",
+  "logging": [
+    "progress"
+  ],
+  "canonicalBase": "http://hl7.org/fhir/us/davinci-notifications",
+  "gen-examples": "false",
+  "paths": {
+    "resources": [
+      "source/resources",
+      "source/examples"
+    ],
+    "history": "http://hl7.org/fhir/us/davinci-notifications/history.cfml",
+    "temp": "generated_output/temp",
+    "txCache": "generated_output/txCache",
+    "pages": [
+      "framework",
+      "source/pages"
+    ],
+    "qa": "generated_output/qa",
+    "specification": "http://hl7.org/fhir/R4/",
+    "output": "output"
+  },
+  "npm-name": "hl7.fhir.us.davinci-notifications",
+  "spreadsheets": [
+    "notifications-messagedefinition-spreadsheet.xml",
+    "notifications-bundle-spreadsheet.xml",
+    "notifications-graphedefinition-spreadsheet.xml"
+  ],
+  "extraTemplates": [
+    "mappings"
+  ],
+  "allviews": "true",
+  "defaults": {
+    "MessageHeader": {
+      "template-base": "ex.html"
+    },
+    "Encounter": {
+      "template-base": "ex.html"
+    },
+    "ConceptMap": {
+      "template-base": "base.html"
+    },
+    "StructureMap": {
+      "profiles": false,
+      "script": false,
+      "template-base": "ex.html",
+      "content": false
+    },
+    "Condition": {
+      "template-base": "ex.html"
+    },
+    "CodeSystem": {
+      "template-base": "base.html"
+    },
+    "CapabilityStatement": {
+      "template-base": "base.html"
+    },
+    "Bundle": {
+      "template-base": "ex.html"
+    },
+    "SearchParameter": {
+      "template-base": "base.html"
+    },
+    "ValueSet": {
+      "template-base": "base.html"
+    },
+    "OperationDefinition": {
+      "template-base": "base.html"
+    },
+    "Any": {
+      "swagger": "true",
+      "template-format": "format.html",
+      "template-base": "base.html"
+    },
+    "StructureDefinition": {
+      "template-defns": "sd-definitions.html",
+      "template-base": "sd.html",
+      "template-mappings": "sd-mappings.html"
+    },
+    "Coverage": {
+      "template-base": "ex.html"
+    }
+  },
+  "license": "CC0-1.0",
+  "source": "ig.xml",
+  "name": "DaVinciUnsolicitedNotifications",
+  "topofpage": "true",
+  "sct-edition": "http://snomed.info/sct/731000124108",
+  "no-inactive-codes": "false"
+}
