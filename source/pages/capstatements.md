@@ -12,7 +12,7 @@ end TOC -->
 
 There are 4 Capability Statements defined to describe the expectations for this implementation guide:
 
-{% include list-capabilitystatements.xhtml %}
+{% include simple-list-capabilitystatements.xhtml %}
 
 <br />
 
