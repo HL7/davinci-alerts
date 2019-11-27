@@ -63,3 +63,8 @@
 [Bundle Admit Notification Message Bundle 01]: Bundle-admit-notification-message-bundle-01.html
 [Bundle Discharge Notification Message Bundle 01]: Bundle-discharge-notification-message-bundle-01.html
 [aggregation]: {{site.data.fhir.path}}elementdefinition-definitions.html#ElementDefinition.aggregation
+[SMART Application Launch Framework Implementation Guide Release 1.0.0]: http://www.hl7.org/fhir/smart-app-launch/
+[FHIR Bulk Data Access (Flat FHIR)]: https://hl7.org/fhir/uv/bulkdata/
+[FHIR at Scale Taskforce (FAST)]: https://oncprojectracking.healthit.gov/wiki/pages/viewpage.action?pageId=43614268
+[Da Vinci Health Record Exchange (HRex) Implementation Guide]: http://hl7.org/fhir/us/davinci-hrex/history.html
+[Dynamic Registration for SMART Apps]: http://www.udap.org/udap-dynamic-client-registration.html
