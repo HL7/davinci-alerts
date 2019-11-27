@@ -9,8 +9,8 @@
 	<experimental value="false"/>
 	<date value="2019-11-12T00:00:00-08:00"/>
 	<publisher value="Health eData Inc"/>
-	<description value="The Da Vinci Admit Notification Coverage Profile is based on the [US Core Condition Profile] and adds the mandatory `Condition.encounter` element which references the [US Core Encounter Profile] in the same message Bundle."/>
-	
+	<description value="The Da Vinci Admit Notification Condition Profile is based on the [US Core Condition Profile] and adds the mandatory `Condition.encounter` element which references the [US Core Encounter Profile] in the same message Bundle."/>
+
 	<jurisdiction>
 		<coding>
 			<system value="urn:iso:std:iso:3166"/>

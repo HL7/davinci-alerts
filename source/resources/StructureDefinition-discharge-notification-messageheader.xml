@@ -9,7 +9,7 @@
 	<experimental value="false"/>
 	<date value="2019-11-12T00:00:00-08:00"/>
 	<publisher value="Health eData Inc"/>
-	<description value="The Da Vinci Admit Notification MessageHeader Profile  builds on  the [Da Vinci Notifications MessageHeader Profile] and sets  minimum expectations for the FHIR [MessageHeader] resource to record the necessary context for Da Vinci admit notification messaging scenario.  The event code is &quot;notification-discharge&quot; and the focus of the event is the [US Core Encounter Profile]."/>
+	<description value="The Da Vinci Discharge Notification MessageHeader Profile  builds on  the [Da Vinci Notifications MessageHeader Profile] and sets  minimum expectations for the FHIR [MessageHeader] resource to record the necessary context for Da Vinci discharge notification messaging scenario.  The event code is &quot;notification-discharge&quot; and the focus of the event is the [US Core Encounter Profile]."/>
 	<jurisdiction>
 		<coding>
 			<system value="urn:iso:std:iso:3166"/>
@@ -55,9 +55,9 @@
 			<max value="*"/>
 			<mustSupport value="true"/>
 		</element>
-		<element id="MessageHeader.focus:admit-notification">
+		<element id="MessageHeader.focus:discharge-notification">
 			<path value="MessageHeader.focus"/>
-			<sliceName value="admit-notification"/>
+			<sliceName value="discharge-notification"/>
 			<min value="1"/>
 			<max value="*"/>
 			<type>

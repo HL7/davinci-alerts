@@ -9,7 +9,7 @@
 	<experimental value="false"/>
 	<date value="2019-11-12T00:00:00-08:00"/>
 	<publisher value="Health eData Inc"/>
-	<description value="The Da Vinci Admit Notification Coverage Profile is based on the [US Core Encounter Profile] and and constrains the resources referenced by the `Encounter.Subject`,`Encounter.Location`, and `Encounter.participant.individual`  to be found in the same message Bundle.  In addition, the Location reference is constrained to the [US Core Location Profile]"/>
+	<description value="The Da Vinci Admit Notification Encounter Profile is based on the [US Core Encounter Profile] and and constrains the resources referenced by the `Encounter.Subject`,`Encounter.Location`, and `Encounter.participant.individual`  to be found in the same message Bundle.  In addition, the Location reference is constrained to the [US Core Location Profile]"/>
 	<jurisdiction>
 		<coding>
 			<system value="urn:iso:std:iso:3166"/>
