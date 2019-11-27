@@ -210,7 +210,12 @@ See the Admit/Discharge scenario [Example Transaction] for an example of using t
 
 ### Reliable Delivery
 
-We are actively seeking input on what expectations should be defined for error handling and and whether there is a need to support ["reliable delivery"]
+Upon receiving a message, the Receiver/Intermediary may return one of several status codes which is documented in [`$process-message`] definition.
+
+We are actively seeking input on whether additional guidance should be documented in this guide on FHIR-related errors (in addition to normal HTTP errors related to security, header and content type negotiation issues). For example, whether to define a minimum set of error response code, such as those listed [here]({{site.data.fhir.path}}http.html#rejecting-updates).
+{:.note-to-balloters}
+
+We are actively seeking input on whether and what additional guidance to specify how the Sender can provide a more reliable delivery of notifications to the intended recipient(s).  For example, defining what actions the Sender must take when it receives a particular error response code.
 {:.note-to-balloters}
 
 ### Must Support
