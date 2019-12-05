@@ -26,6 +26,8 @@ The `destination.endpoint` and `source.endpoint` can be in any form of url the s
 
 ### Examples
 
+{% include examples-note.md %}
+
 - [Messageheader Admit Notification Messageheader 01]
 - [Messageheader Discharge Notification Messageheader 01]
 

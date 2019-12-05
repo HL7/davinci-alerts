@@ -10,6 +10,8 @@ Note that for the admission/discharge scenario, the `Coverage.beneficiary` is a 
 
 ### Examples
 
+{% include examples-note.md %}
+
 - [{{base_type}} Example]({{base_type}}-{{base_id}}-01.html)
 
 {% include link-list.md %}

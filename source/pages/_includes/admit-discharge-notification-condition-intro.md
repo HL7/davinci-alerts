@@ -18,6 +18,8 @@ Note that for the admission/discharge scenario, `Condition.encounter` is a "reve
 
 ### Examples
 
+{% include examples-note.md %}
+
 - [{{base_type}} Example]({{base_type}}-{{base_id}}-01.html)
 
 {% include link-list.md %}

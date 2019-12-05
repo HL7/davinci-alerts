@@ -12,10 +12,11 @@ In order to be responsible stewards of data, we will need to follow the data gov
 <div class="note-to-balloters" markdown="1">
 The DaVinci project is actively seeking input on security approaches and expectations for authentication and authorization between Senders and Receivers of sensitive patient data (e.g., will TLS, mutual-TLS, OAuth, etc. be required to interoperate?).  There are several implementation guides and ongoing initiatives to address these issues including:
 
+- [FHIR Data Segmentation for Privacy project]
 - [SMART Application Launch Framework Implementation Guide Release 1.0.0]
 - [FHIR Bulk Data Access (Flat FHIR)] (specifically: SMART Backend Services: Authorization Guide)
 - [FHIR at Scale Taskforce (FAST)]
-- [Dynamic Registration for SMART Apps]  We are aware of the planned FHIR Data Segmentation for Privacy project.
+- [Dynamic Registration for SMART Apps]
 
 Once an approach has been agreed upon, it will be documented in the the [Da Vinci Health Record Exchange (HRex) Implementation Guide].
 </div>

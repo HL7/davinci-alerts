@@ -63,7 +63,7 @@
 			<type>
 				<code value="Reference"/>
 				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/>
-				<aggregation value="contained"></aggregation>
+				<aggregation value="bundled"></aggregation>
 			</type>
 			<mustSupport value="true"/>
 		</element>
