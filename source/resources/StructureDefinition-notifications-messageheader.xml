@@ -47,6 +47,15 @@
 			<max value="1"/>
 			<mustSupport value="true"/>
 		</element>
+
+		<element id="MessageHeader.destination.endpoint">
+			<path value="MessageHeader.destination.endpoint"/>
+			<min value="1"/>
+			<max value="1"/>
+			<mustSupport value="true"/>
+		</element>		
+		
+		
 		<element id="MessageHeader.sender">
 			<path value="MessageHeader.sender"/>
 			<min value="0"/>
