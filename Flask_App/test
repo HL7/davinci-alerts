@@ -1,0 +1,11 @@
+
+import fhirclient.models.fhirdate as FDate
+# Standard import
+import importlib
+# Load "module.submodule.MyClass"
+type='encounter'
+MyClass = getattr(importlib.import_module(f"fhirclient.models.{type}"),type.title())
+# Instantiate the class (pass arguments to the constructor, if needed)
+instance = MyClass()
+instance.status = 'completed'
+print(instance.as_json())
