@@ -73,7 +73,7 @@
 		</property>
 		<concept>
 			<code value="notification-admit"/>
-			<display value="Notification admit"/>
+			<display value="Notification Admit"/>
 			<definition value="The purpose or content is an notification or a notification about an admission.  Usage Note: The included child codes correspond to the Encounter.class codes drawn from v3-ActCode where concept is-a _ActEncounterCode."/>
 			<concept>
 				<code value="notification-admit-er"/>

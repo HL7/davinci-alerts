@@ -1,11 +1,16 @@
 
 import fhirclient.models.fhirdate as FDate
 # Standard import
-import importlib
+from importlib import import_module
 # Load "module.submodule.MyClass"
-type='encounter'
-MyClass = getattr(importlib.import_module(f"fhirclient.models.{type}"),type.title())
-# Instantiate the class (pass arguments to the constructor, if needed)
-instance = MyClass()
-instance.status = 'completed'
-print(instance.as_json())
+
+
+def pyfhir(type):
+
+    MyClass = getattr(import_module(f"fhirclient.models.{type.lower()}"),type)
+    # Instantiate the class (pass arguments to the constructor, if needed)
+    instance = MyClass()
+    return(instance)
+
+type='Observation'
+print(pyfhir(type))
