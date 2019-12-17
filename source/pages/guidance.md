@@ -212,11 +212,17 @@ See the Admit/Discharge scenario [Example Transaction] for an example of using t
 
 Upon receiving a message, the Receiver/Intermediary may return one of several status codes which is documented in [`$process-message`] definition.
 
-We are actively seeking input on whether additional guidance should be documented in this guide on FHIR-related errors (in addition to normal HTTP errors related to security, header and content type negotiation issues). For example, whether to define a minimum set of error response code, such as those listed [here]({{site.data.fhir.path}}http.html#rejecting-updates).
-{:.note-to-balloters}
+<div class="note-to-balloters" markdown="1">
+We are actively seeking input on whether additional guidance should be documented in this guide on FHIR-related errors (in addition to normal HTTP errors related to security, header and content type negotiation issues). For example, whether to define a minimum set of error response code, such as those listed [here]({{site.data.fhir.path}}http.html#rejecting-updates). Additionally, what additional guidance to specify how the Sender can provide a more reliable delivery of notifications to the intended recipient(s).  For example, defining what actions the Sender must take when it receives a particular error response code.
 
-We are actively seeking input on whether and what additional guidance to specify how the Sender can provide a more reliable delivery of notifications to the intended recipient(s).  For example, defining what actions the Sender must take when it receives a particular error response code.
-{:.note-to-balloters}
+At the Dec 11-12 Da Vinci Connectathon we polled the participants and determined that the following codes and guidance could be added:
+
+- `200`,`202`,`204`+/- OperationOutcome all ok for successful transactions
+   - *Issue : what does widely use Java client want?*
+- `401`,`404`+/- OperationOutcome no point in retry
+- `429` +/- OperationOutcome  retry but slow down traffic
+- `500+` +/- OperationOutcome - server issues  may retry a few times
+</div>
 
 ### Must Support
 
