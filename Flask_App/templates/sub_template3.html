@@ -1,0 +1,53 @@
+{% extends "template.html" %}
+
+{% block content %}
+  <h3> This is the start of my sub_template child template2</h3>
+  <br>
+  <h4>Current date/time: {{ current_time | datetimefilter }}</h4>
+  <br>
+  <p>My string (in markdown!!): {{my_string | markdown | safe }}</p>
+  <h3>Encounter {{r_id}} Resource:</h3>
+
+<h4>rendered narrative</h4>
+
+<hr/>
+
+{{ r_dict | keyerror_filter('text','div') | safe }}
+
+<hr/>
+
+<Ul>
+<li>
+    Identifier: {{ r_dict | keyerror_filter('identifier','value') | safe }}
+</li>
+<li>
+    Status: {{ r_dict | keyerror_filter('status') | safe }}
+</li>
+<li>
+  Subject: {{ r_dict | keyerror_filter('serviceProvider','reference') | safe }}
+</li>
+<li>
+  Location: {{ r_dict | keyerror_filter('location','location','reference') | safe }}
+</li>
+<li>
+  Subject: {{ r_dict | keyerror_filter('subject','reference') | safe }}
+</li>
+<li>
+  Location: {{ r_dict | keyerror_filter('participant','individual','reference') | safe }}
+</li>
+<li>
+  Location: {{ r_dict | keyerror_filter('participant','individual','reference') | safe }}
+</li>
+</ul>
+
+<h4>raw json</h4>
+
+  <pre class="json">
+  {{ r_dict | tojson(indent=4) }}
+  </pre>
+  <br>
+  <!--
+  <p>Same list with a filter: {{ my_list|join(', ') }}</p>
+  -->
+  <h3> This is the end of my child template</h3>
+{% endblock content %}
