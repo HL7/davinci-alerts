@@ -8,7 +8,7 @@ import datetime
 from json import load, dumps, loads
 from requests import get, post, put
 from commonmark import commonmark
-#import fhirtemplates # local templates
+import fhirtemplates # local templates
 from importlib import import_module
 #from pathlib import path
 
@@ -160,7 +160,7 @@ def resource_not_found(type, r_id):
 >Woops, that resource {type}/{r_id} doesn't exist! (0 search results)
 
 -  Click on the home button in the nav bar and try a different id
-'''.format(r_id=r_id)
+'''.format(type= type,r_id=r_id)
     return render_template('sub_template1.html',
                            my_string=my_string,
                            title="Resource not found error",
@@ -204,7 +204,7 @@ def r_id(r_id):
     ################### Assemble Bundle ################################
 
     patient_id = encounter.subject.reference[8]
-        resource = fetch('Patient', _id=patient_id) # fetch patient
+    resource = fetch('Patient', _id=patient_id) # fetch patient
     if resource:
         resources.append(resource)
         app.logger.info(f'******resources={resources}***')
@@ -212,7 +212,7 @@ def r_id(r_id):
         return redirect(url_for('resource_not_found', type="Patient", r_id=patient_id))
 
     location_id = encounter.location[0].location.reference[9]
-        resource = fetch('Location', _id=location_id) # fetch location
+    resource = fetch('Location', _id=location_id) # fetch location
     if resource:
         resources.append(resource)
         app.logger.info(f'******resources={resources}***')
@@ -225,19 +225,19 @@ def r_id(r_id):
         if resource:
             resources.append(resource)
         else:
-            app.logger.info(f'no Practitioner/{practitioner_id} resource found in {ref_server[0] Server}')
+            app.logger.info(f'no Practitioner/{practitioner_id} resource found in {ref_server[0]} Server')
     except TypeError as e:
         app.logger.info(f'TypeError: {str(e)} - i.e,  no Practitioner in represented in This Encounter')
 
     try:
-        organization1_id = _id=encounter.serviceprovider.reference[13]
+        organization1_id = _id=encounter.serviceProvider.reference[13]
         resource = fetch('Organization', _id=organization1_id) # fetch org
         if resource:
             resources.append(resource)
         else:
             app.logger.info('no Organization resource found')
-    except TypeError as e:
-        app.logger.info(f'TypeError: {str(e)} - i.e,  no Organization is represented in This Encounter')
+    except (TypeError, AttributeError) as e:
+        app.logger.info(f'{str(e)} - i.e,  no Organization is represented in This Encounter')
 
     resource = fetch('Condition', patient=patient_id, encounter=encounter.id) # fetch condition
     if resource:
@@ -247,14 +247,15 @@ def r_id(r_id):
 
     for i in ['messageheader','coverage','organization2','organization4']:
         resource = getattr(fhirtemplates,i) # resources as dict
-        resource = pyfhir(loads(resource)) #convert to fhirclient
+        resource = pyfhir(resource) #convert to fhirclient
         # add in parameters as tuplse of string using get attribute or as direct call using kwargs....
         if i == 'messageheader':
-            resources.insert(resource,0) #insert to beginnning of list
+            resources.insert(0,resource) #insert to beginnning of list
         else:
             resources.append(resource)
 
-    message_bundle = bundler(resources)
+    #message_bundle = bundler(resources)
+
     ################### End Assemble Bundle ################################
 
     return render_template('sub_template3.html',
