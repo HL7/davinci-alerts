@@ -15,6 +15,7 @@
          "version": "0.2.0",
          "date": "",
          "desc": "STU1 Ballot",
+         "changes": "change-notes.html",
          "path": "http://hl7.org/fhir/us/davinci-alerts/2020Feb",
          "status": "ballot",
          "sequence": "STU1",
