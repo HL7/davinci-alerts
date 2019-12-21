@@ -23,7 +23,7 @@
         "json"
     ],
     "implementationGuide": [
-        "http://hl7.org/fhir/us/davinci-notifications/ImplementationGuide/hl7.fhir.us.davinci-notifications|0.1.0",
+        "http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts|0.1.0",
         "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.0"
     ],
     "jurisdiction": [
@@ -150,7 +150,7 @@
                         }
                     ],
                     "supportedProfile": [
-                        "http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-bundle"
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle"
                     ],
                     "type": "Bundle"
                 },
@@ -163,7 +163,7 @@
                     ],
                     "documentation": "Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle",
                     "supportedProfile": [
-                        "http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-discharge-notification-condition"
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-condition"
                     ],
                     "type": "Condition"
                 },
@@ -259,7 +259,7 @@
                         }
                     ],
                     "supportedProfile": [
-                        "http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-discharge-notification-coverage"
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-coverage"
                     ],
                     "type": "Coverage"
                 },
@@ -272,7 +272,7 @@
                     ],
                     "documentation": "Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle",
                     "supportedProfile": [
-                        "http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-discharge-notification-encounter"
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-encounter"
                     ],
                     "type": "Encounter"
                 },
@@ -367,7 +367,7 @@
                         }
                     ],
                     "supportedProfile": [
-                        "http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-graphdefinition"
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-graphdefinition"
                     ],
                     "type": "GraphDefinition"
                 },
@@ -472,7 +472,7 @@
                         }
                     ],
                     "supportedProfile": [
-                        "http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-messagedefinition"
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messagedefinition"
                     ],
                     "type": "MessageDefinition"
                 },
@@ -567,9 +567,9 @@
                         }
                     ],
                     "supportedProfile": [
-                        "http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-messageheader",
-                        "http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-notification-messageheader",
-                        "http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/discharge-notification-messageheader"
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader",
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader",
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader"
                     ],
                     "type": "MessageHeader"
                 },
@@ -621,7 +621,7 @@
     ],
     "status": "active",
     "title": "Notification Sender CapabilityStatement",
-    "url": "http://hl7.org/fhir/us/davinci-notifications/CapabilityStatement/notification-sender",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/CapabilityStatement/notification-sender",
     "version": "0.1.0",
     "resourceType": "CapabilityStatement"
 }

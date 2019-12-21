@@ -23,7 +23,7 @@
         "json"
     ],
     "implementationGuide": [
-        "http://hl7.org/fhir/us/davinci-notifications/ImplementationGuide/hl7.fhir.us.davinci-notifications|0.1.0",
+        "http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts|0.1.0",
         "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.0"
     ],
     "jurisdiction": [
@@ -50,7 +50,7 @@
     ],
     "status": "active",
     "title": "Query Requester CapabilityStatement",
-    "url": "http://hl7.org/fhir/us/davinci-notifications/CapabilityStatement/query-requester",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/CapabilityStatement/query-requester",
     "version": "0.1.0",
     "resourceType": "CapabilityStatement"
 }

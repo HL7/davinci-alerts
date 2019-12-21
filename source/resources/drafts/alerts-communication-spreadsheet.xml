@@ -937,8 +937,8 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s73"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="s79" ss:HRef="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/template-extension-"><Data
-      ss:Type="String">http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-</Data></Cell>
+    <Cell ss:StyleID="s79" ss:HRef="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/template-extension-"><Data
+      ss:Type="String">http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s80"><Data ss:Type="String">introduction</Data></Cell>
@@ -6476,8 +6476,8 @@
     <Cell ss:StyleID="s139"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s139"><Data ss:Type="String">extensible</Data></Cell>
     <Cell ss:StyleID="s139"><Data ss:Type="String">yes</Data></Cell>
-    <Cell ss:StyleID="s159" ss:HRef="http://hl7.org/fhir/us/davinci-notifications/ValueSet/blah-codes"><Data
-      ss:Type="String">http://hl7.org/fhir/us/davinci-notifications/ValueSet/communication-topic</Data></Cell>
+    <Cell ss:StyleID="s159" ss:HRef="http://hl7.org/fhir/us/davinci-alerts/ValueSet/blah-codes"><Data
+      ss:Type="String">http://hl7.org/fhir/us/davinci-alerts/ValueSet/communication-topic</Data></Cell>
     <Cell ss:StyleID="s139"/>
     <Cell ss:StyleID="s139"/>
     <Cell ss:StyleID="s139"/>

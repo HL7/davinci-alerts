@@ -2,10 +2,10 @@
 <MessageHeader xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-4.0.1/fhir-all.xsd">
 	<id value="admit-notification-messageheader-01"/>
 	<meta>
-		<profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-notification-messageheader"/>
+		<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader"/>
 	</meta>
 	<eventCoding>
-		<system value="http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event"/>
+		<system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"/>
 		<code value="notification-admit"/>
 		<display value="Notification admit"/>
 	</eventCoding>
@@ -48,6 +48,6 @@
 		<display value="Inpatient Encounter"/>
 	</focus>
 	<!--
-	<definition value="http://hl7.org/fhir/us/davinci-notifications/MessageDefinition/notification-admit"/>
+	<definition value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-admit"/>
 -->
 </MessageHeader>

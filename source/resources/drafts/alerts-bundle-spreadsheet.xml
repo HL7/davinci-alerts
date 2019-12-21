@@ -923,8 +923,8 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="s79" ss:HRef="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/template-extension-"><Data
-      ss:Type="String">http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-</Data></Cell>
+    <Cell ss:StyleID="s79" ss:HRef="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/template-extension-"><Data
+      ss:Type="String">http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s80"><Data ss:Type="String">introduction</Data></Cell>
@@ -1308,7 +1308,7 @@
     <Cell ss:StyleID="s110"><Data ss:Type="String">1..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s110"><Data ss:Type="String">Reference(Patient){http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-communication}</Data><NamedCell
+    <Cell ss:StyleID="s110"><Data ss:Type="String">Reference(Patient){http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-communication}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s110"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-4.0.1/fhir-all.xsd">
 	<id value="discharge-notification-messageheader"/>
-	<url value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/discharge-notification-messageheader"/>
+	<url value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader"/>
 	<version value="0.1.0"/>
 	<name value="DischargeNotificationMessageHeader"/>
 	<title value="Da Vinci Discharge Notification MessageHeader Profile"/>
@@ -21,7 +21,7 @@
 	<kind value="resource"/>
 	<abstract value="false"/>
 	<type value="MessageHeader"/>
-	<baseDefinition value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-messageheader"/>
+	<baseDefinition value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader"/>
 	<derivation value="constraint"/>
 	<differential>
 		<element id="MessageHeader">
@@ -36,7 +36,7 @@
 				<code value="Coding"/>
 			</type>
 			<patternCoding>
-				<system value="http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event"/>
+				<system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"/>
 				<code value="notification-discharge"/>
 				<display value="Notification Discharge"/>
 			</patternCoding>

@@ -3,7 +3,7 @@
 	<id value="admit-discharge-notification-coverage"/>
 
 
-	<url value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-discharge-notification-coverage"/>
+	<url value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-coverage"/>
 	<version value="0.1.0"/>
 	<name value="AdmitDischargeNotificationCoverageProfile"/>
 	<title value="Da Vinci Admit/Discharge Notification Coverage Profile"/>

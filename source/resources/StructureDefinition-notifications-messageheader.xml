@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-4.0.1/fhir-all.xsd">
 	<id value="notifications-messageheader"/>
-	<url value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-messageheader"/>
+	<url value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader"/>
 	<version value="0.1.0"/>
 	<name value="NotificationsMessageHeader"/>
 	<title value="Da Vinci Notifications MessageHeader Profile"/>
@@ -38,7 +38,7 @@
 			<mustSupport value="true"/>
 			<binding>
 				<strength value="extensible"/>
-				<valueSet value="http://hl7.org/fhir/us/davinci-notifications/ValueSet/notification-event"/>
+				<valueSet value="http://hl7.org/fhir/us/davinci-alerts/ValueSet/notification-event"/>
 			</binding>
 		</element>
 		<element id="MessageHeader.destination">

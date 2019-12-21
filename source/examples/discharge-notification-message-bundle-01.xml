@@ -2,7 +2,7 @@
 <Bundle xmlns="http://hl7.org/fhir">
 	<id value="discharge-notification-message-bundle-01"/>
 	<meta>
-		<profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-bundle"/>
+		<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle"/>
 	</meta>
 	<type value="message"/>
 	<timestamp value="2019-11-14T08:08:47Z"/>
@@ -14,7 +14,7 @@
 			<MessageHeader>
 
 				<meta>
-					<profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/discharge-notification-messageheader"/>
+					<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader"/>
 				</meta>
 
 				<text>
@@ -29,7 +29,7 @@
 							<b>meta</b>:
 						</p>
 						<p>
-							<b>event</b>: Notification Admit (Details: http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event code notification-discharge = 'Notification Discharge', stated as 'Notification payloadMimeType')</p>
+							<b>event</b>: Notification Admit (Details: http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event code notification-discharge = 'Notification Discharge', stated as 'Notification payloadMimeType')</p>
 						<h3>Destinations</h3>
 						<table class="grid">
 							<tr>
@@ -99,7 +99,7 @@
 					</div>
 				</text>
 				<eventCoding>
-					<system value="http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event"/>
+					<system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"/>
 					<code value="notification-admit"/>
 					<display value="Notification Admit"/>
 				</eventCoding>
@@ -136,7 +136,7 @@
 					<reference value="urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7"/>
 					<display value="Inpatient Encounter"/>
 				</focus>
-				<!-- <definition value="http://hl7.org/fhir/us/davinci-notifications/MessageDefinition/notification-admit"/> -->
+				<!-- <definition value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-admit"/> -->
 			</MessageHeader>
 		</resource>
 	</entry>
@@ -148,7 +148,7 @@
 
 				<meta>
 					<lastUpdated value="2017-05-26T11:56:57.250-04:00"/>
-					<profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-discharge-notification-encounter"/>
+					<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-encounter"/>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -563,7 +563,7 @@
 			<Coverage>
 
 				<meta>
-					<profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-discharge-notification-coverage"/>
+					<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-coverage"/>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -680,7 +680,7 @@
 			<Condition>
 
 				<meta>
-					<profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-discharge-notification-condition"/>
+					<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-condition"/>
 				</meta>
 				<text>
 					<status value="generated"/>

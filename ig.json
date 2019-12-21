@@ -1,6 +1,6 @@
 {
   "broken-links": "warning",
-  "working-dir": "/Users/ehaas/Documents/FHIR/Davinci-Alerts/",
+  "working-dir": "/Users/ehaas/Documents/FHIR/Davinci-Notifications/",
   "contact": [
     {
       "system": "url",
@@ -25,7 +25,7 @@
   "status": "draft",
   "tool": "jekyll",
   "publisher": "HL7 International - Infrastructure and Messaging Work Group",
-  "igtemplate-dir": "/Users/ehaas/Documents/FHIR/Davinci-Alerts/",
+  "igtemplate-dir": "/Users/ehaas/Documents/FHIR/Davinci-Notifications/",
   "resources": {
     "StructureDefinition/admit-discharge-notification-encounter": {
       "source": "StructureDefinition-admit-discharge-notification-encounter.xml",
@@ -145,21 +145,21 @@
     }
   ],
   "version": "4.0.1",
-  "fixed-business-version": "0.1.0",
+  "fixed-business-version": "0.2.0",
   "pub_url": "ehaas@healthedatainc.com",
   "jurisdiction": "US",
   "title": "Da Vinci Unsolicited Notifications",
   "logging": [
     "progress"
   ],
-  "canonicalBase": "http://hl7.org/fhir/us/davinci-notifications",
+  "canonicalBase": "http://hl7.org/fhir/us/davinci-alerts",
   "gen-examples": "false",
   "paths": {
     "resources": [
       "source/resources",
       "source/examples"
     ],
-    "history": "http://hl7.org/fhir/us/davinci-notifications/history.cfml",
+    "history": "http://hl7.org/fhir/us/davinci-alerts/history.html",
     "temp": "generated_output/temp",
     "txCache": "generated_output/txCache",
     "pages": [
@@ -170,7 +170,7 @@
     "specification": "http://hl7.org/fhir/R4/",
     "output": "output"
   },
-  "npm-name": "hl7.fhir.us.davinci-notifications",
+  "npm-name": "hl7.fhir.us.davinci-alerts",
   "spreadsheets": [
     "notifications-messagedefinition-spreadsheet.xml",
     "notifications-bundle-spreadsheet.xml",

@@ -959,8 +959,8 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="s79" ss:HRef="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/template-extension-"><Data
-      ss:Type="String">http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/extension-</Data></Cell>
+    <Cell ss:StyleID="s79" ss:HRef="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/template-extension-"><Data
+      ss:Type="String">http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s80"><Data ss:Type="String">introduction</Data></Cell>
@@ -6450,7 +6450,7 @@
     <Cell ss:StyleID="s147"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s147"><Data ss:Type="String">extensible</Data></Cell>
     <Cell ss:StyleID="s147"/>
-    <Cell ss:StyleID="s147"><Data ss:Type="String">http://hl7.org/fhir/us/davinci-notifications/ValueSet/notification-event</Data></Cell>
+    <Cell ss:StyleID="s147"><Data ss:Type="String">http://hl7.org/fhir/us/davinci-alerts/ValueSet/notification-event</Data></Cell>
     <Cell ss:StyleID="s147"/>
     <Cell ss:StyleID="s147"/>
     <Cell ss:StyleID="s147"/>

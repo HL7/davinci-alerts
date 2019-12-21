@@ -257,7 +257,7 @@
       "resource": {
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-communication"
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-communication"
           ]
         },
         "about": [
@@ -319,7 +319,7 @@
           "coding": [
             {
               "code": "notification-admit-inpatient",
-              "system": "http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event"
+              "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"
             }
           ],
           "text": "Notification Admit Inpatient"

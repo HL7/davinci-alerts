@@ -1,25 +1,35 @@
 {
-   "package-id": "hl7.fhir.us.davinci-notifications",
-   "title": "Da Vinci Notification",
-   "canonical": "http://hl7.org/fhir/us/davinci-notifications",
+   "package-id": "hl7.fhir.us.davinci-alerts",
+   "title": "Da Vinci Unsolicited Notifications",
+   "canonical": "http://hl7.org/fhir/us/davinci-alerts",
    "introduction": "FHIR resources can be use to notify careteam members of patient events such as patient admission and discharge information in order to improve care coordination. An alert from the provider to the health plan can help track where care has been delivered and help ensure timely follow-up care is delivered as needed since healthcare stakeholders are increasingly responsible for knowing what care their patients have received and what care they need, regardless of where their patients sought care.",
    "list": [
       {
          "version": "current",
-         "descmd": "Continuous Integration Build for FHIR STU1 (latest in version control)",
-         "path": "http://build.fhir.org/ig/HL7/davinci-notifications",
+         "desc": "Continuous Integration Build for FHIR STU1 (latest in version control)",
+         "path": "http://build.fhir.org/ig/HL7/davinci-alerts",
          "status": "ci-build",
          "current": true
       },
       {
-         "version": "0.1.0",
-         "date": "2019-09-01",
-         "descmd": "STU1 For Comment Ballot",
+         "version": "0.2.0",
+         "date": "",
+         "desc": "STU1 Ballot",
          "changes": "",
-         "path": "http://hl7.org/fhir/us/davinci-notifications/2020Feb",
+         "path": "http://hl7.org/fhir/us/davinci-alerts/2020Feb",
          "status": "ballot",
          "sequence": "STU1",
          "fhirversion" : "4.0.1"
+      },
+      {
+         "version": "0.1.0",
+         "date": "2019-09-01",
+         "desc": "**DEPRECATED: Note that this version was pulled from the ballot after publication and and is replaced by the version 0.2.0  and should not be used.**",
+         "changes": "",
+         "path": "http://hl7.org/fhir/us/davinci-alerts/2019Sept",
+         "status": "ballot",
+         "sequence": "STU1",
+         "fhirversion" : "4.0.0"
       }
    ]
 }

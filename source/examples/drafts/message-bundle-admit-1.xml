@@ -10,11 +10,11 @@
 				<id value="267b18ce-3d37-4581-9baa-6fada338038b"/>
 				<!--  TODO make profile
 				<meta>
-					<profile value="http://hl7.org/fhir/us/davinci-notifications/MessageDefinition/notification"/>
+					<profile value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification"/>
 				</meta>
 			   -->
 				<eventCoding>
-					<system value="http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event"/>
+					<system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"/>
 					<code value="notification-admit"/>
 				</eventCoding>
 				<destination>
@@ -62,7 +62,7 @@
 				<focus>
 					<reference value="urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7"/>
 				</focus>
-				<definition value="http://hl7.org/fhir/us/davinci-notifications/MessageDefinition/admit-1"/>
+				<definition value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/admit-1"/>
 			</MessageHeader>
 		</resource>
 	</entry>
@@ -410,7 +410,7 @@
 			<Endpoint>
 				<id value="9ac634f6-b6c2-42ff-b3f6-8b650ec345f4"/>
 				<meta>
-					<profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-endpoint"/>
+					<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-endpoint"/>
 				</meta>
 				<status value="active"/>
 				<connectionType>
@@ -432,7 +432,7 @@
 		<resource>
 			<MessageDefinition>
 				<id value="58ac7d17-5391-4ffa-a56e-5e26d74b8662"/>
-				<url value="http://hl7.org/fhir/us/davinci-notifications/MessageDefinition/notification-admit"/>
+				<url value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-admit"/>
 				<name value="NotificationAdmit"/>
 				<title value="Da Vinci Notification Admit Message Definition"/>
 				<status value="active"/>
@@ -446,7 +446,7 @@
 				</contact>
 				<purpose value="Defines Da Vinci Notifications patient admission notification message bundle."/>
 				<eventCoding>
-					<system value="http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event"/>
+					<system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"/>
 					<code value="notification-admit"/>
 				</eventCoding>
 				<category value="notification"/>
@@ -455,7 +455,7 @@
 					<min value="1"/>
 					<max value="1"/>
 				</focus>
-				<graph value="http://hl7.org/fhir/us/davinci-notifications/GraphDefinition/admit-1"/>
+				<graph value="http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/admit-1"/>
 			</MessageDefinition>
 		</resource>
 	</entry>

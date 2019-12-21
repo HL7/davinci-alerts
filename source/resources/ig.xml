@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Hidden IG for de facto IG publishing-->
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="hl7.fhir.us.davinci-notifications-0.1.0"/>
-  <url value="http://hl7.org/fhir/us/davinci-notifications/ImplementationGuide/hl7.fhir.us.davinci-notifications-0.1.0"/>
-  <version value="0.1.0"/>
+  <id value="hl7.fhir.us.davinci-alerts-0.2.0"/>
+  <url value="http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts-0.2.0"/>
+  <version value="0.2.0"/>
   <name value="DaVinciUnsolicitedNotifications"/>
   <title value="Da Vinci Unsolicited Notifications"/>
   <status value="draft"/>
@@ -18,7 +18,7 @@
   </contact>
   <copyright value="Used by permission of HL7 International - Infrastructure and Messaging Work Group, all rights reserved Creative Commons License"/>
   <!-- 0..1 Use and/or publishing restrictions -->
-  <packageId value="hl7.fhir.us.davinci-notifications"/>
+  <packageId value="hl7.fhir.us.davinci-alerts"/>
   <!-- 0..1 NPM Package name for IG -->
   <license value="CC0-1.0"/>
   <!--*****HARDCODED********* 0..1 SPDX license code for this IG (or not-open-source) -->
@@ -34,7 +34,7 @@
     </uri>
     <packageId value="hl7.fhir.us.davinci-hrex"/>
     <!-- 0..1 NPM Package name for IG this depends on -->
-    <version value="0.1.0"/><!-- 0..1 Version of the IG --></dependsOn>
+    <version value="0.2.0"/><!-- 0..1 Version of the IG --></dependsOn>
   <dependsOn id="uscore">
     <!-- 0..* Another Implementation guide this depends on -->
     <uri value="http://hl7.org/fhir/us/core">

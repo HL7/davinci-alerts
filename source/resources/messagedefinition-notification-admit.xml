@@ -3,9 +3,9 @@
 	<id value="notification-admit"/>
 	<meta>
 	<profile
-					 value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-messagedefinition"/>
+					 value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messagedefinition"/>
 </meta>
-	<url value="http://hl7.org/fhir/us/davinci-notifications/MessageDefinition/notification-admit"/>
+	<url value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-admit"/>
 	<name value="NotificationAdmit"/>
 	<title value="Da Vinci Notification Admit Message Definition"/>
 	<status value="active"/>
@@ -19,7 +19,7 @@
 	</contact>
 	<purpose value="Defines message bundle for Da Vinci Notifications patient admission notification scenario"/>
 	<eventCoding>
-		<system value="http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event"/>
+		<system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"/>
 		<code value="notification-admit"/>
 	</eventCoding>
 	<category value="notification"/>
@@ -31,5 +31,5 @@
 	<!--
 	use the same GraphDefinition for both admit and discharge
 	-->
-	<graph value="http://hl7.org/fhir/us/davinci-notifications/GraphDefinition/admit-discharge"/>
+	<graph value="http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/admit-discharge"/>
 </MessageDefinition>

@@ -2,7 +2,7 @@
 <Bundle xmlns="http://hl7.org/fhir">
 	<id value="admit-notification-message-bundle-01"/>
 	<meta>
-		<profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/notifications-bundle"/>
+		<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle"/>
 	</meta>
 
 	<type value="message"/>
@@ -15,16 +15,16 @@
 			<MessageHeader>
 
 				<meta>
-					<profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/discharge-notification-messageheader"/>
+					<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader"/>
 				</meta>
 
 				<text>
 			    <status value="generated"/>
-			    <div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: admit-notification-messageheader-01</p><p><b>meta</b>: </p><p><b>event</b>: Notification admit (Details: http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event code notification-admit = 'Notification admit', stated as 'Notification admit')</p><h3>Destinations</h3><table class="grid"><tr><td>-</td><td><b>Name</b></td><td><b>Endpoint</b></td></tr><tr><td>*</td><td>Acme Message Gateway</td><td><a href="https://example.org/Endpoints/P123">https://example.org/Endpoints/P123</a></td></tr></table><p><b>sender</b>: <a href="urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade">Saint Luke W Endpoint</a></p><p><b>author</b>: <a href="urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59">Ronald Bone</a></p><h3>Sources</h3><table class="grid"><tr><td>-</td><td><b>Name</b></td><td><b>Software</b></td><td><b>Version</b></td><td><b>Contact</b></td><td><b>Endpoint</b></td></tr><tr><td>*</td><td>Acme Central Patient Registry</td><td>FooBar Patient Manager</td><td>3.1.45.AABB</td><td>ph: +1 (555) 123 4567</td><td><a href="https://example.org/Endpoints/P456">https://example.org/Endpoints/P456</a></td></tr></table><p><b>responsible</b>: <a href="urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade">Saint Luke W Endpoint</a></p><p><b>focus</b>: <a href="urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7">Inpatient Encounter</a></p></div>
+			    <div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: admit-notification-messageheader-01</p><p><b>meta</b>: </p><p><b>event</b>: Notification admit (Details: http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event code notification-admit = 'Notification admit', stated as 'Notification admit')</p><h3>Destinations</h3><table class="grid"><tr><td>-</td><td><b>Name</b></td><td><b>Endpoint</b></td></tr><tr><td>*</td><td>Acme Message Gateway</td><td><a href="https://example.org/Endpoints/P123">https://example.org/Endpoints/P123</a></td></tr></table><p><b>sender</b>: <a href="urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade">Saint Luke W Endpoint</a></p><p><b>author</b>: <a href="urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59">Ronald Bone</a></p><h3>Sources</h3><table class="grid"><tr><td>-</td><td><b>Name</b></td><td><b>Software</b></td><td><b>Version</b></td><td><b>Contact</b></td><td><b>Endpoint</b></td></tr><tr><td>*</td><td>Acme Central Patient Registry</td><td>FooBar Patient Manager</td><td>3.1.45.AABB</td><td>ph: +1 (555) 123 4567</td><td><a href="https://example.org/Endpoints/P456">https://example.org/Endpoints/P456</a></td></tr></table><p><b>responsible</b>: <a href="urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade">Saint Luke W Endpoint</a></p><p><b>focus</b>: <a href="urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7">Inpatient Encounter</a></p></div>
 			  </text>
 
 				<eventCoding>
-					<system value="http://hl7.org/fhir/us/davinci-notifications/CodeSystem/notification-event"/>
+					<system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"/>
 					<code value="notification-admit"/>
 					<display value="Notification Admit"/>
 				</eventCoding>
@@ -67,7 +67,7 @@
 					<display value="Inpatient Encounter"/>
 				</focus>
 				<!--
-				<definition value="http://hl7.org/fhir/us/davinci-notifications/MessageDefinition/notification-admit"/>
+				<definition value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-admit"/>
 			-->
 			</MessageHeader>
 				</resource>
@@ -80,7 +80,7 @@
 
   <meta>
     <lastUpdated value="2017-05-26T11:56:57.250-04:00"/>
-    <profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-discharge-notification-encounter"/>
+    <profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-encounter"/>
   </meta>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: admit-discharge-notification-encounter-01</p><p><b>meta</b>: </p><p><b>status</b>: finished</p><p><b>class</b>: inpatient encounter (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code IMP = 'inpatient encounter', stated as 'inpatient encounter')</p><p><b>type</b>: Inpatient hospital care <span style="background: LightGoldenRodYellow">(Details : {http://www.ama-assn.org/go/cpt code '99234' = '99234)</span></p><p><b>subject</b>: <a href="urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4">Amy V. Shaw</a></p><h3>Participants</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Period</b></td><td><b>Individual</b></td></tr><tr><td>*</td><td>primary performer <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/v3-ParticipationType code 'PPRF' = 'primary performer)</span></td><td>Nov 1, 2015, 2:00:14 PM --&gt; Nov 1, 2015, 3:00:14 PM</td><td><a href="urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59">Ronald Bone</a></td></tr></table><p><b>period</b>: Nov 1, 2015, 2:00:14 PM --&gt; Nov 1, 2015, 3:00:14 PM</p><h3>Locations</h3><table class="grid"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href="urn:uuid:75ea28b5-74b8-4d9c-9eb5-cfdc10b48fa">Health Level Seven International - Amherst</a></td></tr></table></div>
@@ -359,7 +359,7 @@
 <Coverage>
 
   <meta>
-    <profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-discharge-notification-coverage"/>
+    <profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-coverage"/>
   </meta>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: admit-discharge-notification-coverage-01</p><p><b>meta</b>: </p><p><b>identifier</b>:     DZW9200000000</p><p><b>status</b>:     active</p><p><b>type</b>: health insurance plan policy <span style="background: LightGoldenRodYellow">(Details : {    http://terminology.hl7.org/CodeSystem/v3-ActCode code '    HIP' = 'health insurance plan policy', given as 'health insurance plan policy'})</span></p><p><b>subscriber</b>: <a href="urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4">    urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4</a></p><p><b>subscriberId</b>:     DZW9200000000</p><p><b>beneficiary</b>: <a href="urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4">    urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4</a></p><p><b>relationship</b>:     Self <span style="background: LightGoldenRodYellow">(Details : {    http://terminology.hl7.org/CodeSystem/subscriber-relationship code '    self' = 'Self', given as '    Self'})</span></p><p><b>period</b>: Jan 1, 2016, 12:00:00 AM --&gt; (ongoing)</p><p><b>payor</b>: Anthem Blue Cross of California</p><h3>Classes</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Value</b></td><td><b>Name</b></td></tr><tr><td>*</td><td>Plan <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'plan' = 'Plan)</span></td><td>1FZQ</td><td>Bronze D HSA</td></tr></table></div>
@@ -415,7 +415,7 @@
 <Condition>
 
   <meta>
-    <profile value="http://hl7.org/fhir/us/davinci-notifications/StructureDefinition/admit-discharge-notification-condition"/>
+    <profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-condition"/>
   </meta>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: admit-discharge-notification-condition-01</p><p><b>meta</b>: </p><p><b>clinicalStatus</b>: Active <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/condition-clinical code 'active' = 'Active', given as 'Active'})</span></p><p><b>verificationStatus</b>: Confirmed <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/condition-ver-status code 'confirmed' = 'Confirmed', given as 'Confirmed'})</span></p><p><b>category</b>: Problem <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/condition-category code 'problem-list-item' = 'Problem List Item', given as 'Problem List Item'})</span></p><p><b>code</b>: Single liveborn, born in hospital <span style="background: LightGoldenRodYellow">(Details : {SNOMED CT code '442311008' = 'Liveborn born in hospital', given as 'Liveborn born in hospital'})</span></p><p><b>subject</b>: <a href="urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4">Amy V. Shaw</a></p><p><b>encounter</b>: <a href="urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7">urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7</a></p><p><b>onset</b>: Aug 10, 2016, 12:00:00 AM</p></div>

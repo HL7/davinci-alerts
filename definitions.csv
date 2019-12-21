@@ -22,14 +22,14 @@ paths.output,output
 paths.txCache,generated_output/txCache
 paths.qa,generated_output/qa
 paths.specification,http://hl7.org/fhir/R4/
-paths.history,http://hl7.org/fhir/us/davinci-notifications/history.cfml
+paths.history,http://hl7.org/fhir/us/davinci-alerts/history.cfml
 jurisdiction,US
 sct-edition,http://snomed.info/sct/731000124108
 no-inactive-codes,FALSE
 broken-links,warning
 gen-examples,FALSE
 do-transforms,FALSE
-canonicalBase,http://hl7.org/fhir/us/davinci-notifications
+canonicalBase,http://hl7.org/fhir/us/davinci-alerts
 dependencyList.name,uscore|hrex
 dependencyList.location,http://hl7.org/fhir/us/core|http://hl7.org/fhir/us/davinci-hrex
 dependencyList.package,hl7.fhir.us.core|hl7.fhir.us.davinci-hrex
@@ -39,5 +39,5 @@ tool,jekyll
 logging,progress
 topofpage,TRUE
 allviews,TRUE
-npm-name,hl7.fhir.us.davinci-notifications
+npm-name,hl7.fhir.us.davinci-alerts
 version,4.0.1
