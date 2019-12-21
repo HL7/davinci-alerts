@@ -25,6 +25,7 @@
          "version": "0.1.0",
          "date": "2019-09-01",
          "desc": "**DEPRECATED: Note that this version should not be used, it was pulled from the ballot after publication and has been replaced by version 0.2.0.**",
+         "changes": "change-notes.html",
          "path": "http://hl7.org/fhir/us/davinci-alerts/2019Sep",
          "status": "ballot",
          "sequence": "STU1",
