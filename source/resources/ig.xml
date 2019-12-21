@@ -194,6 +194,9 @@
       <!-- ============ Table of Contents =============== -->
       <page><nameUrl value="toc.html"/><title value="Table of Contents"/><generation value="html"/></page>
 
+      <!-- ============ Change Log Page=============== -->
+      <page><nameUrl value="change-notes.html"/><title value="Change Log"/><generation value="markdown"/></page>
+
     </page>
   </definition>
 </ImplementationGuide>

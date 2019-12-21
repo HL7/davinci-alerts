@@ -344,6 +344,11 @@
         "nameUrl" : "toc.html",
         "title" : "Table of Contents",
         "generation" : "html"
+      },
+      {
+        "nameUrl" : "change-notes.html",
+        "title" : "Change Log",
+        "generation" : "markdown"
       }]
     },
     "parameter" : [{
