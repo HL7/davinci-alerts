@@ -16,14 +16,14 @@
 
 {{"Loop through a fixed list of Encounter ids .. **Click on one to Fetch an Encounter Resource**"  | markdown | safe}}
 
-    {% for n in my_list %}
-    <a class="btn btn-primary" role="button" href="{{n}}">{{n}}</a>
+    {% for n in enc_list %}
+    <a class="btn btn-primary" role="button" href="Encounter/{{n}}">{{n}}</a>
     <br /><br />
     {% endfor %}
 
   <br>
   <!--
-  <p>Same list with a filter: {{ my_list|join(', ') }}</p>
+  <p>Same list with a filter: {{ enc_list|join(', ') }}</p>
   -->
   <h3> This is the end of my child template</h3>
   {% block footer %}

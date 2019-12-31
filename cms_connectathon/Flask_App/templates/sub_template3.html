@@ -24,7 +24,7 @@
     Status: {{ r_dict | keyerror_filter('status') | safe }}
 </li>
 <li>
-  Subject: {{ r_dict | keyerror_filter('serviceProvider','reference') | safe }}
+  Organization1: {{ r_dict | keyerror_filter('serviceProvider','reference') | safe }}
 </li>
 <li>
   Location: {{ r_dict | keyerror_filter('location','location','reference') | safe }}
@@ -33,11 +33,18 @@
   Subject: {{ r_dict | keyerror_filter('subject','reference') | safe }}
 </li>
 <li>
-  Location: {{ r_dict | keyerror_filter('participant','individual','reference') | safe }}
+  Practitioner: {{ r_dict | keyerror_filter('participant','individual','reference') | safe }}
 </li>
-<li>
-  Location: {{ r_dict | keyerror_filter('participant','individual','reference') | safe }}
-</li>
+
+{{'''
+- Condition: `condition`
+- Coverage: `coverage`
+- MessageHeader: `messageheader`
+- Organization2: `organization2`
+- Organization3: `organization4`
+''' | markdown | safe }}
+
+
 </ul>
 
 <h4>raw json</h4>

@@ -1,0 +1,55 @@
+{% extends "template.html" %}
+
+{% block content %}
+  <h3> This is the start of my sub_template child template2</h3>
+
+  <a class="btn btn-primary btn-lg" role="button" href="../MessageBundle/{{ r_id }}">CLICK HERE for view of Assembled Da Vinci Notification Bundle</a>
+
+  <br>
+  <h4>Current date/time: {{ current_time | datetimefilter }}</h4>
+  <br>
+  <p>My string (in markdown!!): {{my_string | markdown | safe }}</p>
+  <h3>{{r_type}} {{r_id}} Resource:</h3>
+
+<h4>resource rendered narrative</h4>
+
+{{ r_pyfhir | atterror_filter('text','div') | safe }}
+
+
+<h4>My Jinja2 rendered narrative</h4>
+<ul>
+<li>
+<strong>ID</strong>: {{ r_pyfhir.id }}
+</li>
+<li>
+<strong>Status</strong>: {{ r_pyfhir.status }}
+</li>
+<li>
+<strong>Identifier</strong>: {{ r_pyfhir | atterror_filter("identifier", "value") | safe }}
+</li>
+<li>
+<strong>Organization1</strong>: {{ r_pyfhir | atterror_filter('serviceProvider','reference') | safe }}
+</li>
+<li>
+<strong>Location</strong>: {{ r_pyfhir | atterror_filter('location','location','reference') | safe }}
+</li>
+<li>
+<strong>Subject</strong>: {{ r_pyfhir | atterror_filter('subject','reference') | safe }}
+</li>
+<li>
+<strong>Practitioner</strong>: {{ r_pyfhir | atterror_filter('participant','individual','reference') | safe }}
+</li>
+</ul>
+
+<h4>raw json</h4>
+
+<pre class="json">
+{{ r_pyfhir.as_json() | tojson(indent=4) }}
+</pre>
+<br>
+  <!--
+  <p>Same list with a filter: {{ my_list|join(', ') }}</p>
+  -->
+
+  <h3> This is the end of my child template</h3>
+{% endblock content %}

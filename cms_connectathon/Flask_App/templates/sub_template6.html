@@ -1,0 +1,24 @@
+{% extends "template.html" %}
+
+{% block content %}
+  <h3> This is the response to the <code>$process-message</code> Operation </h3>
+
+<p>
+Click "Home" in the menu bar to start over
+</p>
+
+<h4>Current date/time: {{ current_time | datetimefilter }}</h4>
+<br>
+<p>My string (in markdown!!): {{my_string | markdown | safe }}</p>
+
+<h4>Response Headers:</h4>
+<pre>
+{{ headers | tojson(indent=4) }}
+</pre>
+
+<h4>Operation Outcome:</h4>
+<pre>
+{{ oo | tojson(indent=4) }}
+</pre>
+  <h3> This is the end of my child template</h3>
+{% endblock content %}

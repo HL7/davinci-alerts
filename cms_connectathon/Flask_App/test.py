@@ -1,5 +1,6 @@
 from importlib import import_module
 from pprint import pprint
+from functools import reduce
 
 
 def pyfhir(r_dict, Type=None):
@@ -52,8 +53,20 @@ r_dict = {
   ]
 }
 
+def safegetattr(obj):
+    """Returns None no attribute"""
+    try:
+        print(eval(obj))
+    except AttributeError:
+        print("none")
+
+
 instance = pyfhir(r_dict)
 instance.status = "completed"
 instance.class_fhir = pyfhir({"code":"amb"}, "Coding")
 print(instance.resource_type)
 pprint(instance.as_json())
+
+
+print(f'access attribute if exists using gettattr: getattr(instance,"status", None)= {getattr(instance,"status", None)}')
+safegetattr("instance.location[0].location.reference")

@@ -4,10 +4,10 @@ historypath: "http://hl7.org/fhir/us/davinci-alerts/history.html" # complete pat
 #changelink: https://github.com/HL7/davinci-alerts/issues  # for git hub issues for ci builds
 changelink: https://jira.hl7.org/projects/FHIR/issues/FHIR-25324?filter=allopenissues  # for hl7 guides
 summaries: true #true if want custom profile summaries in summary tab
-diff2: false # true if want to show intermediate differentials - probably never use this.
-build: ballot  # choice of ci|ballot|commentballot|version
+diff2: false # true if want to show intermediateß differentials - probably never use this.
+build: ci  # choice of ci|ballot|commentballot|version
 ballot: STU1    #STU version of IG ( if needed for publishing HL7 guides)
-hl7_version: "0.2.0"  # not sure what this is for
+hl7_version: "0.2.1"  # not sure what this is for
 hl7_ig: true #  'true'  if HL7 ig
 showXML: true  #'true' if want xml tab' I agree with what @**René Spronk**  is saying...
 showTTL: false  #'true' if want ttl tab'

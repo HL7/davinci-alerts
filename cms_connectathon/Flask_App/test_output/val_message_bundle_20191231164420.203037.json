@@ -1,0 +1,632 @@
+{
+    "id": "davinci-notifications-bundle-20191231164420.203037",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:d5fab85e-2bec-11ea-9d7e-4ccc6a181ed3",
+            "resource": {
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader"
+                    ]
+                },
+                "author": {
+                    "display": "Dr. Tommy814 Schmeler639",
+                    "reference": "urn:uuid:d5fab862-2bec-11ea-9af0-4ccc6a181ed3"
+                },
+                "destination": [
+                    {
+                        "endpoint": "https://ttbfdsk0pc.execute-api.us-east-1.amazonaws.com/dev/",
+                        "name": "Cigna"
+                    }
+                ],
+                "eventCoding": {
+                    "code": "notification-admit-er",
+                    "display": "Notification Admit Er",
+                    "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"
+                },
+                "focus": [
+                    {
+                        "display": "Notification Admit Er(Unknown (qualifier value))",
+                        "reference": "urn:uuid:d5fab85f-2bec-11ea-a122-4ccc6a181ed3"
+                    }
+                ],
+                "responsible": {
+                    "display": "BETH ISRAEL DEACONESS HOSPITAL - PLYMOUTH",
+                    "reference": "urn:uuid:d5fadf66-2bec-11ea-a77e-4ccc6a181ed3"
+                },
+                "sender": {
+                    "display": "Acme Message Sender",
+                    "reference": "urn:uuid:d5fadf6a-2bec-11ea-be4a-4ccc6a181ed3"
+                },
+                "source": {
+                    "contact": {
+                        "system": "phone",
+                        "value": "+1 (555) 123 4567"
+                    },
+                    "endpoint": "https://example.org/Endpoints/P456",
+                    "name": "Acme Central Patient Registry",
+                    "software": "FooBar Patient Manager",
+                    "version": "3.1.45.AABB"
+                },
+                "resourceType": "MessageHeader"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:d5fab85f-2bec-11ea-a122-4ccc6a181ed3",
+            "resource": {
+                "meta": {
+                    "lastUpdated": "2019-12-30T22:43:56.469Z",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter",
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-encounter"
+                    ],
+                    "versionId": "1"
+                },
+                "class": {
+                    "code": "EMER",
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+                },
+                "hospitalization": {
+                    "dischargeDisposition": {
+                        "coding": [
+                            {
+                                "code": "1",
+                                "display": "Discharge to Home or Self Care (Routine Discharge)",
+                                "system": "http://www.nubc.org/patient-discharge"
+                            }
+                        ],
+                        "text": "Discharge to Home or Self Care (Routine Discharge)"
+                    }
+                },
+                "identifier": [
+                    {
+                        "system": "https://github.com/synthetichealth/synthea",
+                        "use": "official",
+                        "value": "69c19eda-496b-42b2-ae3c-9629ec70b007"
+                    }
+                ],
+                "location": [
+                    {
+                        "location": {
+                            "display": "BETH ISRAEL DEACONESS HOSPITAL - PLYMOUTH",
+                            "reference": "urn:uuid:d5fab861-2bec-11ea-a5a7-4ccc6a181ed3"
+                        }
+                    }
+                ],
+                "participant": [
+                    {
+                        "individual": {
+                            "display": "Dr. Tommy814 Schmeler639",
+                            "reference": "urn:uuid:d5fab862-2bec-11ea-9af0-4ccc6a181ed3"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2018-02-19T16:07:39-08:00",
+                    "start": "2018-02-17T15:07:39-08:00"
+                },
+                "serviceProvider": {
+                    "display": "BETH ISRAEL DEACONESS HOSPITAL - PLYMOUTH",
+                    "reference": "urn:uuid:d5fadf66-2bec-11ea-a77e-4ccc6a181ed3"
+                },
+                "status": "in-progress",
+                "subject": {
+                    "display": "Mr. Garland107 Conn188",
+                    "reference": "urn:uuid:d5fab860-2bec-11ea-9dfe-4ccc6a181ed3"
+                },
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "code": "261665006",
+                                "display": "Unknown (qualifier value)",
+                                "system": "http://snomed.info/sct"
+                            }
+                        ],
+                        "text": "Unknown (qualifier value)"
+                    }
+                ],
+                "resourceType": "Encounter"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:d5fab860-2bec-11ea-9dfe-4ccc6a181ed3",
+            "resource": {
+                "meta": {
+                    "lastUpdated": "2019-12-30T22:43:56.953Z",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                    ],
+                    "versionId": "1"
+                },
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "ombCategory",
+                                "valueCoding": {
+                                    "code": "2106-3",
+                                    "display": "White",
+                                    "system": "urn:oid:2.16.840.1.113883.6.238"
+                                }
+                            },
+                            {
+                                "url": "text",
+                                "valueString": "White"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "ombCategory",
+                                "valueCoding": {
+                                    "code": "2186-5",
+                                    "display": "Not Hispanic or Latino",
+                                    "system": "urn:oid:2.16.840.1.113883.6.238"
+                                }
+                            },
+                            {
+                                "url": "text",
+                                "valueString": "Not Hispanic or Latino"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+                        "valueString": "Gina573 Terry864"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+                        "valueCode": "M"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+                        "valueAddress": {
+                            "city": "Brookline",
+                            "country": "US",
+                            "state": "Massachusetts"
+                        }
+                    },
+                    {
+                        "url": "http://synthetichealth.github.io/synthea/disability-adjusted-life-years",
+                        "valueDecimal": 0.0
+                    },
+                    {
+                        "url": "http://synthetichealth.github.io/synthea/quality-adjusted-life-years",
+                        "valueDecimal": 18.0
+                    }
+                ],
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "latitude",
+                                        "valueDecimal": 41.97243792772779
+                                    },
+                                    {
+                                        "url": "longitude",
+                                        "valueDecimal": -70.05957503171508
+                                    }
+                                ],
+                                "url": "http://hl7.org/fhir/StructureDefinition/geolocation"
+                            }
+                        ],
+                        "city": "Truro",
+                        "country": "US",
+                        "line": [
+                            "660 Bernier Bridge Suite 5"
+                        ],
+                        "state": "MA"
+                    }
+                ],
+                "birthDate": "2000-02-12",
+                "communication": [
+                    {
+                        "language": {
+                            "coding": [
+                                {
+                                    "code": "en-US",
+                                    "display": "English",
+                                    "system": "urn:ietf:bcp:47"
+                                }
+                            ],
+                            "text": "English"
+                        }
+                    }
+                ],
+                "gender": "male",
+                "identifier": [
+                    {
+                        "system": "https://github.com/synthetichealth/synthea",
+                        "value": "b1cf5f57-b061-4b7f-aa9d-6283a121694b"
+                    },
+                    {
+                        "system": "http://hospital.smarthealthit.org",
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "MR",
+                                    "display": "Medical Record Number",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                                }
+                            ],
+                            "text": "Medical Record Number"
+                        },
+                        "value": "b1cf5f57-b061-4b7f-aa9d-6283a121694b"
+                    },
+                    {
+                        "system": "http://hl7.org/fhir/sid/us-ssn",
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "SS",
+                                    "display": "Social Security Number",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                                }
+                            ],
+                            "text": "Social Security Number"
+                        },
+                        "value": "999-45-9851"
+                    },
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.4.3.25",
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "DL",
+                                    "display": "Driver's License",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                                }
+                            ],
+                            "text": "Driver's License"
+                        },
+                        "value": "S99917866"
+                    }
+                ],
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "code": "S",
+                            "display": "Never Married",
+                            "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+                        }
+                    ],
+                    "text": "Never Married"
+                },
+                "multipleBirthBoolean": false,
+                "name": [
+                    {
+                        "family": "Conn188",
+                        "given": [
+                            "Garland107"
+                        ],
+                        "prefix": [
+                            "Mr."
+                        ],
+                        "use": "official"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "home",
+                        "value": "555-572-6599"
+                    }
+                ],
+                "resourceType": "Patient"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:d5fab861-2bec-11ea-a5a7-4ccc6a181ed3",
+            "resource": {
+                "meta": {
+                    "lastUpdated": "2019-12-30T22:43:57.922Z",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+                    ],
+                    "versionId": "1"
+                },
+                "address": {
+                    "city": "PLYMOUTH",
+                    "country": "US",
+                    "line": [
+                        "275 SANDWICH STREET"
+                    ],
+                    "postalCode": "02360",
+                    "state": "MA"
+                },
+                "managingOrganization": {
+                    "display": "BETH ISRAEL DEACONESS HOSPITAL - PLYMOUTH",
+                    "reference": "urn:uuid:d5fadf66-2bec-11ea-a77e-4ccc6a181ed3"
+                },
+                "name": "BETH ISRAEL DEACONESS HOSPITAL - PLYMOUTH",
+                "position": {
+                    "latitude": 41.897892,
+                    "longitude": -70.62403
+                },
+                "status": "active",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "5087462000"
+                    }
+                ],
+                "resourceType": "Location"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:d5fab862-2bec-11ea-9af0-4ccc6a181ed3",
+            "resource": {
+                "meta": {
+                    "lastUpdated": "2019-12-30T22:43:58.469Z",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+                    ],
+                    "versionId": "1"
+                },
+                "active": true,
+                "address": [
+                    {
+                        "city": "PLYMOUTH",
+                        "country": "US",
+                        "line": [
+                            "275 SANDWICH STREET"
+                        ],
+                        "postalCode": "02360",
+                        "state": "MA"
+                    }
+                ],
+                "gender": "male",
+                "identifier": [
+                    {
+                        "system": "http://hl7.org/fhir/sid/us-npi",
+                        "value": "220"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "Schmeler639",
+                        "given": [
+                            "Tommy814"
+                        ],
+                        "prefix": [
+                            "Dr."
+                        ]
+                    }
+                ],
+                "telecom": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "system": "email",
+                        "use": "work",
+                        "value": "Tommy814.Schmeler639@example.com"
+                    }
+                ],
+                "resourceType": "Practitioner"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:d5fadf66-2bec-11ea-a77e-4ccc6a181ed3",
+            "resource": {
+                "meta": {
+                    "lastUpdated": "2019-12-30T22:43:58.000Z",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+                    ],
+                    "versionId": "1"
+                },
+                "active": true,
+                "address": [
+                    {
+                        "city": "PLYMOUTH",
+                        "country": "US",
+                        "line": [
+                            "275 SANDWICH STREET"
+                        ],
+                        "postalCode": "02360",
+                        "state": "MA"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "system": "https://github.com/synthetichealth/synthea",
+                        "value": "b1ddf812-1fdd-3adf-b1d5-32cc8bd07ebb"
+                    }
+                ],
+                "name": "BETH ISRAEL DEACONESS HOSPITAL - PLYMOUTH",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "5087462000"
+                    }
+                ],
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "code": "prov",
+                                "display": "Healthcare Provider",
+                                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+                            }
+                        ],
+                        "text": "Healthcare Provider"
+                    }
+                ],
+                "resourceType": "Organization"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:d5fadf67-2bec-11ea-b259-4ccc6a181ed3",
+            "resource": {
+                "meta": {
+                    "lastUpdated": "2019-12-30T22:43:59.047Z",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition",
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-condition"
+                    ],
+                    "versionId": "1"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "code": "encounter-diagnosis",
+                                "display": "Encounter Diagnosis",
+                                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+                            }
+                        ]
+                    }
+                ],
+                "clinicalStatus": {
+                    "coding": [
+                        {
+                            "code": "active",
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+                        }
+                    ]
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "code": "1234",
+                            "display": "Examplitis",
+                            "system": "http://snomed.info/sct"
+                        }
+                    ],
+                    "text": "Examplitis"
+                },
+                "encounter": {
+                    "reference": "urn:uuid:d5fab85f-2bec-11ea-a122-4ccc6a181ed3"
+                },
+                "onsetDateTime": "2018-02-17T15:07:39-08:00",
+                "recordedDate": "2018-02-17T15:07:39-08:00",
+                "subject": {
+                    "reference": "urn:uuid:d5fab860-2bec-11ea-9dfe-4ccc6a181ed3"
+                },
+                "verificationStatus": {
+                    "coding": [
+                        {
+                            "code": "confirmed",
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+                        }
+                    ]
+                },
+                "resourceType": "Condition"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:d5fadf68-2bec-11ea-bcec-4ccc6a181ed3",
+            "resource": {
+                "meta": {
+                    "lastUpdated": "2019-12-30T22:43:57.469Z",
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-coverage"
+                    ],
+                    "versionId": "1"
+                },
+                "beneficiary": {
+                    "reference": "urn:uuid:d5fab860-2bec-11ea-9dfe-4ccc6a181ed3"
+                },
+                "payor": [
+                    {
+                        "display": "UnitedHealthcare",
+                        "reference": "urn:uuid:d5fadf69-2bec-11ea-835d-4ccc6a181ed3"
+                    }
+                ],
+                "status": "active",
+                "subscriberId": "12345",
+                "type": {
+                    "text": "UnitedHealthcare"
+                },
+                "resourceType": "Coverage"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:d5fadf69-2bec-11ea-835d-4ccc6a181ed3",
+            "resource": {
+                "meta": {
+                    "lastUpdated": "2019-12-30T22:43:57.563Z",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+                    ],
+                    "versionId": "1"
+                },
+                "active": true,
+                "address": [
+                    {
+                        "city": "Minnetonka",
+                        "line": [
+                            "9800 Healthcare Lane"
+                        ],
+                        "postalCode": "55436",
+                        "state": "MN"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "system": "http://hl7.org/fhir/sid/us-npi",
+                        "value": "0000010006"
+                    }
+                ],
+                "name": "UnitedHealthcare",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "work",
+                        "value": "1-888-545-5205"
+                    }
+                ],
+                "resourceType": "Organization"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:d5fadf6a-2bec-11ea-be4a-4ccc6a181ed3",
+            "resource": {
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+                    ]
+                },
+                "active": true,
+                "address": [
+                    {
+                        "city": "Chicago",
+                        "line": [
+                            "1 Main"
+                        ],
+                        "postalCode": "60007",
+                        "state": "IL"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "system": "http://hl7.org/fhir/sid/us-npi",
+                        "value": "0000010005"
+                    }
+                ],
+                "name": "Acme Message Sender",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "work",
+                        "value": "1-800-555-5555"
+                    }
+                ],
+                "resourceType": "Organization"
+            }
+        }
+    ],
+    "timestamp": "2019-12-31T16:44:20.203037",
+    "type": "message",
+    "resourceType": "Bundle"
+}
