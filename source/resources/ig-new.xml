@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="hl7.fhir.us.davinci-alerts-0.2.0"/>
+  <id value="hl7.fhir.us.davinci-alerts-0.2.1"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
     <valueString value="/Users/ehaas/Documents/FHIR/Davinci-Notifications/source/resources"/>
   </extension>
@@ -14,8 +14,8 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
     <valueString value="/Users/ehaas/Documents/FHIR/Davinci-Notifications/source/pages"/>
   </extension>
-  <url value="http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts-0.2.0"/>
-  <version value="0.2.0"/>
+  <url value="http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts-0.2.1"/>
+  <version value="0.2.1"/>
   <name value="DaVinciUnsolicitedNotifications"/>
   <title value="Da Vinci Unsolicited Notifications"/>
   <status value="draft"/>
