@@ -15,7 +15,7 @@
 			<MessageHeader>
 
 				<meta>
-					<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader"/>
+					<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader"/>
 				</meta>
 
 				<text>
