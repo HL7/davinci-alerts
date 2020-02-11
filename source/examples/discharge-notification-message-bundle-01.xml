@@ -29,7 +29,7 @@
 							<b>meta</b>:
 						</p>
 						<p>
-							<b>event</b>: Notification Admit (Details: http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event code notification-discharge = 'Notification Discharge', stated as 'Notification payloadMimeType')</p>
+							<b>event</b>: Notification Discharge (Details: http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event code notification-discharge = 'Notification Discharge', stated as 'Notification payloadMimeType')</p>
 						<h3>Destinations</h3>
 						<table class="grid">
 							<tr>
@@ -100,8 +100,8 @@
 				</text>
 				<eventCoding>
 					<system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"/>
-					<code value="notification-admit"/>
-					<display value="Notification Admit"/>
+					<code value="notification-discharge"/>
+					<display value="Notification Discharge"/>
 				</eventCoding>
 				<destination>
 					<name value="Acme Message Gateway"/>
@@ -136,7 +136,7 @@
 					<reference value="urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7"/>
 					<display value="Inpatient Encounter"/>
 				</focus>
-				<!-- <definition value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-admit"/> -->
+				<!-- <definition value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-discharge"/> -->
 			</MessageHeader>
 		</resource>
 	</entry>
