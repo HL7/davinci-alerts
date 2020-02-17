@@ -11,14 +11,14 @@ The following data-elements are mandatory (i.e., data MUST be present) or must b
 
 1. A code for the type of event
 1. the message source application
-1. A reference to the event's focus resource(s) which will be bundled in the message.
+1. A reference to the event's focus resource(s) which will be bundled in the message
 
 **Each {{base_type}} must support:**
 
 1. A  destination
-1. A reference to the sender which will be bundled in the message.
-1. A reference to author which will be bundled in the message.
-1. A reference to responsible party which will be bundled in the message.
+1. A reference to the sender which will be bundled in the message
+1. A reference to author which will be bundled in the message
+1. A reference to responsible party which will be bundled in the message
 
 **Additional Profile specific implementation guidance:**
 

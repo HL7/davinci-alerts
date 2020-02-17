@@ -10,7 +10,7 @@ The following data-elements are mandatory (i.e., data MUST be present) or must b
 
 **Each {{base_type}} must support:**
 
-1. A reference(s) to US Core Encounter Location(s) which will be bundled in the message.
+1. A reference(s) to US Core Encounter Location(s) which will be bundled in the message
 
 ### Examples
 
