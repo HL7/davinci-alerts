@@ -40,7 +40,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 ### Scope and Usage
 
-The goal of this Implementation Guide is define a technical framework for sending unsolicited  notifications to the appropriate actors when triggered by an event or request.  The notifications should provides enough information to understand what the notification is about and to enable the Recipient to determine if and what addition steps they need to take in response to the notification.  For example, additional steps may include:
+The goal of this Implementation Guide is define a technical framework for sending unsolicited  notifications to the appropriate actors when triggered by an event or request.  The notifications should provides enough information to understand what the notification is about and to enable the Recipient to determine if and what additional steps they need to take in response to the notification.  For example, additional steps may include:
 
 - a request for more information from the Sender through a FHIR RESTful query
 - creation of an encounter record in the receiving system with appropriate provenance
