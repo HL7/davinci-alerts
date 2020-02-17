@@ -27,7 +27,7 @@ This project recognizes the impact of the [Argonaut Clinical Data Subscriptions]
 **Preconditions**
 
 - There is an event or request that drives the generation of the Notification.
-- An Notification will be generated for each patient separately.
+- A Notification will be generated for each patient separately.
   - The event can be for one or more patients.
 - The Sender has access to the Recipients/Intermediary FHIR endpoints.
 - System level trust exists between the actors (refer to the [Security] Page for additional guidance).
