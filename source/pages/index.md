@@ -26,7 +26,7 @@ The [2019 CMS 45 CFR Part 156 NPRM] focuses on hospitalization notifications due
 
 This Guide is divided into several pages which are listed at the top of each page in the menu bar.
 
-- [Home]\: The home page provides the introduction and background for the Da Vinci Alert Project.
+- [Home]\: The home page provides the introduction and background for the Da Vinci Unsolicited Notifications Project.
 
 - [Framework]\: These pages provide guidance on the set of FHIR transactions and the FHIR artifacts used in a general framework to enable unsolicited notifications to care team members.
 - [Admit/Discharge Use case]\: The Admission/Discharge use case is used to show how to implement an unsolicited notification using the framework.
