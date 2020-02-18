@@ -1,9 +1,6 @@
 #text for https://sequencediagram.org/
 # add viewbox attribute to svg file for img sizing viewBox="0.0 0.0 829.0 740.0">
 
-#text for https://sequencediagram.org/
-# add viewbox attribute to svg file for img sizing
-
 title Unsolicited Admit/Discharge Notification
 
 participant Sender
@@ -22,7 +19,7 @@ Recipient/Intermediary $process-message endpoint-->Sender:4) Response (200)
 
 note over Recipient/Intermediary: 4) Process Da Vinci Admit/Discharge \nNotification Message
 
-Recipient/Intermediary->Sender:5) Optionally GET additional data
+Recipient/Intermediary->Sender:5) Optionally Search for additional data
 
 note over Sender:6) Process Search
 
