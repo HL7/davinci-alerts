@@ -6,6 +6,7 @@
 [Conformance Requirements for Client]: CapabilityStatement-client.html "Conformance Requirements for Client Page"
 [Capability Statements]: capstatements.html
 [Terminology]: terminology.html "Terminology Page"
+[Message Definitions]: bundles.html "Bundle Definitions Page"
 [Profiles]: profiles.html "Profiles and Extensions Page"
 [Operations]: operations.html "Operations Page"
 [Examples]: all-examples.html
@@ -27,7 +28,8 @@
 ["black box"]: https://en.wikipedia.org/wiki/Black_box
 ["reliable delivery"]: https://en.wikipedia.org/wiki/Reliable_messaging
 [MustSupport flag]: {{site.data.fhir.path}}profiling.html#mustsupport
-[Da Vinci Alerts CapabilityStatements]: capstatements.html
+[Da Vinci Notifications CapabilityStatements]: capstatements.html
+[Notification Sender CapabilityStatement]: http://build.fhir.org/ig/HL7/davinci-alerts/CapabilityStatement-notification-sender.html
 [FHIR Messaging paradigm]: {{site.data.fhir.path}}messaging.html
 [`$process-message`]: {{site.data.fhir.path}}messageheader-operation-process-message.html
 [notifications by messaging]: {{site.data.fhir.path}}subscription.html#messaging
