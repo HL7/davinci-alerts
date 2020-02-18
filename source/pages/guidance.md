@@ -46,7 +46,7 @@ This project recognizes the impact of the [Argonaut Clinical Data Subscriptions]
 
 - Based on FHIR R4 and US Core R4 profiles where applicable.
 - Notifications are transacted to the `$process-message` operation endpoint.
-- The Da Vinci Notification Message Bundle Profile is the FHIR object that is exchanged for all alert transactions.
+- The Da Vinci Notification Message Bundle Profile is the FHIR object that is exchanged for all notifaction transactions.
 
 ---
 
