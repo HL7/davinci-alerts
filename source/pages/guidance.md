@@ -74,7 +74,7 @@ These concepts represent a 'starter set' and will be supplemented with additiona
 <!--
 The message bundle **SHALL** include the MessageHeader resource and the resources referenced by `MessageHeader.focus` element. It **SHOULD** include all resources needed for the Receiver or Intermediary to be able to process the message as expected by the the message event *provided that all included resources have a traversal path following Reference or canonical links either to or from the MessageHeader*.
 -->
-For all Da Vinci Notification Message Bundles, the following resources are mandatory (i.e., data MUST be present) or must be supported if the data if present in the source system (see [Must Support] definition below).  These requirements are illustrated in figure 3 below.  See the [Admit/Discharge Use Case] for an example of the required resources for a particular scenario.
+For all Da Vinci Notification Message Bundles, the following resources are mandatory (i.e., data MUST be present) or must be supported if the data is present in the source system (see [Must Support] definition below).  These requirements are illustrated in figure 3 below.  See the [Admit/Discharge Use Case] for an example of the required resources for a particular scenario.
 
 **Each Bundle must have:**
 
