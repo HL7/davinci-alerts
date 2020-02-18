@@ -17,7 +17,7 @@ This use case demonstrates how the Da Vinci Notifications IG framework is used t
 
 ### Use Case Background
 
-Having the ability to send a notifications to update physicians and care management teams when a patient is admitted to a hospital or discharged from the hospital is key to improving patient care. The intent of these notifications is *not* to replace existing data exchange mechanisms, for example the discharge summary; but rather to notify of the discharge event and provide enough data to gather more information, if desired. These notifications improve post-discharge transitions, promote communication between providers and encourage follow up care.  Figure 5 illustrates how some of the admit and discharge data elements corresponded to the resource in the message bundle.
+Having the ability to send notifications to update physicians and care management teams when a patient is admitted to a hospital or discharged from the hospital is key to improving patient care. The intent of these notifications is *not* to replace existing data exchange mechanisms, for example the discharge summary; but rather to notify of the discharge event and provide enough data to gather more information, if desired. These notifications improve post-discharge transitions, promote communication between providers and encourage follow up care.  Figure 5 illustrates how some of the admit and discharge data elements corresponded to the resource in the message bundle.
 
 {% include img-portrait.html img="bundle_graphic.svg" caption="Figure 5" %}
 
