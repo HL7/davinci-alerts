@@ -72,7 +72,7 @@ As documented in the Framework page, there are two alternatives to defining the 
 #### FHIR Profiles
 {:.no_toc}
 
-The Following FHIR Profiles can be used to formally define this resource graph for the admission and discharge event.  Note that except for the first profile listed below, these profiles constrain their references to other profile within the same bundle.
+The Following FHIR Profiles can be used to formally define this resource graph for the admission and discharge event.  Note that except for the first profile listed below, these profiles constrain their references to other profiles within the same bundle.
 
 - [Da Vinci Notifications Bundle Profile]
 - [Da Vinci Admit Notification MessageHeader Profile]
