@@ -109,7 +109,7 @@ Da Vinci Notification Bundles such as these examples can be assembled based on a
 
 ### Pushing Unsolicited Admit/Discharge Notification
 
-In the interaction shown in figures 9, the HealthCare facility is acting in the role of the Notification Sender and the Notification Recipient can be any of the actors listed on the home page.  To notify the Notification Recipients/Intermediary of an admit or discharge event, the Notification Sender uses $process-message operation to submit the Notification Message to appropriate FHIR endpoints. Not shown in figure 9 is that when the Intermediary successfully receives and processes the notifications, it subsequently forwards the data the end users.
+In the interaction shown in figures 9, the HealthCare facility is acting in the role of the Notification Sender and the Notification Recipient can be any of the actors listed on the home page.  To notify the Notification Recipients/Intermediary of an admit or discharge event, the Notification Sender uses $process-message operation to submit the Notification Message to appropriate FHIR endpoints. Not shown in Figure 9 is that when the Intermediary successfully receives and processes the notifications, it subsequently forwards the data the end users.
 
 {% include img-portrait.html img="$process_message_admit_wf.svg" caption="Figure 9" %}
 
