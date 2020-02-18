@@ -91,7 +91,7 @@ The triggering of a notification allow for the appropriate notification to be se
 Notifications can be generated for many scenarios.
 
 The initial version of this
-Implementation Guide will focus on *Admission and Discharge* Scenarios, in other words, anything that would create an encounter in a patient care record.  However, this framework is intendend to support other scenarios such as those listed below.  Work is planned to document them in future publications in collaboration with domain experts such as public health.
+Implementation Guide will focus on *Admission and Discharge* Scenarios, in other words, anything that would create an encounter in a patient care record.  However, this framework is intended to support other scenarios such as those listed below.  Work is planned to document them in future publications in collaboration with domain experts such as public health.
 
 
 <div class="row">
