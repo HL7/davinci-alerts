@@ -106,7 +106,7 @@ The set of resources within the message and their relationship to each other can
 
 The Da Vinci Notification Message can be formally defined in FHIR using two alternate ways:
 
-1. a set of FHIR Profiles that constrain links to the message Bundle
+1. A set of FHIR Profiles that constrain links to the message Bundle
 1. MessageDefinition and GraphDefinition
 
 In both methods the base [Da Vinci Notifications MessageHeader Profile]
