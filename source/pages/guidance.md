@@ -201,7 +201,7 @@ The `$process-message` operation is invoked by the Sender using the `POST` synta
 The body of the operation is the Da Vinci Notification Message Bundle containing:
 
   1. The MessageHeader which is the first resource in the bundle and contains the the message event code - that identifies the nature of the notification.
-  1. The other resources in the bundle depend on the notification use case and defined by either the MessageDefinition and GraphDefinition or FHIR Profiles as described above.
+  1. The other resources in the bundle depend on the notification use case and are defined by either the MessageDefinition and GraphDefinition or FHIR Profiles as described above.
 
 An HTTP Status success code is returned on successful submission.
 
