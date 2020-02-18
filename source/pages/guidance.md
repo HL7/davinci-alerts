@@ -254,7 +254,7 @@ All elements in the Da Vinci Notification profiles have a [MustSupport flag]. Sy
 
 - As part of the alert notification or a query result as specified by the [Da Vinci Intermediary Server CapabilityStatement], the  Sender SHALL be capable of including the data elements defined in the Da Vinci Notification profiles that have a MustSupport flag.
 
-- The  Recipient SHALL be capable of processing resource instances containing the data elements the data elements defined in the Da Vinci Notification profiles that have a MustSupport flag without generating an error or causing the application to fail. In other words, the Recipient SHOULD be capable of processing the data elements (displaying, storing, etc).
+- The  Recipient SHALL be capable of processing resource instances containing the data elements defined in the Da Vinci Notification profiles that have a MustSupport flag without generating an error or causing the application to fail. In other words, the Recipient SHOULD be capable of processing the data elements (displaying, storing, etc).
 
 - In situations where information on a particular data element is not needed or considered protected information the Intermediary MAY remove the data elements in the resource instance when distributing the alert notification or responding to an n Recipient's query. The Intermediary MAY provide the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
 
