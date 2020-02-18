@@ -54,7 +54,7 @@ The following table summarizes the technical scope of this guide:
 -  Define a common FHIR messaging Bundle that is exchanged for all Notifications.
 -  Define the FHIR transactions and minimum operational behavior for the relevant Actors
 - Define how to define and share the minimal data elements needed to support the information needs for an initial set of use cases starting with the patient admission and discharge event use case.  
--  Define a how users requiring more data may follow up with additional queries.
+-  Define how users requiring more data may follow up with additional queries.
 - Describe basic Security and Privacy considerations
 
 ----
