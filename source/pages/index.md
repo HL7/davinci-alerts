@@ -28,7 +28,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - [Home]\: The home page provides the introduction and background for the Da Vinci Alert Project.
 
-- [Framework]\: These pages provide guidance on the set of FHIR transactions and the FHIR artifacts used in a general framework to enable unsolicited notifications to careteam members.
+- [Framework]\: These pages provide guidance on the set of FHIR transactions and the FHIR artifacts used in a general framework to enable unsolicited notifications to care team members.
 - [Admit/Discharge Use case]\: The Admission/Discharge use case is used to show how to implement an unsolicited notification using the framework.
 - [FHIR Artifacts]\: These pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
   - [Profiles]\: This page lists the set of Profiles that are defined in this guide to exchange quality data.
