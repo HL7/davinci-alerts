@@ -35,7 +35,7 @@ To carry information regarding admission and discharge event messages, the requi
 
 {% include img-portrait.html img="admit_message_graph1.svg" caption="Figure 6" %}
 
-The other "required if present" resources defined in the framework are those referenced by `MessageHeader.author`, `MessageHeader.responsible`, `MessageHeader.sender` and by referenced by the US Core Encounter Profile. These combine to make up a 'generic' Encounter message bundle structure illustrated in figure 7 below:
+The other "required if present" resources defined in the framework are those referenced by `MessageHeader.author`, `MessageHeader.responsible`, `MessageHeader.sender` and those referenced by the US Core Encounter Profile. These combine to make up a 'generic' Encounter message bundle structure illustrated in figure 7 below:
 
 
 {% include img-portrait.html img="admit_message_graph2.svg" caption="Figure 7" %}
@@ -50,7 +50,7 @@ The following additional resources (or rather profiles) have been determined to 
 | Emergency and Inpatient Discharges |  US Core Condition, Da Vinci HRex Coverage |
 
 
-Adding these additional components results in the following resource graph showing all the required resources and their relationships for the admission and discharge notification use case:
+Adding these additional components results in the following resource graph showing all the required resources and their relationships for the admission and discharge notification use case shown in Figure 8:
 
 {% include img-portrait.html img="admit_message_graph3.svg" caption="Figure 8" %}
 
