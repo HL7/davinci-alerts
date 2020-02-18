@@ -103,7 +103,7 @@ The Following MessageDefinition and GraphDefinition can be used to formally defi
 
 ### Da Vinci Notification Message Bundle Examples
 
-A Da Vinci Notification Bundles such as these examples can be assembled based on any of the above definitions.
+Da Vinci Notification Bundles such as these examples can be assembled based on any of the above definitions.
 
 {% include list-simple-bundles.xhtml %}
 
