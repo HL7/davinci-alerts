@@ -30,7 +30,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - [Framework]\: These pages provide guidance on the set of FHIR transactions and the FHIR artifacts used in a general framework to enable unsolicited notifications to care team members.
 - [Admit/Discharge Use case]\: The Admission/Discharge use case is used to show how to implement an unsolicited notification using the framework.
-- [FHIR Artifacts]\: These pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
+- [FHIR Artifacts]\: These pages provide detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
   - [Profiles]\: This page lists the set of Profiles that are defined in this guide to exchange quality data.
   - [Terminology]\: This page lists the value sets and code system defined for this guide.
   - [Capability Statements]\: This set of pages describes the expected FHIR capabilities of the various DEQM actors.
@@ -40,7 +40,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 ### Scope and Usage
 
-The goal of this Implementation Guide is to define a technical framework for sending unsolicited  notifications to the appropriate actors when triggered by an event or request.  The notifications should provides enough information to understand what the notification is about and to enable the Recipient to determine if and what additional steps they need to take in response to the notification.  For example, additional steps may include:
+The goal of this Implementation Guide is to define a technical framework for sending unsolicited  notifications to the appropriate actors when triggered by an event or request.  The notifications should provide enough information to understand what the notification is about and to enable the Recipient to determine if and what additional steps they need to take in response to the notification.  For example, additional steps may include:
 
 - a request for more information from the Sender through a FHIR RESTful query
 - creation of an encounter record in the receiving system with appropriate provenance
