@@ -117,7 +117,7 @@
       <page><nameUrl value="usecases.html"/><title value="Da Vinci Notifications Patient Admit/Discharge Use Case"/><generation value="markdown"/></page>
 
       <!-- ============ Profiles Page =============== -->
-      <page><nameUrl value="profiles.html"/><title value="Admit/Discharge Use Case"/><generation value="markdown"/>
+      <page><nameUrl value="profiles.html"/><title value="Profiles and Extensions"/><generation value="markdown"/>
 
         <!-- ============ Profiles and examples=============== -->
         <!-- insert profiles -->
