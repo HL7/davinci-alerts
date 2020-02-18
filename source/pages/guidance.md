@@ -115,7 +115,7 @@ and [Da Vinci Notifications Bundle Profile] are used to define the base constrai
 ##### FHIR Profiles
 {:.no_toc}
 
-In this method all the profiles that populate the Bundle get enforced by their references and the fact their [aggregation] is constrained to 'bundled'.  This means that these references to only resources that populate the same bundle.  Therefore, starting with the MessageHeader profile, the profiled resources within the bundle form a chain of links that define the bundle.
+In this method all the profiles that populate the Bundle get enforced by their references and the fact that their [aggregation] is constrained to 'bundled'.  This means that these references are only to resources that populate the same bundle.  Therefore, starting with the MessageHeader profile, the profiled resources within the bundle form a chain of links that define the bundle.
 
 Use case specific Da Vinci Notification Bundles can be derived from the:
 
