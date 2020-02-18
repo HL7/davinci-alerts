@@ -66,7 +66,7 @@ The message event codes identify the reason for the notification.  For this fram
 
 {% include list-simple-codesystems.xhtml %}
 
-These concepts represent a 'starter set' and will be supplemented with additional concept in the future. Note that there is no HL7 v2 messaging equivalent to these codes. However when available, a relationship between concepts in the notification event codes and concepts used in the notification "focus" resource is documented. For example in the admission and discharge scenarios the message event codes are notification concepts that correspond to the concepts defining the events in the `encounter.class` and `encounter.hospitalization.dischargeDisposition` codes.
+These concepts represent a 'starter set' and will be supplemented with additional concepts in the future. Note that there is no HL7 v2 messaging equivalent to these codes. However when available, a relationship between concepts in the notification event codes and concepts used in the notification "focus" resource is documented. For example in the admission and discharge scenarios the message event codes are notification concepts that correspond to the concepts defining the events in the `encounter.class` and `encounter.hospitalization.dischargeDisposition` codes.
 
 #### What is in the Message Bundle
 {:.no_toc}
