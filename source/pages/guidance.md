@@ -284,7 +284,7 @@ All elements in the Da Vinci Notification GraphDefinition have a [Da Vinci Notif
 
 * The Recipient SHALL be capable of processing the profile instances referred to by the link without generating an error or causing the application to fail. In other words Recipient/Intermediary SHOULD be capable of processing the profile (display, store, etc).
 
-- In situations where information on a particular data element is not needed or considered protected information the Intermediary MAY remove the profile instance from the bundle when distributing the alert notification. The Intermediary MAY provide the reason for the missing information using the dataAbsentReason extension.
+- In situations where information on a particular data element is not needed or considered protected information the Intermediary MAY remove the profile instance from the bundle when distributing the notification. The Intermediary MAY provide the reason for the missing information using the dataAbsentReason extension.
 
 - The Recipient SHALL be able to process bundle instances containing missing profiles and data elements asserting missing information without generating an error or causing the application to fail.
 
