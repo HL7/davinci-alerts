@@ -2,7 +2,7 @@ title: Da Vinci Unsolicited Notifications
 copyrightyear: "2019+" # copyright date for footer
 historypath: "http://hl7.org/fhir/us/davinci-alerts/history.html" # complete path to IG history file use "history" for an example of what this page would look like
 #changelink: https://github.com/HL7/davinci-alerts/issues  # for git hub issues for ci builds
-changelink: https://jira.hl7.org/projects/FHIR/issues/FHIR-25324?filter=allopenissues  # for hl7 guides
+changelink: https://jira.hl7.org/secure/CreateIssue!default.jspa  # for hl7 guides
 summaries: true #true if want custom profile summaries in summary tab
 diff2: false # true if want to show intermediate differentials - probably never use this.
 build: ci  # choice of ci|ballot|commentballot|version
