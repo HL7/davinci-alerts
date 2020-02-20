@@ -33,7 +33,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 - [FHIR Artifacts]\: These pages provide detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
   - [Profiles]\: This page lists the set of Profiles that are defined in this guide to exchange quality data.
   - [Terminology]\: This page lists the value sets and code system defined for this guide.
-  - [Capability Statements]\: This set of pages describes the expected FHIR capabilities of the various DEQM actors.
+  - [Capability Statements]\: This set of pages describes the expected FHIR capabilities of the various Da Vinci Notification actors.
 - [Security]\: General security requirements and recommendations for {{site.title}} actors.
 - [Examples]\: List of links to all the examples used in this guide.
 - [Downloads]\: This page provides links to downloadable artifacts.
