@@ -38,7 +38,6 @@
 			<patternCoding>
 				<system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"/>
 				<code value="notification-admit"/>
-				<display value="Notification admit"/>
 			</patternCoding>
 			<mustSupport value="true"/>
 		</element>
