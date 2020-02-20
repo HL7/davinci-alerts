@@ -56,10 +56,21 @@ Formats: <a href="{{[type]}}-{{[id]}}.html">Narrative</a>, <a href="{{[type]}}-{
 <a href="{{site.data.fhir.path}}profiling.html#representation">Description of Profiles, Differentials, and Snapshots</a>.
 </p>
 
+<form>
 <p>
 The official URL for this profile is:
-<code>{{site.data.structuredefinitions.{{[id]}}.url}}</code><button id="copy-button" class="btn-default btn-sm" data-clipboard-text="{{site.data.structuredefinitions.{{[id]}}.url}}">Copy</button>
+<div class="input-group">
+<input type="text" class="form-control canonical input-sm" value="{{site.data.structuredefinitions.{{[id]}}.url}}" aria-label="copy this canonical url" id="copy-input" readonly/>
+<span class="input-group-btn">
+  <button id="copy-button" aria-label="Copy to clipboard" class="btn btn-sm copy-me" type="button" title="Copy to Clipboard" data-placement="top">
+    <span class="glyphicon glyphicon-copy" aria-hidden="true">
+    </span>
+  </button>
+</span>
+</div>
+
 </p>
+</form>
 
 <p>
 Published on {{site.data.structuredefinitions.{{[id]}}.date}} as {{site.data.structuredefinitions.{{[id]}}.status}} by the {{site.data.structuredefinitions.{{[id]}}.publisher | default: site.data.fhir.ig.publisher }}.
