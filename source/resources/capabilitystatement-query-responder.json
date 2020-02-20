@@ -1,7 +1,7 @@
 {
     "id": "query-responder",
     "text": {
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">Query Responder CapabilityStatement</h2><ul><li>Implementation Guide Version: 0.1.0</li><li>FHIR Version: 4.0.0</li><li>Supported formats: xml, json</li><li>Published: 2019-11-15</li><li>Published by: HL7 International - Infrascture and Messaging Work Group</li></ul><p><p>This CapabilityStatement describes the expected capabilities of a server that is capable of responding to a follow up FHIR RESTful query from an Intermediary/Recipient.  These Expectations are same as described in the <em>HL7 FHIR\u00ae US Core Implementation Guide STU3 Release 3.1.0</em> <a href=\"http://hl7.org/fhir/us/core/STU3.1/CapabilityStatement-us-core-server.html\">CapabiltyStatement for the US Core Server</a></p></p><h3 class=\"no_toc\" id=\"igs\">SHALL Support the Following Implementation Guides:</h3><ul><li><a href=\"http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.0\">http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.0</a></li></ul><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>refer to the  <em>HL7 FHIR\u00ae US Core Implementation Guide STU3 Release 3.1.0</em> CapabiltyStatement for the US Core Server</p><br></br></div>",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">Query Responder CapabilityStatement</h2><ul><li>Implementation Guide Version: 0.1.0</li><li>FHIR Version: 4.0.0</li><li>Supported formats: xml, json</li><li>Published: 2020-02-19</li><li>Published by: HL7 International - Infrastructure and Messaging Work Group</li></ul><p><p>This CapabilityStatement describes the expected capabilities of a server that is capable of responding to a follow up FHIR RESTful query from an Intermediary/Recipient.  These Expectations are the same as described in the <em>HL7 FHIR\u00ae US Core Implementation Guide STU3 Release 3.1.0</em> <a href=\"http://hl7.org/fhir/us/core/STU3.1/CapabilityStatement-us-core-server.html\">CapabiltyStatement for the US Core Server</a></p></p><h3 class=\"no_toc\" id=\"igs\">SHALL Support the Following Implementation Guides:</h3><ul><li><a href=\"http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.0\">http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.0</a></li></ul><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>Refer to the  <em>HL7 FHIR\u00ae US Core Implementation Guide STU3 Release 3.1.0</em> CapabiltyStatement for the US Core Server</p><br></br></div>",
         "status": "generated"
     },
     "contact": [
@@ -14,8 +14,8 @@
             ]
         }
     ],
-    "date": "2019-11-15",
-    "description": "This CapabilityStatement describes the expected capabilities of a server that is capable of responding to a follow up FHIR RESTful query from an Intermediary/Recipient.  These Expectations are same as described in the *HL7 FHIR\u00ae US Core Implementation Guide STU3 Release 3.1.0* [CapabiltyStatement for the US Core Server](http://hl7.org/fhir/us/core/STU3.1/CapabilityStatement-us-core-server.html)",
+    "date": "2020-02-19",
+    "description": "This CapabilityStatement describes the expected capabilities of a server that is capable of responding to a follow up FHIR RESTful query from an Intermediary/Recipient.  These Expectations are the same as described in the *HL7 FHIR\u00ae US Core Implementation Guide STU3 Release 3.1.0* [CapabiltyStatement for the US Core Server](http://hl7.org/fhir/us/core/STU3.1/CapabilityStatement-us-core-server.html)",
     "experimental": false,
     "fhirVersion": "4.0.0",
     "format": [
@@ -41,16 +41,16 @@
     "patchFormat": [
         "application/json-patch+json"
     ],
-    "publisher": "HL7 International - Infrascture and Messaging Work Group",
+    "publisher": "HL7 International - Infrastructure and Messaging Work Group",
     "rest": [
         {
-            "documentation": "refer to the  *HL7 FHIR\u00ae US Core Implementation Guide STU3 Release 3.1.0* CapabiltyStatement for the US Core Server",
+            "documentation": "Refer to the  *HL7 FHIR\u00ae US Core Implementation Guide STU3 Release 3.1.0* CapabiltyStatement for the US Core Server",
             "mode": "server"
         }
     ],
     "status": "active",
     "title": "Query Responder CapabilityStatement",
-    "url": "http://hl7.org/fhir/us/davinci-alerts/CapabilityStatement/query-responder",
+    "url": "http://hl7.org/fhir/us/davinci-notifications/CapabilityStatement/query-responder",
     "version": "0.1.0",
     "resourceType": "CapabilityStatement"
 }

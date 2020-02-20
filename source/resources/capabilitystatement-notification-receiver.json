@@ -1,7 +1,7 @@
 {
     "id": "notification-receiver",
     "text": {
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">Notification Receiver CapabilityStatement</h2><ul><li>Implementation Guide Version: 0.1.0</li><li>FHIR Version: 4.0.0</li><li>Supported formats: xml, json</li><li>Published: 2019-11-15</li><li>Published by: HL7 International - Infrascture and Messaging Work Group</li></ul><p><p>This CapabilityStatement describes the expected capabilities of a server that is capable of receiving a Da Vinci Unsolicited Notification transacted with the <code>$process-message</code> operation.</p></p><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>Da Vinci Notifications  Receiver <strong>SHALL</strong>:</p><ol><li>Support at least one use case defined in this Guide and listed in the <a href=\"index.html#scenarios\">Scenarios</a> Section.</li><li>Implement the RESTful behavior according to the FHIR specification.</li><li>Support json source formats for all Da Vinci Notification interactions.</li><li>Declare a CapabilityStatement identifying the scenarios, transactions and profiles supported.</li></ol><p>Da Vinci Notifications  Receiver <strong>SHOULD</strong>:</p><ol><li>Support xml source formats for all Da Vinci Notification interactions.</li><li>Identify the Da Vinci Notification or US Core profiles supported as part of the FHIR <code>meta.profile</code> attribute for each instance.</li></ol><p id=\"security\"><strong>Security:</strong></p><ol><li>For general security consideration refer to the <a href=\"http://build.fhir.org/secpriv-module.html\">Security and Privacy Considerations</a>.</li><li>For security considerations specific to this guide refer to the  <a href=\"security.html\">Security</a> page for requirements and recommendations.</li><li>A server <strong>SHALL</strong> reject any unauthorized requests by returning an <code>HTTP 401</code> unauthorized response code.</li></ol><p><strong>Summary of System Wide Operations</strong></p><li><strong>SHALL</strong> support the\t<a href=\"http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message\"><code>$process-message</code></a> operation.</li><br></br></div>",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">Notification Receiver CapabilityStatement</h2><ul><li>Implementation Guide Version: 0.1.0</li><li>FHIR Version: 4.0.0</li><li>Supported formats: xml, json</li><li>Published: 2020-02-19</li><li>Published by: HL7 International - Infrastructure and Messaging Work Group</li></ul><p><p>This CapabilityStatement describes the expected capabilities of a server that is capable of receiving a Da Vinci Unsolicited Notification transacted with the <code>$process-message</code> operation.</p></p><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>Da Vinci Notifications  Receiver <strong>SHALL</strong>:</p><ol><li>Support the notification framework defined in this Guide.</li><li>Implement the RESTful behavior according to the FHIR specification.</li><li>Support json source formats for all Da Vinci Notification interactions.</li><li>Declare a CapabilityStatement identifying the scenarios, transactions and profiles supported.</li></ol><p>Da Vinci Notifications  Receiver <strong>SHOULD</strong>:</p><ol><li>Support the admission/discharge use case defined in this Guide.</li><li>Support xml source formats for all Da Vinci Notification interactions.</li><li>Identify the Da Vinci Notification or US Core profiles supported as part of the FHIR <code>meta.profile</code> attribute for each instance.</li></ol><p id=\"security\"><strong>Security:</strong></p><ol><li>For general security consideration refer to the <a href=\"http://build.fhir.org/secpriv-module.html\">Security and Privacy Considerations</a>.</li><li>For security considerations specific to this guide refer to the  <a href=\"security.html\">Security</a> page for requirements and recommendations.</li><li>A server <strong>SHALL</strong> reject any unauthorized requests by returning an <code>HTTP 401</code> unauthorized response code.</li></ol><p><strong>Summary of System Wide Operations</strong></p><li><strong>SHALL</strong> support the\t<a href=\"http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message\"><code>$process-message</code></a> operation.</li><br></br></div>",
         "status": "generated"
     },
     "contact": [
@@ -14,7 +14,7 @@
             ]
         }
     ],
-    "date": "2019-11-15",
+    "date": "2020-02-19",
     "description": "This CapabilityStatement describes the expected capabilities of a server that is capable of receiving a Da Vinci Unsolicited Notification transacted with the `$process-message` operation.",
     "experimental": false,
     "fhirVersion": "4.0.0",
@@ -40,10 +40,10 @@
     "patchFormat": [
         "application/json-patch+json"
     ],
-    "publisher": "HL7 International - Infrascture and Messaging Work Group",
+    "publisher": "HL7 International - Infrastructure and Messaging Work Group",
     "rest": [
         {
-            "documentation": "Da Vinci Notifications  Receiver **SHALL**:\n\n1. Support at least one use case defined in this Guide and listed in the [Scenarios](index.html#scenarios) Section.\n1. Implement the RESTful behavior according to the FHIR specification.\n1. Support json source formats for all Da Vinci Notification interactions.\n1. Declare a CapabilityStatement identifying the scenarios, transactions and profiles supported.\n\nDa Vinci Notifications  Receiver **SHOULD**:\n\n1. Support xml source formats for all Da Vinci Notification interactions.\n1. Identify the Da Vinci Notification or US Core profiles supported as part of the FHIR `meta.profile` attribute for each instance.",
+            "documentation": "Da Vinci Notifications  Receiver **SHALL**:\n\n1. Support the notification framework defined in this Guide.\n1. Implement the RESTful behavior according to the FHIR specification.\n1. Support json source formats for all Da Vinci Notification interactions.\n1. Declare a CapabilityStatement identifying the scenarios, transactions and profiles supported.\n\nDa Vinci Notifications  Receiver **SHOULD**:\n\n1. Support the admission/discharge use case defined in this Guide.\n1. Support xml source formats for all Da Vinci Notification interactions.\n1. Identify the Da Vinci Notification or US Core profiles supported as part of the FHIR `meta.profile` attribute for each instance.",
             "mode": "server",
             "operation": [
                 {
@@ -64,7 +64,7 @@
     ],
     "status": "active",
     "title": "Notification Receiver CapabilityStatement",
-    "url": "http://hl7.org/fhir/us/davinci-alerts/CapabilityStatement/notification-receiver",
+    "url": "http://hl7.org/fhir/us/davinci-notifications/CapabilityStatement/notification-receiver",
     "version": "0.1.0",
     "resourceType": "CapabilityStatement"
 }

@@ -216,8 +216,13 @@
         "generation" : "markdown"
       },
       {
+        "nameUrl" : "usecases.html",
+        "title" : "Da Vinci Notifications Patient Admit/Discharge Use Case",
+        "generation" : "markdown"
+      },
+      {
         "nameUrl" : "profiles.html",
-        "title" : "Admit/Discharge Use Case",
+        "title" : "Profiles and Extensions",
         "generation" : "markdown",
         "page" : [{
           "nameUrl" : "StructureDefinition-admit-discharge-notification-condition.html",
