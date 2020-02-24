@@ -196,7 +196,7 @@ We are actively seeking input on whether or not to document how to  transmit end
 
 The `$process-message` operation is invoked by the Sender using the `POST` syntax:
 
-`POST [base]$process-message`
+`POST [base]/$process-message`
 
 The body of the operation is the Da Vinci Notification Message Bundle containing:
 
