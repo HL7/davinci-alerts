@@ -97,7 +97,7 @@ For all Da Vinci Notification Message Bundles, the following resources are manda
 #### How to define the Message Bundle
 {:.no_toc}
 
-The set of resources within the message and their relationship to each other can be represented as an interconnected graph of resources as Figure 3 below illustrates (note that this a simplified and incomplete representation of the possible resources in message. See figure 8 for an example of resource graph for the admission/discharge scenario):  
+The set of resources within the message and their relationship to each other can be represented as an interconnected graph of resources as Figure 3 below illustrates (Note that this a simplified and incomplete representation of the possible resources in notification message bundle. See Figure 8 for an example of a resource graph for the admission/discharge scenario):  
 
 {% include img-portrait.html img="generic_message_graph.svg" caption="Figure 3" %}
 
