@@ -105,6 +105,14 @@
       "source": "ValueSet-notification-event.xml",
       "base": "ValueSet-notification-event.html"
     },
+    "ValueSet/notification-admit-event": {
+      "source": "ValueSet-notification-admit-event.xml",
+      "base": "ValueSet-notification-admit-event.html"
+    },
+    "ValueSet/notification-discharge-event": {
+      "source": "ValueSet-notification-discharge-event.xml",
+      "base": "ValueSet-notification-discharge-event.html"
+    },
     "StructureDefinition/admit-discharge-notification-coverage": {
       "source": "StructureDefinition-admit-discharge-notification-coverage.xml",
       "defns": "StructureDefinition-admit-discharge-notification-coverage-definitions.html",

@@ -142,6 +142,18 @@
     },
     {
       "reference" : {
+        "reference" : "ValueSet/notification-admit-event"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/notification-discharge-event"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/admit-discharge-notification-encounter"
       },
       "exampleBoolean" : false
@@ -297,6 +309,16 @@
         "page" : [{
           "nameUrl" : "ValueSet-notification-event.html",
           "title" : "ValueSet Notification Event",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-notification-admit-event.html",
+          "title" : "ValueSet Admit Notification Event",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-notification-discharge-event.html",
+          "title" : "ValueSet Discharge Notification Event",
           "generation" : "generated"
         },
         {

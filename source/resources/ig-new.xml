@@ -137,6 +137,18 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/notification-admit-event"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/notification-discharge-event"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/admit-discharge-notification-encounter"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -292,6 +304,16 @@
         <page>
           <nameUrl value="ValueSet-notification-event.html"/>
           <title value="ValueSet Notification Event"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="ValueSet-notification-admit-event.html"/>
+          <title value="ValueSet Admit Notification Event"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="ValueSet-notification-discharge-event.html"/>
+          <title value="ValueSet Discharge Notification Event"/>
           <generation value="generated"/>
         </page>
         <page>

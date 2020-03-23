@@ -35,11 +35,11 @@
 			<type>
 				<code value="Coding"/>
 			</type>
-			<patternCoding>
-				<system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"/>
-				<code value="notification-discharge"/>
-			</patternCoding>
 			<mustSupport value="true"/>
+			<binding>
+				<strength value="extensible"/>
+				<valueSet value="http://hl7.org/fhir/us/davinci-alerts/ValueSet/notification-discharge-event"/>
+			</binding>
 		</element>
 		<element id="MessageHeader.focus">
 			<path value="MessageHeader.focus"/>
@@ -62,7 +62,7 @@
 			<type>
 				<code value="Reference"/>
 				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/>
-				<aggregation value="bundled"></aggregation>
+				<aggregation value="bundled"/>
 			</type>
 			<mustSupport value="true"/>
 		</element>
