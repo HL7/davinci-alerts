@@ -20,9 +20,9 @@ There are 4 Capability Statements defined to describe the expectations for this 
 
 |Actor|server-mode|client-mode|
 |---|---|---|
-|Sender |Da Vinci Notification Query Responder | Da Vinci Notification Sender|
-|Intermediary |Da Vinci Notification Receiver,Da Vinci Notification Query Responder|Da Vinci Notification QueryRequester, Da Vinci Notification Sender|
-|Recipient |Da Vinci Notification Receiver | Da Vinci Notification Query Requester|
+|Sender |Da Vinci Query Responder | Da Vinci Notification Sender|
+|Intermediary |Da Vinci Notification Receiver,Da Vinci Query Responder|Da Vinci QueryRequester, Da Vinci Notification Sender|
+|Recipient |Da Vinci Notification Receiver | Da Vinci Query Requester|
 {: .grid}
 
 <br />

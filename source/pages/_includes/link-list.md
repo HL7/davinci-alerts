@@ -2,8 +2,6 @@
 [Framework]: guidance.html  "General Framework Page"
 [Admit/Discharge Use case]: usecases.html
 [Downloads]: downloads.html "Downloads Page"
-[Conformance Requirements for Server]: CapabilityStatement-server.html "Conformance Requirements for Server Page"
-[Conformance Requirements for Client]: CapabilityStatement-client.html "Conformance Requirements for Client Page"
 [Capability Statements]: capstatements.html
 [Terminology]: terminology.html "Terminology Page"
 [Message Definitions]: bundles.html "Bundle Definitions Page"
@@ -71,3 +69,4 @@
 [Da Vinci Health Record Exchange (HRex) Implementation Guide]: http://hl7.org/fhir/us/davinci-hrex/history.html
 [Dynamic Registration for SMART Apps]: http://www.udap.org/udap-dynamic-client-registration.html
 [FHIR Data Segmentation for Privacy project]: https://www.hl7.org/special/Committees/projman/searchableProjectIndex.cfm?action=edit&ProjectNumber=1549
+[Query Responder CapabilityStatement]: CapabilityStatement-query-responder.html
