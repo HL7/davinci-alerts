@@ -207,7 +207,7 @@ Figure 1 below illustrates the general notification workflow of a Sender sending
 2. The Sender notifies the Recipient by sending an "unsolicited" notification to the Recipient's FHIR endpoint.
 3. The notification is processed according the Receiver or Intermediary internal business rules.
 
-Figure 2 shows the process where the Sender sends an unsolicited notification to an Intermediary which in turn forwards the notification to the Recipient. In this case, the Intermediary is responsible for the redistribution of the data.  Note that it may customize the data based on end user needs.  Although not represented in the figure, there may be multiple Intermediaries.
+Figure 2 shows the process where an Intermediary, having previously received a notification, forwards the notification to the Recipient. In this case, the Intermediary is responsible for the redistribution of the data.  Note that it may customize the data based on end user needs.  Although not represented in the figure, there may be multiple Intermediaries.
 
 {% include img.html img="notification_wf2.svg"
  caption="Figure 2" %}
