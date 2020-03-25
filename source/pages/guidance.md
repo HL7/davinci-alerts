@@ -117,12 +117,9 @@ and [Da Vinci Notifications Bundle Profile] are used to define the base constrai
 
 In this method all the profiles that populate the Bundle get enforced by their references and the fact that their [aggregation] is constrained to 'bundled'.  This means that these references are only to resources that populate the same bundle.  Therefore, starting with the MessageHeader profile, the profiled resources within the bundle form a chain of links that define the bundle.
 
-Use case specific Da Vinci Notification Bundles can be derived from the:
+A use case specific Notification Bundle is defined by starting with base constraints in the [Da Vinci Notifications MessageHeader Profile] and [Da Vinci Notifications Bundle Profile] and creating a more tightly constrained MessageHeader Profile. Resources that are referenced within the Bundle are profiled to complete the Bundle definition.  Depending on the use case, existing profiles may be used or new profiles defined.
 
-  - [Da Vinci Notifications Bundle Profile]
-  - Use case specific MessageHeader Profile and other Resource Profiles
-
-See the Admit/Discharge use case for an example of defining a Bundle using this method.
+See the Admit/Discharge use case for an example of using FHIR Profiles to define the Bundle.
 
 FHIR profiling is more mature mechanism and broadly supported by the implementation community, reference implementations, and validation tooling.  However,there is no mechanism to enforce profiles in a message on a reverse link because “reverse links” cannot be traversed forward from the MessageHeader. It may also require more artifacts than using MessageDefintion/GraphDefinition.
 {:.highlight-note}
@@ -136,12 +133,9 @@ The [MessageDefinition] defines the event and focus resource of the Message as w
 - [Da Vinci Notifications MessageDefinition Profile]
 - [Da Vinci Notifications GraphDefinition Profile]
 
-Use case specific Da Vinci Notification Bundles can be derived from the:
+A use case specific Da Vinci Notification Bundles is defined using the base constraints defined in the [Da Vinci Notifications MessageHeader Profile] and use case specific MessageDefinition and GraphDefinition instances. Resource profiles are referenced by the GraphDefinition instance. Depending on the use case, existing profiles (for example, US Core Profiles) may be used or new profiles defined.
 
-  - [Da Vinci Notifications Bundle Profile]
-  - Use case specific MessageDefinition and GraphDefinition instances
-
-See the Admit/Discharge use case for an example of defining a Bundle using this method.
+See the Admit/Discharge use case for an example of using MessageDefinition and GraphDefinition to define the Bundle.
 
 MessageDefinition and GraphDefinition are immature resources and may have breaking changes in future version of FHIR.  At the time of this publication, the implementation community, reference implementations, and validation tooling does not fully support them.
 {:.highlight-note}
