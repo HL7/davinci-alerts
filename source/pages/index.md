@@ -125,7 +125,7 @@ Implementation Guide will focus on *Admission and Discharge* Scenarios, in other
 -   Notification of Prior Authorization (Pended to Approved/Denied)
 -   Pharmacy (Pickup, Restock, Dispense)
 -   Notification of New Condition
--   Work Comp Initial/Visits/Services
+-   Worker's Compensation Visits and Services
 -   Changes in Care Team
 
 ---
