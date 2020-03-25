@@ -31,7 +31,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 - [Framework]\: These pages provide guidance on the set of FHIR transactions and the FHIR artifacts used in a general framework to enable unsolicited notifications to care team members.
 - [Admit/Discharge Use case]\: The Admission/Discharge use case is used to show how to implement an unsolicited notification using the framework.
 - [FHIR Artifacts]\: These pages provide detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
-  - [Profiles]\: This page lists the set of Profiles that are defined in this guide to exchange quality data.
+  - [Profiles]\: This page lists the set of Profiles that are defined in this guide.
   - [Terminology]\: This page lists the value sets and code system defined for this guide.
   - [Capability Statements]\: This set of pages describes the expected FHIR capabilities of the various Da Vinci Notification actors.
 - [Security]\: General security requirements and recommendations for {{site.title}} actors.
