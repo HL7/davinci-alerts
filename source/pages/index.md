@@ -73,7 +73,7 @@ your organization)
 - Distribution beyond FHIR Endpoints (e.g. SMS, email)
 - Bidirectional Work, such as Gaps in Care
 - Any notification that requires workflow management such as Task
-- Complex content
+- Complex content such as image files or scanned documents
 - Besides the standard http response, the Alert Recipient's workflow upon receipt of alert.
 
 ---
