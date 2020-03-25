@@ -49,7 +49,7 @@ The following additional resources (or rather profiles) have been determined to 
 | Emergency and Inpatient Admissions | US Core Condition,  Da Vinci HRex Coverage |
 | Emergency and Inpatient Discharges |  US Core Condition, Da Vinci HRex Coverage |
 
-
+{: #figure-8}
 Adding these additional components results in the following resource graph showing all the required resources and their relationships for the admission and discharge notification use case shown in Figure 8:
 
 {% include img-portrait.html img="admit_message_graph3.svg" caption="Figure 8" %}

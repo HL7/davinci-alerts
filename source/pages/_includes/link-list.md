@@ -70,3 +70,4 @@
 [Dynamic Registration for SMART Apps]: http://www.udap.org/udap-dynamic-client-registration.html
 [FHIR Data Segmentation for Privacy project]: https://www.hl7.org/special/Committees/projman/searchableProjectIndex.cfm?action=edit&ProjectNumber=1549
 [Query Responder CapabilityStatement]: CapabilityStatement-query-responder.html
+[figure 8]: usecases.html#figure-8
