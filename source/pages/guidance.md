@@ -265,8 +265,6 @@ All elements in the Da Vinci Notification GraphDefinition have a [Da Vinci Notif
 
 * The Recipient/Intermediary SHALL be capable of processing the profile instances referred to by the link without generating an error or causing the application to fail. In other words Recipient/Intermediary SHOULD be capable of processing the profile (display, store, etc).
 
-* In situations where information on a particular link profile is not present and the reason for absence is unknown, the Sender SHALL NOT include the profile in the bundle instance as part of a $process-message operation.
-
 ##### This guide adopts the following definitions of Must Support for all transactions between the Intermediary and Recipient
 {:.no_toc}
 
