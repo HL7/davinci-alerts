@@ -41,7 +41,8 @@ Services: Authorization Guide)
 Once an approach has been agreed upon, it will be documented in the the [Da Vinci Health Record Exchange (HRex) Implementation Guide].
 
 </div>
-<del>
+</del>
+
 {% include link-list.md %}
 
 
