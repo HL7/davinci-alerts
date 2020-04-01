@@ -232,8 +232,6 @@ All elements in the Da Vinci Notification profiles have a [MustSupport flag]. Sy
 
 * The Recipient/Intermediary SHALL be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. In other words Recipient/Intermediary SHOULD be capable of processing the data elements (display, store, etc).
 
-* In situations where information on a particular data element is not present and the reason for absence is unknown, the Sender SHALL NOT include the data elements in the resource instance as part of a $process-message operation or a query response.
-
 * When receiving a notification or a query response from the Sender, the  Recipient/Intermediary SHALL interpret missing data elements within resource instances as data not present in the Sender's systems.
 
 * In situations where information on a particular data element is missing and the  Sender knows the precise reason for the absence of data, the Sender SHALL provide the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
