@@ -20,7 +20,7 @@ FHIR resources can be used to transport patient information relevant to a specif
 </del>
 {:.stu-note}
 
-This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5.  It is anticipated that an equivalent subscription based notification paradigm can be implemented as an alternate to the unsolicited messaging based approach documented in this guide.  This guide will be updated to incorporate guidance on using a subscriptions as an alternative workflow after the Argonaut Subscription implementation guide is published and the changes to the FHIR R5 subscription resources finalized.
+This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5.  It is anticipated that an equivalent subscription based notification paradigm can be implemented as an alternate to the unsolicited messaging based approach documented in this guide.  This guide will add subscriptions as an alternative workflow after the Argonaut Subscription implementation guide is published and the changes to the FHIR R5 subscription resources finalized.
 {:.stu-note}
 
 ### Preconditions and Assumptions
