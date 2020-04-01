@@ -11,19 +11,19 @@ In order to be responsible stewards of data, we will need to follow the data gov
 [The FHIR Security and Privacy Module] describes how to protect a patient's privacy through de-Identification, pseudonymization, and and/or anonymization. FHIR does not mandate a single technical approach to security and privacy; rather, the specification provides a set of building blocks that can be applied to create secure, private systems.
 </del>
 
-[The FHIR Security and Privacy Module] describes how to protect a patient's privacy through de-Identification, pseudonymization, and and/or anonymization. FHIR's defacto security layer is SMART's profile of OAuth2:
+[The FHIR Security and Privacy Module] describes how to protect a patient's privacy through de-Identification, pseudonymization, and and/or anonymization.  For FHIR RESTful transactions the defacto security layer is SMART's profile of OAuth2:
 
 - [SMART Application Launch Framework Implementation Guide Release 1.0.0]
-- [FHIR Bulk Data Access (Flat FHIR)] (specifically: SMART Backend
+- [FHIR Bulk Data Access (Flat FHIR)] (specifically: SMART Backend Services: Authorization Guide)
 
 <div class="stu-note" markdown="1">
-There are several implementation guides and ongoing initiatives to address various security and privacy issues including:
+There are several ongoing initiatives to address various security and privacy issues including:
 
 - [FHIR Data Segmentation for Privacy project]
 - [FHIR at Scale Taskforce (FAST)]
 - [Dynamic Registration for SMART Apps]
 
-Once an approach has been agreed upon, it will be documented.
+Once a suitable approach has been agreed upon and published, it will be referenced in a future version of this guide.
 </div>
 
 
@@ -33,6 +33,8 @@ The DaVinci project is actively seeking input on security approaches and expecta
 
 - [FHIR Data Segmentation for Privacy project]
 Services: Authorization Guide)
+- [SMART Application Launch Framework Implementation Guide Release 1.0.0]
+- [FHIR Bulk Data Access (Flat FHIR)] (specifically: SMART Backend Services: Authorization Guide)
 - [FHIR at Scale Taskforce (FAST)]
 - [Dynamic Registration for SMART Apps]
 
