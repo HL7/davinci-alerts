@@ -27,10 +27,10 @@ Once a suitable approach has been agreed upon and published, it will be referenc
 </div>
 
 
-<div class="note-to-balloters" markdown="1">
-<del>
+<div class="note-to-balloters strike" markdown="1">
+
 The DaVinci project is actively seeking input on security approaches and expectations for authentication and authorization between Senders and Receivers of sensitive patient data (e.g., will TLS, mutual-TLS, OAuth, etc. be required to interoperate?).  There are several implementation guides and ongoing initiatives to address these issues including:
-</del>
+
 
 - [FHIR Data Segmentation for Privacy project]
 Services: Authorization Guide)
@@ -39,9 +39,9 @@ Services: Authorization Guide)
 - [FHIR at Scale Taskforce (FAST)]
 - [Dynamic Registration for SMART Apps]
 
-<del>
+
 Once an approach has been agreed upon, it will be documented in the the [Da Vinci Health Record Exchange (HRex) Implementation Guide].
-</del>
+
 </div>
 
 
