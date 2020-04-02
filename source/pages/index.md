@@ -140,8 +140,12 @@ Implementation Guide will focus on *Admission and Discharge* Scenarios, in other
 
 <del>
 - **Sender** - the system responsible for sending the notifications, typically operated by the facility or organization where the event occurred
+</del>
+<del>
 - **Recipient** – the system responsible for receiving generated notifications from Senders
+</del>
 <!-- - **Interested Entity** – a system that is interested in receiving notificationss for specific events, providers, patients or other predefined criteria -->
+<del>
 - **Intermediary** (e.g. ClearingHouse or HIE/HIN)– a system that can act as a central point to receive notifications from multiple Senders and distribute them to Recipients based on previously defined forwarding policies
 </del>
 
