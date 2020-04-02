@@ -136,21 +136,23 @@ Implementation Guide will focus on *Admission and Discharge* Scenarios, in other
 
 ### Roles and Actors
 
-#### Roles
+<del>#### Roles</del>
 
+<del>
 - **Sender** - the system responsible for sending the notifications, typically operated by the facility or organization where the event occurred
 - **Recipient** – the system responsible for receiving generated notifications from Senders
 <!-- - **Interested Entity** – a system that is interested in receiving notificationss for specific events, providers, patients or other predefined criteria -->
 - **Intermediary** (e.g. ClearingHouse or HIE/HIN)– a system that can act as a central point to receive notifications from multiple Senders and distribute them to Recipients based on previously defined forwarding policies
+</del>
 
-#### Actors
+<del>#### Actors</del>
 
 There are many potential actors for the roles listed above:
 
 <div class="row">
 <div class="col-sm-4" markdown="1" style="background-color: Lightcyan;">
 
-**Sender**
+**Sender** - the system responsible for sending the notifications, typically operated by the facility or organization where the event occurred
 
 ---
 
@@ -163,7 +165,8 @@ There are many potential actors for the roles listed above:
 </div>
 
 <div class="col-sm-4" markdown = "1" style="background-color: WhiteSmoke;">
-**Intermediary**
+
+**Intermediary**  – the system responsible for receiving generated notifications from Senders
 
 ---
 
@@ -177,7 +180,8 @@ There are many potential actors for the roles listed above:
 
 </div>
 <div class="col-sm-4" markdown = "1" style="background-color: Lightcyan;">
-**Recipient**
+
+**Recipient**  – the system responsible for receiving generated notifications from Senders
 
 ---
 
