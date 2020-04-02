@@ -648,6 +648,10 @@ a[href$=".sch"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".x
 
 /* ============ strikethrough styling ============= */
 
-.strike p,li,h3,h3,h4,h5{
+div.strike p,li,h3,h3,h4,h5{
+    text-decoration: line-through;
+}
+
+.strike{
     text-decoration: line-through;
 }
