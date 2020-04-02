@@ -645,3 +645,7 @@ a[href$=".sch"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".x
 .icon-size{
   font-size:1.5em;
 }
+
+.strike {
+    text-decoration: line-through;
+}
