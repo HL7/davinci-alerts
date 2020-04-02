@@ -151,6 +151,8 @@ Implementation Guide will focus on *Admission and Discharge* Scenarios, in other
 
 #### Actors
 
+</div>
+
 There are many potential actors for the roles listed above:
 
 <div class="row">
