@@ -136,7 +136,7 @@ Implementation Guide will focus on *Admission and Discharge* Scenarios, in other
 
 ### Roles and Actors
 
-<div class="strike">
+<div class="strike" markdown="1">
 
 #### Roles
 
