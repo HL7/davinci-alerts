@@ -1,0 +1,42 @@
+{
+  "path": "http://hl7.org/fhir/R4/",
+  "canonical": "http://hl7.org/fhir/us/davinci-alerts",
+  "igId": "hl7.fhir.us.davinci-alerts",
+  "igName": "DaVinciUnsolicitedNotifications",
+  "packageId": "hl7.fhir.us.davinci-alerts",
+  "igVer": "1.0.0",
+  "errorCount": 44,
+  "version": "4.0.1",
+  "revision": "a53ec6ee1b",
+  "versionFull": "4.0.1-a53ec6ee1b",
+  "toolingVersion": "4.4.0",
+  "toolingRevision": "3",
+  "toolingVersionFull": "4.4.0 (3)",
+  "totalFiles": 29,
+  "processedFiles": 189,
+  "genDate": "Fri, Jul 24, 2020 20:08-0700",
+  "genDay": "24/07/2020",
+  "ig": {
+    "id": "hl7.fhir.us.davinci-alerts",
+    "name": "DaVinciUnsolicitedNotifications",
+    "title": "Da Vinci Unsolicited Notifications",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts",
+    "version": "1.0.0",
+    "status": "draft",
+    "experimental": false,
+    "publisher": "HL7 International - Infrastructure and Messaging Work Group",
+    "gitstatus": "master",
+    "contact": [
+      {
+        "telecom": [
+          "http://www.hl7.org/Special/committees/inm/index.cfm"
+        ]
+      }
+    ],
+    "date": "2020-07-24T20:08:57-07:00",
+    "copyright": "Used by permission of HL7 International - Infrastructure and Messaging Work Group, all rights reserved Creative Commons License",
+    "fhirVersion": "4.0.1"
+  },
+  "uscore": "http://hl7.org/fhir/us/core",
+  "hrex": "http://hl7.org/fhir/us/davinci-hrex"
+}

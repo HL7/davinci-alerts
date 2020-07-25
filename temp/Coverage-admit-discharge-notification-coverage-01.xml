@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Coverage xmlns="http://hl7.org/fhir">
+  <id value="admit-discharge-notification-coverage-01"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-coverage"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: admit-discharge-notification-coverage-01</p><p><b>meta</b>: </p><p><b>identifier</b>: DZW9200000000</p><p><b>status</b>: active</p><p><b>type</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-ActCode HIP}">health insurance plan policy</span></p><p><b>subscriber</b>: <a href="urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4">urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4</a></p><p><b>subscriberId</b>: DZW9200000000</p><p><b>beneficiary</b>: <a href="urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4">urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4</a></p><p><b>relationship</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/subscriber-relationship self}">Self</span></p><p><b>period</b>: 2016-01-01 --&gt; (ongoing)</p><p><b>payor</b>: <span>Anthem Blue Cross of California</span></p><h3>Classes</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Value</b></td><td><b>Name</b></td></tr><tr><td>*</td><td><span title="Codes: {http://terminology.hl7.org/CodeSystem/coverage-class plan}">Plan</span></td><td>1FZQ</td><td>Bronze D HSA</td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="https://www.anthem.com/ca"/>
+    <value value="DZW9200000000"/>
+  </identifier>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <code value="HIP"/>
+      <display value="health insurance plan policy"/>
+    </coding>
+  </type>
+  <subscriber>
+    <reference value="urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4"/>
+  </subscriber>
+  <subscriberId value="DZW9200000000"/>
+  <beneficiary>
+    <reference value="urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4"/>
+  </beneficiary>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/subscriber-relationship"/>
+      <code value="self"/>
+      <display value="Self"/>
+    </coding>
+  </relationship>
+  <period>
+    <start value="2016-01-01"/>
+  </period>
+  <payor>
+    <display value="Anthem Blue Cross of California"/>
+  </payor>
+  <class>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+        <code value="plan"/>
+      </coding>
+    </type>
+    <value value="1FZQ"/>
+    <name value="Bronze D HSA"/>
+  </class>
+</Coverage>

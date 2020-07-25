@@ -1,0 +1,81 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-alerts/Encounter/admit-discharge-notification-encounter-01> a fhir:Encounter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "admit-discharge-notification-encounter-01"];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2017-05-26T11:56:57.250-04:00"^^xsd:dateTime ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-encounter";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-encounter>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: admit-discharge-notification-encounter-01</p><p><b>meta</b>: </p><p><b>status</b>: finished</p><p><b>class</b>: <span title=\"{http://terminology.hl7.org/CodeSystem/v3-ActCode IMP}\">inpatient encounter</span></p><p><b>type</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99234}\">Inpatient hospital care</span></p><p><b>subject</b>: <a href=\"urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4\">Amy V. Shaw</a></p><h3>Participants</h3><table class=\"grid\"><tr><td>-</td><td><b>Type</b></td><td><b>Period</b></td><td><b>Individual</b></td></tr><tr><td>*</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-ParticipationType PPRF}\">primary performer</span></td><td>Nov 1, 2015, 2:00:14 PM --&gt; Nov 1, 2015, 3:00:14 PM</td><td><a href=\"urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59\">Ronald Bone</a></td></tr></table><p><b>period</b>: Nov 1, 2015, 2:00:14 PM --&gt; Nov 1, 2015, 3:00:14 PM</p><h3>Locations</h3><table class=\"grid\"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href=\"urn:uuid:75ea28b5-74b8-4d9c-9eb5-cfdc10b48fa\">Health Level Seven International - Amherst</a></td></tr></table></div>"
+  ];
+  fhir:Encounter.status [ fhir:value "finished"];
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ];
+     fhir:Coding.code [ fhir:value "IMP" ];
+     fhir:Coding.display [ fhir:value "inpatient encounter" ]
+  ];
+  fhir:Encounter.type [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.ama-assn.org/go/cpt" ];
+       fhir:Coding.code [ fhir:value "99234" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Inpatient hospital care" ]
+  ];
+  fhir:Encounter.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4" ];
+     fhir:Reference.display [ fhir:value "Amy V. Shaw" ]
+  ];
+  fhir:Encounter.participant [
+     fhir:index 0;
+     fhir:Encounter.participant.type [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ParticipationType" ];
+         fhir:Coding.code [ fhir:value "PPRF" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "primary performer" ]
+     ];
+     fhir:Encounter.participant.period [
+       fhir:Period.start [ fhir:value "2015-11-01T17:00:14-05:00"^^xsd:dateTime ];
+       fhir:Period.end [ fhir:value "2015-11-01T18:00:14-05:00"^^xsd:dateTime ]
+     ];
+     fhir:Encounter.participant.individual [
+       fhir:Reference.reference [ fhir:value "urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59" ];
+       fhir:Reference.display [ fhir:value "Ronald Bone" ]
+     ]
+  ];
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2015-11-01T17:00:14-05:00"^^xsd:dateTime ];
+     fhir:Period.end [ fhir:value "2015-11-01T18:00:14-05:00"^^xsd:dateTime ]
+  ];
+  fhir:Encounter.location [
+     fhir:index 0;
+     fhir:Encounter.location.location [
+       fhir:Reference.reference [ fhir:value "urn:uuid:75ea28b5-74b8-4d9c-9eb5-cfdc10b48fa" ];
+       fhir:Reference.display [ fhir:value "Health Level Seven International - Amherst" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-alerts/Encounter/admit-discharge-notification-encounter-01.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/davinci-alerts/Encounter/admit-discharge-notification-encounter-01.ttl> .
+
+# -------------------------------------------------------------------------------------
+

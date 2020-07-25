@@ -1,0 +1,143 @@
+﻿<html>
+<head>
+  <title>GraphDefinition-admit-discharge-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<div xmlns="http://www.w3.org/1999/xhtml">
+			<p>
+				<b>Generated Narrative with Details</b>
+			</p>
+			<p>
+				<b>id</b>: admit-discharge</p>
+			<p>
+				<b>url</b>:
+				<a href="http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/admit-discharge">http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/admit-discharge</a>
+			</p>
+			<p>
+				<b>version</b>: 0.1.0</p>
+			<p>
+				<b>name</b>: NotificationAdmitDischarge</p>
+			<p>
+				<b>status</b>: active</p>
+			<p>
+				<b>date</b>: Aug 21, 2019, 12:00:00 AM</p>
+			<p>
+				<b>publisher</b>: Da Vinci Project</p>
+			<p>
+				<b>contact</b>:
+			</p>
+			<p>
+				<b>description</b>: Defines message bundle graph for Da Vinci Notifications patient admission and discharge notification scenarios</p>
+			<p>
+				<b>jurisdiction</b>: United States of America
+				<span style="background: LightGoldenRodYellow">(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United States of America'})</span>
+			</p>
+			<p>
+				<b>start</b>: MessageHeader</p>
+			<p>
+				<b>profile</b>:
+				<a href="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader">http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader</a>
+			</p>
+			<p>
+				<b>Links</b>:
+							</p>
+				<table class="grid">
+					<thead>
+						<tr>
+							<th>Link</th>
+							<th>Source Profile</th>
+							<th>Path</th>
+							<th>Target Profile</th>
+							<th>Min</th>
+							<th>Max</th>
+							<th>Must Support</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Da Vinci Notification MessageHeader Profile</td>
+							<td>MessageHeader.focus</td>
+							<td>US Core Encounter Profile</td>
+							<td>1</td>
+							<td>1</td>
+							<td>true</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>US Core Encounter Profile</td>
+							<td>Encounter.location</td>
+							<td>US Core Location Profile</td>
+							<td>1</td>
+							<td>*</td>
+							<td>true</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>US Core Encounter Profile</td>
+							<td>Encounter.participant.individual</td>
+							<td>US Core Practitioner Profile</td>
+							<td>0</td>
+							<td>*</td>
+							<td>true</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>US Core Encounter Profile</td>
+							<td>Encounter.subject</td>
+							<td>US Core Patient Profile</td>
+							<td>1</td>
+							<td>1</td>
+							<td>true</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>Da Vinci HRex Coverage Profile</td>
+							<td>Coverage.beneficary</td>
+							<td>US Core Patient Profile</td>
+							<td>0</td>
+							<td>1</td>
+							<td>true</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>US Core Condition Profile</td>
+							<td>Condition.encounter</td>
+							<td>US Core Encounter Profile</td>
+							<td>0</td>
+							<td>*</td>
+							<td>true</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>Da Vinci Notification MessageHeader Profile</td>
+							<td>MessageHeader.sender</td>
+							<td>US Core Practitioner Profile|US Core PractitionerRole Profile|US Core Organization Profile</td>
+							<td>0</td>
+							<td>1</td>
+							<td>true</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>Da Vinci Notification MessageHeader Profile</td>
+							<td>MessageHeader.responsible</td>
+							<td>US Core Practitioner Profile|US Core PractitionerRole Profile|US Core Organization Profile</td>
+							<td>0</td>
+							<td>1</td>
+							<td>true</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td>Da Vinci Notification MessageHeader Profile</td>
+							<td>MessageHeader.author</td>
+							<td>US Core Practitioner Profile|US Core PractitionerRole Profile</td>
+							<td>0</td>
+							<td>1</td>
+							<td>true</td>
+						</tr>
+					</tbody>
+				</table>
+
+		</div></body>
+</html>

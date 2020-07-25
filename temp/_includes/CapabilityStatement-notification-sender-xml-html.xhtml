@@ -1,0 +1,713 @@
+{% raw %}<pre class="xml">
+
+&lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement">CapabilityStatement</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;notification-sender&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2 id=&quot;title&quot;&gt;Notification Sender CapabilityStatement&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Implementation Guide Version: 0.1.0&lt;/li&gt;&lt;li&gt;FHIR Version: 4.0.0&lt;/li&gt;&lt;li&gt;Supported formats: xml, json&lt;/li&gt;&lt;li&gt;Published: 2020-02-19&lt;/li&gt;&lt;li&gt;Published by: HL7 International - Infrastructure and Messaging Work Group&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;p&gt;This CapabilityStatement describes the expected capabilities of a client that is capable of sending a Da Vinci Unsolicited Notification transacted with the &lt;code&gt;$process-message&lt;/code&gt; operation.&lt;/p&gt;&lt;/p&gt;&lt;h3 id=&quot;igs&quot; class=&quot;no_toc&quot;&gt;SHALL Support the Following Implementation Guides:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.0&quot;&gt;http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.0&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h3 id=&quot;behavior&quot;&gt;FHIR RESTful Capabilities&lt;/h3&gt;&lt;p&gt;The Da Vinci Notification Sender &lt;strong&gt;SHALL&lt;/strong&gt;:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Support the notification framework defined in this Guide.&lt;/li&gt;&lt;li&gt;Implement the RESTful behavior according to the FHIR specification.&lt;/li&gt;&lt;li&gt;Support json source formats for all Da Vinci Notification interactions.&lt;/li&gt;&lt;li&gt;Declare a CapabilityStatement identifying the scenarios, transactions and profiles supported.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;The Da Vinci Notifications Sender &lt;strong&gt;SHOULD&lt;/strong&gt;:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Support the admission/discharge use case defined in this Guide.&lt;/li&gt;&lt;li&gt;Support xml source formats for all Da Vinci Notification interactions.&lt;/li&gt;&lt;li&gt;Identify the Da Vinci or US Core profiles supported as part of the FHIR &lt;code&gt;meta.profile&lt;/code&gt; attribute for each instance.&lt;/li&gt;&lt;/ol&gt;&lt;p id=&quot;security&quot;&gt;&lt;strong&gt;Security:&lt;/strong&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;For general security consideration refer to the &lt;a href=&quot;http://build.fhir.org/secpriv-module.html&quot;&gt;Security and Privacy Considerations&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;For security considerations specific to this guide refer to the  &lt;a href=&quot;security.html&quot;&gt;Security&lt;/a&gt; page for requirements and recommendations.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;strong&gt;Summary of System Wide Operations&lt;/strong&gt;&lt;/p&gt;&lt;li&gt;&lt;strong&gt;SHALL&lt;/strong&gt; support the	&lt;a href=&quot;http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message&quot;&gt;&lt;code&gt;$process-message&lt;/code&gt;&lt;/a&gt; operation.&lt;/li&gt;&lt;h3 id=&quot;resource--details&quot; class=&quot;no_toc&quot;&gt;RESTful Capabilities by Resource/Profile:&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Summary of Search Criteria&lt;/strong&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Resource Type&lt;/th&gt;&lt;th&gt;Supported Profiles&lt;/th&gt;&lt;th&gt;Supported Searches&lt;/th&gt;&lt;th&gt;Supported &lt;code&gt;_includes&lt;/code&gt;&lt;/th&gt;&lt;th&gt;Supported &lt;code&gt;_revincludes&lt;/code&gt;&lt;/th&gt;&lt;th&gt;Supported Operations&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;#bundle&quot;&gt;Bundle&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;StructureDefinition-notifications-bundle.html&quot;&gt;Da Vinci Notifications Bundle Profile&lt;/a&gt;&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+              
+            &lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;#condition&quot;&gt;Condition&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;StructureDefinition-admit-discharge-notification-condition.html&quot;&gt;Da Vinci Admit/Discharge Notification Condition Profile&lt;/a&gt;&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+              
+            &lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;#coverage&quot;&gt;Coverage&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;StructureDefinition-admit-discharge-notification-coverage.html&quot;&gt;Da Vinci Admit/Discharge Notification Coverage Profile&lt;/a&gt;&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+              
+            &lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;#encounter&quot;&gt;Encounter&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;StructureDefinition-admit-discharge-notification-encounter.html&quot;&gt;​Da Vinci Admit/Discharge Notification Encounter Profile&lt;/a&gt;&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+              
+            &lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;#graphdefinition&quot;&gt;GraphDefinition&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;StructureDefinition-notifications-graphdefinition.html&quot;&gt;Da Vinci Notifications GraphDefinition Profile&lt;/a&gt;&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+              
+            &lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;#location&quot;&gt;Location&lt;/a&gt;&lt;/td&gt;&lt;td&gt;
+
+						&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+              
+            &lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;#messagedefinition&quot;&gt;MessageDefinition&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;StructureDefinition-notifications-messagedefinition.html&quot;&gt;Da Vinci Notifications MessageDefinition Profile&lt;/a&gt;&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+              
+            &lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;#messageheader&quot;&gt;MessageHeader&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;StructureDefinition-notifications-messageheader.html&quot;&gt;Da Vinci Notifications MessageHeader Profile&lt;/a&gt;, 
+
+						&lt;a href=&quot;StructureDefinition-admit-notification-messageheader.html&quot;&gt;Da Vinci Admit Notification MessageHeader Profile&lt;/a&gt;, 
+
+						&lt;a href=&quot;StructureDefinition-discharge-notification-messageheader.html&quot;&gt;Da Vinci Discharge Notification MessageHeader Profile&lt;/a&gt;&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+              
+            &lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;#organization&quot;&gt;Organization&lt;/a&gt;&lt;/td&gt;&lt;td&gt;
+
+						&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+              
+            &lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;#patient&quot;&gt;Patient&lt;/a&gt;&lt;/td&gt;&lt;td&gt;
+
+						&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+              
+            &lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;#practitioner&quot;&gt;Practitioner&lt;/a&gt;&lt;/td&gt;&lt;td&gt;
+
+						&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+              
+            &lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;#practitionerrole&quot;&gt;PractitionerRole&lt;/a&gt;&lt;/td&gt;&lt;td&gt;
+
+						&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+              
+            &lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;br/&gt;&lt;h4 id=&quot;bundle&quot; class=&quot;no_toc&quot;&gt;Bundle&lt;/h4&gt;&lt;p&gt;Conformance Expectation:	&lt;strong&gt;SHALL&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Supported Profiles:
+				
+											&lt;a href=&quot;StructureDefinition-notifications-bundle.html&quot;&gt;Da Vinci Notifications Bundle Profile&lt;/a&gt;
+				
+				&lt;/p&gt;&lt;p&gt;Profile Interaction Summary:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;MAY&lt;/strong&gt; support 
+																							&lt;code&gt;create&lt;/code&gt;, 
+																							&lt;code&gt;search-type&lt;/code&gt;, 
+																							&lt;code&gt;read&lt;/code&gt;, 
+																							&lt;code&gt;vread&lt;/code&gt;, 
+																							&lt;code&gt;update&lt;/code&gt;, 
+																							&lt;code&gt;patch&lt;/code&gt;, 
+																							&lt;code&gt;delete&lt;/code&gt;, 
+																							&lt;code&gt;history-instance&lt;/code&gt;, 
+																							&lt;code&gt;history-type&lt;/code&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Fetch and Search Criteria:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;
+					A Client &lt;strong&gt;MAY&lt;/strong&gt; be capable of fetching a Bundle resource using:
+					&lt;br/&gt;
+						&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Bundle/[id]&lt;/code&gt;
+				&lt;/li&gt;&lt;br/&gt;  &lt;!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet --&gt;  &lt;!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --&gt;&lt;/ul&gt;&lt;hr/&gt;&lt;h4 id=&quot;condition&quot; class=&quot;no_toc&quot;&gt;Condition&lt;/h4&gt;&lt;p&gt;Conformance Expectation:	&lt;strong&gt;SHOULD&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Supported Profiles:
+				
+											&lt;a href=&quot;StructureDefinition-admit-discharge-notification-condition.html&quot;&gt;Da Vinci Admit/Discharge Notification Condition Profile&lt;/a&gt;
+				
+				&lt;/p&gt;&lt;p&gt;Resource Specific Documentation:&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle&lt;/p&gt;&lt;/blockquote&gt;&lt;hr/&gt;&lt;h4 id=&quot;coverage&quot; class=&quot;no_toc&quot;&gt;Coverage&lt;/h4&gt;&lt;p&gt;Conformance Expectation:	&lt;strong&gt;SHOULD&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Supported Profiles:
+				
+											&lt;a href=&quot;StructureDefinition-admit-discharge-notification-coverage.html&quot;&gt;Da Vinci Admit/Discharge Notification Coverage Profile&lt;/a&gt;
+				
+				&lt;/p&gt;&lt;p&gt;Resource Specific Documentation:&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;Profile Interaction Summary:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;MAY&lt;/strong&gt; support 
+																							&lt;code&gt;create&lt;/code&gt;, 
+																							&lt;code&gt;search-type&lt;/code&gt;, 
+																							&lt;code&gt;read&lt;/code&gt;, 
+																							&lt;code&gt;vread&lt;/code&gt;, 
+																							&lt;code&gt;update&lt;/code&gt;, 
+																							&lt;code&gt;patch&lt;/code&gt;, 
+																							&lt;code&gt;delete&lt;/code&gt;, 
+																							&lt;code&gt;history-instance&lt;/code&gt;, 
+																							&lt;code&gt;history-type&lt;/code&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Fetch and Search Criteria:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;
+					A Client &lt;strong&gt;MAY&lt;/strong&gt; be capable of fetching a Coverage resource using:
+					&lt;br/&gt;
+						&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Coverage/[id]&lt;/code&gt;
+				&lt;/li&gt;&lt;br/&gt;  &lt;!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet --&gt;  &lt;!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --&gt;&lt;/ul&gt;&lt;hr/&gt;&lt;h4 id=&quot;encounter&quot; class=&quot;no_toc&quot;&gt;Encounter&lt;/h4&gt;&lt;p&gt;Conformance Expectation:	&lt;strong&gt;SHOULD&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Supported Profiles:
+				
+											&lt;a href=&quot;StructureDefinition-admit-discharge-notification-encounter.html&quot;&gt;​Da Vinci Admit/Discharge Notification Encounter Profile&lt;/a&gt;
+				
+				&lt;/p&gt;&lt;p&gt;Resource Specific Documentation:&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle&lt;/p&gt;&lt;/blockquote&gt;&lt;hr/&gt;&lt;h4 id=&quot;graphdefinition&quot; class=&quot;no_toc&quot;&gt;GraphDefinition&lt;/h4&gt;&lt;p&gt;Conformance Expectation:	&lt;strong&gt;SHOULD&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Supported Profiles:
+				
+											&lt;a href=&quot;StructureDefinition-notifications-graphdefinition.html&quot;&gt;Da Vinci Notifications GraphDefinition Profile&lt;/a&gt;
+				
+				&lt;/p&gt;&lt;p&gt;Profile Interaction Summary:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;SHOULD&lt;/strong&gt; support 
+																							&lt;code&gt;search-type&lt;/code&gt;, 
+																							&lt;code&gt;read&lt;/code&gt;, 
+																							&lt;code&gt;vread&lt;/code&gt;.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;MAY&lt;/strong&gt; support 
+																							&lt;code&gt;create&lt;/code&gt;, 
+																							&lt;code&gt;update&lt;/code&gt;, 
+																							&lt;code&gt;patch&lt;/code&gt;, 
+																							&lt;code&gt;delete&lt;/code&gt;, 
+																							&lt;code&gt;history-instance&lt;/code&gt;, 
+																							&lt;code&gt;history-type&lt;/code&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Fetch and Search Criteria:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;
+					A Client &lt;strong&gt;SHOULD&lt;/strong&gt; be capable of fetching a GraphDefinition resource using:
+					&lt;br/&gt;
+						&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/GraphDefinition/[id]&lt;/code&gt;
+				&lt;/li&gt;&lt;br/&gt;  &lt;!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet --&gt;  &lt;!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --&gt;&lt;/ul&gt;&lt;hr/&gt;&lt;h4 id=&quot;location&quot; class=&quot;no_toc&quot;&gt;Location&lt;/h4&gt;&lt;p&gt;Conformance Expectation:	&lt;strong&gt;SHOULD&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Resource Specific Documentation:&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle&lt;/p&gt;&lt;/blockquote&gt;&lt;hr/&gt;&lt;h4 id=&quot;messagedefinition&quot; class=&quot;no_toc&quot;&gt;MessageDefinition&lt;/h4&gt;&lt;p&gt;Conformance Expectation:	&lt;strong&gt;SHOULD&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Supported Profiles:
+				
+											&lt;a href=&quot;StructureDefinition-notifications-messagedefinition.html&quot;&gt;Da Vinci Notifications MessageDefinition Profile&lt;/a&gt;
+				
+				&lt;/p&gt;&lt;p&gt;Profile Interaction Summary:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;SHOULD&lt;/strong&gt; support 
+																							&lt;code&gt;search-type&lt;/code&gt;, 
+																							&lt;code&gt;read&lt;/code&gt;, 
+																							&lt;code&gt;vread&lt;/code&gt;.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;MAY&lt;/strong&gt; support 
+																							&lt;code&gt;create&lt;/code&gt;, 
+																							&lt;code&gt;update&lt;/code&gt;, 
+																							&lt;code&gt;patch&lt;/code&gt;, 
+																							&lt;code&gt;delete&lt;/code&gt;, 
+																							&lt;code&gt;history-instance&lt;/code&gt;, 
+																							&lt;code&gt;history-type&lt;/code&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Fetch and Search Criteria:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;
+					A Client &lt;strong&gt;SHOULD&lt;/strong&gt; be capable of fetching a MessageDefinition resource using:
+					&lt;br/&gt;
+						&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/MessageDefinition/[id]&lt;/code&gt;
+				&lt;/li&gt;&lt;br/&gt;  &lt;!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet --&gt;  &lt;!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --&gt;&lt;/ul&gt;&lt;hr/&gt;&lt;h4 id=&quot;messageheader&quot; class=&quot;no_toc&quot;&gt;MessageHeader&lt;/h4&gt;&lt;p&gt;Conformance Expectation:	&lt;strong&gt;SHALL&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Supported Profiles:
+				
+											&lt;a href=&quot;StructureDefinition-notifications-messageheader.html&quot;&gt;Da Vinci Notifications MessageHeader Profile&lt;/a&gt;, 
+				
+											&lt;a href=&quot;StructureDefinition-admit-notification-messageheader.html&quot;&gt;Da Vinci Admit Notification MessageHeader Profile&lt;/a&gt;, 
+				
+											&lt;a href=&quot;StructureDefinition-discharge-notification-messageheader.html&quot;&gt;Da Vinci Discharge Notification MessageHeader Profile&lt;/a&gt;
+				
+				&lt;/p&gt;&lt;p&gt;Profile Interaction Summary:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;MAY&lt;/strong&gt; support 
+																							&lt;code&gt;create&lt;/code&gt;, 
+																							&lt;code&gt;search-type&lt;/code&gt;, 
+																							&lt;code&gt;read&lt;/code&gt;, 
+																							&lt;code&gt;vread&lt;/code&gt;, 
+																							&lt;code&gt;update&lt;/code&gt;, 
+																							&lt;code&gt;patch&lt;/code&gt;, 
+																							&lt;code&gt;delete&lt;/code&gt;, 
+																							&lt;code&gt;history-instance&lt;/code&gt;, 
+																							&lt;code&gt;history-type&lt;/code&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Fetch and Search Criteria:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;
+					A Client &lt;strong&gt;MAY&lt;/strong&gt; be capable of fetching a MessageHeader resource using:
+					&lt;br/&gt;
+						&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/MessageHeader/[id]&lt;/code&gt;
+				&lt;/li&gt;&lt;br/&gt;  &lt;!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet --&gt;  &lt;!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --&gt;&lt;/ul&gt;&lt;hr/&gt;&lt;h4 id=&quot;organization&quot; class=&quot;no_toc&quot;&gt;Organization&lt;/h4&gt;&lt;p&gt;Conformance Expectation:	&lt;strong&gt;SHOULD&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Resource Specific Documentation:&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle&lt;/p&gt;&lt;/blockquote&gt;&lt;hr/&gt;&lt;h4 id=&quot;patient&quot; class=&quot;no_toc&quot;&gt;Patient&lt;/h4&gt;&lt;p&gt;Conformance Expectation:	&lt;strong&gt;SHOULD&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Resource Specific Documentation:&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle&lt;/p&gt;&lt;/blockquote&gt;&lt;hr/&gt;&lt;h4 id=&quot;practitioner&quot; class=&quot;no_toc&quot;&gt;Practitioner&lt;/h4&gt;&lt;p&gt;Conformance Expectation:	&lt;strong&gt;SHOULD&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Resource Specific Documentation:&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle&lt;/p&gt;&lt;/blockquote&gt;&lt;hr/&gt;&lt;h4 id=&quot;practitionerrole&quot; class=&quot;no_toc&quot;&gt;PractitionerRole&lt;/h4&gt;&lt;p&gt;Conformance Expectation:	&lt;strong&gt;SHOULD&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Resource Specific Documentation:&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle&lt;/p&gt;&lt;/blockquote&gt;&lt;hr/&gt;&lt;br/&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.url">url</a>
+       <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/us/davinci-notifications/CapabilityStatement/notification-sender&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1.0.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;NotificationSenderCapabilityStatement&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Notification Sender CapabilityStatement&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.experimental">experimental</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2020-02-19&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HL7 International - Infrastructure and Messaging Work Group&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;url&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;http://www.hl7.org/Special/committees/inm/index.cfm&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.description">description</a>
+               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;This CapabilityStatement describes the expected capabilities of a client that is capable of sending a Da Vinci Unsolicited Notification transacted with the `$process-message` operation.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.jurisdiction">jurisdiction</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:iso:std:iso:3166&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;US&quot;/&gt;
+    &lt;/coding&gt;
+  &lt;/jurisdiction&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.kind">kind</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;requirements&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.fhirVersion">fhirVersion</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;4.0.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.format">format</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;xml&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.format">format</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;json&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.patchFormat">patchFormat</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;application/json-patch+json&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.implementationGuide">implementationGuide</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts|0.1.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.implementationGuide">implementationGuide</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest">rest</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.mode">mode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;client&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.documentation">documentation</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;The Da Vinci Notification Sender **SHALL**:
+
+1. Support the notification framework defined in this Guide.
+1. Implement the RESTful behavior according to the FHIR specification.
+1. Support json source formats for all Da Vinci Notification interactions.
+1. Declare a CapabilityStatement identifying the scenarios, transactions and profiles supported.
+
+The Da Vinci Notifications Sender **SHOULD**:
+
+1. Support the admission/discharge use case defined in this Guide.
+1. Support xml source formats for all Da Vinci Notification interactions.
+1. Identify the Da Vinci or US Core profiles supported as part of the FHIR `meta.profile` attribute for each instance.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.security">security</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.security.description">description</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;1. For general security consideration refer to the [Security and Privacy Considerations](http://build.fhir.org/secpriv-module.html). 
+1. For security considerations specific to this guide refer to the  [Security](security.html) page for requirements and recommendations.
+&quot;/&gt;
+    &lt;/security&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHALL&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Bundle&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;create&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;update&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;patch&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;delete&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;history-type&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Condition&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-condition&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.documentation">documentation</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle&quot;/&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Coverage&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-coverage&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.documentation">documentation</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;create&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;update&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;patch&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;delete&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;history-type&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Encounter&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-encounter&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.documentation">documentation</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle&quot;/&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;GraphDefinition&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-graphdefinition&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;create&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;update&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;patch&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;delete&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;history-type&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Location&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.documentation">documentation</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle&quot;/&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MessageDefinition&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messagedefinition&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;create&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;update&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;patch&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;delete&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;history-type&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHALL&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MessageHeader&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;create&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;update&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;patch&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;delete&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;history-type&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Organization&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.documentation">documentation</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle&quot;/&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Patient&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.documentation">documentation</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle&quot;/&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Practitioner&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.documentation">documentation</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle&quot;/&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;PractitionerRole&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.documentation">documentation</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle&quot;/&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.operation">operation</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.operation.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SHALL&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.operation.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;process-message&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.operation.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message&quot;/&gt;
+    &lt;/operation&gt;
+  &lt;/rest&gt;
+&lt;/CapabilityStatement&gt;</pre>
+{% endraw %}

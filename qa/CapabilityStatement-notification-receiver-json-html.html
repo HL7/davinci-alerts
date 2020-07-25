@@ -1,0 +1,79 @@
+﻿<html>
+<head>
+  <title>CapabilityStatement-notification-receiver-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement">resourceType</a>" : "CapabilityStatement",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.id">id</a>" : "notification-receiver",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2 id=\&quot;title\&quot;&gt;Notification Receiver CapabilityStatement&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Implementation Guide Version: 0.1.0&lt;/li&gt;&lt;li&gt;FHIR Version: 4.0.0&lt;/li&gt;&lt;li&gt;Supported formats: xml, json&lt;/li&gt;&lt;li&gt;Published: 2020-02-19&lt;/li&gt;&lt;li&gt;Published by: HL7 International - Infrastructure and Messaging Work Group&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;p&gt;This CapabilityStatement describes the expected capabilities of a server that is capable of receiving a Da Vinci Unsolicited Notification transacted with the &lt;code&gt;$process-message&lt;/code&gt; operation.&lt;/p&gt;&lt;/p&gt;&lt;h3 id=\&quot;behavior\&quot;&gt;FHIR RESTful Capabilities&lt;/h3&gt;&lt;p&gt;Da Vinci Notifications  Receiver &lt;strong&gt;SHALL&lt;/strong&gt;:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Support the notification framework defined in this Guide.&lt;/li&gt;&lt;li&gt;Implement the RESTful behavior according to the FHIR specification.&lt;/li&gt;&lt;li&gt;Support json source formats for all Da Vinci Notification interactions.&lt;/li&gt;&lt;li&gt;Declare a CapabilityStatement identifying the scenarios, transactions and profiles supported.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;Da Vinci Notifications  Receiver &lt;strong&gt;SHOULD&lt;/strong&gt;:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Support the admission/discharge use case defined in this Guide.&lt;/li&gt;&lt;li&gt;Support xml source formats for all Da Vinci Notification interactions.&lt;/li&gt;&lt;li&gt;Identify the Da Vinci Notification or US Core profiles supported as part of the FHIR &lt;code&gt;meta.profile&lt;/code&gt; attribute for each instance.&lt;/li&gt;&lt;/ol&gt;&lt;p id=\&quot;security\&quot;&gt;&lt;strong&gt;Security:&lt;/strong&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;For general security consideration refer to the &lt;a href=\&quot;http://build.fhir.org/secpriv-module.html\&quot;&gt;Security and Privacy Considerations&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;For security considerations specific to this guide refer to the  &lt;a href=\&quot;security.html\&quot;&gt;Security&lt;/a&gt; page for requirements and recommendations.&lt;/li&gt;&lt;li&gt;A server &lt;strong&gt;SHALL&lt;/strong&gt; reject any unauthorized requests by returning an &lt;code&gt;HTTP 401&lt;/code&gt; unauthorized response code.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;strong&gt;Summary of System Wide Operations&lt;/strong&gt;&lt;/p&gt;&lt;li&gt;&lt;strong&gt;SHALL&lt;/strong&gt; support the\t&lt;a href=\&quot;http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message\&quot;&gt;&lt;code&gt;$process-message&lt;/code&gt;&lt;/a&gt; operation.&lt;/li&gt;&lt;br/&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.url">url</a>" : "http://hl7.org/fhir/us/davinci-notifications/CapabilityStatement/notification-receiver",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.version">version</a>" : "1.0.0",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.name">name</a>" : "NotificationReceiverCapabilityStatement",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.title">title</a>" : "Notification Receiver CapabilityStatement",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.experimental">experimental</a>" : false,
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.date">date</a>" : "2020-02-19",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.publisher">publisher</a>" : "HL7 International - Infrastructure and Messaging Work Group",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://www.hl7.org/Special/committees/inm/index.cfm"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.description">description</a>" : "This CapabilityStatement describes the expected capabilities of a server that is capable of receiving a Da Vinci Unsolicited Notification transacted with the `$process-message` operation.",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.jurisdiction">jurisdiction</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:iso:std:iso:3166",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "US"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.kind">kind</a>" : "requirements",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.fhirVersion">fhirVersion</a>" : "4.0.0",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.format">format</a>" : [
+    "xml",
+    "json"
+  ],
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.patchFormat">patchFormat</a>" : [
+    "application/json-patch+json"
+  ],
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.implementationGuide">implementationGuide</a>" : [
+    "http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts|0.1.0"
+  ],
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest">rest</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.mode">mode</a>" : "server",
+      "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.documentation">documentation</a>" : "Da Vinci Notifications  Receiver **SHALL**:\n\n1. Support the notification framework defined in this Guide.\n1. Implement the RESTful behavior according to the FHIR specification.\n1. Support json source formats for all Da Vinci Notification interactions.\n1. Declare a CapabilityStatement identifying the scenarios, transactions and profiles supported.\n\nDa Vinci Notifications  Receiver **SHOULD**:\n\n1. Support the admission/discharge use case defined in this Guide.\n1. Support xml source formats for all Da Vinci Notification interactions.\n1. Identify the Da Vinci Notification or US Core profiles supported as part of the FHIR `meta.profile` attribute for each instance.",
+      "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.security">security</a>" : {
+        "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.security.description">description</a>" : "1. For general security consideration refer to the [Security and Privacy Considerations](http://build.fhir.org/secpriv-module.html). \n1. For security considerations specific to this guide refer to the  [Security](security.html) page for requirements and recommendations.\n1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code."
+      },
+      "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.operation">operation</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.operation.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.operation.name">name</a>" : "process-message",
+          "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.operation.definition">definition</a>" : "http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message"
+        }
+      ]
+    }
+  ]
+}</pre>
+</body>
+</html>

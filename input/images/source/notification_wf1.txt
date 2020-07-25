@@ -1,0 +1,14 @@
+#text for https://sequencediagram.org/
+# add viewbox attribute to svg file for img sizing
+
+title Notification Workflow
+
+participant Sender
+
+participant Recipient/Intermediary
+
+note over Sender: 1) An event or request\n triggers a notification
+
+Sender ->Recipient/Intermediary:2) sends "unsolicited notification"
+
+note over Recipient/Intermediary: 3) Process notification

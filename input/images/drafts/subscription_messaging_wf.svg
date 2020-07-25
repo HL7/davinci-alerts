@@ -1,0 +1,172 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0.0 0.0 829.0 1003.0"><defs/>
+  <g><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/>
+    <g><rect fill="white" stroke="none" x="0" y="0" width="785" height="950"/></g>
+    <g>
+      <text fill="black" stroke="none" font-family="sans-serif" font-size="16.5pt" font-style="normal" font-weight="normal" text-decoration="normal" x="198.4733597372383" y="26.3876361" text-anchor="start" dominant-baseline="alphabetic">Subscription workflow - No Intermediary</text>
+    </g><g/>
+    <g><path
+      fill="none"
+      stroke="black"
+      paint-order="fill stroke markers"
+      d=" M 95.91080565722267 103.26361593799999 L 95.91080565722267 950.658569896"
+      stroke-miterlimit="10"
+      stroke-width="1.4659797833333332"
+      stroke-dasharray="13.532121076923076,5.863919133333333"/><path
+      fill="none"
+      stroke="black"
+      paint-order="fill stroke markers"
+      d=" M 396.5317310916758 103.26361593799999 L 396.5317310916758 950.658569896"
+      stroke-miterlimit="10"
+      stroke-width="1.4659797833333332"
+      stroke-dasharray="13.532121076923076,5.863919133333333"/><path
+      fill="none"
+      stroke="black"
+      paint-order="fill stroke markers"
+      d=" M 640.9302848499688 340.22458811599995 L 640.9302848499688 950.658569896"
+      stroke-miterlimit="10"
+      stroke-width="1.4659797833333332"
+      stroke-dasharray="13.532121076923076,5.863919133333333"/></g>
+    <g><path fill="none" stroke="none"/>
+      <g><path
+        fill="white"
+        stroke="black"
+        paint-order="fill stroke markers"
+        d=" M 8.795878700000003 55.765870957999994 L 183.02573261444533 55.765870957999994 L 183.02573261444533 103.26361593799999 L 8.795878700000003 103.26361593799999 L 8.795878700000003 55.765870957999994 Z"
+        stroke-miterlimit="10"
+        stroke-width="2.814681184"
+        stroke-dasharray=""/></g>
+      <g><g/>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="27.88293547900001" y="85.67185853800001" text-anchor="start" dominant-baseline="alphabetic">Alert Sender (server)</text>
+      </g><path fill="none" stroke="none"/>
+      <g><path
+        fill="white"
+        stroke="black"
+        paint-order="fill stroke markers"
+        d=" M 305.7482250328906 55.765870957999994 L 487.3152371504609 55.765870957999994 L 487.3152371504609 103.26361593799999 L 305.7482250328906 103.26361593799999 L 305.7482250328906 55.765870957999994 Z"
+        stroke-miterlimit="10"
+        stroke-width="2.814681184"
+        stroke-dasharray=""/></g>
+      <g><g/>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="324.83528181189064" y="85.67185853800001" text-anchor="start" dominant-baseline="alphabetic">Alert Recipient (client)</text>
+      </g>
+    </g>
+    <g><path
+      fill="white"
+      stroke="black"
+      paint-order="fill stroke markers"
+      d=" M 314.86678696702734 138.447130738 L 462.36409355632424 138.447130738 L 478.19667521632425 154.279712398 L 478.19667521632425 196.49993015799998 L 314.86678696702734 196.49993015799998 L 314.86678696702734 138.447130738 M 462.36409355632424 138.447130738 L 462.36409355632424 154.279712398 L 478.19667521632425 154.279712398"
+      stroke-miterlimit="10"
+      stroke-width="1.4659797833333332"
+      stroke-dasharray=""/>
+      <g>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="339.49524732702736" y="163.07559109800002" text-anchor="start" dominant-baseline="alphabetic">Client determines</text>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="339.49524732702736" y="180.66734849800002" text-anchor="start" dominant-baseline="alphabetic">desired alert</text>
+      </g><path
+        fill="white"
+        stroke="black"
+        paint-order="fill stroke markers"
+        d=" M 294.8918495280625 222.887566258 L 482.3390309952891 222.887566258 L 498.1716126552891 238.72014791799998 L 498.1716126552891 263.348608278 L 294.8918495280625 263.348608278 L 294.8918495280625 222.887566258 M 482.3390309952891 222.887566258 L 482.3390309952891 238.72014791799998 L 498.1716126552891 238.72014791799998"
+        stroke-miterlimit="10"
+        stroke-width="1.4659797833333332"
+        stroke-dasharray=""/>
+      <g>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="319.5203098880625" y="247.516026618" text-anchor="start" dominant-baseline="alphabetic">Client creates endpoint\</text>
+      </g><path fill="none" stroke="none"/>
+      <g><path
+        fill="white"
+        stroke="black"
+        paint-order="fill stroke markers"
+        d=" M 504.9069945504609 291.23154375699994 L 776.9535751494766 291.23154375699994 L 776.9535751494766 338.72928873699993 L 504.9069945504609 338.72928873699993 L 504.9069945504609 291.23154375699994 Z"
+        stroke-miterlimit="10"
+        stroke-width="2.814681184"
+        stroke-dasharray=""/></g>
+      <g><g/>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="523.994051329461" y="321.1375313369999" text-anchor="start" dominant-baseline="alphabetic">Alert Recipient (client) Endpoint 123</text>
+      </g>
+      <g>
+        <g><rect fill="white" stroke="none" x="448.0805992110683" y="292.11113162699996" width="5.27752722" height="22.86928462"/></g>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="450.71936282106833" y="307.943713287" text-anchor="start" dominant-baseline="alphabetic"></text>
+      </g>
+      <g><path fill="none" stroke="black" paint-order="fill stroke markers" d=" M 396.5317310916758 314.98041624699994 L 501.9750349837943 314.98041624699994" stroke-miterlimit="10" stroke-width="1.4659797833333332" stroke-dasharray="7.0367029599999995"/>
+        <g transform="translate(504.9069945504609,314.98041624699994) translate(-504.9069945504609,-314.98041624699994)"><path fill="black" stroke="none" paint-order="stroke fill markers" d=" M 490.24719671712757 307.6505173303333 L 504.9069945504609 314.98041624699994 L 490.24719671712757 322.3103151636666 Z"/></g>
+      </g>
+      <g>
+        <g><rect fill="white" stroke="none" x="179.20887805546482" y="366.61222421599996" width="134.02478063796875" height="22.86928462"/></g>
+        <g><rect fill="white" stroke="none" x="179.20887805546482" y="384.20398161599996" width="67.22453344558593" height="22.86928462"/></g>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="181.84764166546483" y="382.444805876" text-anchor="start" dominant-baseline="alphabetic">Create Subscription</text>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="181.84764166546483" y="400.036563276" text-anchor="start" dominant-baseline="alphabetic">Endpoint:</text>
+      </g>
+      <g><path fill="none" stroke="black" paint-order="fill stroke markers" d=" M 396.5317310916758 407.07326623599994 L 98.84276522388933 407.07326623599994" stroke-miterlimit="10" stroke-width="1.4659797833333332" stroke-dasharray=""/>
+        <g transform="translate(95.91080565722267,407.07326623599994) translate(-95.91080565722267,-407.07326623599994)"><path fill="black" stroke="none" paint-order="stroke fill markers" d=" M 110.570603490556 399.7433673193333 L 95.91080565722267 407.07326623599994 L 110.570603490556 414.4031651526666 Z"/></g>
+      </g><path
+        fill="white"
+        stroke="black"
+        paint-order="fill stroke markers"
+        d=" M 95.91080565722267 462.4873020459999 L 104.70668435722267 462.4873020459999 M 104.70668435722267 433.46090233599995 L 310.05648423265234 433.46090233599995 L 325.88906589265235 449.29348399599996 L 325.88906589265235 491.51370175599993 L 104.70668435722267 491.51370175599993 L 104.70668435722267 433.46090233599995 M 310.05648423265234 433.46090233599995 L 310.05648423265234 449.29348399599996 L 325.88906589265235 449.29348399599996"
+        stroke-miterlimit="10"
+        stroke-width="1.4659797833333332"
+        stroke-dasharray=""/>
+      <g>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="129.33514471722268" y="458.0893626959999" text-anchor="start" dominant-baseline="alphabetic">Create subscription record</text>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="129.33514471722268" y="475.6811200959999" text-anchor="start" dominant-baseline="alphabetic">
+          - State:</text>
+      </g>
+      <g>
+        <g><rect fill="white" stroke="none" x="191.42791034306248" y="517.9013378559999" width="109.58671606277343" height="22.86928462"/></g>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="194.0666739530625" y="533.7339195159999" text-anchor="start" dominant-baseline="alphabetic">Response (201)</text>
+      </g>
+      <g><path fill="none" stroke="black" paint-order="fill stroke markers" d=" M 95.91080565722267 540.770622476 L 393.59977152500915 540.770622476" stroke-miterlimit="10" stroke-width="1.4659797833333332" stroke-dasharray="7.0367029599999995"/>
+        <g transform="translate(396.5317310916758,540.770622476) translate(-396.5317310916758,-540.770622476)"><path fill="black" stroke="none" paint-order="stroke fill markers" d=" M 381.87193325834244 533.4407235593333 L 396.5317310916758 540.770622476 L 381.87193325834244 548.1005213926667 Z"/></g>
+      </g>
+      <g>
+        <g><rect fill="white" stroke="none" x="290.40242525931836" y="567.158258576" width="156.03623998855468" height="22.86928462"/></g>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="293.0411888693184" y="582.9908402359999" text-anchor="start" dominant-baseline="alphabetic">Handshake Notification</text>
+      </g>
+      <g><path fill="none" stroke="black" paint-order="fill stroke markers" d=" M 95.91080565722267 590.027543196 L 637.998325283302 590.027543196" stroke-miterlimit="10" stroke-width="1.4659797833333332" stroke-dasharray=""/>
+        <g transform="translate(640.9302848499688,590.027543196) translate(-640.9302848499688,-590.027543196)"><path fill="black" stroke="none" paint-order="stroke fill markers" d=" M 626.2704870166355 582.6976442793333 L 640.9302848499688 590.027543196 L 626.2704870166355 597.3574421126667 Z"/></g>
+      </g>
+      <g>
+        <g><rect fill="white" stroke="none" x="313.627187222209" y="616.415179296" width="109.58671606277343" height="22.86928462"/></g>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="316.265950832209" y="632.247760956" text-anchor="start" dominant-baseline="alphabetic">Response (200)</text>
+      </g>
+      <g><path fill="none" stroke="black" paint-order="fill stroke markers" d=" M 640.9302848499688 639.284463916 L 98.84276522388933 639.284463916" stroke-miterlimit="10" stroke-width="1.4659797833333332" stroke-dasharray="7.0367029599999995"/>
+        <g transform="translate(95.91080565722267,639.284463916) translate(-95.91080565722267,-639.284463916)"><path fill="black" stroke="none" paint-order="stroke fill markers" d=" M 110.570603490556 631.9545649993333 L 95.91080565722267 639.284463916 L 110.570603490556 646.6143628326668 Z"/></g>
+      </g><path
+        fill="white"
+        stroke="black"
+        paint-order="fill stroke markers"
+        d=" M 95.91080565722267 685.902621026 L 104.70668435722267 685.902621026 M 104.70668435722267 665.672100016 L 371.9032707316758 665.672100016 L 387.7358523916758 681.5046816759999 L 387.7358523916758 706.133142036 L 104.70668435722267 706.133142036 L 104.70668435722267 665.672100016 M 371.9032707316758 665.672100016 L 371.9032707316758 681.5046816759999 L 387.7358523916758 681.5046816759999"
+        stroke-miterlimit="10"
+        stroke-width="1.4659797833333332"
+        stroke-dasharray=""/>
+      <g>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="129.33514471722265" y="690.300560376" text-anchor="start" dominant-baseline="alphabetic">Change subscription state to 'active'</text>
+      </g>
+      <g>
+        <g><rect fill="white" stroke="none" x="224.82264468070508" y="732.5207781359999" width="112.01333654617187" height="22.86928462"/></g>
+        <g><rect fill="white" stroke="none" x="224.82264468070508" y="750.1125355359999" width="287.1958011457813" height="22.86928462"/></g>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="227.4614082907051" y="748.3533597959998" text-anchor="start" dominant-baseline="alphabetic">Alert Notification</text>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="227.4614082907051" y="765.9451171959998" text-anchor="start" dominant-baseline="alphabetic">Payload = "Da Vinci Alert Message Bundle"</text>
+      </g>
+      <g><path fill="none" stroke="black" paint-order="fill stroke markers" d=" M 95.91080565722267 772.9818201559999 L 637.998325283302 772.9818201559999" stroke-miterlimit="10" stroke-width="1.4659797833333332" stroke-dasharray=""/>
+        <g transform="translate(640.9302848499688,772.9818201559999) translate(-640.9302848499688,-772.9818201559999)"><path fill="black" stroke="none" paint-order="stroke fill markers" d=" M 626.2704870166355 765.6519212393332 L 640.9302848499688 772.9818201559999 L 626.2704870166355 780.3117190726666 Z"/></g>
+      </g>
+      <g>
+        <g><rect fill="white" stroke="none" x="313.627187222209" y="799.3694562559999" width="109.58671606277343" height="22.86928462"/></g>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="316.265950832209" y="815.2020379159999" text-anchor="start" dominant-baseline="alphabetic">Response (201)</text>
+      </g>
+      <g><path fill="none" stroke="black" paint-order="fill stroke markers" d=" M 640.9302848499688 822.238740876 L 98.84276522388933 822.238740876" stroke-miterlimit="10" stroke-width="1.4659797833333332" stroke-dasharray="7.0367029599999995"/>
+        <g transform="translate(95.91080565722267,822.238740876) translate(-95.91080565722267,-822.238740876)"><path fill="black" stroke="none" paint-order="stroke fill markers" d=" M 110.570603490556 814.9088419593332 L 95.91080565722267 822.238740876 L 110.570603490556 829.5686397926667 Z"/></g>
+      </g><path
+        fill="white"
+        stroke="black"
+        paint-order="fill stroke markers"
+        d=" M 242.47599412034768 848.626376976 L 534.754886403004 848.626376976 L 550.5874680630039 864.4589586359999 L 550.5874680630039 889.087418996 L 242.47599412034768 889.087418996 L 242.47599412034768 848.626376976 M 534.754886403004 848.626376976 L 534.754886403004 864.4589586359999 L 550.5874680630039 864.4589586359999"
+        stroke-miterlimit="10"
+        stroke-width="1.4659797833333332"
+        stroke-dasharray=""/>
+      <g>
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="267.10445448034767" y="873.254837336" text-anchor="start" dominant-baseline="alphabetic">Process Da Vinci Alert Message Bundle</text>
+      </g>
+    </g><g/><g/></g>
+</svg>

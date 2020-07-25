@@ -1,0 +1,60 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "notifications-graphdefinition",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-graphdefinition",
+    "version": "0.2.1",
+    "name": "NotificationsGraphDefinition",
+    "title": "Da Vinci Notifications GraphDefinition Profile",
+    "status": "active",
+    "experimental": false,
+    "date": "2019-11-14T00:00:00+00:00",
+    "publisher": "Health eData Inc",
+    "description": "The Da Vinci Notifications GraphDefinition Profile adds the capability to set \"mustSupport\" expectectations for  links in the FHIR [GraphDefinition] resource to define usage conformance in an implementation specific manner. This extension is used in the similar way as the [ElementDefinition.mustSupport] in the FHIR specification.",
+    "jurisdiction": [
+        {
+            "coding": [
+                {
+                    "system": "urn:iso:std:iso:3166",
+                    "code": "US",
+                    "display": "United States of America"
+                }
+            ]
+        }
+    ],
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "GraphDefinition",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/GraphDefinition",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "GraphDefinition",
+                "path": "GraphDefinition",
+                "mustSupport": false
+            },
+            {
+                "id": "GraphDefinition.link",
+                "path": "GraphDefinition.link",
+                "mustSupport": true
+            },
+            {
+                "id": "GraphDefinition.link.extension:must-support",
+                "path": "GraphDefinition.link.extension",
+                "sliceName": "must-support",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Extension",
+                        "profile": [
+                            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-mustSupport"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            }
+        ]
+    }
+}

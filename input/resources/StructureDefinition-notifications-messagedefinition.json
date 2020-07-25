@@ -1,0 +1,146 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "notifications-messagedefinition",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messagedefinition",
+    "version": "0.2.1",
+    "name": "NotificationsMessageDefinition",
+    "title": "Da Vinci Notifications MessageDefinition Profile",
+    "status": "active",
+    "experimental": false,
+    "date": "2019-11-11T00:00:00+00:00",
+    "publisher": "Health eData Inc",
+    "description": "The Da Vinci Notifications MessageDefinition Profile sets minimum expectations for the FHIR [MessageDefinition] resource to define the characteristics of a message that can be shared between systems for Da Vinci notification messaging.  It includes the type of event that initiates the message and the content to be transmitted as well as other metadata information related to the definition.",
+    "jurisdiction": [
+        {
+            "coding": [
+                {
+                    "system": "urn:iso:std:iso:3166",
+                    "code": "US",
+                    "display": "United States of America"
+                }
+            ]
+        }
+    ],
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "MessageDefinition",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MessageDefinition",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "MessageDefinition",
+                "path": "MessageDefinition",
+                "mustSupport": false
+            },
+            {
+                "id": "MessageDefinition.url",
+                "path": "MessageDefinition.url",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true
+            },
+            {
+                "id": "MessageDefinition.version",
+                "path": "MessageDefinition.version",
+                "mustSupport": true
+            },
+            {
+                "id": "MessageDefinition.name",
+                "path": "MessageDefinition.name",
+                "mustSupport": true
+            },
+            {
+                "id": "MessageDefinition.title",
+                "path": "MessageDefinition.title",
+                "mustSupport": true
+            },
+            {
+                "id": "MessageDefinition.status",
+                "path": "MessageDefinition.status",
+                "mustSupport": true
+            },
+            {
+                "id": "MessageDefinition.date",
+                "path": "MessageDefinition.date",
+                "mustSupport": true
+            },
+            {
+                "id": "MessageDefinition.publisher",
+                "path": "MessageDefinition.publisher",
+                "mustSupport": true
+            },
+            {
+                "id": "MessageDefinition.description",
+                "path": "MessageDefinition.description",
+                "mustSupport": true
+            },
+            {
+                "id": "MessageDefinition.eventCoding",
+                "path": "MessageDefinition.eventCoding",
+                "type": [
+                    {
+                        "code": "Coding"
+                    }
+                ],
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "valueSet": "http://hl7.org/fhir/us/davinci-alerts/ValueSet/notification-event"
+                }
+            },
+            {
+                "id": "MessageDefinition.category",
+                "path": "MessageDefinition.category",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ],
+                "fixedCode": "notification",
+                "mustSupport": true
+            },
+            {
+                "id": "MessageDefinition.focus",
+                "path": "MessageDefinition.focus",
+                "min": 1,
+                "max": "*",
+                "mustSupport": true
+            },
+            {
+                "id": "MessageDefinition.focus.code",
+                "path": "MessageDefinition.focus.code",
+                "mustSupport": true
+            },
+            {
+                "id": "MessageDefinition.focus.profile",
+                "path": "MessageDefinition.focus.profile",
+                "mustSupport": true
+            },
+            {
+                "id": "MessageDefinition.responseRequired",
+                "path": "MessageDefinition.responseRequired",
+                "min": 0,
+                "max": "0",
+                "mustSupport": false
+            },
+            {
+                "id": "MessageDefinition.allowedResponse",
+                "path": "MessageDefinition.allowedResponse",
+                "min": 0,
+                "max": "0",
+                "mustSupport": false
+            },
+            {
+                "id": "MessageDefinition.graph",
+                "path": "MessageDefinition.graph",
+                "min": 1,
+                "max": "*",
+                "mustSupport": true
+            }
+        ]
+    }
+}

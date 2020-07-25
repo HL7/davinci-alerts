@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MessageDefinition xmlns="http://hl7.org/fhir">
+  <id value="notification-admit"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messagedefinition"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: notification-admit</p><p><b>meta</b>: </p><p><b>url</b>: <a href="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-admit">http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-admit</a></p><p><b>version</b>: 1.0.0</p><p><b>name</b>: NotificationAdmit</p><p><b>title</b>: Da Vinci Notification Admit Message Definition</p><p><b>status</b>: active</p><p><b>date</b>: 2019-08-20</p><p><b>publisher</b>: HL7 International - Infrastructure and Messaging Work Group</p><p><b>contact</b>: http://www.hl7.org/Special/committees/inm/index.cfm</p><p><b>jurisdiction</b>: <span title="Codes: {urn:iso:std:iso:3166 US}">US</span></p><p><b>purpose</b>: Defines message bundle for Da Vinci Notifications patient admission notification scenario</p><p><b>event</b>: <span title="{http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event notification-admit}">Notification Admit</span></p><p><b>category</b>: notification</p><h3>Focus</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Min</b></td><td><b>Max</b></td></tr><tr><td>*</td><td>Encounter</td><td>1</td><td>1</td></tr></table><p><b>graph</b>: <a href="http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/admit-discharge">http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/admit-discharge</a></p></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-admit"/>
+  <version value="1.0.0"/>
+  <name value="NotificationAdmit"/>
+  <title value="Da Vinci Notification Admit Message Definition"/>
+  <status value="active"/>
+  <date value="2019-08-20"/>
+  <publisher value="HL7 International - Infrastructure and Messaging Work Group"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/inm/index.cfm"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="Defines message bundle for Da Vinci Notifications patient admission notification scenario"/>
+  <eventCoding>
+    <system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"/>
+    <code value="notification-admit"/>
+  </eventCoding>
+  <category value="notification"/>
+  <focus>
+    <code value="Encounter"/>
+    <min value="1"/>
+    <max value="1"/>
+  </focus>
+  <graph value="http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/admit-discharge"/>
+</MessageDefinition>

@@ -1,0 +1,81 @@
+resourceType: StructureDefinition
+id: notifications-bundle
+url: 'http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle'
+version: 0.2.1
+name: NotificationsBundle
+title: Da Vinci Notifications Bundle Profile
+status: active
+experimental: false
+date: '2019-11-15T00:00:00+00:00'
+publisher: Health eData Inc
+description: >-
+  The Da Vinci Notifications Bundle Profile constrains the FHIR [Bundle]
+  resource to the Da Vinci notification messaging framework.
+jurisdiction:
+  - coding:
+      - system: 'urn:iso:std:iso:3166'
+        code: US
+        display: United States of America
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: Bundle
+baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Bundle'
+derivation: constraint
+differential:
+  element:
+    - id: Bundle
+      path: Bundle
+      mustSupport: false
+    - id: Bundle.type
+      path: Bundle.type
+      type:
+        - code: code
+      fixedCode: message
+      mustSupport: true
+    - id: Bundle.total
+      path: Bundle.total
+      min: 0
+      max: '0'
+      mustSupport: false
+    - id: Bundle.entry
+      path: Bundle.entry
+      slicing:
+        discriminator:
+          - type: type
+            path: resource
+        rules: open
+      min: 2
+      max: '*'
+      mustSupport: true
+    - id: Bundle.entry.search
+      path: Bundle.entry.search
+      min: 0
+      max: '0'
+      mustSupport: false
+    - id: Bundle.entry.request
+      path: Bundle.entry.request
+      min: 0
+      max: '0'
+      mustSupport: false
+    - id: Bundle.entry.response
+      path: Bundle.entry.response
+      min: 0
+      max: '0'
+      mustSupport: false
+    - id: 'Bundle.entry:messageheader'
+      path: Bundle.entry
+      sliceName: messageheader
+      min: 1
+      max: '1'
+      mustSupport: true
+    - id: 'Bundle.entry:messageheader.resource'
+      path: Bundle.entry.resource
+      min: 1
+      max: '1'
+      type:
+        - code: MessageHeader
+          profile:
+            - >-
+              http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader
+      mustSupport: true

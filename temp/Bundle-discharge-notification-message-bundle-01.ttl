@@ -1,0 +1,620 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-alerts/Bundle/discharge-notification-message-bundle-01> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "discharge-notification-message-bundle-01"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle>
+     ]
+  ];
+  fhir:Bundle.type [ fhir:value "message"];
+  fhir:Bundle.timestamp [ fhir:value "2019-11-14T08:08:47Z"^^xsd:dateTime];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:267b18ce-3d37-4581-9baa-6fada338038b" ];
+     fhir:Bundle.entry.resource <urn:uuid:267b18ce-3d37-4581-9baa-6fada338038b>
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7" ];
+     fhir:Bundle.entry.resource <urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7>
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:75ea28b5-74b8-4d9c-9eb5-cfdc10b48fa" ];
+     fhir:Bundle.entry.resource <urn:uuid:75ea28b5-74b8-4d9c-9eb5-cfdc10b48fa>
+  ], [
+     fhir:index 3;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59" ];
+     fhir:Bundle.entry.resource <urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59>
+  ], [
+     fhir:index 4;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4" ];
+     fhir:Bundle.entry.resource <urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4>
+  ], [
+     fhir:index 5;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:c470de5b-345c-4945-bc4a-cbdec7d86f54" ];
+     fhir:Bundle.entry.resource <urn:uuid:c470de5b-345c-4945-bc4a-cbdec7d86f54>
+  ], [
+     fhir:index 6;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:54f0ea3f-dc89-4e71-8d98-8774a5add41e" ];
+     fhir:Bundle.entry.resource <urn:uuid:54f0ea3f-dc89-4e71-8d98-8774a5add41e>
+  ], [
+     fhir:index 7;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade" ];
+     fhir:Bundle.entry.resource <urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade>
+  ] .
+
+<urn:uuid:267b18ce-3d37-4581-9baa-6fada338038b> a fhir:MessageHeader;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n						<p>\n							<b>Generated Narrative with Details</b>\n						</p>\n						<p>\n							<b>id</b>: discharge-notification-messageheader-01</p>\n						<p>\n							<b>meta</b>:\n						</p>\n						<p>\n							<b>event</b>: Notification Discharge (Details: http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event code notification-discharge = 'Notification Discharge', stated as 'Notification payloadMimeType')</p>\n						<h3>Destinations</h3>\n						<table class=\"grid\">\n							<tr>\n								<td>-</td>\n								<td>\n									<b>Name</b>\n								</td>\n								<td>\n									<b>Endpoint</b>\n								</td>\n							</tr>\n							<tr>\n								<td>*</td>\n								<td>Acme Message Gateway</td>\n								<td>\n									<a href=\"https://example.org/Endpoints/P123\">https://example.org/Endpoints/P123</a>\n								</td>\n							</tr>\n						</table>\n						<p>\n							<b>sender</b>:\n							<a href=\"urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade\">Saint Luke W Endpoint</a>\n						</p>\n						<p>\n							<b>author</b>:\n							<a href=\"urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59\">Ronald Bone</a>\n						</p>\n						<h3>Sources</h3>\n						<table class=\"grid\">\n							<tr>\n								<td>-</td>\n								<td>\n									<b>Name</b>\n								</td>\n								<td>\n									<b>Software</b>\n								</td>\n								<td>\n									<b>Version</b>\n								</td>\n								<td>\n									<b>Contact</b>\n								</td>\n								<td>\n									<b>Endpoint</b>\n								</td>\n							</tr>\n							<tr>\n								<td>*</td>\n								<td>Acme Central Patient Registry</td>\n								<td>FooBar Patient Manager</td>\n								<td>3.1.45.AABB</td>\n								<td>ph: +1 (555) 123 4567</td>\n								<td>\n									<a href=\"https://example.org/Endpoints/P456\">https://example.org/Endpoints/P456</a>\n								</td>\n							</tr>\n						</table>\n						<p>\n							<b>responsible</b>:\n							<a href=\"urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade\">Saint Luke W Endpoint</a>\n						</p>\n						<p>\n							<b>focus</b>:\n							<a href=\"urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7\">Inpatient Encounter</a>\n						</p>\n					</div>"
+  ];
+  fhir:MessageHeader.eventCoding [
+     fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event" ];
+     fhir:Coding.code [ fhir:value "notification-discharge" ];
+     fhir:Coding.display [ fhir:value "Notification Discharge" ]
+  ];
+  fhir:MessageHeader.destination [
+     fhir:index 0;
+     fhir:MessageHeader.destination.name [ fhir:value "Acme Message Gateway" ];
+     fhir:MessageHeader.destination.endpoint [ fhir:value "https://example.org/Endpoints/P123" ]
+  ];
+  fhir:MessageHeader.sender [
+     fhir:Reference.reference [ fhir:value "urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade" ];
+     fhir:Reference.display [ fhir:value "Saint Luke W Endpoint" ]
+  ];
+  fhir:MessageHeader.author [
+     fhir:Reference.reference [ fhir:value "urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59" ];
+     fhir:Reference.display [ fhir:value "Ronald Bone" ]
+  ];
+  fhir:MessageHeader.source [
+     fhir:MessageHeader.source.name [ fhir:value "Acme Central Patient Registry" ];
+     fhir:MessageHeader.source.software [ fhir:value "FooBar Patient Manager" ];
+     fhir:MessageHeader.source.version [ fhir:value "3.1.45.AABB" ];
+     fhir:MessageHeader.source.contact [
+       fhir:ContactPoint.system [ fhir:value "phone" ];
+       fhir:ContactPoint.value [ fhir:value "+1 (555) 123 4567" ]
+     ];
+     fhir:MessageHeader.source.endpoint [ fhir:value "https://example.org/Endpoints/P456" ]
+  ];
+  fhir:MessageHeader.responsible [
+     fhir:Reference.reference [ fhir:value "urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade" ];
+     fhir:Reference.display [ fhir:value "Saint Luke W Endpoint" ]
+  ];
+  fhir:MessageHeader.focus [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7" ];
+     fhir:Reference.display [ fhir:value "Inpatient Encounter" ]
+  ] .
+
+<urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7> a fhir:Encounter;
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2017-05-26T11:56:57.250-04:00"^^xsd:dateTime ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-encounter";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-encounter>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n						<p>\n							<b>Generated Narrative with Details</b>\n						</p>\n						<p>\n							<b>id</b>: admit-discharge-notification-encounter-01</p>\n						<p>\n							<b>meta</b>:\n						</p>\n						<p>\n							<b>status</b>: finished</p>\n						<p>\n							<b>class</b>: inpatient encounter (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code IMP = 'inpatient encounter', stated as 'inpatient encounter')</p>\n						<p>\n							<b>type</b>: Inpatient hospital care\n							<span style=\"background: LightGoldenRodYellow\">(Details : {http://www.ama-assn.org/go/cpt code '99234' = '99234)</span>\n						</p>\n						<p>\n							<b>subject</b>:\n							<a href=\"urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4\">Amy V. Shaw</a>\n						</p>\n						<h3>Participants</h3>\n						<table class=\"grid\">\n							<tr>\n								<td>-</td>\n								<td>\n									<b>Type</b>\n								</td>\n								<td>\n									<b>Period</b>\n								</td>\n								<td>\n									<b>Individual</b>\n								</td>\n							</tr>\n							<tr>\n								<td>*</td>\n								<td>primary performer\n									<span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/v3-ParticipationType code 'PPRF' = 'primary performer)</span>\n								</td>\n								<td>Nov 1, 2015, 2:00:14 PM --&gt; Nov 1, 2015, 3:00:14 PM</td>\n								<td>\n									<a href=\"urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59\">Ronald Bone</a>\n								</td>\n							</tr>\n						</table>\n						<p>\n							<b>period</b>: Nov 1, 2015, 2:00:14 PM --&gt; Nov 1, 2015, 3:00:14 PM</p>\n						<h3>Locations</h3>\n						<table class=\"grid\">\n							<tr>\n								<td>-</td>\n								<td>\n									<b>Location</b>\n								</td>\n							</tr>\n							<tr>\n								<td>*</td>\n								<td>\n									<a href=\"urn:uuid:75ea28b5-74b8-4d9c-9eb5-cfdc10b48fa\">Health Level Seven International - Amherst</a>\n								</td>\n							</tr>\n						</table>\n					</div>"
+  ];
+  fhir:Encounter.status [ fhir:value "finished"];
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ];
+     fhir:Coding.code [ fhir:value "IMP" ];
+     fhir:Coding.display [ fhir:value "inpatient encounter" ]
+  ];
+  fhir:Encounter.type [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.ama-assn.org/go/cpt" ];
+       fhir:Coding.code [ fhir:value "99234" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Inpatient hospital care" ]
+  ];
+  fhir:Encounter.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4" ];
+     fhir:Reference.display [ fhir:value "Amy V. Shaw" ]
+  ];
+  fhir:Encounter.participant [
+     fhir:index 0;
+     fhir:Encounter.participant.type [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ParticipationType" ];
+         fhir:Coding.code [ fhir:value "PPRF" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "primary performer" ]
+     ];
+     fhir:Encounter.participant.period [
+       fhir:Period.start [ fhir:value "2015-11-01T17:00:14-05:00"^^xsd:dateTime ];
+       fhir:Period.end [ fhir:value "2015-11-01T18:00:14-05:00"^^xsd:dateTime ]
+     ];
+     fhir:Encounter.participant.individual [
+       fhir:Reference.reference [ fhir:value "urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59" ];
+       fhir:Reference.display [ fhir:value "Ronald Bone" ]
+     ]
+  ];
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2015-11-01T17:00:14-05:00"^^xsd:dateTime ];
+     fhir:Period.end [ fhir:value "2015-11-01T18:00:14-05:00"^^xsd:dateTime ]
+  ];
+  fhir:Encounter.hospitalization [
+     fhir:Encounter.hospitalization.dischargeDisposition [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/discharge-disposition" ];
+         fhir:Coding.code [ fhir:value "home" ];
+         fhir:Coding.display [ fhir:value "Home" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "The patient was dicharged to home" ]
+     ]
+  ];
+  fhir:Encounter.location [
+     fhir:index 0;
+     fhir:Encounter.location.location [
+       fhir:Reference.reference [ fhir:value "urn:uuid:75ea28b5-74b8-4d9c-9eb5-cfdc10b48fa" ];
+       fhir:Reference.display [ fhir:value "Health Level Seven International - Amherst" ]
+     ]
+  ] .
+
+<urn:uuid:75ea28b5-74b8-4d9c-9eb5-cfdc10b48fa> a fhir:Location;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-location>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n						<p>\n							<b>Generated Narrative with Details</b>\n						</p>\n						<p>\n							<b>id</b>: hl7east</p>\n						<p>\n							<b>meta</b>:\n						</p>\n						<p>\n							<b>identifier</b>: 29</p>\n						<p>\n							<b>status</b>: active</p>\n						<p>\n							<b>name</b>: Health Level Seven International - Amherst</p>\n						<p>\n							<b>description</b>: HL7 Headquarters - East</p>\n						<p>\n							<b>telecom</b>: ph: (+1) 734-677-7777</p>\n						<p>\n							<b>address</b>: 3300 Washtenaw Avenue, Suite 227 Amherst MA 01002 USA\n						</p>\n						<h3>Positions</h3>\n						<table class=\"grid\">\n							<tr>\n								<td>-</td>\n								<td>\n									<b>Longitude</b>\n								</td>\n								<td>\n									<b>Latitude</b>\n								</td>\n							</tr>\n							<tr>\n								<td>*</td>\n								<td>-72.519854</td>\n								<td>42.373222</td>\n							</tr>\n						</table>\n						<p>\n							<b>managingOrganization</b>: Health Level Seven International</p>\n					</div>"
+  ];
+  fhir:Location.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://www.acme.org/location" ];
+     fhir:Identifier.value [ fhir:value "29" ]
+  ];
+  fhir:Location.status [ fhir:value "active"];
+  fhir:Location.name [ fhir:value "Health Level Seven International - Amherst"];
+  fhir:Location.description [ fhir:value "HL7 Headquarters - East"];
+  fhir:Location.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "(+1) 734-677-7777" ]
+  ];
+  fhir:Location.address [
+     fhir:Address.line [
+       fhir:value "3300 Washtenaw Avenue, Suite 227";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Amherst" ];
+     fhir:Address.state [ fhir:value "MA" ];
+     fhir:Address.postalCode [ fhir:value "01002" ];
+     fhir:Address.country [ fhir:value "USA" ]
+  ];
+  fhir:Location.position [
+     fhir:Location.position.longitude [ fhir:value "-72.519854"^^xsd:decimal ];
+     fhir:Location.position.latitude [ fhir:value "42.373222"^^xsd:decimal ]
+  ];
+  fhir:Location.managingOrganization [
+     fhir:Reference.display [ fhir:value "Health Level Seven International" ]
+  ] .
+
+<urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59> a fhir:Practitioner;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n						<p>\n							<b>Generated Narrative with Details</b>\n						</p>\n						<p>\n							<b>id</b>: practitioner-1</p>\n						<p>\n							<b>meta</b>:\n						</p>\n						<p>\n							<b>identifier</b>: 9941339108, 25456</p>\n						<p>\n							<b>name</b>: Ronald Bone\n						</p>\n						<p>\n							<b>address</b>: 1003 Healthcare Drive Amherst MA 01002 (HOME)</p>\n					</div>"
+  ];
+  fhir:Practitioner.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://hl7.org.fhir/sid/us-npi" ];
+     fhir:Identifier.value [ fhir:value "9941339108" ]
+  ], [
+     fhir:index 1;
+     fhir:Identifier.system [ fhir:value "http://www.acme.org/practitioners" ];
+     fhir:Identifier.value [ fhir:value "25456" ]
+  ];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "Bone" ];
+     fhir:HumanName.given [
+       fhir:value "Ronald";
+       fhir:index 0
+     ];
+     fhir:HumanName.prefix [
+       fhir:value "Dr";
+       fhir:index 0
+     ]
+  ];
+  fhir:Practitioner.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value "home" ];
+     fhir:Address.line [
+       fhir:value "1003 Healthcare Drive";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Amherst" ];
+     fhir:Address.state [ fhir:value "MA" ];
+     fhir:Address.postalCode [ fhir:value "01002" ]
+  ] .
+
+<urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4> a fhir:Patient;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n						<p>\n							<b>Generated Narrative with Details</b>\n						</p>\n						<p>\n							<b>id</b>: example</p>\n						<p>\n							<b>identifier</b>: Medical Record Number = 1032702 (USUAL)</p>\n						<p>\n							<b>active</b>: true</p>\n						<p>\n							<b>name</b>: Amy V. Shaw\n						</p>\n						<p>\n							<b>telecom</b>: ph: 555-555-5555(HOME), amy.shaw@example.com</p>\n						<p>\n							<b>gender</b>:\n						</p>\n						<p>\n							<b>birthsex</b>: Female</p>\n						<p>\n							<b>birthDate</b>: Feb 20, 2007</p>\n						<p>\n							<b>address</b>: 49 Meadow St Mounds OK 74047 US\n						</p>\n						<p>\n							<b>race</b>: White, American Indian or Alaska Native, Asian, Shoshone, Filipino</p>\n						<p>\n							<b>ethnicity</b>: Hispanic or Latino, Dominican, Mexican</p>\n					</div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race" ];
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2106-3" ];
+         fhir:Coding.display [ fhir:value "White" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "1002-5" ];
+         fhir:Coding.display [ fhir:value "American Indian or Alaska Native" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2028-9" ];
+         fhir:Coding.display [ fhir:value "Asian" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Extension.url [ fhir:value "detailed" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "1586-7" ];
+         fhir:Coding.display [ fhir:value "Shoshone" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Extension.url [ fhir:value "detailed" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2036-2" ];
+         fhir:Coding.display [ fhir:value "Filipino" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Extension.url [ fhir:value "text" ];
+       fhir:Extension.valueString [ fhir:value "Mixed" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity" ];
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2135-2" ];
+         fhir:Coding.display [ fhir:value "Hispanic or Latino" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "detailed" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2184-0" ];
+         fhir:Coding.display [ fhir:value "Dominican" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Extension.url [ fhir:value "detailed" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2148-5" ];
+         fhir:Coding.display [ fhir:value "Mexican" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Extension.url [ fhir:value "text" ];
+       fhir:Extension.valueString [ fhir:value "Hispanic or Latino" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex" ];
+     fhir:Extension.valueCode [ fhir:value "F" ]
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "usual" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "MR" ];
+         fhir:Coding.display [ fhir:value "Medical Record Number" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Medical Record Number" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hospital.smarthealthit.org" ];
+     fhir:Identifier.value [ fhir:value "1032702" ]
+  ];
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "Shaw" ];
+     fhir:HumanName.given [
+       fhir:value "Amy";
+       fhir:index 0
+     ], [
+       fhir:value "V.";
+       fhir:index 1
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "555-555-5555" ];
+     fhir:ContactPoint.use [ fhir:value "home" ]
+  ], [
+     fhir:index 1;
+     fhir:ContactPoint.system [ fhir:value "email" ];
+     fhir:ContactPoint.value [ fhir:value "amy.shaw@example.com" ]
+  ];
+  fhir:Patient.gender [ fhir:value "female"];
+  fhir:Patient.birthDate [ fhir:value "2007-02-20"^^xsd:date];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "49 Meadow St";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Mounds" ];
+     fhir:Address.state [ fhir:value "OK" ];
+     fhir:Address.postalCode [ fhir:value "74047" ];
+     fhir:Address.country [ fhir:value "US" ]
+  ] .
+
+<urn:uuid:c470de5b-345c-4945-bc4a-cbdec7d86f54> a fhir:Coverage;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-coverage";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-coverage>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n						<p>\n							<b>Generated Narrative with Details</b>\n						</p>\n						<p>\n							<b>id</b>: admit-discharge-notification-coverage-01</p>\n						<p>\n							<b>meta</b>:\n						</p>\n						<p>\n							<b>identifier</b>: DZW9200000000</p>\n						<p>\n							<b>status</b>: active</p>\n						<p>\n							<b>type</b>: health insurance plan policy\n							<span style=\"background: LightGoldenRodYellow\">(Details : { http://terminology.hl7.org/CodeSystem/v3-ActCode code ' HIP' = 'health insurance plan policy', given as 'health insurance plan policy'})</span>\n						</p>\n						<p>\n							<b>subscriber</b>:\n							<a href=\"urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4\">\n								urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4</a>\n						</p>\n						<p>\n							<b>subscriberId</b>: DZW9200000000</p>\n						<p>\n							<b>beneficiary</b>:\n							<a href=\"urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4\">\n								urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4</a>\n						</p>\n						<p>\n							<b>relationship</b>: Self\n							<span style=\"background: LightGoldenRodYellow\">(Details : { http://terminology.hl7.org/CodeSystem/subscriber-relationship code ' self' = 'Self', given as ' Self'})</span>\n						</p>\n						<p>\n							<b>period</b>: Jan 1, 2016, 12:00:00 AM --&gt; (ongoing)</p>\n						<p>\n							<b>payor</b>: Anthem Blue Cross of California</p>\n						<h3>Classes</h3>\n						<table class=\"grid\">\n							<tr>\n								<td>-</td>\n								<td>\n									<b>Type</b>\n								</td>\n								<td>\n									<b>Value</b>\n								</td>\n								<td>\n									<b>Name</b>\n								</td>\n							</tr>\n							<tr>\n								<td>*</td>\n								<td>Plan\n									<span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'plan' = 'Plan)</span>\n								</td>\n								<td>1FZQ</td>\n								<td>Bronze D HSA</td>\n							</tr>\n						</table>\n					</div>"
+  ];
+  fhir:Coverage.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://www.anthem.com/ca" ];
+     fhir:Identifier.value [ fhir:value "DZW9200000000" ]
+  ];
+  fhir:Coverage.status [ fhir:value "active"];
+  fhir:Coverage.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ];
+       fhir:Coding.code [ fhir:value "HIP" ];
+       fhir:Coding.display [ fhir:value "health insurance plan policy" ]
+     ]
+  ];
+  fhir:Coverage.subscriber [
+     fhir:Reference.reference [ fhir:value "urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4" ]
+  ];
+  fhir:Coverage.subscriberId [ fhir:value "DZW9200000000"];
+  fhir:Coverage.beneficiary [
+     fhir:Reference.reference [ fhir:value "urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4" ]
+  ];
+  fhir:Coverage.relationship [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/subscriber-relationship" ];
+       fhir:Coding.code [ fhir:value "self" ];
+       fhir:Coding.display [ fhir:value "Self" ]
+     ]
+  ];
+  fhir:Coverage.period [
+     fhir:Period.start [ fhir:value "2016-01-01"^^xsd:date ]
+  ];
+  fhir:Coverage.payor [
+     fhir:index 0;
+     fhir:Reference.display [ fhir:value "Anthem Blue Cross of California" ]
+  ];
+  fhir:Coverage.class [
+     fhir:index 0;
+     fhir:Coverage.class.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/coverage-class" ];
+         fhir:Coding.code [ fhir:value "plan" ]
+       ]
+     ];
+     fhir:Coverage.class.value [ fhir:value "1FZQ" ];
+     fhir:Coverage.class.name [ fhir:value "Bronze D HSA" ]
+  ] .
+
+<urn:uuid:54f0ea3f-dc89-4e71-8d98-8774a5add41e> a fhir:Condition;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-condition";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-condition>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n						<p>\n							<b>Generated Narrative with Details</b>\n						</p>\n						<p>\n							<b>id</b>: admit-discharge-notification-condition-01</p>\n						<p>\n							<b>meta</b>:\n						</p>\n						<p>\n							<b>clinicalStatus</b>: Active\n							<span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/condition-clinical code 'active' = 'Active', given as 'Active'})</span>\n						</p>\n						<p>\n							<b>verificationStatus</b>: Confirmed\n							<span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/condition-ver-status code 'confirmed' = 'Confirmed', given as 'Confirmed'})</span>\n						</p>\n						<p>\n							<b>category</b>: Problem\n							<span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/condition-category code 'problem-list-item' = 'Problem List Item', given as 'Problem List Item'})</span>\n						</p>\n						<p>\n							<b>code</b>: Single liveborn, born in hospital\n							<span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '442311008' = 'Liveborn born in hospital', given as 'Liveborn born in hospital'})</span>\n						</p>\n						<p>\n							<b>subject</b>:\n							<a href=\"urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4\">Amy V. Shaw</a>\n						</p>\n						<p>\n							<b>encounter</b>:\n							<a href=\"urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7\">urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7</a>\n						</p>\n						<p>\n							<b>onset</b>: Aug 10, 2016, 12:00:00 AM</p>\n					</div>"
+  ];
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ];
+       fhir:Coding.code [ fhir:value "active" ];
+       fhir:Coding.display [ fhir:value "Active" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Active" ]
+  ];
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ];
+       fhir:Coding.code [ fhir:value "confirmed" ];
+       fhir:Coding.display [ fhir:value "Confirmed" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Confirmed" ]
+  ];
+  fhir:Condition.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-category" ];
+       fhir:Coding.code [ fhir:value "problem-list-item" ];
+       fhir:Coding.display [ fhir:value "Problem List Item" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Problem" ]
+  ];
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:442311008;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "442311008" ];
+       fhir:Coding.display [ fhir:value "Liveborn born in hospital" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Single liveborn, born in hospital" ]
+  ];
+  fhir:Condition.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4" ];
+     fhir:Reference.display [ fhir:value "Amy V. Shaw" ]
+  ];
+  fhir:Condition.encounter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7" ]
+  ];
+  fhir:Condition.onsetDateTime [ fhir:value "2016-08-10"^^xsd:date] .
+
+<urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade> a fhir:Organization;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n						<h1>Organization</h1>\n						<div>\n							<p>ID: 393872</p>\n							<p>Name: Saint Luke's Hospital of Kansas City\n							</p>\n							<p>NPI: 1063494177</p>\n							<p>Phone:(816)932-2000</p>\n							<p>Address:4401 Wornall Rd,, MO, 64111</p>\n						</div>\n					</div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Endpoint;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "direct" ];
+     fhir:Endpoint.status [ fhir:value "active" ];
+     fhir:Endpoint.connectionType [
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/endpoint-connection-type" ];
+       fhir:Coding.code [ fhir:value "direct-project" ]
+     ];
+     fhir:Endpoint.name [ fhir:value "Dr. Ronald Bone Direct Address" ];
+     fhir:Endpoint.managingOrganization [
+       fhir:Reference.reference [ fhir:value "urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade" ]
+     ];
+     fhir:Endpoint.payloadType [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "urn:oid:1.3.6.1.4.1.19376.1.2.3" ];
+         fhir:Coding.code [ fhir:value "urn:hl7-org:sdwg:ccda-structuredBody:1.1" ]
+       ]
+     ];
+     fhir:Endpoint.payloadMimeType [
+       fhir:value "text/xml";
+       fhir:index 0
+     ];
+     fhir:Endpoint.address [ fhir:value "mailto:Interoperability@DirectAddress.com" ]
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://example.org/fhir/sid/us-npi" ];
+     fhir:Identifier.value [ fhir:value "1063494177" ]
+  ], [
+     fhir:index 1;
+     fhir:Identifier.system [ fhir:value "http://example.org/fhir/us/argo/sid/us-ein" ];
+     fhir:Identifier.value [ fhir:value "00-0000000" ]
+  ];
+  fhir:Organization.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Organization.name [ fhir:value "Saint Luke's Hospital of Kansas City"];
+  fhir:Organization.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "(816)932-2000" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ], [
+     fhir:index 1;
+     fhir:ContactPoint.system [ fhir:value "other" ];
+     fhir:ContactPoint.value [ fhir:value "http://www.saintlukeshealthsystem.org/locations/saint-lukes-hospital-kansas-city" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ];
+  fhir:Organization.address [
+     fhir:index 0;
+     fhir:Address.text [ fhir:value "3300 Washtenaw Avenue, Suite 227 Amherst MA 01002" ];
+     fhir:Address.line [
+       fhir:value "4401 Wornall Rd,";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Amherst" ];
+     fhir:Address.state [ fhir:value "MA" ];
+     fhir:Address.postalCode [ fhir:value "64111" ]
+  ];
+  fhir:Organization.endpoint [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "#direct" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-alerts/Bundle/discharge-notification-message-bundle-01.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/davinci-alerts/Bundle/discharge-notification-message-bundle-01.ttl> .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,20 @@
+---
+---
+<!-- get modelType -->
+{% include fragment-modelType.html id='notifications-graphdefinition' %}
+
+{% include fragment-pagebegin.html %}
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-profile-navtabs.html type='StructureDefinition' id='notifications-graphdefinition' active='history' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{modelType}}: NotificationsGraphDefinition - Change History</h2>
+  <p>Changes in the notifications-graphdefinition {{modelType | downcase}}.</p>
+
+  {%include StructureDefinition-notifications-graphdefinition-history.xhtml%}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

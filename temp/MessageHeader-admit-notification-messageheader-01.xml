@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+	<definition value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-admit"/>
+ -->
+<MessageHeader xmlns="http://hl7.org/fhir">
+  <id value="admit-notification-messageheader-01"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: admit-notification-messageheader-01</p><p><b>meta</b>: </p><p><b>event</b>: <span title="{http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event notification-admit}">Notification admit</span></p><h3>Destinations</h3><table class="grid"><tr><td>-</td><td><b>Name</b></td><td><b>Endpoint</b></td></tr><tr><td>*</td><td>Acme Message Gateway</td><td><a href="https://example.org/Endpoints/P123">https://example.org/Endpoints/P123</a></td></tr></table><p><b>sender</b>: <a href="urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade">Saint Luke W Endpoint</a></p><p><b>author</b>: <a href="urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59">Ronald Bone</a></p><h3>Sources</h3><table class="grid"><tr><td>-</td><td><b>Name</b></td><td><b>Software</b></td><td><b>Version</b></td><td><b>Contact</b></td><td><b>Endpoint</b></td></tr><tr><td>*</td><td>Acme Central Patient Registry</td><td>FooBar Patient Manager</td><td>3.1.45.AABB</td><td>ph: +1 (555) 123 4567</td><td><a href="https://example.org/Endpoints/P456">https://example.org/Endpoints/P456</a></td></tr></table><p><b>responsible</b>: <a href="urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade">Saint Luke W Endpoint</a></p><p><b>focus</b>: <a href="urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7">Inpatient Encounter</a></p></div>
+  </text>
+  <eventCoding>
+    <system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"/>
+    <code value="notification-admit"/>
+    <display value="Notification admit"/>
+  </eventCoding>
+  <destination>
+    <name value="Acme Message Gateway"/>
+  <!--  this is to indicate to the Acme Message Gateway that this particular message is intended for Practitioner "xcda"  -->
+    <endpoint value="https://example.org/Endpoints/P123"/>
+  </destination>
+  <sender>
+    <reference value="urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade"/>
+    <display value="Saint Luke W Endpoint"/>
+  </sender>
+<!-- 
+	<enterer>
+		<reference value="http://acme.com/ehr/fhir/Practitioner/example-1"/>
+		<display value="Dr Smith"/>
+	</enterer>
+ -->
+  <author>
+    <reference value="urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59"/>
+    <display value="Ronald Bone"/>
+  </author>
+  <source>
+    <name value="Acme Central Patient Registry"/>
+    <software value="FooBar Patient Manager"/>
+    <version value="3.1.45.AABB"/>
+    <contact>
+      <system value="phone"/>
+      <value value="+1 (555) 123 4567"/>
+    </contact>
+    <endpoint value="https://example.org/Endpoints/P456"/>
+  </source>
+  <responsible>
+    <reference value="urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade"/>
+    <display value="Saint Luke W Endpoint"/>
+  </responsible>
+<!--  Here's the payload, the resource that this notification concerns  -->
+  <focus>
+    <reference value="urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7"/>
+    <display value="Inpatient Encounter"/>
+  </focus>
+</MessageHeader>

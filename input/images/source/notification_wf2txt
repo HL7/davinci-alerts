@@ -1,0 +1,18 @@
+#text for https://sequencediagram.org/
+# add viewbox attribute to svg file for img sizing
+
+title Additional Intermediary Steps
+
+title Additional Intermediary Steps
+
+participant Intermediary
+
+participant Receiver A
+participant Receiver B
+participant Receiver C
+
+note over Intermediary: 3) Process notification
+
+Intermediary -> Receiver A:4) forwards notification
+Intermediary -> Receiver B:4) forwards notification
+Intermediary -> Receiver C:4) forwards notification

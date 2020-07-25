@@ -1,0 +1,61 @@
+﻿<html>
+<head>
+  <title>MessageHeader-discharge-notification-messageheader-01-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader">resourceType</a>" : "MessageHeader",
+  "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.id">id</a>" : "discharge-notification-messageheader-01",
+  "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: discharge-notification-messageheader-01&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;event&lt;/b&gt;: &lt;span title=\&quot;{http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event notification-discharge}\&quot;&gt;Notification Discharge&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;Destinations&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Endpoint&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Acme Message Gateway&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;https://example.org/Endpoints/P123\&quot;&gt;https://example.org/Endpoints/P123&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;sender&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade\&quot;&gt;Saint Luke W Endpoint&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59\&quot;&gt;Ronald Bone&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Sources&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Software&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Version&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Contact&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Endpoint&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Acme Central Patient Registry&lt;/td&gt;&lt;td&gt;FooBar Patient Manager&lt;/td&gt;&lt;td&gt;3.1.45.AABB&lt;/td&gt;&lt;td&gt;ph: +1 (555) 123 4567&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;https://example.org/Endpoints/P456\&quot;&gt;https://example.org/Endpoints/P456&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;responsible&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade\&quot;&gt;Saint Luke W Endpoint&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7\&quot;&gt;Inpatient Encounter&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.event[x]">eventCoding</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "notification-discharge",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Notification Discharge"
+  },
+  "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.destination">destination</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.destination.name">name</a>" : "Acme Message Gateway",
+      "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.destination.endpoint">endpoint</a>" : "https://example.org/Endpoints/P123"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.sender">sender</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade",
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Saint Luke W Endpoint"
+  },
+  "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.author">author</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59",
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Ronald Bone"
+  },
+  "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.source">source</a>" : {
+    "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.source.name">name</a>" : "Acme Central Patient Registry",
+    "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.source.software">software</a>" : "FooBar Patient Manager",
+    "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.source.version">version</a>" : "3.1.45.AABB",
+    "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.source.contact">contact</a>" : {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "+1 (555) 123 4567"
+    },
+    "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.source.endpoint">endpoint</a>" : "https://example.org/Endpoints/P456"
+  },
+  "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.responsible">responsible</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade",
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Saint Luke W Endpoint"
+  },
+  "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.focus">focus</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7",
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Inpatient Encounter"
+    }
+  ]
+}</pre>
+</body>
+</html>

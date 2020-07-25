@@ -1,0 +1,2 @@
+I"�<p>The Da Vinci Discharge Notification MessageHeader Profile  builds on  the [Da Vinci Notifications MessageHeader Profile] and sets  minimum expectations for the FHIR [MessageHeader] resource to record the necessary context for Da Vinci discharge notification messaging scenario.  The event code is “notification-discharge” and the focus of the event is the [US Core Encounter Profile].</p>
+:ET

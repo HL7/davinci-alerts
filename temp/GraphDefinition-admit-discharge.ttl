@@ -1,0 +1,258 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/admit-discharge> a fhir:GraphDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "admit-discharge"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-graphdefinition";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-graphdefinition>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			<p>\n				<b>Generated Narrative with Details</b>\n			</p>\n			<p>\n				<b>id</b>: admit-discharge</p>\n			<p>\n				<b>url</b>:\n				<a href=\"http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/admit-discharge\">http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/admit-discharge</a>\n			</p>\n			<p>\n				<b>version</b>: 0.1.0</p>\n			<p>\n				<b>name</b>: NotificationAdmitDischarge</p>\n			<p>\n				<b>status</b>: active</p>\n			<p>\n				<b>date</b>: Aug 21, 2019, 12:00:00 AM</p>\n			<p>\n				<b>publisher</b>: Da Vinci Project</p>\n			<p>\n				<b>contact</b>:\n			</p>\n			<p>\n				<b>description</b>: Defines message bundle graph for Da Vinci Notifications patient admission and discharge notification scenarios</p>\n			<p>\n				<b>jurisdiction</b>: United States of America\n				<span style=\"background: LightGoldenRodYellow\">(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United States of America'})</span>\n			</p>\n			<p>\n				<b>start</b>: MessageHeader</p>\n			<p>\n				<b>profile</b>:\n				<a href=\"http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader\">http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader</a>\n			</p>\n			<p>\n				<b>Links</b>:\n							</p>\n				<table class=\"grid\">\n					<thead>\n						<tr>\n							<th>Link</th>\n							<th>Source Profile</th>\n							<th>Path</th>\n							<th>Target Profile</th>\n							<th>Min</th>\n							<th>Max</th>\n							<th>Must Support</th>\n						</tr>\n					</thead>\n					<tbody>\n						<tr>\n							<td>1</td>\n							<td>Da Vinci Notification MessageHeader Profile</td>\n							<td>MessageHeader.focus</td>\n							<td>US Core Encounter Profile</td>\n							<td>1</td>\n							<td>1</td>\n							<td>true</td>\n						</tr>\n						<tr>\n							<td>2</td>\n							<td>US Core Encounter Profile</td>\n							<td>Encounter.location</td>\n							<td>US Core Location Profile</td>\n							<td>1</td>\n							<td>*</td>\n							<td>true</td>\n						</tr>\n						<tr>\n							<td>3</td>\n							<td>US Core Encounter Profile</td>\n							<td>Encounter.participant.individual</td>\n							<td>US Core Practitioner Profile</td>\n							<td>0</td>\n							<td>*</td>\n							<td>true</td>\n						</tr>\n						<tr>\n							<td>4</td>\n							<td>US Core Encounter Profile</td>\n							<td>Encounter.subject</td>\n							<td>US Core Patient Profile</td>\n							<td>1</td>\n							<td>1</td>\n							<td>true</td>\n						</tr>\n						<tr>\n							<td>5</td>\n							<td>Da Vinci HRex Coverage Profile</td>\n							<td>Coverage.beneficary</td>\n							<td>US Core Patient Profile</td>\n							<td>0</td>\n							<td>1</td>\n							<td>true</td>\n						</tr>\n						<tr>\n							<td>6</td>\n							<td>US Core Condition Profile</td>\n							<td>Condition.encounter</td>\n							<td>US Core Encounter Profile</td>\n							<td>0</td>\n							<td>*</td>\n							<td>true</td>\n						</tr>\n						<tr>\n							<td>7</td>\n							<td>Da Vinci Notification MessageHeader Profile</td>\n							<td>MessageHeader.sender</td>\n							<td>US Core Practitioner Profile|US Core PractitionerRole Profile|US Core Organization Profile</td>\n							<td>0</td>\n							<td>1</td>\n							<td>true</td>\n						</tr>\n						<tr>\n							<td>8</td>\n							<td>Da Vinci Notification MessageHeader Profile</td>\n							<td>MessageHeader.responsible</td>\n							<td>US Core Practitioner Profile|US Core PractitionerRole Profile|US Core Organization Profile</td>\n							<td>0</td>\n							<td>1</td>\n							<td>true</td>\n						</tr>\n						<tr>\n							<td>9</td>\n							<td>Da Vinci Notification MessageHeader Profile</td>\n							<td>MessageHeader.author</td>\n							<td>US Core Practitioner Profile|US Core PractitionerRole Profile</td>\n							<td>0</td>\n							<td>1</td>\n							<td>true</td>\n						</tr>\n					</tbody>\n				</table>\n\n		</div>"
+  ];
+  fhir:GraphDefinition.url [ fhir:value "http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/admit-discharge"];
+  fhir:GraphDefinition.version [ fhir:value "1.0.0"];
+  fhir:GraphDefinition.name [ fhir:value "NotificationAdmitDischarge"];
+  fhir:GraphDefinition.status [ fhir:value "active"];
+  fhir:GraphDefinition.date [ fhir:value "2019-08-21"^^xsd:date];
+  fhir:GraphDefinition.publisher [ fhir:value "HL7 International - Infrastructure and Messaging Work Group"];
+  fhir:GraphDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/inm/index.cfm" ]
+     ]
+  ];
+  fhir:GraphDefinition.description [ fhir:value "Defines message bundle graph for Da Vinci Notifications patient admission and discharge notification scenarios"];
+  fhir:GraphDefinition.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ]
+     ]
+  ];
+  fhir:GraphDefinition.start [ fhir:value "MessageHeader"];
+  fhir:GraphDefinition.profile [
+     fhir:value "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader";
+     fhir:link <http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader>
+  ];
+  fhir:GraphDefinition.link [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-mustSupport" ];
+       fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+     ];
+     fhir:GraphDefinition.link.path [ fhir:value "MessageHeader.focus" ];
+     fhir:GraphDefinition.link.min [ fhir:value "1"^^xsd:integer ];
+     fhir:GraphDefinition.link.max [ fhir:value "1" ];
+     fhir:GraphDefinition.link.target [
+       fhir:index 0;
+       fhir:GraphDefinition.link.target.type [ fhir:value "Encounter" ];
+       fhir:GraphDefinition.link.target.profile [
+         fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter";
+         fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter>
+       ];
+       fhir:GraphDefinition.link.target.link [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-mustSupport" ];
+           fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+         ];
+         fhir:GraphDefinition.link.path [ fhir:value "Encounter.location" ];
+         fhir:GraphDefinition.link.min [ fhir:value "1"^^xsd:integer ];
+         fhir:GraphDefinition.link.max [ fhir:value "*" ];
+         fhir:GraphDefinition.link.target [
+           fhir:index 0;
+           fhir:GraphDefinition.link.target.type [ fhir:value "Location" ];
+           fhir:GraphDefinition.link.target.profile [
+             fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location";
+             fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-location>
+           ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-mustSupport" ];
+           fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+         ];
+         fhir:GraphDefinition.link.path [ fhir:value "Encounter.participant.individual" ];
+         fhir:GraphDefinition.link.min [ fhir:value "0"^^xsd:integer ];
+         fhir:GraphDefinition.link.max [ fhir:value "*" ];
+         fhir:GraphDefinition.link.target [
+           fhir:index 0;
+           fhir:GraphDefinition.link.target.type [ fhir:value "Practitioner" ];
+           fhir:GraphDefinition.link.target.profile [
+             fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner";
+             fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner>
+           ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-mustSupport" ];
+           fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+         ];
+         fhir:GraphDefinition.link.path [ fhir:value "Encounter.subject" ];
+         fhir:GraphDefinition.link.min [ fhir:value "1"^^xsd:integer ];
+         fhir:GraphDefinition.link.max [ fhir:value "1" ];
+         fhir:GraphDefinition.link.target [
+           fhir:index 0;
+           fhir:GraphDefinition.link.target.type [ fhir:value "Patient" ];
+           fhir:GraphDefinition.link.target.profile [
+             fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient";
+             fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient>
+           ];
+           fhir:GraphDefinition.link.target.link [
+             fhir:index 0;
+             fhir:Element.extension [
+               fhir:index 0;
+               fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-mustSupport" ];
+               fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+             ];
+             fhir:GraphDefinition.link.min [ fhir:value "0"^^xsd:integer ];
+             fhir:GraphDefinition.link.max [ fhir:value "1" ];
+             fhir:GraphDefinition.link.target [
+               fhir:index 0;
+               fhir:GraphDefinition.link.target.type [ fhir:value "Coverage" ];
+               fhir:GraphDefinition.link.target.params [ fhir:value "beneficiary={ref}" ];
+               fhir:GraphDefinition.link.target.profile [
+                 fhir:value "http://hl7.org/fhir/us/davinci-hrex/StructureDefinition/hrex-coverage";
+                 fhir:link <http://hl7.org/fhir/us/davinci-hrex/StructureDefinition/hrex-coverage>
+               ]
+             ]
+           ]
+         ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-mustSupport" ];
+           fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+         ];
+         fhir:GraphDefinition.link.min [ fhir:value "0"^^xsd:integer ];
+         fhir:GraphDefinition.link.max [ fhir:value "*" ];
+         fhir:GraphDefinition.link.target [
+           fhir:index 0;
+           fhir:GraphDefinition.link.target.type [ fhir:value "Condition" ];
+           fhir:GraphDefinition.link.target.params [ fhir:value "encounter={ref}" ];
+           fhir:GraphDefinition.link.target.profile [
+             fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition";
+             fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition>
+           ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-mustSupport" ];
+       fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+     ];
+     fhir:GraphDefinition.link.path [ fhir:value "MessageHeader.sender" ];
+     fhir:GraphDefinition.link.min [ fhir:value "0"^^xsd:integer ];
+     fhir:GraphDefinition.link.max [ fhir:value "1" ];
+     fhir:GraphDefinition.link.target [
+       fhir:index 0;
+       fhir:GraphDefinition.link.target.type [ fhir:value "Organization" ];
+       fhir:GraphDefinition.link.target.profile [
+         fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization";
+         fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization>
+       ]
+     ], [
+       fhir:index 1;
+       fhir:GraphDefinition.link.target.type [ fhir:value "Practitioner" ];
+       fhir:GraphDefinition.link.target.profile [
+         fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner";
+         fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner>
+       ]
+     ], [
+       fhir:index 2;
+       fhir:GraphDefinition.link.target.type [ fhir:value "PractitionerRole" ];
+       fhir:GraphDefinition.link.target.profile [
+         fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole";
+         fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole>
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-mustSupport" ];
+       fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+     ];
+     fhir:GraphDefinition.link.path [ fhir:value "MessageHeader.responsible" ];
+     fhir:GraphDefinition.link.min [ fhir:value "0"^^xsd:integer ];
+     fhir:GraphDefinition.link.max [ fhir:value "1" ];
+     fhir:GraphDefinition.link.target [
+       fhir:index 0;
+       fhir:GraphDefinition.link.target.type [ fhir:value "Organization" ];
+       fhir:GraphDefinition.link.target.profile [
+         fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization";
+         fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization>
+       ]
+     ], [
+       fhir:index 1;
+       fhir:GraphDefinition.link.target.type [ fhir:value "Practitioner" ];
+       fhir:GraphDefinition.link.target.profile [
+         fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner";
+         fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner>
+       ]
+     ], [
+       fhir:index 2;
+       fhir:GraphDefinition.link.target.type [ fhir:value "PractitionerRole" ];
+       fhir:GraphDefinition.link.target.profile [
+         fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole";
+         fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole>
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-mustSupport" ];
+       fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+     ];
+     fhir:GraphDefinition.link.path [ fhir:value "MessageHeader.author" ];
+     fhir:GraphDefinition.link.min [ fhir:value "0"^^xsd:integer ];
+     fhir:GraphDefinition.link.max [ fhir:value "1" ];
+     fhir:GraphDefinition.link.target [
+       fhir:index 0;
+       fhir:GraphDefinition.link.target.type [ fhir:value "Practitioner" ];
+       fhir:GraphDefinition.link.target.profile [
+         fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner";
+         fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner>
+       ]
+     ], [
+       fhir:index 1;
+       fhir:GraphDefinition.link.target.type [ fhir:value "PractitionerRole" ];
+       fhir:GraphDefinition.link.target.profile [
+         fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole";
+         fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole>
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/admit-discharge.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/davinci-alerts/GraphDefinition/admit-discharge.ttl> .
+
+# -------------------------------------------------------------------------------------
+

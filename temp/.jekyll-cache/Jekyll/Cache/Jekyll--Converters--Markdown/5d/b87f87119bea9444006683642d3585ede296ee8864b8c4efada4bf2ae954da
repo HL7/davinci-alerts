@@ -1,0 +1,46 @@
+I"2<p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+
+<p>There are 4 Capability Statements defined to describe the expectations for this implementation guide:</p>
+
+<li><a href="CapabilityStatement-notification-sender.html">Notification Sender CapabilityStatement</a></li>
+<li><a href="CapabilityStatement-query-responder.html">Query Responder CapabilityStatement</a></li>
+<li><a href="CapabilityStatement-notification-receiver.html">Notification Receiver CapabilityStatement</a></li>
+<li><a href="CapabilityStatement-query-requester.html">Query Requester CapabilityStatement</a></li>
+
+<p><br /></p>
+
+<h3 id="the-following-table-summarizes-how-these-capabilitystatements-applies-to-the-da-vinci-notification-actors">The following table summarizes how these CapabilityStatements applies to the Da Vinci Notification Actors</h3>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Actor</th>
+      <th>server-mode</th>
+      <th>client-mode</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sender</td>
+      <td>Da Vinci Query Responder</td>
+      <td>Da Vinci Notification Sender</td>
+    </tr>
+    <tr>
+      <td>Intermediary</td>
+      <td>Da Vinci Notification Receiver,Da Vinci Query Responder</td>
+      <td>Da Vinci QueryRequester, Da Vinci Notification Sender</td>
+    </tr>
+    <tr>
+      <td>Recipient</td>
+      <td>Da Vinci Notification Receiver</td>
+      <td>Da Vinci Query Requester</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+:ET

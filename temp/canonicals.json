@@ -1,0 +1,156 @@
+[
+  {
+    "id": "notification-event",
+    "type": "CodeSystem",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event",
+    "version": "1.0.0",
+    "name": "NotificationEventCodeSystem"
+  },
+  {
+    "id": "admit-discharge",
+    "type": "GraphDefinition",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/admit-discharge",
+    "version": "1.0.0",
+    "name": "NotificationAdmitDischarge"
+  },
+  {
+    "id": "hl7.fhir.us.davinci-alerts",
+    "type": "ImplementationGuide",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts",
+    "version": "1.0.0",
+    "name": "DaVinciUnsolicitedNotifications"
+  },
+  {
+    "id": "notification-admit",
+    "type": "MessageDefinition",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-admit",
+    "version": "1.0.0",
+    "name": "NotificationAdmit"
+  },
+  {
+    "id": "notification-discharge",
+    "type": "MessageDefinition",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-discharge",
+    "version": "1.0.0",
+    "name": "NotificationDischarge"
+  },
+  {
+    "id": "admit-discharge-notification-condition",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-condition",
+    "version": "1.0.0",
+    "name": "AdmitDischargeNotificationConditionProfile"
+  },
+  {
+    "id": "admit-discharge-notification-coverage",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-coverage",
+    "version": "1.0.0",
+    "name": "AdmitDischargeNotificationCoverageProfile"
+  },
+  {
+    "id": "admit-discharge-notification-encounter",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-encounter",
+    "version": "1.0.0",
+    "name": "AdmitDischargeNotificationEncounterProfile"
+  },
+  {
+    "id": "admit-notification-messageheader",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader",
+    "version": "1.0.0",
+    "name": "AdmitNotificationMessageHeader"
+  },
+  {
+    "id": "discharge-notification-messageheader",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader",
+    "version": "1.0.0",
+    "name": "DischargeNotificationMessageHeader"
+  },
+  {
+    "id": "extension-mustSupport",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-mustSupport",
+    "version": "1.0.0",
+    "name": "MustSupportExtension"
+  },
+  {
+    "id": "notifications-bundle",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
+    "version": "1.0.0",
+    "name": "NotificationsBundle"
+  },
+  {
+    "id": "notifications-graphdefinition",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-graphdefinition",
+    "version": "1.0.0",
+    "name": "NotificationsGraphDefinition"
+  },
+  {
+    "id": "notifications-messagedefinition",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messagedefinition",
+    "version": "1.0.0",
+    "name": "NotificationsMessageDefinition"
+  },
+  {
+    "id": "notifications-messageheader",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader",
+    "version": "1.0.0",
+    "name": "NotificationsMessageHeader"
+  },
+  {
+    "id": "notification-admit-event",
+    "type": "ValueSet",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/ValueSet/notification-admit-event",
+    "version": "1.0.0",
+    "name": "NotificationadmitEventValueSet"
+  },
+  {
+    "id": "notification-discharge-event",
+    "type": "ValueSet",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/ValueSet/notification-discharge-event",
+    "version": "1.0.0",
+    "name": "NotificationdischargeEventValueSet"
+  },
+  {
+    "id": "notification-event",
+    "type": "ValueSet",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/ValueSet/notification-event",
+    "version": "1.0.0",
+    "name": "NotificationEventValueSet"
+  },
+  {
+    "id": "notification-receiver",
+    "type": "CapabilityStatement",
+    "url": "http://hl7.org/fhir/us/davinci-notifications/CapabilityStatement/notification-receiver",
+    "version": "1.0.0",
+    "name": "NotificationReceiverCapabilityStatement"
+  },
+  {
+    "id": "notification-sender",
+    "type": "CapabilityStatement",
+    "url": "http://hl7.org/fhir/us/davinci-notifications/CapabilityStatement/notification-sender",
+    "version": "1.0.0",
+    "name": "NotificationSenderCapabilityStatement"
+  },
+  {
+    "id": "query-requester",
+    "type": "CapabilityStatement",
+    "url": "http://hl7.org/fhir/us/davinci-notifications/CapabilityStatement/query-requester",
+    "version": "1.0.0",
+    "name": "QueryRequesterCapabilityStatement"
+  },
+  {
+    "id": "query-responder",
+    "type": "CapabilityStatement",
+    "url": "http://hl7.org/fhir/us/davinci-notifications/CapabilityStatement/query-responder",
+    "version": "1.0.0",
+    "name": "QueryResponderCapabilityStatement"
+  }
+]

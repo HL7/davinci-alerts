@@ -1,0 +1,21 @@
+I"�
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements are mandatory (i.e., data MUST be present) or must be supported if the data is present in the sending system (<a href="guidance.html#must-support">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each  must have:</strong></p>
+
+<ol>
+  <li>An event code of “notification-admit”</li>
+  <li>A reference to US Core Encounter Profile for the event focus which will be bundled in the message</li>
+</ol>
+
+<h3 id="examples">Examples</h3>
+
+<p class="highlight-note">The following examples of this profile are freestanding resource instances. Note that these are technically invalid since the profile is defined to references other resources within the same Da Vinci Notification Message Bundle.  A complete list of examples including bundle examples can be found on the <a href="all-examples.html">Examples</a> page.</p>
+
+<ul>
+  <li><a href="--01.html"> Example</a></li>
+</ul>
+
+:ET

@@ -1,0 +1,48 @@
+I"e<p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+
+<p>In order to be responsible stewards of data, we will need to follow the data governance laws around sensitive conditions. Sensitive conditions are defined to support masking of clinical data that protects consumer’s privacy and are subject to special disclosure rules which govern the distribution of data to external parties.</p>
+
+<p><del>
+<a href="http://hl7.org/fhir/R4/secpriv-module.html#6.0">The FHIR Security and Privacy Module</a> describes how to protect a patient’s privacy through de-Identification, pseudonymization, and and/or anonymization. FHIR does not mandate a single technical approach to security and privacy; rather, the specification provides a set of building blocks that can be applied to create secure, private systems.
+</del></p>
+
+<p><a href="http://hl7.org/fhir/R4/secpriv-module.html#6.0">The FHIR Security and Privacy Module</a> describes how to protect a patient’s privacy through de-Identification, pseudonymization, and and/or anonymization.  For FHIR RESTful transactions the defacto security layer is SMART’s profile of OAuth2:</p>
+
+<ul>
+  <li><a href="http://www.hl7.org/fhir/smart-app-launch/">SMART Application Launch Framework Implementation Guide Release 1.0.0</a></li>
+  <li><a href="https://hl7.org/fhir/uv/bulkdata/">FHIR Bulk Data Access (Flat FHIR)</a> (specifically: SMART Backend Services: Authorization Guide)</li>
+</ul>
+
+<div class="stu-note">
+  <p>There are several ongoing initiatives to address various security and privacy issues including:</p>
+
+  <ul>
+    <li><a href="https://www.hl7.org/special/Committees/projman/searchableProjectIndex.cfm?action=edit&amp;ProjectNumber=1549">FHIR Data Segmentation for Privacy project</a></li>
+    <li><a href="https://oncprojectracking.healthit.gov/wiki/pages/viewpage.action?pageId=43614268">FHIR at Scale Taskforce (FAST)</a></li>
+    <li><a href="http://www.udap.org/udap-dynamic-client-registration.html">Dynamic Registration for SMART Apps</a></li>
+  </ul>
+
+  <p>Once a suitable approach has been agreed upon and published, it will be referenced in a future version of this guide.</p>
+</div>
+
+<div class="note-to-balloters strike">
+
+  <p>The DaVinci project is actively seeking input on security approaches and expectations for authentication and authorization between Senders and Receivers of sensitive patient data (e.g., will TLS, mutual-TLS, OAuth, etc. be required to interoperate?).  There are several implementation guides and ongoing initiatives to address these issues including:</p>
+
+  <ul>
+    <li><a href="https://www.hl7.org/special/Committees/projman/searchableProjectIndex.cfm?action=edit&amp;ProjectNumber=1549">FHIR Data Segmentation for Privacy project</a>
+Services: Authorization Guide)</li>
+    <li><a href="http://www.hl7.org/fhir/smart-app-launch/">SMART Application Launch Framework Implementation Guide Release 1.0.0</a></li>
+    <li><a href="https://hl7.org/fhir/uv/bulkdata/">FHIR Bulk Data Access (Flat FHIR)</a> (specifically: SMART Backend Services: Authorization Guide)</li>
+    <li><a href="https://oncprojectracking.healthit.gov/wiki/pages/viewpage.action?pageId=43614268">FHIR at Scale Taskforce (FAST)</a></li>
+    <li><a href="http://www.udap.org/udap-dynamic-client-registration.html">Dynamic Registration for SMART Apps</a></li>
+  </ul>
+
+  <p>Once an approach has been agreed upon, it will be documented in the the <a href="http://hl7.org/fhir/us/davinci-hrex/history.html">Da Vinci Health Record Exchange (HRex) Implementation Guide</a>.</p>
+
+</div>
+
+:ET

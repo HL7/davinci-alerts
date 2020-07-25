@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-alerts/CapabilityStatement/query-requester> a fhir:CapabilityStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "query-requester"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">Query Requester CapabilityStatement</h2><ul><li>Implementation Guide Version: 0.1.0</li><li>FHIR Version: 4.0.0</li><li>Supported formats: xml, json</li><li>Published: 2020-02-19</li><li>Published by: HL7 International - Infrastructure and Messaging Work Group</li></ul><p><p>This CapabilityStatement describes the expected capabilities of a client that is capable of responding a Da Vinci Notification with a  follow up FHIR RESTful query to the Sender.  These expectations are the same as described in the <em>HL7 FHIR® US Core Implementation Guide STU3 Release 3.1.0</em> <a href=\"http://hl7.org/fhir/us/core/STU3.1/CapabilityStatement-us-core-client.html\">CapabiltyStatement for the US Core Client</a></p></p><h3 id=\"igs\" class=\"no_toc\">SHALL Support the Following Implementation Guides:</h3><ul><li><a href=\"http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.0\">http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.0</a></li></ul><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>Refer to the  <em>HL7 FHIR® US Core Implementation Guide STU3 Release 3.1.0</em> CapabiltyStatement for the US Core Client</p><br/></div>"
+  ];
+  fhir:CapabilityStatement.url [ fhir:value "http://hl7.org/fhir/us/davinci-notifications/CapabilityStatement/query-requester"];
+  fhir:CapabilityStatement.version [ fhir:value "1.0.0"];
+  fhir:CapabilityStatement.name [ fhir:value "QueryRequesterCapabilityStatement"];
+  fhir:CapabilityStatement.title [ fhir:value "Query Requester CapabilityStatement"];
+  fhir:CapabilityStatement.status [ fhir:value "active"];
+  fhir:CapabilityStatement.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:CapabilityStatement.date [ fhir:value "2020-02-19"^^xsd:date];
+  fhir:CapabilityStatement.publisher [ fhir:value "HL7 International - Infrastructure and Messaging Work Group"];
+  fhir:CapabilityStatement.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/inm/index.cfm" ]
+     ]
+  ];
+  fhir:CapabilityStatement.description [ fhir:value "This CapabilityStatement describes the expected capabilities of a client that is capable of responding a Da Vinci Notification with a  follow up FHIR RESTful query to the Sender.  These expectations are the same as described in the *HL7 FHIR® US Core Implementation Guide STU3 Release 3.1.0* [CapabiltyStatement for the US Core Client](http://hl7.org/fhir/us/core/STU3.1/CapabilityStatement-us-core-client.html)"];
+  fhir:CapabilityStatement.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ]
+     ]
+  ];
+  fhir:CapabilityStatement.kind [ fhir:value "requirements"];
+  fhir:CapabilityStatement.fhirVersion [ fhir:value "4.0.0"];
+  fhir:CapabilityStatement.format [
+     fhir:value "xml";
+     fhir:index 0
+  ], [
+     fhir:value "json";
+     fhir:index 1
+  ];
+  fhir:CapabilityStatement.patchFormat [
+     fhir:value "application/json-patch+json";
+     fhir:index 0
+  ];
+  fhir:CapabilityStatement.implementationGuide [
+     fhir:value "http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts|0.1.0";
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts|0.1.0>
+  ], [
+     fhir:value "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.0";
+     fhir:index 1;
+     fhir:link <http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.0>
+  ];
+  fhir:CapabilityStatement.rest [
+     fhir:index 0;
+     fhir:CapabilityStatement.rest.mode [ fhir:value "server" ];
+     fhir:CapabilityStatement.rest.documentation [ fhir:value "Refer to the  *HL7 FHIR® US Core Implementation Guide STU3 Release 3.1.0* CapabiltyStatement for the US Core Client" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-alerts/CapabilityStatement/query-requester.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/davinci-alerts/CapabilityStatement/query-requester.ttl> .
+
+# -------------------------------------------------------------------------------------
+
