@@ -1,2 +1,0 @@
-I"W<p>The Da Vinci Notifications GraphDefinition Profile adds the capability to set “mustSupport” expectectations for  links in the FHIR [GraphDefinition] resource to define usage conformance in an implementation specific manner. This extension is used in the similar way as the [ElementDefinition.mustSupport] in the FHIR specification.</p>
-:ET

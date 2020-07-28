@@ -7,8 +7,10 @@ The following Profiles for FHIR *resources* have been defined for this implement
 
 - [Da Vinci Notifications MessageHeader Profile]
 - [Da Vinci Notifications Bundle Profile]
+<!--
 - [Da Vinci Notifications MessageDefinition Profile]
 - [Da Vinci Notifications GraphDefinition Profile]
+-->
 
 **Da Vinci Admission/Discharge Notification Profiles**
 

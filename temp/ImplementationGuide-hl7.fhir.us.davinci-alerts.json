@@ -28,7 +28,7 @@
   "name": "DaVinciUnsolicitedNotifications",
   "title": "Da Vinci Unsolicited Notifications",
   "status": "draft",
-  "date": "2020-07-24T20:08:57-07:00",
+  "date": "2020-07-27T20:37:12-07:00",
   "publisher": "HL7 International - Infrastructure and Messaging Work Group",
   "contact": [
     {
@@ -632,23 +632,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "MessageDefinition"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "MessageDefinition-notification-admit.html"
-          }
-        ],
-        "reference": {
-          "reference": "MessageDefinition/notification-admit"
-        },
-        "name": "Da Vinci Notification Admit Message Definition",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "CapabilityStatement"
           },
           {
@@ -679,58 +662,6 @@
         },
         "name": "Da Vinci Admit/Discharge Notification Condition Profile",
         "description": "The Da Vinci Admit Notification Condition Profile is based on the [US Core Condition Profile] and adds the mandatory `Condition.encounter` element which references the [US Core Encounter Profile] in the same message Bundle.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-extension-mustSupport.html"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/extension-mustSupport"
-        },
-        "name": "Da Vinci Notifications Must Support Extension",
-        "description": "If \"true\", implementations that produce or consume a resource defined by the GraphDefinition SHALL provide support for the link in some context dependent meaningful way. If \"false\", the link may be ignored and not supported and the whether to populate or use in any way is at the discretion of the implementation. If the extension is missing the link is assumed to be mustSupport = \"false\".  It **SHALL** be made clear through additional documentation exactly what kind of support is required, as this can mean many things depending on the use case.\n\nNote that this extension is analogous to the [ElementDefinition.mustSupport] in the FHIR specification.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "GraphDefinition"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "GraphDefinition-admit-discharge.html"
-          }
-        ],
-        "reference": {
-          "reference": "GraphDefinition/admit-discharge"
-        },
-        "description": "Defines message bundle graph for Da Vinci Notifications patient admission and discharge notification scenarios",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "MessageDefinition"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "MessageDefinition-notification-discharge.html"
-          }
-        ],
-        "reference": {
-          "reference": "MessageDefinition/notification-discharge"
-        },
-        "name": "Da Vinci Notification Discharge Message Definition",
         "exampleBoolean": false
       },
       {
@@ -957,24 +888,6 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-notifications-messagedefinition.html"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/notifications-messagedefinition"
-        },
-        "name": "Da Vinci Notifications MessageDefinition Profile",
-        "description": "The Da Vinci Notifications MessageDefinition Profile sets minimum expectations for the FHIR [MessageDefinition] resource to define the characteristics of a message that can be shared between systems for Da Vinci notification messaging.  It includes the type of event that initiates the message and the content to be transmitted as well as other metadata information related to the definition.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
             "valueUri": "StructureDefinition-notifications-messageheader.html"
           }
         ],
@@ -984,23 +897,6 @@
         "name": "Da Vinci Notifications MessageHeader Profile",
         "description": "The Da Vinci Notifications MessageHeader Profile sets minimum expectations for the FHIR [MessageHeader] resource to record the necessary context for Da Vinci notification messaging using FHIR resources.  It references the focus of the use case event or request as well as other information related to the action typically transmitted in a [Bundle] resource in which the MessageHeader resource instance is the first resource in the Bundle.",
         "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-notifications-graphdefinition.html"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/notifications-graphdefinition"
-        },
-        "name": "Da Vinci Notifications GraphDefinition Profile",
-        "description": "The Da Vinci Notifications GraphDefinition Profile adds the capability to set \"mustSupport\" expectectations for  links in the FHIR [GraphDefinition] resource to define usage conformance in an implementation specific manner. This extension is used in the similar way as the [ElementDefinition.mustSupport] in the FHIR specification."
       }
     ],
     "page": {
@@ -1029,11 +925,6 @@
               "generation": "generated"
             },
             {
-              "nameUrl": "StructureDefinition-notifications-graphdefinition.html",
-              "title": "StructureDefinition Notifications GraphDefinition",
-              "generation": "generated"
-            },
-            {
               "nameUrl": "StructureDefinition-admit-discharge-notification-encounter.html",
               "title": "StructureDefinition Admit Discharge Notification Encounter",
               "generation": "generated"
@@ -1059,35 +950,8 @@
               "generation": "generated"
             },
             {
-              "nameUrl": "StructureDefinition-notifications-messagedefinition.html",
-              "title": "StructureDefinition Notifications MessageDefinition",
-              "generation": "generated"
-            },
-            {
               "nameUrl": "StructureDefinition-notifications-messageheader.html",
               "title": "StructureDefinition Notifications MessageHeader",
-              "generation": "generated"
-            }
-          ]
-        },
-        {
-          "nameUrl": "bundles.html",
-          "title": "Bundle Definitions",
-          "generation": "markdown",
-          "page": [
-            {
-              "nameUrl": "MessageDefinition-notification-admit.html",
-              "title": "MessageDefinition Notification Admit",
-              "generation": "generated"
-            },
-            {
-              "nameUrl": "MessageDefinition-notification-discharge.html",
-              "title": "MessageDefinition Notification Discharge",
-              "generation": "generated"
-            },
-            {
-              "nameUrl": "GraphDefinition-admit-discharge.html",
-              "title": "GraphDefinition Admit Discharge",
               "generation": "generated"
             }
           ]

@@ -35,24 +35,12 @@
    <artifact name="Admit Discharge Notification Condition 01"
              key="Condition-admit-discharge-notification-condition-01"
              id="Condition/admit-discharge-notification-condition-01"/>
-   <artifact name="Da Vinci Notification Admit Message Definition"
-             key="MessageDefinition-notification-admit"
-             id="MessageDefinition/notification-admit"/>
    <artifact name="Notification Sender CapabilityStatement"
              key="CapabilityStatement-notification-sender"
              id="CapabilityStatement/notification-sender"/>
    <artifact name="Da Vinci Admit/Discharge Notification Condition Profile"
              key="StructureDefinition-admit-discharge-notification-condition"
              id="StructureDefinition/admit-discharge-notification-condition"/>
-   <artifact name="Da Vinci Notifications Must Support Extension"
-             key="StructureDefinition-extension-mustSupport"
-             id="StructureDefinition/extension-mustSupport"/>
-   <artifact name=""
-             key="GraphDefinition-admit-discharge"
-             id="GraphDefinition/admit-discharge"/>
-   <artifact name="Da Vinci Notification Discharge Message Definition"
-             key="MessageDefinition-notification-discharge"
-             id="MessageDefinition/notification-discharge"/>
    <artifact name="Da Vinci Notification Event ValueSet"
              key="ValueSet-notification-event"
              id="ValueSet/notification-event"/>
@@ -89,15 +77,29 @@
    <artifact name="Da Vinci Notifications Bundle Profile"
              key="StructureDefinition-notifications-bundle"
              id="StructureDefinition/notifications-bundle"/>
-   <artifact name="Da Vinci Notifications MessageDefinition Profile"
-             key="StructureDefinition-notifications-messagedefinition"
-             id="StructureDefinition/notifications-messagedefinition"/>
    <artifact name="Da Vinci Notifications MessageHeader Profile"
              key="StructureDefinition-notifications-messageheader"
              id="StructureDefinition/notifications-messageheader"/>
-   <artifact name="Da Vinci Notifications GraphDefinition Profile"
+   <artifact name="StructureDefinition Notifications GraphDefinition"
              key="StructureDefinition-notifications-graphdefinition"
-             id="StructureDefinition/notifications-graphdefinition"/>
+             id="StructureDefinition/notifications-graphdefinition"
+             deprecated="true"/>
+   <artifact name="StructureDefinition Notifications MessageDefinition"
+             key="StructureDefinition-notifications-messagedefinition"
+             id="StructureDefinition/notifications-messagedefinition"
+             deprecated="true"/>
+   <artifact name="MessageDefinition Notification Admit"
+             key="MessageDefinition-notification-admit"
+             id="MessageDefinition/notification-admit"
+             deprecated="true"/>
+   <artifact name="MessageDefinition Notification Discharge"
+             key="MessageDefinition-notification-discharge"
+             id="MessageDefinition/notification-discharge"
+             deprecated="true"/>
+   <artifact name="GraphDefinition Admit Discharge"
+             key="GraphDefinition-admit-discharge"
+             id="GraphDefinition/admit-discharge"
+             deprecated="true"/>
    <page name="(NA)" key="NA"/>
    <page name="(many)" key="many"/>
    <page name="Table of Contents" key="toc" url="toc"/>
@@ -106,7 +108,6 @@
    <page name="Da Vinci Notifications Patient Admit/Discharge Use Case"
          key="usecases"/>
    <page name="Profiles and Extensions" key="profiles"/>
-   <page name="Bundle Definitions" key="bundles" url="bundles"/>
    <page name="Terminology" key="terminology" url="terminology"/>
    <page name="Capability Statements"
          key="capstatements"
@@ -117,6 +118,10 @@
    <page name="Change Log" key="change-notes" url="change-notes"/>
    <page name="Artifacts Summary" key="artifacts"/>
    <page name="(methodology)" key="methodology" deprecated="true"/>
+   <page name="Bundle Definitions"
+         key="bundles"
+         url="bundles"
+         deprecated="true"/>
    <page name="Implementation Registry (registry/iglist)"
          key="iglist"
          url="registry"

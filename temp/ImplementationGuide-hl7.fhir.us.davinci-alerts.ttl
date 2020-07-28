@@ -34,7 +34,7 @@
   fhir:ImplementationGuide.name [ fhir:value "DaVinciUnsolicitedNotifications"];
   fhir:ImplementationGuide.title [ fhir:value "Da Vinci Unsolicited Notifications"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-07-24T20:08:57-07:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-07-27T20:37:12-07:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "HL7 International - Infrastructure and Messaging Work Group"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -607,23 +607,6 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "MessageDefinition" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "MessageDefinition-notification-admit.html" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-admit>;
-         fhir:Reference.reference [ fhir:value "MessageDefinition/notification-admit" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Da Vinci Notification Admit Message Definition" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 8;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "CapabilityStatement" ]
        ], [
          fhir:index 1;
@@ -638,7 +621,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This CapabilityStatement describes the expected capabilities of a client that is capable of sending a Da Vinci Unsolicited Notification transacted with the `$process-message` operation." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 9;
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -656,59 +639,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "The Da Vinci Admit Notification Condition Profile is based on the [US Core Condition Profile] and adds the mandatory `Condition.encounter` element which references the [US Core Encounter Profile] in the same message Bundle." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 10;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-extension-mustSupport.html" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-mustSupport>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/extension-mustSupport" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Da Vinci Notifications Must Support Extension" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "If \"true\", implementations that produce or consume a resource defined by the GraphDefinition SHALL provide support for the link in some context dependent meaningful way. If \"false\", the link may be ignored and not supported and the whether to populate or use in any way is at the discretion of the implementation. If the extension is missing the link is assumed to be mustSupport = \"false\".  It **SHALL** be made clear through additional documentation exactly what kind of support is required, as this can mean many things depending on the use case.\n\nNote that this extension is analogous to the [ElementDefinition.mustSupport] in the FHIR specification." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 11;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "GraphDefinition" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "GraphDefinition-admit-discharge.html" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/admit-discharge>;
-         fhir:Reference.reference [ fhir:value "GraphDefinition/admit-discharge" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines message bundle graph for Da Vinci Notifications patient admission and discharge notification scenarios" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 12;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "MessageDefinition" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "MessageDefinition-notification-discharge.html" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-discharge>;
-         fhir:Reference.reference [ fhir:value "MessageDefinition/notification-discharge" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Da Vinci Notification Discharge Message Definition" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 13;
+       fhir:index 9;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -726,7 +657,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Concepts describing the purpose of the Da Vinci Unsolicited Notification." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 14;
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -744,7 +675,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Concepts describing Da Vinci Unsolicited Notification admit notification events." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 15;
+       fhir:index 11;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -762,7 +693,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Concepts describing Da Vinci Unsolicited Notification discharge notification events." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 16;
+       fhir:index 12;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -780,7 +711,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "The Da Vinci Admit Notification Encounter Profile is based on the [US Core Encounter Profile] and and constrains the resources referenced by the `Encounter.Subject`,`Encounter.Location`, and `Encounter.participant.individual`  to be found in the same message Bundle.  In addition, the Location reference is constrained to the [US Core Location Profile]" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 17;
+       fhir:index 13;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -798,7 +729,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This CapabilityStatement describes the expected capabilities of a client that is capable of responding a Da Vinci Notification with a  follow up FHIR RESTful query to the Sender.  These expectations are the same as described in the *HL7 FHIR® US Core Implementation Guide STU3 Release 3.1.0* [CapabiltyStatement for the US Core Client](http://hl7.org/fhir/us/core/STU3.1/CapabilityStatement-us-core-client.html)" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 18;
+       fhir:index 14;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -816,7 +747,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "The Da Vinci Discharge Notification MessageHeader Profile  builds on  the [Da Vinci Notifications MessageHeader Profile] and sets  minimum expectations for the FHIR [MessageHeader] resource to record the necessary context for Da Vinci discharge notification messaging scenario.  The event code is \"notification-discharge\" and the focus of the event is the [US Core Encounter Profile]." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 19;
+       fhir:index 15;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -834,7 +765,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This CapabilityStatement describes the expected capabilities of a server that is capable of receiving a Da Vinci Unsolicited Notification transacted with the `$process-message` operation." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 20;
+       fhir:index 16;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -852,7 +783,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "The Da Vinci Admit Notification Coverage Profile is based on the [HRex Coverage Profile] and constrains the Patient resource referenced by the `Coverage.beneficiary` element to be found in the same message Bundle." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 21;
+       fhir:index 17;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -870,7 +801,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This CapabilityStatement describes the expected capabilities of a server that is capable of responding to a follow up FHIR RESTful query from an Intermediary/Recipient.  These Expectations are the same as described in the *HL7 FHIR® US Core Implementation Guide STU3 Release 3.1.0* [CapabiltyStatement for the US Core Server](http://hl7.org/fhir/us/core/STU3.1/CapabilityStatement-us-core-server.html)" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 22;
+       fhir:index 18;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -888,7 +819,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Concepts describing the purpose of the Da Vinci Unsolicited Notification." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 23;
+       fhir:index 19;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -906,7 +837,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "The Da Vinci Admit Notification MessageHeader Profile builds on  the [Da Vinci Notifications MessageHeader Profile] and sets minimum expectations for the FHIR [MessageHeader] resource to record the necessary context for Da Vinci admit notification messaging scenario.  The event code is \"notification-admit\" and the focus of the event is the [US Core Encounter Profile]." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 24;
+       fhir:index 20;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -924,25 +855,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "The Da Vinci Notifications Bundle Profile constrains the FHIR [Bundle] resource to the Da Vinci notification messaging framework." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 25;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-notifications-messagedefinition.html" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messagedefinition>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/notifications-messagedefinition" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Da Vinci Notifications MessageDefinition Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The Da Vinci Notifications MessageDefinition Profile sets minimum expectations for the FHIR [MessageDefinition] resource to define the characteristics of a message that can be shared between systems for Da Vinci notification messaging.  It includes the type of event that initiates the message and the content to be transmitted as well as other metadata information related to the definition." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 26;
+       fhir:index 21;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -959,23 +872,6 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Da Vinci Notifications MessageHeader Profile" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "The Da Vinci Notifications MessageHeader Profile sets minimum expectations for the FHIR [MessageHeader] resource to record the necessary context for Da Vinci notification messaging using FHIR resources.  It references the focus of the use case event or request as well as other information related to the action typically transmitted in a [Bundle] resource in which the MessageHeader resource instance is the first resource in the Bundle." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 27;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-notifications-graphdefinition.html" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-graphdefinition>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/notifications-graphdefinition" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Da Vinci Notifications GraphDefinition Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The Da Vinci Notifications GraphDefinition Profile adds the capability to set \"mustSupport\" expectectations for  links in the FHIR [GraphDefinition] resource to define usage conformance in an implementation specific manner. This extension is used in the similar way as the [ElementDefinition.mustSupport] in the FHIR specification." ]
      ];
      fhir:ImplementationGuide.definition.page [
        fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "index.html" ];
@@ -1003,68 +899,37 @@
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
            fhir:index 1;
-           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-notifications-graphdefinition.html" ];
-           fhir:ImplementationGuide.definition.page.title [ fhir:value "StructureDefinition Notifications GraphDefinition" ];
-           fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
-         ], [
-           fhir:index 2;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-admit-discharge-notification-encounter.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "StructureDefinition Admit Discharge Notification Encounter" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 3;
+           fhir:index 2;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-discharge-notification-messageheader.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "StructureDefinition Discharge Notification MessageHeader" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 4;
+           fhir:index 3;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-admit-discharge-notification-coverage.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "StructureDefinition Admit Discharge Notification Coverage" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 5;
+           fhir:index 4;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-admit-notification-messageheader.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "StructureDefinition Admit Notification MessageHeader" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 6;
+           fhir:index 5;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-notifications-bundle.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "StructureDefinition Notifications Bundle" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 7;
-           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-notifications-messagedefinition.html" ];
-           fhir:ImplementationGuide.definition.page.title [ fhir:value "StructureDefinition Notifications MessageDefinition" ];
-           fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
-         ], [
-           fhir:index 8;
+           fhir:index 6;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-notifications-messageheader.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "StructureDefinition Notifications MessageHeader" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ]
        ], [
          fhir:index 3;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "bundles.html" ];
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "Bundle Definitions" ];
-         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ];
-         fhir:ImplementationGuide.definition.page.page [
-           fhir:index 0;
-           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "MessageDefinition-notification-admit.html" ];
-           fhir:ImplementationGuide.definition.page.title [ fhir:value "MessageDefinition Notification Admit" ];
-           fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
-         ], [
-           fhir:index 1;
-           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "MessageDefinition-notification-discharge.html" ];
-           fhir:ImplementationGuide.definition.page.title [ fhir:value "MessageDefinition Notification Discharge" ];
-           fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
-         ], [
-           fhir:index 2;
-           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "GraphDefinition-admit-discharge.html" ];
-           fhir:ImplementationGuide.definition.page.title [ fhir:value "GraphDefinition Admit Discharge" ];
-           fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
-         ]
-       ], [
-         fhir:index 4;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "terminology.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Terminology" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ];
@@ -1090,7 +955,7 @@
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ]
        ], [
-         fhir:index 5;
+         fhir:index 4;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "capstatements.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Capability Statements" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ];
@@ -1116,22 +981,22 @@
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ]
        ], [
-         fhir:index 6;
+         fhir:index 5;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "security.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Security" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 7;
+         fhir:index 6;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "all-examples.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "All Examples" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 8;
+         fhir:index 7;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "downloads.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Downloads" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 9;
+         fhir:index 8;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "change-notes.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Change Log" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
@@ -1218,17 +1083,9 @@
 
 <http://hl7.org/fhir/us/davinci-alerts/Condition/admit-discharge-notification-condition-01> a fhir:us .
 
-<http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-admit> a fhir:us .
-
 <http://hl7.org/fhir/us/davinci-alerts/CapabilityStatement/notification-sender> a fhir:us .
 
 <http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-condition> a fhir:us .
-
-<http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-mustSupport> a fhir:us .
-
-<http://hl7.org/fhir/us/davinci-alerts/GraphDefinition/admit-discharge> a fhir:us .
-
-<http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-discharge> a fhir:us .
 
 <http://hl7.org/fhir/us/davinci-alerts/ValueSet/notification-event> a fhir:us .
 
@@ -1254,11 +1111,7 @@
 
 <http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle> a fhir:us .
 
-<http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messagedefinition> a fhir:us .
-
 <http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader> a fhir:us .
-
-<http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-graphdefinition> a fhir:us .
 
 # - ontology header ------------------------------------------------------------
 

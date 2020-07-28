@@ -5,17 +5,17 @@
   "igName": "DaVinciUnsolicitedNotifications",
   "packageId": "hl7.fhir.us.davinci-alerts",
   "igVer": "1.0.0",
-  "errorCount": 44,
+  "errorCount": 33,
   "version": "4.0.1",
   "revision": "a53ec6ee1b",
   "versionFull": "4.0.1-a53ec6ee1b",
   "toolingVersion": "4.4.0",
   "toolingRevision": "3",
   "toolingVersionFull": "4.4.0 (3)",
-  "totalFiles": 29,
-  "processedFiles": 189,
-  "genDate": "Fri, Jul 24, 2020 20:08-0700",
-  "genDay": "24/07/2020",
+  "totalFiles": 23,
+  "processedFiles": 173,
+  "genDate": "Mon, Jul 27, 2020 20:37-0700",
+  "genDay": "27/07/2020",
   "ig": {
     "id": "hl7.fhir.us.davinci-alerts",
     "name": "DaVinciUnsolicitedNotifications",
@@ -33,7 +33,7 @@
         ]
       }
     ],
-    "date": "2020-07-24T20:08:57-07:00",
+    "date": "2020-07-27T20:37:12-07:00",
     "copyright": "Used by permission of HL7 International - Infrastructure and Messaging Work Group, all rights reserved Creative Commons License",
     "fhirVersion": "4.0.1"
   },

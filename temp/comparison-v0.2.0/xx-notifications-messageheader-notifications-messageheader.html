@@ -1,0 +1,15 @@
+﻿<html><body><pre>org.hl7.fhir.exceptions.DefinitionException: Aggregation not supported: MessageHeader.sender
+	at org.hl7.fhir.r5.comparison.ProfileComparer.checkAddTypeUnion(ProfileComparer.java:497)
+	at org.hl7.fhir.r5.comparison.ProfileComparer.unionTypes(ProfileComparer.java:486)
+	at org.hl7.fhir.r5.comparison.ProfileComparer.compareElements(ProfileComparer.java:207)
+	at org.hl7.fhir.r5.comparison.ProfileComparer.compareChildren(ProfileComparer.java:307)
+	at org.hl7.fhir.r5.comparison.ProfileComparer.compareElements(ProfileComparer.java:224)
+	at org.hl7.fhir.r5.comparison.ProfileComparer.compare(ProfileComparer.java:131)
+	at org.hl7.fhir.r5.comparison.ComparisonSession.compare(ComparisonSession.java:92)
+	at org.hl7.fhir.igtools.publisher.PreviousVersionComparator.finishChecks(PreviousVersionComparator.java:241)
+	at org.hl7.fhir.igtools.publisher.Publisher.checkConformanceResources(Publisher.java:3727)
+	at org.hl7.fhir.igtools.publisher.Publisher.loadConformance(Publisher.java:3653)
+	at org.hl7.fhir.igtools.publisher.Publisher.createIg(Publisher.java:851)
+	at org.hl7.fhir.igtools.publisher.Publisher.execute(Publisher.java:712)
+	at org.hl7.fhir.igtools.publisher.Publisher.main(Publisher.java:7846)
+</pre></body></html>

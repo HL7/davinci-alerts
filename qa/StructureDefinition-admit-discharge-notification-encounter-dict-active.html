@@ -249,7 +249,7 @@
   <tr><td>Definition</td><td><p>Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations.</p>
 </td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/R4/terminologies.html">Binding</a></td><td>Classification of the encounter.<br/>The codes SHALL be taken from <a href="http://hl7.org/fhir/R4/v3/ActEncounterCode/vs.html">V3 Value SetActEncounterCode</a>; other codes may be used where these codes are not suitable</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/R4/terminologies.html">Binding</a></td><td>Classification of the encounter.<br/>The codes SHALL be taken from <a href="https://terminology.hl7.org/1.0.0//ValueSet-v3-ActEncounterCode.html">ActEncounterCode</a>; other codes may be used where these codes are not suitable</td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
@@ -294,7 +294,7 @@
   <tr><td>Definition</td><td><p>inpatient | outpatient | ambulatory | emergency +.</p>
 </td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/R4/terminologies.html">Binding</a></td><td>Classification of the encounter.<br/>The codes SHALL be taken from <a href="http://hl7.org/fhir/R4/v3/ActEncounterCode/vs.html">V3 Value SetActEncounterCode</a>; other codes may be used where these codes are not suitable</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/R4/terminologies.html">Binding</a></td><td>Classification of the encounter.<br/>The codes SHALL be taken from <a href="https://terminology.hl7.org/1.0.0//ValueSet-v3-ActEncounterCode.html">ActEncounterCode</a>; other codes may be used where these codes are not suitable</td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
 <b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() or (children().count() &gt; id.count()))</td></tr>
@@ -328,7 +328,7 @@
   <tr><td>Definition</td><td><p>Indicates the urgency of the encounter.</p>
 </td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/R4/terminologies.html">Binding</a></td><td>Indicates the urgency of the encounter.<br/>For example codes, see <a href="http://hl7.org/fhir/R4/v3/ActPriority/vs.html">v3 Code System ActPriority</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/R4/terminologies.html">Binding</a></td><td>Indicates the urgency of the encounter.<br/>For example codes, see <a href="https://terminology.hl7.org/1.0.0//ValueSet-v3-ActPriority.html">ActPriority</a></td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
 <b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() or (children().count() &gt; id.count()))</td></tr>
@@ -606,7 +606,7 @@
   <tr><td>Definition</td><td><p>Whether this hospitalization is a readmission and why if known.</p>
 </td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/R4/terminologies.html">Binding</a></td><td>The reason for re-admission of this hospitalization encounter.<br/>For example codes, see <a href="http://hl7.org/fhir/R4/v2/0092/index.html">v2 RE-ADMISSION INDICATOR</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/R4/terminologies.html">Binding</a></td><td>The reason for re-admission of this hospitalization encounter.<br/>For example codes, see <a href="https://terminology.hl7.org/1.0.0//ValueSet-v2-0092.html">hl7VS-re-admissionIndicator</a></td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
 <b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() or (children().count() &gt; id.count()))</td></tr>

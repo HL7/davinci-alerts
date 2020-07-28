@@ -3,15 +3,7 @@
   "version": "1.0.0",
   "fhirVersion": "4.0.1",
   "jurisdiction": "US",
-  "extensions": [
-    {
-      "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-mustSupport",
-      "title": "Da Vinci Notifications Must Support Extension",
-      "types": [
-        "boolean"
-      ]
-    }
-  ],
+  "extensions": [],
   "profiles": {
     "Condition": [
       {
@@ -41,18 +33,6 @@
       {
         "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
         "title": "Da Vinci Notifications Bundle Profile"
-      }
-    ],
-    "GraphDefinition": [
-      {
-        "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-graphdefinition",
-        "title": "Da Vinci Notifications GraphDefinition Profile"
-      }
-    ],
-    "MessageDefinition": [
-      {
-        "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messagedefinition",
-        "title": "Da Vinci Notifications MessageDefinition Profile"
       }
     ]
   },
@@ -112,11 +92,6 @@
     ],
     "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race": [
       "Bundle.entry.resource"
-    ],
-    "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-mustSupport": [
-      "GraphDefinition.link",
-      "GraphDefinition.link.target.link",
-      "GraphDefinition.link.target.link.target.link"
     ]
   }
 }

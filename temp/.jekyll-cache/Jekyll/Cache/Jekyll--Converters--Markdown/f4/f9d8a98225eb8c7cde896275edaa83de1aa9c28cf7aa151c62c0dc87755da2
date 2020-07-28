@@ -1,0 +1,53 @@
+I"�<p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+
+<h3 id="resource-profiles">Resource Profiles</h3>
+
+<p>The following Profiles for FHIR <em>resources</em> have been defined for this implementation guide.</p>
+
+<p><strong>Base Da Vinci Notification Profiles</strong></p>
+
+<ul>
+  <li><a href="StructureDefinition-notifications-messageheader.html">Da Vinci Notifications MessageHeader Profile</a></li>
+  <li><a href="StructureDefinition-notifications-bundle.html">Da Vinci Notifications Bundle Profile</a>
+&lt;!–</li>
+  <li><a href="StructureDefinition-notifications-messagedefinition.html">Da Vinci Notifications MessageDefinition Profile</a></li>
+  <li><a href="StructureDefinition-notifications-graphdefinition.html">Da Vinci Notifications GraphDefinition Profile</a>
+–&gt;</li>
+</ul>
+
+<p><strong>Da Vinci Admission/Discharge Notification Profiles</strong></p>
+
+<ul>
+  <li><a href="StructureDefinition-admit-notification-messageheader.html">Da Vinci Admit Notification MessageHeader Profile</a></li>
+  <li><a href="StructureDefinition-discharge-notification-messageheader.html">Da Vinci Discharge Notification MessageHeader Profile</a></li>
+  <li><a href="StructureDefinition-admit-discharge-notification-condition.html">Da Vinci Admit/Discharge Notification Condition Profile</a></li>
+  <li><a href="StructureDefinition-admit-discharge-notification-coverage.html">Da Vinci Admit/Discharge Notification Coverage Profile</a></li>
+  <li><a href="StructureDefinition-admit-discharge-notification-encounter.html">Da Vinci Admit/Discharge Notification Encounter Profile</a></li>
+</ul>
+
+<!-- 
+{% include list-simple-profiles.xhtml %}
+
+{% for sd_hash in site.data.structuredefinitions -%}
+  {%- assign sd = sd_hash[1] -%}
+  {%- if sd.kind  == "resource" -%}
+    - [{{sd.name}}]({{sd.path}})
+  {%- endif -%}
+{%- endfor -%}
+
+ -->
+
+<h3 id="extensions">Extensions</h3>
+
+<p>The following Extensions have been defined for this implementation guide.</p>
+
+<ul>
+  <li><a href="StructureDefinition-extension-mustSupport.html">Da Vinci Notifications Must Support Extension</a></li>
+</ul>
+
+<p><br /></p>
+
+:ET

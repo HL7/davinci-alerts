@@ -53,12 +53,7 @@ a) having additional resources in the message bundle is not prohibited as long a
 b) not all the resources listed above may be present in the source system. (For a more detailed discussion of when required resources may be absent, see the section on [Must Support])
 {:.highlight-note}
 
-### Formally Defining the Da Vinci Admit and Discharge Notification Message
-
-As documented in the Framework page, there are two alternatives to defining the Bundle components using FHIR artifacts.
-
-#### FHIR Profiles
-{:.no_toc}
+### Formal Definition of the Da Vinci Admit and Discharge Notification Message
 
 The following FHIR Profiles can be used to formally define this resource graph for the admission and discharge event.  Note that except for the first profile listed below, these profiles constrain their references to other profiles within the same bundle.
 
@@ -69,6 +64,7 @@ The following FHIR Profiles can be used to formally define this resource graph f
 - [Da Vinci Admit/Discharge Notification Coverage Profile]
 - [Da Vinci Admit/Discharge Notification Encounter Profile]
 
+<!--
 #### MessageDefinition and GraphDefinition
 {:.no_toc}
 
@@ -82,7 +78,7 @@ The Following MessageDefinition and GraphDefinition can be used to formally defi
 
 {% include list-simple-graphdefinitions.xhtml %}
 
-
+-->
 <!--
 - \* it is questionable whether Encounter.diagnosis.condition has been implemented by the EHR vendors - need to discuss with vendors.
 - \** There is no Practitioner.endpoint element and an extension may be needed to implement.
@@ -123,9 +119,6 @@ The interaction diagram in figure 5 and 6 on the [Framework] page illustrates th
 Note to Balloters: We are actively seeking input on what additional work is needed to determine the best way to implement subscriptions for notification notification. See the [FHIR Subscription Based Notification] framework for further details.
 
 {% endraw %}-->
-
-
-
 
 
 {% include link-list.md %}

@@ -1,23 +1,6 @@
 {
-  "notifications-graphdefinition": {
-    "index": 0,
-    "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-graphdefinition",
-    "name": "NotificationsGraphDefinition",
-    "path": "StructureDefinition-notifications-graphdefinition.html",
-    "kind": "resource",
-    "type": "GraphDefinition",
-    "base": "http://hl7.org/fhir/StructureDefinition/GraphDefinition",
-    "basename": "GraphDefinition",
-    "basepath": "http://hl7.org/fhir/R4/graphdefinition.html",
-    "status": "active",
-    "date": "Wed Nov 13 16:00:00 PST 2019",
-    "abstract": false,
-    "derivation": "constraint",
-    "publisher": "HL7 International - Infrastructure and Messaging Work Group",
-    "description": "The Da Vinci Notifications GraphDefinition Profile adds the capability to set \"mustSupport\" expectectations for  links in the FHIR [GraphDefinition] resource to define usage conformance in an implementation specific manner. This extension is used in the similar way as the [ElementDefinition.mustSupport] in the FHIR specification."
-  },
   "notifications-messageheader": {
-    "index": 1,
+    "index": 0,
     "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader",
     "name": "NotificationsMessageHeader",
     "path": "StructureDefinition-notifications-messageheader.html",
@@ -34,7 +17,7 @@
     "description": "The Da Vinci Notifications MessageHeader Profile sets minimum expectations for the FHIR [MessageHeader] resource to record the necessary context for Da Vinci notification messaging using FHIR resources.  It references the focus of the use case event or request as well as other information related to the action typically transmitted in a [Bundle] resource in which the MessageHeader resource instance is the first resource in the Bundle."
   },
   "admit-notification-messageheader": {
-    "index": 2,
+    "index": 1,
     "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader",
     "name": "AdmitNotificationMessageHeader",
     "path": "StructureDefinition-admit-notification-messageheader.html",
@@ -51,7 +34,7 @@
     "description": "The Da Vinci Admit Notification MessageHeader Profile builds on  the [Da Vinci Notifications MessageHeader Profile] and sets minimum expectations for the FHIR [MessageHeader] resource to record the necessary context for Da Vinci admit notification messaging scenario.  The event code is \"notification-admit\" and the focus of the event is the [US Core Encounter Profile]."
   },
   "admit-discharge-notification-coverage": {
-    "index": 3,
+    "index": 2,
     "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-coverage",
     "name": "AdmitDischargeNotificationCoverageProfile",
     "path": "StructureDefinition-admit-discharge-notification-coverage.html",
@@ -68,7 +51,7 @@
     "description": "The Da Vinci Admit Notification Coverage Profile is based on the [HRex Coverage Profile] and constrains the Patient resource referenced by the `Coverage.beneficiary` element to be found in the same message Bundle."
   },
   "discharge-notification-messageheader": {
-    "index": 4,
+    "index": 3,
     "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader",
     "name": "DischargeNotificationMessageHeader",
     "path": "StructureDefinition-discharge-notification-messageheader.html",
@@ -84,30 +67,8 @@
     "publisher": "HL7 International - Infrastructure and Messaging Work Group",
     "description": "The Da Vinci Discharge Notification MessageHeader Profile  builds on  the [Da Vinci Notifications MessageHeader Profile] and sets  minimum expectations for the FHIR [MessageHeader] resource to record the necessary context for Da Vinci discharge notification messaging scenario.  The event code is \"notification-discharge\" and the focus of the event is the [US Core Encounter Profile]."
   },
-  "extension-mustSupport": {
-    "index": 5,
-    "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/extension-mustSupport",
-    "name": "MustSupportExtension",
-    "path": "StructureDefinition-extension-mustSupport.html",
-    "kind": "complex-type",
-    "type": "Extension",
-    "base": "http://hl7.org/fhir/StructureDefinition/Extension",
-    "basename": "Extension",
-    "basepath": "http://hl7.org/fhir/R4/extensibility.html#Extension",
-    "status": "active",
-    "date": "Wed Nov 13 16:00:00 PST 2019",
-    "abstract": false,
-    "derivation": "constraint",
-    "publisher": "HL7 International - Infrastructure and Messaging Work Group",
-    "description": "If \"true\", implementations that produce or consume a resource defined by the GraphDefinition SHALL provide support for the link in some context dependent meaningful way. If \"false\", the link may be ignored and not supported and the whether to populate or use in any way is at the discretion of the implementation. If the extension is missing the link is assumed to be mustSupport \u003d \"false\".  It **SHALL** be made clear through additional documentation exactly what kind of support is required, as this can mean many things depending on the use case.\n\nNote that this extension is analogous to the [ElementDefinition.mustSupport] in the FHIR specification.",
-    "contexts": [
-      {
-        "type": "GraphDefinition.link"
-      }
-    ]
-  },
   "admit-discharge-notification-encounter": {
-    "index": 6,
+    "index": 4,
     "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-encounter",
     "name": "AdmitDischargeNotificationEncounterProfile",
     "path": "StructureDefinition-admit-discharge-notification-encounter.html",
@@ -124,7 +85,7 @@
     "description": "The Da Vinci Admit Notification Encounter Profile is based on the [US Core Encounter Profile] and and constrains the resources referenced by the `Encounter.Subject`,`Encounter.Location`, and `Encounter.participant.individual`  to be found in the same message Bundle.  In addition, the Location reference is constrained to the [US Core Location Profile]"
   },
   "admit-discharge-notification-condition": {
-    "index": 7,
+    "index": 5,
     "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-condition",
     "name": "AdmitDischargeNotificationConditionProfile",
     "path": "StructureDefinition-admit-discharge-notification-condition.html",
@@ -141,7 +102,7 @@
     "description": "The Da Vinci Admit Notification Condition Profile is based on the [US Core Condition Profile] and adds the mandatory `Condition.encounter` element which references the [US Core Encounter Profile] in the same message Bundle."
   },
   "notifications-bundle": {
-    "index": 8,
+    "index": 6,
     "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
     "name": "NotificationsBundle",
     "path": "StructureDefinition-notifications-bundle.html",
@@ -156,22 +117,5 @@
     "derivation": "constraint",
     "publisher": "HL7 International - Infrastructure and Messaging Work Group",
     "description": "The Da Vinci Notifications Bundle Profile constrains the FHIR [Bundle] resource to the Da Vinci notification messaging framework."
-  },
-  "notifications-messagedefinition": {
-    "index": 9,
-    "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messagedefinition",
-    "name": "NotificationsMessageDefinition",
-    "path": "StructureDefinition-notifications-messagedefinition.html",
-    "kind": "resource",
-    "type": "MessageDefinition",
-    "base": "http://hl7.org/fhir/StructureDefinition/MessageDefinition",
-    "basename": "MessageDefinition",
-    "basepath": "http://hl7.org/fhir/R4/messagedefinition.html",
-    "status": "active",
-    "date": "Sun Nov 10 16:00:00 PST 2019",
-    "abstract": false,
-    "derivation": "constraint",
-    "publisher": "HL7 International - Infrastructure and Messaging Work Group",
-    "description": "The Da Vinci Notifications MessageDefinition Profile sets minimum expectations for the FHIR [MessageDefinition] resource to define the characteristics of a message that can be shared between systems for Da Vinci notification messaging.  It includes the type of event that initiates the message and the content to be transmitted as well as other metadata information related to the definition."
   }
 }

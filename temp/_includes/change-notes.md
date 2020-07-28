@@ -1,6 +1,16 @@
 
 The Da Vinci Unsolicited Notifications Implementation Guide was developed under the  [Davinci Project](#)
 
+### Changes and Updates for version 1.0.0
+
+The first official published version of the DEQM IG for FHIR R4.
+
+1. Applied all resolutions from STU2 Ballot
+
+    - Various Technical Corrections and Corrections to Typographical Errors
+    - updated examples
+    - Remove MessageDefintion and GraphDefinition profile and references to them ([FHIR-NNNNN](https://jira.hl7.org/browse/FHIR-))
+
 
 ### Changes and Updates for version 0.2.0
 

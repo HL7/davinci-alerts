@@ -74,22 +74,10 @@ definition:
       exampleBoolean: true
       name: Admit Discharge Notification Condition 01
     - reference:
-        reference: MessageDefinition/notification-admit
-      exampleBoolean: false
-    - reference:
         reference: CapabilityStatement/notification-sender
       exampleBoolean: false
     - reference:
         reference: StructureDefinition/admit-discharge-notification-condition
-      exampleBoolean: false
-    - reference:
-        reference: StructureDefinition/extension-mustSupport
-      exampleBoolean: false
-    - reference:
-        reference: GraphDefinition/admit-discharge
-      exampleBoolean: false
-    - reference:
-        reference: MessageDefinition/notification-discharge
       exampleBoolean: false
     - reference:
         reference: ValueSet/notification-event
@@ -128,9 +116,6 @@ definition:
         reference: StructureDefinition/notifications-bundle
       exampleBoolean: false
     - reference:
-        reference: StructureDefinition/notifications-messagedefinition
-      exampleBoolean: false
-    - reference:
         reference: StructureDefinition/notifications-messageheader
       exampleBoolean: false
   page:
@@ -151,9 +136,6 @@ definition:
           - nameUrl: StructureDefinition-admit-discharge-notification-condition.html
             title: StructureDefinition Admit Discharge Notification Condition
             generation: generated
-          - nameUrl: StructureDefinition-notifications-graphdefinition.html
-            title: StructureDefinition Notifications GraphDefinition
-            generation: generated
           - nameUrl: StructureDefinition-admit-discharge-notification-encounter.html
             title: StructureDefinition Admit Discharge Notification Encounter
             generation: generated
@@ -169,24 +151,8 @@ definition:
           - nameUrl: StructureDefinition-notifications-bundle.html
             title: StructureDefinition Notifications Bundle
             generation: generated
-          - nameUrl: StructureDefinition-notifications-messagedefinition.html
-            title: StructureDefinition Notifications MessageDefinition
-            generation: generated
           - nameUrl: StructureDefinition-notifications-messageheader.html
             title: StructureDefinition Notifications MessageHeader
-            generation: generated
-      - nameUrl: bundles.html
-        title: Bundle Definitions
-        generation: markdown
-        page:
-          - nameUrl: MessageDefinition-notification-admit.html
-            title: MessageDefinition Notification Admit
-            generation: generated
-          - nameUrl: MessageDefinition-notification-discharge.html
-            title: MessageDefinition Notification Discharge
-            generation: generated
-          - nameUrl: GraphDefinition-admit-discharge.html
-            title: GraphDefinition Admit Discharge
             generation: generated
       - nameUrl: terminology.html
         title: Terminology

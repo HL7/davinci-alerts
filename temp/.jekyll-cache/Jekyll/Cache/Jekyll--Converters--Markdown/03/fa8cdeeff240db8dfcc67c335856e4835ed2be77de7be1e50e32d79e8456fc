@@ -1,0 +1,1581 @@
+I"�/<p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#use-case-background" id="markdown-toc-use-case-background">Use Case Background</a></li>
+  <li><a href="#fhir-resources-for-admission-and-discharge-notification" id="markdown-toc-fhir-resources-for-admission-and-discharge-notification">FHIR Resources for Admission and Discharge Notification</a></li>
+  <li><a href="#formal-definition-of-the-da-vinci-admit-and-discharge-notification-message" id="markdown-toc-formal-definition-of-the-da-vinci-admit-and-discharge-notification-message">Formal Definition of the Da Vinci Admit and Discharge Notification Message</a></li>
+  <li><a href="#da-vinci-notification-message-bundle-examples" id="markdown-toc-da-vinci-notification-message-bundle-examples">Da Vinci Notification Message Bundle Examples</a></li>
+  <li><a href="#pushing-unsolicited-admitdischarge-notification" id="markdown-toc-pushing-unsolicited-admitdischarge-notification">Pushing Unsolicited Admit/Discharge Notification</a></li>
+</ul>
+
+</div>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>This use case demonstrates how the Da Vinci Notifications IG framework is used to define the Da Vinci Notification Bundle for admissions and discharge and how to send a notification between a Sender and a Recipient/Intermediary.</p>
+
+<h3 id="use-case-background">Use Case Background</h3>
+
+<p>Having the ability to send notifications to update physicians and care management teams when a patient is admitted to a hospital or discharged from the hospital is key to improving patient care. The intent of these notifications is <em>not</em> to replace existing data exchange mechanisms, for example the discharge summary; but rather to notify of the discharge event and provide enough data to gather more information, if desired. These notifications improve post-discharge transitions, promote communication between providers and encourage follow up care.  Figure 5 illustrates how some of the admit and discharge data elements corresponded to the resource in the message bundle.</p>
+
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 5</strong></figcaption>
+  <img src="bundle_graphic.svg" class="figure-img-portrait img-responsive img-rounded center-block" alt="bundle_graphic.svg" />
+</figure>
+
+<p></p>
+</div>
+
+<!--
+The Provider is notified when:
+
+- A Patient is admitted to the hospital for inpatient or emergency care
+- A Patient is discharged from the hospital
+- A Patient is transferred from one care unit to another
+-->
+
+<h3 id="fhir-resources-for-admission-and-discharge-notification">FHIR Resources for Admission and Discharge Notification</h3>
+
+<p>To carry information regarding admission and discharge event messages, the required resources for the message Bundle need to be defined.  The core components of the Bundle are defined in the <a href="guidance.html" title="General Framework Page">Framework</a> page and include the <em>MessageHeader</em> and the “root” resource represented by the  <code class="highlighter-rouge">MessageHeader.focus</code>.  For admissions and discharge <em>Encounter</em> (US Core Encounter) is the focus of the event as shown in figure 6:</p>
+
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 6</strong></figcaption>
+  <img src="admit_message_graph1.svg" class="figure-img-portrait img-responsive img-rounded center-block" alt="admit_message_graph1.svg" />
+</figure>
+
+<p></p>
+</div>
+
+<p>The other “required if present” resources defined in the framework are those referenced by <code class="highlighter-rouge">MessageHeader.author</code>, <code class="highlighter-rouge">MessageHeader.responsible</code>, <code class="highlighter-rouge">MessageHeader.sender</code> and those referenced by the US Core Encounter Profile. These combine to make up a ‘generic’ Encounter message bundle structure illustrated in figure 7 below:</p>
+
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 7</strong></figcaption>
+  <img src="admit_message_graph2.svg" class="figure-img-portrait img-responsive img-rounded center-block" alt="admit_message_graph2.svg" />
+</figure>
+
+<p></p>
+</div>
+
+<p>The following additional resources (or rather profiles) have been determined to be “required if present” by the Da Vinci community to fulfill the data item requirements specific to admissions and discharge.</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>﻿Notification Scenarios</th>
+      <th>Additional Resource Requirements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Emergency and Inpatient Admissions</td>
+      <td>US Core Condition,  Da Vinci HRex Coverage</td>
+    </tr>
+    <tr>
+      <td>Emergency and Inpatient Discharges</td>
+      <td>US Core Condition, Da Vinci HRex Coverage</td>
+    </tr>
+  </tbody>
+</table>
+
+<p id="figure-8">Adding these additional components results in the following resource graph showing all the required resources and their relationships for the admission and discharge notification use case shown in Figure 8:</p>
+
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 8</strong></figcaption>
+  <img src="admit_message_graph3.svg" class="figure-img-portrait img-responsive img-rounded center-block" alt="admit_message_graph3.svg" />
+</figure>
+
+<p></p>
+</div>
+
+<p>An alternate representation of this graph is a table with each row representing an “edge” - an ordered pair of the form (source profile, target profile):</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Link</th>
+      <th>Source Profile</th>
+      <th>Path</th>
+      <th>Target Profile</th>
+      <th>Min</th>
+      <th>Max</th>
+      <th>Must Support</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Da Vinci Notification MessageHeader Profile</td>
+      <td>MessageHeader.focus</td>
+      <td>US Core Encounter Profile</td>
+      <td>1</td>
+      <td>1</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>US Core Encounter Profile</td>
+      <td>Encounter.location</td>
+      <td>US Core Location Profile</td>
+      <td>1</td>
+      <td>*</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>US Core Encounter Profile</td>
+      <td>Encounter.participant.individual</td>
+      <td>US Core Practitioner Profile</td>
+      <td>0</td>
+      <td>*</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>US Core Encounter Profile</td>
+      <td>Encounter.subject</td>
+      <td>US Core Patient Profile</td>
+      <td>1</td>
+      <td>1</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Da Vinci HRex Coverage Profile</td>
+      <td>Coverage.beneficary</td>
+      <td>US Core Patient Profile</td>
+      <td>0</td>
+      <td>1</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>US Core Condition Profile</td>
+      <td>Condition.encounter</td>
+      <td>US Core Encounter Profile</td>
+      <td>0</td>
+      <td>*</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Da Vinci Notification MessageHeader Profile</td>
+      <td>MessageHeader.sender</td>
+      <td>US Core Practitioner Profile|US Core PractitionerRole Profile|US Core Organization Profile</td>
+      <td>0</td>
+      <td>1</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Da Vinci Notification MessageHeader Profile</td>
+      <td>MessageHeader.responsible</td>
+      <td>US Core Practitioner Profile|US Core PractitionerRole Profile|US Core Organization Profile</td>
+      <td>0</td>
+      <td>1</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Da Vinci Notification MessageHeader Profile</td>
+      <td>MessageHeader.author</td>
+      <td>US Core Practitioner Profile|US Core PractitionerRole Profile</td>
+      <td>0</td>
+      <td>1</td>
+      <td>true</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="highlight-note">Note that an Admit/Discharge Bundle may contain more or less resources than this graph illustrates since:<br />
+a) having additional resources in the message bundle is not prohibited as long as the resources are reference by or reference another resource in the message bundle and<br />
+b) not all the resources listed above may be present in the source system. (For a more detailed discussion of when required resources may be absent, see the section on <a href="guidance.html#must-support">Must Support</a>)</p>
+
+<h3 id="formal-definition-of-the-da-vinci-admit-and-discharge-notification-message">Formal Definition of the Da Vinci Admit and Discharge Notification Message</h3>
+
+<p>The following FHIR Profiles can be used to formally define this resource graph for the admission and discharge event.  Note that except for the first profile listed below, these profiles constrain their references to other profiles within the same bundle.</p>
+
+<ul>
+  <li><a href="StructureDefinition-notifications-bundle.html">Da Vinci Notifications Bundle Profile</a></li>
+  <li><a href="StructureDefinition-admit-notification-messageheader.html">Da Vinci Admit Notification MessageHeader Profile</a></li>
+  <li><a href="StructureDefinition-discharge-notification-messageheader.html">Da Vinci Discharge Notification MessageHeader Profile</a></li>
+  <li><a href="StructureDefinition-admit-discharge-notification-condition.html">Da Vinci Admit/Discharge Notification Condition Profile</a></li>
+  <li><a href="StructureDefinition-admit-discharge-notification-coverage.html">Da Vinci Admit/Discharge Notification Coverage Profile</a></li>
+  <li><a href="StructureDefinition-admit-discharge-notification-encounter.html">Da Vinci Admit/Discharge Notification Encounter Profile</a></li>
+</ul>
+
+<!--
+#### MessageDefinition and GraphDefinition
+{:.no_toc}
+
+The Following MessageDefinition and GraphDefinition can be used to formally define this resource graph for the admission and discharge event:
+
+**MessageDefinition**
+
+
+
+**GraphDefinition**
+
+
+
+-->
+<!--
+- \* it is questionable whether Encounter.diagnosis.condition has been implemented by the EHR vendors - need to discuss with vendors.
+- \** There is no Practitioner.endpoint element and an extension may be needed to implement.
+- \*** MessageDefinition is used to formally define the Message content for a given event (e.g, an inpatient admission or discharge).  It defines the event and the focal and non focal Resources/Profiles that make up the message:
+-->
+
+<h3 id="da-vinci-notification-message-bundle-examples">Da Vinci Notification Message Bundle Examples</h3>
+
+<p>Da Vinci Notification Bundles such as these examples can be assembled based on any of the above definitions.</p>
+
+<li><a href="Bundle-admit-notification-message-bundle-01.html">Bundle/admit-notification-message-bundle-01</a></li>
+<li><a href="Bundle-discharge-notification-message-bundle-01.html">Bundle/discharge-notification-message-bundle-01</a></li>
+
+<h3 id="pushing-unsolicited-admitdischarge-notification">Pushing Unsolicited Admit/Discharge Notification</h3>
+
+<p>In the interaction shown in figures 9, the HealthCare facility is acting in the role of the Notification Sender and the Notification Recipient can be any of the actors listed on the home page.  To notify the Notification Recipients/Intermediary of an admit or discharge event, the Notification Sender uses $process-message operation to submit the Notification Message to appropriate FHIR endpoints. Not shown in Figure 9 is that when the Intermediary successfully receives and processes the notifications, it subsequently forwards the data to the end users.</p>
+
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 9</strong></figcaption>
+  <img src="$process_message_admit_wf.svg" class="figure-img-portrait img-responsive img-rounded center-block" alt="$process_message_admit_wf.svg" />
+</figure>
+
+<p></p>
+</div>
+
+<hr />
+
+<h4 id="example-transaction">Example Transaction</h4>
+
+<p>The following transactions show an example of using the <code class="highlighter-rouge">$process-message</code> operation to send a Da Vinci Admission Notification Message and a Da Vinci Discharge Notification Message to a Recipient:</p>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#process-message-admit-example" aria-expanded="false" aria-controls="collapseExample">
+    Click Here To See Example Da Vinci Admission Notification Message
+  </button>
+</p>
+
+<div class="collapse" id="process-message-admit-example">
+  <div class="card card-body">
+      
+<h3 class="no_toc" id="examples">Examples</h3>
+
+<p><strong>Scenario:</strong></p>
+
+<p>Patient Y has been admitted to Provider X ‘s facility.  Acting in the role of Sender, Provider X alerts Payer Z, who is acting in the Recipient role, of the admission.  The Notification is transacted as the <code class="highlighter-rouge">[$process-message]</code> operation. The body of the operation is a Message Bundle containing:</p>
+
+<ol>
+  <li>The Message Header which is the first resource in the bundle and contains the the message event code - that identifies the nature of the notification.</li>
+  <li>The other resources in the bundle depend on the type of the notification use case and may be defined by FHIR Profiles.</li>
+</ol>
+
+<p>An HTTP Status success code is returned on successful submission.</p>
+
+<p><strong>Push Notification using the $process-message</strong></p>
+
+<p><code class="highlighter-rouge">POST [base]/$process-message</code></p>
+
+<p><strong>Request body</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType": "Bundle",
+  "id": "admit-notification-message-bundle-01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle"
+    ]
+  },
+  "type": "message",
+  "timestamp": "2019-11-14T08:08:47Z",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:267b18ce-3d37-4581-9baa-6fada338038b",
+      "resource": {
+        "resourceType": "MessageHeader",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: admit-notification-messageheader-01&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;event&lt;/b&gt;: Notification admit (Details: http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event code notification-admit = 'Notification admit', stated as 'Notification admit')&lt;/p&gt;&lt;h3&gt;Destinations&lt;/h3&gt;&lt;table class=\"grid\"&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Endpoint&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Acme Message Gateway&lt;/td&gt;&lt;td&gt;&lt;a href=\"https://example.org/Endpoints/P123\"&gt;https://example.org/Endpoints/P123&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;sender&lt;/b&gt;: &lt;a href=\"urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade\"&gt;Saint Luke W Endpoint&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: &lt;a href=\"urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59\"&gt;Ronald Bone&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Sources&lt;/h3&gt;&lt;table class=\"grid\"&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Software&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Version&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Contact&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Endpoint&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Acme Central Patient Registry&lt;/td&gt;&lt;td&gt;FooBar Patient Manager&lt;/td&gt;&lt;td&gt;3.1.45.AABB&lt;/td&gt;&lt;td&gt;ph: +1 (555) 123 4567&lt;/td&gt;&lt;td&gt;&lt;a href=\"https://example.org/Endpoints/P456\"&gt;https://example.org/Endpoints/P456&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;responsible&lt;/b&gt;: &lt;a href=\"urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade\"&gt;Saint Luke W Endpoint&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: &lt;a href=\"urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7\"&gt;Inpatient Encounter&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"
+        },
+        "eventCoding": {
+          "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event",
+          "code": "notification-admit",
+          "display": "Notification Admit"
+        },
+        "destination": [
+          {
+            "name": "Acme Message Gateway",
+            "endpoint": "https://example.org/Endpoints/P123"
+          }
+        ],
+        "sender": {
+          "reference": "urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade",
+          "display": "Saint Luke W Endpoint"
+        },
+        "author": {
+          "reference": "urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59",
+          "display": "Ronald Bone"
+        },
+        "source": {
+          "name": "Acme Central Patient Registry",
+          "software": "FooBar Patient Manager",
+          "version": "3.1.45.AABB",
+          "contact": {
+            "system": "phone",
+            "value": "+1 (555) 123 4567"
+          },
+          "endpoint": "https://example.org/Endpoints/P456"
+        },
+        "responsible": {
+          "reference": "urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade",
+          "display": "Saint Luke W Endpoint"
+        },
+        "focus": [
+          {
+            "reference": "urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7",
+            "display": "Inpatient Encounter"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7",
+      "resource": {
+        "resourceType": "Encounter",
+        "meta": {
+          "lastUpdated": "2017-05-26T11:56:57.250-04:00",
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-encounter"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: admit-discharge-notification-encounter-01&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: finished&lt;/p&gt;&lt;p&gt;&lt;b&gt;class&lt;/b&gt;: inpatient encounter (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code IMP = 'inpatient encounter', stated as 'inpatient encounter')&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: Inpatient hospital care &lt;span style=\"background: LightGoldenRodYellow\"&gt;(Details : {http://www.ama-assn.org/go/cpt code '99234' = '99234)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\"urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4\"&gt;Amy V. Shaw&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Participants&lt;/h3&gt;&lt;table class=\"grid\"&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Period&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Individual&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;primary performer &lt;span style=\"background: LightGoldenRodYellow\"&gt;(Details : {http://terminology.hl7.org/CodeSystem/v3-ParticipationType code 'PPRF' = 'primary performer)&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Nov 1, 2015, 2:00:14 PM --&amp;gt; Nov 1, 2015, 3:00:14 PM&lt;/td&gt;&lt;td&gt;&lt;a href=\"urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59\"&gt;Ronald Bone&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;period&lt;/b&gt;: Nov 1, 2015, 2:00:14 PM --&amp;gt; Nov 1, 2015, 3:00:14 PM&lt;/p&gt;&lt;h3&gt;Locations&lt;/h3&gt;&lt;table class=\"grid\"&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Location&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;&lt;a href=\"urn:uuid:75ea28b5-74b8-4d9c-9eb5-cfdc10b48fa\"&gt;Health Level Seven International - Amherst&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "IMP",
+          "display": "inpatient encounter"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99234"
+              }
+            ],
+            "text": "Inpatient hospital care"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4",
+          "display": "Amy V. Shaw"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF"
+                  }
+                ],
+                "text": "primary performer"
+              }
+            ],
+            "period": {
+              "start": "2015-11-01T17:00:14-05:00",
+              "end": "2015-11-01T18:00:14-05:00"
+            },
+            "individual": {
+              "reference": "urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59",
+              "display": "Ronald Bone"
+            }
+          }
+        ],
+        "period": {
+          "start": "2015-11-01T17:00:14-05:00",
+          "end": "2015-11-01T18:00:14-05:00"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "urn:uuid:75ea28b5-74b8-4d9c-9eb5-cfdc10b48fa",
+              "display": "Health Level Seven International - Amherst"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:75ea28b5-74b8-4d9c-9eb5-cfdc10b48fa",
+      "resource": {
+        "resourceType": "Location",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: hl7east&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: 29&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Health Level Seven International - Amherst&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: HL7 Headquarters - East&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: ph: (+1) 734-677-7777&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 3300 Washtenaw Avenue, Suite 227 Amherst MA 01002 USA &lt;/p&gt;&lt;h3&gt;Positions&lt;/h3&gt;&lt;table class=\"grid\"&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Longitude&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Latitude&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;-72.519854&lt;/td&gt;&lt;td&gt;42.373222&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;managingOrganization&lt;/b&gt;: Health Level Seven International&lt;/p&gt;&lt;/div&gt;"
+        },
+        "identifier": [
+          {
+            "system": "http://www.acme.org/location",
+            "value": "29"
+          }
+        ],
+        "status": "active",
+        "name": "Health Level Seven International - Amherst",
+        "description": "HL7 Headquarters - East",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(+1) 734-677-7777"
+          }
+        ],
+        "address": {
+          "line": [
+            "3300 Washtenaw Avenue, Suite 227"
+          ],
+          "city": "Amherst",
+          "state": "MA",
+          "postalCode": "01002",
+          "country": "USA"
+        },
+        "position": {
+          "longitude": -72.519854,
+          "latitude": 42.373222
+        },
+        "managingOrganization": {
+          "display": "Health Level Seven International"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: practitioner-1&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: 9941339108, 25456&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Ronald Bone &lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 1003 Healthcare Drive Amherst MA 01002 (HOME)&lt;/p&gt;&lt;/div&gt;"
+        },
+        "identifier": [
+          {
+            "system": "http://hl7.org.fhir/sid/us-npi",
+            "value": "9941339108"
+          },
+          {
+            "system": "http://www.acme.org/practitioners",
+            "value": "25456"
+          }
+        ],
+        "name": [
+          {
+            "family": "Bone",
+            "given": [
+              "Ronald"
+            ],
+            "prefix": [
+              "Dr"
+            ]
+          }
+        ],
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "1003 Healthcare Drive"
+            ],
+            "city": "Amherst",
+            "state": "MA",
+            "postalCode": "01002"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;Generated Narrative with Details&lt;/b&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;id&lt;/b&gt;: example&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;identifier&lt;/b&gt;: Medical Record Number = 1032702 (USUAL)&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;active&lt;/b&gt;: true&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;name&lt;/b&gt;: Amy V. Shaw &lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;telecom&lt;/b&gt;: ph: 555-555-5555(HOME), amy.shaw@example.com&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;gender&lt;/b&gt;: &lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;birthsex&lt;/b&gt;: Female&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;birthDate&lt;/b&gt;: Feb 20, 2007&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;address&lt;/b&gt;: 49 Meadow St Mounds OK 74047 US &lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;race&lt;/b&gt;: White, American Indian or Alaska Native, Asian, Shoshone, Filipino&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;ethnicity&lt;/b&gt;: Hispanic or Latino, Dominican, Mexican&lt;/p&gt;\n\t\t\t\t\t&lt;/div&gt;"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "1002-5",
+                  "display": "American Indian or Alaska Native"
+                }
+              },
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2028-9",
+                  "display": "Asian"
+                }
+              },
+              {
+                "url": "detailed",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "1586-7",
+                  "display": "Shoshone"
+                }
+              },
+              {
+                "url": "detailed",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2036-2",
+                  "display": "Filipino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Mixed"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2135-2",
+                  "display": "Hispanic or Latino"
+                }
+              },
+              {
+                "url": "detailed",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2184-0",
+                  "display": "Dominican"
+                }
+              },
+              {
+                "url": "detailed",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2148-5",
+                  "display": "Mexican"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Hispanic or Latino"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "F"
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ],
+              "text": "Medical Record Number"
+            },
+            "system": "http://hospital.smarthealthit.org",
+            "value": "1032702"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Shaw",
+            "given": [
+              "Amy",
+              "V."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-555-5555",
+            "use": "home"
+          },
+          {
+            "system": "email",
+            "value": "amy.shaw@example.com"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "2007-02-20",
+        "address": [
+          {
+            "line": [
+              "49 Meadow St"
+            ],
+            "city": "Mounds",
+            "state": "OK",
+            "postalCode": "74047",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c470de5b-345c-4945-bc4a-cbdec7d86f54",
+      "resource": {
+        "resourceType": "Coverage",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-coverage"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: admit-discharge-notification-coverage-01&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;:     DZW9200000000&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;:     active&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: health insurance plan policy &lt;span style=\"background: LightGoldenRodYellow\"&gt;(Details : {    http://terminology.hl7.org/CodeSystem/v3-ActCode code '    HIP' = 'health insurance plan policy', given as 'health insurance plan policy'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subscriber&lt;/b&gt;: &lt;a href=\"urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4\"&gt;    urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subscriberId&lt;/b&gt;:     DZW9200000000&lt;/p&gt;&lt;p&gt;&lt;b&gt;beneficiary&lt;/b&gt;: &lt;a href=\"urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4\"&gt;    urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;relationship&lt;/b&gt;:     Self &lt;span style=\"background: LightGoldenRodYellow\"&gt;(Details : {    http://terminology.hl7.org/CodeSystem/subscriber-relationship code '    self' = 'Self', given as '    Self'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;period&lt;/b&gt;: Jan 1, 2016, 12:00:00 AM --&amp;gt; (ongoing)&lt;/p&gt;&lt;p&gt;&lt;b&gt;payor&lt;/b&gt;: Anthem Blue Cross of California&lt;/p&gt;&lt;h3&gt;Classes&lt;/h3&gt;&lt;table class=\"grid\"&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Plan &lt;span style=\"background: LightGoldenRodYellow\"&gt;(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'plan' = 'Plan)&lt;/span&gt;&lt;/td&gt;&lt;td&gt;1FZQ&lt;/td&gt;&lt;td&gt;Bronze D HSA&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+        },
+        "identifier": [
+          {
+            "system": "https://www.anthem.com/ca",
+            "value": "DZW9200000000"
+          }
+        ],
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code": "HIP",
+              "display": "health insurance plan policy"
+            }
+          ]
+        },
+        "subscriber": {
+          "reference": "urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4"
+        },
+        "subscriberId": "DZW9200000000",
+        "beneficiary": {
+          "reference": "urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+              "code": "self",
+              "display": "Self"
+            }
+          ]
+        },
+        "period": {
+          "start": "2016-01-01"
+        },
+        "payor": [
+          {
+            "display": "Anthem Blue Cross of California"
+          }
+        ],
+        "class": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+                  "code": "plan"
+                }
+              ]
+            },
+            "value": "1FZQ",
+            "name": "Bronze D HSA"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:54f0ea3f-dc89-4e71-8d98-8774a5add41e",
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-condition"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: admit-discharge-notification-condition-01&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;clinicalStatus&lt;/b&gt;: Active &lt;span style=\"background: LightGoldenRodYellow\"&gt;(Details : {http://terminology.hl7.org/CodeSystem/condition-clinical code 'active' = 'Active', given as 'Active'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;verificationStatus&lt;/b&gt;: Confirmed &lt;span style=\"background: LightGoldenRodYellow\"&gt;(Details : {http://terminology.hl7.org/CodeSystem/condition-ver-status code 'confirmed' = 'Confirmed', given as 'Confirmed'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: Problem &lt;span style=\"background: LightGoldenRodYellow\"&gt;(Details : {http://terminology.hl7.org/CodeSystem/condition-category code 'problem-list-item' = 'Problem List Item', given as 'Problem List Item'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Single liveborn, born in hospital &lt;span style=\"background: LightGoldenRodYellow\"&gt;(Details : {SNOMED CT code '442311008' = 'Liveborn born in hospital', given as 'Liveborn born in hospital'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\"urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4\"&gt;Amy V. Shaw&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;encounter&lt;/b&gt;: &lt;a href=\"urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7\"&gt;urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;onset&lt;/b&gt;: Aug 10, 2016, 12:00:00 AM&lt;/p&gt;&lt;/div&gt;"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "442311008",
+              "display": "Liveborn born in hospital"
+            }
+          ],
+          "text": "Single liveborn, born in hospital"
+        },
+        "subject": {
+          "reference": "urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4",
+          "display": "Amy V. Shaw"
+        },
+        "encounter": {
+          "reference": "urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7"
+        },
+        "onsetDateTime": "2016-08-10"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;\n            &lt;h1&gt;Organization&lt;/h1&gt;\n            &lt;div&gt;\n                &lt;p&gt;ID: 393872&lt;/p&gt;\n                &lt;p&gt;Name: Saint Luke's Hospital of Kansas City &lt;/p&gt;\n                &lt;p&gt;NPI: 1063494177&lt;/p&gt;\n                &lt;p&gt;Phone:(816)932-2000&lt;/p&gt;\n                &lt;p&gt;Address:4401 Wornall Rd,, MO, 64111&lt;/p&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;"
+        },
+        "contained": [
+          {
+            "resourceType": "Endpoint",
+            "id": "direct",
+            "status": "active",
+            "connectionType": {
+              "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
+              "code": "direct-project"
+            },
+            "name": "Dr. Ronald Bone Direct Address",
+            "managingOrganization": {
+              "reference": "urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade"
+            },
+            "payloadType": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:oid:1.3.6.1.4.1.19376.1.2.3",
+                    "code": "urn:hl7-org:sdwg:ccda-structuredBody:1.1"
+                  }
+                ]
+              }
+            ],
+            "payloadMimeType": [
+              "text/xml"
+            ],
+            "address": "mailto:Interoperability@DirectAddress.com"
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://example.org/fhir/sid/us-npi",
+            "value": "1063494177"
+          },
+          {
+            "system": "http://example.org/fhir/us/argo/sid/us-ein",
+            "value": "00-0000000"
+          }
+        ],
+        "active": true,
+        "name": "Saint Luke's Hospital of Kansas City",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(816)932-2000",
+            "use": "work"
+          },
+          {
+            "system": "other",
+            "value": "http://www.saintlukeshealthsystem.org/locations/saint-lukes-hospital-kansas-city",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "text": "3300 Washtenaw Avenue, Suite 227 Amherst MA 01002",
+            "line": [
+              "4401 Wornall Rd,"
+            ],
+            "city": "Amherst",
+            "state": "MA",
+            "postalCode": "64111"
+          }
+        ],
+        "endpoint": [
+          {
+            "reference": "#direct"
+          }
+        ]
+      }
+    }
+  ]
+}
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#process-message-discharge-example" aria-expanded="false" aria-controls="collapseExample">
+    Click Here To See ExampleDa Vinci Discharge Notification Message
+  </button>
+</p>
+
+<div class="collapse" id="process-message-discharge-example">
+  <div class="card card-body">
+      
+<h3 class="no_toc" id="examples">Examples</h3>
+
+<p><strong>Scenario:</strong></p>
+
+<p>Patient Y has been discharged from Provider X ‘s facility.  Acting in the role of Sender, Provider X notifies Payer Z, who is acting in the Recipient role, of the discharge.  The Notification is transacted as the <code class="highlighter-rouge">[$process-message]</code> operation. The body of the operation is a Message Bundle containing:</p>
+
+<ol>
+  <li>The Message Header which is the first resource in the bundle and contains the the message event code - that identifies the nature of the notification.</li>
+  <li>The other resources in the bundle depend on the type of the notification use case adn may be defined by the FHIR Profiles.</li>
+</ol>
+
+<p>An HTTP Status success code is returned on successful submission.</p>
+
+<p><strong>Push Notification using the $process-message</strong></p>
+
+<p><code class="highlighter-rouge">POST [base]/$process-message</code></p>
+
+<p><strong>Request body</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType": "Bundle",
+  "id": "discharge-notification-message-bundle-01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle"
+    ]
+  },
+  "type": "message",
+  "timestamp": "2019-11-14T08:08:47Z",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:267b18ce-3d37-4581-9baa-6fada338038b",
+      "resource": {
+        "resourceType": "MessageHeader",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;Generated Narrative with Details&lt;/b&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;id&lt;/b&gt;: discharge-notification-messageheader-01&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;meta&lt;/b&gt;:\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;event&lt;/b&gt;: Notification Discharge (Details: http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event code notification-discharge = 'Notification Discharge', stated as 'Notification payloadMimeType')&lt;/p&gt;\n\t\t\t\t\t\t&lt;h3&gt;Destinations&lt;/h3&gt;\n\t\t\t\t\t\t&lt;table class=\"grid\"&gt;\n\t\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;-&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;b&gt;Name&lt;/b&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;b&gt;Endpoint&lt;/b&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t&lt;/tr&gt;\n\t\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;*&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;Acme Message Gateway&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;a href=\"https://example.org/Endpoints/P123\"&gt;https://example.org/Endpoints/P123&lt;/a&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t&lt;/tr&gt;\n\t\t\t\t\t\t&lt;/table&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;sender&lt;/b&gt;:\n\t\t\t\t\t\t\t&lt;a href=\"urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade\"&gt;Saint Luke W Endpoint&lt;/a&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;author&lt;/b&gt;:\n\t\t\t\t\t\t\t&lt;a href=\"urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59\"&gt;Ronald Bone&lt;/a&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;h3&gt;Sources&lt;/h3&gt;\n\t\t\t\t\t\t&lt;table class=\"grid\"&gt;\n\t\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;-&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;b&gt;Name&lt;/b&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;b&gt;Software&lt;/b&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;b&gt;Version&lt;/b&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;b&gt;Contact&lt;/b&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;b&gt;Endpoint&lt;/b&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t&lt;/tr&gt;\n\t\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;*&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;Acme Central Patient Registry&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;FooBar Patient Manager&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;3.1.45.AABB&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;ph: +1 (555) 123 4567&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;a href=\"https://example.org/Endpoints/P456\"&gt;https://example.org/Endpoints/P456&lt;/a&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t&lt;/tr&gt;\n\t\t\t\t\t\t&lt;/table&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;responsible&lt;/b&gt;:\n\t\t\t\t\t\t\t&lt;a href=\"urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade\"&gt;Saint Luke W Endpoint&lt;/a&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;focus&lt;/b&gt;:\n\t\t\t\t\t\t\t&lt;a href=\"urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7\"&gt;Inpatient Encounter&lt;/a&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t&lt;/div&gt;"
+        },
+        "eventCoding": {
+          "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event",
+          "code": "notification-discharge",
+          "display": "Notification Discharge"
+        },
+        "destination": [
+          {
+            "name": "Acme Message Gateway",
+            "endpoint": "https://example.org/Endpoints/P123"
+          }
+        ],
+        "sender": {
+          "reference": "urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade",
+          "display": "Saint Luke W Endpoint"
+        },
+        "author": {
+          "reference": "urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59",
+          "display": "Ronald Bone"
+        },
+        "source": {
+          "name": "Acme Central Patient Registry",
+          "software": "FooBar Patient Manager",
+          "version": "3.1.45.AABB",
+          "contact": {
+            "system": "phone",
+            "value": "+1 (555) 123 4567"
+          },
+          "endpoint": "https://example.org/Endpoints/P456"
+        },
+        "responsible": {
+          "reference": "urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade",
+          "display": "Saint Luke W Endpoint"
+        },
+        "focus": [
+          {
+            "reference": "urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7",
+            "display": "Inpatient Encounter"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7",
+      "resource": {
+        "resourceType": "Encounter",
+        "meta": {
+          "lastUpdated": "2017-05-26T11:56:57.250-04:00",
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-encounter"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;Generated Narrative with Details&lt;/b&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;id&lt;/b&gt;: admit-discharge-notification-encounter-01&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;meta&lt;/b&gt;:\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;status&lt;/b&gt;: finished&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;class&lt;/b&gt;: inpatient encounter (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code IMP = 'inpatient encounter', stated as 'inpatient encounter')&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;type&lt;/b&gt;: Inpatient hospital care\n\t\t\t\t\t\t\t&lt;span style=\"background: LightGoldenRodYellow\"&gt;(Details : {http://www.ama-assn.org/go/cpt code '99234' = '99234)&lt;/span&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;subject&lt;/b&gt;:\n\t\t\t\t\t\t\t&lt;a href=\"urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4\"&gt;Amy V. Shaw&lt;/a&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;h3&gt;Participants&lt;/h3&gt;\n\t\t\t\t\t\t&lt;table class=\"grid\"&gt;\n\t\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;-&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;b&gt;Type&lt;/b&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;b&gt;Period&lt;/b&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;b&gt;Individual&lt;/b&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t&lt;/tr&gt;\n\t\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;*&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;primary performer\n\t\t\t\t\t\t\t\t\t&lt;span style=\"background: LightGoldenRodYellow\"&gt;(Details : {http://terminology.hl7.org/CodeSystem/v3-ParticipationType code 'PPRF' = 'primary performer)&lt;/span&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;Nov 1, 2015, 2:00:14 PM --&amp;gt; Nov 1, 2015, 3:00:14 PM&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;a href=\"urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59\"&gt;Ronald Bone&lt;/a&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t&lt;/tr&gt;\n\t\t\t\t\t\t&lt;/table&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;period&lt;/b&gt;: Nov 1, 2015, 2:00:14 PM --&amp;gt; Nov 1, 2015, 3:00:14 PM&lt;/p&gt;\n\t\t\t\t\t\t&lt;h3&gt;Locations&lt;/h3&gt;\n\t\t\t\t\t\t&lt;table class=\"grid\"&gt;\n\t\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;-&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;b&gt;Location&lt;/b&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t&lt;/tr&gt;\n\t\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;*&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;a href=\"urn:uuid:75ea28b5-74b8-4d9c-9eb5-cfdc10b48fa\"&gt;Health Level Seven International - Amherst&lt;/a&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t&lt;/tr&gt;\n\t\t\t\t\t\t&lt;/table&gt;\n\t\t\t\t\t&lt;/div&gt;"
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "IMP",
+          "display": "inpatient encounter"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99234"
+              }
+            ],
+            "text": "Inpatient hospital care"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4",
+          "display": "Amy V. Shaw"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF"
+                  }
+                ],
+                "text": "primary performer"
+              }
+            ],
+            "period": {
+              "start": "2015-11-01T17:00:14-05:00",
+              "end": "2015-11-01T18:00:14-05:00"
+            },
+            "individual": {
+              "reference": "urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59",
+              "display": "Ronald Bone"
+            }
+          }
+        ],
+        "period": {
+          "start": "2015-11-01T17:00:14-05:00",
+          "end": "2015-11-01T18:00:14-05:00"
+        },
+        "hospitalization": {
+          "dischargeDisposition": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                "code": "home",
+                "display": "Home"
+              }
+            ],
+            "text": "The patient was dicharged to home"
+          }
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "urn:uuid:75ea28b5-74b8-4d9c-9eb5-cfdc10b48fa",
+              "display": "Health Level Seven International - Amherst"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:75ea28b5-74b8-4d9c-9eb5-cfdc10b48fa",
+      "resource": {
+        "resourceType": "Location",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;Generated Narrative with Details&lt;/b&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;id&lt;/b&gt;: hl7east&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;meta&lt;/b&gt;:\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;identifier&lt;/b&gt;: 29&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;name&lt;/b&gt;: Health Level Seven International - Amherst&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;description&lt;/b&gt;: HL7 Headquarters - East&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;telecom&lt;/b&gt;: ph: (+1) 734-677-7777&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;address&lt;/b&gt;: 3300 Washtenaw Avenue, Suite 227 Amherst MA 01002 USA\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;h3&gt;Positions&lt;/h3&gt;\n\t\t\t\t\t\t&lt;table class=\"grid\"&gt;\n\t\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;-&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;b&gt;Longitude&lt;/b&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;b&gt;Latitude&lt;/b&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t&lt;/tr&gt;\n\t\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;*&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;-72.519854&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;42.373222&lt;/td&gt;\n\t\t\t\t\t\t\t&lt;/tr&gt;\n\t\t\t\t\t\t&lt;/table&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;managingOrganization&lt;/b&gt;: Health Level Seven International&lt;/p&gt;\n\t\t\t\t\t&lt;/div&gt;"
+        },
+        "identifier": [
+          {
+            "system": "http://www.acme.org/location",
+            "value": "29"
+          }
+        ],
+        "status": "active",
+        "name": "Health Level Seven International - Amherst",
+        "description": "HL7 Headquarters - East",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(+1) 734-677-7777"
+          }
+        ],
+        "address": {
+          "line": [
+            "3300 Washtenaw Avenue, Suite 227"
+          ],
+          "city": "Amherst",
+          "state": "MA",
+          "postalCode": "01002",
+          "country": "USA"
+        },
+        "position": {
+          "longitude": -72.519854,
+          "latitude": 42.373222
+        },
+        "managingOrganization": {
+          "display": "Health Level Seven International"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e4b71aed-1c54-4f85-bea0-48444aa31f59",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;Generated Narrative with Details&lt;/b&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;id&lt;/b&gt;: practitioner-1&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;meta&lt;/b&gt;:\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;identifier&lt;/b&gt;: 9941339108, 25456&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;name&lt;/b&gt;: Ronald Bone\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;address&lt;/b&gt;: 1003 Healthcare Drive Amherst MA 01002 (HOME)&lt;/p&gt;\n\t\t\t\t\t&lt;/div&gt;"
+        },
+        "identifier": [
+          {
+            "system": "http://hl7.org.fhir/sid/us-npi",
+            "value": "9941339108"
+          },
+          {
+            "system": "http://www.acme.org/practitioners",
+            "value": "25456"
+          }
+        ],
+        "name": [
+          {
+            "family": "Bone",
+            "given": [
+              "Ronald"
+            ],
+            "prefix": [
+              "Dr"
+            ]
+          }
+        ],
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "1003 Healthcare Drive"
+            ],
+            "city": "Amherst",
+            "state": "MA",
+            "postalCode": "01002"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;Generated Narrative with Details&lt;/b&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;id&lt;/b&gt;: example&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;identifier&lt;/b&gt;: Medical Record Number = 1032702 (USUAL)&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;active&lt;/b&gt;: true&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;name&lt;/b&gt;: Amy V. Shaw\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;telecom&lt;/b&gt;: ph: 555-555-5555(HOME), amy.shaw@example.com&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;gender&lt;/b&gt;:\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;birthsex&lt;/b&gt;: Female&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;birthDate&lt;/b&gt;: Feb 20, 2007&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;address&lt;/b&gt;: 49 Meadow St Mounds OK 74047 US\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;race&lt;/b&gt;: White, American Indian or Alaska Native, Asian, Shoshone, Filipino&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;ethnicity&lt;/b&gt;: Hispanic or Latino, Dominican, Mexican&lt;/p&gt;\n\t\t\t\t\t&lt;/div&gt;"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "1002-5",
+                  "display": "American Indian or Alaska Native"
+                }
+              },
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2028-9",
+                  "display": "Asian"
+                }
+              },
+              {
+                "url": "detailed",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "1586-7",
+                  "display": "Shoshone"
+                }
+              },
+              {
+                "url": "detailed",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2036-2",
+                  "display": "Filipino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Mixed"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2135-2",
+                  "display": "Hispanic or Latino"
+                }
+              },
+              {
+                "url": "detailed",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2184-0",
+                  "display": "Dominican"
+                }
+              },
+              {
+                "url": "detailed",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2148-5",
+                  "display": "Mexican"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Hispanic or Latino"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "F"
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ],
+              "text": "Medical Record Number"
+            },
+            "system": "http://hospital.smarthealthit.org",
+            "value": "1032702"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Shaw",
+            "given": [
+              "Amy",
+              "V."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-555-5555",
+            "use": "home"
+          },
+          {
+            "system": "email",
+            "value": "amy.shaw@example.com"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "2007-02-20",
+        "address": [
+          {
+            "line": [
+              "49 Meadow St"
+            ],
+            "city": "Mounds",
+            "state": "OK",
+            "postalCode": "74047",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c470de5b-345c-4945-bc4a-cbdec7d86f54",
+      "resource": {
+        "resourceType": "Coverage",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-coverage"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;Generated Narrative with Details&lt;/b&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;id&lt;/b&gt;: admit-discharge-notification-coverage-01&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;meta&lt;/b&gt;:\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;identifier&lt;/b&gt;: DZW9200000000&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;type&lt;/b&gt;: health insurance plan policy\n\t\t\t\t\t\t\t&lt;span style=\"background: LightGoldenRodYellow\"&gt;(Details : { http://terminology.hl7.org/CodeSystem/v3-ActCode code ' HIP' = 'health insurance plan policy', given as 'health insurance plan policy'})&lt;/span&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;subscriber&lt;/b&gt;:\n\t\t\t\t\t\t\t&lt;a href=\"urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4\"&gt;\n\t\t\t\t\t\t\t\turn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4&lt;/a&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;subscriberId&lt;/b&gt;: DZW9200000000&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;beneficiary&lt;/b&gt;:\n\t\t\t\t\t\t\t&lt;a href=\"urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4\"&gt;\n\t\t\t\t\t\t\t\turn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4&lt;/a&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;relationship&lt;/b&gt;: Self\n\t\t\t\t\t\t\t&lt;span style=\"background: LightGoldenRodYellow\"&gt;(Details : { http://terminology.hl7.org/CodeSystem/subscriber-relationship code ' self' = 'Self', given as ' Self'})&lt;/span&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;period&lt;/b&gt;: Jan 1, 2016, 12:00:00 AM --&amp;gt; (ongoing)&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;payor&lt;/b&gt;: Anthem Blue Cross of California&lt;/p&gt;\n\t\t\t\t\t\t&lt;h3&gt;Classes&lt;/h3&gt;\n\t\t\t\t\t\t&lt;table class=\"grid\"&gt;\n\t\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;-&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;b&gt;Type&lt;/b&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;b&gt;Value&lt;/b&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;\n\t\t\t\t\t\t\t\t\t&lt;b&gt;Name&lt;/b&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t&lt;/tr&gt;\n\t\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;*&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;Plan\n\t\t\t\t\t\t\t\t\t&lt;span style=\"background: LightGoldenRodYellow\"&gt;(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'plan' = 'Plan)&lt;/span&gt;\n\t\t\t\t\t\t\t\t&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;1FZQ&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;td&gt;Bronze D HSA&lt;/td&gt;\n\t\t\t\t\t\t\t&lt;/tr&gt;\n\t\t\t\t\t\t&lt;/table&gt;\n\t\t\t\t\t&lt;/div&gt;"
+        },
+        "identifier": [
+          {
+            "system": "https://www.anthem.com/ca",
+            "value": "DZW9200000000"
+          }
+        ],
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code": "HIP",
+              "display": "health insurance plan policy"
+            }
+          ]
+        },
+        "subscriber": {
+          "reference": "urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4"
+        },
+        "subscriberId": "DZW9200000000",
+        "beneficiary": {
+          "reference": "urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+              "code": "self",
+              "display": "Self"
+            }
+          ]
+        },
+        "period": {
+          "start": "2016-01-01"
+        },
+        "payor": [
+          {
+            "display": "Anthem Blue Cross of California"
+          }
+        ],
+        "class": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+                  "code": "plan"
+                }
+              ]
+            },
+            "value": "1FZQ",
+            "name": "Bronze D HSA"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:54f0ea3f-dc89-4e71-8d98-8774a5add41e",
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-condition"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;Generated Narrative with Details&lt;/b&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;id&lt;/b&gt;: admit-discharge-notification-condition-01&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;meta&lt;/b&gt;:\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;clinicalStatus&lt;/b&gt;: Active\n\t\t\t\t\t\t\t&lt;span style=\"background: LightGoldenRodYellow\"&gt;(Details : {http://terminology.hl7.org/CodeSystem/condition-clinical code 'active' = 'Active', given as 'Active'})&lt;/span&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;verificationStatus&lt;/b&gt;: Confirmed\n\t\t\t\t\t\t\t&lt;span style=\"background: LightGoldenRodYellow\"&gt;(Details : {http://terminology.hl7.org/CodeSystem/condition-ver-status code 'confirmed' = 'Confirmed', given as 'Confirmed'})&lt;/span&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;category&lt;/b&gt;: Problem\n\t\t\t\t\t\t\t&lt;span style=\"background: LightGoldenRodYellow\"&gt;(Details : {http://terminology.hl7.org/CodeSystem/condition-category code 'problem-list-item' = 'Problem List Item', given as 'Problem List Item'})&lt;/span&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;code&lt;/b&gt;: Single liveborn, born in hospital\n\t\t\t\t\t\t\t&lt;span style=\"background: LightGoldenRodYellow\"&gt;(Details : {SNOMED CT code '442311008' = 'Liveborn born in hospital', given as 'Liveborn born in hospital'})&lt;/span&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;subject&lt;/b&gt;:\n\t\t\t\t\t\t\t&lt;a href=\"urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4\"&gt;Amy V. Shaw&lt;/a&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;encounter&lt;/b&gt;:\n\t\t\t\t\t\t\t&lt;a href=\"urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7\"&gt;urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7&lt;/a&gt;\n\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t&lt;p&gt;\n\t\t\t\t\t\t\t&lt;b&gt;onset&lt;/b&gt;: Aug 10, 2016, 12:00:00 AM&lt;/p&gt;\n\t\t\t\t\t&lt;/div&gt;"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "442311008",
+              "display": "Liveborn born in hospital"
+            }
+          ],
+          "text": "Single liveborn, born in hospital"
+        },
+        "subject": {
+          "reference": "urn:uuid:e442c924-df77-47fa-838f-24a8253bbdd4",
+          "display": "Amy V. Shaw"
+        },
+        "encounter": {
+          "reference": "urn:uuid:a33d1eed-c4ad-4def-8087-042b7ac0f2b7"
+        },
+        "onsetDateTime": "2016-08-10"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;\n\t\t\t\t\t\t&lt;h1&gt;Organization&lt;/h1&gt;\n\t\t\t\t\t\t&lt;div&gt;\n\t\t\t\t\t\t\t&lt;p&gt;ID: 393872&lt;/p&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Name: Saint Luke's Hospital of Kansas City\n\t\t\t\t\t\t\t&lt;/p&gt;\n\t\t\t\t\t\t\t&lt;p&gt;NPI: 1063494177&lt;/p&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Phone:(816)932-2000&lt;/p&gt;\n\t\t\t\t\t\t\t&lt;p&gt;Address:4401 Wornall Rd,, MO, 64111&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;"
+        },
+        "contained": [
+          {
+            "resourceType": "Endpoint",
+            "id": "direct",
+            "status": "active",
+            "connectionType": {
+              "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
+              "code": "direct-project"
+            },
+            "name": "Dr. Ronald Bone Direct Address",
+            "managingOrganization": {
+              "reference": "urn:uuid:7221aa91-d9e1-44fa-8b90-c5a8c7caeade"
+            },
+            "payloadType": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:oid:1.3.6.1.4.1.19376.1.2.3",
+                    "code": "urn:hl7-org:sdwg:ccda-structuredBody:1.1"
+                  }
+                ]
+              }
+            ],
+            "payloadMimeType": [
+              "text/xml"
+            ],
+            "address": "mailto:Interoperability@DirectAddress.com"
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://example.org/fhir/sid/us-npi",
+            "value": "1063494177"
+          },
+          {
+            "system": "http://example.org/fhir/us/argo/sid/us-ein",
+            "value": "00-0000000"
+          }
+        ],
+        "active": true,
+        "name": "Saint Luke's Hospital of Kansas City",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(816)932-2000",
+            "use": "work"
+          },
+          {
+            "system": "other",
+            "value": "http://www.saintlukeshealthsystem.org/locations/saint-lukes-hospital-kansas-city",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "text": "3300 Washtenaw Avenue, Suite 227 Amherst MA 01002",
+            "line": [
+              "4401 Wornall Rd,"
+            ],
+            "city": "Amherst",
+            "state": "MA",
+            "postalCode": "64111"
+          }
+        ],
+        "endpoint": [
+          {
+            "reference": "#direct"
+          }
+        ]
+      }
+    }
+  ]
+}
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<hr />
+
+<!--
+
+### FHIR Subscription Based Notification
+
+The interaction diagram in figure 5 and 6 on the [Framework] page illustrates the sequences of events for subscribing for ADT Notifications and the subsequent notifications when the the event occurs.
+
+{:.note-to-balloters}
+Note to Balloters: We are actively seeking input on what additional work is needed to determine the best way to implement subscriptions for notification notification. See the [FHIR Subscription Based Notification] framework for further details.
+
+-->
+
+:ET

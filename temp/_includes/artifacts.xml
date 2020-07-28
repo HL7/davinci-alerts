@@ -8,25 +8,16 @@
          <a href="#1">Behavior: Capability Statements</a>
       </li>
       <li>
-         <a href="#2">Behavior: Message Definitions</a>
+         <a href="#2">Structures: Resource Profiles</a>
       </li>
       <li>
-         <a href="#3">Structures: Graph Definitions</a>
+         <a href="#3">Terminology: Value Sets</a>
       </li>
       <li>
-         <a href="#4">Structures: Resource Profiles</a>
+         <a href="#4">Terminology: Code Systems</a>
       </li>
       <li>
-         <a href="#5">Structures: Extension Definitions</a>
-      </li>
-      <li>
-         <a href="#6">Terminology: Value Sets</a>
-      </li>
-      <li>
-         <a href="#7">Terminology: Code Systems</a>
-      </li>
-      <li>
-         <a href="#8">Example: Example Instances</a>
+         <a href="#5">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -73,45 +64,6 @@
       </table>
    </p>
    <a name="2"> </a>
-   <h3>Behavior: Message Definitions </h3>
-   <p>These define the types of messages that can be sent and/or received by systems complying with this implementation guide</p>
-   <p>
-      <table class="grid">
-         <col style="width:20%"/>
-         <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="MessageDefinition-notification-admit.html"
-                     title="MessageDefinition/notification-admit">Da Vinci Notification Admit Message Definition</a>
-               </td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="MessageDefinition-notification-discharge.html"
-                     title="MessageDefinition/notification-discharge">Da Vinci Notification Discharge Message Definition</a>
-               </td>
-            </tr>
-         </tbody>
-      </table>
-   </p>
-   <a name="3"> </a>
-   <h3>Structures: Graph Definitions </h3>
-   <p>These define collections of interrelated resources that are useful to pass around as a group</p>
-   <p>
-      <table class="grid">
-         <col style="width:20%"/>
-         <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="GraphDefinition-admit-discharge.html"
-                     title="GraphDefinition/admit-discharge">GraphDefinition/admit-discharge</a>
-               </td>
-               <td>Defines message bundle graph for Da Vinci Notifications patient admission and discharge notification scenarios</td>
-            </tr>
-         </tbody>
-      </table>
-   </p>
-   <a name="4"> </a>
    <h3>Structures: Resource Profiles </h3>
    <p>These define constraints on FHIR resources that need to be complied with by conformant implementations</p>
    <p>
@@ -162,48 +114,15 @@
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-notifications-messagedefinition.html"
-                     title="StructureDefinition/notifications-messagedefinition">Da Vinci Notifications MessageDefinition Profile</a>
-               </td>
-               <td>The Da Vinci Notifications MessageDefinition Profile sets minimum expectations for the FHIR [MessageDefinition] resource to define the characteristics of a message that can be shared between systems for Da Vinci notification messaging.  It includes the type of event that initiates the message and the content to be transmitted as well as other metadata information related to the definition.</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
                   <a href="StructureDefinition-notifications-messageheader.html"
                      title="StructureDefinition/notifications-messageheader">Da Vinci Notifications MessageHeader Profile</a>
                </td>
                <td>The Da Vinci Notifications MessageHeader Profile sets minimum expectations for the FHIR [MessageHeader] resource to record the necessary context for Da Vinci notification messaging using FHIR resources.  It references the focus of the use case event or request as well as other information related to the action typically transmitted in a [Bundle] resource in which the MessageHeader resource instance is the first resource in the Bundle.</td>
             </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-notifications-graphdefinition.html"
-                     title="StructureDefinition/notifications-graphdefinition">Da Vinci Notifications GraphDefinition Profile</a>
-               </td>
-               <td>The Da Vinci Notifications GraphDefinition Profile adds the capability to set "mustSupport" expectectations for  links in the FHIR [GraphDefinition] resource to define usage conformance in an implementation specific manner. This extension is used in the similar way as the [ElementDefinition.mustSupport] in the FHIR specification.</td>
-            </tr>
          </tbody>
       </table>
    </p>
-   <a name="5"> </a>
-   <h3>Structures: Extension Definitions </h3>
-   <p>These define constraints on FHIR data types that need to be complied with by conformant implementations</p>
-   <p>
-      <table class="grid">
-         <col style="width:20%"/>
-         <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-extension-mustSupport.html"
-                     title="StructureDefinition/extension-mustSupport">Da Vinci Notifications Must Support Extension</a>
-               </td>
-               <td>If "true", implementations that produce or consume a resource defined by the GraphDefinition SHALL provide support for the link in some context dependent meaningful way. If "false", the link may be ignored and not supported and the whether to populate or use in any way is at the discretion of the implementation. If the extension is missing the link is assumed to be mustSupport = "false".  It **SHALL** be made clear through additional documentation exactly what kind of support is required, as this can mean many things depending on the use case.
-
-Note that this extension is analogous to the [ElementDefinition.mustSupport] in the FHIR specification.</td>
-            </tr>
-         </tbody>
-      </table>
-   </p>
-   <a name="6"> </a>
+   <a name="3"> </a>
    <h3>Terminology: Value Sets </h3>
    <p>These define sets of codes used by systems conforming with this implementation guide</p>
    <p>
@@ -234,7 +153,7 @@ Note that this extension is analogous to the [ElementDefinition.mustSupport] in 
          </tbody>
       </table>
    </p>
-   <a name="7"> </a>
+   <a name="4"> </a>
    <h3>Terminology: Code Systems </h3>
    <p>These define new code systems used by systems conforming with this implementation guide</p>
    <p>
@@ -251,7 +170,7 @@ Note that this extension is analogous to the [ElementDefinition.mustSupport] in 
          </tbody>
       </table>
    </p>
-   <a name="8"> </a>
+   <a name="5"> </a>
    <h3>Example: Example Instances </h3>
    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like</p>
    <p>

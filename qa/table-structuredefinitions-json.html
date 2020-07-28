@@ -4,8 +4,6 @@
   <link rel="stylesheet" href="fhir.css"/>
 </head>
 <body>
- <tr><td><a href="StructureDefinition-notifications-graphdefinition.json.html">Da Vinci Notifications GraphDefinition Profile</a> </td><td><p>The Da Vinci Notifications GraphDefinition Profile adds the capability to set &quot;mustSupport&quot; expectectations for  links in the FHIR [GraphDefinition] resource to define usage conformance in an implementation specific manner. This extension is used in the similar way as the [ElementDefinition.mustSupport] in the FHIR specification.</p>
-</td></tr>
  <tr><td><a href="StructureDefinition-notifications-messageheader.json.html">Da Vinci Notifications MessageHeader Profile</a> </td><td><p>The Da Vinci Notifications MessageHeader Profile sets minimum expectations for the FHIR [MessageHeader] resource to record the necessary context for Da Vinci notification messaging using FHIR resources.  It references the focus of the use case event or request as well as other information related to the action typically transmitted in a [Bundle] resource in which the MessageHeader resource instance is the first resource in the Bundle.</p>
 </td></tr>
  <tr><td><a href="StructureDefinition-admit-notification-messageheader.json.html">Da Vinci Admit Notification MessageHeader Profile</a> </td><td><p>The Da Vinci Admit Notification MessageHeader Profile builds on  the [Da Vinci Notifications MessageHeader Profile] and sets minimum expectations for the FHIR [MessageHeader] resource to record the necessary context for Da Vinci admit notification messaging scenario.  The event code is &quot;notification-admit&quot; and the focus of the event is the [US Core Encounter Profile].</p>
@@ -14,16 +12,11 @@
 </td></tr>
  <tr><td><a href="StructureDefinition-discharge-notification-messageheader.json.html">Da Vinci Discharge Notification MessageHeader Profile</a> </td><td><p>The Da Vinci Discharge Notification MessageHeader Profile  builds on  the [Da Vinci Notifications MessageHeader Profile] and sets  minimum expectations for the FHIR [MessageHeader] resource to record the necessary context for Da Vinci discharge notification messaging scenario.  The event code is &quot;notification-discharge&quot; and the focus of the event is the [US Core Encounter Profile].</p>
 </td></tr>
- <tr><td><a href="StructureDefinition-extension-mustSupport.json.html">Da Vinci Notifications Must Support Extension</a> </td><td><p>If &quot;true&quot;, implementations that produce or consume a resource defined by the GraphDefinition SHALL provide support for the link in some context dependent meaningful way. If &quot;false&quot;, the link may be ignored and not supported and the whether to populate or use in any way is at the discretion of the implementation. If the extension is missing the link is assumed to be mustSupport = &quot;false&quot;.  It <strong>SHALL</strong> be made clear through additional documentation exactly what kind of support is required, as this can mean many things depending on the use case.</p>
-<p>Note that this extension is analogous to the [ElementDefinition.mustSupport] in the FHIR specification.</p>
-</td></tr>
  <tr><td><a href="StructureDefinition-admit-discharge-notification-encounter.json.html">Da Vinci Admit/Discharge Notification Encounter Profile</a> </td><td><p>The Da Vinci Admit Notification Encounter Profile is based on the [US Core Encounter Profile] and and constrains the resources referenced by the <code>Encounter.Subject</code>,<code>Encounter.Location</code>, and <code>Encounter.participant.individual</code>  to be found in the same message Bundle.  In addition, the Location reference is constrained to the [US Core Location Profile]</p>
 </td></tr>
  <tr><td><a href="StructureDefinition-admit-discharge-notification-condition.json.html">Da Vinci Admit/Discharge Notification Condition Profile</a> </td><td><p>The Da Vinci Admit Notification Condition Profile is based on the [US Core Condition Profile] and adds the mandatory <code>Condition.encounter</code> element which references the [US Core Encounter Profile] in the same message Bundle.</p>
 </td></tr>
  <tr><td><a href="StructureDefinition-notifications-bundle.json.html">Da Vinci Notifications Bundle Profile</a> </td><td><p>The Da Vinci Notifications Bundle Profile constrains the FHIR [Bundle] resource to the Da Vinci notification messaging framework.</p>
-</td></tr>
- <tr><td><a href="StructureDefinition-notifications-messagedefinition.json.html">Da Vinci Notifications MessageDefinition Profile</a> </td><td><p>The Da Vinci Notifications MessageDefinition Profile sets minimum expectations for the FHIR [MessageDefinition] resource to define the characteristics of a message that can be shared between systems for Da Vinci notification messaging.  It includes the type of event that initiates the message and the content to be transmitted as well as other metadata information related to the definition.</p>
 </td></tr>
 </body>
 </html>

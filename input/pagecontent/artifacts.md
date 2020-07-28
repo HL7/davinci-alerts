@@ -1,6 +1,6 @@
 
 - [Profiles]
-- [Message Definitions]
+<!-- - [Message Definitions] -->
 - [Terminology]
 - [Capability Statements]
 
