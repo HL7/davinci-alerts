@@ -121,8 +121,8 @@ A use case specific Da Vinci Notification Bundles is defined using the base cons
 See the Admit/Discharge use case for an example of using MessageDefinition and GraphDefinition to define the Bundle.
 -->
 
-MessageBundles and GraphDefinition reosurce are alternative to using profiles to define the message bundles contents. However, at the time of this publication, the implementation community, reference implementations, and validation tooling does not fully support them.
-{:.note-to-balloters}
+MessageBundles and GraphDefinition resource are alternative to using profiles to define the message bundles contents. However, at the time of this publication, the implementation community, reference implementations, and validation tooling does not fully support them.
+{:.stu-note}
 
 <!--
 
@@ -236,6 +236,7 @@ All elements in the Da Vinci Notification profiles have a [MustSupport flag]. Sy
 
 - The Recipient SHALL be able to process resource instances containing missing data elements and data elements asserting missing information without generating an error or causing the application to fail.
 
+<!--
 #### GraphDefinition
 
 All elements in the Da Vinci Notification GraphDefinition have a [Da Vinci Notifications Must Support Extension]. Systems claiming to conform to a GraphDefinition must "support" the link as defined below:
@@ -261,6 +262,7 @@ All elements in the Da Vinci Notification GraphDefinition have a [Da Vinci Notif
 - In situations where information on a particular data element is not needed or considered protected information the Intermediary MAY remove the profile instance from the bundle when distributing the notification. The Intermediary MAY provide the reason for the missing information using the dataAbsentReason extension.
 
 - The Recipient SHALL be able to process bundle instances containing missing profiles and data elements asserting missing information without generating an error or causing the application to fail.
+-->
 
 ---
 

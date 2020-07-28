@@ -68,8 +68,8 @@
       "base": "{{[type]}}-{{[id]}}.html",
       "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
       "list-types": "CodeSystem|ValueSet",
-      "template-history": "template/layouts/layout-history.html",
-      "history": "{{[type]}}-{{[id]}}.change.history.html"
+      "template-change-history": "template/layouts/layout-changehistory.html",
+      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
     },
     "example": {
       "java": false,
@@ -77,7 +77,7 @@
       "template-format": "template/layouts/layout-instance-format.html",
       "base": "{{[type]}}-{{[id]}}.html",
       "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
-      "template-history": "template/layouts/layout-history.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
       "change-history": "{{[type]}}-{{[id]}}.change.history.html"
     },
     "ImplementationGuide": {
@@ -125,7 +125,7 @@
     "CodeSystem": {
       "template-base": "template/layouts/layout-codesystem.html",
       "template-format": "template/layouts/layout-instance-format.html",
-      "template-history": "template/layouts/layout-history.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
       "base": "{{[type]}}-{{[id]}}.html",
       "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
       "change-history": "{{[type]}}-{{[id]}}.change.history.html"
@@ -133,7 +133,7 @@
     "ConceptMap": {
       "template-base": "template/layouts/layout-conceptmap.html",
       "template-format": "template/layouts/layout-instance-format.html",
-      "template-history": "template/layouts/layout-history.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
       "base": "{{[type]}}-{{[id]}}.html",
       "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
       "change-history": "{{[type]}}-{{[id]}}.change.history.html"
