@@ -1,2 +1,0 @@
-I"×<p>The Da Vinci Admit Notification Encounter Profile is based on the [US Core Encounter Profile] and and constrains the resources referenced by the <code class="highlighter-rouge">Encounter.Subject</code>,<code class="highlighter-rouge">Encounter.Location</code>, and <code class="highlighter-rouge">Encounter.participant.individual</code>  to be found in the same message Bundle.  In addition, the Location reference is constrained to the [US Core Location Profile]</p>
-:ET
