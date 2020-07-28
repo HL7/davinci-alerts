@@ -27,9 +27,6 @@ The following Profiles for FHIR *resources* have been defined for this implement
   {%- endif -%}
 {%- endfor -%}
 
-{% endraw %} -->
-
-
 
 ### Extensions
 
@@ -38,5 +35,7 @@ The following Extensions have been defined for this implementation guide.
 - [Da Vinci Notifications Must Support Extension]
 
 <br />
+
+{% endraw %} -->
 
 {% include link-list.md %}
