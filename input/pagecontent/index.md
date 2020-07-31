@@ -49,9 +49,9 @@ The following table summarizes the technical scope of this guide:
 
 ---
 
-- What constitutes a trigger (nature of the event as defined in
-your organization)
-   - Including alerts without an event
+- The business rules and workflow surrounding when a notification is triggered  
+   - These are considered implementation specific details
+   - This includes notifications that are not associated with a particular event
 - Creation and Management of the list of Recipients
 - Creation of the FHIR equivalent of v2 Messaging
 - Distribution beyond FHIR Endpoints (e.g. SMS, email)
