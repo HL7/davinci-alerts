@@ -10,6 +10,7 @@ The first official published version of the DEQM IG for FHIR R4.
   1. Various Technical Corrections and Corrections to Typographical Errors
   1.  updated examples
   1. Remove MessageDefintion and GraphDefinition profile and references to them ([FHIR-NNNNN](https://jira.hl7.org/browse/FHIR-))
+  1. Update Guidance on [Errors and ReliablDelivery](guidance.html#reliable-delivery) [FHIR-26165](https://jira.hl7.org/browse/FHIR-26165).
 
 
 ### Changes and Updates for version 0.2.0
