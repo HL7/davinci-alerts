@@ -11,6 +11,9 @@ The first official published version of the DEQM IG for FHIR R4.
   1.  updated examples
   1. Remove MessageDefintion and GraphDefinition profile and references to them ([FHIR-NNNNN](https://jira.hl7.org/browse/FHIR-))
   1. Update Guidance on [Errors and ReliablDelivery](guidance.html#reliable-delivery) ([FHIR-26165](https://jira.hl7.org/browse/FHIR-26165), [FHIR-26201](https://jira.hl7.org/browse/FHIR-26201)).
+  1. Update [Scope and Usage](index.html#scope-and-usage)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200)).
+  1. Update [Precondition and Assumptions](guidance.html#precondition-and-assumptions)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200)).
+  1. Update introduction to the [The Da Vinci Notification Message Bundle](guidance.html#the-da-vinci-notification-message-bundle)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200)).
 
 
 ### Changes and Updates for version 0.2.0
