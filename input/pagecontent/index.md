@@ -1,9 +1,4 @@
 
-{:.note-to-balloters}
-This Implementation Guide was originally named
-*Da Vinci Alerts Implementation Guide* - after review by several HL7 workgroups, it was felt that the term "alerts" has a specific meaning to many people that was not the same as the contents of this guide.  Therefore the title of this IG has been changed to *Da Vinci Unsolicited Notifications Implementation Guide*.  Be aware that there are several technical artifacts such as the canonical base, the npm package name and the history page url that cannot be changed and still retain the word "alerts" in their paths.
-
-
 This implementation guide describes a method for the communication of relevant notifications to support the real-time exchange of information that impacts patient care and value based or risk based services.  Providers and Payers may need to be alerted when activities occur that impact a patient's care. This may be as traditional as a notification of an admission to or a discharge from a care setting. It also includes notifications about changes in treatment such as a new or different medication, or  changes in patient status like a new diagnosis. These notifications provide information that can improve care management and care coordination as well as act as the trigger for quality programs and other patient focused activities (for example, risk adjustment).  By allowing the patient's healthcare providers to be better informed and able to take actions and intervene earlier, the twin goals of better patient care and reduced cost of care may be met.
 
 The [2019 CMS 45 CFR Part 156 NPRM] focuses on hospitalization notifications due to significant issues that can occur if a patient is not followed appropriately after acute care. The HL7 Da Vinci Project has responded to this need by supporting the effort to provide a FHIR based standard for adoption by both providers and payers.  It is anticipated that the burden of communicating the notification is also reduced by using FHIR.   This Guide defines a FHIR messaging based paradigm and framework to establish consistently adoptable and reproducible methods to exchange notifications. This framework is demonstrated using the patient admission and discharge event use case to generate unsolicited notifications to the care team.
@@ -26,7 +21,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 ### Scope and Usage
 
-The goal of this Implementation Guide is to define a technical framework for sending unsolicited  notifications to the appropriate actors when triggered by an event or request.  The notifications should provide enough information to understand what the notification is about and to enable the Recipient to determine if and what additional steps they need to take in response to the notification.  For example, additional steps may include:
+The goal of this Implementation Guide is to define a technical framework for sending unsolicited notifications to the appropriate actors when triggered by an event or request.   Note that what is being communicated is a *notification* and not an *alert* which often has the expectation that something needs to be done. The assumption is that data is being transferred but not the responsibility.  The data recipient determines the action it takes based upon the information it receives.  The notifications should provide enough information to understand what the notification is about and to enable the Recipient to determine if and what additional steps they need to take in response to the notification.  For example, additional steps may include:
 
 - a request for more information from the Sender through a FHIR RESTful query
 - creation of an encounter record in the receiving system with appropriate provenance
@@ -37,6 +32,9 @@ The following table summarizes the technical scope of this guide:
 <div class="row">
 <div class="col-sm-6" markdown="1" style="background-color: Lightcyan;">
 **In Scope**
+
+---
+
 -  Define a common FHIR messaging Bundle that is exchanged for all Notifications.
 -  Define the FHIR transactions and minimum operational behavior for the relevant Actors
 - Define how to define and share the minimal data elements needed to support the information needs for an initial set of use cases starting with the patient admission and discharge event use case.  
@@ -54,7 +52,7 @@ The following table summarizes the technical scope of this guide:
 - What constitutes a trigger (nature of the event as defined in
 your organization)
    - Including alerts without an event
-- “Endpoint Discovery” and maintenance
+- Creation and Management of the list of Recipients
 - Creation of the FHIR equivalent of v2 Messaging
 - Distribution beyond FHIR Endpoints (e.g. SMS, email)
 - Bidirectional Work, such as Gaps in Care

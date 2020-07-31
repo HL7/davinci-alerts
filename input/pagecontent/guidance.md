@@ -21,6 +21,7 @@ This project recognizes the impact of the [Argonaut Clinical Data Subscriptions]
 - A Notification will be generated for each patient separately.
   - The event can be for one or more patients.
 - The Sender has access to the Recipients/Intermediary FHIR endpoints.
+  - Typically the discovery and management of this is an 'out-of-band' process
 - System level trust exists between the actors (refer to the [Security] Page for additional guidance).
   - Clients have been authorized by the servers.
   - It is assumed that consent is managed elsewhere.
@@ -37,7 +38,7 @@ This project recognizes the impact of the [Argonaut Clinical Data Subscriptions]
 
 - Based on FHIR R4 and US Core R4 profiles where applicable.
 - Notifications are transacted to the `$process-message` operation endpoint.
-- The Da Vinci Notification Message Bundle Profile is the FHIR object that is exchanged for all notifaction transactions.
+- The Da Vinci Notification Message Bundle Profile is the FHIR object that is exchanged for all notification transactions.
 
 ---
 
@@ -48,7 +49,7 @@ This project recognizes the impact of the [Argonaut Clinical Data Subscriptions]
 
 ### The Da Vinci Notification Message Bundle
 
-For every notification, the object that is exchanged is a [FHIR message Bundle]. It consists of a Bundle identified by the type "message", with the first resource in the bundle being a [MessageHeader] resource. The MessageHeader resource has a code - the message event - that identifies the reason for the notification.  The MessageHeader also carries additional notification metadata. The other resources in the bundle depend on the notification scenario and form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references.
+For every notification, the object that is exchanged is a [FHIR message Bundle]. It consists of a Bundle identified by the type "message", with the first resource in the bundle being a [MessageHeader] resource. The MessageHeader resource has a code - the message event - that identifies the reason for the notification. The Recipient/Intermediary may determine how to process the Notification based this event code.  The MessageHeader also carries additional notification metadata. The other resources in the bundle depend on the notification scenario and form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references.
 
 #### The Da Vinci Notification Message Event Code
 {:.no_toc}
