@@ -188,7 +188,7 @@ See the Admit/Discharge scenario [Example Transaction] for an example of using t
 
 ### Reliable Delivery
 
-Upon receiving a message, the Receiver/Intermediary may return one of several status codes which is documented in [`$process-message`] definition.  For successful transactions  `200`, `202`, or `204` **SHALL** be used.  The following table defines the Sender behavior in response to the following error codes:
+Upon receiving a message, the Receiver/Intermediary may return one of several status codes which is documented in [`$process-message`] definition.  For successful transactions  `200`, `202`, or `204` **SHALL** be used.  If and error occurs, an [OperationOutcome] **SHOULD** be returned with details documenting the error. The following table defines the Sender behavior in response to the following error codes:
 
 |Error Code|Sender Behavior|
 |---|---|
@@ -196,7 +196,7 @@ Upon receiving a message, the Receiver/Intermediary may return one of several st
 |`429` +/- OperationOutcome  |resend message but slow down traffic|
 |`500+` +/- OperationOutcome |may retry resending the message one or more times|
 
-See the [messaging documentation](http://hl7.org/fhir/messaging.html#reliable) in FHIR Specification for additional guidance on reliable delivery for FHIR messaging.
+See the messaging documentation in FHIR Specification for additional guidance on [reliable delivery].
 
 ### Must Support
 
