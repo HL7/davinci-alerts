@@ -1,7 +1,7 @@
 {
     "id": "query-requester",
     "text": {
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">Query Requester CapabilityStatement</h2><ul><li>Implementation Guide Version: 0.1.0</li><li>FHIR Version: 4.0.0</li><li>Supported formats: xml, json</li><li>Published: 2020-02-19</li><li>Published by: HL7 International - Infrastructure and Messaging Work Group</li></ul><p><p>This CapabilityStatement describes the expected capabilities of a client that is capable of responding a Da Vinci Notification with a  follow up FHIR RESTful query to the Sender.  These expectations are the same as described in the <em>HL7 FHIR\u00ae US Core Implementation Guide STU3 Release 3.1.0</em> <a href=\"http://hl7.org/fhir/us/core/STU3.1/CapabilityStatement-us-core-client.html\">CapabiltyStatement for the US Core Client</a></p></p><h3 class=\"no_toc\" id=\"igs\">SHALL Support the Following Implementation Guides:</h3><ul><li><a href=\"http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.0\">http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.0</a></li></ul><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>Refer to the  <em>HL7 FHIR\u00ae US Core Implementation Guide STU3 Release 3.1.0</em> CapabiltyStatement for the US Core Client</p><br></br></div>",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">Query Requester CapabilityStatement</h2><ul><li>Implementation Guide Version: 1.0.0</li><li>FHIR Version: 4.0.1</li><li>Supported formats: xml, json</li><li>Published: 2020-07-30</li><li>Published by: HL7 International - Infrastructure and Messaging Work Group</li></ul><p><p>This CapabilityStatement describes the expected capabilities of a client that is capable of responding a Da Vinci Notification with a  follow up FHIR RESTful query to the Sender.  These expectations are the same as described in the <em>HL7 FHIR\u00ae US Core Implementation Guide STU3 Release 3.1.1</em> <a href=\"http://hl7.org/fhir/us/core/STU3.1.1/CapabilityStatement-us-core-client.html\">CapabiltyStatement for the US Core Client</a></p></p><h3 class=\"no_toc\" id=\"igs\">SHALL Support the Following Implementation Guides:</h3><ul><li><a href=\"http%3A//hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core%7C3.1.1\">http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.1</a></li></ul><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>Refer to the  <em>HL7 FHIR\u00ae US Core Implementation Guide STU3 Release 3.1.0</em> CapabiltyStatement for the US Core Client</p><br></br></div>",
         "status": "generated"
     },
     "contact": [
@@ -14,17 +14,17 @@
             ]
         }
     ],
-    "date": "2020-02-19",
-    "description": "This CapabilityStatement describes the expected capabilities of a client that is capable of responding a Da Vinci Notification with a  follow up FHIR RESTful query to the Sender.  These expectations are the same as described in the *HL7 FHIR\u00ae US Core Implementation Guide STU3 Release 3.1.0* [CapabiltyStatement for the US Core Client](http://hl7.org/fhir/us/core/STU3.1/CapabilityStatement-us-core-client.html)",
+    "date": "2020-07-30",
+    "description": "This CapabilityStatement describes the expected capabilities of a client that is capable of responding a Da Vinci Notification with a  follow up FHIR RESTful query to the Sender.  These expectations are the same as described in the *HL7 FHIR\u00ae US Core Implementation Guide STU3 Release 3.1.1* [CapabiltyStatement for the US Core Client](http://hl7.org/fhir/us/core/STU3.1.1/CapabilityStatement-us-core-client.html)",
     "experimental": false,
-    "fhirVersion": "4.0.0",
+    "fhirVersion": "4.0.1",
     "format": [
         "xml",
         "json"
     ],
     "implementationGuide": [
-        "http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts|0.1.0",
-        "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.0"
+        "http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts|1.0.0",
+        "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.1"
     ],
     "jurisdiction": [
         {
@@ -50,7 +50,7 @@
     ],
     "status": "active",
     "title": "Query Requester CapabilityStatement",
-    "url": "http://hl7.org/fhir/us/davinci-notifications/CapabilityStatement/query-requester",
-    "version": "0.1.0",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/CapabilityStatement/query-requester",
+    "version": "1.0.0",
     "resourceType": "CapabilityStatement"
 }

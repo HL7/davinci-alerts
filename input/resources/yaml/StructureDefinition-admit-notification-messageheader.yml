@@ -1,0 +1,70 @@
+resourceType: StructureDefinition
+id: admit-notification-messageheader
+url: >-
+  http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader
+version: 1.0.0
+name: AdmitNotificationMessageHeader
+title: Da Vinci Admit Notification MessageHeader Profile
+status: active
+experimental: false
+date: '2019-11-12T00:00:00-08:00'
+publisher: HL7 International - Infrastructure and Messaging Work Group
+contact:
+  - telecom:
+      - system: url
+        value: 'http://www.hl7.org/Special/committees/inm/index.cfm'
+description: >-
+  The Da Vinci Admit Notification MessageHeader Profile builds on the [Da Vinci
+  Notifications MessageHeader Profile](StructureDefinition-notifications-messageheader.html) and sets minimum expectations for the
+  FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html) resource to record the necessary context for Da Vinci
+  admit notification messaging scenario.  The event code is "notification-admit"
+  and the focus of the event is the [US Core Encounter Profile].
+jurisdiction:
+  - coding:
+      - system: 'urn:iso:std:iso:3166'
+        code: US
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: MessageHeader
+baseDefinition: >-
+  http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader
+derivation: constraint
+differential:
+  element:
+    - id: MessageHeader
+      path: MessageHeader
+      mustSupport: false
+    - id: MessageHeader.eventCoding
+      path: MessageHeader.eventCoding
+      min: 1
+      max: '1'
+      type:
+        - code: Coding
+      mustSupport: true
+      binding:
+        strength: extensible
+        valueSet: >-
+          http://hl7.org/fhir/us/davinci-alerts/ValueSet/notification-admit-event
+    - id: MessageHeader.focus
+      path: MessageHeader.focus
+      slicing:
+        discriminator:
+          - type: profile
+            path: $this.resolve()
+        rules: open
+      min: 1
+      max: '*'
+      mustSupport: true
+    - id: 'MessageHeader.focus:admit-notification'
+      path: MessageHeader.focus
+      sliceName: admit-notification
+      min: 1
+      max: '*'
+      type:
+        - code: Reference
+          targetProfile:
+            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter'
+          aggregation:
+            - bundled
+      mustSupport: true

@@ -9,7 +9,7 @@
     "experimental": false,
     "date": "2019-11-15T00:00:00+00:00",
     "publisher": "Health eData Inc",
-    "description": "The Da Vinci Notifications Bundle Profile constrains the FHIR [Bundle] resource to the Da Vinci notification messaging framework.",
+    "description": "The Da Vinci Notifications Bundle Profile constrains the FHIR [Bundle](http://hl7.org/fhir/R4/bundle.html) resource to the Da Vinci notification messaging framework.",
     "jurisdiction": [
         {
             "coding": [

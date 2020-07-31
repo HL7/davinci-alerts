@@ -1,7 +1,5 @@
-{% assign base_id = {{page.id}} %}
+{% assign base_id = {{include.id}} %}
 {% assign base_type = {{site.data.structuredefinitions.[base_id].type}} %}
-
-{{site.data.structuredefinitions.[base_id].description}}
 
 ### Mandatory and Must Support Data Elements
 
