@@ -16,6 +16,7 @@ The first official published version of the DEQM IG for FHIR R4.
   1. Update introduction to the [The Da Vinci Notification Message Bundle](guidance.html#the-da-vinci-notification-message-bundle)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200)).
   1. Update [US Case Background](usecases.html#use-case-background)([FHIR-26182](https://jira.hl7.org/browse/FHIR-26182)).
   1. Clarify how Intermediary [forwards messages](guidance.html#forwarding-content-using-this-framework) within framework ([FHIR-26177](https://jira.hl7.org/browse/FHIR-26177))
+  1. Clarify [Intermediary role](index.html#roles-and-actors) ([FHIR-26148](https://jira.hl7.org/browse/FHIR-261148))
 
 
 
