@@ -5,9 +5,9 @@ There are 4 Capability Statements defined to describe the expectations for this 
 
 <br />
 
-### The following table summarizes how these CapabilityStatements applies to the Da Vinci Notification Actors
+### The following table summarizes how these CapabilityStatements applies to the Da Vinci Notification Roles
 
-|Actor|server-mode|client-mode|
+|Role|server-mode|client-mode|
 |---|---|---|
 |Sender |Da Vinci Query Responder | Da Vinci Notification Sender|
 |Intermediary |Da Vinci Notification Receiver,Da Vinci Query Responder|Da Vinci QueryRequester, Da Vinci Notification Sender|
