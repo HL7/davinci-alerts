@@ -71,4 +71,6 @@
 [US Core Location Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-location.html
 [US Core Patient Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-patient.html
 [Standard error responses]: {{site.data.fhir.path}}messageheader-operation-process-message.html
-OperationOutcome: {{site.data.fhir.path}}operationoutcome.html
+[OperationOutcome]: {{site.data.fhir.path}}operationoutcome.html
+[Provenance]: {{site.data.fhir.path}}provenance.html
+[Basic Provenance for HIE redistribution]: ({{site.data.fhir.uscore}}/basic-provenance.html#hie-redistribution

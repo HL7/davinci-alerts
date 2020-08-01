@@ -35,6 +35,16 @@ definition:
   grouping:
     - name: base
   resource:
+    #- reference:
+        #reference: Provenance/admit-discharge-notification-provenance-01
+      #exampleBoolean: true
+      #name: Admit Discharge Notification Provenance 01
+      #description: Admit Discharge Notification Provenance Example
+    #- reference:
+        #reference: Provenance/admit-discharge-notification-provenance-02
+      #exampleBoolean: true
+      #name: Admit Discharge Notification Provenance 02
+      #description: Admit Discharge Notification Provenance Example
     - reference:
         reference: MessageHeader/admit-notification-messageheader-01
       exampleBoolean: true

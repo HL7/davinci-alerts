@@ -168,7 +168,39 @@ As shown in Figure 4, when an event or request triggers a notification, the Send
 We are actively seeking input on whether or not to document how to  transmit endpoint data intended only for the immediate  (which may be the final recipient or an intermediary)  and to provide the recipient with the technical details for getting additional information from the medical record for the alert - Note that this has serious security implications as it may contain sensitive access information.
 {:.note-to-balloters}
 
-- Not shown in figure 4, after the Intermediary successfully receives the notification, processes it and optionally searches and process the search results, it redistributes the data to the end users.  It **MAY** use FHIR messaging and the `$process-message` operation to do this or some other messaging protocol such as Direct, SMS or V2 messaging.  Note that the Notification Intermediary **MAY** customize the content based on the end user (for example, withholding data that a particular care team member does not need).
+#### Additional Intermediary Steps
+
+Not shown in figure 4, after the Intermediary successfully receives the notification, processes it and optionally searches and process the search results, it redistributes the data to the end users.  It **MAY** use FHIR messaging and the `$process-message` operation to do this or some other messaging protocol such as Direct, SMS or V2 messaging.  Note that the Notification Intermediary **MAY** customize the content based on the end user (for example, withholding data that a particular care team member does not need).
+
+##### Forwarding Content Using this framework
+
+When an Intermediary is forwarding notifications use FHIR messaging and the `$process-message` operation, it is a point to point FHIR RESTful interaction.
+
+**Clinical Content Unchanged**
+
+If the notification is forwarded with the clinical content unchanged, the Intermediary **SHALL**:
+
+- Update the `MessageHeader.sender` to reflect the Intermediary as the Sender
+- Update the `MessageHeader.destination.url` elements to reflect the new Recipient/Intermediary.
+- To indicate the change in the MessageHeader add a Provenance resource based on the the [US Core Provenance Profile] and the guidance provided in [Basic Provenance for HIE redistribution]. An example Provenance is shown in the example below:
+
+~~~json
+{% include admit-discharge-notification-provenance-01.json %}
+~~~
+
+See the [Admit Notification Message Forwarded Bundle 01](todo.html) for a complete example of this use case.
+
+**Clinical Content Changed**
+
+If the notification is forwarded with the clinical content changed, *in addition* to the steps outlined above, the Intermediary **SHALL**:
+
+- To indicate the changes to the Bundle, add Provenance resource(s) based on the the [US Core Provenance Profile] and the guidance provided in [Basic Provenance for HIE redistribution] to the message bundle. An example Provenance for when a resource has been removed from the forwarded notification bundle is shown in the example below:
+
+~~~json
+{% include admit-discharge-notification-provenance-02.json %}
+~~~
+
+See the [Admit Notification Message Forwarded Bundle 02](todo.html) for a complete example of this use case.
 
 #### Usage
 {:.no_toc}

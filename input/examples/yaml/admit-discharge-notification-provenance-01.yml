@@ -1,0 +1,17 @@
+id: admit-discharge-notification-provenance-01
+resourceType: Provenance
+meta:
+  profile:
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance'
+target:
+  - reference: MessageHeader/messageheader-20200731235241.502381
+recorded: '2020-07-31T16:56:43-07:00'
+agent:
+  - type:
+      coding:
+          - system: >-
+              http://terminology.hl7.org/CodeSystem/provenance-participant-type
+            code: author
+            display: Author
+    who:
+      reference: Organization/dv-notification-intermediary-123

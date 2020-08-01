@@ -80,6 +80,12 @@
    <artifact name="Da Vinci Notifications MessageHeader Profile"
              key="StructureDefinition-notifications-messageheader"
              id="StructureDefinition/notifications-messageheader"/>
+   <artifact name=""
+             key="Provenance-admit-discharge-notification-provenance-02"
+             id="Provenance/admit-discharge-notification-provenance-02"/>
+   <artifact name=""
+             key="Provenance-admit-discharge-notification-provenance-01"
+             id="Provenance/admit-discharge-notification-provenance-01"/>
    <artifact name="StructureDefinition Notifications GraphDefinition"
              key="StructureDefinition-notifications-graphdefinition"
              id="StructureDefinition/notifications-graphdefinition"
