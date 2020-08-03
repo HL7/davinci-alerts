@@ -155,7 +155,7 @@ Note to Balloters: These scenarios may be added in future iterations of this IG.
 
 
 
-### Pushing Unsolicited Notifications to the Receiver or Intermediary
+### Sending Unsolicited Notifications
 
 As shown in Figure 4, when an event or request triggers a notification, the Sender creates a Da Vinci Notification Message Bundle and notifies the Recipient or Intermediary using the `$process-message` operation.
 
@@ -170,19 +170,19 @@ We are actively seeking input on whether or not to document how to  transmit end
 
 #### Additional Intermediary Steps
 
-Not shown in figure 4, after the Intermediary successfully receives the notification, processes it and optionally searches and process the search results, it redistributes the data to the end users.  It **MAY** use FHIR messaging and the `$process-message` operation to do this or some other messaging protocol such as Direct, SMS or V2 messaging.  Note that the Notification Intermediary **MAY** customize the content based on the end user (for example, withholding data that a particular care team member does not need).
+Not shown in figure 4, after the Intermediary successfully receives the notification, processes it and optionally searches and process the search results, it redistributes the data to the end users.  It **MAY** use this framework (in other words, FHIR messaging and the `$process-message` operation) to do this or some other messaging protocol such as Direct, SMS or V2 messaging.  Note that the Notification Intermediary **MAY** customize the content based on the end user (for example, withholding data that a particular care team member does not need).
 
-##### Forwarding Content Using this framework
+##### Forwarding Notifications Using This Framework
 
-When an Intermediary is forwarding notifications use FHIR messaging and the `$process-message` operation, it is a point to point FHIR RESTful interaction.
+Forwarding notifications using this framework is a point to point FHIR RESTful transaction.  The intermediary **SHALL** always modify the MessageHeader as described below and **MAY** change the other contents of the bundle per agreement between the Intermediary and Sender or Receiver.
 
-**Clinical Content Unchanged**
+**Bundle Content Unchanged**
 
-If the notification is forwarded with the clinical content unchanged, the Intermediary **SHALL**:
+If the notification is forwarded with the Bundle content unchanged, the Intermediary **SHALL**:
 
 - Update the `MessageHeader.sender` to reflect the Intermediary as the Sender
 - Update the `MessageHeader.destination.url` elements to reflect the new Recipient/Intermediary.
-- To indicate the change in the MessageHeader add a Provenance resource based on the the [US Core Provenance Profile] and the guidance provided in [Basic Provenance for HIE redistribution]. An example Provenance is shown in the example below:
+- Indicate the change in the MessageHeader using the [US Core Provenance Profile] and the guidance provided in [Basic Provenance for HIE redistribution]. An example is shown in the example below:
 
 ~~~json
 {% include admit-discharge-notification-provenance-01.json %}
@@ -190,11 +190,11 @@ If the notification is forwarded with the clinical content unchanged, the Interm
 
 See the [Admit Notification Message Forwarded Bundle 01](todo.html) for a complete example of this use case.
 
-**Clinical Content Changed**
+**Bundle Content Changed**
 
 If the notification is forwarded with the clinical content changed, *in addition* to the steps outlined above, the Intermediary **SHALL**:
 
-- To indicate the changes to the Bundle, add Provenance resource(s) based on the the [US Core Provenance Profile] and the guidance provided in [Basic Provenance for HIE redistribution] to the message bundle. An example Provenance for when a resource has been removed from the forwarded notification bundle is shown in the example below:
+- Indicate the change in the MessageHeader using the [US Core Provenance Profile] and the guidance provided in [Basic Provenance for HIE redistribution] to the message bundle. An example Provenance for when a resource has been removed from the forwarded notification bundle is shown in the example below:
 
 ~~~json
 {% include admit-discharge-notification-provenance-02.json %}
