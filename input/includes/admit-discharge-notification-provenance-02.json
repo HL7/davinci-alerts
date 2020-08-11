@@ -8,10 +8,13 @@
     },
     "target": [
         {
-            "reference": "Bundle/davinci-notifications-bundle-20200731235247.063175"
+            "reference": "MessageHeader/messageheader-change-scenario-02"
         }
     ],
     "recorded": "2020-07-31T16:56:43-07:00",
+    "activity": {
+        "text": "Message removed content from original"
+    },
     "agent": [
         {
             "type": {
@@ -24,7 +27,21 @@
                 ]
             },
             "who": {
-                "reference": "Organization/dv-notification-intermediary-123"
+                "reference": "Organization/dv-notification-sender-01"
+            }
+        },
+        {
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+                        "code": "assembler",
+                        "display": "Assembler"
+                    }
+                ]
+            },
+            "who": {
+                "reference": "Organization/dv-notification-intermediary-01"
             }
         }
     ]

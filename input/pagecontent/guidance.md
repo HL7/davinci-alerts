@@ -170,39 +170,49 @@ We are actively seeking input on whether or not to document how to  transmit end
 
 #### Additional Intermediary Steps
 
-Not shown in figure 4, after the Intermediary successfully receives the notification, processes it and optionally searches and process the search results, it redistributes the data to the end users.  It **MAY** use this framework (in other words, FHIR messaging and the `$process-message` operation) to do this or some other messaging protocol such as Direct, SMS or V2 messaging.  Note that the Notification Intermediary **MAY** customize the content based on the end user (for example, withholding data that a particular care team member does not need).
+After the Intermediary successfully receives adn processes the notification and optionally searches and process the search results, it redistributes the data to the end users.  It **MAY** use this framework (in other words, FHIR messaging and the `$process-message` operation) or some other messaging protocol such as Direct, SMS or V2 messaging to forward the notification.  Note that the Intermediary **MAY** customize the content based on the end user (for example, withholding data that a particular care team member does not need).
 
 ##### Forwarding Notifications Using This Framework
 
-Forwarding notifications using this framework is a point to point FHIR RESTful transaction.  The intermediary **SHALL** always modify the MessageHeader as described below and **MAY** change the other contents of the bundle per agreement between the Intermediary and Sender or Receiver.
+The sequence diagram in Figure 5 illustrates the steps when forwarding the notification using the Da Vinci Notifications framework.
 
-**Bundle Content Unchanged**
+{% include img-portrait.html img="forwarding_message_wf.svg" caption="Figure 5" %}
 
-If the notification is forwarded with the Bundle content unchanged, the Intermediary **SHALL**:
 
-- Update the `MessageHeader.sender` to reflect the Intermediary as the Sender
-- Update the `MessageHeader.destination.url` elements to reflect the new Recipient/Intermediary.
-- Indicate the change in the MessageHeader using the [US Core Provenance Profile] and the guidance provided in [Basic Provenance for HIE redistribution]. An example is shown in the example below:
 
-~~~json
-{% include admit-discharge-notification-provenance-01.json %}
-~~~
+Forwarding notifications using this framework is a point to point FHIR RESTful transaction. The intermediary **SHALL** always modify the MessageHeader as described below and **MAY** change the other contents of the bundle per agreement between the Intermediary and Sender or Receiver.  When forwarding the notification, the Intermediary **SHALL**:
 
-See the [Admit Notification Message Forwarded Bundle 01](todo.html) for a complete example of this use case.
+1. Create a new message bundle with a new `Bundle.id` and new `MessageHeader.id`
+1. Update the `MessageHeader.sender` to reflect the Intermediary as the new Sender
+1. Update the `MessageHeader.destination.url` elements to reflect the new Recipient/Intermediary.
+1. Add a [US Core Provenance Profile] with `Provenance.target` pointing to MessageHeader and using the guidance provided in [Basic Provenance for HIE Redistribution and Transformation].
+    - `Provenance.agent.type` = "author" set to the Sender
+    - If *no* change to the bundle contents:
 
-**Bundle Content Changed**
+      `Provenance.agent.type` = "transmitter" set to the Intermediary
+    - If changes to the bundle contents:
 
-If the notification is forwarded with the clinical content changed, *in addition* to the steps outlined above, the Intermediary **SHALL**:
+       `Provenance.agent.type` = "assembler" set to the Intermediary
 
-- Indicate the change in the MessageHeader using the [US Core Provenance Profile] and the guidance provided in [Basic Provenance for HIE redistribution] to the message bundle. An example Provenance for when a resource has been removed from the forwarded notification bundle is shown in the example below:
+    Examples:
 
-~~~json
-{% include admit-discharge-notification-provenance-02.json %}
-~~~
+    Bundle Content Unchanged
 
-See the [Admit Notification Message Forwarded Bundle 02](todo.html) for a complete example of this use case.
+    ~~~json
+    {% include admit-discharge-notification-provenance-01.json %}
+    ~~~
 
-#### Usage
+    See the [Admit Notification Intermediate Transmit Bundle] for a complete example of this use case.
+
+    Bundle Content Changed
+
+    ~~~json
+    {% include admit-discharge-notification-provenance-02.json %}
+    ~~~
+
+    See the [Admit Notification Intermediate Translate Bundle] for a complete example of this use case.
+
+#### `$process-message` Operation
 {:.no_toc}
 
 The `$process-message` operation is invoked by the Sender using the `POST` syntax:
@@ -219,7 +229,7 @@ An HTTP Status success code is returned on successful submission.
 
 See the Admit/Discharge scenario [Example Transaction] for an example of using the `$process-message` operation to send a Da Vinci Notification Message Bundle.
 
-### Reliable Delivery
+#### Reliable Delivery
 
 Upon receiving a message, the Receiver/Intermediary may return one of several status codes which is documented in [`$process-message`] definition.  For successful transactions  `200`, `202`, or `204` **SHALL** be used.  If and error occurs, an [OperationOutcome] **SHOULD** be returned with details documenting the error. The following table defines the Sender behavior in response to the following error codes:
 
@@ -228,6 +238,7 @@ Upon receiving a message, the Receiver/Intermediary may return one of several st
 |`401`,`404` +/- OperationOutcome| do not attempt to resend the message without addressing the error|
 |`429` +/- OperationOutcome  |resend message but slow down traffic|
 |`500+` +/- OperationOutcome |may retry resending the message one or more times|
+{:.grid}
 
 See the messaging documentation in FHIR Specification for additional guidance on [reliable delivery].
 

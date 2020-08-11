@@ -124,7 +124,6 @@ Implementation Guide will focus on *Admission and Discharge* Scenarios, in other
 
 #### Roles
 
-
 - **Sender** - the system responsible for sending the notifications, typically operated by the facility or organization where the event occurred
 - **Recipient** – the system responsible for receiving generated notifications from Senders
 
@@ -133,6 +132,8 @@ Implementation Guide will focus on *Admission and Discharge* Scenarios, in other
 - **Intermediary** (e.g. ClearingHouse or HIE/HIN)– a system that can act as a central point to receive notifications from multiple Senders and distribute them to Recipients based on previously defined forwarding policies.
   - The Intermediary has the role and functional requirements of a Da Vinci Notifications Recipient
   - The Intermediary has the role and functional requirements of a Da Vinci Notifications Sender if it is forwarding messages using the framework defined in this guide.
+
+See the [Da Vinci Notifications CapabilityStatements] page for details on the RESTful transactions and specific profiles applicable to each of these actors.
 
 #### Actors
 

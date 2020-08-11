@@ -73,4 +73,6 @@
 [Standard error responses]: {{site.data.fhir.path}}messageheader-operation-process-message.html
 [OperationOutcome]: {{site.data.fhir.path}}operationoutcome.html
 [US Core Provenance Profile]: {{site.data.fhir.uscore}}/StructureDefinition-us-core-provenance.html
-[Basic Provenance for HIE redistribution]: ({{site.data.fhir.uscore}}/basic-provenance.html#hie-redistribution
+[Basic Provenance for HIE Redistribution and Transformation]: {{site.data.fhir.uscore}}/basic-provenance.html#hie-redistribution
+[Admit Notification Intermediate Translate Bundle]: Bundle-admit-notification-intermediate-translate-bundle.html
+[Admit Notification Intermediate Transmit Bundle]:Bundle-admit-notification-intermediate-transmit-bundle.html

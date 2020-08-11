@@ -65,11 +65,25 @@ definition:
       exampleBoolean: true
       name: Discharge Notification Message Bundle 01
       description: Discharge Notification Message Bundle Example
+
     - reference:
         reference: Bundle/admit-notification-message-bundle-01
       exampleBoolean: true
       name: Admit Notification Message Bundle 01
       description: Admit Notification Message Bundle Example
+
+    - reference:
+        reference: Bundle/admit-notification-intermediate-translate-bundle
+      exampleBoolean: true
+      name: Admit Notification Intermediate Translate Bundle
+      description: Admit Notification Intermediate Translate Bundle Example
+
+    - reference:
+        reference: Bundle/admit-notification-intermediate-transmit-bundle
+      exampleBoolean: true
+      name: Admit Notification Intermediate Transmit Bundle
+      description: Admit Notification Intermediate Transmit Bundle Example
+
     - reference:
         reference: Encounter/admit-discharge-notification-encounter-01
       exampleBoolean: true

@@ -127,3 +127,25 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "1234",
+  "display" : "Examplotomy Encounter"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Unable to find code 1234 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code \"1234\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1234) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "1234",
+  "display" : "Examplitis"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Unable to find code 1234 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code \"1234\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1234) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------

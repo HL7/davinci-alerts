@@ -1,5 +1,5 @@
 
-There are 4 Capability Statements defined to describe the expectations for this implementation guide:
+There are 5 Capability Statements defining computable definitions of FHIR conformance expectations of the RESTful transactions and specific profiles for each of the Da Vinci Notification Roles. They provide the base conformance rules that may be used for system compatibility testing, code generation, or as the basis for a conformance assessment.
 
 {% include list-simple-capabilitystatements.xhtml %}
 
@@ -10,7 +10,7 @@ There are 4 Capability Statements defined to describe the expectations for this 
 |Role|server-mode|client-mode|
 |---|---|---|
 |Sender |Da Vinci Query Responder | Da Vinci Notification Sender|
-|Intermediary |Da Vinci Notification Receiver,Da Vinci Query Responder|Da Vinci QueryRequester, Da Vinci Notification Sender|
+|Intermediary |Da Vinci Notification Receiver,Da Vinci Query Responder|Da Vinci QueryRequester, Da Vinci Notification Forwarder|
 |Recipient |Da Vinci Notification Receiver | Da Vinci Query Requester|
 {: .grid}
 

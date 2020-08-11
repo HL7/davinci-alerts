@@ -1,0 +1,28 @@
+# text for https://sequencediagram.org/
+# add viewbox attribute to svg file for img sizing viewBox="0.0 0.0 829.0 740.0">
+
+title Forwarding Unsolicited Notifications
+
+participant Intermediary A
+
+participant Recipient/Intermediary B
+
+
+
+note over Intermediary A:1) An event or request\n triggers a notification
+
+note right of Intermediary A:2) Create Da Vinci Notification\n Message Bundle
+
+Intermediary A->Recipient/Intermediary B: 3) initiates $process-message operation
+
+Recipient/Intermediary B-->Intermediary A:4) Response (200)
+
+note over Recipient/Intermediary B: 4) Process Da Vinci Notification\n Message Bundle
+
+Recipient/Intermediary B->Intermediary A: 5) Optionally GET additional data
+
+note over Intermediary A: 6) Process Search
+
+Intermediary A-->Recipient/Intermediary B: 7) Return Bundle of search results (200)
+
+note over Recipient/Intermediary B: 8) Process Search Results
