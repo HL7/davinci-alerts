@@ -35,7 +35,7 @@ entry:
       activity:
         coding:
           - code: transmit
-            display: Transmit
+            display: Transmit Record Lifecycle Event
             system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
         text: Forward the message bundle
       agent:
@@ -313,7 +313,7 @@ entry:
         reference: 'urn:uuid:aad0894e-47f4-4ffc-8fab-8fe5487110d2'
       payor:
         - display: Anthem
-          reference: Organization/ccb48ab0-2bf4-11ea-a5f5-a4d18ccf5172
+          reference: Organization/anthem
       status: active
       subscriberId: '12345'
       type:

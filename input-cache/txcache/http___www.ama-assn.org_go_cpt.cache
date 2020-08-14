@@ -13,6 +13,6 @@
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "CodeSystem uri 'http://www.ama-assn.org/go/cpt' is unknown"
+  "error" : "The code \"99234\" is not valid in the system http://www.ama-assn.org/go/cpt; The code provided (http://www.ama-assn.org/go/cpt#99234) is not valid (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------

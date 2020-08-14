@@ -56,6 +56,11 @@ definition:
       name: Discharge Notification Messageheader 01
       description: Discharge Notification Messageheader Example
     - reference:
+        reference: Organization/anthem
+      exampleBoolean: true
+      name: Example Payor Organization
+      description: Example Payor Organization
+    - reference:
         reference: Coverage/admit-discharge-notification-coverage-01
       exampleBoolean: true
       name: Admit Discharge Notification Coverage 01
@@ -94,8 +99,12 @@ definition:
       exampleBoolean: true
       name: Admit Discharge Notification Condition 01
       description: Admit Discharge Notification Condition Example
+
     - reference:
         reference: CapabilityStatement/notification-sender
+      exampleBoolean: false
+    - reference:
+        reference: CapabilityStatement/notification-forwarder
       exampleBoolean: false
     - reference:
         reference: StructureDefinition/admit-discharge-notification-condition
@@ -197,6 +206,9 @@ definition:
         page:
           - nameUrl: CapabilityStatement-notification-sender.html
             title: CapabilityStatement Notification Initiator
+            generation: generated
+          - nameUrl: CapabilityStatement-notification-forwarder.html
+            title: CapabilityStatement Notification Forwarder
             generation: generated
           - nameUrl: CapabilityStatement-query-requester.html
             title: CapabilityStatement Query Requester

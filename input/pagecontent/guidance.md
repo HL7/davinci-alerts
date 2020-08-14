@@ -37,6 +37,7 @@ This project recognizes the impact of the [Argonaut Clinical Data Subscriptions]
 ---
 
 - Based on FHIR R4 and US Core R4 profiles where applicable.
+- The Sender shall provide structured data whenever possible.
 - Notifications are transacted to the `$process-message` operation endpoint.
 - The Da Vinci Notification Message Bundle Profile is the FHIR object that is exchanged for all notification transactions.
 
@@ -163,10 +164,13 @@ As shown in Figure 4, when an event or request triggers a notification, the Send
 
 - For this guide there is no expectation for a notification response message to be returned from the Recipient or Intermediary to the Sender. Therefore, the $process-message input parameters "async" and "response-url" are not used and the body of this operation is the message bundle itself.
 - In the context of the `$process-message` operation, the Recipient/Intermediary is treated as a ["black box"] and simply accepts and processes the submitted data and there are no further expectations beyond the http level response as defined in the FHIR specification.
+  - The Receiver/Intermediary may sort and filter notifications based on the MessageHeader.event codes. For example, `notification-admit` can be used to to filter for patient admission notifications.
 - There is no expectation that the data submitted represents all the data required by the Notification Recipient/Intermediary, only that the data is known to be relevant to the triggering event. The Notification Recipient/Intermediary can optionally fetch additional information from the patient's medical record using FHIR RESTful searches.  The endpoint for this search may be known or supplied via the $process-message operation payload.
 
-We are actively seeking input on whether or not to document how to  transmit endpoint data intended only for the immediate  (which may be the final recipient or an intermediary)  and to provide the recipient with the technical details for getting additional information from the medical record for the alert - Note that this has serious security implications as it may contain sensitive access information.
+<del>
+We are actively seeking input on whether or not to document how to transmit endpoint data intended only for the immediate  (which may be the final recipient or an intermediary)  and to provide the recipient with the technical details for getting additional information from the medical record for the alert - Note that this has serious security implications as it may contain sensitive access information.
 {:.note-to-balloters}
+</del>
 
 #### Additional Intermediary Steps
 
@@ -179,20 +183,9 @@ The sequence diagram in Figure 5 illustrates the steps when forwarding the notif
 {% include img-portrait.html img="forwarding_message_wf.svg" caption="Figure 5" %}
 
 
+{{ site.data.capabilitystatement-notification-forwarder.rest[0]resource[5].documentation }}      
 
-Forwarding notifications using this framework is a point to point FHIR RESTful transaction. The intermediary **SHALL** always modify the MessageHeader as described below and **MAY** change the other contents of the bundle per agreement between the Intermediary and Sender or Receiver.  When forwarding the notification, the Intermediary **SHALL**:
-
-1. Create a new message bundle with a new `Bundle.id` and new `MessageHeader.id`
-1. Update the `MessageHeader.sender` to reflect the Intermediary as the new Sender
-1. Update the `MessageHeader.destination.url` elements to reflect the new Recipient/Intermediary.
-1. Add a [US Core Provenance Profile] with `Provenance.target` pointing to MessageHeader and using the guidance provided in [Basic Provenance for HIE Redistribution and Transformation].
-    - `Provenance.agent.type` = "author" set to the Sender
-    - If *no* change to the bundle contents:
-
-      `Provenance.agent.type` = "transmitter" set to the Intermediary
-    - If changes to the bundle contents:
-
-       `Provenance.agent.type` = "assembler" set to the Intermediary
+{{ site.data.capabilitystatement-notification-forwarder.rest[0]resource[10].documentation }}
 
     Examples:
 
@@ -201,6 +194,7 @@ Forwarding notifications using this framework is a point to point FHIR RESTful t
     ~~~json
     {% include admit-discharge-notification-provenance-01.json %}
     ~~~
+    {: fragment="Provenance" class="json"}
 
     See the [Admit Notification Intermediate Transmit Bundle] for a complete example of this use case.
 
@@ -209,6 +203,7 @@ Forwarding notifications using this framework is a point to point FHIR RESTful t
     ~~~json
     {% include admit-discharge-notification-provenance-02.json %}
     ~~~
+    {: fragment="Provenance" class="json"}
 
     See the [Admit Notification Intermediate Translate Bundle] for a complete example of this use case.
 
