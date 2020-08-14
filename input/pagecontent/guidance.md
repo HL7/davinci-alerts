@@ -27,6 +27,8 @@ This project recognizes the impact of the [Argonaut Clinical Data Subscriptions]
   - It is assumed that consent is managed elsewhere.
   - Patient consent allows exchange of data between the relevant systems.
 - A secure information transport mechanism exists between the actors(refer to the [Security] Page for additional guidance).
+- A BAA/DUA or other contracts exists between the parties as outlined in the [HL7 Da Vinci Guiding Principles] to address the specified Purpose of Use for exchange of patient health information.
+  - Any such agreement should clearly indicate how the Intermediary will handle sensitive information, determine what to remove, and how it will notify the recipient of the removal.
 
 ----
 
