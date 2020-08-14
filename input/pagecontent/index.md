@@ -1,7 +1,7 @@
 
 This implementation guide describes a method for the communication of relevant notifications to support the real-time exchange of information that impacts patient care and value based or risk based services.  Providers and Payers may need to be alerted when activities occur that impact a patient's care. This may be as traditional as a notification of an admission to or a discharge from a care setting. It also includes notifications about changes in treatment such as a new or different medication, or  changes in patient status like a new diagnosis. These notifications provide information that can improve care management and care coordination as well as act as the trigger for quality programs and other patient focused activities (for example, risk adjustment).  By allowing the patient's healthcare providers to be better informed and able to take actions and intervene earlier, the twin goals of better patient care and reduced cost of care may be met.
 
-The [2019 CMS 45 CFR Part 156 NPRM] focuses on hospitalization notifications due to significant issues that can occur if a patient is not followed appropriately after acute care. The HL7 Da Vinci Project has responded to this need by supporting the effort to provide a FHIR based standard for adoption by both providers and payers.  It is anticipated that the burden of communicating the notification is also reduced by using FHIR.   This Guide defines a FHIR messaging based paradigm and framework to establish consistently adoptable and reproducible methods to exchange notifications. This framework is demonstrated using the patient admission and discharge event use case to generate unsolicited notifications to the care team.
+The [2019 CMS 45 CFR Part 156 NPRM] focuses on hospitalization notifications due to significant issues that can occur if a patient is not followed appropriately after acute care. The HL7 Da Vinci Project has responded to this need by supporting the effort to provide a FHIR based standard for adoption by both providers and payers.  It is anticipated that the burden of communicating the notification is also reduced by using FHIR.   This Guide defines a FHIR messaging based paradigm and framework to establish consistently adoptable and reproducible methods to exchange notifications. This framework is applied to the patient admission and discharge events to generate unsolicited notifications to the care team.
 
 ### How to read this Guide
 
@@ -10,7 +10,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 - [Home]\: The home page provides the introduction and background for the Da Vinci Unsolicited Notifications Project.
 
 - [Framework]\: These pages provide guidance on the set of FHIR transactions and the FHIR artifacts used in a general framework to enable unsolicited notifications to care team members.
-- [Admit/Discharge Use case]\: The Admission/Discharge use case is used to show how to implement an unsolicited notification using the framework.
+- [Admit/Discharge Use cases]\: Unsolicited notifications for the Admission/Transfer/Discharge use cases are defined using the framework.
 - [FHIR Artifacts]\: These pages provide detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
   - [Profiles]\: This page lists the set of Profiles that are defined in this guide.
   - [Terminology]\: This page lists the value sets and code system defined for this guide.
@@ -37,7 +37,7 @@ The following table summarizes the technical scope of this guide:
 
 -  Define a common FHIR messaging Bundle that is exchanged for all Notifications.
 -  Define the FHIR transactions and minimum operational behavior for the relevant Actors
-- Define how to define and share the minimal data elements needed to support the information needs for an initial set of use cases starting with the patient admission and discharge event use case.  
+- Define how to define and share the minimal data elements needed to support the information needs for an initial set of notifications and use cases starting with the patient admission and discharge event.  
 -  Define how users requiring more data may follow up with additional queries.
 - Describe basic Security and Privacy considerations
 
