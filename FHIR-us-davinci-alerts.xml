@@ -22,6 +22,7 @@
 <artifact id="ValueSet/notification-event" key="ValueSet-notification-event" name="Da Vinci Notification Event ValueSet"/>
 <artifact id="ValueSet/notification-admit-event" key="ValueSet-notification-admit-event" name="Da Vinci Notification admit Event ValueSet"/>
 <artifact id="ValueSet/notification-discharge-event" key="ValueSet-notification-discharge-event" name="Da Vinci Notification discharge Event ValueSet"/>
+<artifact id="ValueSet/notification-transfer-event" key="ValueSet-notification-transfer-event" name="Da Vinci Notification transfer Event ValueSet"/>
 <artifact id="StructureDefinition/notifications-bundle" key="StructureDefinition-notifications-bundle" name="Da Vinci Notifications Bundle Profile"/>
 <artifact id="StructureDefinition/notifications-messageheader" key="StructureDefinition-notifications-messageheader" name="Da Vinci Notifications MessageHeader Profile"/>
 <artifact id="Bundle/discharge-notification-message-bundle-01" key="Bundle-discharge-notification-message-bundle-01" name="Discharge Notification Message Bundle 01"/>

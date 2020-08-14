@@ -1,7 +1,7 @@
 
 ### Introduction
 
-FHIR resources can be used to transport patient information relevant to a specific event (e.g. admission, discharge, change in treatment, new diagnosis) to another provider or the health plan. These resources can communicate the details of who, when, what and where care was delivered and help to ensure timely follow-up as needed.  To reiterate, the intent of this guide is to provide a framework to create notifications that can provide enough information to Recipient and/or Intermediary for them to be able understand what the notification is about and complete enough to enable them to determine if and what additional steps they need to take in response to the notification.   The following framework documents how to use [FHIR messaging] to define the contents of the notification and how to "push" these unrequested notification messages using the [`$process-message`] operation directly to Recipients and Intermediaries.  The [Admit/Discharge Use case] demonstrates how to implement an unsolicited notification scenario using the framework.
+FHIR resources can be used to transport patient information relevant to a specific event (e.g. admission, transfer, discharge, change in treatment, new diagnosis) to another provider or the health plan. These resources can communicate the details of who, when, what and where care was delivered and help to ensure timely follow-up as needed.  To reiterate, the intent of this guide is to provide a framework to create notifications that can provide enough information to Recipient and/or Intermediary for them to be able understand what the notification is about and complete enough to enable them to determine if and what additional steps they need to take in response to the notification.   The following framework documents how to use [FHIR messaging] to define the contents of the notification and how to "push" these unrequested notification messages using the [`$process-message`] operation directly to Recipients and Intermediaries.  The [Admit/Discharge Use case] demonstrates how to implement an unsolicited notification scenario using the framework.
 
 <del>This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5.  It is anticipated that an equivalent subscription based notification paradigm can be implemented as an alternate to the unsolicited messaging based approach documented in this guide.
 </del>
@@ -61,7 +61,7 @@ The message event codes identify the reason for the notification.  For this fram
 
 {% include list-simple-codesystems.xhtml %}
 
-These concepts represent a 'starter set' and will be supplemented with additional concepts in the future. Note that there is no HL7 v2 messaging equivalent to these codes. However when available, a relationship between concepts in the notification event codes and concepts used in the notification "focus" resource is documented. For example in the admission and discharge scenarios the message event codes are notification concepts that correspond to the concepts defining the events in the `encounter.class` and `encounter.hospitalization.dischargeDisposition` codes.
+These concepts represent a 'starter set' and will be supplemented with additional concepts in the future. Note that there is no HL7 v2 messaging equivalent to these codes. However when available, a relationship between concepts in the notification event codes and concepts used in the notification "focus" resource is documented. For example concepts that correspond to the admission transfer and discharge events.
 
 #### What is in the Message Bundle
 {:.no_toc}
@@ -92,7 +92,7 @@ For all Da Vinci Notification Message Bundles, the following resources are manda
 #### How to define the Message Bundle
 {:.no_toc}
 
-The set of resources within the message and their relationship to each other can be represented as an interconnected graph of resources as Figure 3 below illustrates (Note that this a simplified and incomplete representation of the possible resources in notification message bundle. See [Figure 8] for an example of a resource graph for the admission/discharge scenario):  
+The set of resources within the message and their relationship to each other can be represented as an interconnected graph of resources as Figure 3 below illustrates (Note that this a simplified and incomplete representation of the possible resources in notification message bundle. See [Figure 8] for an example of a resource graph for the admission/transfer/discharge scenarios):  
 
 {% include img-portrait.html img="generic_message_graph.svg" caption="Figure 3" %}
 

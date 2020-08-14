@@ -116,6 +116,9 @@ definition:
         reference: ValueSet/notification-admit-event
       exampleBoolean: false
     - reference:
+        reference: ValueSet/notification-transfer-event
+      exampleBoolean: false
+    - reference:
         reference: ValueSet/notification-discharge-event
       exampleBoolean: false
     - reference:
@@ -193,6 +196,9 @@ definition:
             generation: generated
           - nameUrl: ValueSet-notification-admit-event.html
             title: ValueSet Admit Notification Event
+            generation: generated
+          - nameUrl: ValueSet-notification-transfer-event.html
+            title: ValueSet Transfer Notification Event
             generation: generated
           - nameUrl: ValueSet-notification-discharge-event.html
             title: ValueSet Discharge Notification Event

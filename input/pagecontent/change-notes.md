@@ -18,6 +18,8 @@ The first official published version of the DEQM IG for FHIR R4.
   1. Clarify how Intermediary [forwards messages](guidance.html#forwarding-content-using-this-framework) within framework ([FHIR-26177](https://jira.hl7.org/browse/FHIR-26177))
   1. Clarify [Intermediary role](index.html#roles-and-actors) ([FHIR-26148](https://jira.hl7.org/browse/FHIR-261148))
   1. Clarify how to [sort incoming messages](guidance.html#sending-unsolicited-notifications) (#[FHIR-26132](https://jira.hl7.org/browse/FHIR-26132))
+  1. Add [Transfer notification use case](usecases.html). (#[FHIR-26909](https://jira.hl7.org/browse/FHIR-26909))
+  1. Remove child concept for admit and discharge from the [Da Vinci Notification Event CodeSystem]. (#[FHIR-NNNNN](https://jira.hl7.org/browse/FHIR-))
 
 
 

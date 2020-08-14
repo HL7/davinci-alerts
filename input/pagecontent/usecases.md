@@ -1,11 +1,21 @@
 
 ###  Introduction
 
-This use case demonstrates how the Da Vinci Notifications IG framework is used to define the Da Vinci Notification Bundle for admissions and discharge and how to send a notification between a Sender and a Recipient/Intermediary.
+This use case demonstrates how the Da Vinci Notifications IG framework is used to define the Da Vinci Notification Bundle for admissions, tranfers, and discharges and how to send a notification between a Sender and a Recipient/Intermediary.
 
 ### Use Case Background
 
-Having the ability to send notifications to update physicians and care management teams when a patient is admitted to a hospital or discharged from the hospital is key to improving patient care.  The intent of these notifications is *not* to replace existing data exchange mechanisms, for example the discharge summary; but rather to notify of the discharge event and provide enough data to gather more information, if desired. These notifications improve post-discharge transitions, promote communication between providers and encourage follow up care. The expectation for this use case is that the business rules for triggering the notification is the same that is used for an HL7 V2 ADT A01 message.  Figure 5 illustrates how some of the admit and discharge data elements corresponded to the resource in the message bundle.
+Having the ability to send notifications to update physicians and care management teams when a patient is admitted to a hospital or discharged from the hospital is key to improving patient care.  The intent of these notifications is *not* to replace existing data exchange mechanisms, for example the discharge summary; but rather to notify of the discharge event and provide enough data to gather more information, if desired. These notifications improve post-discharge transitions, promote communication between providers and encourage follow up care. The expectation for this use case is that the business rules for triggering the notification is the same that is used for an HL7 V2 ADT A01 message.  Figure 5 illustrates how some of the admit, transfer and discharge data elements corresponded to the resource in the message bundle.
+
+<div markdown ="1" class="bg-info">
+Transfer notifications should only be used if:
+- Your organization calls it a "transfer" when the patient moves from the emergency room to an inpatient status
+- Your organizations calls it a "transfer" when a patient moves from inpatient to another facility like an inpatient rehab facility.
+
+You should not use transfer notifications:
+- If your facility only uses *admit* and *discharge* transactions for the above scenarios
+- For bed changes within the same facility, i.e. ICU to a stepdown.
+</div>
 
 {% include img-portrait.html img="bundle_graphic.svg" caption="Figure 5" %}
 
@@ -17,9 +27,9 @@ The Provider is notified when:
 - A Patient is transferred from one care unit to another
 -->
 
-### FHIR Resources for Admission and Discharge Notification
+### FHIR Resources for Admission, Transfer, and Discharge Notifications
 
-To carry information regarding admission and discharge event messages, the required resources for the message Bundle need to be defined.  The core components of the Bundle are defined in the [Framework] page and include the *MessageHeader* and the "root" resource represented by the  `MessageHeader.focus`.  For admissions and discharge *Encounter* (US Core Encounter) is the focus of the event as shown in figure 6:
+To carry information regarding admission, transfer, and discharge event messages, the required resources for the message Bundle need to be defined.  The core components of the Bundle are defined in the [Framework] page and include the *MessageHeader* and the "root" resource represented by the  `MessageHeader.focus`.  For admission, transfer and discharge *Encounter* (US Core Encounter) is the focus of the event as shown in figure 6:
 
 {% include img-portrait.html img="admit_message_graph1.svg" caption="Figure 6" %}
 

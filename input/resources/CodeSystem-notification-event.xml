@@ -74,7 +74,10 @@
 		<concept>
 			<code value="notification-admit"/>
 			<display value="Notification Admit"/>
-			<definition value="The purpose or content a notification about an admission.  Usage Note: The included child codes correspond to the Encounter.class codes drawn from v3-ActCode where concept is-a _ActEncounterCode."/>
+			<definition value="The purpose or content of a notification about an admission."/>
+			</concept>
+<!--	These deprecated child codes correspond to the Encounter.class codes drawn from v3-ActCode where concept is-a _ActEncounterCode.
+
 			<concept>
 				<code value="notification-admit-er"/>
 				<display value="Notification Admit ER"/>
@@ -106,11 +109,14 @@
 				<definition value="The purpose or content a notification about an admission to to a health care facility for a predetermined length of time, usually less than 24 hours.  Usage Note: This child code corresponds to the Encounter.class code 'SS'."/>
 			</concept>
 		</concept>
+-->
 		<concept>
 			<code value="notification-discharge"/>
 			<display value="Notification Discharge"/>
-			<definition value="The purpose or content a notification about a discharge.  Usage Note: The included child codes correspond to the encounter.hospitalization.dischargeDisposition codes drawn from FHIR code system discharge-disposition."/>
-			<concept>
+			<definition value="The purpose or content of a notification about a discharge."/>
+		</concept>
+<!--  These deprecatedchild codes correspond to the encounter.hospitalization.dischargeDisposition codes drawn from FHIR code system discharge-disposition
+<concept>
 				<code value="notification-discharge-home"/>
 				<display value="Notification Discharge Home"/>
 				<definition value="The purpose or content a notification about an admission to to a health care facility for a predetermined length of time, usually less than 24 hours.  Usage Note: This child code corresponds to the encounter.hospitalization.dischargeDisposition code 'home'."/>
@@ -136,6 +142,13 @@
 				<definition value="The purpose or content a notification about a discharge to a post-acute care rehabilitation facility.  Usage Note: This child code corresponds to the encounter.hospitalization.dischargeDisposition code 'rehab'."/>
 			</concept>
 		</concept>
+-->
+<concept>
+	<code value="notification-transfer"/>
+	<display value="Notification Transfer"/>
+	<definition value="The purpose or content of a notification about a transfer."/>
+</concept>
+
 		<concept>
 			<code value="notification-referral"/>
 			<display value="Notification Referral"/>
