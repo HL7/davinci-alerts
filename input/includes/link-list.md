@@ -2,7 +2,7 @@
 [reliable delivery]: {{site.data.fhir.path}}messaging.html#reliable
 [`$process-message`]: {{site.data.fhir.path}}messageheader-operation-process-message.html
 [`collection`]: {{site.data.fhir.path}}http.html#collection
-[2019 CMS 45 CFR Part 156 NPRM]: https://www.govinfo.gov/content/pkg/FR-2019-03-04/pdf/2019-02200.pdf
+[2019 CMS 45 CFR Part 156 NPRM]: https://www.federalregister.gov/d/2020-05050
 [Admit/Discharge Use case]: usecases.html
 [aggregation]: {{site.data.fhir.path}}elementdefinition-definitions.html#ElementDefinition.aggregation
 [Argonaut Clinical Data Subscriptions]: http://argonautwiki.hl7.org/index.php?title=Argonaut_2019_Projects#Clinical_Data_Subscriptions
