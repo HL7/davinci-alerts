@@ -18,7 +18,7 @@ description: >-
   Notifications MessageHeader Profile](StructureDefinition-notifications-messageheader.html) and sets minimum expectations for the
   FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html) resource to record the necessary context for Da Vinci
   admit notification messaging scenario.  The event code is "notification-admit"
-  and the focus of the event is the [US Core Encounter Profile].
+  and the focus of the event is the Encounter.
 jurisdiction:
   - coding:
       - system: 'urn:iso:std:iso:3166'
@@ -64,7 +64,7 @@ differential:
       type:
         - code: Reference
           targetProfile:
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter'
+            - 'http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter'
           aggregation:
             - bundled
       mustSupport: true

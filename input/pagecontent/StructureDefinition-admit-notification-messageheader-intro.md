@@ -9,7 +9,7 @@ The following data-elements are mandatory (i.e., data MUST be present) or must b
 **Each {{{base_type}} must have:**
 
 1. An event code of "notification-admit"
-1. A reference to US Core Encounter Profile for the event focus which will be bundled in the message
+1. An event focus reference to the Da Vinci Admit/Transfer/Discharge Notification Encounter Profile which will be bundled in the message
 
 ### Examples
 

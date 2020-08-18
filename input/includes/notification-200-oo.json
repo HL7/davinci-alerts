@@ -1,0 +1,17 @@
+{
+    "id": "intermediary-response",
+    "issue": [
+        {
+            "code": "informational",
+            "details": {
+                "text": "The message was received and the message has been fully processed"
+            },
+            "severity": "information"
+        }
+    ],
+    "resourceType": "OperationOutcome",
+    "text": {
+        "div": "<div><p><b>Operation Outcome for :</b></p><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Type</b></td></tr><tr><td>information</td><td/><td>The message was received and the message has been fully processed</td><td/><td>informational</td></tr></table></div>",
+        "status": "generated"
+    }
+}

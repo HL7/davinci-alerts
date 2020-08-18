@@ -1,7 +1,7 @@
 #text for https://sequencediagram.org/
 # add viewbox attribute to svg file for img sizing viewBox="0.0 0.0 829.0 740.0">
 
-title Unsolicited Admit/Discharge Notification
+title Unsolicited Admit/Transfer/Discharge Notification
 
 participant Sender
 
@@ -11,13 +11,13 @@ participant Recipient/Intermediary $process-message endpoint
 
 note over Sender:1) Patient admission or discharge\n triggers a notification
 
-note right of Sender:2) Create Da Vinci Admit/Discharge \nNotification Message
+note right of Sender:2) Create Da Vinci Admit/Transfer/Discharge \nNotification Message
 
 Sender->Recipient/Intermediary $process-message endpoint:3) initiates $process-message operation
 
 Recipient/Intermediary $process-message endpoint-->Sender:4) Response (200)
 
-note over Recipient/Intermediary: 4) Process Da Vinci Admit/Discharge \nNotification Message
+note over Recipient/Intermediary: 4) Process Da Vinci Admit/Transfer/Discharge \nNotification Message
 
 Recipient/Intermediary->Sender:5) Optionally Search for additional data
 

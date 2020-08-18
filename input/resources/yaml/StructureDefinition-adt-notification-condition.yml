@@ -1,10 +1,10 @@
 resourceType: StructureDefinition
-id: admit-discharge-notification-condition
+id: adt-notification-condition
 url: >-
-  http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-condition
+  http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-condition
 version: 1.0.0
-name: AdmitDischargeNotificationConditionProfile
-title: Da Vinci Admit/Discharge Notification Condition Profile
+name: ADTNotificationConditionProfile
+title: Da Vinci Admit/Transfer/Discharge Notification Condition Profile
 status: active
 experimental: false
 date: '2019-11-12T00:00:00-08:00'
@@ -14,7 +14,7 @@ contact:
       - system: url
         value: 'http://www.hl7.org/Special/committees/inm/index.cfm'
 description: >-
-  The Da Vinci Admit Notification Condition Profile is based on the [US Core
+  The Da Vinci Admit/Transfer/Discharge Notification Condition Profile is based on the [US Core
   Condition Profile](http://hl7.org/fhir/us/core/STU3.1/StructureDefinition-us-core-condition.html) and adds the mandatory `Condition.encounter` element which
   references the [US Core Encounter Profile](http://hl7.org/fhir/us/core/STU3.1/StructureDefinition-us-core-encounter.html) in the same message Bundle.
 jurisdiction:
@@ -38,7 +38,7 @@ differential:
       type:
         - code: Reference
           targetProfile:
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter'
+            - 'http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter'
           aggregation:
             - bundled
       mustSupport: true

@@ -1,7 +1,7 @@
 
 ###  Introduction
 
-This use case demonstrates how the Da Vinci Notifications IG framework is used to define the Da Vinci Notification Bundle for admissions, tranfers, and discharges and how to send a notification between a Sender and a Recipient/Intermediary.
+This use case demonstrates how the Da Vinci Notifications IG framework is used to define the Da Vinci Notification Bundle for admissions, transfers, and discharges and how to send a notification between a Sender and a Recipient/Intermediary.
 
 ### Use Case Background
 
@@ -14,7 +14,7 @@ Transfer notifications should only be used if:
 
 You should not use transfer notifications:
 - If your facility only uses *admit* and *discharge* transactions for the above scenarios
-- For bed changes within the same facility, i.e. ICU to a stepdown.
+- For bed changes within the same facility, i.e. ICU to a step-down.
 </div>
 
 {% include img-portrait.html img="bundle_graphic.svg" caption="Figure 5" %}
@@ -55,30 +55,30 @@ Adding these additional components results in the following resource graph showi
 An alternate representation of this graph is a table with each row representing an "edge" - an ordered pair of the form (source profile, target profile):
 
 {:.grid}
-{% include graphdefinition-admit-discharge-narrative-table.md %}
+{% include graphdefinition-adt-narrative-table.md %}
 
 
-Note that an Admit/Discharge Bundle may contain more or less resources than this graph illustrates since:  
+Note that an Admit/Transfer/Discharge Bundle may contain more or less resources than this graph illustrates since:  
 a) having additional resources in the message bundle is not prohibited as long as the resources are reference by or reference another resource in the message bundle and  
 b) not all the resources listed above may be present in the source system. (For a more detailed discussion of when required resources may be absent, see the section on [Must Support])
 {:.highlight-note}
 
 ### Formal Definition of the Da Vinci Admit and Discharge Notification Message
 
-The following FHIR Profiles can be used to formally define this resource graph for the admission and discharge event.  Note that except for the first profile listed below, these profiles constrain their references to other profiles within the same bundle.
+The following FHIR Profiles can be used to formally define this resource graph for the admission, transfer, and discharge events.  Note that except for the first profile listed below, these profiles constrain their references to other profiles within the same bundle.
 
 - [Da Vinci Notifications Bundle Profile]
 - [Da Vinci Admit Notification MessageHeader Profile]
 - [Da Vinci Discharge Notification MessageHeader Profile]
-- [Da Vinci Admit/Discharge Notification Condition Profile]
-- [Da Vinci Admit/Discharge Notification Coverage Profile]
-- [Da Vinci Admit/Discharge Notification Encounter Profile]
+- [Da Vinci Admit/Transfer/Discharge Notification Condition Profile]
+- [Da Vinci Admit/Transfer/Discharge Notification Coverage Profile]
+- [Da Vinci Admit/Transfer/Discharge Notification Encounter Profile]
 
 <!--
 #### MessageDefinition and GraphDefinition
 {:.no_toc}
 
-The Following MessageDefinition and GraphDefinition can be used to formally define this resource graph for the admission and discharge event:
+The Following MessageDefinition and GraphDefinition can be used to formally define this resource graph for the admission, transfer and discharge event:
 
 **MessageDefinition**
 
@@ -92,7 +92,7 @@ The Following MessageDefinition and GraphDefinition can be used to formally defi
 <!--
 - \* it is questionable whether Encounter.diagnosis.condition has been implemented by the EHR vendors - need to discuss with vendors.
 - \** There is no Practitioner.endpoint element and an extension may be needed to implement.
-- \*** MessageDefinition is used to formally define the Message content for a given event (e.g, an inpatient admission or discharge).  It defines the event and the focal and non focal Resources/Profiles that make up the message:
+- \*** MessageDefinition is used to formally define the Message content for a given event (e.g, an inpatient admission, transfer, or discharge).  It defines the event and the focal and non focal Resources/Profiles that make up the message:
 -->
 
 ### Da Vinci Notification Message Bundle Examples
@@ -101,7 +101,7 @@ Da Vinci Notification Bundles such as these examples can be assembled based on a
 
 {% include list-simple-bundles.xhtml %}
 
-### Pushing Unsolicited Admit/Discharge Notification
+### Pushing Unsolicited Admit/Transfer/Discharge Notification
 
 In the interaction shown in figures 9, the HealthCare facility is acting in the role of the Notification Sender and the Notification Recipient can be any of the actors listed on the home page.  To notify the Notification Recipients/Intermediary of an admit or discharge event, the Notification Sender uses $process-message operation to submit the Notification Message to appropriate FHIR endpoints. Not shown in Figure 9 is that when the Intermediary successfully receives and processes the notifications, it subsequently forwards the data to the end users.
 
@@ -111,11 +111,13 @@ In the interaction shown in figures 9, the HealthCare facility is acting in the 
 
 #### Example Transaction
 
-The following transactions show an example of using the `$process-message` operation to send a Da Vinci Admission Notification Message and a Da Vinci Discharge Notification Message to a Recipient:
+The following example transactions show examples of using the `$process-message` operation to send a notification messages.
 
-{% include examplebutton_default.html example="process-message-admit-example" b_title = "Click Here To See Example Da Vinci Admission Notification Message" %}
+{% include examplebutton_default.html example="process-message-admit-example" b_title = "Click Here To See Example Da Vinci *Admission* Notification Message" %}
 
-{% include examplebutton_default.html example="process-message-discharge-example" b_title = "Click Here To See ExampleDa Vinci Discharge Notification Message" %}
+{% include examplebutton_default.html example="process-message-transfer-example" b_title = "Click Here To See Example Da Vinci *Transfer* Notification Message" %}
+
+{% include examplebutton_default.html example="process-message-discharge-example" b_title = "Click Here To See Example Da Vinci *Discharge* Notification Message" %}
 
 ---
 

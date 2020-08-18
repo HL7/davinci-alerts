@@ -2,7 +2,7 @@
   <g><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/>
     <g><rect fill="white" stroke="none" x="0" y="0" width="941" height="757"/></g>
     <g>
-      <text fill="black" stroke="none" font-family="sans-serif" font-size="16.5pt" font-style="normal" font-weight="normal" text-decoration="normal" x="275.85631635947004" y="26.3876361" text-anchor="start" dominant-baseline="alphabetic">Unsolicited Admit/Discharge Notification</text>
+      <text fill="black" stroke="none" font-family="sans-serif" font-size="16.5pt" font-style="normal" font-weight="normal" text-decoration="normal" x="275.85631635947004" y="26.3876361" text-anchor="start" dominant-baseline="alphabetic">Unsolicited Admit/Transfer/Discharge Notification</text>
     </g><g/>
     <g><path
       fill="none"
@@ -82,7 +82,7 @@
         stroke-width="1.4659797833333332"
         stroke-dasharray=""/>
       <g>
-        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="175.63172865710936" y="247.516026618" text-anchor="start" dominant-baseline="alphabetic">2) Create Da Vinci Admit/Discharge
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="175.63172865710936" y="247.516026618" text-anchor="start" dominant-baseline="alphabetic">2) Create Da Vinci Admit/Transfer/Discharge
         </text>
         <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="175.63172865710936" y="265.107784018" text-anchor="start" dominant-baseline="alphabetic">Notification Message</text>
       </g>
@@ -108,7 +108,7 @@
         stroke-width="1.4659797833333332"
         stroke-dasharray=""/>
       <g>
-        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="327.7908160280339" y="430.4703035779999" text-anchor="start" dominant-baseline="alphabetic">4) Process Da Vinci Admit/Discharge
+        <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="327.7908160280339" y="430.4703035779999" text-anchor="start" dominant-baseline="alphabetic">4) Process Da Vinci Admit/Transfer/Discharge
         </text>
         <text fill="black" stroke="none" font-family="sans-serif" font-size="11pt" font-style="normal" font-weight="normal" text-decoration="normal" x="327.7908160280339" y="448.0620609779999" text-anchor="start" dominant-baseline="alphabetic">Notification Message</text>
       </g>

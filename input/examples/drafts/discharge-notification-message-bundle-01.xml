@@ -148,7 +148,7 @@
 
 				<meta>
 					<lastUpdated value="2017-05-26T11:56:57.250-04:00"/>
-					<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-encounter"/>
+					<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter"/>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -157,7 +157,7 @@
 							<b>Generated Narrative with Details</b>
 						</p>
 						<p>
-							<b>id</b>: admit-discharge-notification-encounter-01</p>
+							<b>id</b>: adt-notification-encounter-01</p>
 						<p>
 							<b>meta</b>:
 						</p>
@@ -563,7 +563,7 @@
 			<Coverage>
 
 				<meta>
-					<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-coverage"/>
+					<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-coverage"/>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -572,7 +572,7 @@
 							<b>Generated Narrative with Details</b>
 						</p>
 						<p>
-							<b>id</b>: admit-discharge-notification-coverage-01</p>
+							<b>id</b>: adt-notification-coverage-01</p>
 						<p>
 							<b>meta</b>:
 						</p>
@@ -680,7 +680,7 @@
 			<Condition>
 
 				<meta>
-					<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-condition"/>
+					<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-condition"/>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -689,7 +689,7 @@
 							<b>Generated Narrative with Details</b>
 						</p>
 						<p>
-							<b>id</b>: admit-discharge-notification-condition-01</p>
+							<b>id</b>: adt-notification-condition-01</p>
 						<p>
 							<b>meta</b>:
 						</p>

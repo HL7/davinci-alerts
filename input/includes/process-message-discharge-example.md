@@ -21,9 +21,15 @@ An HTTP Status success code is returned on successful submission.
 {% include_relative Bundle-discharge-notification-message-bundle-01.json %}
 ~~~
 
-**Response**
+**Response Headers:**
 
 ~~~
 HTTP/1.1 200 OK
 [other headers]
+~~~
+
+**OperationOutcome:**
+
+~~~
+{% include notification-200-oo.json %}
 ~~~

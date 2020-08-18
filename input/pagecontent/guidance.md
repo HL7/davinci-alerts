@@ -1,7 +1,7 @@
 
 ### Introduction
 
-FHIR resources can be used to transport patient information relevant to a specific event (e.g. admission, transfer, discharge, change in treatment, new diagnosis) to another provider or the health plan. These resources can communicate the details of who, when, what and where care was delivered and help to ensure timely follow-up as needed.  To reiterate, the intent of this guide is to provide a framework to create notifications that can provide enough information to Recipient and/or Intermediary for them to be able understand what the notification is about and complete enough to enable them to determine if and what additional steps they need to take in response to the notification.   The following framework documents how to use [FHIR messaging] to define the contents of the notification and how to "push" these unrequested notification messages using the [`$process-message`] operation directly to Recipients and Intermediaries.  The [Admit/Discharge Use case] demonstrates how to implement an unsolicited notification scenario using the framework.
+FHIR resources can be used to transport patient information relevant to a specific event (e.g. admission, transfer, discharge, change in treatment, new diagnosis) to another provider or the health plan. These resources can communicate the details of who, when, what and where care was delivered and help to ensure timely follow-up as needed.  To reiterate, the intent of this guide is to provide a framework to create notifications that can provide enough information to Recipient and/or Intermediary for them to be able understand what the notification is about and complete enough to enable them to determine if and what additional steps they need to take in response to the notification.   The following framework documents how to use [FHIR messaging] to define the contents of the notification and how to "push" these unrequested notification messages using the [`$process-message`] operation directly to Recipients and Intermediaries.  The [Admit/Transfer/Discharge Use case] demonstrates how to implement an unsolicited notification scenario using the framework.
 
 <del>This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5.  It is anticipated that an equivalent subscription based notification paradigm can be implemented as an alternate to the unsolicited messaging based approach documented in this guide.
 </del>
@@ -69,7 +69,7 @@ These concepts represent a 'starter set' and will be supplemented with additiona
 <!--
 The message bundle **SHALL** include the MessageHeader resource and the resources referenced by `MessageHeader.focus` element. It **SHOULD** include all resources needed for the Receiver or Intermediary to be able to process the message as expected by the the message event *provided that all included resources have a traversal path following Reference or canonical links either to or from the MessageHeader*.
 -->
-For all Da Vinci Notification Message Bundles, the following resources are mandatory (i.e., data MUST be present) or must be supported if the data is present in the source system (see [Must Support] definition below).  These requirements are illustrated in figure 3 below.  See the [Admit/Discharge Use Case] for an example of the required resources for a particular scenario.
+For all Da Vinci Notification Message Bundles, the following resources are mandatory (i.e., data MUST be present) or must be supported if the data is present in the source system (see [Must Support] definition below).  These requirements are illustrated in figure 3 below.  See the [Admit/Transfer/Discharge Use Case] for an example of the required resources for a particular scenario.
 
 **Each Bundle must have:**
 
@@ -82,7 +82,7 @@ For all Da Vinci Notification Message Bundles, the following resources are manda
 1. US Core *Organization*, *Practitioner*, or *PractionerRole* referenced by `MessageHeader.sender`
 1. US Core *Organization*, *Practitioner*, or *PractionerRole* referenced by `MessageHeader.responsible`
 1. US Core *Practitioner*, or *PractionerRole* referenced by `MessageHeader.author`
-1. *All* resources directly referenced by the `MessageHeader.focus` resource. Implementers should carefully consider what information they are willing to share and only include those reference elements for the use case in the focus resources. This can be formally defined by profiling the focus resource.  For example the admit/discharge use case focal resource is the [US Core Encounter Profile].
+1. *All* resources directly referenced by the `MessageHeader.focus` resource. Implementers should carefully consider what information they are willing to share and only include those reference elements for the use case in the focus resources. This can be formally defined by profiling the focus resource.  For example the Admit/Transfer/Discharge use case focal resource is the [US Core Encounter Profile].
 
    Implementers that use FHIR as their persistence layer may need to modify those resources before assembling the message bundle to avoid sending sensitive or unnecessary data.
    {:.highlight-note}
@@ -105,7 +105,7 @@ All the profiles that populate the Bundle get enforced by their references and t
 
 A use case specific Notification Bundle is defined by starting with base constraints in the [Da Vinci Notifications MessageHeader Profile] and [Da Vinci Notifications Bundle Profile] and creating a more tightly constrained MessageHeader Profile. Resources that are referenced within the Bundle are profiled to complete the Bundle definition.  Depending on the use case, existing profiles may be used or new profiles defined.
 
-See the Admit/Discharge use case for an example of using FHIR Profiles to define the Bundle.
+See the Admit/Transfer/Discharge use case for an example of using FHIR Profiles to define the Bundle.
 
 <!--
 FHIR profiling is more mature mechanism and broadly supported by the implementation community, reference implementations, and validation tooling.  However,there is no mechanism to enforce profiles in a message on a reverse link because “reverse links” cannot be traversed forward from the MessageHeader. It may also require more artifacts than using MessageDefintion/GraphDefinition.
@@ -122,7 +122,7 @@ The [MessageDefinition] defines the event and focus resource of the Message as w
 
 A use case specific Da Vinci Notification Bundles is defined using the base constraints defined in the [Da Vinci Notifications MessageHeader Profile] and use case specific MessageDefinition and GraphDefinition instances. Resource profiles are referenced by the GraphDefinition instance. Depending on the use case, existing profiles (for example, US Core Profiles) may be used or new profiles defined.
 
-See the Admit/Discharge use case for an example of using MessageDefinition and GraphDefinition to define the Bundle.
+See the Admit/Transfer/Discharge use case for an example of using MessageDefinition and GraphDefinition to define the Bundle.
 -->
 
 MessageBundles and GraphDefinition resource are alternative to using profiles to define the message bundles contents. However, at the time of this publication, the implementation community, reference implementations, and validation tooling does not fully support them.
@@ -185,7 +185,7 @@ The sequence diagram in Figure 5 illustrates the steps when forwarding the notif
 {% include img-portrait.html img="forwarding_message_wf.svg" caption="Figure 5" %}
 
 
-{{ site.data.capabilitystatement-notification-forwarder.rest[0]resource[5].documentation }}      
+{{ site.data.capabilitystatement-notification-forwarder.rest[0]resource[5].documentation }}
 
 {{ site.data.capabilitystatement-notification-forwarder.rest[0]resource[10].documentation }}
 
@@ -194,7 +194,7 @@ The sequence diagram in Figure 5 illustrates the steps when forwarding the notif
     Bundle Content Unchanged
 
     ~~~json
-    {% include admit-discharge-notification-provenance-01.json %}
+    {% include adt-notification-provenance-01.json %}
     ~~~
     {: fragment="Provenance" class="json"}
 
@@ -203,7 +203,7 @@ The sequence diagram in Figure 5 illustrates the steps when forwarding the notif
     Bundle Content Changed
 
     ~~~json
-    {% include admit-discharge-notification-provenance-02.json %}
+    {% include adt-notification-provenance-02.json %}
     ~~~
     {: fragment="Provenance" class="json"}
 
@@ -224,7 +224,7 @@ The body of the operation is the Da Vinci Notification Message Bundle containing
 An HTTP Status success code is returned on successful submission.
 
 
-See the Admit/Discharge scenario [Example Transaction] for an example of using the `$process-message` operation to send a Da Vinci Notification Message Bundle.
+See the Admit/Transfer/Discharge scenario [Example Transaction] for an example of using the `$process-message` operation to send a Da Vinci Notification Message Bundle.
 
 #### Reliable Delivery
 

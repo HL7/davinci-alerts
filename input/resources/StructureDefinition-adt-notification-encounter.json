@@ -1,10 +1,10 @@
 {
     "resourceType": "StructureDefinition",
-    "id": "admit-discharge-notification-encounter",
-    "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-encounter",
+    "id": "adt-notification-encounter",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter",
     "version": "1.0.0",
-    "name": "AdmitDischargeNotificationEncounterProfile",
-    "title": "Da Vinci Admit/Discharge Notification Encounter Profile",
+    "name": "ADTNotificationEncounterProfile",
+    "title": "Da Vinci Admit/Transfer/Discharge Notification Encounter Profile",
     "status": "active",
     "experimental": false,
     "date": "2019-11-12T00:00:00-08:00",
@@ -19,7 +19,7 @@
             ]
         }
     ],
-    "description": "The Da Vinci Admit Notification Encounter Profile is based on the [US Core Encounter Profile](http://hl7.org/fhir/us/core/STU3.1/StructureDefinition-us-core-encounter.html) and and constrains the resources referenced by the `Encounter.Subject`,`Encounter.Location`, and `Encounter.participant.individual`  to be found in the same message Bundle. In addition, the Location reference is constrained to the [US Core Location Profile](http://hl7.org/fhir/us/core/STU3.1/StructureDefinition-us-core-location.html)",
+    "description": "The Da Vinci Admit/Transfer/Discharge Notification Encounter Profile is based on the [US Core Encounter Profile](http://hl7.org/fhir/us/core/STU3.1/StructureDefinition-us-core-encounter.html) and and constrains the resources referenced by the `Encounter.Subject`,`Encounter.Location`, and `Encounter.participant.individual`  to be found in the same message Bundle. In addition, the Location reference is constrained to the [US Core Location Profile](http://hl7.org/fhir/us/core/STU3.1/StructureDefinition-us-core-location.html)",
     "jurisdiction": [
         {
             "coding": [

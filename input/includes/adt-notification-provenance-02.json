@@ -1,5 +1,5 @@
 {
-    "id": "admit-discharge-notification-provenance-01",
+    "id": "adt-notification-provenance-02",
     "resourceType": "Provenance",
     "meta": {
         "profile": [
@@ -8,10 +8,13 @@
     },
     "target": [
         {
-            "reference": "MessageHeader/messageheader-no-change-scenario-01"
+            "reference": "MessageHeader/messageheader-change-scenario-02"
         }
     ],
     "recorded": "2020-07-31T16:56:43-07:00",
+    "activity": {
+        "text": "Message removed content from original"
+    },
     "agent": [
         {
             "type": {
@@ -32,8 +35,8 @@
                 "coding": [
                     {
                         "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
-                        "code": "transmitter",
-                        "display": "Transmitter"
+                        "code": "assembler",
+                        "display": "Assembler"
                     }
                 ]
             },

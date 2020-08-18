@@ -1,23 +1,23 @@
 resourceType: StructureDefinition
-id: discharge-notification-messageheader
+id: transfer-notification-messageheader
 url: >-
-  http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader
+  http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/transfer-notification-messageheader
 version: 1.0.0
 name: DischargeNotificationMessageHeader
 title: Da Vinci Discharge Notification MessageHeader Profile
 status: active
 experimental: false
-date: '2019-11-12T00:00:00-08:00'
+date: '2020-08-17T13:51:55-07:00'
 publisher: HL7 International - Infrastructure and Messaging Work Group
 contact:
   - telecom:
       - system: url
         value: 'http://www.hl7.org/Special/committees/inm/index.cfm'
 description: >-
-  The Da Vinci Discharge Notification MessageHeader Profile  builds on  the [Da Vinci
-  Notifications MessageHeader Profile](StructureDefinition-notifications-messageheader.html) and sets  minimum expectations for
+  The Da Vinci Transfer Notification MessageHeader Profile builds on the [Da Vinci
+  Notifications MessageHeader Profile](StructureDefinition-notifications-messageheader.html) and sets minimum expectations for
   the FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html) resource to record the necessary context for Da Vinci
-  discharge notification messaging scenario.  The event code is "notification-discharge" and the focus of the event is the Encounter.
+  transfer notification messaging scenario.  The event code is "notification-transfer" and the focus of the event is the Encounter.
 jurisdiction:
   - coding:
       - system: 'urn:iso:std:iso:3166'
@@ -44,7 +44,7 @@ differential:
       binding:
         strength: extensible
         valueSet: >-
-          http://hl7.org/fhir/us/davinci-alerts/ValueSet/notification-discharge-event
+          http://hl7.org/fhir/us/davinci-alerts/ValueSet/notification-transfer-event
     - id: MessageHeader.focus
       path: MessageHeader.focus
       slicing:

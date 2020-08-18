@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Encounter xmlns="http://hl7.org/fhir">
-	<id value="admit-discharge-notification-encounter-01"/>
+	<id value="adt-notification-encounter-01"/>
 	<meta>
 		<lastUpdated value="2017-05-26T11:56:57.250-04:00"/>
-		<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-discharge-notification-encounter"/>
+		<profile value="http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter"/>
 	</meta>
 	<status value="finished"/>
 	<class>

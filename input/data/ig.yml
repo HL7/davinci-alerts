@@ -36,12 +36,12 @@ definition:
     - name: base
   resource:
     #- reference:
-        #reference: Provenance/admit-discharge-notification-provenance-01
+        #reference: Provenance/adt-notification-provenance-01
       #exampleBoolean: true
       #name: Admit Discharge Notification Provenance 01
       #description: Admit Discharge Notification Provenance Example
     #- reference:
-        #reference: Provenance/admit-discharge-notification-provenance-02
+        #reference: Provenance/adt-notification-provenance-02
       #exampleBoolean: true
       #name: Admit Discharge Notification Provenance 02
       #description: Admit Discharge Notification Provenance Example
@@ -61,7 +61,7 @@ definition:
       name: Example Payor Organization
       description: Example Payor Organization
     - reference:
-        reference: Coverage/admit-discharge-notification-coverage-01
+        reference: Coverage/adt-notification-coverage-01
       exampleBoolean: true
       name: Admit Discharge Notification Coverage 01
       description: Admit Notification Notification Coverage Example
@@ -78,6 +78,12 @@ definition:
       description: Admit Notification Message Bundle Example
 
     - reference:
+        reference: Bundle/transfer-notification-message-bundle-01
+      exampleBoolean: true
+      name: Transfer Notification Message Bundle 01
+      description: Transfer Notification Message Bundle Example
+
+    - reference:
         reference: Bundle/admit-notification-intermediate-translate-bundle
       exampleBoolean: true
       name: Admit Notification Intermediate Translate Bundle
@@ -90,12 +96,12 @@ definition:
       description: Admit Notification Intermediate Transmit Bundle Example
 
     - reference:
-        reference: Encounter/admit-discharge-notification-encounter-01
+        reference: Encounter/adt-notification-encounter-01
       exampleBoolean: true
       name: Admit Discharge Notification Encounter 01
       description: Admit Discharge Notification Encounter Example
     - reference:
-        reference: Condition/admit-discharge-notification-condition-01
+        reference: Condition/adt-notification-condition-01
       exampleBoolean: true
       name: Admit Discharge Notification Condition 01
       description: Admit Discharge Notification Condition Example
@@ -107,7 +113,7 @@ definition:
         reference: CapabilityStatement/notification-forwarder
       exampleBoolean: false
     - reference:
-        reference: StructureDefinition/admit-discharge-notification-condition
+        reference: StructureDefinition/adt-notification-condition
       exampleBoolean: false
     - reference:
         reference: ValueSet/notification-event
@@ -122,7 +128,7 @@ definition:
         reference: ValueSet/notification-discharge-event
       exampleBoolean: false
     - reference:
-        reference: StructureDefinition/admit-discharge-notification-encounter
+        reference: StructureDefinition/adt-notification-encounter
       exampleBoolean: false
     - reference:
         reference: CapabilityStatement/query-requester
@@ -134,7 +140,7 @@ definition:
         reference: CapabilityStatement/notification-receiver
       exampleBoolean: false
     - reference:
-        reference: StructureDefinition/admit-discharge-notification-coverage
+        reference: StructureDefinition/adt-notification-coverage
       exampleBoolean: false
     - reference:
         reference: CapabilityStatement/query-responder
@@ -160,22 +166,22 @@ definition:
         title: Framework
         generation: markdown
       - nameUrl: usecases.html
-        title: Da Vinci Notifications Patient Admit/Discharge Use Case
+        title: Da Vinci Notifications Patient Admit/Transfer/Discharge Use Case
         generation: markdown
       - nameUrl: profiles.html
         title: Profiles and Extensions
         generation: markdown
         page:
-          - nameUrl: StructureDefinition-admit-discharge-notification-condition.html
+          - nameUrl: StructureDefinition-adt-notification-condition.html
             title: StructureDefinition Admit Discharge Notification Condition
             generation: generated
-          - nameUrl: StructureDefinition-admit-discharge-notification-encounter.html
+          - nameUrl: StructureDefinition-adt-notification-encounter.html
             title: StructureDefinition Admit Discharge Notification Encounter
             generation: generated
           - nameUrl: StructureDefinition-discharge-notification-messageheader.html
             title: StructureDefinition Discharge Notification MessageHeader
             generation: generated
-          - nameUrl: StructureDefinition-admit-discharge-notification-coverage.html
+          - nameUrl: StructureDefinition-adt-notification-coverage.html
             title: StructureDefinition Admit Discharge Notification Coverage
             generation: generated
           - nameUrl: StructureDefinition-admit-notification-messageheader.html

@@ -3,7 +3,7 @@
 [`$process-message`]: {{site.data.fhir.path}}messageheader-operation-process-message.html
 [`collection`]: {{site.data.fhir.path}}http.html#collection
 [2019 CMS 45 CFR Part 156 NPRM]: https://www.federalregister.gov/d/2020-05050
-[Admit/Discharge Use case]: usecases.html
+[Admit/Transfer/Discharge Use case]: usecases.html
 [aggregation]: {{site.data.fhir.path}}elementdefinition-definitions.html#ElementDefinition.aggregation
 [Argonaut Clinical Data Subscriptions]: http://argonautwiki.hl7.org/index.php?title=Argonaut_2019_Projects#Clinical_Data_Subscriptions
 [Bundle Admit Notification Message Bundle 01]: Bundle-admit-notification-message-bundle-01.html
@@ -11,9 +11,10 @@
 [Bundle]: {{site.data.fhir.path}}bundle.html
 [Capability Statements]: capstatements.html
 [Da Vinci Admit Notification MessageHeader Profile]: StructureDefinition-admit-notification-messageheader.html
-[Da Vinci Admit/Discharge Notification Condition Profile]: StructureDefinition-admit-discharge-notification-condition.html
-[Da Vinci Admit/Discharge Notification Coverage Profile]: StructureDefinition-admit-discharge-notification-coverage.html
-[Da Vinci Admit/Discharge Notification Encounter Profile]: StructureDefinition-admit-discharge-notification-encounter.html
+[Da Vinci Transfer Notification MessageHeader Profile]: StructureDefinition-transfer-notification-messageheader.html
+[Da Vinci Admit/Transfer/Discharge Notification Condition Profile]: StructureDefinition-adt-notification-condition.html
+[Da Vinci Admit/Transfer/Discharge Notification Coverage Profile]: StructureDefinition-adt-notification-coverage.html
+[Da Vinci Admit/Transfer/Discharge Notification Encounter Profile]: StructureDefinition-adt-notification-encounter.html
 [Da Vinci Discharge Notification MessageHeader Profile]: StructureDefinition-discharge-notification-messageheader.html
 [Da Vinci Health Record Exchange (HRex) Implementation Guide]: http://hl7.org/fhir/us/davinci-hrex/history.html
 [Da Vinci Notification Admit Message Definition]: MessageDefinition-notification-admit.html

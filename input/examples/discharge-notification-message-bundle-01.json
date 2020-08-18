@@ -1,20 +1,20 @@
 {
-    "id": "admit-notification-intermediate-translate-bundle",
+    "id": "discharge-notification-message-bundle-01",
     "meta": {
-        "lastUpdated": "2020-08-18T03:46:08.766692Z",
+        "lastUpdated": "2020-08-17T19:00:15.888493Z",
         "profile": [
             "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle"
         ]
     },
     "entry": [
         {
-            "fullUrl": "urn:uuid:5ef532e2-e105-11ea-a6e7-0aa89ff15e09",
+            "fullUrl": "urn:uuid:df0bb058-e0bb-11ea-a11a-864d2e68a322",
             "resource": {
-                "id": "5ef532e2-e105-11ea-a6e7-0aa89ff15e09",
+                "id": "df0bb058-e0bb-11ea-a11a-864d2e68a322",
                 "meta": {
                     "profile": [
                         "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader",
-                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader"
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader"
                     ]
                 },
                 "author": {
@@ -23,18 +23,18 @@
                 },
                 "destination": [
                     {
-                        "endpoint": "https://example.org/Endpoints/my-destination",
-                        "name": "My Destination"
+                        "endpoint": "/DaVinci-Notifications-Intermediary",
+                        "name": "Intermediary-Simulator"
                     }
                 ],
                 "eventCoding": {
-                    "code": "notification-admit",
-                    "display": "Notification Admit",
+                    "code": "notification-discharge",
+                    "display": "Notification Discharge",
                     "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"
                 },
                 "focus": [
                     {
-                        "display": "Notification Admit(Unknown (qualifier value))",
+                        "display": "Notification Discharge(Examplotomy Encounter)",
                         "reference": "urn:uuid:5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82"
                     }
                 ],
@@ -43,81 +43,20 @@
                     "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
                 },
                 "sender": {
-                    "display": "Da Vinci Intermediary",
-                    "reference": "urn:uuid:4f7c997a-d6a4-11ea-814c-b5baa7182d44"
+                    "display": "HOLY FAMILY HOSPITAL",
+                    "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
                 },
                 "source": {
                     "contact": {
                         "system": "phone",
-                        "value": "+1-800-555-5555"
+                        "value": "+1 (555) 123 4567"
                     },
-                    "endpoint": "https://example.org/Endpoints/P999",
-                    "name": "Da Vinci Intermediary Source Application",
-                    "software": "Acme Patient Manager",
+                    "endpoint": "https://example.org/Endpoints/P456",
+                    "name": "Acme Central Patient Registry",
+                    "software": "FooBar Patient Manager",
                     "version": "3.1.45.AABB"
                 },
                 "resourceType": "MessageHeader"
-            }
-        },
-        {
-            "fullUrl": "urn:uuid:5ef59a0c-e105-11ea-a6e7-0aa89ff15e09",
-            "resource": {
-                "id": "5ef59a0c-e105-11ea-a6e7-0aa89ff15e09",
-                "meta": {
-                    "profile": [
-                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
-                    ]
-                },
-                "activity": {
-                    "coding": [
-                        {
-                            "code": "amend",
-                            "display": "Amend (Update) Record Lifecycle Event",
-                            "system": "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
-                        }
-                    ],
-                    "text": "Remove Coverage and Forward the Bundle"
-                },
-                "agent": [
-                    {
-                        "onBehalfOf": {
-                            "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
-                        },
-                        "type": {
-                            "coding": [
-                                {
-                                    "code": "author",
-                                    "display": "Author",
-                                    "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type"
-                                }
-                            ]
-                        },
-                        "who": {
-                            "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a"
-                        }
-                    },
-                    {
-                        "type": {
-                            "coding": [
-                                {
-                                    "code": "assembler",
-                                    "display": "Assembler",
-                                    "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type"
-                                }
-                            ]
-                        },
-                        "who": {
-                            "reference": "urn:uuid:4f7c997a-d6a4-11ea-814c-b5baa7182d44"
-                        }
-                    }
-                ],
-                "recorded": "2020-08-18T03:46:17.181063Z",
-                "target": [
-                    {
-                        "reference": "MessageHeader/5ef532e2-e105-11ea-a6e7-0aa89ff15e09"
-                    }
-                ],
-                "resourceType": "Provenance"
             }
         },
         {
@@ -125,17 +64,29 @@
             "resource": {
                 "id": "5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82",
                 "meta": {
-                    "lastUpdated": "2020-04-28T21:32:21.199+00:00",
+                    "lastUpdated": "2020-04-28T21:32:34.376+00:00",
                     "profile": [
-                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter",
-                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter"
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter",
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
                     ],
-                    "source": "#DlfWMd7j9EX8TaLI",
-                    "versionId": "54"
+                    "source": "#TtGHW1V3SxiqqQj4",
+                    "versionId": "56"
                 },
                 "class": {
-                    "code": "EMER",
+                    "code": "IMP",
                     "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+                },
+                "hospitalization": {
+                    "dischargeDisposition": {
+                        "coding": [
+                            {
+                                "code": "1",
+                                "display": "Discharge to Home or Self Care (Routine Discharge)",
+                                "system": "http://www.nubc.org/patient-discharge"
+                            }
+                        ],
+                        "text": "Discharge to Home or Self Care (Routine Discharge)"
+                    }
                 },
                 "identifier": [
                     {
@@ -160,14 +111,14 @@
                     }
                 ],
                 "period": {
-                    "end": "2018-10-21T22:22:15-07:00",
+                    "end": "2018-10-23T22:22:15-07:00",
                     "start": "2018-10-21T21:22:15-07:00"
                 },
                 "serviceProvider": {
                     "display": "HOLY FAMILY HOSPITAL",
                     "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
                 },
-                "status": "in-progress",
+                "status": "finished",
                 "subject": {
                     "display": "Mr. Elden718 Halvorson124",
                     "reference": "urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
@@ -176,12 +127,12 @@
                     {
                         "coding": [
                             {
-                                "code": "261665006",
-                                "display": "Unknown (qualifier value)",
-                                "system": "http://snomed.info/sct"
+                                "code": "1234",
+                                "display": "Examplotomy Encounter",
+                                "system": "http://example.org/fhir/encounters"
                             }
                         ],
-                        "text": "Unknown (qualifier value)"
+                        "text": "Examplotomy Encounter"
                     }
                 ],
                 "resourceType": "Encounter"
@@ -531,8 +482,8 @@
                 "meta": {
                     "lastUpdated": "2020-04-28T20:28:00.008+00:00",
                     "profile": [
-                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition",
-                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-condition"
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-condition",
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
                     ],
                     "source": "#cabiJIK51sD2iz4N",
                     "versionId": "10"
@@ -586,20 +537,52 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:4f7c997a-d6a4-11ea-814c-b5baa7182d44",
+            "fullUrl": "urn:uuid:cc6ac2fe-2bf4-11ea-a5f5-a4d18ccf5172",
             "resource": {
-                "id": "4f7c997a-d6a4-11ea-814c-b5baa7182d44",
+                "id": "cc6ac2fe-2bf4-11ea-a5f5-a4d18ccf5172",
                 "meta": {
+                    "lastUpdated": "2020-04-28T20:27:52.686+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-coverage"
+                    ],
+                    "source": "#pPvYTutotnO7vQfK",
+                    "versionId": "10"
+                },
+                "beneficiary": {
+                    "reference": "urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
+                },
+                "payor": [
+                    {
+                        "display": "Blue Cross Blue Shield",
+                        "reference": "urn:uuid:cc6ac93e-2bf4-11ea-a5f5-a4d18ccf5172"
+                    }
+                ],
+                "status": "active",
+                "subscriberId": "12345",
+                "type": {
+                    "text": "Blue Cross Blue Shield"
+                },
+                "resourceType": "Coverage"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:cc6ac93e-2bf4-11ea-a5f5-a4d18ccf5172",
+            "resource": {
+                "id": "cc6ac93e-2bf4-11ea-a5f5-a4d18ccf5172",
+                "meta": {
+                    "lastUpdated": "2020-04-28T20:27:53.069+00:00",
                     "profile": [
                         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-                    ]
+                    ],
+                    "source": "#pPvYTutotnO7vQfK",
+                    "versionId": "10"
                 },
                 "active": true,
                 "address": [
                     {
                         "city": "Chicago",
                         "line": [
-                            "1 Main"
+                            "Michigan Plaza"
                         ],
                         "postalCode": "60007",
                         "state": "IL"
@@ -611,19 +594,19 @@
                         "value": "0000010005"
                     }
                 ],
-                "name": "Acme Message Sender",
+                "name": "Blue Cross Blue Shield",
                 "telecom": [
                     {
                         "system": "phone",
                         "use": "work",
-                        "value": "1-800-555-5555"
+                        "value": "1-800-262-2583"
                     }
                 ],
                 "resourceType": "Organization"
             }
         }
     ],
-    "timestamp": "2020-08-18T03:46:17.181063Z",
+    "timestamp": "2020-08-17T19:00:15.888493Z",
     "type": "message",
     "resourceType": "Bundle"
 }

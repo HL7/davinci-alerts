@@ -1,37 +1,49 @@
 {
     "id": "admit-notification-intermediate-transmit-bundle",
+    "meta": {
+        "lastUpdated": "2020-08-18T03:30:28.261209Z",
+        "profile": [
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle"
+        ]
+    },
     "entry": [
         {
-            "fullUrl": "urn:uuid:7bf8da78-db7c-11ea-9623-e346d00b2ab5",
+            "fullUrl": "urn:uuid:2f5fb9f0-e103-11ea-a0c8-0aa89ff15e09",
             "resource": {
-                "id": "7bf8da78-db7c-11ea-9624-e346d00b2ab5",
+                "id": "2f5fb9f0-e103-11ea-a0c8-0aa89ff15e09",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader",
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader"
+                    ]
+                },
                 "author": {
-                    "display": "Dr. Raina861 Willms744",
-                    "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000019a"
+                    "display": "Dr. Janeth814 Jakubowski832",
+                    "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a"
                 },
                 "destination": [
                     {
-                        "endpoint": "https://davinci-alerts-receiver.logicahealth.org/fhir",
-                        "name": "Alerts-RI"
+                        "endpoint": "https://example.org/Endpoints/my-destination",
+                        "name": "My Destination"
                     }
                 ],
                 "eventCoding": {
-                    "code": "notification-discharge",
-                    "display": "Notification Discharge",
+                    "code": "notification-admit",
+                    "display": "Notification Admit",
                     "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"
                 },
                 "focus": [
                     {
-                        "display": "Notification Discharge(Examplotomy Encounter)",
-                        "reference": "urn:uuid:02ba9ec6-0712-4715-8ba4-5485fc571403"
+                        "display": "Notification Admit(Unknown (qualifier value))",
+                        "reference": "urn:uuid:5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82"
                     }
                 ],
                 "responsible": {
-                    "display": "SOUTH SHORE HOSPITAL",
-                    "reference": "urn:uuid:db0acede-4abe-3c01-8d03-5c68a190d8c7"
+                    "display": "HOLY FAMILY HOSPITAL",
+                    "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
                 },
                 "sender": {
-                    "display": "Acme Message Sender",
+                    "display": "Da Vinci Intermediary",
                     "reference": "urn:uuid:4f7c997a-d6a4-11ea-814c-b5baa7182d44"
                 },
                 "source": {
@@ -39,16 +51,23 @@
                         "system": "phone",
                         "value": "+1-800-555-5555"
                     },
-                    "endpoint": "https://example.org/Endpoints/P456",
-                    "name": "Acme Message Sender"
+                    "endpoint": "https://example.org/Endpoints/P999",
+                    "name": "Da Vinci Intermediary Source Application",
+                    "software": "Acme Patient Manager",
+                    "version": "3.1.45.AABB"
                 },
                 "resourceType": "MessageHeader"
             }
         },
         {
-            "fullUrl": "urn:uuid:7bf94f58-db7c-11ea-a299-e346d00b2ab5",
+            "fullUrl": "urn:uuid:2f5fddea-e103-11ea-a0c8-0aa89ff15e09",
             "resource": {
-                "id": "7bf94f58-db7c-11ea-a299-e346d00b2ab5",
+                "id": "2f5fddea-e103-11ea-a0c8-0aa89ff15e09",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+                    ]
+                },
                 "activity": {
                     "coding": [
                         {
@@ -62,7 +81,7 @@
                 "agent": [
                     {
                         "onBehalfOf": {
-                            "reference": "urn:uuid:db0acede-4abe-3c01-8d03-5c68a190d8c7"
+                            "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
                         },
                         "type": {
                             "coding": [
@@ -74,7 +93,7 @@
                             ]
                         },
                         "who": {
-                            "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000019a"
+                            "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a"
                         }
                     },
                     {
@@ -92,89 +111,94 @@
                         }
                     }
                 ],
-                "recorded": "2020-08-11T02:43:47.864520Z",
+                "recorded": "2020-08-18T03:30:38.388714Z",
                 "target": [
                     {
-                        "reference": "urn:uuid:7bf8da78-db7c-11ea-9623-e346d00b2ab5"
+                        "reference": "MessageHeader/2f5fb9f0-e103-11ea-a0c8-0aa89ff15e09"
                     }
                 ],
                 "resourceType": "Provenance"
             }
         },
         {
-            "fullUrl": "urn:uuid:02ba9ec6-0712-4715-8ba4-5485fc571403",
+            "fullUrl": "urn:uuid:5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82",
             "resource": {
-                "id": "02ba9ec6-0712-4715-8ba4-5485fc571403",
-                "class": {
-                    "code": "IMP",
-                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+                "id": "5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82",
+                "meta": {
+                    "lastUpdated": "2020-04-28T21:32:21.199+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter",
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter"
+                    ],
+                    "source": "#DlfWMd7j9EX8TaLI",
+                    "versionId": "54"
                 },
-                "hospitalization": {
-                    "dischargeDisposition": {
-                        "coding": [
-                            {
-                                "code": "1",
-                                "display": "Discharge to Home or Self Care (Routine Discharge)",
-                                "system": "http://www.nubc.org/patient-discharge"
-                            }
-                        ],
-                        "text": "Discharge to Home or Self Care (Routine Discharge)"
-                    }
+                "class": {
+                    "code": "EMER",
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
                 },
                 "identifier": [
                     {
                         "system": "http://example.org",
-                        "value": "Jama227Corwin84620190706T1847440700"
+                        "value": "Elden718Halvorson12420181021T2122150700"
                     }
                 ],
                 "location": [
                     {
                         "location": {
-                            "display": "SOUTH SHORE HOSPITAL",
-                            "reference": "urn:uuid:76ebe279-211e-493a-8318-4bc784129ac5"
+                            "display": "HOLY FAMILY HOSPITAL",
+                            "reference": "urn:uuid:09188b81-0d1d-453c-b0fa-203ef88c794c"
                         }
                     }
                 ],
                 "participant": [
                     {
                         "individual": {
-                            "display": "Dr. Raina861 Willms744",
-                            "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000019a"
+                            "display": "Dr. Janeth814 Jakubowski832",
+                            "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a"
                         }
                     }
                 ],
                 "period": {
-                    "end": "2019-07-08T19:47:44-07:00",
-                    "start": "2019-07-06T18:47:44-07:00"
+                    "end": "2018-10-21T22:22:15-07:00",
+                    "start": "2018-10-21T21:22:15-07:00"
                 },
                 "serviceProvider": {
-                    "display": "SOUTH SHORE HOSPITAL",
-                    "reference": "urn:uuid:db0acede-4abe-3c01-8d03-5c68a190d8c7"
+                    "display": "HOLY FAMILY HOSPITAL",
+                    "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
                 },
-                "status": "finished",
+                "status": "in-progress",
                 "subject": {
-                    "display": "Ms. Jama227 Corwin846",
-                    "reference": "urn:uuid:aad0894e-47f4-4ffc-8fab-8fe5487110d2"
+                    "display": "Mr. Elden718 Halvorson124",
+                    "reference": "urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
                 },
                 "type": [
                     {
                         "coding": [
                             {
-                                "code": "1234",
-                                "display": "Examplotomy Encounter",
+                                "code": "261665006",
+                                "display": "Unknown (qualifier value)",
                                 "system": "http://snomed.info/sct"
                             }
                         ],
-                        "text": "Examplotomy Encounter"
+                        "text": "Unknown (qualifier value)"
                     }
                 ],
                 "resourceType": "Encounter"
             }
         },
         {
-            "fullUrl": "urn:uuid:aad0894e-47f4-4ffc-8fab-8fe5487110d2",
+            "fullUrl": "urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b",
             "resource": {
-                "id": "aad0894e-47f4-4ffc-8fab-8fe5487110d2",
+                "id": "06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b",
+                "meta": {
+                    "lastUpdated": "2020-04-28T20:27:52.935+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                    ],
+                    "source": "#pPvYTutotnO7vQfK",
+                    "versionId": "4"
+                },
                 "extension": [
                     {
                         "extension": [
@@ -212,16 +236,16 @@
                     },
                     {
                         "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
-                        "valueString": "Becky854 Crist667"
+                        "valueString": "Marge692 Yost751"
                     },
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
-                        "valueCode": "F"
+                        "valueCode": "M"
                     },
                     {
                         "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
                         "valueAddress": {
-                            "city": "Boston",
+                            "city": "Rockland",
                             "country": "US",
                             "state": "Massachusetts"
                         }
@@ -234,25 +258,26 @@
                                 "extension": [
                                     {
                                         "url": "latitude",
-                                        "valueDecimal": 42.23059709875085
+                                        "valueDecimal": 42.757779285956644
                                     },
                                     {
                                         "url": "longitude",
-                                        "valueDecimal": -71.04894935227846
+                                        "valueDecimal": -71.14760946593316
                                     }
                                 ],
                                 "url": "http://hl7.org/fhir/StructureDefinition/geolocation"
                             }
                         ],
-                        "city": "Braintree",
+                        "city": "Methuen",
                         "country": "US",
                         "line": [
-                            "801 Wolf Quay Suite 61"
+                            "715 Crona Corner"
                         ],
+                        "postalCode": "01844",
                         "state": "MA"
                     }
                 ],
-                "birthDate": "2001-06-30",
+                "birthDate": "2000-10-15",
                 "communication": [
                     {
                         "language": {
@@ -267,11 +292,11 @@
                         }
                     }
                 ],
-                "gender": "female",
+                "gender": "male",
                 "identifier": [
                     {
                         "system": "https://github.com/synthetichealth/synthea",
-                        "value": "aad0894e-47f4-4ffc-8fab-8fe5487110d2"
+                        "value": "06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
                     },
                     {
                         "system": "http://hospital.smarthealthit.org",
@@ -285,7 +310,7 @@
                             ],
                             "text": "Medical Record Number"
                         },
-                        "value": "aad0894e-47f4-4ffc-8fab-8fe5487110d2"
+                        "value": "06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
                     },
                     {
                         "system": "http://hl7.org/fhir/sid/us-ssn",
@@ -299,7 +324,7 @@
                             ],
                             "text": "Social Security Number"
                         },
-                        "value": "999-21-5963"
+                        "value": "999-87-1037"
                     },
                     {
                         "system": "urn:oid:2.16.840.1.113883.4.3.25",
@@ -313,7 +338,7 @@
                             ],
                             "text": "Driver's License"
                         },
-                        "value": "S99984181"
+                        "value": "S99952689"
                     }
                 ],
                 "maritalStatus": {
@@ -329,12 +354,12 @@
                 "multipleBirthBoolean": false,
                 "name": [
                     {
-                        "family": "Corwin846",
+                        "family": "Halvorson124",
                         "given": [
-                            "Jama227"
+                            "Elden718"
                         ],
                         "prefix": [
-                            "Ms."
+                            "Mr."
                         ],
                         "use": "official"
                     }
@@ -343,57 +368,73 @@
                     {
                         "system": "phone",
                         "use": "home",
-                        "value": "555-442-3071"
+                        "value": "555-903-1143"
                     }
                 ],
                 "resourceType": "Patient"
             }
         },
         {
-            "fullUrl": "urn:uuid:76ebe279-211e-493a-8318-4bc784129ac5",
+            "fullUrl": "urn:uuid:09188b81-0d1d-453c-b0fa-203ef88c794c",
             "resource": {
-                "id": "76ebe279-211e-493a-8318-4bc784129ac5",
+                "id": "09188b81-0d1d-453c-b0fa-203ef88c794c",
+                "meta": {
+                    "lastUpdated": "2020-04-28T20:27:53.156+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+                    ],
+                    "source": "#pPvYTutotnO7vQfK",
+                    "versionId": "4"
+                },
                 "address": {
-                    "city": "SOUTH WEYMOUTH",
+                    "city": "METHUEN",
                     "country": "US",
                     "line": [
-                        "55 FOGG ROAD"
+                        "70 EAST STREET"
                     ],
-                    "postalCode": "02190",
+                    "postalCode": "01844",
                     "state": "MA"
                 },
                 "managingOrganization": {
-                    "display": "SOUTH SHORE HOSPITAL",
-                    "reference": "urn:uuid:db0acede-4abe-3c01-8d03-5c68a190d8c7"
+                    "display": "HOLY FAMILY HOSPITAL",
+                    "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
                 },
-                "name": "SOUTH SHORE HOSPITAL",
+                "name": "HOLY FAMILY HOSPITAL",
                 "position": {
-                    "latitude": 42.24158900000001,
-                    "longitude": -71.082651
+                    "latitude": 42.742751,
+                    "longitude": -71.178588
                 },
                 "status": "active",
                 "telecom": [
                     {
                         "system": "phone",
-                        "value": "7813408000"
+                        "value": "9786870156"
                     }
                 ],
                 "resourceType": "Location"
             }
         },
         {
-            "fullUrl": "urn:uuid:0000016f-57cb-cdac-0000-00000000019a",
+            "fullUrl": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a",
             "resource": {
-                "id": "0000016f-57cb-cdac-0000-00000000019a",
+                "id": "0000016f-57cb-cdac-0000-00000000014a",
+                "meta": {
+                    "lastUpdated": "2020-04-28T20:27:53.186+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+                    ],
+                    "source": "#pPvYTutotnO7vQfK",
+                    "versionId": "4"
+                },
                 "active": true,
                 "address": [
                     {
-                        "city": "SOUTH WEYMOUTH",
+                        "city": "METHUEN",
                         "country": "US",
                         "line": [
-                            "55 FOGG ROAD"
+                            "70 EAST STREET"
                         ],
-                        "postalCode": "02190",
+                        "postalCode": "01844",
                         "state": "MA"
                     }
                 ],
@@ -401,14 +442,14 @@
                 "identifier": [
                     {
                         "system": "http://hl7.org/fhir/sid/us-npi",
-                        "value": "410"
+                        "value": "330"
                     }
                 ],
                 "name": [
                     {
-                        "family": "Willms744",
+                        "family": "Jakubowski832",
                         "given": [
-                            "Raina861"
+                            "Janeth814"
                         ],
                         "prefix": [
                             "Dr."
@@ -425,39 +466,47 @@
                         ],
                         "system": "email",
                         "use": "work",
-                        "value": "Raina861.Willms744@example.com"
+                        "value": "Janeth814.Jakubowski832@example.com"
                     }
                 ],
                 "resourceType": "Practitioner"
             }
         },
         {
-            "fullUrl": "urn:uuid:db0acede-4abe-3c01-8d03-5c68a190d8c7",
+            "fullUrl": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983",
             "resource": {
-                "id": "db0acede-4abe-3c01-8d03-5c68a190d8c7",
+                "id": "a9f20dc1-5147-3789-bcef-bbecb41c5983",
+                "meta": {
+                    "lastUpdated": "2020-04-28T20:27:52.708+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+                    ],
+                    "source": "#pPvYTutotnO7vQfK",
+                    "versionId": "4"
+                },
                 "active": true,
                 "address": [
                     {
-                        "city": "SOUTH WEYMOUTH",
+                        "city": "METHUEN",
                         "country": "US",
                         "line": [
-                            "55 FOGG ROAD"
+                            "70 EAST STREET"
                         ],
-                        "postalCode": "02190",
+                        "postalCode": "01844",
                         "state": "MA"
                     }
                 ],
                 "identifier": [
                     {
                         "system": "https://github.com/synthetichealth/synthea",
-                        "value": "db0acede-4abe-3c01-8d03-5c68a190d8c7"
+                        "value": "a9f20dc1-5147-3789-bcef-bbecb41c5983"
                     }
                 ],
-                "name": "SOUTH SHORE HOSPITAL",
+                "name": "HOLY FAMILY HOSPITAL",
                 "telecom": [
                     {
                         "system": "phone",
-                        "value": "7813408000"
+                        "value": "9786870156"
                     }
                 ],
                 "type": [
@@ -476,9 +525,18 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:5e83a7b0-6ce9-48c0-aede-81ef3a12b69e",
+            "fullUrl": "urn:uuid:4ac41715-fcbd-421c-8796-9b2c9706dd3f",
             "resource": {
-                "id": "5e83a7b0-6ce9-48c0-aede-81ef3a12b69e",
+                "id": "4ac41715-fcbd-421c-8796-9b2c9706dd3f",
+                "meta": {
+                    "lastUpdated": "2020-04-28T20:28:00.008+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition",
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-condition"
+                    ],
+                    "source": "#cabiJIK51sD2iz4N",
+                    "versionId": "10"
+                },
                 "category": [
                     {
                         "coding": [
@@ -503,18 +561,18 @@
                         {
                             "code": "1234",
                             "display": "Examplitis",
-                            "system": "http://snomed.info/sct"
+                            "system": "http://example.org/fhir/conditions"
                         }
                     ],
                     "text": "Examplitis"
                 },
                 "encounter": {
-                    "reference": "urn:uuid:02ba9ec6-0712-4715-8ba4-5485fc571403"
+                    "reference": "urn:uuid:5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82"
                 },
-                "onsetDateTime": "2019-07-06T18:47:44-07:00",
-                "recordedDate": "2019-07-06T18:47:44-07:00",
+                "onsetDateTime": "2018-10-21T21:22:15-07:00",
+                "recordedDate": "2018-10-21T21:22:15-07:00",
                 "subject": {
-                    "reference": "urn:uuid:aad0894e-47f4-4ffc-8fab-8fe5487110d2"
+                    "reference": "urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
                 },
                 "verificationStatus": {
                     "coding": [
@@ -528,30 +586,83 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:ccb4874a-2bf4-11ea-a5f5-a4d18ccf5172",
+            "fullUrl": "urn:uuid:cc6ac2fe-2bf4-11ea-a5f5-a4d18ccf5172",
             "resource": {
-                "id": "ccb4874a-2bf4-11ea-a5f5-a4d18ccf5172",
+                "id": "cc6ac2fe-2bf4-11ea-a5f5-a4d18ccf5172",
+                "meta": {
+                    "lastUpdated": "2020-04-28T20:27:52.686+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-coverage"
+                    ],
+                    "source": "#pPvYTutotnO7vQfK",
+                    "versionId": "10"
+                },
                 "beneficiary": {
-                    "reference": "urn:uuid:aad0894e-47f4-4ffc-8fab-8fe5487110d2"
+                    "reference": "urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
                 },
                 "payor": [
                     {
-                        "display": "Anthem",
-                        "reference": "Organization/anthem"
+                        "display": "Blue Cross Blue Shield",
+                        "reference": "urn:uuid:cc6ac93e-2bf4-11ea-a5f5-a4d18ccf5172"
                     }
                 ],
                 "status": "active",
                 "subscriberId": "12345",
                 "type": {
-                    "text": "Anthem"
+                    "text": "Blue Cross Blue Shield"
                 },
                 "resourceType": "Coverage"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:cc6ac93e-2bf4-11ea-a5f5-a4d18ccf5172",
+            "resource": {
+                "id": "cc6ac93e-2bf4-11ea-a5f5-a4d18ccf5172",
+                "meta": {
+                    "lastUpdated": "2020-04-28T20:27:53.069+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+                    ],
+                    "source": "#pPvYTutotnO7vQfK",
+                    "versionId": "10"
+                },
+                "active": true,
+                "address": [
+                    {
+                        "city": "Chicago",
+                        "line": [
+                            "Michigan Plaza"
+                        ],
+                        "postalCode": "60007",
+                        "state": "IL"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "system": "http://hl7.org/fhir/sid/us-npi",
+                        "value": "0000010005"
+                    }
+                ],
+                "name": "Blue Cross Blue Shield",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "work",
+                        "value": "1-800-262-2583"
+                    }
+                ],
+                "resourceType": "Organization"
             }
         },
         {
             "fullUrl": "urn:uuid:4f7c997a-d6a4-11ea-814c-b5baa7182d44",
             "resource": {
                 "id": "4f7c997a-d6a4-11ea-814c-b5baa7182d44",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+                    ]
+                },
                 "active": true,
                 "address": [
                     {
@@ -569,7 +680,7 @@
                         "value": "0000010005"
                     }
                 ],
-                "name": "Acme Message Sender",
+                "name": "Da Vinci Intermediary",
                 "telecom": [
                     {
                         "system": "phone",
@@ -581,7 +692,7 @@
             }
         }
     ],
-    "timestamp": "2020-08-11T02:43:54.370680Z",
+    "timestamp": "2020-08-18T03:30:38.388714Z",
     "type": "message",
     "resourceType": "Bundle"
 }
