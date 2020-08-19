@@ -29,11 +29,11 @@ The Provider is notified when:
 
 ### FHIR Resources for Admission, Transfer, and Discharge Notifications
 
-To carry information regarding admission, transfer, and discharge event messages, the required resources for the message Bundle need to be defined.  The core components of the Bundle are defined in the [Framework] page and include the *MessageHeader* and the "root" resource represented by the  `MessageHeader.focus`.  For admission, transfer and discharge *Encounter* (US Core Encounter) is the focus of the event as shown in figure 6:
+To carry information regarding admission, transfer, and discharge event messages, the required resources for the message Bundle need to be defined.  The core components of the Bundle are defined in the [Framework] page and include the *MessageHeader* and the "root" resource represented by the  `MessageHeader.focus`.  For admission, transfer and discharge, the *Encounter* is the focus of the event as shown in figure 6. For this scenario, the Da Vinci Admit/Transfer/Discharge Notification Encounter Profile which is based on the US Core Encounter Profile is used:
 
 {% include img-portrait.html img="admit_message_graph1.svg" caption="Figure 6" %}
 
-The other "required if present" resources defined in the framework are those referenced by `MessageHeader.author`, `MessageHeader.responsible`, `MessageHeader.sender` and those referenced by the US Core Encounter Profile. These combine to make up a 'generic' Encounter message bundle structure illustrated in figure 7 below:
+The other "required if present" resources defined in the framework are those referenced by `MessageHeader.author`, `MessageHeader.responsible`, `MessageHeader.sender` and those referenced by the Da Vinci Admit/Transfer/Discharge Notification Encounter Profile. These combine to make up a 'generic' Encounter message bundle structure illustrated in figure 7 below:
 
 
 {% include img-portrait.html img="admit_message_graph2.svg" caption="Figure 7" %}
@@ -113,11 +113,11 @@ In the interaction shown in figures 9, the HealthCare facility is acting in the 
 
 The following example transactions show examples of using the `$process-message` operation to send a notification messages.
 
-{% include examplebutton_default.html example="process-message-admit-example" b_title = "Click Here To See Example Da Vinci *Admission* Notification Message" %}
+{% include examplebutton_default.html example="process-message-admit-example" b_title = "Click Here To See Example Da Vinci Admission Notification Message" %}
 
-{% include examplebutton_default.html example="process-message-transfer-example" b_title = "Click Here To See Example Da Vinci *Transfer* Notification Message" %}
+{% include examplebutton_default.html example="process-message-transfer-example" b_title = "Click Here To See Example Da Vinci Transfer Notification Message" %}
 
-{% include examplebutton_default.html example="process-message-discharge-example" b_title = "Click Here To See Example Da Vinci *Discharge* Notification Message" %}
+{% include examplebutton_default.html example="process-message-discharge-example" b_title = "Click Here To See Example Da Vinci Discharge Notification Message" %}
 
 ---
 

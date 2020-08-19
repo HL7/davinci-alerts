@@ -38,13 +38,13 @@ definition:
     #- reference:
         #reference: Provenance/adt-notification-provenance-01
       #exampleBoolean: true
-      #name: Admit Discharge Notification Provenance 01
-      #description: Admit Discharge Notification Provenance Example
+      #name: Admit/Transfer/Discharge Notification Provenance 01
+      #description: Admit/Transfer/Discharge Notification Provenance Example
     #- reference:
         #reference: Provenance/adt-notification-provenance-02
       #exampleBoolean: true
-      #name: Admit Discharge Notification Provenance 02
-      #description: Admit Discharge Notification Provenance Example
+      #name: Admit/Transfer/Discharge Notification Provenance 02
+      #description: Admit/Transfer/Discharge Notification Provenance Example
     - reference:
         reference: MessageHeader/admit-notification-messageheader-01
       exampleBoolean: true
@@ -56,6 +56,11 @@ definition:
       name: Discharge Notification Messageheader 01
       description: Discharge Notification Messageheader Example
     - reference:
+        reference: MessageHeader/transfer-notification-messageheader-01
+      exampleBoolean: true
+      name: Transfer Notification Messageheader 01
+      description: Transfer Notification Messageheader Example
+    - reference:
         reference: Organization/anthem
       exampleBoolean: true
       name: Example Payor Organization
@@ -63,7 +68,7 @@ definition:
     - reference:
         reference: Coverage/adt-notification-coverage-01
       exampleBoolean: true
-      name: Admit Discharge Notification Coverage 01
+      name: Admit/Transfer/Discharge Notification Coverage 01
       description: Admit Notification Notification Coverage Example
     - reference:
         reference: Bundle/discharge-notification-message-bundle-01
@@ -98,13 +103,13 @@ definition:
     - reference:
         reference: Encounter/adt-notification-encounter-01
       exampleBoolean: true
-      name: Admit Discharge Notification Encounter 01
-      description: Admit Discharge Notification Encounter Example
+      name: Admit/Transfer/Discharge Notification Encounter 01
+      description: Admit/Transfer/Discharge Notification Encounter Example
     - reference:
         reference: Condition/adt-notification-condition-01
       exampleBoolean: true
-      name: Admit Discharge Notification Condition 01
-      description: Admit Discharge Notification Condition Example
+      name: Admit/Transfer/Discharge Notification Condition 01
+      description: Admit/Transfer/Discharge Notification Condition Example
 
     - reference:
         reference: CapabilityStatement/notification-sender
@@ -173,16 +178,16 @@ definition:
         generation: markdown
         page:
           - nameUrl: StructureDefinition-adt-notification-condition.html
-            title: StructureDefinition Admit Discharge Notification Condition
+            title: StructureDefinition Admit/Transfer/Discharge Notification Condition
             generation: generated
           - nameUrl: StructureDefinition-adt-notification-encounter.html
-            title: StructureDefinition Admit Discharge Notification Encounter
+            title: StructureDefinition Admit/Transfer/Discharge Notification Encounter
             generation: generated
           - nameUrl: StructureDefinition-discharge-notification-messageheader.html
             title: StructureDefinition Discharge Notification MessageHeader
             generation: generated
           - nameUrl: StructureDefinition-adt-notification-coverage.html
-            title: StructureDefinition Admit Discharge Notification Coverage
+            title: StructureDefinition Admit/Transfer/Discharge Notification Coverage
             generation: generated
           - nameUrl: StructureDefinition-admit-notification-messageheader.html
             title: StructureDefinition Admit Notification MessageHeader
