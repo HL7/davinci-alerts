@@ -60,7 +60,7 @@ An alternate representation of this graph is a table with each row representing 
 
 Note that an Admit/Transfer/Discharge Bundle may contain more or less resources than this graph illustrates since:  
 a) having additional resources in the message bundle is not prohibited as long as the resources are reference by or reference another resource in the message bundle and  
-b) not all the resources listed above may be present in the source system. (For a more detailed discussion of when required resources may be absent, see the section on [Must Support])
+b) not all the resources listed above may be present in the source system. For example, including a diagnosis on an admit/transfer/discharge notification allows the recipient to determine if additional action is required, but an encounter diagnosis may not be available until well after discharge. (For a more detailed discussion of when required resources may be absent, see the section on [Must Support])
 {:.highlight-note}
 
 ### Formal Definition of the Da Vinci Admit and Discharge Notification Message
