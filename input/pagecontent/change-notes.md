@@ -21,6 +21,7 @@ The first official published version of the DEQM IG for FHIR R4.
   1. Add [Transfer notification use case](usecases.html). (#[FHIR-26909](https://jira.hl7.org/browse/FHIR-26909))
   1. Remove child concept for admit and discharge from the [Da Vinci Notification Event CodeSystem]. (#[FHIR-NNNNN](https://jira.hl7.org/browse/FHIR-))
   1. Clarify why [Da Vinci Notifications Bundle Profile] has min=0 constraints. [FHIR-26289](https://jira.hl7.org/browse/FHIR-26289)
+  1. Update [Da Vinci Notifications MessageHeader Profile] to require use of references. [FHIR-26286](https://jira.hl7.org/browse/FHIR-26286)
 
 
 
