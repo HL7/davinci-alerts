@@ -106,7 +106,6 @@ All the profiles that populate the Bundle get enforced by their references and t
 A use case specific Notification Bundle is defined by starting with base constraints in the [Da Vinci Notifications MessageHeader Profile] and [Da Vinci Notifications Bundle Profile] and creating a more tightly constrained MessageHeader Profile. Resources that are referenced within the Bundle are profiled to complete the Bundle definition.  Depending on the use case, existing profiles may be used or new profiles defined.
 
 See the Admit/Transfer/Discharge use case for an example of using FHIR Profiles to define the Bundle.
-
 <!--
 ##### MessageDefinition and GraphDefinition
 {:.no_toc}
