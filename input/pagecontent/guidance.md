@@ -223,7 +223,7 @@ See the Admit/Transfer/Discharge scenario [Example Transaction] for an example o
 
 #### Reliable Delivery
 
-Upon receiving a message, the Receiver/Intermediary may return one of several status codes which is documented in [`$process-message`] definition.  For successful transactions  `200`, `202`, or `204` **SHALL** be used.  If and error occurs, an [OperationOutcome] **SHOULD** be returned with details documenting the error. The following table defines the Sender behavior in response to the following error codes:
+Upon receiving a message, the Receiver/Intermediary may return one of several status codes which is documented in [`$process-message`] definition.  For successful transactions  `200`, `202`, or `204` **SHALL** be used. Using a `200` or `204` response to indicate the message is received and processable is preferred over `202` indicating the message is simply received.  If and error occurs, an [OperationOutcome] **SHOULD** be returned with details documenting the error. Parties should consider impact of failure to send and decide what additional steps to undertake. The following table defines the Sender behavior in response to the following error codes:
 
 |Error Code|Sender Behavior|
 |---|---|
@@ -232,7 +232,7 @@ Upon receiving a message, the Receiver/Intermediary may return one of several st
 |`500+` +/- OperationOutcome |may retry resending the message one or more times|
 {:.grid}
 
-See the messaging documentation in FHIR Specification for additional guidance on [reliable delivery]. Parties should consider impact of failure to send and decide what additional steps to undertake.
+Note that any mechanism of communicating an error *after* the Receiver/Intermediary  has already responded to the Sender will be "out of band".  Assuming the message cannot be process and thus the sender address cannot be obtained from the MessageHeader. The sender address could be discovered by inspection of other layers of transport such as described by the [FHIR at Scale Taskforce (FAST)] authentication piece for server authorization.  See the messaging documentation in FHIR Specification for additional guidance on [reliable delivery].
 
 ### Must Support
 
