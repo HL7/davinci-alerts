@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Tue, Aug 18, 2020 16:22+0000 for FHIR v4.4.0 
+  Generated on Thu, Aug 20, 2020 02:16+0000 for FHIR v4.4.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.4.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -14823,7 +14823,7 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">Official human-readable label for the composition.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="confidentiality" minOccurs="0" maxOccurs="1" type="vConfidentialityClassification">
+          <xs:element name="confidentiality" minOccurs="0" maxOccurs="1" type="Confidentiality">
             <xs:annotation>
               <xs:documentation xml:lang="en">The code specifying the level of confidentiality of the Composition.</xs:documentation>
            </xs:annotation>
@@ -14993,51 +14993,6 @@ into another (possibly the same) biological entity.</xs:documentation>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:simpleType name="vConfidentialityClassification-list">
-    <xs:restriction base="code-primitive">
-      <xs:enumeration value="U">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">unrestricted</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="L">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">low</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="M">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">moderate</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="N">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">normal</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="R">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">restricted</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="V">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">very restricted</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="vConfidentialityClassification">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">Codes specifying the level of confidentiality of the composition.</xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="vConfidentialityClassification-list" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:simpleType name="CompositionStatus-list">
     <xs:restriction base="code-primitive">
       <xs:enumeration value="preliminary">
@@ -15105,6 +15060,51 @@ into another (possibly the same) biological entity.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="Element">
         <xs:attribute name="value" type="DocumentRelationshipType-list" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="Confidentiality-list">
+    <xs:restriction base="code-primitive">
+      <xs:enumeration value="L">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">low</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="M">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">moderate</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="N">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">normal</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="R">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">restricted</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="U">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">unrestricted</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="V">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">very restricted</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Confidentiality">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Codes specifying the level of confidentiality of the composition.</xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="Confidentiality-list" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -42794,7 +42794,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
               <xs:documentation xml:lang="en">Another group that this group adds rules to.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="typeMode" minOccurs="1" maxOccurs="1" type="StructureMapGroupTypeMode">
+          <xs:element name="typeMode" minOccurs="0" maxOccurs="1" type="StructureMapGroupTypeMode">
             <xs:annotation>
               <xs:documentation xml:lang="en">If this is the default rule set to apply for the source type or this combination of types.</xs:documentation>
            </xs:annotation>
@@ -42809,7 +42809,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
               <xs:documentation xml:lang="en">A name assigned to an instance of data. The instance must be provided when the mapping is invoked.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="rule" type="StructureMap.Rule" minOccurs="1" maxOccurs="unbounded">
+          <xs:element name="rule" type="StructureMap.Rule" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Transform Rule from source to target.</xs:documentation>
            </xs:annotation>
@@ -42856,7 +42856,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="name" minOccurs="1" maxOccurs="1" type="id">
+          <xs:element name="name" minOccurs="0" maxOccurs="1" type="id">
             <xs:annotation>
               <xs:documentation xml:lang="en">Name of the rule for internal references.</xs:documentation>
            </xs:annotation>
@@ -43327,11 +43327,6 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
   </xs:complexType>
   <xs:simpleType name="StructureMapGroupTypeMode-list">
     <xs:restriction base="code-primitive">
-      <xs:enumeration value="none">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Not a Default</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="types">
         <xs:annotation>
           <xs:documentation xml:lang="en">Default for Type Combination</xs:documentation>
@@ -46393,7 +46388,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
         <xs:sequence>
           <xs:element name="uri" minOccurs="0" maxOccurs="1" type="canonical">
             <xs:annotation>
-              <xs:documentation xml:lang="en">URI for the Code System.</xs:documentation>
+              <xs:documentation xml:lang="en">Canonical identifier for the code system, represented as a URI.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="version" type="TerminologyCapabilities.Version" minOccurs="0" maxOccurs="unbounded">
@@ -46491,7 +46486,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           </xs:element>
           <xs:element name="incomplete" minOccurs="0" maxOccurs="1" type="boolean">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Allow request for incomplete expansions?</xs:documentation>
+              <xs:documentation xml:lang="en">True if requests for incomplete expansions are allowed.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="parameter" type="TerminologyCapabilities.Parameter" minOccurs="0" maxOccurs="unbounded">
@@ -46517,7 +46512,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
         <xs:sequence>
           <xs:element name="name" minOccurs="1" maxOccurs="1" type="code">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Expansion Parameter name.</xs:documentation>
+              <xs:documentation xml:lang="en">Name of the supported expansion parameter.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="documentation" minOccurs="0" maxOccurs="1" type="string">
