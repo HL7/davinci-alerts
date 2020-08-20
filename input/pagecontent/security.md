@@ -1,11 +1,5 @@
 
-In order to be responsible stewards of data, the data governance laws around sensitive conditions need to be followed. Sensitive conditions are defined to support masking of clinical data that protects consumer’s privacy and are subject to special disclosure rules which govern the distribution of data to external parties.  Sensitive data should only be exchanged over secured channels therefore a variety of communication protocols may be appropriate given the nature of the existing inter-party communication channels.
-
-<del>
-[The FHIR Security and Privacy Module] describes how to protect a patient's privacy through de-Identification, pseudonymization, and and/or anonymization. FHIR does not mandate a single technical approach to security and privacy; rather, the specification provides a set of building blocks that can be applied to create secure, private systems.
-</del>
-
-[The FHIR Security and Privacy Module] describes how to protect a patient's privacy through de-Identification, pseudonymization, and and/or anonymization.  For FHIR RESTful transactions the defacto security layer is SMART's profile of OAuth2:
+Sensitive data should only be exchanged over secured channels therefore a variety of communication protocols may be appropriate given the nature of the existing inter-party communication channels.  FHIR does not mandate a single technical approach to security and privacy; rather, the specification provides a set of building blocks that can be applied to create secure, private systems. For FHIR RESTful transactions the defacto security layer is SMART's profile of OAuth2:
 
 - [SMART Application Launch Framework Implementation Guide Release 1.0.0]
 - [FHIR Bulk Data Access (Flat FHIR)] (specifically: SMART Backend Services: Authorization Guide)
