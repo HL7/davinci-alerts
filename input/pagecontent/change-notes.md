@@ -23,6 +23,7 @@ The first official published version of the DEQM IG for FHIR R4.
   1. Clarify why [Da Vinci Notifications Bundle Profile] has min=0 constraints. [FHIR-26289](https://jira.hl7.org/browse/FHIR-26289)
   1. Update [Da Vinci Notifications MessageHeader Profile] to require use of references. [FHIR-26286](https://jira.hl7.org/browse/FHIR-26286)
   1. Update section on [formal message definition](guidance.html#formally-defining-the-da-vinci-notification-message)([FHIR-26224](https://jira.hl7.org/browse/FHIR-26224)).
+  1. Updates to [Security] page ([FHIR-26195](https://jira.hl7.org/browse/FHIR-26195)).
 
 
 
