@@ -9,7 +9,7 @@ The first official published version of the DEQM IG for FHIR R4.
 
   1. Various Technical Corrections and corrections to typographical errors and grammar.
   1. Update and correct examples
-  1. Remove MessageDefintion and GraphDefinition profile and references to them ([FHIR-26130](https://jira.hl7.org/browse/FHIR-26130))
+  1. Remove MessageDefintion and GraphDefinition profile and references to them ([FHIR-26130](https://jira.hl7.org/browse/FHIR-26130)).
   1. Update Guidance on [Errors and ReliableDelivery](guidance.html#reliable-delivery) ([FHIR-26165](https://jira.hl7.org/browse/FHIR-26165), [FHIR-26201](https://jira.hl7.org/browse/FHIR-26201) [FHIR-2685](https://jira.hl7.org/browse/FHIR-2685)).
   1. Update [Scope and Usage](index.html#scope-and-usage)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200), [FHIR-26182](https://jira.hl7.org/browse/FHIR-26182) #[FHIR-26132](https://jira.hl7.org/browse/FHIR-26132),#[FHIR-26129](https://jira.hl7.org/browse/FHIR-26129)).
   1. Update [Precondition and Assumptions](guidance.html#precondition-and-assumptions)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200),#[FHIR-26132](https://jira.hl7.org/browse/FHIR-26132) #[FHIR-26129](https://jira.hl7.org/browse/FHIR-26129),#[FHIR-26117](https://jira.hl7.org/browse/FHIR-26117)).
@@ -22,6 +22,7 @@ The first official published version of the DEQM IG for FHIR R4.
   1. Remove child concept for admit and discharge from the [Da Vinci Notification Event CodeSystem]. (#[FHIR-2668](https://jira.hl7.org/browse/FHIR-26268))
   1. Clarify why [Da Vinci Notifications Bundle Profile] has min=0 constraints. [FHIR-26289](https://jira.hl7.org/browse/FHIR-26289)
   1. Update [Da Vinci Notifications MessageHeader Profile] to require use of references. [FHIR-26286](https://jira.hl7.org/browse/FHIR-26286)
+  1. Update section on [formal message definition](guidance.html#formally-defining-the-da-vinci-notification-message)([FHIR-26224](https://jira.hl7.org/browse/FHIR-26224)).
 
 
 

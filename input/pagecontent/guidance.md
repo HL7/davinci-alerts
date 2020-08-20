@@ -107,6 +107,7 @@ A use case specific Notification Bundle is defined by starting with base constra
 
 See the Admit/Transfer/Discharge use case for an example of using FHIR Profiles to define the Bundle.
 
+<!--
 ##### MessageDefinition and GraphDefinition
 {:.no_toc}
 
