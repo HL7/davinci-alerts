@@ -50,7 +50,8 @@
                 "path": "Bundle.total",
                 "min": 0,
                 "max": "0",
-                "mustSupport": false
+                "mustSupport": false,
+                "comment": "This element is constrained to min = 0 because of the invariant `bdl-1`"
             },
             {
                 "id": "Bundle.entry",
@@ -73,21 +74,24 @@
                 "path": "Bundle.entry.search",
                 "min": 0,
                 "max": "0",
-                "mustSupport": false
+                "mustSupport": false,
+                "comment": "This element is constrained to min = 0 because of the invariant `bdl-2`"
             },
             {
                 "id": "Bundle.entry.request",
                 "path": "Bundle.entry.request",
                 "min": 0,
                 "max": "0",
-                "mustSupport": false
+                "mustSupport": false,
+                "comment": "This element is constrained to min = 0 because of the invariant `bdl-3`"
             },
             {
                 "id": "Bundle.entry.response",
                 "path": "Bundle.entry.response",
                 "min": 0,
                 "max": "0",
-                "mustSupport": false
+                "mustSupport": false,
+                "comment": "This element is constrained to min = 0 because of the invariant `bdl-4`"
             },
             {
                 "id": "Bundle.entry:messageheader",

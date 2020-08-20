@@ -237,7 +237,7 @@ Upon receiving a message, the Receiver/Intermediary may return one of several st
 |`500+` +/- OperationOutcome |may retry resending the message one or more times|
 {:.grid}
 
-See the messaging documentation in FHIR Specification for additional guidance on [reliable delivery].
+See the messaging documentation in FHIR Specification for additional guidance on [reliable delivery]. Parties should consider impact of failure to send and decide what additional steps to undertake.
 
 ### Must Support
 
