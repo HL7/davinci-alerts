@@ -9,8 +9,8 @@ The first official published version of the DEQM IG for FHIR R4.
 
   1. Various Technical Corrections and corrections to typographical errors and grammar.
   1. Update and correct examples
-  1. Remove MessageDefintion and GraphDefinition profile and references to them ([FHIR-NNNNN](https://jira.hl7.org/browse/FHIR-))
-  1. Update Guidance on [Errors and ReliablDelivery](guidance.html#reliable-delivery) ([FHIR-26165](https://jira.hl7.org/browse/FHIR-26165), [FHIR-26201](https://jira.hl7.org/browse/FHIR-26201)).
+  1. Remove MessageDefintion and GraphDefinition profile and references to them ([FHIR-26130](https://jira.hl7.org/browse/FHIR-26130))
+  1. Update Guidance on [Errors and ReliableDelivery](guidance.html#reliable-delivery) ([FHIR-26165](https://jira.hl7.org/browse/FHIR-26165), [FHIR-26201](https://jira.hl7.org/browse/FHIR-26201)).
   1. Update [Scope and Usage](index.html#scope-and-usage)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200), [FHIR-26182](https://jira.hl7.org/browse/FHIR-26182) #[FHIR-26132](https://jira.hl7.org/browse/FHIR-26132),#[FHIR-26129](https://jira.hl7.org/browse/FHIR-26129)).
   1. Update [Precondition and Assumptions](guidance.html#precondition-and-assumptions)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200),#[FHIR-26132](https://jira.hl7.org/browse/FHIR-26132) #[FHIR-26129](https://jira.hl7.org/browse/FHIR-26129),#[FHIR-26117](https://jira.hl7.org/browse/FHIR-26117)).
   1. Update introduction to the [The Da Vinci Notification Message Bundle](guidance.html#the-da-vinci-notification-message-bundle)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200)).
@@ -20,6 +20,7 @@ The first official published version of the DEQM IG for FHIR R4.
   1. Clarify how to [sort incoming messages](guidance.html#sending-unsolicited-notifications) (#[FHIR-26132](https://jira.hl7.org/browse/FHIR-26132))
   1. Add [Transfer notification use case](usecases.html). (#[FHIR-26909](https://jira.hl7.org/browse/FHIR-26909))
   1. Remove child concept for admit and discharge from the [Da Vinci Notification Event CodeSystem]. (#[FHIR-NNNNN](https://jira.hl7.org/browse/FHIR-))
+  1. Clarify why [Da Vinci Notifications Bundle Profile] has min=0 constraints. [FHIR-26289](https://jira.hl7.org/browse/FHIR-26289)
 
 
 
@@ -36,4 +37,8 @@ The first official published version of the DEQM IG for FHIR R4.
 
 ### Changes and Updates for version 0.1.0
 
-- **DEPRECATED: Note that this version (0.1.0) should *not* be used, it was pulled from the ballot after publication and has been replaced by version 0.2.0.**
+- **DEPRECATED: Note that this version (0.1.0) should *not* be used, it was pulled from the ballot after publication and has been replaced by version 0.2.0
+
+---
+
+{% include link-list.md %}

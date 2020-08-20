@@ -71,6 +71,11 @@ differential:
           aggregation:
             - bundled
       mustSupport: true
+    - id: MessageHeader.sender.reference
+      path: MessageHeader.sender.reference
+      min: 1
+      max: '1'
+      mustSupport: true
     - id: MessageHeader.author
       path: MessageHeader.author
       min: 0
@@ -84,6 +89,11 @@ differential:
               http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
           aggregation:
             - bundled
+      mustSupport: true
+    - id: MessageHeader.author.reference
+      path: MessageHeader.author.reference
+      min: 1
+      max: '1'
       mustSupport: true
     - id: MessageHeader.source
       path: MessageHeader.source
@@ -103,6 +113,11 @@ differential:
               http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
           aggregation:
             - bundled
+      mustSupport: true
+    - id: MessageHeader.responsible.reference
+      path: MessageHeader.responsible.reference
+      min: 1
+      max: '1'
       mustSupport: true
     - id: MessageHeader.response
       path: MessageHeader.response
