@@ -232,7 +232,7 @@ Upon receiving a message, the Receiver/Intermediary may return one of several st
 |`500+` +/- OperationOutcome |may retry resending the message one or more times|
 {:.grid}
 
-Note that any mechanism of communicating an error *after* the Receiver/Intermediary  has already responded to the Sender will be "out of band".  Assuming the message cannot be process and thus the sender address cannot be obtained from the MessageHeader. The sender address could be discovered by inspection of other layers of transport such as described by the [FHIR at Scale Taskforce (FAST)] authentication piece for server authorization.  See the messaging documentation in FHIR Specification for additional guidance on [reliable delivery].
+Note that any mechanism of communicating an error *after* the Receiver/Intermediary has already responded to the Sender will be "out of band".  Assuming the message cannot be process and thus the sender address cannot be obtained from the MessageHeader. The sender address could be discovered by inspection of other layers of transport such as described by the [FHIR at Scale Taskforce (FAST)] authentication piece for server authorization.  See the messaging documentation in FHIR Specification for additional guidance on [reliable delivery].
 
 ### Must Support
 

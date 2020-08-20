@@ -1,5 +1,5 @@
 
-This implementation guide describes a method for the communication of relevant notifications to support the real-time exchange of information that impacts patient care and value based or risk based services.  Providers and Payers may need to be alerted when activities occur that impact a patient's care. This may be as traditional as a notification of an admission or transfer to or discharge from a care setting. It also includes notifications about changes in treatment such as a new or different medication, or  changes in patient searchableProjectIndex like a new diagnosis. These notifications provide information that can improve care management and care coordination as well as act as the trigger for quality programs and other patient focused activities (for example, risk adjustment).  By allowing the patient's healthcare providers to be better informed and able to take actions and intervene earlier, the twin goals of better patient care and reduced cost of care may be met.
+This implementation guide describes a method for the communication of relevant notifications to support the real-time exchange of information that impacts patient care and value based or risk based services.  Providers and Payers may need to be notified when activities occur that impact a patient's care. This may be as traditional as a notification of an admission or transfer to or discharge from a care setting. It also includes notifications about changes in treatment such as a new or different medication, or  changes in patient searchableProjectIndex like a new diagnosis. These notifications provide information that can improve care management and care coordination as well as act as the trigger for quality programs and other patient focused activities (for example, risk adjustment).  By allowing the patient's healthcare providers to be better informed and able to take actions and intervene earlier, the twin goals of better patient care and reduced cost of care may be met.
 
 The [2019 CMS 45 CFR Part 156 NPRM] focuses on hospitalization notifications due to significant issues that can occur if a patient is not followed appropriately after acute care. The HL7 Da Vinci Project has responded to this need by supporting the effort to provide a FHIR based standard for adoption by both providers and payers.  It is anticipated that the burden of communicating the notification is also reduced by using FHIR.   This Guide defines a FHIR messaging based paradigm and framework to establish consistently adoptable and reproducible methods to exchange notifications. This framework is applied to the patient admission, transfer, and discharge events to generate unsolicited notifications to the care team.
 
@@ -50,7 +50,7 @@ The following table summarizes the technical scope of this guide:
 ---
 
 - The business rules and workflow surrounding when a notification is triggered  
-   - These are considered implementation specific details
+   - These are considered implementation specific details and include both what and exactly when an event occurs and who it is about and who gets the notification.
    - This includes notifications that are not associated with a particular event
 - Creation and Management of the list of Recipients/Intermediaries
 - How the Intermediary determines further processing of notification data
@@ -59,7 +59,7 @@ The following table summarizes the technical scope of this guide:
 - Bidirectional Work, such as Gaps in Care
 - Any notification that requires workflow management such as Task
 - Complex content such as image files or scanned documents
-- Besides the standard http response, the Alert Recipient's workflow upon receipt of alert.
+- Besides the standard http response, the Recipient's workflow upon receipt of the notification.
 
 
 ---
@@ -168,7 +168,7 @@ There are many potential actors for the roles listed above:
 - Health Information Exchange (HIE)
 - Clinically Integrated Network (CIN) systems
 - National Networks (CareQuality, CommonWell, etc.)
-- Specialized Alert Aggregators
+- Specialized Notification Aggregators
 - Health Plan and Contracted Entities
 
 ---
