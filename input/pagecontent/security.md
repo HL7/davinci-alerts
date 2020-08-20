@@ -1,5 +1,5 @@
 
-Sensitive data should only be exchanged over secured channels therefore a variety of communication protocols may be appropriate given the nature of the existing inter-party communication channels.  FHIR does not mandate a single technical approach to security and privacy; rather, the specification provides a set of building blocks that can be applied to create secure, private systems. For FHIR RESTful transactions the defacto security layer is SMART's profile of OAuth2:
+Sensitive data should only be exchanged over secured channels therefore a variety of communication protocols may be appropriate given the nature of the existing inter-party communication channels.  FHIR does not mandate a single technical approach to security and privacy; rather, the specification provides a set of building blocks that can be applied to create secure, private systems. For example, the defacto security layer for FHIR RESTful transactions is SMART's profile of OAuth2:
 
 - [SMART Application Launch Framework Implementation Guide Release 1.0.0]
 - [FHIR Bulk Data Access (Flat FHIR)] (specifically: SMART Backend Services: Authorization Guide)
