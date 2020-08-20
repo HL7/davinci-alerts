@@ -13,7 +13,7 @@ The following data-elements are mandatory (i.e., data MUST be present) or must b
 
 **Additional Profile specific implementation guidance:**
 
-none
+The elements `Bundle.total`, `Bundle.entry.search`, `Bundle.entry.request`, and `Bundle.entry.response` are Cardinality = 0..0 (in other words, constrained out) because of the invariants `bdl-1`.`bdl-3`.`bdl-3`. and `bdl-4` defined in the FHIR Bundle resource.
 
 ### Examples
 

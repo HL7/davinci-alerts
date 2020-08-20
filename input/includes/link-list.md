@@ -55,6 +55,7 @@
 [Must Support]: guidance.html#must-support
 [MustSupport flag]: {{site.data.fhir.path}}profiling.html#mustsupport
 [Notification Sender CapabilityStatement]: http://build.fhir.org/ig/HL7/davinci-alerts/CapabilityStatement-notification-sender.html
+[Notification Forwarder CapabilityStatement]: http://build.fhir.org/ig/HL7/davinci-alerts/CapabilityStatement-notification-forwarder.html
 [NotificationAdmitDischarge]: GraphDefinition-admit-discharge.html
 [notifications by messaging]: {{site.data.fhir.path}}subscription.html#messaging
 [operation]: {{site.data.fhir.path}}operations.html
