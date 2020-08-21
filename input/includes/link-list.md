@@ -84,4 +84,4 @@
 [HL7 Da Vinci Guiding Principles]: https://confluence.hl7.org/display/DVP/Da+Vinci+Clinical+Advisory+Council+Members?preview=/66940155/66942916/Guiding%20Principles%20for%20Da%20Vinci%20Implementation%20Guides.pdf
 [US Core]: {{site.data.fhir.uscore}}/index.html
 [Da Vinci Health Record Exchange (HRex)]: {{site.data.fhir.hrex}}/index.html
-[Infrastructure and Messaging Work Group (INM)]: http://www.hl7.org/Special/committees/inm/index.cfm
+[Infrastructure and Messaging (INM)]: http://www.hl7.org/Special/committees/inm/index.cfm
