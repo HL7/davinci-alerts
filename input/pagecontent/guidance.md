@@ -103,7 +103,7 @@ The set of resources within the message and their relationship to each other can
 
 The Da Vinci Notification Message can be formally defined in FHIR using a set of FHIR Profiles that constrain links to the message Bundle. The base [Da Vinci Notifications MessageHeader Profile] and [Da Vinci Notifications Bundle Profile] are used to define the base constraints for all notification scenarios.
 
-All the profiles that populate the Bundle get enforced by their references and the fact that their [aggregation] is constrained to 'bundled'.  This means that these references are only to resources that populate the same bundle.  Therefore, starting with the MessageHeader profile, the profiled resources within the bundle form a chain of links that define the bundle.
+All the profiles that populate the Bundle get enforced by their references and the [aggregation] element which is constrained to 'bundled'.  This means these references can only point to resources within the same bundle.  Therefore, starting with the MessageHeader profile, the profiled resources within the bundle form a chain of links that define the bundle.
 
 A use case specific Notification Bundle is defined by starting with base constraints in the [Da Vinci Notifications MessageHeader Profile] and [Da Vinci Notifications Bundle Profile] and creating a more tightly constrained MessageHeader Profile. Resources that are referenced within the Bundle are profiled to complete the Bundle definition.  Depending on the use case, existing profiles may be used or new profiles defined.
 
@@ -123,7 +123,7 @@ A use case specific Da Vinci Notification Bundles is defined using the base cons
 See the Admit/Transfer/Discharge use case for an example of using MessageDefinition and GraphDefinition to define the Bundle.
 -->
 
-MessageBundles and GraphDefinition resource are alternative to using profiles to define the message bundles contents. However, at the time of this publication, the implementation community, reference implementations, and validation tooling does not fully support them.  FHIR profiling is more mature mechanism and broadly supported by the implementation community, reference implementations, and validation tooling.  However,there is no mechanism to enforce profiles in a message on a reverse link because “reverse links” cannot be traversed forward from the MessageHeader. It may also require more artifacts than using MessageDefintion/GraphDefinition.
+MessageBundles and GraphDefinition resource are alternative to using profiles to define the message bundles contents. However, at the time of this publication, the implementation community, reference implementations, and validation tooling does not fully support them.  FHIR profiling is more mature mechanism and broadly supported by the implementation community, reference implementations, and validation tooling.  However, there is no mechanism to enforce profiles in a message on a reverse link because “reverse links” cannot be traversed forward from the MessageHeader. It may also require more artifacts than using MessageDefintion/GraphDefinition.
 {:.stu-note}
 
 <!--
@@ -233,7 +233,7 @@ Upon receiving a message, the Receiver/Intermediary may return one of several st
 |`500+` +/- OperationOutcome |may retry resending the message one or more times|
 {:.grid}
 
-Note that any mechanism of communicating an error *after* the Receiver/Intermediary has already responded to the Sender will be "out of band".  Assuming the message cannot be process and thus the sender address cannot be obtained from the MessageHeader. The sender address could be discovered by inspection of other layers of transport such as described by the [FHIR at Scale Taskforce (FAST)] authentication piece for server authorization.  See the messaging documentation in FHIR Specification for additional guidance on [reliable delivery].
+Note that any mechanism of communicating an error *after* the Receiver/Intermediary has already responded to the Sender will be "out of band".  Assuming the message cannot be process and thus the sender address cannot be obtained from the MessageHeader. The sender address could be discovered by inspection of other layers of transport such as is described by the [FHIR at Scale Taskforce (FAST)] authentication piece for server authorization.  See the messaging documentation in FHIR Specification for additional guidance on [reliable delivery].
 
 ### Must Support
 
