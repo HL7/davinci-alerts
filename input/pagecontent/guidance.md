@@ -78,6 +78,7 @@ For all Da Vinci Notification Message Bundles, the following resources are manda
 1. US Core *Organization*, *Practitioner*, or *PractionerRole* referenced by `MessageHeader.sender`
 1. US Core *Organization*, *Practitioner*, or *PractionerRole* referenced by `MessageHeader.responsible`
 1. US Core *Practitioner*, or *PractionerRole* referenced by `MessageHeader.author`
+    - This is the individual who authorized the event (e.g., the clinician who authorized the admit/discharge)
 1. *All* resources directly referenced by the `MessageHeader.focus` resource. Implementers should carefully consider what information they are willing to share and only include those reference elements for the use case in the focus resources. This can be formally defined by profiling the focus resource.  For example the Admit/Transfer/Discharge use case focal resource is the [US Core Encounter Profile].
 
    Implementers that use FHIR as their persistence layer may need to modify those resources before assembling the message bundle to avoid sending sensitive or unnecessary data.
