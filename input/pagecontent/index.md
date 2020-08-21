@@ -52,7 +52,7 @@ The following table summarizes the technical scope of this guide:
 - The business rules and workflow surrounding when a notification is triggered  
    - These are considered implementation specific details and include both what and exactly when an event occurs and who it is about and who gets the notification.
    - This includes notifications that are not associated with a particular event
-- Creation and Management of the list of Recipients/Intermediaries
+- Creation and Management of the list of Recipients/Intermediaries[^1]
 - How the Intermediary determines further processing of notification data
 - Creation of the FHIR equivalent of v2 Messaging
 - Distribution beyond FHIR Endpoints (e.g. SMS, email)
@@ -212,6 +212,8 @@ Figure 2 shows the process where an Intermediary, having previously received a n
  caption="Figure 2" %}
 
 ---
+[^1]: [FHIR at Scale Taskforce (FAST)] is an ongoing initiatives to address how to define this secure infrastructure.
+
 <br />
 
 {% include link-list.md %}

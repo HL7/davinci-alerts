@@ -67,7 +67,7 @@
 [Security]: security.html
 [SMART Application Launch Framework Implementation Guide Release 1.0.0]: http://www.hl7.org/fhir/smart-app-launch/
 [Terminology]: terminology.html "Terminology Page"
-[The FHIR Security and Privacy Module]:{{site.data.fhir.path}}secpriv-module.html#6.0
+[FHIR security guidance]:{{site.data.fhir.path}}security.html
 [US Core Condition Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-condition.html
 [US Core Encounter Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-encounter.html
 [US Core Location Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-location.html
