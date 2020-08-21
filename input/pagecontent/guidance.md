@@ -52,7 +52,7 @@ This project recognizes the existing existing FHIR (R2-R4) subscriptions framewo
 For every notification, the object that is exchanged is a [FHIR message Bundle]. It consists of a Bundle identified by the type "message", with the first resource in the bundle being a [MessageHeader] resource. The MessageHeader resource has a code - the message event - that identifies the reason for the notification. The Recipient/Intermediary may determine how to process the Notification based this event code.  The MessageHeader also carries additional notification metadata. The other resources in the bundle depend on the notification scenario and form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references.
 
 #### The Da Vinci Notification Message Event Code
-{:.no_toc}
+
 
 The message event codes identify the reason for the notification.  For this framework a set of concepts describing the purpose of the Da Vinci unsolicited notification has been created.
 
@@ -61,7 +61,7 @@ The message event codes identify the reason for the notification.  For this fram
 These concepts represent a 'starter set' and will be supplemented with additional concepts in the future. Note that there is no HL7 v2 messaging equivalent to these codes. However when available, a relationship between concepts in the notification event codes and concepts used in the notification "focus" resource is documented. For example concepts that correspond to the admission transfer and discharge events.
 
 #### What is in the Message Bundle
-{:.no_toc}
+
 
 <!--
 The message bundle **SHALL** include the MessageHeader resource and the resources referenced by `MessageHeader.focus` element. It **SHOULD** include all resources needed for the Receiver or Intermediary to be able to process the message as expected by the the message event *provided that all included resources have a traversal path following Reference or canonical links either to or from the MessageHeader*.
@@ -88,14 +88,14 @@ For all Da Vinci Notification Message Bundles, the following resources are manda
 1.  *All* resources needed for the Receiver or Intermediary to be able to interpret the notification and process the message *provided* that the resources have a traversal path to or from `MessageHeader.focus` resource.  These requirements are use case specific and need to be determined by the implementation community based on their data requirements.
 
 #### How to define the Message Bundle
-{:.no_toc}
+
 
 The set of resources within the message and their relationship to each other can be represented as an interconnected graph of resources as Figure 3 below illustrates (Note that this a simplified and incomplete representation of the possible resources in notification message bundle. See [Figure 8] for an example of a resource graph for the admission/transfer/discharge scenarios):  
 
 {% include img-portrait.html img="generic_message_graph.svg" caption="Figure 3" %}
 
 #### Formally Defining the Da Vinci Notification Message
-{:.no_toc}
+
 
 The Da Vinci Notification Message can be formally defined in FHIR using a set of FHIR Profiles that constrain links to the message Bundle. The base [Da Vinci Notifications MessageHeader Profile] and [Da Vinci Notifications Bundle Profile] are used to define the base constraints for all notification scenarios.
 
@@ -107,7 +107,7 @@ See the Admit/Transfer/Discharge use case for an example of using FHIR Profiles 
 
 <!--
 ##### MessageDefinition and GraphDefinition
-{:.no_toc}
+
 
 The [MessageDefinition] defines the event and focus resource of the Message as well as other metadata. The [GraphDefinition] is referenced by the MessageDefinition and it defines the forward and reverse links (paths) between the resources (profiles) that populate the messaging Bundle. This guide defines the following profiles to be used as "blueprints" to create MessageDefinition and GraphDefinition instances for Da Vinci Notifications:
 
@@ -163,9 +163,16 @@ As shown in Figure 4, when an event or request triggers a notification, the Send
   - The Receiver/Intermediary may sort and filter notifications based on the `MessageHeader.event` codes. For example, `notification-admit` can be used to to filter for patient admission notifications.
 - There is no expectation that the data submitted represents all the data required by the Notification Recipient/Intermediary, only that the data is known to be relevant to the triggering event. The Notification Recipient/Intermediary can optionally fetch additional information from the patient's medical record using FHIR RESTful searches.  The endpoint for this search may be known or supplied via the $process-message operation payload.
 
+#### Fetching of Additional Data by the Intermediary or Receiver
+
+The Intermediary or Receiver **MAY** fetch additional data from the Sender after it successfully receives and processes the notification optionally searches and process the search results.  Refer to the US Core Implementation Guide for provider access to patient data.
+
+This guide does not specify a standard discovery process for obtaining the Sender's FHIR endpoint.  Once a suitable approach has been agreed upon and published, it will be referenced in a future version of this guide
+{:.stu-note}
+
 #### Additional Intermediary Steps
 
-After the Intermediary successfully receives adn processes the notification and optionally searches and process the search results, it redistributes the data to the end users.  It **MAY** use this framework (in other words, FHIR messaging and the `$process-message` operation) or some other messaging protocol such as Direct, SMS or V2 messaging to forward the notification.  Note that the Intermediary **MAY** customize the content based on the end user (for example, withholding data that a particular care team member does not need).
+After the Intermediary successfully receives and processes the notification and optionally searches and process the search results, it redistributes the data to the end users.  It **MAY** use this framework (in other words, FHIR messaging and the `$process-message` operation) or some other messaging protocol such as Direct, SMS or V2 messaging to forward the notification.  Note that the Intermediary **MAY** customize the content based on the end user (for example, withholding data that a particular care team member does not need).
 
 ##### Forwarding Notifications Using This Framework
 
@@ -185,7 +192,6 @@ The sequence diagram in Figure 5 illustrates the steps when forwarding the notif
     ~~~json
     {% include adt-notification-provenance-01.json %}
     ~~~
-    {: fragment="Provenance" class="json"}
 
     See the [Admit Notification Intermediate Transmit Bundle] for a complete example of this use case.
 
@@ -194,12 +200,11 @@ The sequence diagram in Figure 5 illustrates the steps when forwarding the notif
     ~~~json
     {% include adt-notification-provenance-02.json %}
     ~~~
-    {: fragment="Provenance" class="json"}
 
     See the [Admit Notification Intermediate Translate Bundle] for a complete example of this use case.
 
 #### `$process-message` Operation
-{:.no_toc}
+
 
 The `$process-message` operation is invoked by the Sender using the `POST` syntax:
 
@@ -234,7 +239,7 @@ Note that any mechanism of communicating an error *after* the Receiver/Intermedi
 All elements in the Da Vinci Notification profiles have a [MustSupport flag]. Systems claiming to conform to a profile must "support" the element as defined below:
 
 ##### Must Support Definition for Notification Transactions Between the Sender and  Intermediary/Recipient
-{:.no_toc}
+
 
 *Must Support* on any data element SHALL be interpreted as follows:
 
@@ -249,7 +254,7 @@ All elements in the Da Vinci Notification profiles have a [MustSupport flag]. Sy
 - Notification Recipient/Intermediary SHALL be able to process resource instances containing data elements asserting missing information without generating an error or causing the application to fail.
 
 ##### Must Support Definition for Notification Transactions Between the Intermediary and Recipient
-{:.no_toc}
+
 
 *Must Support* on any data element SHALL be interpreted as follows:
 
@@ -262,7 +267,7 @@ All elements in the Da Vinci Notification profiles have a [MustSupport flag]. Sy
 - The Recipient SHALL be able to process resource instances containing missing data elements and data elements asserting missing information without generating an error or causing the application to fail.
 
 ##### Must Support Definition for Optional Data Query Transactions
-{:.no_toc}
+
 
 Refer to the [US Core Must Support] rules for data query transactions to fetch additional data.
 
