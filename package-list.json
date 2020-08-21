@@ -2,14 +2,24 @@
    "package-id": "hl7.fhir.us.davinci-alerts",
    "title": "Da Vinci Unsolicited Notifications",
    "canonical": "http://hl7.org/fhir/us/davinci-alerts",
-   "introduction": "FHIR resources can be use to notify careteam members of patient events such as patient admission and discharge information in order to improve care coordination. An alert from the provider to the health plan can help track where care has been delivered and help ensure timely follow-up care is delivered as needed since healthcare stakeholders are increasingly responsible for knowing what care their patients have received and what care they need, regardless of where their patients sought care.",
+   "introduction": "This implementation guide describes a method for the communication of relevant notifications to support the real-time exchange of information that impacts patient care and value based or risk based services. Providers and Payers may need to be notified when activities occur that impact a patient’s care. This may be as traditional as a notification of an admission or transfer to or discharge from a care setting. It also includes notifications about changes in treatment such as a new or different medication, or changes in patient status like a new diagnosis. These notifications provide information that can improve care management and care coordination as well as act as the trigger for quality programs and other patient focused activities (for example, risk adjustment). By allowing the patient’s healthcare providers to be better informed and able to take actions and intervene earlier, the twin goals of better patient care and reduced cost of care may be met.",
    "list": [
       {
          "version": "current",
-         "desc": "Continuous Integration Build for FHIR STU1 (latest in version control)",
+         "desc": "Continuous Integration Build for FHIR STU2 (latest in version control)",
          "path": "http://build.fhir.org/ig/HL7/davinci-alerts",
          "status": "ci-build",
          "current": true
+      },
+      {
+         "version": "1.0.0",
+         "date": "",
+         "desc": "The current official published version of the Da Vinci Unsolicited Notifications Guide STU1 for FHIR R4.",
+         "changes": "change-notes.html",
+         "path": "http://hl7.org/fhir/us/davinci-alerts/STU1",
+         "status": "trial-use",
+         "sequence": "STU1",
+         "fhirversion" : "4.0.1"
       },
       {
          "version": "0.2.0",
