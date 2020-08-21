@@ -238,7 +238,7 @@ All elements in the Da Vinci Notification profiles have a [MustSupport flag]. Sy
 
 *Must Support* on any data element SHALL be interpreted as follows:
 
-* As part of the notification message as specified by the [Da Vinci Notifications CapabilityStatements], the  Sender SHALL be capable of including the data elements defined in the Da Vinci Notification profiles that have a MustSupport flag.
+* As part of the notification message as specified by the [Notification Sender CapabilityStatement], the  Sender SHALL be capable of including the data elements defined in the Da Vinci Notification profiles that have a MustSupport flag.
 
 - The Recipient/Intermediary SHALL be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. In other words Recipient/Intermediary SHOULD be capable of processing the data elements (display, store, etc).
 
