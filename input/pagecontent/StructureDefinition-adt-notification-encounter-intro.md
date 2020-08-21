@@ -12,7 +12,7 @@ The following data-elements are mandatory (i.e., data MUST be present) or must b
 
 **Additional Profile specific implementation guidance:**
 
-- Following [US Core guidance] the Condition resource references the Encounter resource and not the reverse.
+- Following [US Core guidance] the [Da Vinci Admit/Transfer/Discharge Notification Condition Profile] resource references the Encounter resource instead using `Encounter.diagnosis.condition` to create a forward link from the encounter to the related diagnoses.
 
 ### Examples
 

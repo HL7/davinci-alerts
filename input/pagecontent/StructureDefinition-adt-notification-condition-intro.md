@@ -12,7 +12,8 @@ The following data-elements are mandatory (i.e., data MUST be present) or must b
 
 **Additional Profile specific implementation guidance:**
 
-Note that for the admission/transfer/discharge scenario, `Condition.encounter` is a "reverse link" to the Encounter resource and cannot be traversed from the MessageHeader within the Message Bundle.
+- Following [US Core guidance] the Condition resource references the Encounter resource and not the reverse.
+- Note that for the admission/transfer/discharge scenario, `Condition.encounter` is a "reverse link" to the Encounter resource and cannot be traversed from the MessageHeader within the Message Bundle.
 
 ### Examples
 
