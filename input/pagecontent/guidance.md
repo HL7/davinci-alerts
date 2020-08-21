@@ -161,11 +161,6 @@ As shown in Figure 4, when an event or request triggers a notification, the Send
   - The Receiver/Intermediary may sort and filter notifications based on the `MessageHeader.event` codes. For example, `notification-admit` can be used to to filter for patient admission notifications.
 - There is no expectation that the data submitted represents all the data required by the Notification Recipient/Intermediary, only that the data is known to be relevant to the triggering event. The Notification Recipient/Intermediary can optionally fetch additional information from the patient's medical record using FHIR RESTful searches.  The endpoint for this search may be known or supplied via the $process-message operation payload.
 
-<del>
-We are actively seeking input on whether or not to document how to transmit endpoint data intended only for the immediate  (which may be the final recipient or an intermediary)  and to provide the recipient with the technical details for getting additional information from the medical record for the alert - Note that this has serious security implications as it may contain sensitive access information.
-{:.note-to-balloters}
-</del>
-
 #### Additional Intermediary Steps
 
 After the Intermediary successfully receives adn processes the notification and optionally searches and process the search results, it redistributes the data to the end users.  It **MAY** use this framework (in other words, FHIR messaging and the `$process-message` operation) or some other messaging protocol such as Direct, SMS or V2 messaging to forward the notification.  Note that the Intermediary **MAY** customize the content based on the end user (for example, withholding data that a particular care team member does not need).

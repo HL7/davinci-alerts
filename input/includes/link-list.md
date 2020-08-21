@@ -64,7 +64,6 @@
 [Profiles]: profiles.html "Profiles and Extensions Page"
 [Profiling]: {{site.data.fhir.path}}profiling.html
 [Push Alert Notification]: guidance.html#push-alert-notification
-[Query Responder CapabilityStatement]: CapabilityStatement-query-responder.html
 [Security]: security.html
 [SMART Application Launch Framework Implementation Guide Release 1.0.0]: http://www.hl7.org/fhir/smart-app-launch/
 [Terminology]: terminology.html "Terminology Page"
