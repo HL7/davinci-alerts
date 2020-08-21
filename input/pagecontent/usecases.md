@@ -5,7 +5,7 @@ This use case demonstrates how the Da Vinci Notifications IG framework is used t
 
 ### Use Case Background
 
-The intent of this use case is to focus on the beginning and end of patient encounters.  The following list illustrates the type of events that this use case covers.
+The intent of this use case is to focus on the beginning and end of patient encounters.  The following list illustrates the type of events that this use case covers.[^2]
 
 - admission to the emergency department
 - admission to a hospital or equivalent facility as an inpatient
