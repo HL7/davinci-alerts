@@ -77,8 +77,7 @@ The triggering of a notification allow for the appropriate notification to be se
 Notifications can be generated for many scenarios.
 
 The initial version of this
-Implementation Guide will focus on *Admission Transfer and Discharge* Scenarios, in other words, anything that would create an encounter in a patient care record.  However, this framework is intended to support other scenarios such as those listed below.  Work is planned to document them in future publications in collaboration with domain experts such as public health.
-
+Implementation Guide will focus on *Admission Transfer and Discharge* Scenarios, in other words, anything that would create an encounter in a patient care record.  However, this framework is intended to support other scenarios such as those listed below.  There is no plan to publish additional use cases in this implementation guide. Additional scenarios may be published as supplemental non-balloted informative documents or stand alone use case specific implementation Guides published by other entities inside or outside of HL7.
 
 <div class="row">
 <div class="col-sm-6" markdown="1" style="background-color: Lightcyan;">
