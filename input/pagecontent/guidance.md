@@ -243,7 +243,7 @@ All elements in the Da Vinci Notification profiles have a [MustSupport flag]. Sy
 
 - When receiving a notification from the Sender, the  Recipient/Intermediary SHALL interpret missing data elements within resource instances as data not present in the Sender's systems.
 
-- In situations where information on a particular data element is missing and the  Sender knows the precise reason for the absence of data, the Sender SHALL provide the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
+- If a particular data element is missing and the Sender knows the precise reason for the absence of data, then the Sender **SHALL** provide the reason for the missing information using "null" values from the value set where they exist or using the dataAbsentReason extension (The assumption is that system implementers will, wherever possible, automate the population of missing values with "null" values without requiring - but providing the option for - manual entry).
 
 - Notification Recipient/Intermediary SHALL be able to process resource instances containing data elements asserting missing information without generating an error or causing the application to fail.
 
@@ -256,7 +256,7 @@ All elements in the Da Vinci Notification profiles have a [MustSupport flag]. Sy
 
 - The  Recipient SHALL be capable of processing resource instances containing the data elements defined in the Da Vinci Notification profiles that have a MustSupport flag without generating an error or causing the application to fail. In other words, the Recipient SHOULD be capable of processing the data elements (displaying, storing, etc).
 
-- In situations where information on a particular data element is not needed or considered protected information the Intermediary **MAY** remove the data elements in the resource instance when distributing the alert notification. The Intermediary **SHOULD** provide the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
+- If a particular data element is missing and the Sender knows the precise reason for the absence of data, then the Sender **MAY** remove the data elements in the resource instance when distributing the alert notification. The Intermediary **SHOULD** provide the reason for the missing information using "null" values from the value set where they exist or using the dataAbsentReason extension (The assumption is that system implementers will, wherever possible, automate the population of missing values with "null" values without requiring - but providing the option for - manual entry).
 
 - The Recipient SHALL be able to process resource instances containing missing data elements and data elements asserting missing information without generating an error or causing the application to fail.
 
@@ -264,35 +264,6 @@ All elements in the Da Vinci Notification profiles have a [MustSupport flag]. Sy
 {:.no_toc}
 
 Refer to the [US Core Must Support] rules for data query transactions to fetch additional data.
-
-
-<!--
-#### GraphDefinition
-
-All elements in the Da Vinci Notification GraphDefinition have a [Da Vinci Notifications Must Support Extension]. Systems claiming to conform to a GraphDefinition must "support" the link as defined below:
-
-##### This guide adopts the following definitions of Must Support for all *direct* transactions between the Sender and Recipient or Intermediary
-{:.no_toc}
-
-*Must Support* on any link SHALL be interpreted as follows:
-
-* The Sender SHALL be capable of including the profile defined by the link in the Da Vinci GraphDefinition that have a MustSupport flag in the bundle instance as part of a $process-message operation.
-
-* The Recipient/Intermediary SHALL be capable of processing the profile instances referred to by the link without generating an error or causing the application to fail. In other words Recipient/Intermediary SHOULD be capable of processing the profile (display, store, etc).
-
-##### This guide adopts the following definitions of Must Support for all transactions between the Intermediary and Recipient
-{:.no_toc}
-
-*Must Support* on any link SHALL be interpreted as follows:
-
-* The Intermediary SHALL be capable of including the profile defined by the link in the Da Vinci GraphDefinition that have a MustSupport flag in the bundle instance as part of a $process-message operation.
-
-* The Recipient SHALL be capable of processing the profile instances referred to by the link without generating an error or causing the application to fail. In other words Recipient/Intermediary SHOULD be capable of processing the profile (display, store, etc).
-
-- In situations where information on a particular data element is not needed or considered protected information the Intermediary MAY remove the profile instance from the bundle when distributing the notification. The Intermediary MAY provide the reason for the missing information using the dataAbsentReason extension.
-
-- The Recipient SHALL be able to process bundle instances containing missing profiles and data elements asserting missing information without generating an error or causing the application to fail.
--->
 
 ---
 
