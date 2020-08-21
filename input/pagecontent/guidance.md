@@ -20,9 +20,9 @@ This project recognizes the existing existing FHIR (R2-R4) subscriptions framewo
   - Typically the discovery and management of this is an 'out-of-band' process
 - System level trust exists between the actors (refer to the [Security] Page for additional guidance).
   - Clients have been authorized by the servers.
-  - It is assumed that consent is managed elsewhere.
-  - Patient consent allows exchange of data between the relevant systems.
 - A secure information transport mechanism exists between the actors(refer to the [Security] Page for additional guidance).
+- Patient consent allows exchange of data between the relevant systems.
+  - It is assumed that consent is managed elsewhere.
 - Trading partners (in other words: Senders, Intermediaries, and Recipients) will use data use agreements (DUAs),business associate agreements (BAAs) and/or contracts to specify the use cases and scope and potential reuse or repurposing of data shared between two parties. These agreements can be directly between trading partners or at a trusted exchange level. See the [HL7 Da Vinci Guiding Principles] for further details.
   - Any such agreement should clearly indicate how the Intermediary will handle sensitive information, determine what to remove, and how it will notify the recipient of the removal.
 
