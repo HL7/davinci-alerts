@@ -76,7 +76,7 @@ a) having additional resources in the message bundle is not prohibited as long a
 b) not all the resources listed above may be present in the source system. For example, including a diagnosis on an admit/transfer/discharge notification allows the recipient to determine if additional action is required, but an encounter diagnosis may not be available until well after discharge. (For a more detailed discussion of when required resources may be absent, see the section on [Must Support])
 {:.highlight-note}
 
-### Formal Definition of the Da Vinci Admit and Discharge Notification Message
+### Admit/Transfer/Discharge Message Profiles
 
 The following FHIR Profiles can be used to formally define this resource graph for the admission, transfer, and discharge events.  Note that except for the first profile listed below, these profiles constrain their references to other profiles within the same bundle.
 
@@ -108,7 +108,7 @@ The Following MessageDefinition and GraphDefinition can be used to formally defi
 - \*** MessageDefinition is used to formally define the Message content for a given event (e.g, an inpatient admission, transfer, or discharge).  It defines the event and the focal and non focal Resources/Profiles that make up the message:
 -->
 
-### Da Vinci Notification Message Bundle Examples
+### Examples
 
 Da Vinci Notification Bundles such as these examples can be assembled based on any of the above definitions.
 
@@ -122,7 +122,7 @@ In the interaction shown in figures 9, the HealthCare facility is acting in the 
 
 ---
 
-#### Example Transaction
+#### Example Transactions
 
 The following example transactions show examples of using the `$process-message` operation to send a notification messages.
 
