@@ -38,6 +38,7 @@ This project recognizes the existing existing FHIR (R2-R4) subscriptions framewo
 - The Sender shall provide structured data whenever possible.
 - Notifications are transacted to the `$process-message` operation endpoint.
 - The Da Vinci Notification Message Bundle Profile is the FHIR object that is exchanged for all notification transactions.
+- Considerations for sensitive data when triggering a Notification need to be taken into account and hence all events may not trigger a notification.
 
 ---
 
