@@ -8,10 +8,10 @@ There are 5 Capability Statements defining computable definitions of FHIR confor
 ### The following table summarizes how these CapabilityStatements applies to the Da Vinci Notification Roles
 
 |Role|server-mode|client-mode|
-|---|---|---|
-|Sender |Da Vinci Query Responder | Da Vinci Notification Sender|
-|Intermediary |Da Vinci Notification Receiver,Da Vinci Query Responder|Da Vinci QueryRequester, Da Vinci Notification Forwarder|
-|Recipient |Da Vinci Notification Receiver | Da Vinci Query Requester|
+| --- | :---: | :---: |
+|Sender |-| Da Vinci Notification Sender|
+|Intermediary |Da Vinci Notification Receiver| Da Vinci Notification Forwarder|
+|Recipient |Da Vinci Notification Receiver |-|
 {: .grid}
 
 <br />

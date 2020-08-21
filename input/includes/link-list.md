@@ -54,6 +54,7 @@
 [MessageHeader]: {{site.data.fhir.path}}messageheader.html
 [Must Support]: guidance.html#must-support
 [MustSupport flag]: {{site.data.fhir.path}}profiling.html#mustsupport
+[US Core Must Support]: {{site.data.fhir.uscore}}/general-guidance.html#must-support
 [Notification Sender CapabilityStatement]: CapabilityStatement-notification-sender.html
 [Notification Forwarder CapabilityStatement]: CapabilityStatement-notification-forwarder.html
 [NotificationAdmitDischarge]: GraphDefinition-admit-discharge.html
