@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "name": "DaVinciUnsolicitedNotifications",
     "title": "Da Vinci Unsolicited Notifications",
-    "status": "draft",
+    "status": "active",
     "publisher": "HL7 International - Infrastructure and Messaging Work Group",
     "contact": [
         {
@@ -489,7 +489,7 @@
             },
             {
                 "code": "releaselabel",
-                "value": "CI Build"
+                "value": "STU1 Release"
             },
             {
                 "code": "excludexml",

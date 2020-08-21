@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/davinci-alerts/2020Feb" ciUrl="http://build.fhir.org/ig/HL7/davinci-alerts" defaultVersion="current" defaultWorkgroup="" gitUrl="https://github.com/HL7/davinci-alerts" xsi:noNamespaceSchemaLocation="../schemas/specification.xsd" url="http://hl7.org/fhir/us/davinci-alerts"><version code="current" url="http://build.fhir.org/ig/HL7/davinci-alerts"/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/davinci-alerts/2020Feb" ciUrl="http://build.fhir.org/ig/HL7/davinci-alerts" defaultVersion="1.0.0" defaultWorkgroup="" gitUrl="https://github.com/HL7/davinci-alerts" xsi:noNamespaceSchemaLocation="../schemas/specification.xsd" url="http://hl7.org/fhir/us/davinci-alerts"><version code="current" url="http://build.fhir.org/ig/HL7/davinci-alerts"/>
+<version code="1.0.0" url="http://hl7.org/fhir/us/davinci-alerts/STU1"/>
 <version code="0.2.0" url="http://hl7.org/fhir/us/davinci-alerts/2020Feb"/>
 <version code="0.1.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-alerts/2019Sep"/>
 <version code="0.1" deprecated="true"/>
@@ -16,6 +17,7 @@
 <artifact id="Condition/adt-notification-condition-01" key="Condition-adt-notification-condition-01" name="Admit/Transfer/Discharge Notification Condition 01"/>
 <artifact id="Coverage/adt-notification-coverage-01" key="Coverage-adt-notification-coverage-01" name="Admit/Transfer/Discharge Notification Coverage 01"/>
 <artifact id="Encounter/adt-notification-encounter-01" key="Encounter-adt-notification-encounter-01" name="Admit/Transfer/Discharge Notification Encounter 01"/>
+<artifact id="ValueSet/notification-admit-event" key="ValueSet-notification-admit-event" name="Da Vinci Admit Notification Event ValueSet"/>
 <artifact id="StructureDefinition/admit-notification-messageheader" key="StructureDefinition-admit-notification-messageheader" name="Da Vinci Admit Notification MessageHeader Profile"/>
 <artifact deprecated="true" id="StructureDefinition/admit-discharge-notification-condition" key="StructureDefinition-admit-discharge-notification-condition" name="Da Vinci Admit/Discharge Notification Condition Profile"/>
 <artifact deprecated="true" id="StructureDefinition/admit-discharge-notification-coverage" key="StructureDefinition-admit-discharge-notification-coverage" name="Da Vinci Admit/Discharge Notification Coverage Profile"/>
@@ -27,7 +29,6 @@
 <artifact id="StructureDefinition/transfer-notification-messageheader" key="StructureDefinition-discharge-notification-messageheader" name="Da Vinci Discharge Notification MessageHeader Profile"/>
 <artifact id="CodeSystem/notification-event" key="CodeSystem-notification-event" name="Da Vinci Event CodeSystem Notification"/>
 <artifact id="ValueSet/notification-event" key="ValueSet-notification-event" name="Da Vinci Notification Event ValueSet"/>
-<artifact id="ValueSet/notification-admit-event" key="ValueSet-notification-admit-event" name="Da Vinci Notification admit Event ValueSet"/>
 <artifact id="ValueSet/notification-discharge-event" key="ValueSet-notification-discharge-event" name="Da Vinci Notification discharge Event ValueSet"/>
 <artifact id="ValueSet/notification-transfer-event" key="ValueSet-notification-transfer-event" name="Da Vinci Notification transfer Event ValueSet"/>
 <artifact id="StructureDefinition/notifications-bundle" key="StructureDefinition-notifications-bundle" name="Da Vinci Notifications Bundle Profile"/>

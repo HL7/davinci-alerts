@@ -19,7 +19,7 @@
             ]
         }
     ],
-    "description": "Concepts describing the purpose of the Da Vinci Unsolicited Notification.",
+    "description": "Concepts describing the purpose of the Da Vinci Unsolicited Notification. Note these concepts are 'pre-coordinated' to represent the concept of notification message *AND* the event that triggers the notification.",
     "jurisdiction": [
         {
             "coding": [
