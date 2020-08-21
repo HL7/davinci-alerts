@@ -214,6 +214,10 @@ Figure 2 shows the process where an Intermediary, having previously received a n
 {% include img.html img="notification_wf2.svg"
  caption="Figure 2" %}
 
+<br/>
+<br/>
+ ---
+
  **This Implementation Guide was made possible by the thoughtful contributions of the following people and organizations:**
 
  - *The twenty-two founding [Da Vinci Project](http://www.hl7.org/about/davinci/index.cfm?ref=common) member organizations.*

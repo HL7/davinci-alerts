@@ -165,7 +165,7 @@ As shown in Figure 4, when an event or request triggers a notification, the Send
 
 #### Fetching of Additional Data by the Intermediary or Receiver
 
-The Intermediary or Receiver **MAY** fetch additional data from the Sender after it successfully receives and processes the notification optionally searches and process the search results.  Refer to the US Core Implementation Guide for provider access to patient data.
+The Intermediary or Receiver **MAY** fetch additional data from the Sender after it successfully receives and processes the notification optionally searches and process the search results.  Refer to the [US Core] Implementation Guide for provider access to patient data.
 
 This guide does not specify a standard discovery process for obtaining the Sender's FHIR endpoint.  Once a suitable approach has been agreed upon and published, it will be referenced in a future version of this guide
 {:.stu-note}
