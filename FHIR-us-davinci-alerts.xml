@@ -41,8 +41,8 @@
 <artifact id="CapabilityStatement/notification-forwarder" key="CapabilityStatement-notification-forwarder" name="Notification Forwarder CapabilityStatement"/>
 <artifact id="CapabilityStatement/notification-receiver" key="CapabilityStatement-notification-receiver" name="Notification Receiver CapabilityStatement"/>
 <artifact id="CapabilityStatement/notification-sender" key="CapabilityStatement-notification-sender" name="Notification Sender CapabilityStatement"/>
-<artifact id="CapabilityStatement/query-requester" key="CapabilityStatement-query-requester" name="Query Requester CapabilityStatement"/>
-<artifact id="CapabilityStatement/query-responder" key="CapabilityStatement-query-responder" name="Query Responder CapabilityStatement"/>
+<artifact deprecated="true" id="CapabilityStatement/query-requester" key="CapabilityStatement-query-requester" name="Query Requester CapabilityStatement"/>
+<artifact deprecated="true" id="CapabilityStatement/query-responder" key="CapabilityStatement-query-responder" name="Query Responder CapabilityStatement"/>
 <artifact deprecated="true" id="StructureDefinition/notifications-graphdefinition" key="StructureDefinition-notifications-graphdefinition" name="StructureDefinition Notifications GraphDefinition"/>
 <artifact deprecated="true" id="StructureDefinition/notifications-messagedefinition" key="StructureDefinition-notifications-messagedefinition" name="StructureDefinition Notifications MessageDefinition"/>
 <artifact id="Bundle/transfer-notification-message-bundle-01" key="Bundle-transfer-notification-message-bundle-01" name="Transfer Notification Message Bundle 01"/>

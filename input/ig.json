@@ -200,12 +200,6 @@
             },
             {
                 "reference": {
-                    "reference": "CapabilityStatement/query-requester"
-                },
-                "exampleBoolean": false
-            },
-            {
-                "reference": {
                     "reference": "StructureDefinition/discharge-notification-messageheader"
                 },
                 "exampleBoolean": false
@@ -219,12 +213,6 @@
             {
                 "reference": {
                     "reference": "StructureDefinition/adt-notification-coverage"
-                },
-                "exampleBoolean": false
-            },
-            {
-                "reference": {
-                    "reference": "CapabilityStatement/query-responder"
                 },
                 "exampleBoolean": false
             },
@@ -358,18 +346,8 @@
                             "generation": "generated"
                         },
                         {
-                            "nameUrl": "CapabilityStatement-query-requester.html",
-                            "title": "CapabilityStatement Query Requester",
-                            "generation": "generated"
-                        },
-                        {
                             "nameUrl": "CapabilityStatement-notification-receiver.html",
                             "title": "CapabilityStatement Notification Receiver",
-                            "generation": "generated"
-                        },
-                        {
-                            "nameUrl": "CapabilityStatement-query-responder.html",
-                            "title": "CapabilityStatement Query Responder",
                             "generation": "generated"
                         }
                     ]

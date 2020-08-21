@@ -136,9 +136,6 @@ definition:
         reference: StructureDefinition/adt-notification-encounter
       exampleBoolean: false
     - reference:
-        reference: CapabilityStatement/query-requester
-      exampleBoolean: false
-    - reference:
         reference: StructureDefinition/discharge-notification-messageheader
       exampleBoolean: false
     - reference:
@@ -146,9 +143,6 @@ definition:
       exampleBoolean: false
     - reference:
         reference: StructureDefinition/adt-notification-coverage
-      exampleBoolean: false
-    - reference:
-        reference: CapabilityStatement/query-responder
       exampleBoolean: false
     - reference:
         reference: CodeSystem/notification-event
@@ -227,14 +221,8 @@ definition:
           - nameUrl: CapabilityStatement-notification-forwarder.html
             title: CapabilityStatement Notification Forwarder
             generation: generated
-          - nameUrl: CapabilityStatement-query-requester.html
-            title: CapabilityStatement Query Requester
-            generation: generated
           - nameUrl: CapabilityStatement-notification-receiver.html
             title: CapabilityStatement Notification Receiver
-            generation: generated
-          - nameUrl: CapabilityStatement-query-responder.html
-            title: CapabilityStatement Query Responder
             generation: generated
       - nameUrl: security.html
         title: Security
