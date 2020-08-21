@@ -3,7 +3,7 @@
 [`$process-message`]: {{site.data.fhir.path}}messageheader-operation-process-message.html
 [`collection`]: {{site.data.fhir.path}}http.html#collection
 [2019 CMS 45 CFR Part 156 NPRM]: https://www.federalregister.gov/d/2020-05050
-[Admit/Transfer/Discharge Use case]: usecases.html
+[Admit/Transfer/Discharge Use Case]: usecases.html
 [aggregation]: {{site.data.fhir.path}}elementdefinition-definitions.html#ElementDefinition.aggregation
 [Argonaut Clinical Data Subscriptions]: http://argonautwiki.hl7.org/index.php?title=Argonaut_2019_Projects#Clinical_Data_Subscriptions
 [Bundle Admit Notification Message Bundle 01]: Bundle-admit-notification-message-bundle-01.html
@@ -84,3 +84,4 @@
 [US Core]: {{site.data.fhir.uscore}}/index.html
 [Da Vinci Health Record Exchange (HRex)]: {{site.data.fhir.hrex}}/index.html
 [Infrastructure and Messaging (INM)]: http://www.hl7.org/Special/committees/inm/index.cfm
+[Propose a Change]: https://jira.hl7.org/issues/?filter=12844&jql=project%20%3D%20FHIR%20AND%20Specification%20%3D%20%22US%20Da%20Vinci%20Alerts%20(FHIR)%20%5BFHIR-us-davinci-alerts%5D%22

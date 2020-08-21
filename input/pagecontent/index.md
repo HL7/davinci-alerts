@@ -3,16 +3,19 @@ This implementation guide describes a method for the communication of relevant n
 
 The [2019 CMS 45 CFR Part 156 NPRM] focuses on hospitalization notifications due to significant issues that can occur if a patient is not followed appropriately after acute care. The HL7 Da Vinci Project has responded to this need by supporting the effort to provide a FHIR based standard for adoption by both providers and payers.  It is anticipated that the burden of communicating the notification is also reduced by using FHIR.   This Guide defines a FHIR messaging based paradigm and framework to establish consistently adoptable and reproducible methods to exchange notifications. This framework is applied to the patient admission, transfer, and discharge events to generate unsolicited notifications to the care team.
 
-This Implementation Guide is supported by the [Da Vinci] initiative which is a private effort to accelerate the adoption of Health Level Seven International Fast Healthcare Interoperability Resources (HL7® FHIR®) as the standard to support and integrate value-based care (VBC) data exchange across communities. Like all Da Vinci Implementation Guides, it follows the [HL7 Da Vinci Guiding Principles] for exchange of patient health information.  The guide is based upon the prior work from the [US Core] and [Da Vinci Health Record Exchange (HRex)] Implementation Guides. Changes to this specification are managed by the sponsoring HL7 [Infrastructure and Messaging (INM)] workgroup and are incorporated as part of the standard HL7 balloting process.
+### About This Guide
 
-### How to read this Guide
+This Implementation Guide is supported by the [Da Vinci] initiative which is a private effort to accelerate the adoption of Health Level Seven International Fast Healthcare Interoperability Resources (HL7® FHIR®) as the standard to support and integrate value-based care (VBC) data exchange across communities. Like all Da Vinci Implementation Guides, it follows the [HL7 Da Vinci Guiding Principles] for exchange of patient health information.  The guide is based upon the prior work from the [US Core] and [Da Vinci Health Record Exchange (HRex)] Implementation Guides. Changes to this specification are managed by the sponsoring HL7 [Infrastructure and Messaging (INM)] workgroup and are incorporated as part of the standard HL7 balloting process. You can suggest changes to this specification by creating a *Jira change request tracker* from the [Propose a Change] link at the bottom of any page.
+
+#### How to read this Guide
+{: .no_toc}
 
 This Guide is divided into several pages which are listed at the top of each page in the menu bar.
 
 - [Home]\: The home page provides the introduction and background for the Da Vinci Unsolicited Notifications Project.
 
 - [Framework]\: These pages provide guidance on the set of FHIR transactions and the FHIR artifacts used in a general framework to enable unsolicited notifications to care team members.
-- [Admit/Transfer/Discharge Use cases]\: Unsolicited notifications for the Admission/Transfer/Discharge use cases are defined using the framework.
+- [Admit/Transfer/Discharge Use Case]\: Unsolicited notifications for the Admission/Transfer/Discharge use cases are defined using the framework.
 - [FHIR Artifacts]\: These pages provide detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
   - [Profiles]\: This page lists the set of Profiles that are defined in this guide.
   - [Terminology]\: This page lists the value sets and code system defined for this guide.
@@ -211,7 +214,20 @@ Figure 2 shows the process where an Intermediary, having previously received a n
 {% include img.html img="notification_wf2.svg"
  caption="Figure 2" %}
 
----
+ **This Implementation Guide was made possible by the thoughtful contributions of the following people and organizations:**
+
+ - *The twenty-two founding [Da Vinci Project](http://www.hl7.org/about/davinci/index.cfm?ref=common) member organizations.*
+
+ - *Eric Haas, Health eData Inc*
+ - *Riki Merrick Vernetzt, LLC*
+ - *Linda Michaelsen, Optum*
+ - *Lloyd Mckenzie, Gevity*
+ - *Robert Dieterle, EnableCare*
+ - *Viet Nguyen, Stratametrics*
+ - *Jocelyn Keegan, Point of Care Partners*
+
+ ---
+
 [^1]: [FHIR at Scale Taskforce (FAST)] is an ongoing initiatives to address how to define this secure infrastructure.
 
 <br />
