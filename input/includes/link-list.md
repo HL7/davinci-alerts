@@ -39,6 +39,7 @@
 [FHIR Data Segmentation for Privacy project]: https://www.hl7.org/special/Committees/projman/searchableProjectIndex.cfm?action=edit&ProjectNumber=1549
 [FHIR message Bundle]: {{site.data.fhir.path}}bundle.html#message
 [FHIR Messaging paradigm]: {{site.data.fhir.path}}messaging.html
+[FHIR RESTful operation]: {{site.data.fhir.path}}operations.html
 [FHIR messaging]: {{site.data.fhir.path}}messaging.html
 [FHIR Subscription Based Notification]: guidance.html#fhir-subscription-based-notification
 [figure 8]: usecases.html#figure-8

@@ -1,7 +1,11 @@
 
 ### Introduction
 
-FHIR resources can be used to transport patient information relevant to a specific event (e.g. admission, transfer, discharge, change in treatment, new diagnosis) to another provider or the health plan. These resources can communicate the details of who, when, what and where care was delivered and help to ensure timely follow-up as needed.  To reiterate, the intent of this guide is to provide a framework to create notifications that can provide enough information to Recipient and/or Intermediary for them to be able understand what the notification is about and complete enough to enable them to determine if and what additional steps they need to take in response to the notification.   The following framework documents how to use [FHIR messaging] to define the contents of the notification and how to "push" these unrequested notification messages using the [`$process-message`] operation directly to Recipients and Intermediaries.  The [Admit/Transfer/Discharge Use case] demonstrates how to implement an unsolicited notification scenario using the framework.
+FHIR resources can be used to transport patient information relevant to a specific event (e.g. admission, transfer, discharge, change in treatment, new diagnosis) to another provider or the health plan. These resources can communicate the details of who, when, what and where care was delivered and help to ensure timely follow-up as needed.  To reiterate, the intent of this guide is to provide a framework to create notifications that can provide enough information to Recipient and/or Intermediary for them to be able understand what the notification is about and complete enough to enable them to determine if and what additional steps they need to take in response to the notification.
+
+This guide follows a simplified [FHIR messaging paradigm] for notifications employing both the FHIR Messaging Bundle and RESTful interaction using the [`$process-message`] operation for exchanging data.  Note that Da Vinci Notifications allow implementers to use only these FHIR messaging components in the same manner as a [FHIR RESTful operation] without having to fully implement the FHIR messaging framework.   But it is also compatible with FHIR messaging as implemented.
+
+The following framework documents how to use [FHIR messaging] to define the contents of the notification and how to "push" these unrequested notification messages using the `$process-message` operation directly to Recipients and Intermediaries.  The [Admit/Transfer/Discharge Use case] demonstrates how to implement an unsolicited notification scenario using the framework.
 
 This project recognizes the existing existing FHIR (R2-R4) subscriptions framework as well as  revisions to the *Subscription* resource for FHIR R5 for event based subscriptions using *SubscriptionTopic* and *SubscriptionStatus* and *Bundles* of type `subscription-notification`.  It is anticipated that an equivalent subscription based notification paradigm can be implemented as an alternate to the unsolicited messaging based approach documented here.  After FHIR R5 subscription resources are finalized and an implementation guide to enable the implementation of R5-style subscription in FHIR F4 is completed, a future version of this guide will add subscriptions as an alternative workflow.
 {:.stu-note}
@@ -149,8 +153,6 @@ Note to Balloters: These scenarios may be added in future iterations of this IG.
 | Changes in Care Team | US Core R4 Practitioner, R4 RelatedPerson, R4 CareTeam | TBD... |
 
 -->
-
-
 
 ### Sending Unsolicited Notifications
 
