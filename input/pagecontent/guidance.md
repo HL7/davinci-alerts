@@ -163,9 +163,9 @@ As shown in Figure 4, when an event or request triggers a notification, the Send
   - The Receiver/Intermediary may sort and filter notifications based on the `MessageHeader.event` codes. For example, `notification-admit` can be used to to filter for patient admission notifications.
 - There is no expectation that the data submitted represents all the data required by the Notification Recipient/Intermediary, only that the data is known to be relevant to the triggering event. The Notification Recipient/Intermediary can optionally fetch additional information from the patient's medical record using FHIR RESTful searches.  The endpoint for this search may be known or supplied via the $process-message operation payload.
 
-#### Fetching of Additional Data by the Intermediary or Receiver
+#### Fetching Additional Data
 
-The Intermediary or Receiver **MAY** fetch additional data from the Sender after it successfully receives and processes the notification optionally searches and process the search results.  Refer to the [US Core] Implementation Guide for provider access to patient data.
+As illustrated in steps 5-8 in the sequence diagram, the Intermediary or Receiver **MAY** fetch additional data from the Sender after it successfully receives and processes the notification optionally searches and process the search results.  Refer to the [US Core] Implementation Guide for provider access to patient data.
 
 This guide does not specify a standard discovery process for obtaining the Sender's FHIR endpoint.  Once a suitable approach has been agreed upon and published, it will be referenced in a future version of this guide
 {:.stu-note}
