@@ -81,7 +81,7 @@ The triggering of a notification allow for the appropriate notification to be se
 
 Notifications can be generated for many scenarios.
 
-This Implementation Guide focus is the *Admission Transfer and Discharge* Scenario, in other words, anything that would create an encounter in a patient care record. However, the framework defined in this guide is intended to support other scenarios such as those listed below.  There is no plan to publish additional use cases in this implementation guide. Additional scenarios may be published as supplemental non-balloted informative documents or use case specific Implementation Guides.
+This Implementation Guide focus is the *Admission Transfer and Discharge* Scenario.  However, the framework defined in this guide is intended to support other scenarios such as those listed below.  There is no plan to publish additional use cases in this implementation guide. Additional scenarios may be published as supplemental non-balloted informative documents or use case specific Implementation Guides.
 
 <div class="row">
 <div class="col-sm-6" markdown="1" style="background-color: Lightcyan;">

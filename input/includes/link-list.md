@@ -85,3 +85,5 @@
 [Da Vinci Health Record Exchange (HRex)]: {{site.data.fhir.hrex}}/index.html
 [Infrastructure and Messaging (INM)]: http://www.hl7.org/Special/committees/inm/index.cfm
 [Propose a Change]: https://jira.hl7.org/issues/?filter=12844&jql=project%20%3D%20FHIR%20AND%20Specification%20%3D%20%22US%20Da%20Vinci%20Alerts%20(FHIR)%20%5BFHIR-us-davinci-alerts%5D%22
+[V3 Value SetActEncounterCode]: http://terminology.hl7.org/ValueSet/v3-ActEncounterCode
+[Discharge disposition]: http://hl7.org/fhir/ValueSet/encounter-discharge-disposition

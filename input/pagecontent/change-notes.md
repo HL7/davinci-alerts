@@ -34,11 +34,11 @@ The first official published version of the DEQM IG for FHIR R4.
   1. Added section on [Data Query](guidance.html#fetching-additional-data). ([FHIR-26121](https://jira.hl7.org/browse/FHIR-26121))
   1. Updated [STU Note](guidance.html#introduction) regarding subscriptions ([FHIR-26100](https://jira.hl7.org/browse/FHIR-26100), [FHIR-26171](https://jira.hl7.org/browse/FHIR-26171)).
   1. Added [About This Guide](index.html#about-this-guide) section referring to Da Vinci and Da Vinci Guiding Principles ([FHIR-26114](https://jira.hl7.org/browse/FHIR-26114),[FHIR-26127](https://jira.hl7.org/browse/FHIR-26127), [FHIR-26131](https://jira.hl7.org/browse/FHIR-26131)).
-  1. Update to Must Support Section ([FHIR-26124](https://jira.hl7.org/browse/FHIR-26124)).
+  1. Update to Must Support Section ([FHIR-26124](https://jira.hl7.org/browse/FHIR-26124), [FHIR-26155](https://jira.hl7.org/browse/FHIR-26155)).
   1. Clarify intent of [future scenarios](index.html#scenarios) ([FHIR-26133](https://jira.hl7.org/browse/FHIR-26133)).
   1. Clarify intent of MessageHeader.author ([FHIR-26138](https://jira.hl7.org/browse/FHIR-26138)).
   1. Simplify sequence diagrams ([FHIR-26147](https://jira.hl7.org/browse/FHIR-26147)).
-  
+
 
 
 

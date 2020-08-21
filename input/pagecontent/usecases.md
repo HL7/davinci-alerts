@@ -5,7 +5,20 @@ This use case demonstrates how the Da Vinci Notifications IG framework is used t
 
 ### Use Case Background
 
-Having the ability to send notifications to update physicians and care management teams when a patient is admitted to a hospital or discharged from the hospital is key to improving patient care.  The intent of these notifications is *not* to replace existing data exchange mechanisms, for example the discharge summary; but rather to notify of the discharge event and provide enough data to gather more information, if desired. These notifications improve post-discharge transitions, promote communication between providers and encourage follow up care. The expectation for this use case is that the business rules for triggering the notification is the same that is used for an HL7 V2 ADT A01 message.  Figure 6 illustrates how some of the admit, transfer and discharge data elements corresponded to the resource in the message bundle.
+The intent of this use case is to focus on the beginning and end of patient encounters.  The following list illustrates the type of events that this use case covers.
+
+- admission to the emergency department
+- admission to a hospital or equivalent facility as an inpatient
+- admission to to a health care facility for a predetermined length of time, usually less than 24 hours
+- admission to a hospital or equivalent facility for observation
+- admission to a healthcare facility on a nonresident basis for example, for an outpatient medical procedure or surgery
+- transfer from the emergency room to an inpatient status
+- discharge to the patient's home environment
+- discharge or transfer to a long-term care facility
+- discharge or transfer to a post-acute care rehabilitation facility
+- notification that the patient expired during the encounter
+
+Having the ability to send notifications to update physicians and care management teams when a patient has a significant encounters (such as inpatient, ER, surgery etc.) is key to improving patient care.  The intent of these notifications is *not* to replace existing data exchange mechanisms, for example the discharge summary; but rather to notify of the event and provide enough data to gather more information, if desired. These notifications improve post-discharge transitions, promote communication between providers and encourage follow up care. The expectation for this use case is that the business rules for triggering the notification is the same that is used for an HL7 V2 ADT A01 message.  Figure 6 illustrates how some of the admit, transfer and discharge data elements corresponded to the resource in the message bundle.
 
 <div markdown ="1" class="bg-info">
 Transfer notifications should only be used if:
@@ -120,6 +133,8 @@ The following example transactions show examples of using the `$process-message`
 {% include examplebutton_default.html example="process-message-discharge-example" b_title = "Click Here To See Example Da Vinci Discharge Notification Message" %}
 
 ---
+
+[^2] Based on the [V3 Value SetActEncounterCode]  and [Discharge disposition] value sets.
 
 <!--{% raw %}
 
