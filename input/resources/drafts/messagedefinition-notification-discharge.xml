@@ -7,7 +7,7 @@
 </meta>
 	<url value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-discharge"/>
 	<name value="NotificationDischarge"/>
-	<title value="Da Vinci Notification Discharge Message Definition"/>
+	<title value="Da Vinci Discharge Notification Message Definition"/>
 	<status value="active"/>
 	<date value="2019-08-20"/>
 	<publisher value="Da Vinci Project"/>

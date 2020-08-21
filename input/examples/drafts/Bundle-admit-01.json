@@ -322,7 +322,7 @@
               "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"
             }
           ],
-          "text": "Notification Admit Inpatient"
+          "text": "Admit Notification Inpatient"
         },
         "resourceType": "Communication"
       }

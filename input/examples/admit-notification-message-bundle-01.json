@@ -29,12 +29,12 @@
                 ],
                 "eventCoding": {
                     "code": "notification-admit",
-                    "display": "Notification Admit",
+                    "display": "Admit Notification",
                     "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"
                 },
                 "focus": [
                     {
-                        "display": "Notification Admit(Unknown (qualifier value))",
+                        "display": "Admit Notification(Unknown (qualifier value))",
                         "reference": "urn:uuid:5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82"
                     }
                 ],

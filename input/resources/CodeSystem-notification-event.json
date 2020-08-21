@@ -4,7 +4,7 @@
     "url": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event",
     "version": "1.0.0",
     "name": "NotificationEventCodeSystem",
-    "title": "Da Vinci Notification Event CodeSystem",
+    "title": "Da Vinci Event CodeSystem Notification",
     "status": "active",
     "experimental": false,
     "date": "2019-07-12",
@@ -44,137 +44,119 @@
     ],
     "concept": [
         {
-            "code": "prescription-refill-request",
-            "display": "Prescription Refill Request",
+            "code": "notification-refill-request",
+            "display": "Prescription Refill Request Notification",
             "definition": "The purpose or content of the notification is a prescription refill request."
         },
         {
-            "code": "progress-update",
-            "display": "Progress Update",
+            "code": "notification-progress-update",
+            "display": "Progress Update Notification",
             "definition": "The purpose or content of the notification is a progress update."
         },
         {
-            "code": "report-labs",
-            "display": "Report Labs",
-            "definition": "The purpose or content of the notification is to report labs."
-        },
-        {
-            "code": "appointment-reminder",
-            "display": "Appointment Reminder",
+            "code": "notification-appointment-reminder",
+            "display": "Appointment Reminder Notification",
             "definition": "The purpose or content of the notification is an appointment reminder."
         },
         {
-            "code": "phone-consult",
-            "display": "Phone Consult",
+            "code": "notification-phone-consult",
+            "display": "Phone Consult Notification",
             "definition": "The purpose or content of the notification is a phone consult."
         },
         {
-            "code": "summary-report",
-            "display": "Summary Report",
+            "code": "notification-summary-report",
+            "display": "Summary Report Notification",
             "definition": "The purpose or content of the notification is a summary report."
         },
         {
-            "code": "notification",
-            "display": "Notification",
-            "definition": "The purpose or content a notification about an event. Usage Note: This is a high level code and should not be used in the value set - it is a grouper code for notifications of any kind.",
-            "property": [
-                {
-                    "code": "abstract",
-                    "valueBoolean": true
-                }
-            ],
-            "concept": [
-                {
-                    "code": "notification-admit",
-                    "display": "Notification Admit",
-                    "definition": "The purpose or content of a notification about a patient who undergoes a hospital's admission process to receive treatment and/or care."
-                },
-                {
-                    "code": "notification-discharge",
-                    "display": "Notification Discharge",
-                    "definition": "The purpose or content of a notification about a patient who is discharged when they longer need to receive care and can go home or is sent you to another to another facility or hospital or to another department in the same hospital."
-                },
-                {
-                    "code": "notification-transfer",
-                    "display": "Notification Transfer",
-                    "definition": "The purpose or content of a notification about a patient who is transferred to another facility or hospital or to another department in the same hospital."
-                },
-                {
-                    "code": "notification-referral",
-                    "display": "Notification Referral",
-                    "definition": "The purpose or content a notification about a referral for consultation."
-                },
-                {
-                    "code": "notification-treatment-change",
-                    "display": "Notification Treatment Change",
-                    "definition": "The purpose or content a notification about a change in treatment - either the start or the end."
-                },
-                {
-                    "code": "notification-lab-report",
-                    "display": "Notification Lab Report",
-                    "definition": "The purpose or content a notification about lab results being available."
-                },
-                {
-                    "code": "notification-treatment-issue",
-                    "display": "Notification Treatment Issue",
-                    "definition": "The purpose or content a notification about a problem that is applicable to a treatment the patient is receiving such as drug or device recall or reported issue."
-                },
-                {
-                    "code": "notification-ordered-device",
-                    "display": "Notification Ordered Device",
-                    "definition": "The purpose or content a notification about a Device having been ordered for the patient."
-                },
-                {
-                    "code": "notification-prior-auth-notice",
-                    "display": "Notification Prior Authorization Notice",
-                    "definition": "The purpose or content a notification about a change to the Prior Authorization (Pended to Approved/Denied)."
-                },
-                {
-                    "code": "notification-new-condition",
-                    "display": "Notification New Condition",
-                    "definition": "The purpose or content a notification about a new diagnosis / condition."
-                },
-                {
-                    "code": "notification-care-team-change",
-                    "display": "Notification Care Team Change",
-                    "definition": "The purpose or content a notification about changes occurring in the care team."
-                },
-                {
-                    "code": "notification-coverage-change",
-                    "display": "Notification Coverage Change",
-                    "definition": "The purpose or content a notification about changes in insurance coverage, either the start or the end."
-                },
-                {
-                    "code": "notification-social-determinants-change",
-                    "display": "Notification Social Determinants Change",
-                    "definition": "The purpose or content a notification about change in the social circumstances of the patient (Social Determinants of Health)."
-                },
-                {
-                    "code": "notification-public-health",
-                    "display": "Notification Public Health",
-                    "definition": "The purpose or content a notification about a Public Health event."
-                },
-                {
-                    "code": "notification-outpatient-visit",
-                    "display": "Notification Outpatient Visit",
-                    "definition": "The purpose or content a notification about the start of an outpatient encounter."
-                },
-                {
-                    "code": "notification-vital-statistics",
-                    "display": "Notification Vital Statistics",
-                    "definition": "The purpose or content a notification about either the birth or death of the patient."
-                },
-                {
-                    "code": "notification-pharmacy",
-                    "display": "Notification Pharmacy",
-                    "definition": "The purpose or content a notification about a change in prescription status for a medication at the pharmacy (Pickup, Restock, Dispense)."
-                },
-                {
-                    "code": "notification-workers-comp",
-                    "display": "Notification Workers Comp",
-                    "definition": "The purpose or content a notification about healthcare services that are rendered under Workman's Compensation rules."
-                }
-            ]
+            "code": "notification-admit",
+            "display": "Admit Notification",
+            "definition": "The purpose or content of a notification about a patient who undergoes a hospital's admission process to receive treatment and/or care."
+        },
+        {
+            "code": "notification-discharge",
+            "display": "Discharge Notification",
+            "definition": "The purpose or content of a notification about a patient who is discharged when they longer need to receive care and can go home or is sent you to another to another facility or hospital or to another department in the same hospital."
+        },
+        {
+            "code": "notification-transfer",
+            "display": "Transfer Notification",
+            "definition": "The purpose or content of a notification about a patient who is transferred to another facility or hospital or to another department in the same hospital."
+        },
+        {
+            "code": "notification-referral",
+            "display": "Referral Notification",
+            "definition": "The purpose or content a notification about a referral for consultation."
+        },
+        {
+            "code": "notification-tx-change",
+            "display": "Treatment Change Notification",
+            "definition": "The purpose or content a notification about a change in treatment - either the start or the end."
+        },
+        {
+            "code": "notification-lab-report",
+            "display": "Laboratory Report Notification",
+            "definition": "The purpose or content a notification about lab results being available."
+        },
+        {
+            "code": "notification-tx-issue",
+            "display": "Treatment Issue Notification",
+            "definition": "The purpose or content a notification about a problem that is applicable to a treatment the patient is receiving such as drug or device recall or reported issue."
+        },
+        {
+            "code": "notification-ordered-device",
+            "display": "Ordered Device Notification",
+            "definition": "The purpose or content a notification about a Device having been ordered for the patient."
+        },
+        {
+            "code": "notification-prior-auth-notice",
+            "display": "Prior Authorization Notice Notification",
+            "definition": "The purpose or content a notification about a change to the Prior Authorization (Pended to Approved/Denied)."
+        },
+        {
+            "code": "notification-new-condition",
+            "display": "New Condition Notification",
+            "definition": "The purpose or content a notification about a new diagnosis / condition."
+        },
+        {
+            "code": "notification-care-team-change",
+            "display": "Care Team Change Notification",
+            "definition": "The purpose or content a notification about changes occurring in the care team."
+        },
+        {
+            "code": "notification-coverage-change",
+            "display": "Coverage Change Notification",
+            "definition": "The purpose or content a notification about changes in insurance coverage, either the start or the end."
+        },
+        {
+            "code": "notification-social-determinants-change",
+            "display": "Social Determinants Change Notification",
+            "definition": "The purpose or content a notification about change in the social circumstances of the patient (Social Determinants of Health)."
+        },
+        {
+            "code": "notification-public-health",
+            "display": "Public Health Notification",
+            "definition": "The purpose or content a notification about a Public Health event."
+        },
+        {
+            "code": "notification-outpatient-visit",
+            "display": "Outpatient Visit Notification",
+            "definition": "The purpose or content a notification about the start of an outpatient encounter."
+        },
+        {
+            "code": "notification-vitals",
+            "display": "Vital Statistics Notification",
+            "definition": "The purpose or content a notification about either the birth or death of the patient."
+        },
+        {
+            "code": "notification-pharmacy",
+            "display": "Pharmacy Notification",
+            "definition": "The purpose or content a notification about a change in prescription status for a medication at the pharmacy (Pickup, Restock, Dispense)."
+        },
+        {
+            "code": "notification-workers-comp",
+            "display": "Workers Comp Notification",
+            "definition": "The purpose or content a notification about healthcare services that are rendered under Workman's Compensation rules."
         }
     ]
 }

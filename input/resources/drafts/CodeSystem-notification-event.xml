@@ -73,29 +73,29 @@
 		</property>
 		<concept>
 			<code value="notification-admit"/>
-			<display value="Notification Admit"/>
+			<display value="Admit Notification"/>
 			<definition value="The purpose or content of a notification about an admission."/>
 			</concept>
 <!--	These deprecated child codes correspond to the Encounter.class codes drawn from v3-ActCode where concept is-a _ActEncounterCode.
 
 			<concept>
 				<code value="notification-admit-er"/>
-				<display value="Notification Admit ER"/>
+				<display value="Admit Notification ER"/>
 				<definition value="The purpose or content a notification about an admission to the Emergency department  Usage Note: This child code corresponds to the Encounter.class code 'EMER'."/>
 			</concept>
 			<concept>
 				<code value="notification-admit-inpatient"/>
-				<display value="Notification Admit Inpatient"/>
+				<display value="Admit Notification Inpatient"/>
 				<definition value="The purpose or content a notification about an admission to a hosptial or equivalent facility.  Usage Note: This child code corresponds to the Encounter.class code 'IMP'."/>
 			</concept>
 			<concept>
 				<code value="notification-admit-forobservation"/>
-				<display value="Notification Admit for Observation"/>
+				<display value="Admit Notification for Observation"/>
 				<definition value="The purpose or content a notification about an admission for observation, because they require a significant period of treatment and monitoring to determine whether or not their condition warrants an inpatient admission or discharge. In the majority of cases the decision about admission or discharge will occur within a time period determined by local, regional or national regulation, often between 24 and 48 hours.  Usage Note: This child code corresponds to the Encounter.class code 'OBSENC'."/>
 			</concept>
 			<concept>
 				<code value="notification-admit-ambulatory"/>
-				<display value="Notification Admit Ambulatory"/>
+				<display value="Admit Notification Ambulatory"/>
 				<definition value="The purpose or content a notification about an admission to a healthcare facility (e.g. a practitioner, aTMs office, clinic setting, or hospital) on a nonresident basis. The term ambulatory usually implies that the patient has come to the location and is not assigned to a bed. Sometimes referred to as an outpatient encounter.  Usage Note: This child code corresponds to the Encounter.class code 'AMB'."/>
 			</concept>
 			<concept>
@@ -105,47 +105,47 @@
 			</concept>
 			<concept>
 				<code value="notification-admit-short-stay"/>
-				<display value="Notification Admit Short Stay"/>
+				<display value="Admit Notification Short Stay"/>
 				<definition value="The purpose or content a notification about an admission to to a health care facility for a predetermined length of time, usually less than 24 hours.  Usage Note: This child code corresponds to the Encounter.class code 'SS'."/>
 			</concept>
 		</concept>
 -->
 		<concept>
 			<code value="notification-discharge"/>
-			<display value="Notification Discharge"/>
+			<display value="Discharge Notification"/>
 			<definition value="The purpose or content of a notification about a discharge."/>
 		</concept>
 <!--  These deprecatedchild codes correspond to the encounter.hospitalization.dischargeDisposition codes drawn from FHIR code system discharge-disposition
 <concept>
 				<code value="notification-discharge-home"/>
-				<display value="Notification Discharge Home"/>
+				<display value="Discharge Notification Home"/>
 				<definition value="The purpose or content a notification about an admission to to a health care facility for a predetermined length of time, usually less than 24 hours.  Usage Note: This child code corresponds to the encounter.hospitalization.dischargeDisposition code 'home'."/>
 			</concept>
 			<concept>
 				<code value="notification-discharge-skilled-nursing"/>
-				<display value="Notification Discharge Skilled Nursing"/>
+				<display value="Discharge Notification Skilled Nursing"/>
 				<definition value="The purpose or content a notification about a discharge to the patient's home environment.  Usage Note: This child code corresponds to the encounter.hospitalization.dischargeDisposition code 'snf'."/>
 			</concept>
 			<concept>
 				<code value="notification-discharge-longterm-care"/>
-				<display value="Notification Discharge Longterm Care"/>
+				<display value="Discharge Notification Longterm Care"/>
 				<definition value="The purpose or content a notification about a discharge to a long-term care facility.  Usage Note: This child code corresponds to the encounter.hospitalization.dischargeDisposition code 'long'."/>
 			</concept>
 			<concept>
 				<code value="notification-discharge-desceased"/>
-				<display value="Notification Discharge Desceased"/>
+				<display value="Discharge Notification Desceased"/>
 				<definition value="The purpose or content a notification that the patiened died during the encounter.  Usage Note: This child code corresponds to the encounter.hospitalization.dischargeDisposition code 'exp'."/>
 			</concept>
 			<concept>
 				<code value="notification-discharge-rehab"/>
-				<display value="Notification Discharge Rehab"/>
+				<display value="Discharge Notification Rehab"/>
 				<definition value="The purpose or content a notification about a discharge to a post-acute care rehabilitation facility.  Usage Note: This child code corresponds to the encounter.hospitalization.dischargeDisposition code 'rehab'."/>
 			</concept>
 		</concept>
 -->
 <concept>
 	<code value="notification-transfer"/>
-	<display value="Notification Transfer"/>
+	<display value="Transfer Notification"/>
 	<definition value="The purpose or content of a notification about a transfer."/>
 </concept>
 

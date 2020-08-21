@@ -7,7 +7,7 @@
 </meta>
 	<url value="http://hl7.org/fhir/us/davinci-alerts/MessageDefinition/notification-admit"/>
 	<name value="NotificationAdmit"/>
-	<title value="Da Vinci Notification Admit Message Definition"/>
+	<title value="Da Vinci Admit Notification Message Definition"/>
 	<status value="active"/>
 	<date value="2019-08-20"/>
 	<publisher value="Da Vinci Project"/>

@@ -25,7 +25,7 @@
 <artifact id="StructureDefinition/adt-notification-encounter" key="StructureDefinition-adt-notification-encounter" name="Da Vinci Admit/Transfer/Discharge Notification Encounter Profile"/>
 <artifact id="StructureDefinition/discharge-notification-messageheader" key="StructureDefinition-discharge-notification-messageheader" name="Da Vinci Discharge Notification MessageHeader Profile"/>
 <artifact id="StructureDefinition/transfer-notification-messageheader" key="StructureDefinition-discharge-notification-messageheader" name="Da Vinci Discharge Notification MessageHeader Profile"/>
-<artifact id="CodeSystem/notification-event" key="CodeSystem-notification-event" name="Da Vinci Notification Event CodeSystem"/>
+<artifact id="CodeSystem/notification-event" key="CodeSystem-notification-event" name="Da Vinci Event CodeSystem Notification"/>
 <artifact id="ValueSet/notification-event" key="ValueSet-notification-event" name="Da Vinci Notification Event ValueSet"/>
 <artifact id="ValueSet/notification-admit-event" key="ValueSet-notification-admit-event" name="Da Vinci Notification admit Event ValueSet"/>
 <artifact id="ValueSet/notification-discharge-event" key="ValueSet-notification-discharge-event" name="Da Vinci Notification discharge Event ValueSet"/>

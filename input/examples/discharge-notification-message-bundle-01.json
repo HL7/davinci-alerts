@@ -29,12 +29,12 @@
                 ],
                 "eventCoding": {
                     "code": "notification-discharge",
-                    "display": "Notification Discharge",
+                    "display": "Discharge Notification",
                     "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"
                 },
                 "focus": [
                     {
-                        "display": "Notification Discharge(Examplotomy Encounter)",
+                        "display": "Discharge Notification(Examplotomy Encounter)",
                         "reference": "urn:uuid:5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82"
                     }
                 ],

@@ -25,7 +25,7 @@
 			<system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"/>
 			<code value="notification-admit-inpatient"/>
 		</coding>
-		<text value="Notification Admit Inpatient"/>
+		<text value="Admit Notification Inpatient"/>
 	</topic>
 	<about>
 		<reference value="Coverage/example-1"/>
