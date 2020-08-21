@@ -12,10 +12,10 @@ The first official published version of the DEQM IG for FHIR R4.
   1. Remove MessageDefintion and GraphDefinition profile and references to them ([FHIR-26130](https://jira.hl7.org/browse/FHIR-26130), [FHIR-26106](https://jira.hl7.org/browse/FHIR-26106)).
   1. Update Guidance on [Errors and ReliableDelivery](guidance.html#reliable-delivery) ([FHIR-26165](https://jira.hl7.org/browse/FHIR-26165), [FHIR-26201](https://jira.hl7.org/browse/FHIR-26201) [FHIR-2685](https://jira.hl7.org/browse/FHIR-2685),[FHIR-26190](https://jira.hl7.org/browse/FHIR-26190),[FHIR-26176](https://jira.hl7.org/browse/FHIR-26176)).
   1. Update [Scope and Usage](index.html#scope-and-usage)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200), [FHIR-26182](https://jira.hl7.org/browse/FHIR-26182) #[FHIR-26132](https://jira.hl7.org/browse/FHIR-26132),#[FHIR-26129](https://jira.hl7.org/browse/FHIR-26129),[FHIR-26184](https://jira.hl7.org/browse/FHIR-26184)).
-  1. Update [Precondition and Assumptions](guidance.html#precondition-and-assumptions)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200),#[FHIR-26132](https://jira.hl7.org/browse/FHIR-26132) #[FHIR-26129](https://jira.hl7.org/browse/FHIR-26129),#[FHIR-26117](https://jira.hl7.org/browse/FHIR-26117),[FHIR-26121](https://jira.hl7.org/browse/FHIR-26121)).
+  1. Update [Precondition and Assumptions](guidance.html#preconditions-and-assumptions)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200),#[FHIR-26132](https://jira.hl7.org/browse/FHIR-26132) #[FHIR-26129](https://jira.hl7.org/browse/FHIR-26129),#[FHIR-26117](https://jira.hl7.org/browse/FHIR-26117),[FHIR-26121](https://jira.hl7.org/browse/FHIR-26121)).
   1. Update introduction to the [The Da Vinci Notification Message Bundle](guidance.html#the-da-vinci-notification-message-bundle)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200)).
   1. Update [US Case Background](usecases.html#use-case-background)([FHIR-26182](https://jira.hl7.org/browse/FHIR-26182),[FHIR-26116](https://jira.hl7.org/browse/FHIR-26116)).
-  1. Clarify how Intermediary [forwards messages](guidance.html#forwarding-content-using-this-framework) within framework ([FHIR-26177](https://jira.hl7.org/browse/FHIR-26177))
+  1. Clarify how Intermediary [forwards messages](guidance.html#forwarding-notifications-using-this-framework) within framework ([FHIR-26177](https://jira.hl7.org/browse/FHIR-26177))
   1. Clarify [Intermediary role](index.html#roles-and-actors) ([FHIR-26148](https://jira.hl7.org/browse/FHIR-261148))
   1. Clarify how to [sort incoming messages](guidance.html#sending-unsolicited-notifications) (#[FHIR-26132](https://jira.hl7.org/browse/FHIR-26132))
   1. Add [Transfer notification use case](usecases.html). (#[FHIR-26909](https://jira.hl7.org/browse/FHIR-26909))
@@ -39,7 +39,7 @@ The first official published version of the DEQM IG for FHIR R4.
   1. Clarify intent of MessageHeader.author ([FHIR-26138](https://jira.hl7.org/browse/FHIR-26138)).
   1. Simplify sequence diagrams ([FHIR-26147](https://jira.hl7.org/browse/FHIR-26147)).
   1. Clarify approach to messaging in Framework ([FHIR-26098](https://jira.hl7.org/browse/FHIR-26098)).
-  
+
 
 
 

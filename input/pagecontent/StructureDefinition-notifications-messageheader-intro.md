@@ -22,7 +22,7 @@ The following data-elements are mandatory (i.e., data MUST be present) or must b
 **Additional Profile specific implementation guidance:**
 
 - The `destination.endpoint` and `source.endpoint` can be in any form of url the server understands (usually, https: or mllp:). The URI is allowed to be relative; in which case, it is relative to the server end-point
-- The `reference` attribute is required for` MessageHeader.sender`, `MessageHeader.author`, `MessageHeader.responsible`, and `MessageHeader.focus` so there is no question how to find the resource inside the bundle - the use of *only* an `identifier` attribute (in other words, a logical reference) is not permitted.
+- The `reference` attribute is required for `MessageHeader.sender`, `MessageHeader.author`, `MessageHeader.responsible`, and `MessageHeader.focus` so there is no question how to find the resource inside the bundle - the use of *only* an `identifier` attribute (in other words, a logical reference) is not permitted.
 
 ### Examples
 

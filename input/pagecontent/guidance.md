@@ -220,7 +220,7 @@ The body of the operation is the Da Vinci Notification Message Bundle containing
 An HTTP Status success code is returned on successful submission.
 
 
-See the Admit/Transfer/Discharge scenario [Example Transaction] for an example of using the `$process-message` operation to send a Da Vinci Notification Message Bundle.
+See the Admit/Transfer/Discharge scenario [Example Transactions] for an example of using the `$process-message` operation to send a Da Vinci Notification Message Bundle.
 
 #### Reliable Delivery
 

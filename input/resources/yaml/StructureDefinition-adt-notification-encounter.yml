@@ -15,11 +15,12 @@ contact:
         value: 'http://www.hl7.org/Special/committees/inm/index.cfm'
 description: >-
   The Da Vinci Admit/Transfer/Discharge Notification Encounter Profile is based on the [US Core
-  Encounter Profile](http://hl7.org/fhir/us/core/STU3.1/StructureDefinition-us-core-encounter.html) and and constrains the resources referenced by the
-  `Encounter.Subject`,`Encounter.Location`, and
-  `Encounter.participant.individual`  to be found in the same message Bundle.
-  In addition, the Location reference is constrained to the [US Core Location
-  Profile](http://hl7.org/fhir/us/core/STU3.1/StructureDefinition-us-core-location.html)
+  Encounter Profile](http://hl7.org/fhir/us/core/STU3.1/StructureDefinition-us-core-encounter.html) and constrains the resources referenced by the
+  `Encounter.Subject` to the [US Core patient
+  Profile](http://hl7.org/fhir/us/core/STU3.1/StructureDefinition-us-core-patient.html) ,`Encounter.participant.individual` to the [US Core Practitioner
+  Profile](http://hl7.org/fhir/us/core/STU3.1/StructureDefinition-us-core-practitioner.html), and `Encounter.Location` to the [US Core Location
+  Profile](http://hl7.org/fhir/us/core/STU3.1/StructureDefinition-us-core-location.html). It also constrains these referenced resources to be found in the same message Bundle.
+
 jurisdiction:
   - coding:
       - system: 'urn:iso:std:iso:3166'
@@ -42,6 +43,12 @@ differential:
             - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
           aggregation:
             - bundled
+      mustSupport: true
+    - id: Encounter.subject.reference
+      path: Encounter.subject.reference
+      min: 1
+      max: '1'
+      mustSupport: true
     - id: Encounter.participant
       path: Encounter.participant
     - id: Encounter.participant.individual
@@ -53,8 +60,15 @@ differential:
               http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
           aggregation:
             - bundled
+      mustSupport: true
+    - id: Encounter.participant.individual.reference
+      path: Encounter.participant.individual.reference
+      min: 1
+      max: '1'
+      mustSupport: true
     - id: Encounter.location
       path: Encounter.location
+      mustSupport: true
     - id: Encounter.location.location
       path: Encounter.location.location
       type:
@@ -63,3 +77,9 @@ differential:
             - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-location'
           aggregation:
             - bundled
+      mustSupport: true
+    - id: Encounter.location.location.reference
+      path: Encounter.location.location.reference
+      min: 1
+      max: '1'
+      mustSupport: true
