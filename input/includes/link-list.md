@@ -79,3 +79,4 @@
 [Admit Notification Intermediate Translate Bundle]: Bundle-admit-notification-intermediate-translate-bundle.html
 [Admit Notification Intermediate Transmit Bundle]:Bundle-admit-notification-intermediate-transmit-bundle.html
 [HL7 Da Vinci Guiding Principles]: https://confluence.hl7.org/display/DVP/Da+Vinci+Clinical+Advisory+Council+Members?preview=/66940155/66942916/Guiding%20Principles%20for%20Da%20Vinci%20Implementation%20Guides.pdf
+[US Core guidance]: {{site.data.fhir.uscore}}/StructureDefinition-us-core-condition.html#mandatory-and-must-support-data-elements
