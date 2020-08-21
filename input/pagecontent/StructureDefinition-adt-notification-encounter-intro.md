@@ -10,6 +10,10 @@ The following data-elements are mandatory (i.e., data MUST be present) or must b
 
 1. A reference(s) to US Core Encounter Location(s) which will be bundled in the message
 
+**Additional Profile specific implementation guidance:**
+
+- Following [US Core guidance] the Condition resource references the Encounter resource and not the reverse.
+
 ### Examples
 
 {% include examples-note.md %}
