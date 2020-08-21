@@ -9,27 +9,36 @@ The first official published version of the DEQM IG for FHIR R4.
 
   1. Various Technical Corrections and corrections to typographical errors and grammar.
   1. Update and correct examples
-  1. Remove MessageDefintion and GraphDefinition profile and references to them ([FHIR-26130](https://jira.hl7.org/browse/FHIR-26130)).
+  1. Remove MessageDefintion and GraphDefinition profile and references to them ([FHIR-26130](https://jira.hl7.org/browse/FHIR-26130), [FHIR-26106](https://jira.hl7.org/browse/FHIR-26106)).
   1. Update Guidance on [Errors and ReliableDelivery](guidance.html#reliable-delivery) ([FHIR-26165](https://jira.hl7.org/browse/FHIR-26165), [FHIR-26201](https://jira.hl7.org/browse/FHIR-26201) [FHIR-2685](https://jira.hl7.org/browse/FHIR-2685),[FHIR-26190](https://jira.hl7.org/browse/FHIR-26190),[FHIR-26176](https://jira.hl7.org/browse/FHIR-26176)).
   1. Update [Scope and Usage](index.html#scope-and-usage)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200), [FHIR-26182](https://jira.hl7.org/browse/FHIR-26182) #[FHIR-26132](https://jira.hl7.org/browse/FHIR-26132),#[FHIR-26129](https://jira.hl7.org/browse/FHIR-26129),[FHIR-26184](https://jira.hl7.org/browse/FHIR-26184)).
-  1. Update [Precondition and Assumptions](guidance.html#precondition-and-assumptions)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200),#[FHIR-26132](https://jira.hl7.org/browse/FHIR-26132) #[FHIR-26129](https://jira.hl7.org/browse/FHIR-26129),#[FHIR-26117](https://jira.hl7.org/browse/FHIR-26117)).
+  1. Update [Precondition and Assumptions](guidance.html#precondition-and-assumptions)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200),#[FHIR-26132](https://jira.hl7.org/browse/FHIR-26132) #[FHIR-26129](https://jira.hl7.org/browse/FHIR-26129),#[FHIR-26117](https://jira.hl7.org/browse/FHIR-26117),[FHIR-26121](https://jira.hl7.org/browse/FHIR-26121)).
   1. Update introduction to the [The Da Vinci Notification Message Bundle](guidance.html#the-da-vinci-notification-message-bundle)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200)).
   1. Update [US Case Background](usecases.html#use-case-background)([FHIR-26182](https://jira.hl7.org/browse/FHIR-26182)).
   1. Clarify how Intermediary [forwards messages](guidance.html#forwarding-content-using-this-framework) within framework ([FHIR-26177](https://jira.hl7.org/browse/FHIR-26177))
   1. Clarify [Intermediary role](index.html#roles-and-actors) ([FHIR-26148](https://jira.hl7.org/browse/FHIR-261148))
   1. Clarify how to [sort incoming messages](guidance.html#sending-unsolicited-notifications) (#[FHIR-26132](https://jira.hl7.org/browse/FHIR-26132))
   1. Add [Transfer notification use case](usecases.html). (#[FHIR-26909](https://jira.hl7.org/browse/FHIR-26909))
-  1. Remove child concept for admit and discharge from the [Da Vinci Notification Event CodeSystem]. ([FHIR-26268](https://jira.hl7.org/browse/FHIR-26268),[FHIR-26178](https://jira.hl7.org/browse/FHIR-26178),[FHIR-26179](https://jira.hl7.org/browse/FHIR-26179),[FHIR-26180](https://jira.hl7.org/browse/FHIR-26180))
+  1. Flatten and Remove child concept for admit and discharge from the [Da Vinci Notification Event CodeSystem]. ([FHIR-26268](https://jira.hl7.org/browse/FHIR-26268),[FHIR-26178](https://jira.hl7.org/browse/FHIR-26178),[FHIR-26179](https://jira.hl7.org/browse/FHIR-26179),[FHIR-26180](https://jira.hl7.org/browse/FHIR-26180), [FHIR-26136](https://jira.hl7.org/browse/FHIR-26136))
   1. Clarify why [Da Vinci Notifications Bundle Profile] has min=0 constraints. [FHIR-26289](https://jira.hl7.org/browse/FHIR-26289)
   1. Update [Da Vinci Notifications MessageHeader Profile] to require use of references. [FHIR-26286](https://jira.hl7.org/browse/FHIR-26286)
   1. Update section on [formal message definition](guidance.html#formally-defining-the-da-vinci-notification-message)([FHIR-26224](https://jira.hl7.org/browse/FHIR-26224)).
-  1. Updates to [Security] page ([FHIR-26195](https://jira.hl7.org/browse/FHIR-26195)[FHIR-26194], (https://jira.hl7.org/browse/FHIR-26194)).
-  1. Add `id` element to [Da Vinci Notifications MessageHeader Profile] and [Da Vinci Notifications Bundle Profile] profiles. ([FHIR-26168](https://jira.hl7.org/browse/FHIR-26168)).
+  1. Updates to [Security] page ([FHIR-26195](https://jira.hl7.org/browse/FHIR-26195), [FHIR-26194](https://jira.hl7.org/browse/FHIR-26194), [FHIR-26134], (https://jira.hl7.org/browse/FHIR-26134), [FHIR-26139](https://jira.hl7.org/browse/FHIR-26139)).
+  1. Add `id` element to [Da Vinci Notifications MessageHeader Profile] ([FHIR-26168](https://jira.hl7.org/browse/FHIR-26168)).
+  1. Add `id` and 'timestamp element to [Da Vinci Notifications Bundle Profile] profiles. ([FHIR-26168](https://jira.hl7.org/browse/FHIR-26168), [FHIR-26156](https://jira.hl7.org/browse/FHIR-26156)).
   1. Update [Da Vinci Admit Notification MessageHeader Profile],
 [Da Vinci Discharge Notification MessageHeader Profile], and
 [Da Vinci Transfer Notification MessageHeader Profile] with extensible bindings instead of pattern definitions ([FHIR-26163](https://jira.hl7.org/browse/FHIR-26163)).
   1. Remove detailed summaries from profiles ([FHIR-26161](https://jira.hl7.org/browse/FHIR-26161)).
   1. Clarify for the [Da Vinci Admit/Transfer/Discharge Notification Encounter Profile] that the link is from Condition to Encounter ([FHIR-26158](https://jira.hl7.org/browse/FHIR-26158)).
+  1. Added section on [Data Query](guidance.html#fetching-additional-data). ([FHIR-26121](https://jira.hl7.org/browse/FHIR-26121))
+  1. Updated [STU Note](guidance.html#introduction) regarding subscriptions ([FHIR-26100](https://jira.hl7.org/browse/FHIR-26100), [FHIR-26171](https://jira.hl7.org/browse/FHIR-26171)).
+  1. Added [About This Guide](index.html#about-this-guide) section referring to Da Vinci and Da Vinci Guiding Principles ([FHIR-26114](https://jira.hl7.org/browse/FHIR-26114),[FHIR-26127](https://jira.hl7.org/browse/FHIR-26127), [FHIR-26131](https://jira.hl7.org/browse/FHIR-26131)).
+  1. Update to Must Support Section ([FHIR-26124](https://jira.hl7.org/browse/FHIR-26124)).
+  1. Clarify intent of [future scenarios](index.html#scenarios) ([FHIR-26133](https://jira.hl7.org/browse/FHIR-26133)).
+  1. Clarify intent of MessageHeader.author ([FHIR-26138](https://jira.hl7.org/browse/FHIR-26138)).
+  1. Simplify sequence diagrams ([FHIR-26147](https://jira.hl7.org/browse/FHIR-26147)).
+  
 
 
 
