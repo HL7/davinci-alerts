@@ -3,7 +3,7 @@
 	<url value="http://hl7.org/fhir/us/davinci-alerts/ValueSet/notification-admit-event"/>
 	<version value="0.1.0"/>
 	<name value="NotificationadmitEventValueSet"/>
-	<title value="Da Vinci Notification admit Event ValueSet"/>
+	<title value="Da Vinci Admit Notification Event ValueSet"/>
 	<status value="active"/>
 	<experimental value="false"/>
 	<date value="2019-07-12"/>
@@ -14,7 +14,7 @@
 			<value value="http://www.hl7.org/Special/committees/inm/index.cfm"/>
 		</telecom>
 	</contact>
-	<description value="Concepts describing Da Vinci Unsolicited Notification admit notification events."/>
+	<description value="Concepts describing Da Vinci Unsolicited Admit Notification notification events."/>
 	<jurisdiction>
 		<coding>
 			<system value="urn:iso:std:iso:3166"/>

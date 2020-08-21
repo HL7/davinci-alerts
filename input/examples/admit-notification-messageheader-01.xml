@@ -7,7 +7,7 @@
 	<eventCoding>
 		<system value="http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"/>
 		<code value="notification-admit"/>
-		<display value="Notification admit"/>
+		<display value="Admit Notification"/>
 	</eventCoding>
 	<destination>
 		<name value="Acme Message Gateway"/>
