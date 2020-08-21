@@ -7,7 +7,9 @@ The following data-elements are mandatory (i.e., data MUST be present) or must b
 
 **Each {{{base_type}} must have:**
 
+1. A logical id
 1. A type code of "message"
+1. A timestamp
 1. An entry for the MessageHeader
 1. An entry for the event or request resource reference by 'MessageHeader.focus'
 
