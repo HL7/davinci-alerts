@@ -134,18 +134,6 @@ The following example transactions show examples of using the `$process-message`
 
 ---
 
-[^2] Based on the [V3 Value SetActEncounterCode]  and [Discharge disposition] value sets.
-
-<!--{% raw %}
-
-### FHIR Subscription Based Notification
-
-The interaction diagram in figure 5 and 6 on the [Framework] page illustrates the sequences of events for subscribing for ADT Notifications and the subsequent notifications when the the event occurs.
-
-{:.note-to-balloters}
-Note to Balloters: We are actively seeking input on what additional work is needed to determine the best way to implement subscriptions for notification notification. See the [FHIR Subscription Based Notification] framework for further details.
-
-{% endraw %}-->
-
+[^2]: Based on the [V3 Value SetActEncounterCode]  and [Discharge disposition] value sets.
 
 {% include link-list.md %}
