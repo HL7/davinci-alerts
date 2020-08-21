@@ -24,6 +24,10 @@ The first official published version of the DEQM IG for FHIR R4.
   1. Update [Da Vinci Notifications MessageHeader Profile] to require use of references. [FHIR-26286](https://jira.hl7.org/browse/FHIR-26286)
   1. Update section on [formal message definition](guidance.html#formally-defining-the-da-vinci-notification-message)([FHIR-26224](https://jira.hl7.org/browse/FHIR-26224)).
   1. Updates to [Security] page ([FHIR-26195](https://jira.hl7.org/browse/FHIR-26195)[FHIR-26194](https://jira.hl7.org/browse/FHIR-26194)).
+  1. Add `id` element to [Da Vinci Notifications MessageHeader Profile] and [Da Vinci Notifications Bundle Profile] profiles. ([FHIR-26168](https://jira.hl7.org/browse/FHIR-26168)).
+  1. Update [Da Vinci Admit Notification MessageHeader Profile],
+[Da Vinci Discharge Notification MessageHeader Profile], and
+[Da Vinci Transfer Notification MessageHeader Profile] with extensible bindings instead of pattern definitions ([FHIR-26163](https://jira.hl7.org/browse/FHIR-26163)).
 
 
 

@@ -44,6 +44,12 @@
                 "mustSupport": false
             },
             {
+                "id": "MessageHeader.id",
+                "path": "MessageHeader.id",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
                 "id": "MessageHeader.eventCoding",
                 "path": "MessageHeader.eventCoding",
                 "min": 1,

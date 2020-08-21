@@ -27,6 +27,10 @@ differential:
     - id: Bundle
       path: Bundle
       mustSupport: false
+    - id: Bundle.id
+      path: Bundle.id
+      min: 1
+      mustSupport: true
     - id: Bundle.type
       path: Bundle.type
       type:
