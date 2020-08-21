@@ -38,6 +38,8 @@ The first official published version of the DEQM IG for FHIR R4.
   1. Clarify intent of [future scenarios](index.html#scenarios) ([FHIR-26133](https://jira.hl7.org/browse/FHIR-26133)).
   1. Clarify intent of MessageHeader.author ([FHIR-26138](https://jira.hl7.org/browse/FHIR-26138)).
   1. Simplify sequence diagrams ([FHIR-26147](https://jira.hl7.org/browse/FHIR-26147)).
+  1. Clarify approach to messaging in Framework ([FHIR-26098](https://jira.hl7.org/browse/FHIR-26098)).
+  
 
 
 
