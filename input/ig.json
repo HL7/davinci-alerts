@@ -44,7 +44,7 @@
             "id": "hrex",
             "uri": "http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/davinci-hrex",
             "packageId": "hl7.fhir.us.davinci-hrex",
-            "version": "current"
+            "version": "0.2.0"
         }
     ],
     "definition": {
@@ -77,14 +77,6 @@
                 "exampleBoolean": true,
                 "name": "Transfer Notification Messageheader 01",
                 "description": "Transfer Notification Messageheader Example"
-            },
-            {
-                "reference": {
-                    "reference": "Organization/anthem"
-                },
-                "exampleBoolean": true,
-                "name": "Example Payor Organization",
-                "description": "Example Payor Organization"
             },
             {
                 "reference": {

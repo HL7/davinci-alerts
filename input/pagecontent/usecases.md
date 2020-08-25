@@ -53,12 +53,8 @@ The other "required if present" resources defined in the framework are those ref
 
 The following additional resources (or rather profiles) have been determined to be "required if present" by the Da Vinci community to fulfill the data item requirements specific to admissions and discharge.
 
-
-{: .grid}
-| ﻿Notification Scenarios | Additional Resource Requirements |
-|---|---|
-| Emergency and Inpatient Admissions | US Core Condition,  Da Vinci HRex Coverage |
-| Emergency and Inpatient Discharges |  US Core Condition, Da Vinci HRex Coverage |
+- US Core Condition
+- Da Vinci Admit/Transfer/Discharge Notification Coverage
 
 {: #figure-8}
 Adding these additional components results in the following resource graph showing all the required resources and their relationships for the admission and discharge notification use case shown in Figure 9:

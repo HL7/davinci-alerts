@@ -1,7 +1,7 @@
 {
     "id": "notification-sender",
     "text": {
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">Notification Sender CapabilityStatement</h2><ul><li>Implementation Guide Version: 1.0.0</li><li>FHIR Version: 4.0.1</li><li>Supported formats: xml, json</li><li>Published: 2020-08-20</li><li>Published by: HL7 International - Infrastructure and Messaging Work Group</li></ul><p><p>This CapabilityStatement describes the expected capabilities of a Da Vinci Sender when sending Unsolicited Notifications transacted with the <code>$process-message</code> in the client mode.</p></p><h3 class=\"no_toc\" id=\"igs\">SHALL Support the Following Implementation Guides:</h3><ul><li><a href=\"http%3A//hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core%7C3.1.1\">http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.1</a></li></ul><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>The Da Vinci Notification Sender <strong>SHALL</strong>:</p><ol><li>Support the notification framework defined in this Guide for the Sender sending notifications.</li><li>Implement the RESTful behavior according to the FHIR specification.</li><li>Support json source formats for all Da Vinci Notification interactions.</li><li>Declare a CapabilityStatement identifying the scenarios, transactions and profiles supported.</li></ol><p>The Da Vinci Notifications Sender <strong>SHOULD</strong>:</p><ol><li>Support the admission/discharge use case defined in this Guide.</li><li>Support xml source formats for all Da Vinci Notification interactions.</li><li>Identify the Da Vinci or US Core profiles supported as part of the FHIR <code>meta.profile</code> attribute for each instance.</li></ol><p id=\"security\"><strong>Security:</strong></p><ol><li>For general security consideration refer to the <a href=\"http://build.fhir.org/secpriv-module.html\">Security and Privacy Considerations</a>.</li><li>For security considerations specific to this guide refer to the  <a href=\"security.html\">Security</a> page for requirements and recommendations.</li></ol><p><strong>Summary of System Wide Operations</strong></p><li><strong>SHALL</strong> support the\t<a href=\"http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message\"><code>$process-message</code></a> operation.</li><h3 class=\"no_toc\" id=\"resource--details\">RESTful Capabilities by Resource/Profile:</h3><p><strong>Summary of Search Criteria</strong></p><table class=\"grid\"><thead><tr><th>Resource Type</th><th>Supported Profiles</th><th>Supported Searches</th><th>Supported <code>_includes</code></th><th>Supported <code>_revincludes</code></th><th>Supported Operations</th></tr></thead><tbody><tr><td><a href=\"#bundle\">Bundle</a></td><td><a href=\"StructureDefinition-notifications-bundle.html\">Da Vinci Notifications Bundle Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#condition\">Condition</a></td><td><a href=\"StructureDefinition-adt-notification-condition.html\">Da Vinci Admit/Transfer/Discharge Notification Condition Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#coverage\">Coverage</a></td><td><a href=\"StructureDefinition-adt-notification-coverage.html\">Da Vinci Admit/Transfer/Discharge Notification Coverage Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#encounter\">Encounter</a></td><td><a href=\"StructureDefinition-adt-notification-encounter.html\">\u200bDa Vinci Admit/Transfer/Discharge Notification Encounter Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#location\">Location</a></td><td><a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-location\">US Core Location Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#messageheader\">MessageHeader</a></td><td><a href=\"StructureDefinition-notifications-messageheader.html\">Da Vinci Notifications MessageHeader Profile</a>, \n\n\t\t\t\t\t\t<a href=\"StructureDefinition-admit-notification-messageheader.html\">Da Vinci Admit Notification MessageHeader Profile</a>, \n\n\t\t\t\t\t\t<a href=\"StructureDefinition-transfer-notification-messageheader.html\">Da Vinci Transfer Notification MessageHeader Profile</a>, \n\n\t\t\t\t\t\t<a href=\"StructureDefinition-discharge-notification-messageheader.html\">Da Vinci Discharge Notification MessageHeader Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#organization\">Organization</a></td><td><a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization\">US Core Organization Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#patient\">Patient</a></td><td><a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient\">US Core Patient Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#practitioner\">Practitioner</a></td><td><a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner\">US Core Practitioner Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#practitionerrole\">PractitionerRole</a></td><td><a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole\">US Core PractitionerRole Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr></tbody></table><br></br><h4 class=\"no_toc\" id=\"bundle\">Bundle</h4><p>Conformance Expectation:\t<strong>SHALL</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-notifications-bundle.html\">Da Vinci Notifications Bundle Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>MAY</strong> be capable of fetching a Bundle resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Bundle/[id]</code>\n\t\t\t\t</li><br></br><!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet --><!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><hr></hr><h4 class=\"no_toc\" id=\"condition\">Condition</h4><p>Conformance Expectation:\t<strong>SHOULD</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-adt-notification-condition.html\">Da Vinci Admit/Transfer/Discharge Notification Condition Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Resource Specific Documentation:</p><blockquote><p>Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle</p></blockquote><hr></hr><h4 class=\"no_toc\" id=\"coverage\">Coverage</h4><p>Conformance Expectation:\t<strong>SHOULD</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-adt-notification-coverage.html\">Da Vinci Admit/Transfer/Discharge Notification Coverage Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Resource Specific Documentation:</p><blockquote><p>Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle</p></blockquote><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>MAY</strong> be capable of fetching a Coverage resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Coverage/[id]</code>\n\t\t\t\t</li><br></br><!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet --><!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><hr></hr><h4 class=\"no_toc\" id=\"encounter\">Encounter</h4><p>Conformance Expectation:\t<strong>SHOULD</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-adt-notification-encounter.html\">\u200bDa Vinci Admit/Transfer/Discharge Notification Encounter Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Resource Specific Documentation:</p><blockquote><p>Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle</p></blockquote><hr></hr><h4 class=\"no_toc\" id=\"location\">Location</h4><p>Conformance Expectation:\t<strong>SHOULD</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-location\">US Core Location Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Resource Specific Documentation:</p><blockquote><p>Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle</p></blockquote><hr></hr><h4 class=\"no_toc\" id=\"messageheader\">MessageHeader</h4><p>Conformance Expectation:\t<strong>SHALL</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-notifications-messageheader.html\">Da Vinci Notifications MessageHeader Profile</a>, \n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-admit-notification-messageheader.html\">Da Vinci Admit Notification MessageHeader Profile</a>, \n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-transfer-notification-messageheader.html\">Da Vinci Transfer Notification MessageHeader Profile</a>, \n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-discharge-notification-messageheader.html\">Da Vinci Discharge Notification MessageHeader Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>MAY</strong> be capable of fetching a MessageHeader resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/MessageHeader/[id]</code>\n\t\t\t\t</li><br></br><!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet --><!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><hr></hr><h4 class=\"no_toc\" id=\"organization\">Organization</h4><p>Conformance Expectation:\t<strong>SHOULD</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization\">US Core Organization Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Resource Specific Documentation:</p><blockquote><p>Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle</p></blockquote><hr></hr><h4 class=\"no_toc\" id=\"patient\">Patient</h4><p>Conformance Expectation:\t<strong>SHOULD</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient\">US Core Patient Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Resource Specific Documentation:</p><blockquote><p>Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle</p></blockquote><hr></hr><h4 class=\"no_toc\" id=\"practitioner\">Practitioner</h4><p>Conformance Expectation:\t<strong>SHOULD</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner\">US Core Practitioner Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Resource Specific Documentation:</p><blockquote><p>Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle</p></blockquote><hr></hr><h4 class=\"no_toc\" id=\"practitionerrole\">PractitionerRole</h4><p>Conformance Expectation:\t<strong>SHOULD</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole\">US Core PractitionerRole Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Resource Specific Documentation:</p><blockquote><p>Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle</p></blockquote><hr></hr><br></br></div>",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">Notification Sender CapabilityStatement</h2><ul><li>Implementation Guide Version: 1.0.0</li><li>FHIR Version: 4.0.1</li><li>Supported formats: xml, json</li><li>Published: 2020-08-24</li><li>Published by: HL7 International - Infrastructure and Messaging Work Group</li></ul><p><p>This CapabilityStatement describes the expected capabilities of a Da Vinci Sender when sending Unsolicited Notifications transacted with the <code>$process-message</code> in the client mode.</p></p><h3 class=\"no_toc\" id=\"igs\">SHALL Support the Following Implementation Guides:</h3><ul><li><a href=\"http%3A//hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core%7C3.1.1\">http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.1</a></li></ul><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>The Da Vinci Notification Sender <strong>SHALL</strong>:</p><ol><li>Support the notification framework defined in this Guide for the Sender sending notifications.</li><li>Implement the RESTful behavior according to the FHIR specification.</li><li>Support json source formats for all Da Vinci Notification interactions.</li><li>Declare a CapabilityStatement identifying the scenarios, transactions and profiles supported.</li></ol><p>The Da Vinci Notifications Sender <strong>SHOULD</strong>:</p><ol><li>Support the admission/discharge use case defined in this Guide.</li><li>Support xml source formats for all Da Vinci Notification interactions.</li><li>Identify the Da Vinci or US Core profiles supported as part of the FHIR <code>meta.profile</code> attribute for each instance.</li></ol><p id=\"security\"><strong>Security:</strong></p><ol><li>For general security consideration refer to the <a href=\"http://build.fhir.org/secpriv-module.html\">Security and Privacy Considerations</a>.</li><li>For security considerations specific to this guide refer to the  <a href=\"security.html\">Security</a> page for requirements and recommendations.</li></ol><p><strong>Summary of System Wide Operations</strong></p><li><strong>SHALL</strong> support the\t<a href=\"http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message\"><code>$process-message</code></a> operation.</li><h3 class=\"no_toc\" id=\"resource--details\">RESTful Capabilities by Resource/Profile:</h3><p><strong>Summary of Search Criteria</strong></p><table class=\"grid\"><thead><tr><th>Resource Type</th><th>Supported Profiles</th><th>Supported Searches</th><th>Supported <code>_includes</code></th><th>Supported <code>_revincludes</code></th><th>Supported Operations</th></tr></thead><tbody><tr><td><a href=\"#bundle\">Bundle</a></td><td><a href=\"StructureDefinition-notifications-bundle.html\">Da Vinci Notifications Bundle Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#condition\">Condition</a></td><td><a href=\"StructureDefinition-adt-notification-condition.html\">Da Vinci Admit/Transfer/Discharge Notification Condition Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#coverage\">Coverage</a></td><td><a href=\"StructureDefinition-adt-notification-coverage.html\">Da Vinci Admit/Transfer/Discharge Notification Coverage Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#encounter\">Encounter</a></td><td><a href=\"StructureDefinition-adt-notification-encounter.html\">\u200bDa Vinci Admit/Transfer/Discharge Notification Encounter Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#location\">Location</a></td><td><a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-location\">US Core Location Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#messageheader\">MessageHeader</a></td><td><a href=\"StructureDefinition-notifications-messageheader.html\">Da Vinci Notifications MessageHeader Profile</a>, \n\n\t\t\t\t\t\t<a href=\"StructureDefinition-admit-notification-messageheader.html\">Da Vinci Admit Notification MessageHeader Profile</a>, \n\n\t\t\t\t\t\t<a href=\"StructureDefinition-transfer-notification-messageheader.html\">Da Vinci Transfer Notification MessageHeader Profile</a>, \n\n\t\t\t\t\t\t<a href=\"StructureDefinition-discharge-notification-messageheader.html\">Da Vinci Discharge Notification MessageHeader Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#organization\">Organization</a></td><td><a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization\">US Core Organization Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#patient\">Patient</a></td><td><a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient\">US Core Patient Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#practitioner\">Practitioner</a></td><td><a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner\">US Core Practitioner Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#practitionerrole\">PractitionerRole</a></td><td><a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole\">US Core PractitionerRole Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr></tbody></table><br></br><h4 class=\"no_toc\" id=\"bundle\">Bundle</h4><p>Conformance Expectation:\t<strong>SHALL</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-notifications-bundle.html\">Da Vinci Notifications Bundle Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>MAY</strong> be capable of fetching a Bundle resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Bundle/[id]</code>\n\t\t\t\t</li><br></br><!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet --><!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><hr></hr><h4 class=\"no_toc\" id=\"condition\">Condition</h4><p>Conformance Expectation:\t<strong>SHALL</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-adt-notification-condition.html\">Da Vinci Admit/Transfer/Discharge Notification Condition Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Resource Specific Documentation:</p><blockquote><p>Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle</p></blockquote><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>MAY</strong> be capable of fetching a Condition resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Condition/[id]</code>\n\t\t\t\t</li><br></br><!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet --><!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><hr></hr><h4 class=\"no_toc\" id=\"coverage\">Coverage</h4><p>Conformance Expectation:\t<strong>SHALL</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-adt-notification-coverage.html\">Da Vinci Admit/Transfer/Discharge Notification Coverage Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Resource Specific Documentation:</p><blockquote><p>Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle</p></blockquote><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>MAY</strong> be capable of fetching a Coverage resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Coverage/[id]</code>\n\t\t\t\t</li><br></br><!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet --><!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><hr></hr><h4 class=\"no_toc\" id=\"encounter\">Encounter</h4><p>Conformance Expectation:\t<strong>SHALL</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-adt-notification-encounter.html\">\u200bDa Vinci Admit/Transfer/Discharge Notification Encounter Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Resource Specific Documentation:</p><blockquote><p>Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle</p></blockquote><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>MAY</strong> be capable of fetching a Encounter resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Encounter/[id]</code>\n\t\t\t\t</li><br></br><!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet --><!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><hr></hr><h4 class=\"no_toc\" id=\"location\">Location</h4><p>Conformance Expectation:\t<strong>SHALL</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-location\">US Core Location Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Resource Specific Documentation:</p><blockquote><p>Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle</p></blockquote><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>MAY</strong> be capable of fetching a Location resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Location/[id]</code>\n\t\t\t\t</li><br></br><!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet --><!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><hr></hr><h4 class=\"no_toc\" id=\"messageheader\">MessageHeader</h4><p>Conformance Expectation:\t<strong>SHALL</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-notifications-messageheader.html\">Da Vinci Notifications MessageHeader Profile</a>, \n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-admit-notification-messageheader.html\">Da Vinci Admit Notification MessageHeader Profile</a>, \n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-transfer-notification-messageheader.html\">Da Vinci Transfer Notification MessageHeader Profile</a>, \n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-discharge-notification-messageheader.html\">Da Vinci Discharge Notification MessageHeader Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>MAY</strong> be capable of fetching a MessageHeader resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/MessageHeader/[id]</code>\n\t\t\t\t</li><br></br><!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet --><!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><hr></hr><h4 class=\"no_toc\" id=\"organization\">Organization</h4><p>Conformance Expectation:\t<strong>SHALL</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization\">US Core Organization Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Resource Specific Documentation:</p><blockquote><p>Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle</p></blockquote><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>MAY</strong> be capable of fetching a Organization resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Organization/[id]</code>\n\t\t\t\t</li><br></br><!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet --><!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><hr></hr><h4 class=\"no_toc\" id=\"patient\">Patient</h4><p>Conformance Expectation:\t<strong>SHALL</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient\">US Core Patient Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Resource Specific Documentation:</p><blockquote><p>Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle</p></blockquote><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>MAY</strong> be capable of fetching a Patient resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Patient/[id]</code>\n\t\t\t\t</li><br></br><!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet --><!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><hr></hr><h4 class=\"no_toc\" id=\"practitioner\">Practitioner</h4><p>Conformance Expectation:\t<strong>SHOULD</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner\">US Core Practitioner Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Resource Specific Documentation:</p><blockquote><p>Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle</p></blockquote><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>MAY</strong> be capable of fetching a Practitioner resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Practitioner/[id]</code>\n\t\t\t\t</li><br></br><!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet --><!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><hr></hr><h4 class=\"no_toc\" id=\"practitionerrole\">PractitionerRole</h4><p>Conformance Expectation:\t<strong>SHALL</strong></p><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole\">US Core PractitionerRole Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Resource Specific Documentation:</p><blockquote><p>Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle</p></blockquote><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>search-type</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>vread</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>update</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>patch</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>delete</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-instance</code>, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>MAY</strong> be capable of fetching a PractitionerRole resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/PractitionerRole/[id]</code>\n\t\t\t\t</li><br></br><!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet --><!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><hr></hr><br></br></div>",
         "status": "generated"
     },
     "contact": [
@@ -14,7 +14,7 @@
             ]
         }
     ],
-    "date": "2020-08-20",
+    "date": "2020-08-24",
     "description": "This CapabilityStatement describes the expected capabilities of a Da Vinci Sender when sending Unsolicited Notifications transacted with the `$process-message` in the client mode.",
     "experimental": false,
     "fhirVersion": "4.0.1",
@@ -158,10 +158,93 @@
                     "extension": [
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                            "valueCode": "SHOULD"
+                            "valueCode": "SHALL"
                         }
                     ],
                     "documentation": "Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle",
+                    "interaction": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "create"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "search-type"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "read"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "vread"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "update"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "patch"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "delete"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "history-instance"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "history-type"
+                        }
+                    ],
                     "supportedProfile": [
                         "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-condition"
                     ],
@@ -171,7 +254,7 @@
                     "extension": [
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                            "valueCode": "SHOULD"
+                            "valueCode": "SHALL"
                         }
                     ],
                     "documentation": "Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle",
@@ -267,10 +350,93 @@
                     "extension": [
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                            "valueCode": "SHOULD"
+                            "valueCode": "SHALL"
                         }
                     ],
                     "documentation": "Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle",
+                    "interaction": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "create"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "search-type"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "read"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "vread"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "update"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "patch"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "delete"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "history-instance"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "history-type"
+                        }
+                    ],
                     "supportedProfile": [
                         "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter"
                     ],
@@ -280,10 +446,93 @@
                     "extension": [
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                            "valueCode": "SHOULD"
+                            "valueCode": "SHALL"
                         }
                     ],
                     "documentation": "Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle",
+                    "interaction": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "create"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "search-type"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "read"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "vread"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "update"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "patch"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "delete"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "history-instance"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "history-type"
+                        }
+                    ],
                     "supportedProfile": [
                         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
                     ],
@@ -391,10 +640,93 @@
                     "extension": [
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                            "valueCode": "SHOULD"
+                            "valueCode": "SHALL"
                         }
                     ],
                     "documentation": "Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle",
+                    "interaction": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "create"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "search-type"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "read"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "vread"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "update"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "patch"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "delete"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "history-instance"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "history-type"
+                        }
+                    ],
                     "supportedProfile": [
                         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
                     ],
@@ -404,10 +736,93 @@
                     "extension": [
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                            "valueCode": "SHOULD"
+                            "valueCode": "SHALL"
                         }
                     ],
                     "documentation": "Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle",
+                    "interaction": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "create"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "search-type"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "read"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "vread"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "update"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "patch"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "delete"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "history-instance"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "history-type"
+                        }
+                    ],
                     "supportedProfile": [
                         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
                     ],
@@ -421,6 +836,89 @@
                         }
                     ],
                     "documentation": "Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle",
+                    "interaction": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "create"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "search-type"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "read"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "vread"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "update"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "patch"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "delete"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "history-instance"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "history-type"
+                        }
+                    ],
                     "supportedProfile": [
                         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
                     ],
@@ -430,10 +928,93 @@
                     "extension": [
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                            "valueCode": "SHOULD"
+                            "valueCode": "SHALL"
                         }
                     ],
                     "documentation": "Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle",
+                    "interaction": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "create"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "search-type"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "read"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "vread"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "update"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "patch"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "delete"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "history-instance"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "MAY"
+                                }
+                            ],
+                            "code": "history-type"
+                        }
+                    ],
                     "supportedProfile": [
                         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
                     ],

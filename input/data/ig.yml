@@ -29,8 +29,8 @@ dependsOn:
     version: current
   - id: hrex
     uri: 'http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/davinci-hrex'
-    packageId: hl7.fhir.us.davinci-hrex
-    version: current
+    packageId:  hl7.fhir.us.davinci-hrex
+    version: 0.2.0
 definition:
   grouping:
     - name: base
@@ -60,11 +60,11 @@ definition:
       exampleBoolean: true
       name: Transfer Notification Messageheader 01
       description: Transfer Notification Messageheader Example
-    - reference:
-        reference: Organization/anthem
-      exampleBoolean: true
-      name: Example Payor Organization
-      description: Example Payor Organization
+    #- reference:
+        #reference: Organization/anthem
+      #exampleBoolean: true
+      #name: Example Payor Organization
+      #description: Example Payor Organization
     - reference:
         reference: Coverage/adt-notification-coverage-01
       exampleBoolean: true

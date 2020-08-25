@@ -16,7 +16,7 @@
 [Da Vinci Admit/Transfer/Discharge Notification Coverage Profile]: StructureDefinition-adt-notification-coverage.html
 [Da Vinci Admit/Transfer/Discharge Notification Encounter Profile]: StructureDefinition-adt-notification-encounter.html
 [Da Vinci Discharge Notification MessageHeader Profile]: StructureDefinition-discharge-notification-messageheader.html
-[Da Vinci Health Record Exchange (HRex) Implementation Guide]: http://hl7.org/fhir/us/davinci-hrex/history.html
+[Da Vinci Health Record Exchange (HRex)]: http://hl7.org/fhir/us/davinci-hrex/history.html
 [Da Vinci Admit Notification Message Definition]: MessageDefinition-notification-admit.html
 [Da Vinci Discharge Notification Message Definition]: MessageDefinition-notification-discharge.html
 [Da Vinci Notification Event CodeSystem]: CodeSystem-notification-event.html
@@ -47,7 +47,6 @@
 [Framework]: guidance.html  "General Framework Page"
 [GraphDefinition]: {{site.data.fhir.path}}graphdefinition.html
 [Home]: index.html "Home Page"
-[HRex Coverage Profile]: http://hl7.org/fhir/us/davinci-hrex/2019Jun/StructureDefinition-hrex-coverage.html
 [Message Definitions]: bundles.html "Bundle Definitions Page"
 [MessageDefinition]: {{site.data.fhir.path}}messagedefinition.html
 [Messageheader Admit Notification Messageheader 01]: MessageHeader-admit-notification-messageheader-01.html
@@ -83,8 +82,8 @@
 [US Core guidance]: {{site.data.fhir.uscore}}/StructureDefinition-us-core-condition.html#mandatory-and-must-support-data-elements
 [Da Vinci]: http://www.hl7.org/about/davinci/index.cfm?ref=common
 [US Core]: {{site.data.fhir.uscore}}/index.html
-[Da Vinci Health Record Exchange (HRex)]: {{site.data.fhir.hrex}}/index.html
 [Infrastructure and Messaging (INM)]: http://www.hl7.org/Special/committees/inm/index.cfm
 [Propose a Change]: https://jira.hl7.org/issues/?filter=12844&jql=project%20%3D%20FHIR%20AND%20Specification%20%3D%20%22US%20Da%20Vinci%20Alerts%20(FHIR)%20%5BFHIR-us-davinci-alerts%5D%22
 [V3 Value SetActEncounterCode]: http://terminology.hl7.org/ValueSet/v3-ActEncounterCode
 [Discharge disposition]: http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+[DEQM Organization Profile]: {{site.data.fhir.deqm}}/StructureDefinition-organization-deqm.html
