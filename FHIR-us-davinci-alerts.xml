@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/davinci-alerts/2020Feb" ciUrl="http://build.fhir.org/ig/HL7/davinci-alerts" defaultVersion="1.0.0" defaultWorkgroup="" gitUrl="https://github.com/HL7/davinci-alerts" xsi:noNamespaceSchemaLocation="../schemas/specification.xsd" url="http://hl7.org/fhir/us/davinci-alerts"><version code="current" url="http://build.fhir.org/ig/HL7/davinci-alerts"/>
 <version code="1.0.0" url="http://hl7.org/fhir/us/davinci-alerts/STU1"/>
-<version code="0.2.0" url="http://hl7.org/fhir/us/davinci-alerts/2020Feb"/>
+<version code="0.2.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-alerts/2020Feb"/>
 <version code="0.1.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-alerts/2019Sep"/>
 <version code="0.1" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
@@ -35,6 +35,7 @@
 <artifact id="StructureDefinition/notifications-messageheader" key="StructureDefinition-notifications-messageheader" name="Da Vinci Notifications MessageHeader Profile"/>
 <artifact id="Bundle/discharge-notification-message-bundle-01" key="Bundle-discharge-notification-message-bundle-01" name="Discharge Notification Message Bundle 01"/>
 <artifact id="MessageHeader/discharge-notification-messageheader-01" key="MessageHeader-discharge-notification-messageheader-01" name="Discharge Notification Messageheader 01"/>
+<artifact deprecated="true" id="Organization/anthem" key="Organization-anthem" name="Example Payor Organization"/>
 <artifact deprecated="true" id="GraphDefinition/admit-discharge" key="GraphDefinition-admit-discharge" name="GraphDefinition Admit Discharge"/>
 <artifact deprecated="true" id="MessageDefinition/notification-admit" key="MessageDefinition-notification-admit" name="MessageDefinition Notification Admit"/>
 <artifact deprecated="true" id="MessageDefinition/notification-discharge" key="MessageDefinition-notification-discharge" name="MessageDefinition Notification Discharge"/>
