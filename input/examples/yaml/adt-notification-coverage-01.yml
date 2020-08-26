@@ -1,0 +1,19 @@
+# file = adt-notification-coverage-01.yml source = admit-notification-messageheader-01.yml
+id: adt-notification-coverage-01
+meta:
+  lastUpdated: '2020-04-28T20:27:52.686+00:00'
+  profile:
+    - >-
+      http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-coverage
+  source: '#pPvYTutotnO7vQfK'
+  versionId: '10'
+beneficiary:
+  reference: 'urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b'
+payor:
+  - display: Blue Cross Blue Shield
+    reference: 'urn:uuid:cc6ac93e-2bf4-11ea-a5f5-a4d18ccf5172'
+status: active
+subscriberId: '12345'
+type:
+  text: Blue Cross Blue Shield
+resourceType: Coverage

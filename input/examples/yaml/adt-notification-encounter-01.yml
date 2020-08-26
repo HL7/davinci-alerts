@@ -1,0 +1,41 @@
+# file = adt-notification-encounter-01.yml source= admit-notification-messageheader-01.yml
+id: adt-notification-encounter-01
+meta:
+  lastUpdated: '2020-04-28T21:32:21.199+00:00'
+  profile:
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter'
+    - >-
+      http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter
+  source: '#DlfWMd7j9EX8TaLI'
+  versionId: '54'
+class:
+  code: EMER
+  system: 'http://terminology.hl7.org/CodeSystem/v3-ActCode'
+identifier:
+  - system: 'http://example.org'
+    value: Elden718Halvorson12420181021T2122150700
+location:
+  - location:
+      display: HOLY FAMILY HOSPITAL
+      reference: 'urn:uuid:09188b81-0d1d-453c-b0fa-203ef88c794c'
+participant:
+  - individual:
+      display: Dr. Janeth814 Jakubowski832
+      reference: 'urn:uuid:0000016f-57cb-cdac-0000-00000000014a'
+period:
+  end: '2018-10-21T22:22:15-07:00'
+  start: '2018-10-21T21:22:15-07:00'
+serviceProvider:
+  display: HOLY FAMILY HOSPITAL
+  reference: 'urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983'
+status: in-progress
+subject:
+  display: Mr. Elden718 Halvorson124
+  reference: 'urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b'
+type:
+  - coding:
+      - code: '261665006'
+        display: Unknown (qualifier value)
+        system: 'http://snomed.info/sct'
+    text: Unknown (qualifier value)
+resourceType: Encounter
