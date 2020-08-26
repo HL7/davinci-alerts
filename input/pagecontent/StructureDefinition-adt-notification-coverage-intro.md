@@ -19,7 +19,7 @@ The following data-elements are mandatory (i.e., data MUST be present) or must b
 **Additional Profile specific implementation guidance:**
 
 - Note that for the admission/transfer/discharge scenario, the `Coverage.beneficiary` is a "reverse link" to the Patient resource and cannot be traversed from the MessageHeader within the Message Bundle.  There is no mechanism to enforce profiles in a message on a reverse link except via GraphDefinition.
-- The `Coverage.payor` references the [DEQM Organization Profile] profile to mandate an identifier and support additional identifier types.
+- The `Coverage.payor` references the [HRex Organization Profile] profile to mandate an identifier and support additional identifier types.
 
 ### Examples
 
