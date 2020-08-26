@@ -10,8 +10,8 @@ author:
   display: Dr. Janeth814 Jakubowski832
   reference: 'urn:uuid:0000016f-57cb-cdac-0000-00000000014a'
 destination:
-  - endpoint: /DaVinci-Notifications-Intermediary
-    name: Intermediary-Simulator
+  - endpoint: https://example.org/Endpoints/DaVinci-Notifications-Intermediary
+    name: DaVinci-Notifications-Intermediary
 eventCoding:
   code: notification-discharge
   display: Discharge Notification

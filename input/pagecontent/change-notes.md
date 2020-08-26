@@ -3,7 +3,7 @@ The Da Vinci Unsolicited Notifications Implementation Guide was developed under 
 
 ### Changes and Updates for version 1.0.0
 
-The first official published version of the DEQM IG for FHIR R4.
+The first official published version of the Da Vinci Unsolicited Notifications IG for FHIR R4.
 
 1. Applied all resolutions from STU2 Ballot
 

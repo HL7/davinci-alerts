@@ -126,34 +126,6 @@ See the Admit/Transfer/Discharge use case for an example of using MessageDefinit
 MessageBundles and GraphDefinition resource are alternative to using profiles to define the message bundles contents. However, at the time of this publication, the implementation community, reference implementations, and validation tooling does not fully support them.  FHIR profiling is more mature mechanism and broadly supported by the implementation community, reference implementations, and validation tooling.  However, there is no mechanism to enforce profiles in a message on a reverse link because “reverse links” cannot be traversed forward from the MessageHeader. It may also require more artifacts than using MessageDefintion/GraphDefinition.
 {:.stu-note}
 
-<!--
-
-
-{:.note-to-balloters}
-Note to Balloters: These scenarios may be added in future iterations of this IG.
-
-{:.note-to-balloters .grid}
-| ﻿Notification Scenarios | Resources in Notification Bundle<sup>(1)</sup> | Searchable Resources<sup>(2)</sup> |
-|---|---|---|
-| Lab Results | US Core R4 DiagnosticReport, US Core R4 Observation, US Core R4 DocumentReference |TBD... |
-| Problem with Treatment – such as drug recall, device recall/issue | US Core R4 Medication, US Core R4 AdverseEvent, US Core R4 Device | TBD... |
-| Encounter/Visit Notification | no additional |TBD...  |
-| Public Health Notification | US Core R4 Condition |TBD...  |
-| Scheduled Appointment/Pre-Admit | R4 Appointment |TBD...  |
-| Referral | R4 ServiceRequest, R4 Practitioner |TBD...  |
-| Ordered Device/Biometric/Patient (i.e. Fit Bit) | R4 DeviceRequest |TBD...  |
-| Treatment Start/End | US Core R4 MedicationAdministration |TBD...  |
-| Change in Social Determinants of Health | R4 Observation |TBD...  |
-| Birth/Death | No additional resource |TBD... |
-| Coverage Start/End | DEQM Coverage |TBD...  |
-| Notification of Prior Authorization (Pended to Approved/Denied) | R4 ClaimResponse |TBD...  |
-| Pharmacy (Pickup, Restock, Dispense) | US Core R4 Medication, US Core R4 MedicationDispense, R4 SupplyDelivery, R4 SupplyRequest |TBD...  |
-| Notification of New Condition | US Core R4 Condition |TBD...  |
-| Work Comp Initial/Visits/Services | US Core R4 Condition, R4 Coverage |TBD...  |
-| Changes in Care Team | US Core R4 Practitioner, R4 RelatedPerson, R4 CareTeam | TBD... |
-
--->
-
 ### Sending Unsolicited Notifications
 
 As shown in Figure 4, when an event or request triggers a notification, the Sender creates a Da Vinci Notification Message Bundle and notifies the Recipient or Intermediary using the `$process-message` operation.
