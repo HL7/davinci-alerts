@@ -15,7 +15,7 @@ The first official published version of the DEQM IG for FHIR R4.
   1. Update [Precondition and Assumptions](guidance.html#preconditions-and-assumptions)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200),#[FHIR-26132](https://jira.hl7.org/browse/FHIR-26132) #[FHIR-26129](https://jira.hl7.org/browse/FHIR-26129),#[FHIR-26117](https://jira.hl7.org/browse/FHIR-26117),[FHIR-26121](https://jira.hl7.org/browse/FHIR-26121)).
   1. Update introduction to the [The Da Vinci Notification Message Bundle](guidance.html#the-da-vinci-notification-message-bundle)([FHIR-26200](https://jira.hl7.org/browse/FHIR-26200)).
   1. Update [US Case Background](usecases.html#use-case-background)([FHIR-26182](https://jira.hl7.org/browse/FHIR-26182),[FHIR-26116](https://jira.hl7.org/browse/FHIR-26116)).
-  1. Clarify how Intermediary [forwards messages](guidance.html#forwarding-notifications-using-this-framework) within framework ([FHIR-26177](https://jira.hl7.org/browse/FHIR-26177))
+  1. Clarify how Intermediary [forwards messages](guidance.html#forwarding-notifications-using-this-framework) within framework and add [Notification Forwarder CapabilityStatement] ([FHIR-26177](https://jira.hl7.org/browse/FHIR-26177))
   1. Clarify [Intermediary role](index.html#roles-and-actors) ([FHIR-26148](https://jira.hl7.org/browse/FHIR-261148))
   1. Clarify how to [sort incoming messages](guidance.html#sending-unsolicited-notifications) (#[FHIR-26132](https://jira.hl7.org/browse/FHIR-26132))
   1. Add [Transfer notification use case](usecases.html). (#[FHIR-26909](https://jira.hl7.org/browse/FHIR-26909))
@@ -35,6 +35,7 @@ The first official published version of the DEQM IG for FHIR R4.
   1. Updated [STU Note](guidance.html#introduction) regarding subscriptions ([FHIR-26100](https://jira.hl7.org/browse/FHIR-26100), [FHIR-26171](https://jira.hl7.org/browse/FHIR-26171)).
   1. Added [About This Guide](index.html#about-this-guide) section referring to Da Vinci and Da Vinci Guiding Principles ([FHIR-26114](https://jira.hl7.org/browse/FHIR-26114),[FHIR-26127](https://jira.hl7.org/browse/FHIR-26127), [FHIR-26131](https://jira.hl7.org/browse/FHIR-26131)).
   1. Update to Must Support Section ([FHIR-26124](https://jira.hl7.org/browse/FHIR-26124), [FHIR-26155](https://jira.hl7.org/browse/FHIR-26155)).
+  1. Remove Query Requester CapabilityStatement and Query Responder CapabilityStatement ([FHIR-26155](https://jira.hl7.org/browse/FHIR-26155)).
   1. Clarify intent of [future scenarios](index.html#scenarios) ([FHIR-26133](https://jira.hl7.org/browse/FHIR-26133)).
   1. Clarify intent of MessageHeader.author ([FHIR-26138](https://jira.hl7.org/browse/FHIR-26138)).
   1. Simplify sequence diagrams ([FHIR-26147](https://jira.hl7.org/browse/FHIR-26147)).
