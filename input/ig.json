@@ -60,7 +60,11 @@
                 },
                 "exampleBoolean": true,
                 "name": "Admit Notification Messageheader 01",
-                "description": "Admit Notification Messageheader Example"
+                "description": "Admit Notification Messageheader Example",
+                "extension" : [{
+                  "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-no-check-aggregation",
+                  "valueBoolean" : "true"
+                ]}
             },
             {
                 "reference": {
