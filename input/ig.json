@@ -61,10 +61,12 @@
                 "exampleBoolean": true,
                 "name": "Admit Notification Messageheader 01",
                 "description": "Admit Notification Messageheader Example",
-                "extension" : [{
-                  "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-no-check-aggregation",
-                  "valueBoolean" : "true"
-                ]}
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/igpublisher-no-check-aggregation",
+                        "valueBoolean": "true"
+                    }
+                ]
             },
             {
                 "reference": {
@@ -72,7 +74,13 @@
                 },
                 "exampleBoolean": true,
                 "name": "Discharge Notification Messageheader 01",
-                "description": "Discharge Notification Messageheader Example"
+                "description": "Discharge Notification Messageheader Example",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/igpublisher-no-check-aggregation",
+                        "valueBoolean": "true"
+                    }
+                ]
             },
             {
                 "reference": {
@@ -80,7 +88,13 @@
                 },
                 "exampleBoolean": true,
                 "name": "Transfer Notification Messageheader 01",
-                "description": "Transfer Notification Messageheader Example"
+                "description": "Transfer Notification Messageheader Example",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/igpublisher-no-check-aggregation",
+                        "valueBoolean": "true"
+                    }
+                ]
             },
             {
                 "reference": {
@@ -88,7 +102,13 @@
                 },
                 "exampleBoolean": true,
                 "name": "Admit/Transfer/Discharge Notification Coverage 01",
-                "description": "Admit Notification Notification Coverage Example"
+                "description": "Admit Notification Notification Coverage Example",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/igpublisher-no-check-aggregation",
+                        "valueBoolean": "true"
+                    }
+                ]
             },
             {
                 "reference": {
@@ -136,7 +156,13 @@
                 },
                 "exampleBoolean": true,
                 "name": "Admit/Transfer/Discharge Notification Encounter 01",
-                "description": "Admit/Transfer/Discharge Notification Encounter Example"
+                "description": "Admit/Transfer/Discharge Notification Encounter Example",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/igpublisher-no-check-aggregation",
+                        "valueBoolean": "true"
+                    }
+                ]
             },
             {
                 "reference": {
@@ -144,7 +170,13 @@
                 },
                 "exampleBoolean": true,
                 "name": "Admit/Transfer/Discharge Notification Condition 01",
-                "description": "Admit/Transfer/Discharge Notification Condition Example"
+                "description": "Admit/Transfer/Discharge Notification Condition Example",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/igpublisher-no-check-aggregation",
+                        "valueBoolean": "true"
+                    }
+                ]
             },
             {
                 "reference": {
