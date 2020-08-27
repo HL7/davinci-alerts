@@ -832,7 +832,7 @@
                     "extension": [
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                            "valueCode": "SHOULD"
+                            "valueCode": "SHALL"
                         }
                     ],
                     "documentation": "Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle",
@@ -928,7 +928,7 @@
                     "extension": [
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                            "valueCode": "SHALL"
+                            "valueCode": "SHOULD"
                         }
                     ],
                     "documentation": "Required resource type to carry information regarding admission and discharge event in the Da Vinci Notification message bundle",
