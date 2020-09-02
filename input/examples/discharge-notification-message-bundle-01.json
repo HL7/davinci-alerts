@@ -23,7 +23,7 @@
                 },
                 "destination": [
                     {
-                        "endpoint": "/DaVinci-Notifications-Intermediary",
+                        "endpoint": "https://example.org/Endpoints/DaVinci-Notifications-Intermediary",
                         "name": "Intermediary-Simulator"
                     }
                 ],

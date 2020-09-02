@@ -26,7 +26,7 @@ dependsOn:
   - id: uscore
     uri: 'http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core'
     packageId: hl7.fhir.us.core
-    version: current
+    version: 3.1.1
   - id: hrex
     uri: 'http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/davinci-hrex'
     packageId: hl7.fhir.us.davinci-hrex

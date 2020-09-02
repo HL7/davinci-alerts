@@ -19,7 +19,7 @@
             ]
         }
     ],
-    "description": "The Da Vinci Admit/Transfer/Discharge Notification Condition Profile is based on the [US Core Condition Profile](http://hl7.org/fhir/us/core/STU3.1/StructureDefinition-us-core-condition.html) and adds the mandatory `Condition.encounter` element which references the [Da Vinci Admit/Transfer/Discharge Notification Encounter Profile](http://hl7.org/fhir/us/davinci-alerts/STU1/StructureDefinition-adt-notification-encounter.html) in the same message Bundle.",
+    "description": "The Da Vinci Admit/Transfer/Discharge Notification Condition Profile is based on the [US Core Condition Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-condition.html) and adds the mandatory `Condition.encounter` element which references the [Da Vinci Admit/Transfer/Discharge Notification Encounter Profile](http://hl7.org/fhir/us/davinci-alerts/STU1/StructureDefinition-adt-notification-encounter.html) in the same message Bundle.",
     "jurisdiction": [
         {
             "coding": [
