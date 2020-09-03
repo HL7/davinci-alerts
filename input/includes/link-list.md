@@ -16,7 +16,7 @@
 [Da Vinci Admit/Transfer/Discharge Notification Coverage Profile]: StructureDefinition-adt-notification-coverage.html
 [Da Vinci Admit/Transfer/Discharge Notification Encounter Profile]: StructureDefinition-adt-notification-encounter.html
 [Da Vinci Discharge Notification MessageHeader Profile]: StructureDefinition-discharge-notification-messageheader.html
-[Da Vinci Health Record Exchange (HRex)]: http://hl7.org/fhir/us/davinci-hrex/history.html
+[Da Vinci Health Record Exchange (HRex)]: http://hl7.org/fhir/us/davinci-hrex/2020Sep/index.html
 [Da Vinci Admit Notification Message Definition]: MessageDefinition-notification-admit.html
 [Da Vinci Discharge Notification Message Definition]: MessageDefinition-notification-discharge.html
 [Da Vinci Notification Event CodeSystem]: CodeSystem-notification-event.html

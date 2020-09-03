@@ -19,7 +19,7 @@
          "path": "http://hl7.org/fhir/us/davinci-alerts/STU1",
          "status": "trial-use",
          "sequence": "STU1",
-         "fhirversion" : "4.0.1"
+         "fhirversion" : "4.5.0"
       },
       {
          "version": "0.2.0",
