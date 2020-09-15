@@ -1,14 +1,5 @@
 {
     "id": "adt-notification-encounter-01",
-    "meta": {
-        "lastUpdated": "2020-04-28T21:32:21.199+00:00",
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter",
-            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter"
-        ],
-        "source": "#DlfWMd7j9EX8TaLI",
-        "versionId": "54"
-    },
     "class": {
         "code": "EMER",
         "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"

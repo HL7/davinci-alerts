@@ -1,11 +1,5 @@
 {
     "id": "transfer-notification-messageheader-01",
-    "meta": {
-        "profile": [
-            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader",
-            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/transfer-notification-messageheader"
-        ]
-    },
     "author": {
         "display": "Dr. Janeth814 Jakubowski832",
         "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a"
