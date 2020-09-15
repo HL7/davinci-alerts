@@ -17,7 +17,6 @@
 <artifact id="Condition/adt-notification-condition-01" key="Condition-adt-notification-condition-01" name="Admit/Transfer/Discharge Notification Condition 01"/>
 <artifact id="Coverage/adt-notification-coverage-01" key="Coverage-adt-notification-coverage-01" name="Admit/Transfer/Discharge Notification Coverage 01"/>
 <artifact id="Encounter/adt-notification-encounter-01" key="Encounter-adt-notification-encounter-01" name="Admit/Transfer/Discharge Notification Encounter 01"/>
-<artifact id="ValueSet/notification-admit-event" key="ValueSet-notification-admit-event" name="Da Vinci Admit Notification Event ValueSet"/>
 <artifact id="StructureDefinition/admit-notification-messageheader" key="StructureDefinition-admit-notification-messageheader" name="Da Vinci Admit Notification MessageHeader Profile"/>
 <artifact deprecated="true" id="StructureDefinition/admit-discharge-notification-condition" key="StructureDefinition-admit-discharge-notification-condition" name="Da Vinci Admit/Discharge Notification Condition Profile"/>
 <artifact deprecated="true" id="StructureDefinition/admit-discharge-notification-coverage" key="StructureDefinition-admit-discharge-notification-coverage" name="Da Vinci Admit/Discharge Notification Coverage Profile"/>
@@ -28,9 +27,10 @@
 <artifact id="StructureDefinition/discharge-notification-messageheader" key="StructureDefinition-discharge-notification-messageheader" name="Da Vinci Discharge Notification MessageHeader Profile"/>
 <artifact id="StructureDefinition/transfer-notification-messageheader" key="StructureDefinition-discharge-notification-messageheader" name="Da Vinci Discharge Notification MessageHeader Profile"/>
 <artifact id="CodeSystem/notification-event" key="CodeSystem-notification-event" name="Da Vinci Event CodeSystem Notification"/>
+<artifact id="ValueSet/notification-admit-event" key="ValueSet-notification-admit-event" name="Da Vinci Notification Admit Event ValueSet"/>
+<artifact id="ValueSet/notification-discharge-event" key="ValueSet-notification-discharge-event" name="Da Vinci Notification Discharge Event ValueSet"/>
 <artifact id="ValueSet/notification-event" key="ValueSet-notification-event" name="Da Vinci Notification Event ValueSet"/>
-<artifact id="ValueSet/notification-discharge-event" key="ValueSet-notification-discharge-event" name="Da Vinci Notification discharge Event ValueSet"/>
-<artifact id="ValueSet/notification-transfer-event" key="ValueSet-notification-transfer-event" name="Da Vinci Notification transfer Event ValueSet"/>
+<artifact id="ValueSet/notification-transfer-event" key="ValueSet-notification-transfer-event" name="Da Vinci Notification Transfer Event ValueSet"/>
 <artifact id="StructureDefinition/notifications-bundle" key="StructureDefinition-notifications-bundle" name="Da Vinci Notifications Bundle Profile"/>
 <artifact id="StructureDefinition/notifications-messageheader" key="StructureDefinition-notifications-messageheader" name="Da Vinci Notifications MessageHeader Profile"/>
 <artifact id="Bundle/discharge-notification-message-bundle-01" key="Bundle-discharge-notification-message-bundle-01" name="Discharge Notification Message Bundle 01"/>

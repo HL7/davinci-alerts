@@ -4,7 +4,7 @@
 [`collection`]: {{site.data.fhir.path}}http.html#collection
 [2019 CMS 45 CFR Part 156 NPRM]: https://www.federalregister.gov/d/2020-05050
 [Admit/Transfer/Discharge Use Case]: usecases.html
-[aggregation]: {{site.data.fhir.path}}elementdefinition-definitions.html#ElementDefinition.aggregation
+[aggregation]: {{site.data.fhir.path}}elementdefinition-definitions.html#ElementDefinition.type.aggregation
 [Argonaut Clinical Data Subscriptions]: http://argonautwiki.hl7.org/index.php?title=Argonaut_2019_Projects#Clinical_Data_Subscriptions
 [Bundle Admit Notification Message Bundle 01]: Bundle-admit-notification-message-bundle-01.html
 [Bundle Discharge Notification Message Bundle 01]: Bundle-discharge-notification-message-bundle-01.html
@@ -42,7 +42,7 @@
 [FHIR RESTful operation]: {{site.data.fhir.path}}operations.html
 [FHIR messaging]: {{site.data.fhir.path}}messaging.html
 [FHIR Subscription Based Notification]: guidance.html#fhir-subscription-based-notification
-[figure 8]: usecases.html#figure-8
+[figure 9]: usecases.html#figure-9
 [Formal Profile Definition]: #profile
 [Framework]: guidance.html  "General Framework Page"
 [GraphDefinition]: {{site.data.fhir.path}}graphdefinition.html
@@ -86,4 +86,5 @@
 [Propose a Change]: https://jira.hl7.org/issues/?filter=12844&jql=project%20%3D%20FHIR%20AND%20Specification%20%3D%20%22US%20Da%20Vinci%20Alerts%20(FHIR)%20%5BFHIR-us-davinci-alerts%5D%22
 [V3 Value SetActEncounterCode]: http://terminology.hl7.org/ValueSet/v3-ActEncounterCode
 [Discharge disposition]: http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
-[HRex Organization Profile]: {{site.data.fhir.hrex}}StructureDefinition-hrex-organization.html
+[HRex Organization Profile]: {{site.data.fhir.hrex}}/StructureDefinition-hrex-organization.html
+[Examples Transactions]: usecases.html#example-transactions

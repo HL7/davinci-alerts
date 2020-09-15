@@ -42,7 +42,7 @@
         },
         {
             "id": "hrex",
-            "uri": "http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/davinci-hrex",
+            "uri": "http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/hl7.fhir.us.davinci-hrex",
             "packageId": "hl7.fhir.us.davinci-hrex",
             "version": "0.2.0"
         }

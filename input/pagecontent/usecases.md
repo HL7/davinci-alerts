@@ -42,11 +42,11 @@ The Provider is notified when:
 
 ### FHIR Resources for Admission, Transfer, and Discharge Notifications
 
-To carry information regarding admission, transfer, and discharge event messages, the required resources for the message Bundle need to be defined.  The core components of the Bundle are defined in the [Framework] page and include the *MessageHeader* and the "root" resource represented by the  `MessageHeader.focus`.  For admission, transfer and discharge, the *Encounter* is the focus of the event as shown in figure 7. For this scenario, the Da Vinci Admit/Transfer/Discharge Notification Encounter Profile which is based on the US Core Encounter Profile is used:
+To carry information regarding admission, transfer, and discharge event messages, the required resources for the message Bundle need to be defined.  The core components of the Bundle are defined in the [Framework] page and include the *MessageHeader* and the "root" resource represented by the  `MessageHeader.focus`.  For admission, transfer and discharge, the *Encounter* is the focus of the event as shown in {{ foo | filter: bar }}igure 7. For this scenario, the Da Vinci Admit/Transfer/Discharge Notification Encounter Profile - which is based on the US Core Encounter Profile - is used:
 
 {% include img-portrait.html img="admit_message_graph1.svg" caption="Figure 7" %}
 
-The other "required if present" resources defined in the framework are those referenced by `MessageHeader.author`, `MessageHeader.responsible`, `MessageHeader.sender` and those referenced by the Da Vinci Admit/Transfer/Discharge Notification Encounter Profile. These combine to make up a 'generic' Encounter message bundle structure illustrated in figure 8 below:
+The other "required if present" resources defined in the framework are those referenced by `MessageHeader.author`, `MessageHeader.responsible`, `MessageHeader.sender` and those referenced by the Da Vinci Admit/Transfer/Discharge Notification Encounter Profile. These combine to make up a 'generic' Encounter message bundle structure illustrated in Figure 8 below:
 
 
 {% include img-portrait.html img="admit_message_graph2.svg" caption="Figure 8" %}
@@ -56,7 +56,7 @@ The following additional resources (or rather profiles) have been determined to 
 - US Core Condition
 - Da Vinci Admit/Transfer/Discharge Notification Coverage
 
-{: #figure-8}
+{: #figure-9}
 Adding these additional components results in the following resource graph showing all the required resources and their relationships for the admission and discharge notification use case shown in Figure 9:
 
 {% include img-portrait.html img="admit_message_graph3.svg" caption="Figure 9" %}
@@ -78,6 +78,7 @@ The following FHIR Profiles can be used to formally define this resource graph f
 
 - [Da Vinci Notifications Bundle Profile]
 - [Da Vinci Admit Notification MessageHeader Profile]
+- [Da Vinci Transfer Notification MessageHeader Profile]
 - [Da Vinci Discharge Notification MessageHeader Profile]
 - [Da Vinci Admit/Transfer/Discharge Notification Condition Profile]
 - [Da Vinci Admit/Transfer/Discharge Notification Coverage Profile]
@@ -112,7 +113,7 @@ Da Vinci Notification Bundles such as these examples can be assembled based on a
 
 ### Pushing Unsolicited Admit/Transfer/Discharge Notification
 
-In the interaction shown in figures 9, the HealthCare facility is acting in the role of the Notification Sender and the Notification Recipient can be any of the actors listed on the home page.  To notify the Notification Recipients/Intermediary of an admit or discharge event, the Notification Sender uses $process-message operation to submit the Notification Message to appropriate FHIR endpoints. Not shown in Figure 10 is that when the Intermediary successfully receives and processes the notifications, it subsequently forwards the data to the end users.
+In the interaction shown in Figure 10, the HealthCare facility is acting in the role of the Notification Sender and the Notification Recipient can be any of the actors listed on the home page.  To notify the Notification Recipients/Intermediary of an admit or discharge event, the Notification Sender uses $process-message operation to submit the Notification Message to appropriate FHIR endpoints. Not shown in Figure 10 is that when the Intermediary successfully receives and processes the notifications, it subsequently forwards the data to the end users.
 
 {% include img-portrait.html img="$process_message_admit_wf.svg" caption="Figure 10" %}
 

@@ -7,7 +7,7 @@ This guide follows a simplified [FHIR messaging paradigm] for notifications empl
 
 The following framework documents how to use [FHIR messaging] to define the contents of the notification and how to "push" these unrequested notification messages using the `$process-message` operation directly to Recipients and Intermediaries.  The [Admit/Transfer/Discharge Use case] demonstrates how to implement an unsolicited notification scenario using the framework.
 
-This project recognizes the existing existing FHIR (R2-R4) subscriptions framework as well as  revisions to the *Subscription* resource for FHIR R5 for event based subscriptions using *SubscriptionTopic* and *SubscriptionStatus* and *Bundles* of type `subscription-notification`.  It is anticipated that an equivalent subscription based notification paradigm can be implemented as an alternate to the unsolicited messaging based approach documented here.  After FHIR R5 subscription resources are finalized and an implementation guide to enable the implementation of R5-style subscription in FHIR F4 is completed, a future version of this guide will add subscriptions as an alternative workflow.
+This project recognizes the existing FHIR (R2-R4) subscriptions framework as well as  revisions to the *Subscription* resource for FHIR R5 for event based subscriptions using *SubscriptionTopic* and *SubscriptionStatus* and *Bundles* of type `subscription-notification`.  It is anticipated that an equivalent subscription based notification paradigm can be implemented as an alternate to the unsolicited messaging based approach documented here.  After FHIR R5 subscription resources are finalized and an implementation guide to enable the implementation of R5-style subscription in FHIR F4 is completed, a future version of this guide will add subscriptions as an alternative workflow.
 {:.stu-note}
 
 ### Preconditions and Assumptions
@@ -24,10 +24,10 @@ This project recognizes the existing existing FHIR (R2-R4) subscriptions framewo
   - Typically the discovery and management of this is an 'out-of-band' process
 - System level trust exists between the actors (refer to the [Security] Page for additional guidance).
   - Clients have been authorized by the servers.
-- A secure information transport mechanism exists between the actors(refer to the [Security] Page for additional guidance).
+- A secure information transport mechanism exists between the actors (refer to the [Security] Page for additional guidance).
 - Patient consent allows exchange of data between the relevant systems.
   - It is assumed that consent is managed elsewhere.
-- Trading partners (in other words: Senders, Intermediaries, and Recipients) will use data use agreements (DUAs),business associate agreements (BAAs) and/or contracts to specify the use cases and scope and potential reuse or repurposing of data shared between two parties. These agreements can be directly between trading partners or at a trusted exchange level. See the [HL7 Da Vinci Guiding Principles] for further details.
+- Trading partners (in other words: Senders, Intermediaries, and Recipients) will use data use agreements (DUAs), business associate agreements (BAAs) and/or contracts to specify the use cases and scope and potential reuse or repurposing of data shared between two parties. These agreements can be directly between trading partners or at a trusted exchange level. See the [HL7 Da Vinci Guiding Principles] for further details.
   - Any such agreement should clearly indicate how the Intermediary will handle sensitive information, determine what to remove, and how it will notify the recipient of the removal.
 
 ----
@@ -42,7 +42,7 @@ This project recognizes the existing existing FHIR (R2-R4) subscriptions framewo
 - The Sender shall provide structured data whenever possible.
 - Notifications are transacted to the `$process-message` operation endpoint.
 - The Da Vinci Notification Message Bundle Profile is the FHIR object that is exchanged for all notification transactions.
-- Considerations for sensitive data when triggering a Notification need to be taken into account and hence all events may not trigger a notification.
+- Considerations for sensitive data when triggering a Notification need to be taken into account and hence not all events may trigger a notification.
 
 ---
 
@@ -58,7 +58,7 @@ For every notification, the object that is exchanged is a [FHIR message Bundle].
 #### The Da Vinci Notification Message Event Code
 
 
-The message event codes identify the reason for the notification.  For this framework a set of concepts describing the purpose of the Da Vinci unsolicited notification has been created.
+The message event codes identify the purpose for the notification.  For this framework a set of concepts describing the purpose of the Da Vinci unsolicited notification has been created.
 
 {% include list-simple-codesystems.xhtml %}
 
@@ -70,7 +70,7 @@ These concepts represent a 'starter set' and will be supplemented with additiona
 <!--
 The message bundle **SHALL** include the MessageHeader resource and the resources referenced by `MessageHeader.focus` element. It **SHOULD** include all resources needed for the Receiver or Intermediary to be able to process the message as expected by the the message event *provided that all included resources have a traversal path following Reference or canonical links either to or from the MessageHeader*.
 -->
-For all Da Vinci Notification Message Bundles, the following resources are mandatory (i.e., data MUST be present) or must be supported if the data is present in the source system (see [Must Support] definition below).  These requirements are illustrated in figure 3 below.  See the [Admit/Transfer/Discharge Use Case] for an example of the required resources for a particular scenario.
+For all Da Vinci Notification Message Bundles, the following resources are mandatory (i.e., data MUST be present) or must be supported if the data is present in the source system (see [Must Support] definition below).  These requirements are illustrated in Figure 3 below.  See the [Admit/Transfer/Discharge Use Case] for an example of the required resources for a particular scenario.
 
 **Each Bundle must have:**
 
@@ -84,7 +84,7 @@ For all Da Vinci Notification Message Bundles, the following resources are manda
 1. US Core *Organization*, *Practitioner*, or *PractionerRole* referenced by `MessageHeader.responsible`
 1. US Core *Practitioner*, or *PractionerRole* referenced by `MessageHeader.author`
     - This is the individual who authorized the event (e.g., the clinician who authorized the admit/discharge)
-1. *All* resources directly referenced by the `MessageHeader.focus` resource. Implementers should carefully consider what information they are willing to share and only include those reference elements for the use case in the focus resources. This can be formally defined by profiling the focus resource.  For example the Admit/Transfer/Discharge use case focal resource is the [US Core Encounter Profile].
+1. *All* resources directly referenced by the `MessageHeader.focus` resource. Implementers should carefully consider what information they are willing to share and only include those reference elements for the use case in the focus resources. This can be formally defined by profiling the focus resource.  For example the Admit/Transfer/Discharge use case focal resource is the [Da Vinci Admit/Transfer/Discharge Notification Encounter Profile].
 
    Implementers that use FHIR as their persistence layer may need to modify those resources before assembling the message bundle to avoid sending sensitive or unnecessary data.
    {:.highlight-note}
@@ -94,7 +94,7 @@ For all Da Vinci Notification Message Bundles, the following resources are manda
 #### How to define the Message Bundle
 
 
-The set of resources within the message and their relationship to each other can be represented as an interconnected graph of resources as Figure 3 below illustrates (Note that this a simplified and incomplete representation of the possible resources in notification message bundle. See [Figure 8] for an example of a resource graph for the admission/transfer/discharge scenarios):  
+The set of resources within the message and their relationship to each other can be represented as an interconnected graph of resources as Figure 3 below illustrates (Note that this is a simplified and incomplete representation of the possible resources in notification message bundle. See [Figure 9] for an example of a resource graph for the admission/transfer/discharge scenarios):  
 
 {% include img-portrait.html img="generic_message_graph.svg" caption="Figure 3" %}
 
@@ -134,19 +134,19 @@ As shown in Figure 4, when an event or request triggers a notification, the Send
 
 - For this guide there is no expectation for a notification response message to be returned from the Recipient or Intermediary to the Sender. Therefore, the $process-message input parameters "async" and "response-url" are not used and the body of this operation is the message bundle itself.
 - In the context of the `$process-message` operation, the Recipient/Intermediary is treated as a ["black box"] and simply accepts and processes the submitted data and there are no further expectations beyond the http level response as defined in the FHIR specification.
-  - The Receiver/Intermediary may sort and filter notifications based on the `MessageHeader.event` codes. For example, `notification-admit` can be used to to filter for patient admission notifications.
+  - The Receiver/Intermediary may sort and filter notifications based on the `MessageHeader.event` codes. For example, `notification-admit` can be used to filter for patient admission notifications.
 - There is no expectation that the data submitted represents all the data required by the Notification Recipient/Intermediary, only that the data is known to be relevant to the triggering event. The Notification Recipient/Intermediary can optionally fetch additional information from the patient's medical record using FHIR RESTful searches.  The endpoint for this search may be known or supplied via the $process-message operation payload.
 
 #### Fetching Additional Data
 
-As illustrated in steps 5-8 in the sequence diagram, the Intermediary or Receiver **MAY** fetch additional data from the Sender after it successfully receives and processes the notification optionally searches and process the search results.  Refer to the [US Core] Implementation Guide for provider access to patient data.
+As illustrated in steps 5-8 in the sequence diagram (Figure 4), the Intermediary or Receiver **MAY** fetch additional data from the Sender after it successfully receives and processes the notification optionally searches and processes the search results.  Refer to the [US Core] Implementation Guide for provider access to patient data.
 
 This guide does not specify a standard discovery process for obtaining the Sender's FHIR endpoint.  Once a suitable approach has been agreed upon and published, it will be referenced in a future version of this guide
 {:.stu-note}
 
 #### Additional Intermediary Steps
 
-After the Intermediary successfully receives and processes the notification and optionally searches and process the search results, it redistributes the data to the end users.  It **MAY** use this framework (in other words, FHIR messaging and the `$process-message` operation) or some other messaging protocol such as Direct, SMS or V2 messaging to forward the notification.  Note that the Intermediary **MAY** customize the content based on the end user (for example, withholding data that a particular care team member does not need).
+After the Intermediary successfully receives and processes the notification and optionally searches and processes the search results, it redistributes the data to the end users.  It **MAY** use this framework (in other words, FHIR messaging and the `$process-message` operation) or some other messaging protocol such as Direct, SMS or V2 messaging to forward the notification.  Note that the Intermediary **MAY** customize the content based on the end user (for example, withholding data that a particular care team member does not need).
 
 ##### Forwarding Notifications Using This Framework
 
@@ -196,7 +196,7 @@ See the Admit/Transfer/Discharge scenario [Example Transactions] for an example 
 
 #### Reliable Delivery
 
-Upon receiving a message, the Receiver/Intermediary may return one of several status codes which is documented in [`$process-message`] definition.  For successful transactions  `200`, `202`, or `204` **SHALL** be used. Using a `200` or `204` response to indicate the message is received and processable is preferred over `202` indicating the message is simply received.  If and error occurs, an [OperationOutcome] **SHOULD** be returned with details documenting the error. Parties should consider impact of failure to send and decide what additional steps to undertake. The following table defines the Sender behavior in response to the following error codes:
+Upon receiving a message, the Receiver/Intermediary may return one of several status codes which is documented in [`$process-message`] definition.  For successful transactions  `200`, `202`, or `204` **SHALL** be used. Using a `200` or `204` response to indicate the message is received and processable is preferred over `202` indicating the message is simply received.  If an error occurs, an [OperationOutcome] **SHOULD** be returned with details documenting the error. Parties should consider impact of failure to send and decide what additional steps to undertake. The following table defines the Sender behavior in response to the following error codes:
 
 |Error Code|Sender Behavior|
 |---|---|
@@ -205,7 +205,7 @@ Upon receiving a message, the Receiver/Intermediary may return one of several st
 |`500+` +/- OperationOutcome |may retry resending the message one or more times|
 {:.grid}
 
-Note that any mechanism of communicating an error *after* the Receiver/Intermediary has already responded to the Sender will be "out of band".  Assuming the message cannot be process and thus the sender address cannot be obtained from the MessageHeader. The sender address could be discovered by inspection of other layers of transport such as is described by the [FHIR at Scale Taskforce (FAST)] authentication piece for server authorization.  See the messaging documentation in FHIR Specification for additional guidance on [reliable delivery].
+Note that any mechanism of communicating an error *after* the Receiver/Intermediary has already responded to the Sender will be "out of band".  IF the message cannot be processed and thus the sender address cannot be obtained from the MessageHeader, the sender address could be discovered by inspection of other layers of transport such as is described by the [FHIR at Scale Taskforce (FAST)] authentication piece for server authorization.  See the messaging documentation in FHIR Specification for additional guidance on [reliable delivery].
 
 ### Must Support
 
