@@ -13,7 +13,6 @@ This Implementation Guide is supported by the [Da Vinci] initiative which is a p
 This Guide is divided into several pages which are listed at the top of each page in the menu bar.
 
 - [Home]\: The home page provides the introduction and background for the Da Vinci Unsolicited Notifications Project.
-
 - [Framework]\: These pages provide guidance on the set of FHIR transactions and the FHIR artifacts used in a general framework to enable unsolicited notifications to care team members.
 - [Admit/Transfer/Discharge Use Case]\: Unsolicited notifications for the Admission/Transfer/Discharge use cases are defined using the framework.
 - [FHIR Artifacts]\: These pages provide detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
