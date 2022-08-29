@@ -9,6 +9,8 @@ FHIR Messaging paradigm can be use to notify providers of patient admission and 
 
 Since this is a push transaction, the solution may require some additional work to define the appropriate endpoint for a specific patient's ADT notification.
 
+Currnent works includes addressing several trackers and evaluation of FHIR subscriptions workflow.
+
 ---
 
 ### Meeting Artifacts
