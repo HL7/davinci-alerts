@@ -21,7 +21,7 @@ The changes in this STU Update to Da Vinci Unsolicited Notifications Version 1.0
 3. **Applied?**: Device in MessageHeader [FHIR-26209](https://jira.hl7.org/browse/FHIR-26209) See change [Here](#.html)
 4. **Applied?**: terminology urls and VSAC [FHIR-26226](https://jira.hl7.org/browse/FHIR-26226) See change [Here](#.html)
 5. **Applied?**: Transfer-notification-messageheader profile naming problem [FHIR-29684](https://jira.hl7.org/browse/FHIR-29684) See change [Here](#.html)
-6. **Applied?**: Use realistic NPI format for Practitioner example [FHIR-37495](https://jira.hl7.org/browse/FHIR-37495) See change [Here](#.html)
+6. **Applied**: Use realistic NPI format for Practitioner example [FHIR-37495](https://jira.hl7.org/browse/FHIR-37495) See change [Here](Bundle-admit-notification-message-bundle-01.html)
 7. **Applied**: Consideration of FAST's Hybrid Intermediary IG [FHIR-38032](https://jira.hl7.org/browse/FHIR-38032) See change [Here](index.html#roles)
 8. **Applied**: Clarify that request is an event [FHIR-39546](https://jira.hl7.org/browse/FHIR-39546) See changes [Here](index.html#scope-and-usage) and [Here](index.html#roles)
 9. **Applied**: Fix typo and add links [FHIR-39548](https://jira.hl7.org/browse/FHIR-39548) See change [Here](guidance.html#formally-defining-the-da-vinci-notification-message)
