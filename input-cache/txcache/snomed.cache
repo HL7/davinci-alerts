@@ -67,3 +67,39 @@ v: {
   "version" : "http://snomed.info/sct/900000000000207008/version/20230131"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "261665006"
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type--0", "version": "3.1.1", "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "severity" : "error",
+  "error" : "The provided code http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type--0 is not in the value set '' (from Tx-Server)",
+  "class" : "UNKNOWN"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "261665006",
+  "display" : "Unknown (qualifier value)"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Unknown",
+  "code" : "261665006",
+  "system" : "http://snomed.info/sct",
+  "version" : "http://snomed.info/sct/731000124108/version/20230301"
+}
+-------------------------------------------------------------------------------------

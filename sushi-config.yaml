@@ -137,7 +137,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - input/intro-notes
     - fsh-generated/includes
     #- input/summaries
-  # path-expansion-params: '../../input/_resources/exp-params.json'  # for using US ed of SNOMED
+  path-expansion-params: '../../input/_resources/exp-params.json'  # for using US ed of SNOMED
   active-tables: false
   apply-contact: true
   apply-jurisdiction: true
