@@ -39,6 +39,7 @@ differential:
       path: MessageHeader.id
       min: 1
       mustSupport: true
+
     - id: MessageHeader.eventCoding
       path: MessageHeader.eventCoding
       min: 1
@@ -75,11 +76,40 @@ differential:
           aggregation:
             - bundled
       mustSupport: true
-    - id: MessageHeader.sender.reference
-      path: MessageHeader.sender.reference
+
+#=========== extension for sender to include Device ==============
+    - id: 'MessageHeader.sender.extension:Device'
+      path: MessageHeader.sender.extension
+      sliceName: Device
+      short: Device as a sender
+      min: 0
+      max: '1'
+      type:
+        - code: Extension
+          profile:
+            - 'http://hl7.org/fhir/StructureDefinition/alternate-reference'
+      mustSupport: true
+
+    - id: 'MessageHeader.sender.extension:Device.value[x]'
+      path: MessageHeader.sender.extension.value[x]
       min: 1
       max: '1'
+      type:
+        - code: Reference
+          targetProfile:
+            - >-
+              http://hl7.org/fhir/StructureDefinition/Device
+          aggregation:
+            - bundled
       mustSupport: true
+#===============================
+
+    - id: MessageHeader.sender.reference
+      path: MessageHeader.sender.reference
+      min: 0
+      max: '1'
+      mustSupport: true
+
     - id: MessageHeader.author
       path: MessageHeader.author
       min: 0
@@ -94,11 +124,42 @@ differential:
           aggregation:
             - bundled
       mustSupport: true
-    - id: MessageHeader.author.reference
-      path: MessageHeader.author.reference
+
+#=========== extension for author to include Device ==============
+    - id: 'MessageHeader.author.extension:Device'
+      path: MessageHeader.author.extension
+      sliceName: Device
+      short: Device as a author
+      min: 0
+      max: '1'
+      type:
+        - code: Extension
+          profile:
+            - 'http://hl7.org/fhir/StructureDefinition/alternate-reference'
+      mustSupport: true
+
+    - id: 'MessageHeader.author.extension:Device.value[x]'
+      path: MessageHeader.author.extension.value[x]
       min: 1
       max: '1'
+      type:
+        - code: Reference
+          targetProfile:
+            - >-
+              http://hl7.org/fhir/StructureDefinition/Device
+          aggregation:
+            - bundled
       mustSupport: true
+#===============================
+
+    - id: MessageHeader.author.reference
+      path: MessageHeader.author.reference
+      min: 0
+      max: '1'
+      mustSupport: true
+
+
+
     - id: MessageHeader.source
       path: MessageHeader.source
       mustSupport: true

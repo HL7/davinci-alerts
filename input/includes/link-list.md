@@ -89,3 +89,6 @@
 [HRex Organization Profile]: {{site.data.fhir.hrex}}/StructureDefinition-hrex-organization.html
 [Examples Transactions]: usecases.html#example-transactions
 [Hybrid/Intermediary Exchange Implementation Guide]: http://hl7.org/fhir/us/exchange-routing/index.html
+[R5 cross-version extension]: {{site.data.fhir.path}}security.html
+[FHIR R5 MessageHeader]: http://hl7.org/fhir/R5/messageheader.html
+[Alternate Reference]: (http://hl7.org/fhir/StructureDefinition/alternate-reference)

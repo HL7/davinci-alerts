@@ -74,7 +74,7 @@
       {
         "id": "CodeSystems",
         "name": "Terminology: Code Systems",
-        "description": "These define new code systems used by systems conforming to this implementation guide.\n*The code systems defined here are not part of the base FHIR specification and future versions of this guide will migrate them to VSAC or another standard centralized US Realm terminology authority.*\n"
+        "description": "These define new code systems used by systems conforming to this implementation guide.\n*The code systems defined here are not part of the base FHIR specification and future versions of this guide will migrate them to VSAC or another standard centralized US Realm terminology authority.*"
       },
       {
         "id": "BundleExamples",
@@ -285,6 +285,15 @@
         },
         "description": "Admit Notification Messageheader example",
         "name": "Admit Notification Messageheader",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader",
+        "groupingId": "MessageHeaderExamples"
+      },
+      {
+        "reference": {
+          "reference": "MessageHeader/admit-notification-messageheader-02"
+        },
+        "description": "Admit Notification Messageheader example referencing a Device for the author and sender",
+        "name": "Admit Notification Messageheader 02",
         "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader",
         "groupingId": "MessageHeaderExamples"
       },

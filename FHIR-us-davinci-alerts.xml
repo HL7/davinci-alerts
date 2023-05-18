@@ -19,6 +19,7 @@
 <artifact id="Bundle/admit-notification-intermediate-transmit-bundle" key="Bundle-admit-notification-intermediate-transmit-bundle" name="Admit Notification Intermediate Transmit Bundle"/>
 <artifact id="Bundle/admit-notification-message-bundle-01" key="Bundle-admit-notification-message-bundle-01" name="Admit Notification Message Bundle"/>
 <artifact id="MessageHeader/admit-notification-messageheader-01" key="MessageHeader-admit-notification-messageheader-01" name="Admit Notification Messageheader"/>
+<artifact id="MessageHeader/admit-notification-messageheader-02" key="MessageHeader-admit-notification-messageheader-02" name="Admit Notification Messageheader 02"/>
 <artifact id="StructureDefinition/admit-notification-messageheader" key="StructureDefinition-admit-notification-messageheader" name="Da Vinci Admit Notification MessageHeader Profile"/>
 <artifact deprecated="true" id="StructureDefinition/admit-discharge-notification-condition" key="StructureDefinition-admit-discharge-notification-condition" name="Da Vinci Admit/Discharge Notification Condition Profile"/>
 <artifact deprecated="true" id="StructureDefinition/admit-discharge-notification-coverage" key="StructureDefinition-admit-discharge-notification-coverage" name="Da Vinci Admit/Discharge Notification Coverage Profile"/>
