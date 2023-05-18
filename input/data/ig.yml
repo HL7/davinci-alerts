@@ -62,8 +62,14 @@ definition:
       guide.
   - id: CodeSystems
     name: 'Terminology: Code Systems'
-    description: These define new code systems used by systems conforming to this
+    description: 'These define new code systems used by systems conforming to this
       implementation guide.
+
+      *The code systems defined here are not part of the base FHIR specification and
+      future versions of this guide will migrate them to VSAC or another standard
+      centralized US Realm terminology authority.*
+
+      '
   - id: BundleExamples
     name: Bundle Examples
     description: These are Bundle example instances that show what data produced and
