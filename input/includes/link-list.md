@@ -17,6 +17,7 @@
 [Da Vinci Admit/Discharge/Transfer Notification Encounter Profile]: StructureDefinition-adt-notification-encounter.html
 [Da Vinci Discharge Notification MessageHeader Profile]: StructureDefinition-discharge-notification-messageheader.html
 [Da Vinci Health Record Exchange (HRex)]: http://hl7.org/fhir/us/davinci-hrex/index.html
+[HRex Security and Privacy]: {{site.data.fhir.hrex}}/security.html
 [Da Vinci Admit Notification Message Definition]: MessageDefinition-notification-admit.html
 [Da Vinci Discharge Notification Message Definition]: MessageDefinition-notification-discharge.html
 [Da Vinci Notification Event CodeSystem]: CodeSystem-notification-event.html
@@ -34,7 +35,7 @@
 [Example Transaction]: usecases.html#example-transaction
 [Examples]: artifacts.html#5
 [FHIR Artifacts]: artifacts.html
-[FHIR at Scale Taskforce (FAST)]: https://oncprojectracking.healthit.gov/wiki/pages/viewpage.action?pageId=43614268
+[FHIR at Scale Taskforce (FAST)]: https://confluence.hl7.org/display/FAST/FAST+Projects
 [FHIR Bulk Data Access (Flat FHIR)]: http://hl7.org/fhir/uv/bulkdata/STU1/
 [FHIR Data Segmentation for Privacy project]: https://www.hl7.org/special/Committees/projman/searchableProjectIndex.cfm?action=edit&ProjectNumber=1549
 [FHIR message Bundle]: {{site.data.fhir.path}}bundle.html#message
@@ -66,6 +67,7 @@
 [Push Alert Notification]: guidance.html#push-alert-notification
 [Security]: security.html
 [SMART Application Launch Framework Implementation Guide Release 1.0.0]: http://www.hl7.org/fhir/smart-app-launch/
+[SMART Backend Services]: https://www.hl7.org/fhir/smart-app-launch/backend-services.html#backend-services
 [Terminology]: artifacts.html#3
 [FHIR security guidance]:{{site.data.fhir.path}}security.html
 [US Core Condition Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-condition.html
@@ -91,4 +93,4 @@
 [Hybrid/Intermediary Exchange Implementation Guide]: http://hl7.org/fhir/us/exchange-routing/index.html
 [R5 cross-version extension]: {{site.data.fhir.path}}security.html
 [FHIR R5 MessageHeader]: http://hl7.org/fhir/R5/messageheader.html
-[Alternate Reference]: (http://hl7.org/fhir/StructureDefinition/alternate-reference)
+[Alternate Reference]: http://hl7.org/fhir/StructureDefinition/alternate-reference
