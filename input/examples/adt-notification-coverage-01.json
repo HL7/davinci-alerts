@@ -1,5 +1,20 @@
 {
     "id": "adt-notification-coverage-01",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "ADT Notification Coverage"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "ADT Notification Coverage example"
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-coverage"
+        ]
+    },
     "beneficiary": {
         "reference": "urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
     },

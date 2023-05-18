@@ -4,7 +4,7 @@
     "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-coverage",
     "version": "1.0.0",
     "name": "ADTNotificationCoverageProfile",
-    "title": "Da Vinci Admit/Transfer/Discharge Notification Coverage Profile",
+    "title": "Da Vinci Admit/Discharge/Transfer Notification Coverage Profile",
     "status": "active",
     "experimental": false,
     "date": "2020-08-24",
@@ -19,7 +19,7 @@
             ]
         }
     ],
-    "description": "The Da Vinci Admit/Transfer/Discharge Notification Coverage Profile is based on the [HRex Coverage Profile](http://build.fhir.org/ig/HL7/davinci-ehrx/StructureDefinition-hrex-coverage.html) and constrains the Patient resource referenced by the `Coverage.beneficiary` element to be found in the same message Bundle.",
+    "description": "The Da Vinci Admit/Discharge/Transfer Notification Coverage Profile is based on the [HRex Coverage Profile](http://build.fhir.org/ig/HL7/davinci-ehrx/StructureDefinition-hrex-coverage.html) and constrains the Patient resource referenced by the `Coverage.beneficiary` element to be found in the same message Bundle.",
     "jurisdiction": [
         {
             "coding": [
@@ -48,9 +48,6 @@
                 "type": [
                     {
                         "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-                        ],
                         "aggregation": [
                             "bundled"
                         ]

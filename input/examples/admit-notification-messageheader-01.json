@@ -1,5 +1,20 @@
 {
     "id": "admit-notification-messageheader-01",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Admit Notification Messageheader"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "Admit Notification Messageheader example"
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader"
+        ]
+    },
     "author": {
         "display": "Dr. Janeth814 Jakubowski832",
         "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a"

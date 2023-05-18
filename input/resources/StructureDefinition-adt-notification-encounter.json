@@ -4,7 +4,7 @@
     "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter",
     "version": "1.0.0",
     "name": "ADTNotificationEncounterProfile",
-    "title": "Da Vinci Admit/Transfer/Discharge Notification Encounter Profile",
+    "title": "Da Vinci Admit/Discharge/Transfer Notification Encounter Profile",
     "status": "active",
     "experimental": false,
     "date": "2019-11-12T00:00:00-08:00",
@@ -19,7 +19,7 @@
             ]
         }
     ],
-    "description": "The Da Vinci Admit/Transfer/Discharge Notification Encounter Profile is based on the [US Core Encounter Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-encounter.html) and constrains the resources referenced by the `Encounter.Subject` to the [US Core patient Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-patient.html) ,`Encounter.participant.individual` to the [US Core Practitioner Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-practitioner.html), and `Encounter.Location` to the [US Core Location Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-location.html). It also constrains these referenced resources to be found in the same message Bundle.",
+    "description": "The Da Vinci Admit/Discharge/Transfer Notification Encounter Profile is based on the [US Core Encounter Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-encounter.html) and constrains the resources referenced by the `Encounter.Subject` to the [US Core patient Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-patient.html) ,`Encounter.participant.individual` to the [US Core Practitioner Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-practitioner.html), and `Encounter.Location` to the [US Core Location Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-location.html). It also constrains these referenced resources to be found in the same message Bundle.",
     "jurisdiction": [
         {
             "coding": [

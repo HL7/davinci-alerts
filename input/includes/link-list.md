@@ -3,20 +3,20 @@
 [`$process-message`]: {{site.data.fhir.path}}messageheader-operation-process-message.html
 [`collection`]: {{site.data.fhir.path}}http.html#collection
 [2019 CMS 45 CFR Part 156 NPRM]: https://www.federalregister.gov/d/2020-05050
-[Admit/Transfer/Discharge Use Case]: usecases.html
+[Admit/Discharge/Transfer Use Case]: usecases.html
 [aggregation]: {{site.data.fhir.path}}elementdefinition-definitions.html#ElementDefinition.type.aggregation
 [Argonaut Clinical Data Subscriptions]: http://argonautwiki.hl7.org/index.php?title=Argonaut_2019_Projects#Clinical_Data_Subscriptions
 [Bundle Admit Notification Message Bundle 01]: Bundle-admit-notification-message-bundle-01.html
 [Bundle Discharge Notification Message Bundle 01]: Bundle-discharge-notification-message-bundle-01.html
 [Bundle]: {{site.data.fhir.path}}bundle.html
-[Capability Statements]: capstatements.html
+[Capability Statements]: artifacts.html#1
 [Da Vinci Admit Notification MessageHeader Profile]: StructureDefinition-admit-notification-messageheader.html
 [Da Vinci Transfer Notification MessageHeader Profile]: StructureDefinition-transfer-notification-messageheader.html
-[Da Vinci Admit/Transfer/Discharge Notification Condition Profile]: StructureDefinition-adt-notification-condition.html
-[Da Vinci Admit/Transfer/Discharge Notification Coverage Profile]: StructureDefinition-adt-notification-coverage.html
-[Da Vinci Admit/Transfer/Discharge Notification Encounter Profile]: StructureDefinition-adt-notification-encounter.html
+[Da Vinci Admit/Discharge/Transfer Notification Condition Profile]: StructureDefinition-adt-notification-condition.html
+[Da Vinci Admit/Discharge/Transfer Notification Coverage Profile]: StructureDefinition-adt-notification-coverage.html
+[Da Vinci Admit/Discharge/Transfer Notification Encounter Profile]: StructureDefinition-adt-notification-encounter.html
 [Da Vinci Discharge Notification MessageHeader Profile]: StructureDefinition-discharge-notification-messageheader.html
-[Da Vinci Health Record Exchange (HRex)]: http://hl7.org/fhir/us/davinci-hrex/2020Sep/index.html
+[Da Vinci Health Record Exchange (HRex)]: http://hl7.org/fhir/us/davinci-hrex/index.html
 [Da Vinci Admit Notification Message Definition]: MessageDefinition-notification-admit.html
 [Da Vinci Discharge Notification Message Definition]: MessageDefinition-notification-discharge.html
 [Da Vinci Notification Event CodeSystem]: CodeSystem-notification-event.html
@@ -32,7 +32,7 @@
 [ElementDefinition.mustSupport]: {{site.data.fhir.path}}elementdefinition-definitions.html#ElementDefinition.mustSupport
 [Endpoint]: {{site.data.fhir.path}}bundle.html
 [Example Transaction]: usecases.html#example-transaction
-[Examples]: all-examples.html
+[Examples]: artifacts.html#5
 [FHIR Artifacts]: artifacts.html
 [FHIR at Scale Taskforce (FAST)]: https://oncprojectracking.healthit.gov/wiki/pages/viewpage.action?pageId=43614268
 [FHIR Bulk Data Access (Flat FHIR)]: http://hl7.org/fhir/uv/bulkdata/STU1/
@@ -60,13 +60,13 @@
 [NotificationAdmitDischarge]: GraphDefinition-admit-discharge.html
 [notifications by messaging]: {{site.data.fhir.path}}subscription.html#messaging
 [operation]: {{site.data.fhir.path}}operations.html
-[Operations]: operations.html "Operations Page"
-[Profiles]: profiles.html "Profiles and Extensions Page"
+[Operations]: artifacts.html
+[Profiles]: artifacts.html#2
 [Profiling]: {{site.data.fhir.path}}profiling.html
 [Push Alert Notification]: guidance.html#push-alert-notification
 [Security]: security.html
 [SMART Application Launch Framework Implementation Guide Release 1.0.0]: http://www.hl7.org/fhir/smart-app-launch/
-[Terminology]: terminology.html "Terminology Page"
+[Terminology]: artifacts.html#3
 [FHIR security guidance]:{{site.data.fhir.path}}security.html
 [US Core Condition Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-condition.html
 [US Core Encounter Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-encounter.html

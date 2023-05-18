@@ -3,8 +3,8 @@
     "id": "transfer-notification-messageheader",
     "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/transfer-notification-messageheader",
     "version": "1.0.0",
-    "name": "DischargeNotificationMessageHeader",
-    "title": "Da Vinci Discharge Notification MessageHeader Profile",
+    "name": "TransferNotificationMessageHeader",
+    "title": "Da Vinci Transfer Notification MessageHeader Profile",
     "status": "active",
     "experimental": false,
     "date": "2020-08-17T13:51:55-07:00",
@@ -76,9 +76,9 @@
                 "mustSupport": true
             },
             {
-                "id": "MessageHeader.focus:discharge-notification",
+                "id": "MessageHeader.focus:transfer-notification",
                 "path": "MessageHeader.focus",
-                "sliceName": "discharge-notification",
+                "sliceName": "transfer-notification",
                 "min": 1,
                 "max": "*",
                 "type": [

@@ -1,0 +1,468 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.us.davinci-alerts",
+  "url": "http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts",
+  "version": "1.1.0-preview",
+  "name": "DaVinciUnsolicitedNotifications",
+  "title": "Da Vinci Unsolicited Notifications",
+  "status": "active",
+  "date": "2023-05-16",
+  "publisher": "HL7 International - Infrastructure and Messaging Work Group",
+  "contact": [
+    {
+      "name": "HL7 International - Infrastructure and Messaging Work Group",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/inm"
+        },
+        {
+          "system": "email",
+          "value": "inm@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "description": "This implementation guide describes a method for the communication of relevant notifications to support the real-time exchange of information that impacts patient care and value based or risk based services. Providers and Payers may need to be notified when activities occur that impact a patient’s care. This may be as traditional as a notification of an admission or transfer to or discharge from a care setting. It also includes notifications about changes in treatment such as a new or different medication, or changes in patient status like a new diagnosis. These notifications provide information that can improve care management and care coordination as well as act as the trigger for quality programs and other patient focused activities (for example, risk adjustment). By allowing the patient’s healthcare providers to be better informed and able to take actions and intervene earlier, the twin goals of better patient care and reduced cost of care may be met.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "US",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
+  "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
+  "packageId": "hl7.fhir.us.davinci-alerts",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "id": "uscore",
+      "packageId": "hl7.fhir.us.core",
+      "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
+      "version": "3.1.1"
+    },
+    {
+      "id": "hrex",
+      "packageId": "hl7.fhir.us.davinci-hrex",
+      "uri": "http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/hl7.fhir.us.davinci-hrex",
+      "version": "1.0.0"
+    }
+  ],
+  "definition": {
+    "grouping": [
+      {
+        "id": "BaseDaVinciNotificationProfiles",
+        "name": "Base Da Vinci Notification Profiles",
+        "description": "These define the base constraints on FHIR resources for systems conforming to this implementation guide. Other Da Vinci Notification Profiles are based on them."
+      },
+      {
+        "id": "DaVinciADTNotificationProfiles",
+        "name": "Da Vinci Admission/Discharge/Transfer Notification Profiles",
+        "description": "Operations associated with CDex admission/discharge/transfer notifications"
+      },
+      {
+        "id": "ValueSets",
+        "name": "Terminology: Value Sets",
+        "description": "These define sets of codes used by systems conforming to this implementation guide."
+      },
+      {
+        "id": "CodeSystems",
+        "name": "Terminology: Code Systems",
+        "description": "These define new code systems used by systems conforming to this implementation guide."
+      },
+      {
+        "id": "BundleExamples",
+        "name": "Bundle Examples",
+        "description": "These are Bundle example instances that show what data produced and consumed by systems conforming with this implementation guide might look like."
+      },
+      {
+        "id": "ConditionExamples",
+        "name": "Condition Examples",
+        "description": "These are Condition example instances that show what data produced and consumed by systems conforming with this implementation guide might look like."
+      },
+      {
+        "id": "CoverageExamples",
+        "name": "Coverage Examples",
+        "description": "These are Coverage example instances that show what data produced and consumed by systems conforming with this implementation guide might look like."
+      },
+      {
+        "id": "EncounterExamples",
+        "name": "Encounter Examples",
+        "description": "These are Encounter example instances that show what data produced and consumed by systems conforming with this implementation guide might look like."
+      },
+      {
+        "id": "MessageHeaderExamples",
+        "name": "MessageHeader Examples",
+        "description": "These are MessageHeader example instances that show what data produced and consumed by systems conforming with this implementation guide might look like."
+      },
+      {
+        "id": "CapabilityStatement",
+        "name": "Capability Statement",
+        "description": "The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide. Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements."
+      }
+    ],
+    "resource": [
+      {
+        "reference": {
+          "reference": "CodeSystem/notification-event"
+        },
+        "description": "Concepts describing the purpose of the Da Vinci Unsolicited Notification. Note these concepts are 'pre-coordinated' to represent the concept of notification message *AND* the event that triggers the notification.",
+        "exampleBoolean": false,
+        "name": "Da Vinci Event CodeSystem Notification",
+        "groupingId": "CodeSystems"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/admit-notification-messageheader"
+        },
+        "description": "The Da Vinci Admit Notification MessageHeader Profile builds on the [Da Vinci Notifications MessageHeader Profile](StructureDefinition-notifications-messageheader.html) and sets minimum expectations for the FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html) resource to record the necessary context for Da Vinci admit notification messaging scenario.  The event code is \"notification-admit\" and the focus of the event is the Encounter.",
+        "exampleBoolean": false,
+        "name": "Da Vinci Admit Notification MessageHeader Profile",
+        "groupingId": "DaVinciADTNotificationProfiles"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/adt-notification-condition"
+        },
+        "description": "The Da Vinci Admit/Discharge/Transfer Notification Condition Profile is based on the [US Core Condition Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-condition.html) and adds the mandatory `Condition.encounter` element which references the [Da Vinci Admit/Discharge/Transfer Notification Encounter Profile](http://hl7.org/fhir/us/davinci-alerts/STU1/StructureDefinition-adt-notification-encounter.html) in the same message Bundle.",
+        "exampleBoolean": false,
+        "name": "Da Vinci Admit/Discharge/Transfer Notification Condition Profile",
+        "groupingId": "DaVinciADTNotificationProfiles"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/adt-notification-coverage"
+        },
+        "description": "The Da Vinci Admit/Discharge/Transfer Notification Coverage Profile is based on the [HRex Coverage Profile](http://build.fhir.org/ig/HL7/davinci-ehrx/StructureDefinition-hrex-coverage.html) and constrains the Patient resource referenced by the `Coverage.beneficiary` element to be found in the same message Bundle.",
+        "exampleBoolean": false,
+        "name": "Da Vinci Admit/Discharge/Transfer Notification Coverage Profile",
+        "groupingId": "DaVinciADTNotificationProfiles"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/adt-notification-encounter"
+        },
+        "description": "The Da Vinci Admit/Discharge/Transfer Notification Encounter Profile is based on the [US Core Encounter Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-encounter.html) and constrains the resources referenced by the `Encounter.Subject` to the [US Core patient Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-patient.html) ,`Encounter.participant.individual` to the [US Core Practitioner Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-practitioner.html), and `Encounter.Location` to the [US Core Location Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-location.html). It also constrains these referenced resources to be found in the same message Bundle.",
+        "exampleBoolean": false,
+        "name": "Da Vinci Admit/Discharge/Transfer Notification Encounter Profile",
+        "groupingId": "DaVinciADTNotificationProfiles"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/discharge-notification-messageheader"
+        },
+        "description": "The Da Vinci Discharge Notification MessageHeader Profile  builds on  the [Da Vinci Notifications MessageHeader Profile](StructureDefinition-notifications-messageheader.html) and sets  minimum expectations for the FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html) resource to record the necessary context for Da Vinci discharge notification messaging scenario.  The event code is \"notification-discharge\" and the focus of the event is the Encounter.",
+        "exampleBoolean": false,
+        "name": "Da Vinci Discharge Notification MessageHeader Profile",
+        "groupingId": "DaVinciADTNotificationProfiles"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/notifications-bundle"
+        },
+        "description": "The Da Vinci Notifications Bundle Profile constrains the FHIR [Bundle](http://hl7.org/fhir/R4/bundle.html) resource to the Da Vinci notification messaging framework.",
+        "exampleBoolean": false,
+        "name": "Da Vinci Notifications Bundle Profile",
+        "groupingId": "BaseDaVinciNotificationProfiles"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/notifications-messageheader"
+        },
+        "description": "The Da Vinci Notifications MessageHeader Profile sets minimum expectations for the FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html) resource to record the necessary context for Da Vinci notification messaging using FHIR resources.  It references the focus of the use case event or request as well as other information related to the action typically transmitted in a [Bundle](http://hl7.org/fhir/R4/bundle.html) resource in which the MessageHeader resource instance is the first resource in the Bundle.",
+        "exampleBoolean": false,
+        "name": "Da Vinci Notifications MessageHeader Profile",
+        "groupingId": "BaseDaVinciNotificationProfiles"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/transfer-notification-messageheader"
+        },
+        "description": "The Da Vinci Transfer Notification MessageHeader Profile builds on the [Da Vinci Notifications MessageHeader Profile](StructureDefinition-notifications-messageheader.html) and sets minimum expectations for the FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html) resource to record the necessary context for Da Vinci transfer notification messaging scenario.  The event code is \"notification-transfer\" and the focus of the event is the Encounter.",
+        "exampleBoolean": false,
+        "name": "Da Vinci Transfer Notification MessageHeader Profile",
+        "groupingId": "DaVinciADTNotificationProfiles"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/notification-admit-event"
+        },
+        "description": "Concepts describing Da Vinci Unsolicited Admit Notification notification events.",
+        "exampleBoolean": false,
+        "name": "Da Vinci Notification Admit Event ValueSet",
+        "groupingId": "ValueSets"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/notification-discharge-event"
+        },
+        "description": "Concepts describing Da Vinci Unsolicited Notification discharge notification events.",
+        "exampleBoolean": false,
+        "name": "Da Vinci Notification Discharge Event ValueSet",
+        "groupingId": "ValueSets"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/notification-event"
+        },
+        "description": "Concepts describing the purpose of the Da Vinci Unsolicited Notification.",
+        "exampleBoolean": false,
+        "name": "Da Vinci Notification Event ValueSet",
+        "groupingId": "ValueSets"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/notification-transfer-event"
+        },
+        "description": "Concepts describing Da Vinci Unsolicited Notification transfer notification events.",
+        "exampleBoolean": false,
+        "name": "Da Vinci Notification Transfer Event ValueSet",
+        "groupingId": "ValueSets"
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/notification-forwarder"
+        },
+        "description": "This CapabilityStatement describes the expected capabilities of a Da Vinci Intermediary when forwarding Unsolicited Notifications transacted with the `$process-message` in the client mode.",
+        "exampleBoolean": false,
+        "name": "Notification Forwarder CapabilityStatement",
+        "groupingId": "CapabilityStatement"
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/notification-receiver"
+        },
+        "description": "This CapabilityStatement describes the expected capabilities of a server that is capable of receiving a Da Vinci Unsolicited Notification transacted with the `$process-message` operation.",
+        "exampleBoolean": false,
+        "name": "Notification Receiver CapabilityStatement",
+        "groupingId": "CapabilityStatement"
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/notification-sender"
+        },
+        "description": "This CapabilityStatement describes the expected capabilities of a Da Vinci Sender when sending Unsolicited Notifications transacted with the `$process-message` in the client mode.",
+        "exampleBoolean": false,
+        "name": "Notification Sender CapabilityStatement",
+        "groupingId": "CapabilityStatement"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/admit-notification-intermediate-translate-bundle"
+        },
+        "description": "Admit Notification Intermediate Translate Bundle example",
+        "name": "Admit Notification Intermediate Translate Bundle",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
+        "groupingId": "BundleExamples"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/admit-notification-intermediate-transmit-bundle"
+        },
+        "description": "Admit Notification Intermediate Transmit Bundle example",
+        "name": "Admit Notification Intermediate Transmit Bundle",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
+        "groupingId": "BundleExamples"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/admit-notification-message-bundle-01"
+        },
+        "description": "Admit Notification Message Bundle example",
+        "name": "Admit Notification Message Bundle",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
+        "groupingId": "BundleExamples"
+      },
+      {
+        "reference": {
+          "reference": "MessageHeader/admit-notification-messageheader-01"
+        },
+        "description": "Admit Notification Messageheader example",
+        "name": "Admit Notification Messageheader",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader",
+        "groupingId": "MessageHeaderExamples"
+      },
+      {
+        "reference": {
+          "reference": "Condition/adt-notification-condition-01"
+        },
+        "description": "ADT Notification Condition example",
+        "name": "ADT Notification Condition",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-condition",
+        "groupingId": "ConditionExamples"
+      },
+      {
+        "reference": {
+          "reference": "Coverage/adt-notification-coverage-01"
+        },
+        "description": "ADT Notification Coverage example",
+        "name": "ADT Notification Coverage",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-coverage",
+        "groupingId": "CoverageExamples"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/adt-notification-encounter-01"
+        },
+        "description": "ADT Notification Encounter example",
+        "name": "ADT Notification Encounter",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter",
+        "groupingId": "EncounterExamples"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/discharge-notification-message-bundle-01"
+        },
+        "description": "Discharge Notification Message Bundle example",
+        "name": "Discharge Notification Message Bundle",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
+        "groupingId": "BundleExamples"
+      },
+      {
+        "reference": {
+          "reference": "MessageHeader/discharge-notification-messageheader-01"
+        },
+        "description": "Discharge Notification Messageheader example",
+        "name": "Discharge Notification Messageheader",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader",
+        "groupingId": "MessageHeaderExamples"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/transfer-notification-message-bundle-01"
+        },
+        "description": "Transfer Notification Message Bundle example",
+        "name": "Transfer Notification Message Bundle",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
+        "groupingId": "BundleExamples"
+      },
+      {
+        "reference": {
+          "reference": "MessageHeader/transfer-notification-messageheader-01"
+        },
+        "description": "Transfer Notification Messageheader example",
+        "name": "Transfer Notification Messageheader",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader",
+        "groupingId": "MessageHeaderExamples"
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "guidance.html",
+          "title": "Framework",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "usecases.html",
+          "title": "Admit/Discharge/Transfer Use Case",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "security.html",
+          "title": "Security",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "change-notes.html",
+          "title": "Change Log",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "ImplementationGuide-hl7.fhir.us.davinci-alerts.html",
+          "title": "US Core ImplementationGuide Resource",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2023+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "STU1"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/resources"
+      },
+      {
+        "code": "path-resource",
+        "value": "fsh-generated/resources"
+      },
+      {
+        "code": "path-pages",
+        "value": "input/pagecontent"
+      },
+      {
+        "code": "path-pages",
+        "value": "input/intro-notes"
+      },
+      {
+        "code": "path-pages",
+        "value": "fsh-generated/includes"
+      },
+      {
+        "code": "active-tables",
+        "value": "false"
+      },
+      {
+        "code": "apply-contact",
+        "value": "true"
+      },
+      {
+        "code": "apply-jurisdiction",
+        "value": "true"
+      },
+      {
+        "code": "apply-publisher",
+        "value": "true"
+      },
+      {
+        "code": "apply-version",
+        "value": "true"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "true"
+      },
+      {
+        "code": "usage-stats-opt-out",
+        "value": "true"
+      },
+      {
+        "code": "tabbed-snapshots",
+        "value": "false"
+      },
+      {
+        "code": "validation",
+        "value": "check-aggregation"
+      },
+      {
+        "code": "path-history",
+        "value": "http://hl7.org/fhir/us/davinci-alerts/history.html"
+      }
+    ]
+  }
+}

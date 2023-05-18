@@ -1,7 +1,16 @@
 {
     "id": "admit-notification-message-bundle-01",
     "meta": {
-        "lastUpdated": "2020-08-17T17:15:12.011868Z",
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Admit Notification Message Bundle"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "Admit Notification Message Bundle example"
+            }
+        ],
         "profile": [
             "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle"
         ]

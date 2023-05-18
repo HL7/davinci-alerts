@@ -1,0 +1,85 @@
+resourceType: StructureDefinition
+id: adt-notification-encounter
+url: >-
+  http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter
+version: 1.0.0
+name: ADTNotificationEncounterProfile
+title: Da Vinci Admit/Discharge/Transfer Notification Encounter Profile
+status: active
+experimental: false
+date: '2019-11-12T00:00:00-08:00'
+publisher: HL7 International - Infrastructure and Messaging Work Group
+contact:
+  - telecom:
+      - system: url
+        value: 'http://www.hl7.org/Special/committees/inm/index.cfm'
+description: >-
+  The Da Vinci Admit/Discharge/Transfer Notification Encounter Profile is based on the [US Core
+  Encounter Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-encounter.html) and constrains the resources referenced by the
+  `Encounter.Subject` to the [US Core patient
+  Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-patient.html) ,`Encounter.participant.individual` to the [US Core Practitioner
+  Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-practitioner.html), and `Encounter.Location` to the [US Core Location
+  Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-location.html). It also constrains these referenced resources to be found in the same message Bundle.
+
+jurisdiction:
+  - coding:
+      - system: 'urn:iso:std:iso:3166'
+        code: US
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: Encounter
+baseDefinition: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter'
+derivation: constraint
+differential:
+  element:
+    - id: Encounter
+      path: Encounter
+    - id: Encounter.subject
+      path: Encounter.subject
+      type:
+        - code: Reference
+          targetProfile:
+            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
+          aggregation:
+            - bundled
+      mustSupport: true
+    - id: Encounter.subject.reference
+      path: Encounter.subject.reference
+      min: 1
+      max: '1'
+      mustSupport: true
+    - id: Encounter.participant
+      path: Encounter.participant
+    - id: Encounter.participant.individual
+      path: Encounter.participant.individual
+      type:
+        - code: Reference
+          targetProfile:
+            - >-
+              http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+          aggregation:
+            - bundled
+      mustSupport: true
+    - id: Encounter.participant.individual.reference
+      path: Encounter.participant.individual.reference
+      min: 1
+      max: '1'
+      mustSupport: true
+    - id: Encounter.location
+      path: Encounter.location
+      mustSupport: true
+    - id: Encounter.location.location
+      path: Encounter.location.location
+      type:
+        - code: Reference
+          targetProfile:
+            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-location'
+          aggregation:
+            - bundled
+      mustSupport: true
+    - id: Encounter.location.location.reference
+      path: Encounter.location.location.reference
+      min: 1
+      max: '1'
+      mustSupport: true

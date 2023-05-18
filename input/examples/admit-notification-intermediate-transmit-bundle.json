@@ -1,7 +1,16 @@
 {
     "id": "admit-notification-intermediate-transmit-bundle",
     "meta": {
-        "lastUpdated": "2020-08-18T03:30:28.261209Z",
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Admit Notification Intermediate Transmit Bundle"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "Admit Notification Intermediate Transmit Bundle example"
+            }
+        ],
         "profile": [
             "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle"
         ]

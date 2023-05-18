@@ -1,5 +1,21 @@
 {
     "id": "adt-notification-condition-01",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "ADT Notification Condition"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "ADT Notification Condition example"
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-condition",
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+        ]
+    },
     "category": [
         {
             "coding": [

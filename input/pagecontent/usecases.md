@@ -42,11 +42,11 @@ The Provider is notified when:
 
 ### FHIR Resources for Admission, Transfer, and Discharge Notifications
 
-To carry information regarding admission, transfer, and discharge event messages, the required resources for the message Bundle need to be defined.  The core components of the Bundle are defined in the [Framework] page and include the *MessageHeader* and the "root" resource represented by the  `MessageHeader.focus`.  For admission, transfer and discharge, the *Encounter* is the focus of the event as shown in {{ foo | filter: bar }}igure 7. For this scenario, the Da Vinci Admit/Transfer/Discharge Notification Encounter Profile - which is based on the US Core Encounter Profile - is used:
+To carry information regarding admission, transfer, and discharge event messages, the required resources for the message Bundle need to be defined.  The core components of the Bundle are defined in the [Framework] page and include the *MessageHeader* and the "root" resource represented by the  `MessageHeader.focus`.  For admission, transfer and discharge, the *Encounter* is the focus of the event as shown in {{ foo | filter: bar }}igure 7. For this scenario, the Da Vinci Admit/Discharge/Transfer Notification Encounter Profile - which is based on the US Core Encounter Profile - is used:
 
 {% include img-portrait.html img="admit_message_graph1.svg" caption="Figure 7" %}
 
-The other "required if present" resources defined in the framework are those referenced by `MessageHeader.author`, `MessageHeader.responsible`, `MessageHeader.sender` and those referenced by the Da Vinci Admit/Transfer/Discharge Notification Encounter Profile. These combine to make up a 'generic' Encounter message bundle structure illustrated in Figure 8 below:
+The other "required if present" resources defined in the framework are those referenced by `MessageHeader.author`, `MessageHeader.responsible`, `MessageHeader.sender` and those referenced by the Da Vinci Admit/Discharge/Transfer Notification Encounter Profile. These combine to make up a 'generic' Encounter message bundle structure illustrated in Figure 8 below:
 
 
 {% include img-portrait.html img="admit_message_graph2.svg" caption="Figure 8" %}
@@ -54,7 +54,7 @@ The other "required if present" resources defined in the framework are those ref
 The following additional resources (or rather profiles) have been determined to be "required if present" by the Da Vinci community to fulfill the data item requirements specific to admissions and discharge.
 
 - US Core Condition
-- Da Vinci Admit/Transfer/Discharge Notification Coverage
+- Da Vinci Admit/Discharge/Transfer Notification Coverage
 
 {: #figure-9}
 Adding these additional components results in the following resource graph showing all the required resources and their relationships for the admission and discharge notification use case shown in Figure 9:
@@ -67,12 +67,12 @@ An alternate representation of this graph is a table with each row representing 
 {% include graphdefinition-adt-narrative-table.md %}
 
 
-Note that an Admit/Transfer/Discharge Bundle may contain more or less resources than this graph illustrates since:  
+Note that an Admit/Discharge/Transfer Bundle may contain more or less resources than this graph illustrates since:  
 a) having additional resources in the message bundle is not prohibited as long as the resources are reference by or reference another resource in the message bundle and  
 b) not all the resources listed above may be present in the source system. For example, including a diagnosis on an admit/transfer/discharge notification allows the recipient to determine if additional action is required, but an encounter diagnosis may not be available until well after discharge. (For a more detailed discussion of when required resources may be absent, see the section on [Must Support])
 {:.highlight-note}
 
-### Admit/Transfer/Discharge Message Profiles
+### Admit/Discharge/Transfer Message Profiles
 
 The following FHIR Profiles can be used to formally define this resource graph for the admission, transfer, and discharge events.  Note that except for the first profile listed below, these profiles constrain their references to other profiles within the same bundle.
 
@@ -80,9 +80,9 @@ The following FHIR Profiles can be used to formally define this resource graph f
 - [Da Vinci Admit Notification MessageHeader Profile]
 - [Da Vinci Transfer Notification MessageHeader Profile]
 - [Da Vinci Discharge Notification MessageHeader Profile]
-- [Da Vinci Admit/Transfer/Discharge Notification Condition Profile]
-- [Da Vinci Admit/Transfer/Discharge Notification Coverage Profile]
-- [Da Vinci Admit/Transfer/Discharge Notification Encounter Profile]
+- [Da Vinci Admit/Discharge/Transfer Notification Condition Profile]
+- [Da Vinci Admit/Discharge/Transfer Notification Coverage Profile]
+- [Da Vinci Admit/Discharge/Transfer Notification Encounter Profile]
 
 <!--
 #### MessageDefinition and GraphDefinition
@@ -111,7 +111,7 @@ Da Vinci Notification Bundles such as these examples can be assembled based on a
 
 {% include list-simple-bundles.xhtml %}
 
-### Pushing Unsolicited Admit/Transfer/Discharge Notification
+### Pushing Unsolicited Admit/Discharge/Transfer Notification
 
 In the interaction shown in Figure 10, the HealthCare facility is acting in the role of the Notification Sender and the Notification Recipient can be any of the actors listed on the home page.  To notify the Notification Recipients/Intermediary of an admit or discharge event, the Notification Sender uses $process-message operation to submit the Notification Message to appropriate FHIR endpoints. Not shown in Figure 10 is that when the Intermediary successfully receives and processes the notifications, it subsequently forwards the data to the end users.
 

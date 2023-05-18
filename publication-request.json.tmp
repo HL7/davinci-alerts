@@ -1,0 +1,10 @@
+{
+   "package-id": "hl7.fhir.us.davinci-alerts",
+   "version": "1.1.0-preview",
+   "path": "http://hl7.org/fhir/us/davinci-alerts/STU1",
+   "mode": "update",
+   "status": "ci-build",
+   "sequence": "STU1",
+   "descmd": "The changes in this STU Update to Da Vinci Unsolicited Notifications Version 1.0.0 has been reviewed by the public through the HL7 STU update process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Infrastructure and Messaging Work Group (InM) - see the [Change Notes](http://hl7.org/fhir/us/core/STU6/changes.html).",
+   "desc": "The changes in this STU Update to Da Vinci Unsolicited Notifications Version 1.0.0 has been reviewed by the public through the HL7 STU update process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Infrastructure and Messaging Work Group (InM) - see the Change Notes (http://hl7.org/fhir/us/core/STU6/changes.html)."
+}

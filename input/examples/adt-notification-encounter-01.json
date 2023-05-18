@@ -1,5 +1,21 @@
 {
     "id": "adt-notification-encounter-01",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "ADT Notification Encounter"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "ADT Notification Encounter example"
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter",
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter"
+        ]
+    },
     "class": {
         "code": "EMER",
         "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"

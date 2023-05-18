@@ -1,5 +1,20 @@
 {
     "id": "discharge-notification-messageheader-01",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Discharge Notification Messageheader"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "Discharge Notification Messageheader example"
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader"
+        ]
+    },
     "author": {
         "display": "Dr. Janeth814 Jakubowski832",
         "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a"

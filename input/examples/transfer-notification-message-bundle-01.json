@@ -1,7 +1,16 @@
 {
     "id": "transfer-notification-message-bundle-01",
     "meta": {
-        "lastUpdated": "2020-08-17T18:57:26.887078Z",
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Transfer Notification Message Bundle"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "Transfer Notification Message Bundle example"
+            }
+        ],
         "profile": [
             "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle"
         ]

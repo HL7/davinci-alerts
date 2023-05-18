@@ -14,13 +14,14 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - [Home]\: The home page provides the introduction and background for the Da Vinci Unsolicited Notifications Project.
 - [Framework]\: These pages provide guidance on the set of FHIR transactions and the FHIR artifacts used in a general framework to enable unsolicited notifications to care team members.
-- [Admit/Transfer/Discharge Use Case]\: Unsolicited notifications for the Admission/Transfer/Discharge use cases are defined using the framework.
+- [Admit/Discharge/Transfer Use Case]\: Unsolicited notifications for the Admission/Transfer/Discharge use cases are defined using the framework.
 - [FHIR Artifacts]\: These pages provide detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
   - [Profiles]\: This page lists the set of Profiles that are defined in this guide.
   - [Terminology]\: This page lists the value sets and code system defined for this guide.
-  - [Capability Statements]\: This set of pages describes the expected FHIR capabilities of the various Da Vinci Notification actors.
+  - [Examples]\: List of links to all the examples used in this guide.
+  - [CapabilityStatements]\: This set of pages describes the expected FHIR capabilities of the various Da Vinci Notification actors.
 - [Security]\: General security requirements and recommendations for {{site.title}} actors.
-- [Examples]\: List of links to all the examples used in this guide.
+
 - [Downloads]\: This page provides links to downloadable artifacts.
 
 ### Scope and Usage
@@ -138,7 +139,7 @@ This Implementation Guide focus is the *Admission Transfer and Discharge* Scenar
   - The Intermediary has the role and functional requirements of a Da Vinci Notifications Recipient
   - The Intermediary has the role and functional requirements of a Da Vinci Notifications Sender if it is forwarding messages using the framework defined in this guide.
 
-See the [Da Vinci Notifications CapabilityStatements] page for details on the RESTful transactions and specific profiles applicable to each of these actors.
+See the Da Vinci Notifications [Capability Statements] for details on the RESTful transactions and specific profiles applicable to each of these actors.
 
 #### Actors
 

@@ -1,7 +1,16 @@
 {
     "id": "discharge-notification-message-bundle-01",
     "meta": {
-        "lastUpdated": "2020-08-17T19:00:15.888493Z",
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Discharge Notification Message Bundle"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "Discharge Notification Message Bundle example"
+            }
+        ],
         "profile": [
             "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle"
         ]
@@ -13,7 +22,6 @@
                 "id": "df0bb058-e0bb-11ea-a11a-864d2e68a322",
                 "meta": {
                     "profile": [
-                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader",
                         "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader"
                     ]
                 },
