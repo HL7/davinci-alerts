@@ -17,8 +17,8 @@ The changes in this STU Update to Da Vinci Unsolicited Notifications Version 1.0
 **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
 
 1. **Applied?**: Flesh out the Security page. Use SMART  Backend Services.  [FHIR-26135](https://jira.hl7.org/browse/FHIR-26135) See change [Here](#.html)
-2. **Applied?**: Question on Bundle Size [FHIR-26173](https://jira.hl7.org/browse/FHIR-26173) See change [Here](#.html)
-3. **Applied**: Device in MessageHeader [FHIR-26209](https://jira.hl7.org/browse/FHIR-26209) See changes [Here](#.profile) and [Here](#example)
+2. **Applied**: Question on Bundle Size [FHIR-26173](https://jira.hl7.org/browse/FHIR-26173) See change [Here](guidance.html#what-is-in-the-message-bundle)
+3. **Applied**: Add Device as sender and author in MessageHeader [FHIR-26209](https://jira.hl7.org/browse/FHIR-26209) See changes [Here](StructureDefinition-notifications-messageheader.html) and [Here](#example)
 4. **Applied**: Clarify terminology migration plans [FHIR-26226](https://jira.hl7.org/browse/FHIR-26226) See change [Here](artifacts.html#4)
 5. **Applied**: Correct Transfer-notification-messageheader profile name [FHIR-29684](https://jira.hl7.org/browse/FHIR-29684) See change [Here](StructureDefinition-transfer-notification-messageheader.html)
 6. **Applied**: Use realistic NPI format for Practitioner example [FHIR-37495](https://jira.hl7.org/browse/FHIR-37495) See change [Here](Bundle-admit-notification-message-bundle-01.html)
