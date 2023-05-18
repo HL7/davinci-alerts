@@ -123,7 +123,7 @@ A use case specific Da Vinci Notification Bundles is defined using the base cons
 See the Admit/Discharge/Transfer use case for an example of using MessageDefinition and GraphDefinition to define the Bundle.
 -->
 
-[MessageDefinition] and [GraphDefinition] resources are an alternative to profiling the message bundle's contents. However, at the time of this publication, the implementation community, reference implementations, and validation tooling does not fully support them. FHIR profiling is the more mature mechanism broadly supported by the implementation community, reference implementations, and validation tooling. However, there is no mechanism to enforce profiles in a message on a reverse link because "reverse links" cannot be traversed forward from the MessageHeader. It may also require more artifacts than using MessageDefinition/GraphDefinition.
+[MessageDefinition] and [GraphDefinition] resources are an alternative to profiling the message bundle's contents.However, at the time of this publication, the implementation community, reference implementations, and validation tooling does not fully support them. FHIR profiling is the more mature mechanism broadly supported by the implementation community, reference implementations, and validation tooling. However, there is no mechanism to enforce profiles in a message on a reverse link because "reverse links" cannot be traversed forward from the MessageHeader. It may also require more artifacts than using MessageDefinition/GraphDefinition.
 {:.stu-note}
 
 ### Sending Unsolicited Notifications

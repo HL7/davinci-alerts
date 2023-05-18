@@ -26,7 +26,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 ### Scope and Usage
 
-The goal of this Implementation Guide is to define a technical framework for sending unsolicited notifications to the appropriate actors when triggered by an event or request.   Note that what is being communicated is a *notification* and not an *alert* which often has the expectation that something needs to be done. The assumption is that data is being transferred but not the responsibility.  The data recipient determines the action it takes based upon the information it receives.  The notifications should provide enough information to understand what the notification is about and to enable the Recipient to determine if and what additional steps they need to take in response to the notification.  For example, additional steps may include:
+<span class="bg-success" markdown="1">The goal of this Implementation Guide is to define a technical framework for sending unsolicited notifications to the appropriate actors when triggered by an event.</span><!-- new-content --> Note that the information being communicated is a *notification* and not an *alert* which often has the expectation that something needs to be done. The assumption is that data is being transferred but not the responsibility.  The data recipient determines the action it takes based upon the information it receives.  The notifications should provide enough information to understand what the notification is about and to enable the Recipient to determine if and what additional steps they need to take in response to the notification.  For example, additional steps may include:
 
 - a request for more information from the Sender through a FHIR RESTful query
 - creation of an encounter record in the receiving system with appropriate provenance
@@ -132,12 +132,14 @@ This Implementation Guide focus is the *Admission Transfer and Discharge* Scenar
 #### Roles
 
 - **Sender** - the system responsible for sending the notifications, typically operated by the facility or organization where the event occurred
+  - <span class="bg-success" markdown="1">Events may include requests or orders (for example, ordering a test for an infectious disease).</span><!-- new-content -->
 - **Recipient** – the system responsible for receiving generated notifications from Senders
   - It is the responsibility of the Receiver to filter and sort the Da Vinci notifications it receives
 <!-- - **Interested Entity** – a system that is interested in receiving notificationss for specific events, providers, patients or other predefined criteria -->
 - **Intermediary** (e.g. ClearingHouse or HIE/HIN)– a system that can act as a central point to receive notifications from multiple Senders and distribute them to Recipients based on previously defined forwarding policies.
   - The Intermediary has the role and functional requirements of a Da Vinci Notifications Recipient
   - The Intermediary has the role and functional requirements of a Da Vinci Notifications Sender if it is forwarding messages using the framework defined in this guide.
+  - <span class="bg-success" markdown="1">The FAST project's [Hybrid/Intermediary Exchange Implementation Guide] is out of scope for this guide. Although it provides guidance for enabling FHIR REST interactions across one or more intermediaries, it *does not* provide guidance for the use of FHIR Messaging.</span><!-- new-content -->
 
 See the Da Vinci Notifications [Capability Statements] for details on the RESTful transactions and specific profiles applicable to each of these actors.
 
@@ -169,6 +171,7 @@ There are many potential actors for the roles listed above:
 ---
 
 - Health Information Exchange (HIE)
+- <span class="bg-success" markdown="1">Health Information Network (HIN)</span><!-- new-content -->
 - Clinically Integrated Network (CIN) systems
 - National Networks (CareQuality, CommonWell, etc.)
 - Specialized Notification Aggregators

@@ -88,3 +88,4 @@
 [Discharge disposition]: http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
 [HRex Organization Profile]: {{site.data.fhir.hrex}}/StructureDefinition-hrex-organization.html
 [Examples Transactions]: usecases.html#example-transactions
+[Hybrid/Intermediary Exchange Implementation Guide]: http://hl7.org/fhir/us/exchange-routing/index.html
