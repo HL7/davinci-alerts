@@ -1,3 +1,10 @@
+{% include note-to-balloters.md %} 
+
+Where possible, new and updated pre-publishing content are highlighted with green text and background - **This highlighting will be removed prior to publication**
+{:.new-content}
+
+Key updates and detailed changes between this and prior versions are available on the [Change Log] page.
+{:.stu-note}
 
 This implementation guide describes a method for the communication of relevant notifications to support the real-time exchange of information that impacts patient care and value based or risk based services.  Providers and Payers may need to be notified when activities occur that impact a patient's care. This may be as traditional as a notification of an admission or transfer to or discharge from a care setting. It also includes notifications about changes in treatment such as a new or different medication, or  changes in patient status like a new diagnosis. These notifications provide information that can improve care management and care coordination as well as act as the trigger for quality programs and other patient focused activities (for example, risk adjustment).  By allowing the patient's healthcare providers to be better informed and able to take actions and intervene earlier, the twin goals of better patient care and reduced cost of care may be met.
 

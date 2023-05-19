@@ -16,7 +16,7 @@ The changes in this STU Update to Da Vinci Unsolicited Notifications Version 1.0
 
 **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
 
-1. **Applied**: Flesh out the Security page. Use SMART  Backend Services.  [FHIR-26135](https://jira.hl7.org/browse/FHIR-26135) See change [Here](security.html)
+1. **Applied**: Update security page [FHIR-26135](https://jira.hl7.org/browse/FHIR-26135) See change [Here](security.html)
 2. **Applied**: Question on Bundle Size [FHIR-26173](https://jira.hl7.org/browse/FHIR-26173) See change [Here](guidance.html#what-is-in-the-message-bundle)
 3. **Applied**: Add Device as sender and author in MessageHeader [FHIR-26209](https://jira.hl7.org/browse/FHIR-26209) See changes [Here](StructureDefinition-notifications-messageheader.html) and [Here](MessageHeader-admit-notification-messageheader-02.html)
 4. **Applied**: Clarify terminology migration plans [FHIR-26226](https://jira.hl7.org/browse/FHIR-26226) See change [Here](artifacts.html#4)
