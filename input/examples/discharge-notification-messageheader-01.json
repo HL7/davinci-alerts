@@ -1,58 +1,48 @@
 {
-    "id": "discharge-notification-messageheader-01",
-    "meta": {
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Discharge Notification Messageheader"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "Discharge Notification Messageheader example"
-            }
-        ],
-        "profile": [
-            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader"
-        ]
+  "id": "discharge-notification-messageheader-01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader|1.1.0-preview"
+    ]
+  },
+  "author": {
+    "display": "Dr. Janeth814 Jakubowski832",
+    "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a"
+  },
+  "destination": [
+    {
+      "endpoint": "https://example.org/Endpoints/DaVinci-Notifications-Intermediary",
+      "name": "DaVinci-Notifications-Intermediary"
+    }
+  ],
+  "eventCoding": {
+    "code": "notification-discharge",
+    "display": "Discharge Notification",
+    "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"
+  },
+  "focus": [
+    {
+      "display": "Discharge Notification(Examplotomy Encounter)",
+      "reference": "urn:uuid:5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82"
+    }
+  ],
+  "responsible": {
+    "display": "HOLY FAMILY HOSPITAL",
+    "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
+  },
+  "sender": {
+    "display": "HOLY FAMILY HOSPITAL",
+    "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
+  },
+  "source": {
+    "contact": {
+      "system": "phone",
+      "value": "+1 (555) 123 4567"
     },
-    "author": {
-        "display": "Dr. Janeth814 Jakubowski832",
-        "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a"
-    },
-    "destination": [
-        {
-            "endpoint": "https://example.org/Endpoints/DaVinci-Notifications-Intermediary",
-            "name": "DaVinci-Notifications-Intermediary"
-        }
-    ],
-    "eventCoding": {
-        "code": "notification-discharge",
-        "display": "Discharge Notification",
-        "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"
-    },
-    "focus": [
-        {
-            "display": "Discharge Notification(Examplotomy Encounter)",
-            "reference": "urn:uuid:5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82"
-        }
-    ],
-    "responsible": {
-        "display": "HOLY FAMILY HOSPITAL",
-        "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
-    },
-    "sender": {
-        "display": "HOLY FAMILY HOSPITAL",
-        "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
-    },
-    "source": {
-        "contact": {
-            "system": "phone",
-            "value": "+1 (555) 123 4567"
-        },
-        "endpoint": "https://example.org/Endpoints/P456",
-        "name": "Acme Central Patient Registry",
-        "software": "FooBar Patient Manager",
-        "version": "3.1.45.AABB"
-    },
-    "resourceType": "MessageHeader"
+    "endpoint": "https://example.org/Endpoints/P456",
+    "name": "Acme Central Patient Registry",
+    "software": "FooBar Patient Manager",
+    "version": "3.1.45.AABB"
+  },
+  "resourceType": "MessageHeader"
 }

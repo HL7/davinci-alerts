@@ -19,7 +19,7 @@
 <artifact id="Bundle/admit-notification-intermediate-transmit-bundle" key="Bundle-admit-notification-intermediate-transmit-bundle" name="Admit Notification Intermediate Transmit Bundle"/>
 <artifact id="Bundle/admit-notification-message-bundle-01" key="Bundle-admit-notification-message-bundle-01" name="Admit Notification Message Bundle"/>
 <artifact id="MessageHeader/admit-notification-messageheader-01" key="MessageHeader-admit-notification-messageheader-01" name="Admit Notification Messageheader"/>
-<artifact id="MessageHeader/admit-notification-messageheader-02" key="MessageHeader-admit-notification-messageheader-02" name="Admit Notification Messageheader 02"/>
+<artifact id="MessageHeader/admit-notification-messageheader-02" key="MessageHeader-admit-notification-messageheader-02" name="Admit Notification Messageheader with Device"/>
 <artifact id="StructureDefinition/admit-notification-messageheader" key="StructureDefinition-admit-notification-messageheader" name="Da Vinci Admit Notification MessageHeader Profile"/>
 <artifact deprecated="true" id="StructureDefinition/admit-discharge-notification-condition" key="StructureDefinition-admit-discharge-notification-condition" name="Da Vinci Admit/Discharge Notification Condition Profile"/>
 <artifact deprecated="true" id="StructureDefinition/admit-discharge-notification-coverage" key="StructureDefinition-admit-discharge-notification-coverage" name="Da Vinci Admit/Discharge Notification Coverage Profile"/>
@@ -56,6 +56,7 @@
 <page deprecated="true" key="methodology" name="(methodology)"/>
 <page key="usecases" name="Admit/Discharge/Transfer Use Case"/>
 <page deprecated="true" key="all-examples" name="All Examples" url="all-examples"/>
+<page key="exchanging" name="Architectural Approach"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page deprecated="true" key="bundles" name="Bundle Definitions" url="bundles"/>
 <page deprecated="true" key="capstatements" name="Capability Statements" url="capstatements"/>
@@ -65,8 +66,11 @@
 <page key="index" name="Home (index)" url="index"/>
 <page deprecated="true" key="iglist" name="Implementation Registry (registry/iglist)" url="registry"/>
 <page deprecated="true" key="profiles" name="Profiles and Extensions"/>
+<page key="roles" name="Roles and Actors"/>
+<page key="scope" name="Scope and Usage"/>
 <page key="security" name="Security" url="security"/>
 <page key="toc" name="Table of Contents" url="toc"/>
 <page deprecated="true" key="terminology" name="Terminology" url="terminology"/>
-<page key="ImplementationGuide-hl7.fhir.us.davinci-alerts" name="US Core ImplementationGuide Resource"/>
+<page key="ImplementationGuide-hl7.fhir.us.davinci-alerts" name="Unsolicited Notification ImplementationGuide Resource"/>
+<page key="workflow" name="Workflow"/>
 </specification>
