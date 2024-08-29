@@ -47,7 +47,7 @@
 [Formal Profile Definition]: #profile
 [Framework]: guidance.html  "General Framework Page"
 [GraphDefinition]: {{site.data.fhir.path}}graphdefinition.html
-[Home]: index.html "Home Page"
+[IG Home]: index.html "Home Page"
 [Message Definitions]: bundles.html "Bundle Definitions Page"
 [MessageDefinition]: {{site.data.fhir.path}}messagedefinition.html
 [Messageheader Admit Notification Messageheader 01]: MessageHeader-admit-notification-messageheader-01.html
@@ -70,7 +70,7 @@
 [SMART Backend Services]: https://www.hl7.org/fhir/smart-app-launch/backend-services.html#backend-services
 [Terminology]: artifacts.html#3
 [FHIR security guidance]:{{site.data.fhir.path}}security.html
-[US Core Condition Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-condition.html
+[US Core Condition Encounter Diagnosis Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-condition-encounter-diagnosis.html
 [US Core Encounter Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-encounter.html
 [US Core Location Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-location.html
 [US Core Patient Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-patient.html

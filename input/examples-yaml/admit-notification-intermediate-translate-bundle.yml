@@ -80,7 +80,7 @@ entry:
             reference: 'urn:uuid:4f7c997a-d6a4-11ea-814c-b5baa7182d44'
       recorded: '2020-08-18T03:46:17.181063Z'
       target:
-        - reference: MessageHeader/5ef532e2-e105-11ea-a6e7-0aa89ff15e09
+        - reference: urn:uuid:5ef532e2-e105-11ea-a6e7-0aa89ff15e09
       resourceType: Provenance
   - fullUrl: 'urn:uuid:5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82'
     resource:

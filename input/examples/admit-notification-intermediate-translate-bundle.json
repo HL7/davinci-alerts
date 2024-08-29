@@ -103,7 +103,7 @@
         "recorded": "2020-08-18T03:46:17.181063Z",
         "target": [
           {
-            "reference": "MessageHeader/5ef532e2-e105-11ea-a6e7-0aa89ff15e09"
+            "reference": "urn:uuid:5ef532e2-e105-11ea-a6e7-0aa89ff15e09"
           }
         ],
         "resourceType": "Provenance"

@@ -14,9 +14,8 @@ contact:
       - system: url
         value: 'http://www.hl7.org/Special/committees/inm/index.cfm'
 description: >-
-  The Da Vinci Admit/Discharge/Transfer Notification Condition Profile is based on the [US Core
-  Condition Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-condition.html) and adds the mandatory `Condition.encounter` element which
-  references the [Da Vinci Admit/Discharge/Transfer Notification Encounter Profile](http://hl7.org/fhir/us/davinci-alerts/STU1/StructureDefinition-adt-notification-encounter.html) in the same message Bundle.
+  The Da Vinci Admit/Discharge/Transfer Notification Condition Profile is based on the [US Core Condition Encounter Diagnosis Profile](http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis) and adds the mandatory `Condition.encounter` element which
+  references the [Da Vinci Admit/Discharge/Transfer Notification Encounter Profile](StructureDefinition-adt-notification-encounter.html) in the same message Bundle.
 jurisdiction:
   - coding:
       - system: 'urn:iso:std:iso:3166'
@@ -25,7 +24,7 @@ fhirVersion: 4.0.1
 kind: resource
 abstract: false
 type: Condition
-baseDefinition: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition'
+baseDefinition: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis'
 derivation: constraint
 differential:
   element:

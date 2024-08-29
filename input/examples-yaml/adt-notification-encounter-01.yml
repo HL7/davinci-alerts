@@ -7,7 +7,6 @@ meta:
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
     valueMarkdown:  ADT Notification Encounter example
   profile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter'
     - >-
       http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter
   #source: '#DlfWMd7j9EX8TaLI'

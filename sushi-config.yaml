@@ -3,12 +3,23 @@
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.davinci-alerts
+
+extension:
+  - url: >-
+      http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: trial-use
+  - url: 'http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm'
+    valueInteger: 2
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+    valueCode: inm
+
+
 canonical: 'http://hl7.org/fhir/us/davinci-alerts'
 name: DaVinciUnsolicitedNotifications
 title: Da Vinci Unsolicited Notifications
 status: active
 publisher:
-  name: HL7 International - Infrastructure and Messaging Work Group
+  name: HL7 International / Infrastructure And Messaging
   url: 'http://www.hl7.org/Special/committees/inm'
   email: inm@lists.hl7.org 
 jurisdiction: 'urn:iso:std:iso:3166#US'
@@ -114,7 +125,7 @@ groups:
       - MessageHeader/transfer-notification-messageheader-01
 
   CapabilityStatement:
-    name: Capability Statement 
+    name: CapabilityStatements 
     description: The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide. Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements.
     resources:
       - CapabilityStatement/notification-sender
@@ -123,26 +134,54 @@ groups:
 
 pages:
   index.md:
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: informative
     title: Home
   exchanging.xml:
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: informative
     title: Architectural Approach
   scope.md:
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: informative
     title: Scope and Usage
   roles.md: 
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: informative
     title: Roles and Actors
   workflow.md:
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: informative
     title: Workflow
   guidance.md:
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: trial-use
     title: Framework
   usecases.md:
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: trial-use
     title: Admit/Discharge/Transfer Use Case
   security.md:
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: trial-use
     title: Security
-  # all-examples.md:
-  #   title: Examples
   downloads.md:
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: informative
     title: Downloads
   change-notes.md:
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: informative
     title: Change Log
   ImplementationGuide-hl7.fhir.us.davinci-alerts.md:
     title: Unsolicited Notification ImplementationGuide Resource
@@ -194,7 +233,7 @@ releaselabel: STU1
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-  Home: index.html
+  IG Home: index.html
   Background:
     Da Vinci Overview: http://hl7.org/about/davinci
     Da Vinci Guiding Principles: https://hl7.org/fhir/us/davinci-hrex/2024Sep/davinci-guiding-principles.html
@@ -218,8 +257,8 @@ menu:
     MessageHeader Examples : artifacts.html#7
     Capability Statement : artifacts.html#9
   Support:
-   Project Home: https://confluence.hl7.org/pages/viewpage.action?pageId=51225442
-   Discussion Forum: https://chat.fhir.org/#narrow/stream/179283-Da-Vinci
-   Propose a Change: http://hl7.org/fhir-issues
-   Downloads: downloads.html
+    Project Home: https://confluence.hl7.org/pages/viewpage.action?pageId=51225442
+    Discussion Forum: https://chat.fhir.org/#narrow/stream/179283-Da-Vinci
+    Propose a Change: http://hl7.org/fhir-issues
+    Downloads: downloads.html
   Change Log: change-notes.html

@@ -53,7 +53,7 @@ The other "required if present" resources defined in the framework are those ref
 
 The following additional resources (or rather profiles) have been determined to be "required if present" by the Da Vinci community to fulfill the data item requirements specific to admissions and discharge.
 
-- US Core Condition
+- US Core Condition Encounter Diagnosis Profile
 - Da Vinci Admit/Discharge/Transfer Notification Coverage
 
 {: #figure-9}
