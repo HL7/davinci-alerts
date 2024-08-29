@@ -257,9 +257,9 @@ menu:
     Encounter Examples : artifacts.html#7
     MessageHeader Examples : artifacts.html#7
     Capability Statement : artifacts.html#9
-  Support:
-    Project Home: https://confluence.hl7.org/pages/viewpage.action?pageId=51225442
-    Discussion Forum: https://chat.fhir.org/#narrow/stream/179283-Da-Vinci
-    Propose a Change: http://hl7.org/fhir-issues
-    Downloads: downloads.html
+  # Support:
+  #   Project Home: https://confluence.hl7.org/pages/viewpage.action?pageId=51225442
+  #   Discussion Forum: https://chat.fhir.org/#narrow/stream/179283-Da-Vinci
+  #   Propose a Change: http://hl7.org/fhir-issues
+  #   Downloads: downloads.html
   Change Log: change-notes.html

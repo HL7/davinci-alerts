@@ -1,0 +1,49 @@
+{
+  "systems" : [
+    {
+      "system" : "http://example.org/fhir/conditions",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "http://example.org/fhir/encounters",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
+    },
+    {
+      "system" : "http://www.nubc.org/patient-discharge",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "https://www.usps.com/",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
+    },
+    {
+      "system" : "urn:ietf:bcp:47",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166:-2",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
+    }
+  ]
+}
