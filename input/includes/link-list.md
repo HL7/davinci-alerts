@@ -94,5 +94,5 @@
 [R5 cross-version extension]: {{site.data.fhir.path}}security.html
 [FHIR R5 MessageHeader]: http://hl7.org/fhir/R5/messageheader.html
 [Alternate Reference]: http://hl7.org/fhir/StructureDefinition/alternate-reference
-[Change Log]: change-notes.html
+[Change Log]: changes.html
 [Unsolicited Notification ImplementationGuide Resource]: ImplementationGuide-hl7.fhir.us.davinci-alerts.html
