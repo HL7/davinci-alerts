@@ -385,7 +385,7 @@ definition:
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
-    - nameUrl: change-notes.html
+    - nameUrl: changes.html
       title: Change Log
       generation: markdown
       extension:
