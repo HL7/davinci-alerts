@@ -239,28 +239,28 @@ menu:
     Da Vinci Overview: http://hl7.org/about/davinci
     Da Vinci Guiding Principles: https://hl7.org/fhir/us/davinci-hrex/2024Sep/davinci-guiding-principles.html
     Architectural Approach: exchanging.html
-  # Specification:
-  #   Scope and Usage: scope.html
-  #   Roles and Actors: roles.html
-  #   Workflow: workflow.html
-  #   Framework: guidance.html
-  #   Security: security.html
-  #   Admit/Discharge/Transfer Use Case: usecases.html
-  # FHIR Artifacts:
-  #   Artifacts Summary: artifacts.html
-  #   Base Da Vinci Notification Profiles: artifacts.html#1
-  #   Da Vinci Admission/Discharge/Transfer Notification Profiles: artifacts.html#2
-  #   Value Sets: artifacts.html#3
-  #   Code Systems: artifacts.html#4
-  #   Bundle Examples : artifacts.html#5
-  #   Condition Examples : artifacts.html#6
-  #   Coverage Examples : artifacts.html#7
-  #   Encounter Examples : artifacts.html#8
-  #   MessageHeader Examples : artifacts.html#9
-  #   Capability Statement : artifacts.html#10
-  # Support:
-  #   Project Home: https://confluence.hl7.org/pages/viewpage.action?pageId=51225442
-  #   Discussion Forum: https://chat.fhir.org/#narrow/stream/179283-Da-Vinci
-  #   Propose a Change: http://hl7.org/fhir-issues
-  #   Downloads: downloads.html
+  Specification:
+    Scope and Usage: scope.html
+    Roles and Actors: roles.html
+    Workflow: workflow.html
+    Framework: guidance.html
+    Security: security.html
+    Admit/Discharge/Transfer Use Case: usecases.html
+  FHIR Artifacts:
+    Artifacts Summary: artifacts.html
+    Base Da Vinci Notification Profiles: artifacts.html#1
+    Da Vinci Admission/Discharge/Transfer Notification Profiles: artifacts.html#2
+    Value Sets: artifacts.html#3
+    Code Systems: artifacts.html#4
+    Bundle Examples : artifacts.html#5
+    Condition Examples : artifacts.html#6
+    Coverage Examples : artifacts.html#7
+    Encounter Examples : artifacts.html#8
+    MessageHeader Examples : artifacts.html#9
+    Capability Statement : artifacts.html#10
+  Support:
+    Project Home: https://confluence.hl7.org/pages/viewpage.action?pageId=51225442
+    Discussion Forum: https://chat.fhir.org/#narrow/stream/179283-Da-Vinci
+    Propose a Change: http://hl7.org/fhir-issues
+    Downloads: downloads.html
   Change Log: changes.html

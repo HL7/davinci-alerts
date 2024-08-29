@@ -29,6 +29,90 @@
       </li>
     </ul>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scope.html">Scope and Usage</a>
+      </li>
+      <li>
+        <a href="roles.html">Roles and Actors</a>
+      </li>
+      <li>
+        <a href="workflow.html">Workflow</a>
+      </li>
+      <li>
+        <a href="guidance.html">Framework</a>
+      </li>
+      <li>
+        <a href="security.html">Security</a>
+      </li>
+      <li>
+        <a href="usecases.html">Admit/Discharge/Transfer Use Case</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifacts Summary</a>
+      </li>
+      <li>
+        <a href="artifacts.html#1">Base Da Vinci Notification Profiles</a>
+      </li>
+      <li>
+        <a href="artifacts.html#2">Da Vinci Admission/Discharge/Transfer Notification Profiles</a>
+      </li>
+      <li>
+        <a href="artifacts.html#3">Value Sets</a>
+      </li>
+      <li>
+        <a href="artifacts.html#4">Code Systems</a>
+      </li>
+      <li>
+        <a href="artifacts.html#5">Bundle Examples</a>
+      </li>
+      <li>
+        <a href="artifacts.html#6">Condition Examples</a>
+      </li>
+      <li>
+        <a href="artifacts.html#7">Coverage Examples</a>
+      </li>
+      <li>
+        <a href="artifacts.html#8">Encounter Examples</a>
+      </li>
+      <li>
+        <a href="artifacts.html#9">MessageHeader Examples</a>
+      </li>
+      <li>
+        <a href="artifacts.html#10">Capability Statement</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=51225442">Project Home</a>
+      </li>
+      <li>
+        <a href="https://chat.fhir.org/#narrow/stream/179283-Da-Vinci">Discussion Forum</a>
+      </li>
+      <li>
+        <a href="http://hl7.org/fhir-issues">Propose a Change</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="changes.html">Change Log</a>
   </li>
