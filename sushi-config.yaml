@@ -209,6 +209,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   # suppressed-ids: DocumentReference/discharge-summary
   tabbed-snapshots: false
   validation: check-aggregation
+  auto-oid-root: '2.16.840.1.113883.4.642.40.47'
   # generate: #what does this do - todo: remove and see4
   #   - xml
   #   - json
