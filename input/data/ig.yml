@@ -429,5 +429,7 @@ definition:
     value: 'false'
   - code: validation
     value: check-aggregation
+  - code: auto-oid-root
+    value: 2.16.840.1.113883.4.642.40.47
   - code: path-history
     value: http://hl7.org/fhir/us/davinci-alerts/history.html

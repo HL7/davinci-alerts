@@ -1,62 +1,72 @@
 {
-  "id": "admit-notification-messageheader-02",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader|1.1.0-preview"
-    ]
-  },
-  "author": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/alternate-reference",
-        "valueReference": {
-          "reference": "http://example.org/Device/123"
-        }
-      }
-    ],
-    "display": "automated authoring device"
-  },
-  "destination": [
-    {
-      "endpoint": "https://example.org/Endpoints/DaVinci-Notifications-Intermediary",
-      "name": "DaVinci-Notifications-Intermediary"
-    }
-  ],
-  "eventCoding": {
-    "code": "notification-admit",
-    "display": "Admit Notification",
-    "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"
-  },
-  "focus": [
-    {
-      "display": "Admit Notification(Unknown (qualifier value))",
-      "reference": "urn:uuid:5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82"
-    }
-  ],
-  "responsible": {
-    "display": "HOLY FAMILY HOSPITAL",
-    "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
-  },
-  "sender": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/alternate-reference",
-        "valueReference": {
-          "reference": "http://example.org/Device/123"
-        }
-      }
-    ],
-    "display": "automated sending device"
-  },
-  "source": {
-    "contact": {
-      "system": "phone",
-      "value": "+1 (555) 123 4567"
+    "id": "admit-notification-messageheader-02",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Admit Notification Messageheader with Device"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "Admit Notification Messageheader example referencing a Device for the author and sender"
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader"
+        ]
     },
-    "endpoint": "https://example.org/Endpoints/P456",
-    "name": "Acme Central Patient Registry",
-    "software": "FooBar Patient Manager",
-    "version": "3.1.45.AABB"
-  },
-  "resourceType": "MessageHeader"
+    "author": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/alternate-reference",
+                "valueReference": {
+                    "reference": "http://example.org/Device/123"
+                }
+            }
+        ],
+        "display": "automated authoring device"
+    },
+    "destination": [
+        {
+            "endpoint": "https://example.org/Endpoints/DaVinci-Notifications-Intermediary",
+            "name": "DaVinci-Notifications-Intermediary"
+        }
+    ],
+    "eventCoding": {
+        "code": "notification-admit",
+        "display": "Admit Notification",
+        "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"
+    },
+    "focus": [
+        {
+            "display": "Admit Notification(Unknown (qualifier value))",
+            "reference": "urn:uuid:5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82"
+        }
+    ],
+    "responsible": {
+        "display": "HOLY FAMILY HOSPITAL",
+        "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
+    },
+    "sender": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/alternate-reference",
+                "valueReference": {
+                    "reference": "http://example.org/Device/123"
+                }
+            }
+        ],
+        "display": "automated sending device"
+    },
+    "source": {
+        "contact": {
+            "system": "phone",
+            "value": "+1 (555) 123 4567"
+        },
+        "endpoint": "https://example.org/Endpoints/P456",
+        "name": "Acme Central Patient Registry",
+        "software": "FooBar Patient Manager",
+        "version": "3.1.45.AABB"
+    },
+    "resourceType": "MessageHeader"
 }

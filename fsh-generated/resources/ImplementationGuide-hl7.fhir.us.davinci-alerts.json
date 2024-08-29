@@ -251,7 +251,7 @@
         },
         "description": "Admit Notification Message Bundle example",
         "name": "Admit Notification Message Bundle",
-        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle|1.1.0-preview",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
         "groupingId": "BundleExamples"
       },
       {
@@ -260,7 +260,7 @@
         },
         "description": "Discharge Notification Message Bundle example",
         "name": "Discharge Notification Message Bundle",
-        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle|1.1.0-preview",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
         "groupingId": "BundleExamples"
       },
       {
@@ -269,7 +269,7 @@
         },
         "description": "Transfer Notification Message Bundle example",
         "name": "Transfer Notification Message Bundle",
-        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle|1.1.0-preview",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
         "groupingId": "BundleExamples"
       },
       {
@@ -278,7 +278,7 @@
         },
         "description": "Admit Notification Intermediate Translate Bundle example",
         "name": "Admit Notification Intermediate Translate Bundle",
-        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle|1.1.0-preview",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
         "groupingId": "BundleExamples"
       },
       {
@@ -287,7 +287,7 @@
         },
         "description": "Admit Notification Intermediate Transmit Bundle example",
         "name": "Admit Notification Intermediate Transmit Bundle",
-        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle|1.1.0-preview",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
         "groupingId": "BundleExamples"
       },
       {
@@ -296,7 +296,7 @@
         },
         "description": "ADT Notification Condition example",
         "name": "ADT Notification Condition",
-        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-condition|1.1.0-preview",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-condition",
         "groupingId": "ConditionExamples"
       },
       {
@@ -305,7 +305,7 @@
         },
         "description": "ADT Notification Coverage example",
         "name": "ADT Notification Coverage",
-        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-coverage|1.1.0-preview",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-coverage",
         "groupingId": "CoverageExamples"
       },
       {
@@ -314,7 +314,7 @@
         },
         "description": "ADT Notification Encounter example",
         "name": "ADT Notification Encounter",
-        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter|1.1.0-preview",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter",
         "groupingId": "EncounterExamples"
       },
       {
@@ -323,7 +323,7 @@
         },
         "description": "Admit Notification Messageheader example",
         "name": "Admit Notification Messageheader",
-        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader|1.1.0-preview",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader",
         "groupingId": "MessageHeaderExamples"
       },
       {
@@ -332,7 +332,7 @@
         },
         "description": "Admit Notification Messageheader example referencing a Device for the author and sender",
         "name": "Admit Notification Messageheader with Device",
-        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader|1.1.0-preview",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader",
         "groupingId": "MessageHeaderExamples"
       },
       {
@@ -341,7 +341,7 @@
         },
         "description": "Discharge Notification Messageheader example",
         "name": "Discharge Notification Messageheader",
-        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader|1.1.0-preview",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader",
         "groupingId": "MessageHeaderExamples"
       },
       {
@@ -350,7 +350,7 @@
         },
         "description": "Transfer Notification Messageheader example",
         "name": "Transfer Notification Messageheader",
-        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader|1.1.0-preview",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader",
         "groupingId": "MessageHeaderExamples"
       },
       {
@@ -571,6 +571,10 @@
       {
         "code": "validation",
         "value": "check-aggregation"
+      },
+      {
+        "code": "auto-oid-root",
+        "value": "2.16.840.1.113883.4.642.40.47"
       },
       {
         "code": "path-history",
