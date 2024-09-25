@@ -411,6 +411,8 @@ definition:
     value: fsh-generated/includes
   - code: path-expansion-params
     value: ../../input/_resources/exp-params.json
+  - code: path-data
+    value: input/resources-yaml
   - code: active-tables
     value: 'false'
   - code: apply-contact

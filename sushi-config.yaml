@@ -195,6 +195,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - fsh-generated/includes
     #- input/summaries
   path-expansion-params: '../../input/_resources/exp-params.json'  # for using US ed of SNOMED
+  path-data: 
+    - input/resources-yaml
   active-tables: false
   apply-contact: true
   apply-jurisdiction: true
@@ -207,6 +209,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   # excludettl: true
   # excludemap: true
   # suppressed-ids: DocumentReference/discharge-summary
+  # produce-jekyll-data: true #add all resources to data for access by Jekyll/liquid in pages DOES NOT WORK
   tabbed-snapshots: false
   validation: check-aggregation
   auto-oid-root: '2.16.840.1.113883.4.642.40.47'

@@ -133,4 +133,13 @@ The following example transactions show examples of using the `$process-message`
 
 [^2]: Based on the [V3 Value SetActEncounterCode]  and [Discharge disposition] value sets.
 
+
+### Direct ADT to Da Vinci Notification Mappings:
+
+The following table maps the Direct ADT message to the Da Vinci Notification Mappings....*TODO introductiona and background on this mapping work*
+
+A more detailed mapping is available as a [csv](DirectNotificationsToDaVinciNotificationsElemenMap.csv) or [excel](DirectNotificationsToDaVinciNotificationsElemenMap.xlsx) file.
+
+{% include adt-mapping-table-generator.md %}
+
 {% include link-list.md %}

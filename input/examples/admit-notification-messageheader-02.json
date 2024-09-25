@@ -2,7 +2,7 @@
   "id": "admit-notification-messageheader-02",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader|1.1.0-preview"
+      "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader|1.1.0-preview|1.1.0-preview"
     ]
   },
   "author": {
