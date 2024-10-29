@@ -11,9 +11,24 @@
       "candidates" : []
     },
     {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "authoritative" : ["http://tx.fhir.org/r4"],
+      "candidates" : []
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+      "authoritative" : ["http://tx.fhir.org/r4"],
+      "candidates" : []
+    },
+    {
       "system" : "http://snomed.info/sct",
       "authoritative" : [],
       "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
+    },
+    {
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
     },
     {
       "system" : "http://www.nubc.org/patient-discharge",

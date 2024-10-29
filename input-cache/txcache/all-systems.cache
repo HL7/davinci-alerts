@@ -210,7 +210,6 @@ v: {
   "code" : "IL",
   "system" : "https://www.usps.com/",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -232,7 +231,6 @@ v: {
   "code" : "IL",
   "system" : "https://www.usps.com/",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -261,7 +259,6 @@ v: {
   "code" : "MA",
   "system" : "https://www.usps.com/",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -283,9 +280,186 @@ v: {
   "code" : "MA",
   "system" : "https://www.usps.com/",
   "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "urn:iso:std:iso:3166",
+    "code" : "US"
+  }]
+}, "url": "http://hl7.org/fhir/ValueSet/jurisdiction", "version": "4.0.1", "langs":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "United States of America",
+  "code" : "US",
+  "system" : "urn:iso:std:iso:3166",
+  "version" : "2018",
+  "server" : "http://tx.fhir.org/r4",
   "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://example.org/fhir/conditions",
+    "code" : "1234",
+    "display" : "Examplitis"
+  }],
+  "text" : "Examplitis"
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code", "version": "3.1.1", "langs":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "severity" : "error",
+  "error" : "A definition for CodeSystem 'http://example.org/fhir/conditions' could not be found, so the code cannot be validated; No valid coding was found for the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code|3.1.1'; The provided code 'http://example.org/fhir/conditions#1234 ('Examplitis')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code|3.1.1'",
+  "class" : "UNKNOWN",
+  "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "http://example.org/fhir/conditions",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "http://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://example.org/fhir/conditions#1234 ('Examplitis')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code|3.1.1'"
+    },
+    "location" : ["CodeableConcept.coding[0].code"],
+    "expression" : ["CodeableConcept.coding[0].code"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "http://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "not-found",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-found"
+      }],
+      "text" : "A definition for CodeSystem 'http://example.org/fhir/conditions' could not be found, so the code cannot be validated"
+    },
+    "location" : ["CodeableConcept.coding[0].system"],
+    "expression" : ["CodeableConcept.coding[0].system"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "http://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-in-vs"
+      }],
+      "text" : "No valid coding was found for the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code|3.1.1'"
+    }
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://example.org/fhir/conditions",
+    "code" : "1234",
+    "display" : "Examplitis"
+  }],
+  "text" : "Examplitis"
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code", "version": "6.1.0", "langs":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "severity" : "error",
+  "error" : "A definition for CodeSystem 'http://example.org/fhir/conditions' could not be found, so the code cannot be validated; No valid coding was found for the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code|6.1.0'; The provided code 'http://example.org/fhir/conditions#1234 ('Examplitis')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code|6.1.0'",
+  "class" : "UNKNOWN",
+  "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "http://example.org/fhir/conditions",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "http://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://example.org/fhir/conditions#1234 ('Examplitis')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code|6.1.0'"
+    },
+    "location" : ["CodeableConcept.coding[0].code"],
+    "expression" : ["CodeableConcept.coding[0].code"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "http://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "not-found",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-found"
+      }],
+      "text" : "A definition for CodeSystem 'http://example.org/fhir/conditions' could not be found, so the code cannot be validated"
+    },
+    "location" : ["CodeableConcept.coding[0].system"],
+    "expression" : ["CodeableConcept.coding[0].system"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "http://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-in-vs"
+      }],
+      "text" : "No valid coding was found for the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code|6.1.0'"
+    }
+  }]
 }
 
 }

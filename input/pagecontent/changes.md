@@ -34,7 +34,7 @@ The changes in this STU Update to Da Vinci Unsolicited Notifications Version 1.0
 
 The first official published version of the Da Vinci Unsolicited Notifications IG for FHIR R4.
 
-1. Applied all resolutions from STU2 Ballot
+1. Applied all resolutions from STU1 Ballot
 
   1. Various Technical Corrections and corrections to typographical errors and grammar.
   1. Update and correct examples

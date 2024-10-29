@@ -140,6 +140,10 @@ The following table maps the Direct ADT message to the Da Vinci Notification Map
 
 A more detailed mapping is available as a [csv](DirectNotificationsToDaVinciNotificationsElemenMap.csv) or [excel](DirectNotificationsToDaVinciNotificationsElemenMap.xlsx) file.
 
+<div class="bg-success" markdown="1">
+
 {% include adt-mapping-table-generator.md %}
+
+</div><!-- new-content -->
 
 {% include link-list.md %}
