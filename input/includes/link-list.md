@@ -96,3 +96,4 @@
 [Alternate Reference]: http://hl7.org/fhir/StructureDefinition/alternate-reference
 [Change Log]: changes.html
 [Unsolicited Notification ImplementationGuide Resource]: ImplementationGuide-hl7.fhir.us.davinci-alerts.html
+[Direct ADT to Da Vinci Alerts ConceptMap]: ConceptMap-direct-alerts.html

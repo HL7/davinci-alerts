@@ -133,16 +133,115 @@ The following example transactions show examples of using the `$process-message`
 
 [^2]: Based on the [V3 Value SetActEncounterCode]  and [Discharge disposition] value sets.
 
+<div class="bg-success" markdown="1">
 
 ### Direct ADT to Da Vinci Notification Mappings:
 
-The following table maps the Direct ADT message to the Da Vinci Notification Mappings....*TODO introductiona and background on this mapping work*
+Since May 1, 2021 CMS requires that hospitals send notifications
+electronically for admit, transfer and discharge events to the patient's
+care team members, for which most implementations currently use V2 ADT
+messages. As a result [DirectTrust](https://directtrust.org/who-we-are),
+a consensus body of forty organizations and individuals representing the
+care continuum, collaborated in creating an Implementation Guide
+using [Direct Secure
+Messaging](https://directtrust.org/what-we-do/direct-secure-messaging) for
+both senders and receivers. The [Event Notifications via the Direct
+Standard®](https://directtrust.org/standards/event-notifications-via-direct)
+defines the necessary data element to cover the CMS rules, maps those to
+the V2 elements in several ADT message structures and provides the value
+sets for coded elements.
 
-A more detailed mapping is available as a [csv](DirectNotificationsToDaVinciNotificationsElemenMap.csv) or [excel](DirectNotificationsToDaVinciNotificationsElemenMap.xlsx) file.
+These V2 elements have been mapped them to their
+respective location in this DaVinci FHIR IG for the
+Admit-Transfer-Discharge Use case.  The following tables summarize the Direct ADT message to the Da Vinci Notification Mappings. 
 
-<div class="bg-success" markdown="1">
+In addition, the [Direct ADT to Da Vinci Alerts ConceptMap] maps the value set concepts between the two product families.
+
+The complete mappings can be downloaded as an [excel](tables/DirectToDaVinciMap.xlsx) file.
 
 {% include adt-mapping-table-generator.md %}
+
+<!-- (alternatively bundle and zip in the csv or add to the workbook)
+
+**Field Mapping**
+
+|Column Header Name | Description of Content|
+|--------------------| ----------------------|
+|Data element name|Names the element that must be or should be include in the admit / discharge / transfer use case|
+|V2 Usage \[Cardinality\]|Describes the usage and cardinality in V2 ADT message elements|
+|Segment Name|Identifies the V2 segment|
+|Field Identifier|Identifies the V2 segment field by number|
+|HL7 V2 Field Name|Identifies the V2 segment field by name|
+|V2 value set, other notes|Indicates the V2 table prescribed for use with the element|
+|FHIR element location|Provides the path to the FHIR element the V2 element is being mapped to|
+|FHIR Usage  \[Cardinality\]|Describes the usage and cardinality in FHIR resources used in the DaVinci Notifications profile, US core or base FHIR specification|
+|FHIR Value set,  other notes| Indicates the value set bound to the FHIR element|
+{:.grid}
+
+**Value Set Concept Mapping**
+
+<table class="grid">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 31%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Column Header Name</th>
+<th>Description of Content</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td rowspan="4">DirectTrust Notification</td>
+<td>Value location in V2</td>
+<td>Identifies the field element in V2</td>
+</tr>
+<tr class="even">
+<td>Value Set ID</td>
+<td>Identifies the name of the HL7 V2 table associated with the Value
+locations (If provided)</td>
+</tr>
+<tr class="odd">
+<td>Code</td>
+<td>Alphanumeric value that uniquely defines a concept</td>
+</tr>
+<tr class="even">
+<td>Description</td>
+<td>Common name for the concepts</td>
+</tr>
+<tr class="odd">
+<td rowspan="5">Da Vinci Notifications</td>
+<td>Value location in FHIR</td>
+<td>Identifies the FHIR resource element by FHIR path link</td>
+</tr>
+<tr class="even">
+<td>Value set link in FHIR</td>
+<td>Alphanumeric value that uniquely defines a concept</td>
+</tr>
+<tr class="odd">
+<td>Code</td>
+<td>Common name for the concepts</td>
+</tr>
+<tr class="even">
+<td>Description</td>
+<td>Provides the path to the FHIR element the V2 element is being mapped
+to</td>
+</tr>
+<tr class="odd">
+<td>Mapping Notes</td>
+<td>Provides considerations or caveats for the mappings</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+A more detailed mapping is available as a [csv](DirectNotificationsToDaVinciNotificationsElemenMap.csv) or [excel](DirectNotificationsToDaVinciNotificationsElemenMap.xlsx) file.
+-->
 
 </div><!-- new-content -->
 

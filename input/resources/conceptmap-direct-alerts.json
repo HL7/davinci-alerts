@@ -1,0 +1,995 @@
+{
+    "resourceType": "ConceptMap",
+    "id": "direct-alerts",
+    "url": "http://hl7.org/fhir/us/davinci-alerts/ConceptMap/direct-alerts",
+    "name": "DirectAlerts",
+    "title": "Direct ADT to Da Vinci Alerts ConceptMap",
+    "status": "active",
+    "experimental": false,
+    "date": "2024-10-29",
+    "description": "Since May 1, 2021 CMS requires that hospitals send notifications electronically for admit, transfer and discharge events to the patient's care team members, for which most implementations currently use V2 ADT messages. As a result DirectTrust, a consensus body of forty organizations and individuals representing the care continuum, collaborated in creating an Implementation Guide using Direct Secure Messaging for both senders and receivers. The Event Notifications via the Direct Standard\u00ae defines the necessary data element to cover the CMS rules, maps those to the V2 elements in several ADT message structures and provides the value sets for coded elements.\n\nThese V2 elements have been mapped them to their respective location in this DaVinci FHIR IG for the Admit-Transfer-Discharge Use case. In addition, the value set concepts between the two product families have been mapped, where possible.\n\nThis ConceptMap summarizes the Direct ADT message to the Da Vinci Notification Terminology Mappings. Complete mappings can be downloaded as an excel file at https://hl7.org/fhir/us/davinci-alerts/tables/DirectToDaVinciMap.xlsx.\n",
+    "copyright": "\n1. This material contains content from LOINC (http://loinc.org). LOINC is copyright \\\\xA9 1995-2020, Regenstrief Institute, Inc. and the Logical Observation # Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC\\\\xAE is a registered United States trademark of Regenstrief Institute, Inc.\n2. This value set includes content from SNOMED CT, which is copyright \u00a9 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+    "sourceUri": "https://directtrust.org/what-we-do/direct-secure-messaging",
+    "targetUri": "http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts",
+    "group": [
+        {
+            "source": "http://loinc.org",
+            "target": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event",
+            "element": [
+                {
+                    "code": "86530-3",
+                    "display": "Visit notification",
+                    "target": [
+                        {
+                            "code": "notification-referral",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "86532-9",
+                    "display": "Admission notification",
+                    "target": [
+                        {
+                            "code": "notification-admit",
+                            "equivalence": "equivalent",
+                            "comment": "Alerts terminology doesn't distinguish types of sevice locations"
+                        }
+                    ]
+                },
+                {
+                    "code": "98141-5",
+                    "display": "Emergency department Admission notification",
+                    "target": [
+                        {
+                            "code": "notification-admit",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "79429-7",
+                    "display": "Hospital Admission notification",
+                    "target": [
+                        {
+                            "code": "notification-admit",
+                            "equivalence": "equivalent",
+                            "comment": "Alerts terminology doesn't distinguish between in and out patients"
+                        }
+                    ]
+                },
+                {
+                    "code": "79430-5",
+                    "display": "Hospital Discharge notification",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "In DaVinci the notifications are not indicating the current treatment facility type/location, but rather the discharge to location - can expand the valueset, since binding is extensible"
+                        }
+                    ]
+                },
+                {
+                    "code": "80110-0",
+                    "display": "Emergency department Visit notification",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "In DaVinci the notifications are not differentiating between visit and admit for ER - can expand the valueset, since binding is extensible"
+                        }
+                    ]
+                },
+                {
+                    "code": "98143-1",
+                    "display": "Emergency department Arrival notification",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "In DaVinci the notifications are not differentiating between arrival and admit for ER - can expand the valueset, since binding is extensible"
+                        }
+                    ]
+                },
+                {
+                    "code": "86532-9",
+                    "display": "Admission notification",
+                    "target": [
+                        {
+                            "equivalence": "unmatched"
+                        }
+                    ]
+                },
+                {
+                    "code": "98144-9",
+                    "display": "Emergency department Departure notification",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "In DaVinci the notifications are not differentiating between departure and discharge for ER - can expand the valueset, since binding is extensible"
+                        }
+                    ]
+                },
+                {
+                    "code": "86531-1",
+                    "display": "Discharge notification",
+                    "target": [
+                        {
+                            "code": "notification-discharge",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "98142-3",
+                    "display": "Emergency department Discharge notification",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "In DaVinci the notifications are not indicating the current treatment facility type/location, but rather the discharge to location - can expand the valueset, since binding is extensible"
+                        }
+                    ]
+                },
+                {
+                    "code": "98145-6",
+                    "display": "Outpatient Visit notification",
+                    "target": [
+                        {
+                            "code": "notification-outpatient-visit",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "http://terminology.hl7.org/CodeSystem/v2-0004",
+            "target": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+            "element": [
+                {
+                    "code": "E",
+                    "display": "Emergency",
+                    "target": [
+                        {
+                            "code": "EMER",
+                            "display": "emergency",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "I",
+                    "display": "Inpatient",
+                    "target": [
+                        {
+                            "code": "IMP",
+                            "display": "inpatient encounter",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "O",
+                    "display": "Outpatient",
+                    "target": [
+                        {
+                            "code": "AMB",
+                            "display": "ambulatory",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "P",
+                    "display": "Preadmit",
+                    "target": [
+                        {
+                            "code": "PRENC",
+                            "display": "pre-admission",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "R",
+                    "display": "Recurring patient",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Since binding is extensible, can extend valueset definition to include CHR : Chronic from https://hl7.org/fhir/R4/v3/ActCode/cs.html#v3-ActCode-_ActMedicalServiceCode"
+                        }
+                    ]
+                },
+                {
+                    "code": "B",
+                    "display": "Obstetrics",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Since binding is extensible, can extend valueset definition to include OBS : Obstetrics from https://hl7.org/fhir/R4/v3/ActCode/cs.html#v3-ActCode-_ActMedicalServiceCode"
+                        }
+                    ]
+                },
+                {
+                    "code": "C",
+                    "display": "Commercial Account",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Need more information to know how this is used in ADT to find the proper translation"
+                        }
+                    ]
+                },
+                {
+                    "code": "N",
+                    "display": "Not Applicable",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Since binding is extensible, can extend valueset definition to include NA : not applicable from https://terminology.hl7.org/CodeSystem-v3-NullFlavor.html"
+                        }
+                    ]
+                },
+                {
+                    "code": "U",
+                    "display": "Unknown",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Since binding is extensible, can extend valueset definition to include UNK : unknown from https://terminology.hl7.org/CodeSystem-v3-NullFlavor.html"
+                        }
+                    ]
+                },
+                {
+                    "code": "I",
+                    "display": "Inpatient",
+                    "target": [
+                        {
+                            "code": "ACUTE",
+                            "display": "inpatient acute",
+                            "equivalence": "equivalent",
+                            "comment": "If this is needed in Direct Trust, can consider expanding the value set"
+                        }
+                    ]
+                },
+                {
+                    "code": "I",
+                    "display": "Inpatient",
+                    "target": [
+                        {
+                            "code": "NONAC",
+                            "display": "inpatient non-acute",
+                            "equivalence": "equivalent",
+                            "comment": "If this is needed in Direct Trust, can consider expanding the value set"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "",
+            "target": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+            "element": [
+                {
+                    "code": "S",
+                    "display": "Short Stay",
+                    "target": [
+                        {
+                            "code": "SS",
+                            "display": "short stay",
+                            "equivalence": "equivalent",
+                            "comment": "S is an extension to the base PV!-2 patientClass  value set in V2"
+                        }
+                    ]
+                },
+                {
+                    "code": "V",
+                    "display": "Observation",
+                    "target": [
+                        {
+                            "code": "OBSENC",
+                            "display": "observation encounter",
+                            "equivalence": "equivalent",
+                            "comment": "V is an extension to the base PV!-2 patientClass  value set in V2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "http://terminology.hl7.org/CodeSystem/v2-0443",
+            "target": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+            "element": [
+                {
+                    "code": "AD",
+                    "display": "Admitting",
+                    "target": [
+                        {
+                            "code": "ADM",
+                            "display": "admitter",
+                            "equivalence": "equivalent",
+                            "comment": "Also in PV1-17 Admitting Doctor in v2"
+                        }
+                    ]
+                },
+                {
+                    "code": "AT",
+                    "display": "Attending",
+                    "target": [
+                        {
+                            "code": "ATND",
+                            "display": "attender",
+                            "equivalence": "equivalent",
+                            "comment": "Also in PV1-7 Attending Doctor in v2"
+                        }
+                    ]
+                },
+                {
+                    "code": "CP",
+                    "display": "Consulting Provider",
+                    "target": [
+                        {
+                            "code": "CON",
+                            "display": "consultant",
+                            "equivalence": "equivalent",
+                            "comment": "Also in PV1-9 Consulting Doctor"
+                        }
+                    ]
+                },
+                {
+                    "code": "FHCP",
+                    "display": "Family Health Care Professional",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "participant type valueset binding is extensible, so could add in \"FHCP\" from https://terminology.hl7.org/2.1.0/CodeSystem-v2-0443.html"
+                        }
+                    ]
+                },
+                {
+                    "code": "PP",
+                    "display": "Primary Care Provider",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "participant type valueset binding is extensible, so could add in \"PP\" from https://terminology.hl7.org/2.1.0/CodeSystem-v2-0443.html"
+                        }
+                    ]
+                },
+                {
+                    "code": "RP",
+                    "display": "Referring Provider",
+                    "target": [
+                        {
+                            "code": "REF",
+                            "display": "referrer",
+                            "equivalence": "equivalent",
+                            "comment": "Also in PV1-8 Referring doctor in v2"
+                        }
+                    ]
+                },
+                {
+                    "code": "RT",
+                    "display": "Referred to Provider",
+                    "target": [
+                        {
+                            "code": "REFT",
+                            "display": "Referred to",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "",
+            "target": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+            "element": [
+                {
+                    "code": "TF",
+                    "display": "Treating Facility",
+                    "target": [
+                        {
+                            "code": "LOC",
+                            "display": "location",
+                            "equivalence": "equivalent",
+                            "comment": "TF  is an extension to the base ROL-3 providerRole value set in V2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "http://terminology.hl7.org/CodeSystem/v2-0001",
+            "target": "http://hl7.org/fhir/administrative-gender",
+            "element": [
+                {
+                    "code": "F",
+                    "display": "Female",
+                    "target": [
+                        {
+                            "code": "female",
+                            "display": "Female",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "M",
+                    "display": "Male",
+                    "target": [
+                        {
+                            "code": "male",
+                            "display": "Male",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "O",
+                    "display": "Other",
+                    "target": [
+                        {
+                            "code": "other",
+                            "display": "Other",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "U",
+                    "display": "Unknown",
+                    "target": [
+                        {
+                            "code": "unknown",
+                            "display": "Unknown",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "A",
+                    "display": "Ambiguous",
+                    "target": [
+                        {
+                            "code": "other",
+                            "display": "Other",
+                            "equivalence": "equivalent",
+                            "comment": "Since the binding in USCorePatient is required, will have to map to \"other\""
+                        }
+                    ]
+                },
+                {
+                    "code": "N",
+                    "display": "Not Applicable",
+                    "target": [
+                        {
+                            "code": "other",
+                            "display": "Other",
+                            "equivalence": "equivalent",
+                            "comment": "Since the binding in USCorePatient is required, will have to map to \"other\""
+                        }
+                    ]
+                },
+                {
+                    "code": "X",
+                    "display": "Non-Binary",
+                    "target": [
+                        {
+                            "code": "other",
+                            "display": "Other",
+                            "equivalence": "equivalent",
+                            "comment": "Since the binding in USCorePatient is required, will have to map to \"other\""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "http://terminology.hl7.org/CodeSystem/v2-0200",
+            "target": "http://hl7.org/fhir/name-use",
+            "element": [
+                {
+                    "code": "N",
+                    "display": "Nickname",
+                    "target": [
+                        {
+                            "code": "nickname",
+                            "display": "Nickname",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "D",
+                    "display": "Customary Name",
+                    "target": [
+                        {
+                            "code": "usual",
+                            "display": "Usual",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "L",
+                    "display": "Official Registry Name",
+                    "target": [
+                        {
+                            "code": "official",
+                            "display": "Official",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "TEMP",
+                    "display": "Temporary Name",
+                    "target": [
+                        {
+                            "code": "temp",
+                            "display": "Temp",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "S",
+                    "display": "Pseudonym",
+                    "target": [
+                        {
+                            "code": "anonymous",
+                            "display": "Anonymous",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "BAD",
+                    "display": "Bad Name",
+                    "target": [
+                        {
+                            "code": "old",
+                            "display": "Old",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "M",
+                    "display": "Maiden Name",
+                    "target": [
+                        {
+                            "code": "maiden",
+                            "display": "Name changed for Marriage",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "O",
+                    "display": "Other",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Not mapable, since binding in USCorePatient is required"
+                        }
+                    ]
+                },
+                {
+                    "code": "A",
+                    "display": "Assigned",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Not mapable, since binding in USCorePatient is required"
+                        }
+                    ]
+                },
+                {
+                    "code": "B",
+                    "display": "Birth name",
+                    "target": [
+                        {
+                            "code": "maiden",
+                            "display": "Name changed for Marriage",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "C",
+                    "display": "Adopted Name",
+                    "target": [
+                        {
+                            "code": "official",
+                            "display": "Official",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "F",
+                    "display": "Fathers Name",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Not mapable, since binding in USCorePatient is required"
+                        }
+                    ]
+                },
+                {
+                    "code": "I",
+                    "display": "Licensing Name",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Not mapable, since binding in USCorePatient is required"
+                        }
+                    ]
+                },
+                {
+                    "code": "K",
+                    "display": "Business name",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Not mapable, since binding in USCorePatient is required"
+                        }
+                    ]
+                },
+                {
+                    "code": "MSK",
+                    "display": "Masked",
+                    "target": [
+                        {
+                            "code": "anonymous",
+                            "display": "Anonymous",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "NAV",
+                    "display": "Temporarily Unavailable",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Not mapable, since binding in USCorePatient is required"
+                        }
+                    ]
+                },
+                {
+                    "code": "NB",
+                    "display": "Newborn Name",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Not mapable, since binding in USCorePatient is required"
+                        }
+                    ]
+                },
+                {
+                    "code": "NOUSE",
+                    "display": "No Longer To Be Used",
+                    "target": [
+                        {
+                            "code": "old",
+                            "display": "Old",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "P",
+                    "display": "Name of Partner/Spouse",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Not mapable, since binding in USCorePatient is required"
+                        }
+                    ]
+                },
+                {
+                    "code": "R",
+                    "display": "Registered Name",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Not mapable, since binding in USCorePatient is required"
+                        }
+                    ]
+                },
+                {
+                    "code": "REL",
+                    "display": "Religious",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Not mapable, since binding in USCorePatient is required"
+                        }
+                    ]
+                },
+                {
+                    "code": "T",
+                    "display": "Indigenous/Tribal",
+                    "target": [
+                        {
+                            "code": "official",
+                            "display": "Official",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "U",
+                    "display": "Unknown",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Not mapable, since binding in USCorePatient is required"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "http://terminology.hl7.org/CodeSystem/v2-0007",
+            "target": "http://snomed.info/sct",
+            "element": [
+                {
+                    "code": "A",
+                    "display": "Accident",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Include codes from AMA (I have no license to see, so could not include) and http: //snomed.info/sct where concept is-a 308335008 (Patient encounter procedure)\n Not sure this is the right mapping - concepts seem not alinged\n Need to take to PA to find out how folks are currently using https://terminology.hl7.org/5.2.0/CodeSystem-v2-0007.html values - and then decide, if these need to be updated to match what US Core is doing (much more granular)\n in CDA use https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.32/expansion/Latest"
+                        }
+                    ]
+                },
+                {
+                    "code": "E",
+                    "display": "Emergency",
+                    "target": [
+                        {
+                            "code": "4525004",
+                            "display": "Emergency department patient visit",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "L",
+                    "display": "Labor and Delivery",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Include codes from AMA (I have no license to see, so could not include) and http: //snomed.info/sct where concept is-a 308335008 (Patient encounter procedure)\n Not sure this is the right mapping - concepts seem not alinged\n Need to take to PA to find out how folks are currently using https://terminology.hl7.org/5.2.0/CodeSystem-v2-0007.html values - and then decide, if these need to be updated to match what US Core is doing (much more granular)\n in CDA use https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.32/expansion/Latest"
+                        }
+                    ]
+                },
+                {
+                    "code": "R",
+                    "display": "Routine",
+                    "target": [
+                        {
+                            "code": "308335008",
+                            "display": "Patient encounter procedure",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "N",
+                    "display": "Newborn (Birth in healthcare facility)",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Include codes from AMA (I have no license to see, so could not include) and http: //snomed.info/sct where concept is-a 308335008 (Patient encounter procedure)\n Not sure this is the right mapping - concepts seem not alinged\n Need to take to PA to find out how folks are currently using https://terminology.hl7.org/5.2.0/CodeSystem-v2-0007.html values - and then decide, if these need to be updated to match what US Core is doing (much more granular)\n in CDA use https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.32/expansion/Latest"
+                        }
+                    ]
+                },
+                {
+                    "code": "U",
+                    "display": "Urgent",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Include codes from AMA (I have no license to see, so could not include) and http: //snomed.info/sct where concept is-a 308335008 (Patient encounter procedure)\n Not sure this is the right mapping - concepts seem not alinged\n Need to take to PA to find out how folks are currently using https://terminology.hl7.org/5.2.0/CodeSystem-v2-0007.html values - and then decide, if these need to be updated to match what US Core is doing (much more granular)\n in CDA use https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.32/expansion/Latest"
+                        }
+                    ]
+                },
+                {
+                    "code": "C",
+                    "display": "Elective",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Include codes from AMA (I have no license to see, so could not include) and http: //snomed.info/sct where concept is-a 308335008 (Patient encounter procedure)\n Not sure this is the right mapping - concepts seem not alinged\n Need to take to PA to find out how folks are currently using https://terminology.hl7.org/5.2.0/CodeSystem-v2-0007.html values - and then decide, if these need to be updated to match what US Core is doing (much more granular)\n in CDA use https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.32/expansion/Latest"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "http://terminology.hl7.org/CodeSystem/v2-0052",
+            "target": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+            "element": [
+                {
+                    "code": "A",
+                    "display": "Admitting",
+                    "target": [
+                        {
+                            "code": "AD",
+                            "display": "Admission diagnosis",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "W",
+                    "display": "Working",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "Since binding is extensible, can extend valueset, should submit UTG proposal to add to code system"
+                        }
+                    ]
+                },
+                {
+                    "code": "F",
+                    "display": "Final",
+                    "target": [
+                        {
+                            "code": "DD",
+                            "display": "Discharge diagnosis",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "http://terminology.hl7.org/CodeSystem/v2-0063",
+            "target": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+            "element": [
+                {
+                    "code": "MTH",
+                    "target": [
+                        {
+                            "code": "MTH",
+                            "display": "Mother",
+                            "equivalence": "equivalent",
+                            "comment": "This is described specifically for the maternal health use case"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "http://terminology.hl7.org/CodeSystem/v2-0201",
+            "target": "http://hl7.org/fhir/contact-point-use",
+            "element": [
+                {
+                    "code": "PRN",
+                    "display": "Primary Residence Number",
+                    "target": [
+                        {
+                            "code": "home",
+                            "display": "Home",
+                            "equivalence": "equivalent",
+                            "comment": "FHIR doesn't distinguish types of homes for contacts"
+                        }
+                    ]
+                },
+                {
+                    "code": "ORN",
+                    "display": "Other Residence Number",
+                    "target": [
+                        {
+                            "code": "home",
+                            "display": "Home",
+                            "equivalence": "equivalent",
+                            "comment": "FHIR doesn't distinguish types of homes for contacts"
+                        }
+                    ]
+                },
+                {
+                    "code": "WPN",
+                    "display": "Work Number",
+                    "target": [
+                        {
+                            "code": "work",
+                            "display": "Work",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "VHN",
+                    "display": "Vacation Home Number",
+                    "target": [
+                        {
+                            "code": "home",
+                            "display": "Home",
+                            "equivalence": "equivalent",
+                            "comment": "FHIR doesn't distinguish types of homes for contacts"
+                        }
+                    ]
+                },
+                {
+                    "code": "ASN",
+                    "display": "Answering Service Number",
+                    "target": [
+                        {
+                            "equivalence": "unmatched"
+                        }
+                    ]
+                },
+                {
+                    "code": "EMR",
+                    "display": "Emergency Number",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "unsure how to map this"
+                        }
+                    ]
+                },
+                {
+                    "code": "PRS",
+                    "display": "Personal",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "unsure how to map this"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "http://terminology.hl7.org/CodeSystem/v2-0201",
+            "target": "http://hl7.org/fhir/contact-point-system",
+            "element": [
+                {
+                    "code": "NET",
+                    "display": "Network (email) Address",
+                    "target": [
+                        {
+                            "code": "email",
+                            "display": "Email",
+                            "equivalence": "equivalent",
+                            "comment": "would need to map to different datatype element and use different value set"
+                        }
+                    ]
+                },
+                {
+                    "code": "BPN",
+                    "display": "Beeper Number",
+                    "target": [
+                        {
+                            "code": "pager",
+                            "display": "Pager",
+                            "equivalence": "equivalent",
+                            "comment": "would need to map to different datatype element and use different value set"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "http://terminology.hl7.org/CodeSystem/v2-0201",
+            "target": "",
+            "element": [
+                {
+                    "code": "DSM",
+                    "display": "Direct Secure Messaging",
+                    "target": [
+                        {
+                            "equivalence": "unmatched",
+                            "comment": "does not map at the vocabulary level - maps to extension in US Core = https://hl7.org/fhir/us/core/StructureDefinition-us-core-direct.html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

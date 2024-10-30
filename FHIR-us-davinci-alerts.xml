@@ -36,6 +36,7 @@
 <artifact id="StructureDefinition/notifications-bundle" key="StructureDefinition-notifications-bundle" name="Da Vinci Notifications Bundle Profile"/>
 <artifact id="StructureDefinition/notifications-messageheader" key="StructureDefinition-notifications-messageheader" name="Da Vinci Notifications MessageHeader Profile"/>
 <artifact id="StructureDefinition/transfer-notification-messageheader" key="StructureDefinition-discharge-notification-messageheader" name="Da Vinci Transfer Notification MessageHeader Profile"/>
+<artifact id="ConceptMap/direct-alerts" key="ConceptMap-direct-alerts" name="Direct ADT to Da Vinci Alerts ConceptMap"/>
 <artifact id="Bundle/discharge-notification-message-bundle-01" key="Bundle-discharge-notification-message-bundle-01" name="Discharge Notification Message Bundle"/>
 <artifact id="MessageHeader/discharge-notification-messageheader-01" key="MessageHeader-discharge-notification-messageheader-01" name="Discharge Notification Messageheader"/>
 <artifact deprecated="true" id="Organization/anthem" key="Organization-anthem" name="Example Payor Organization"/>
