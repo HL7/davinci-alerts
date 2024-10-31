@@ -275,7 +275,7 @@
                             "code": "SS",
                             "display": "short stay",
                             "equivalence": "equivalent",
-                            "comment": "S is an extension to the base PV!-2 patientClass  value set in V2"
+                            "comment": "S is an extension to the base PV1-2 patientClass  value set in V2"
                         }
                     ]
                 },
@@ -287,7 +287,7 @@
                             "code": "OBSENC",
                             "display": "observation encounter",
                             "equivalence": "equivalent",
-                            "comment": "V is an extension to the base PV!-2 patientClass  value set in V2"
+                            "comment": "V is an extension to the base PV1-2 patientClass  value set in V2"
                         }
                     ]
                 }

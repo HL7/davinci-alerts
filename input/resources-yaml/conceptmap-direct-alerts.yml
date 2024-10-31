@@ -183,14 +183,14 @@ group:
     - code: SS
       display: short stay
       equivalence: equivalent
-      comment: S is an extension to the base PV!-2 patientClass  value set in V2
+      comment: S is an extension to the base PV1-2 patientClass  value set in V2
   - code: V
     display: Observation
     target:
     - code: OBSENC
       display: observation encounter
       equivalence: equivalent
-      comment: V is an extension to the base PV!-2 patientClass  value set in V2
+      comment: V is an extension to the base PV1-2 patientClass  value set in V2
 - source: http://terminology.hl7.org/CodeSystem/v2-0443
   target: http://terminology.hl7.org/CodeSystem/v3-ParticipationType
   element:
