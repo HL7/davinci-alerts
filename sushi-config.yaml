@@ -34,19 +34,29 @@ version: '1.1.0-preview'
 fhirVersion: 4.0.1
 
 dependencies:
-  hl7.fhir.us.core.3.1.1:
+
+  hl7.fhir.us.core:
+    version: 7.0.0
+    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+    id: uscore7
+    reason: |
+      Needed for systems supporting USCDI v4
+  hl7.fhir.us.core.v610:
+    version: 6.1.0
+    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+    id: uscore6
+    reason: |
+      Needed for systems supporting USCDI v3
+  hl7.fhir.us.core.v311:
     version: 3.1.1
     uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
     id: uscore3
-
-  hl7.fhir.us.core:
-    version: 6.1.0
-    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
-    id: uscore
+    reason: |
+      Needed for systems supporting USCDI v1
 
   hl7.fhir.us.davinci-hrex:
     uri: 'http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/hl7.fhir.us.davinci-hrex'
-    version: 1.1.0-ballot
+    version: current #1.1.0 for publication
     id: hrex
 
 
@@ -97,36 +107,47 @@ groups:
       - Bundle/admit-notification-intermediate-translate-bundle
       - Bundle/admit-notification-intermediate-transmit-bundle
 
-  ConditionExamples:
-    name: Condition Examples 
-    description: These are Condition example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.
-    resources:
-      - Condition/adt-notification-condition-01
+  # ConditionExamples:
+  #   name: Condition Examples 
+  #   description: These are Condition example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.
+  #   resources:
+  #     - Condition/adt-notification-condition-01
 
-  CoverageExamples:
-    name: Coverage Examples 
-    description: These are Coverage example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.
-    resources:
-      - Coverage/adt-notification-coverage-01
+  # CoverageExamples:
+  #   name: Coverage Examples 
+  #   description: These are Coverage example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.
+  #   resources:
+  #     - Coverage/adt-notification-coverage-01
 
-  EncounterExamples:
-    name: Encounter Examples 
-    description: These are Encounter example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.
-    resources:
-      - Encounter/adt-notification-encounter-01
+  # EncounterExamples:
+  #   name: Encounter Examples 
+  #   description: These are Encounter example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.
+  #   resources:
+  #     - Encounter/adt-notification-encounter-01
 
-  MessageHeaderExamples:
-    name: MessageHeader Examples 
-    description: These are MessageHeader example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.
-    resources:
-      - MessageHeader/admit-notification-messageheader-01
-      - MessageHeader/admit-notification-messageheader-02
-      - MessageHeader/discharge-notification-messageheader-01
-      - MessageHeader/transfer-notification-messageheader-01
+  # MessageHeaderExamples:
+  #   name: MessageHeader Examples 
+  #   description: These are MessageHeader example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.
+  #   resources:
+  #     - MessageHeader/admit-notification-messageheader-01
+  #     - MessageHeader/admit-notification-messageheader-02
+  #     - MessageHeader/discharge-notification-messageheader-01
+  #     - MessageHeader/transfer-notification-messageheader-01
 
   CapabilityStatement:
     name: CapabilityStatements 
-    description: The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide. Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements.
+    description: |
+     There are **3 Capability Statements** defining computable definitions of FHIR conformance expectations of the RESTful transactions and specific profiles for each of the Da Vinci Notification Roles. They provide the base conformance rules that may be used for system compatibility testing, code generation, or as the basis for a conformance assessment.
+
+     The following table summarizes how these CapabilityStatements applies to the Da Vinci Notification Roles
+
+      |Role|server-mode|client-mode|
+      | --- | :---: | :---: |
+      |Sender |-| Da Vinci Notification Sender|
+      |Intermediary |Da Vinci Notification Receiver| Da Vinci Notification Forwarder|
+      |Recipient |Da Vinci Notification Receiver |-|
+      {: .grid}
+
     resources:
       - CapabilityStatement/notification-sender
       - CapabilityStatement/notification-receiver
@@ -138,11 +159,11 @@ pages:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
       valueCode: informative
     title: Home
-  exchanging.md:
-    extension:
-    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-      valueCode: informative
-    title: Architectural Approach
+  # exchanging.md:
+  #   extension:
+  #   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+  #     valueCode: informative
+  #   title: Architectural Approach
   scope.md:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -241,13 +262,13 @@ menu:
   Background:
     Da Vinci Overview: http://hl7.org/about/davinci
     Da Vinci Guiding Principles: https://hl7.org/fhir/us/davinci-hrex/2024Sep/davinci-guiding-principles.html
-    Architectural Approach: exchanging.html
+    # Architectural Approach: exchanging.html
   Specification:
     Scope and Usage: scope.html
     Roles and Actors: roles.html
     Workflow: workflow.html
     Framework: guidance.html
-    Security: security.html
+    Privacy, Safety, and Security: security.html
     Admit/Discharge/Transfer Use Case: usecases.html
   FHIR Artifacts:
     Artifacts Summary: artifacts.html
@@ -256,15 +277,20 @@ menu:
     Value Sets: artifacts.html#3
     Code Systems: artifacts.html#4
     Bundle Examples : artifacts.html#5
-    Condition Examples : artifacts.html#6
-    Coverage Examples : artifacts.html#7
-    Encounter Examples : artifacts.html#8
-    MessageHeader Examples : artifacts.html#9
-    Capability Statement : artifacts.html#10
-    Concept Maps: artifacts.html#11
+    Capability Statement : artifacts.html#6
+    Concept Maps: artifacts.html#7
+  Base Specs:
+    FHIR R4 Spec: https://hl7.org/fhir/R4/index.html
+    HRex 1.1.0: https://hl7.org/fhir/us/davinci-hrex/STU1.1/index.html
+    US Core 3.1.1: https://hl7.org/fhir/us/core/STU3.1.1/index.html
+    US Core 6.1.0: https://hl7.org/fhir/us/core/STU6.1/index.html
+    US Core 7.0.0: https://hl7.org/fhir/us/core/STU7/index.html
   Support:
-    Project Home: https://confluence.hl7.org/pages/viewpage.action?pageId=51225442
-    Discussion Forum: https://chat.fhir.org/#narrow/stream/179283-Da-Vinci
-    Propose a Change: http://hl7.org/fhir-issues
-    Downloads: downloads.html
+
+   Discussion Forum: https://chat.fhir.org/#narrow/channel/205917-Da-Vinci-Alerts
+   Project Page: https://confluence.hl7.org/pages/viewpage.action?pageId=51225442  
+   Implementer Support: https://confluence.hl7.org/display/DVP/Notifications+Implementer+Support
+   Specification Dashboard: https://jira.hl7.org/secure/Dashboard.jspa?selectPageId=11905
+   Propose a Change: https://jira.hl7.org/secure/
+   Downloads: downloads.html
   Change Log: changes.html

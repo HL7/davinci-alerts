@@ -24,12 +24,15 @@ caseSensitive: true
 hierarchyMeaning: is-a
 content: complete
 count: 23
-property:
-  - code: abstract
-    description: >-
-      True if an element is considered 'abstract' - in other words, the code is
-      not for use as a real concept.
-    type: boolean
+# ======== Remove Property since not using and causing a qa warning ==========
+# property:
+#   - code: abstract
+#     uri: 'http://hl7.org/fhir/us/davinci-alerts/concept-properties'
+#     description: >-
+#       True if an element is considered 'abstract' - in other words, the code is
+#       not for use as a real concept.
+#     type: boolean
+# ==============================================================================
 concept:
   - code: notification-refill-request
     display: Prescription Refill Request Notification

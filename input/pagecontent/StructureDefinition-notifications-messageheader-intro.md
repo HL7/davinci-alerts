@@ -29,11 +29,11 @@ The following data-elements are mandatory (i.e., data MUST be present) or must b
 - The `reference` attribute is required for `MessageHeader.sender`, `MessageHeader.author`, `MessageHeader.responsible`, and `MessageHeader.focus` so there is no question how to find the resource inside the bundle - the use of *only* an `identifier` attribute (in other words, a logical reference) is not permitted.
 - <span class="bg-success" markdown="1">This profile uses the [Alternate Reference] extension to allow a Device to be a sender or author, because in some automated systems there may be no human provider involved in certain notifications.  This pattern aligns with [FHIR R5 MessageHeader] for these elements.  See [this example](MessageHeader-admit-notification-messageheader-02.html) for how this is implemented.</span><!-- new-content -->
 
-### Examples
+<!-- {% raw %} ### Examples
 
 {% include examples-note.md %}
 
 - [Messageheader Admit Notification Messageheader 01]
-- [Messageheader Discharge Notification Messageheader 01]
+- [Messageheader Discharge Notification Messageheader 01] {% endraw %} -->
 
 {% include link-list.md %}

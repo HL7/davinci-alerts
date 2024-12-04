@@ -36,4 +36,11 @@ The following link to the [ImplementationGuide] resource defines the technical d
 
 - [Unsolicited Notification ImplementationGuide Resource]
 
+### Other Downloads
+
+The following links allow you to download various parts of other referenced implementation guides for local use:
+
+- The full [FHIR R4 core] specifications and other [FHIR core downloads]
+- A [validator] that can be used to check FHIR resource instance validity and [instructions on how to use it]
+
 {% include link-list.md %}

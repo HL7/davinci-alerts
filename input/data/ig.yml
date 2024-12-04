@@ -45,18 +45,37 @@ license: CC0-1.0
 fhirVersion:
 - 4.0.1
 dependsOn:
-- id: uscore3
-  packageId: hl7.fhir.us.core.3.1.1
-  uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
-  version: 3.1.1
-- id: uscore
+- id: uscore7
   packageId: hl7.fhir.us.core
   uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+  version: 7.0.0
+  extension:
+  - url: http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.dependsOn.reason
+    valueMarkdown: 'Needed for systems supporting USCDI v4
+
+      '
+- id: uscore6
+  packageId: hl7.fhir.us.core.v610
+  uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
   version: 6.1.0
+  extension:
+  - url: http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.dependsOn.reason
+    valueMarkdown: 'Needed for systems supporting USCDI v3
+
+      '
+- id: uscore3
+  packageId: hl7.fhir.us.core.v311
+  uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+  version: 3.1.1
+  extension:
+  - url: http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.dependsOn.reason
+    valueMarkdown: 'Needed for systems supporting USCDI v1
+
+      '
 - id: hrex
   packageId: hl7.fhir.us.davinci-hrex
   uri: http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/hl7.fhir.us.davinci-hrex
-  version: 1.1.0-ballot
+  version: current
 definition:
   grouping:
   - id: BaseDaVinciNotificationProfiles
@@ -83,32 +102,18 @@ definition:
     name: Bundle Examples
     description: These are Bundle example instances that show what data produced and
       consumed by systems conforming with this implementation guide might look like.
-  - id: ConditionExamples
-    name: Condition Examples
-    description: These are Condition example instances that show what data produced
-      and consumed by systems conforming with this implementation guide might look
-      like.
-  - id: CoverageExamples
-    name: Coverage Examples
-    description: These are Coverage example instances that show what data produced
-      and consumed by systems conforming with this implementation guide might look
-      like.
-  - id: EncounterExamples
-    name: Encounter Examples
-    description: These are Encounter example instances that show what data produced
-      and consumed by systems conforming with this implementation guide might look
-      like.
-  - id: MessageHeaderExamples
-    name: MessageHeader Examples
-    description: These are MessageHeader example instances that show what data produced
-      and consumed by systems conforming with this implementation guide might look
-      like.
   - id: CapabilityStatement
     name: CapabilityStatements
-    description: The following artifacts define the specific capabilities that different
-      types of systems are expected to have in order to comply with this implementation
-      guide. Systems conforming to this implementation guide are expected to declare
-      conformance to one or more of the following capability statements.
+    description: "There are **3 Capability Statements** defining computable definitions\
+      \ of FHIR conformance expectations of the RESTful transactions and specific\
+      \ profiles for each of the Da Vinci Notification Roles. They provide the base\
+      \ conformance rules that may be used for system compatibility testing, code\
+      \ generation, or as the basis for a conformance assessment.\n\nThe following\
+      \ table summarizes how these CapabilityStatements applies to the Da Vinci Notification\
+      \ Roles\n\n |Role|server-mode|client-mode|\n | --- | :---: | :---: |\n |Sender\
+      \ |-| Da Vinci Notification Sender|\n |Intermediary |Da Vinci Notification Receiver|\
+      \ Da Vinci Notification Forwarder|\n |Recipient |Da Vinci Notification Receiver\
+      \ |-|\n {: .grid}\n"
   resource:
   - reference:
       reference: Bundle/admit-notification-intermediate-translate-bundle
@@ -129,37 +134,6 @@ definition:
     exampleCanonical: http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle
     groupingId: BundleExamples
   - reference:
-      reference: MessageHeader/admit-notification-messageheader-01
-    description: Admit Notification Messageheader example
-    name: Admit Notification Messageheader
-    exampleCanonical: http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader
-    groupingId: MessageHeaderExamples
-  - reference:
-      reference: MessageHeader/admit-notification-messageheader-02
-    description: Admit Notification Messageheader example referencing a Device for
-      the author and sender
-    name: Admit Notification Messageheader with Device
-    exampleCanonical: http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader
-    groupingId: MessageHeaderExamples
-  - reference:
-      reference: Condition/adt-notification-condition-01
-    description: ADT Notification Condition example
-    name: ADT Notification Condition
-    exampleCanonical: http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-condition
-    groupingId: ConditionExamples
-  - reference:
-      reference: Coverage/adt-notification-coverage-01
-    description: ADT Notification Coverage example
-    name: ADT Notification Coverage
-    exampleCanonical: http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-coverage
-    groupingId: CoverageExamples
-  - reference:
-      reference: Encounter/adt-notification-encounter-01
-    description: ADT Notification Encounter example
-    name: ADT Notification Encounter
-    exampleCanonical: http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter
-    groupingId: EncounterExamples
-  - reference:
       reference: StructureDefinition/admit-notification-messageheader
     description: The Da Vinci Admit Notification MessageHeader Profile builds on the
       [Da Vinci Notifications MessageHeader Profile](StructureDefinition-notifications-messageheader.html)
@@ -173,32 +147,38 @@ definition:
   - reference:
       reference: StructureDefinition/adt-notification-condition
     description: The Da Vinci Admit/Discharge/Transfer Notification Condition Profile
-      is based on the [US Core Condition Encounter Diagnosis Profile](http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis)
-      and adds the mandatory `Condition.encounter` element which references the [Da
-      Vinci Admit/Discharge/Transfer Notification Encounter Profile](StructureDefinition-adt-notification-encounter.html)
-      in the same message Bundle.
+      is based on the US Core Condition Encounter Diagnosis Profile and and complies
+      with US Core versions 3.1.1, 6.1.0, and 7.0.0. It adds the mandatory `Condition.encounter`
+      element which references the [Da Vinci Admit/Discharge/Transfer Notification
+      Encounter Profile](StructureDefinition-adt-notification-encounter.html) in the
+      same message Bundle.
     exampleBoolean: false
     name: Da Vinci Admit/Discharge/Transfer Notification Condition Profile
     groupingId: DaVinciADTNotificationProfiles
   - reference:
       reference: StructureDefinition/adt-notification-coverage
-    description: The Da Vinci Admit/Discharge/Transfer Notification Coverage Profile
+    description: 'The Da Vinci Admit/Discharge/Transfer Notification Coverage Profile
       is based on the [HRex Coverage Profile](http://build.fhir.org/ig/HL7/davinci-ehrx/StructureDefinition-hrex-coverage.html)
       and constrains the Patient resource referenced by the `Coverage.beneficiary`
       element to be found in the same message Bundle.
+
+      The Da Vinci Admit/Discharge/Transfer Notification Coverage Profile is based
+      on the US Core Coverage Profile and complies with US Core versions 6.1.0, and
+      7.0.0.  It constrains the resources referenced by the `Coverage.beneficiary`
+      element to the US Core Patient Profile. It also constrains the referenced resource
+      to be an entry in the message Bundle that it populates.'
     exampleBoolean: false
     name: Da Vinci Admit/Discharge/Transfer Notification Coverage Profile
     groupingId: DaVinciADTNotificationProfiles
   - reference:
       reference: StructureDefinition/adt-notification-encounter
     description: The Da Vinci Admit/Discharge/Transfer Notification Encounter Profile
-      is based on the [US Core Encounter Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-encounter.html)
-      and constrains the resources referenced by the `Encounter.Subject` to the [US
-      Core patient Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-patient.html)
-      ,`Encounter.participant.individual` to the [US Core Practitioner Profile](http://hl7.org/fhir/us/davinci-hrex/StructureDefinition/hrex-practitioner),
-      and `Encounter.Location` to the [US Core Location Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-location.html).
-      It also constrains these referenced resources to be found in the same message
-      Bundle.
+      is based on the US Core Encounter Profile and complies with US Core versions
+      3.1.1, 6.1.0, and 7.0.0.  It constrains the resources referenced by the `Encounter.Subject`
+      to the US Core Patient Profile ,`Encounter.participant.individual` to the US
+      Core Practitioner Profile and `Encounter.Location` to the US Core Location Profile.
+      It also constrains these referenced resources to be entries in the message Bundle
+      that it populates.
     exampleBoolean: false
     name: Da Vinci Admit/Discharge/Transfer Notification Encounter Profile
     groupingId: DaVinciADTNotificationProfiles
@@ -304,12 +284,6 @@ definition:
     exampleCanonical: http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle
     groupingId: BundleExamples
   - reference:
-      reference: MessageHeader/discharge-notification-messageheader-01
-    description: Discharge Notification Messageheader example
-    name: Discharge Notification Messageheader
-    exampleCanonical: http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/discharge-notification-messageheader
-    groupingId: MessageHeaderExamples
-  - reference:
       reference: CapabilityStatement/notification-forwarder
     description: This CapabilityStatement describes the expected capabilities of a
       Da Vinci Intermediary when forwarding Unsolicited Notifications transacted with
@@ -339,12 +313,6 @@ definition:
     name: Transfer Notification Message Bundle
     exampleCanonical: http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle
     groupingId: BundleExamples
-  - reference:
-      reference: MessageHeader/transfer-notification-messageheader-01
-    description: Transfer Notification Messageheader example
-    name: Transfer Notification Messageheader
-    exampleCanonical: http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader
-    groupingId: MessageHeaderExamples
   page:
     nameUrl: toc.html
     title: Table of Contents
@@ -352,12 +320,6 @@ definition:
     page:
     - nameUrl: index.html
       title: Home
-      generation: markdown
-      extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: informative
-    - nameUrl: exchanging.html
-      title: Architectural Approach
       generation: markdown
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status

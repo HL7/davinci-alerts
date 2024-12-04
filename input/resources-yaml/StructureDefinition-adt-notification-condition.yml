@@ -1,5 +1,16 @@
 resourceType: StructureDefinition
 id: adt-notification-condition
+# ======= add to support 3 US Core Versions ========
+extension:
+  - url: >-
+      http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile
+    valueCanonical: >-
+      http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition|3.1.1
+  - url: >-
+      http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile
+    valueCanonical: >-
+      http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis|6.1.0
+# =========================================================
 url: >-
   http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-condition
 version: 1.0.0
@@ -14,8 +25,7 @@ contact:
       - system: url
         value: 'http://www.hl7.org/Special/committees/inm/index.cfm'
 description: >-
-  The Da Vinci Admit/Discharge/Transfer Notification Condition Profile is based on the [US Core Condition Encounter Diagnosis Profile](http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis) and adds the mandatory `Condition.encounter` element which
-  references the [Da Vinci Admit/Discharge/Transfer Notification Encounter Profile](StructureDefinition-adt-notification-encounter.html) in the same message Bundle.
+  The Da Vinci Admit/Discharge/Transfer Notification Condition Profile is based on the US Core Condition Encounter Diagnosis Profile and and complies with US Core versions 3.1.1, 6.1.0, and 7.0.0. It adds the mandatory `Condition.encounter` element which references the [Da Vinci Admit/Discharge/Transfer Notification Encounter Profile](StructureDefinition-adt-notification-encounter.html) in the same message Bundle.
 jurisdiction:
   - coding:
       - system: 'urn:iso:std:iso:3166'

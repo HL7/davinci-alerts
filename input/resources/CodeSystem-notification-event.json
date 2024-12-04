@@ -35,13 +35,6 @@
     "hierarchyMeaning": "is-a",
     "content": "complete",
     "count": 23,
-    "property": [
-        {
-            "code": "abstract",
-            "description": "True if an element is considered 'abstract' - in other words, the code is not for use as a real concept.",
-            "type": "boolean"
-        }
-    ],
     "concept": [
         {
             "code": "notification-refill-request",

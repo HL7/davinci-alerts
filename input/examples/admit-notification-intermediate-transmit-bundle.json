@@ -1,656 +1,720 @@
 {
-  "id": "admit-notification-intermediate-transmit-bundle",
-  "entry": [
-    {
-      "fullUrl": "urn:uuid:2f5fb9f0-e103-11ea-a0c8-0aa89ff15e09",
-      "resource": {
-        "id": "2f5fb9f0-e103-11ea-a0c8-0aa89ff15e09",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader",
-            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader"
-          ]
-        },
-        "author": {
-          "display": "Dr. Janeth814 Jakubowski832",
-          "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a"
-        },
-        "destination": [
-          {
-            "endpoint": "https://example.org/Endpoints/my-destination",
-            "name": "My Destination"
-          }
-        ],
-        "eventCoding": {
-          "code": "notification-admit",
-          "display": "Admit Notification",
-          "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"
-        },
-        "focus": [
-          {
-            "display": "Admit Notification(Unknown (qualifier value))",
-            "reference": "urn:uuid:5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82"
-          }
-        ],
-        "responsible": {
-          "display": "HOLY FAMILY HOSPITAL",
-          "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
-        },
-        "sender": {
-          "display": "Da Vinci Intermediary",
-          "reference": "urn:uuid:4f7c997a-d6a4-11ea-814c-b5baa7182d44"
-        },
-        "source": {
-          "contact": {
-            "system": "phone",
-            "value": "+1-800-555-5555"
-          },
-          "endpoint": "https://example.org/Endpoints/P999",
-          "name": "Da Vinci Intermediary Source Application",
-          "software": "Acme Patient Manager",
-          "version": "3.1.45.AABB"
-        },
-        "resourceType": "MessageHeader"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:2f5fddea-e103-11ea-a0c8-0aa89ff15e09",
-      "resource": {
-        "id": "2f5fddea-e103-11ea-a0c8-0aa89ff15e09",
-        "activity": {
-          "coding": [
-            {
-              "code": "transmit",
-              "display": "Transmit Record Lifecycle Event",
-              "system": "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
-            }
-          ],
-          "text": "Forward the message bundle"
-        },
-        "agent": [
-          {
-            "onBehalfOf": {
-              "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
-            },
-            "type": {
-              "coding": [
-                {
-                  "code": "author",
-                  "display": "Author",
-                  "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type"
-                }
-              ]
-            },
-            "who": {
-              "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a"
-            }
-          },
-          {
-            "type": {
-              "coding": [
-                {
-                  "code": "transmitter",
-                  "display": "Transmitter",
-                  "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type"
-                }
-              ]
-            },
-            "who": {
-              "reference": "urn:uuid:4f7c997a-d6a4-11ea-814c-b5baa7182d44"
-            }
-          }
-        ],
-        "recorded": "2020-08-18T03:30:38.388714Z",
-        "target": [
-          {
-            "reference": "urn:uuid:2f5fb9f0-e103-11ea-a0c8-0aa89ff15e09"
-          }
-        ],
-        "resourceType": "Provenance"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82",
-      "resource": {
-        "id": "5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82",
-        "meta": {
-          "lastUpdated": "2020-04-28T21:32:21.199+00:00",
-          "source": "#DlfWMd7j9EX8TaLI",
-          "versionId": "54"
-        },
-        "class": {
-          "code": "EMER",
-          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-        },
-        "identifier": [
-          {
-            "system": "http://example.org",
-            "value": "Elden718Halvorson12420181021T2122150700"
-          }
-        ],
-        "location": [
-          {
-            "location": {
-              "display": "HOLY FAMILY HOSPITAL",
-              "reference": "urn:uuid:09188b81-0d1d-453c-b0fa-203ef88c794c"
-            }
-          }
-        ],
-        "participant": [
-          {
-            "individual": {
-              "display": "Dr. Janeth814 Jakubowski832",
-              "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a"
-            }
-          }
-        ],
-        "period": {
-          "end": "2018-10-21T22:22:15-07:00",
-          "start": "2018-10-21T21:22:15-07:00"
-        },
-        "serviceProvider": {
-          "display": "HOLY FAMILY HOSPITAL",
-          "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
-        },
-        "status": "in-progress",
-        "subject": {
-          "display": "Mr. Elden718 Halvorson124",
-          "reference": "urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
-        },
-        "type": [
-          {
-            "coding": [
-              {
-                "code": "261665006",
-                "display": "Unknown (qualifier value)",
-                "system": "http://snomed.info/sct"
-              }
-            ],
-            "text": "Unknown (qualifier value)"
-          }
-        ],
-        "resourceType": "Encounter"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b",
-      "resource": {
-        "id": "06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b",
-        "meta": {
-          "lastUpdated": "2020-04-28T20:27:52.935+00:00",
-          "source": "#pPvYTutotnO7vQfK",
-          "versionId": "4"
-        },
+    "id": "admit-notification-intermediate-transmit-bundle",
+    "meta": {
         "extension": [
-          {
-            "extension": [
-              {
-                "url": "ombCategory",
-                "valueCoding": {
-                  "code": "2106-3",
-                  "display": "White",
-                  "system": "urn:oid:2.16.840.1.113883.6.238"
-                }
-              },
-              {
-                "url": "text",
-                "valueString": "White"
-              }
-            ],
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
-          },
-          {
-            "extension": [
-              {
-                "url": "ombCategory",
-                "valueCoding": {
-                  "code": "2186-5",
-                  "display": "Not Hispanic or Latino",
-                  "system": "urn:oid:2.16.840.1.113883.6.238"
-                }
-              },
-              {
-                "url": "text",
-                "valueString": "Not Hispanic or Latino"
-              }
-            ],
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
-            "valueString": "Marge692 Yost751"
-          },
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
-            "valueCode": "M"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
-            "valueAddress": {
-              "city": "Rockland",
-              "country": "US",
-              "state": "Massachusetts"
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Admit Notification Intermediate Transmit Bundle"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "Admit Notification Intermediate Transmit Bundle example"
             }
-          }
         ],
-        "address": [
-          {
-            "extension": [
-              {
-                "extension": [
-                  {
-                    "url": "latitude",
-                    "valueDecimal": 42.757779285956644
-                  },
-                  {
-                    "url": "longitude",
-                    "valueDecimal": -71.14760946593316
-                  }
+        "profile": [
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle"
+        ]
+    },
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:2f5fb9f0-e103-11ea-a0c8-0aa89ff15e09",
+            "resource": {
+                "id": "2f5fb9f0-e103-11ea-a0c8-0aa89ff15e09",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader",
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader"
+                    ]
+                },
+                "author": {
+                    "display": "Dr. Janeth814 Jakubowski832",
+                    "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a"
+                },
+                "destination": [
+                    {
+                        "endpoint": "https://example.org/Endpoints/my-destination",
+                        "name": "My Destination"
+                    }
                 ],
-                "url": "http://hl7.org/fhir/StructureDefinition/geolocation"
-              }
-            ],
-            "city": "Methuen",
-            "country": "US",
-            "line": [
-              "715 Crona Corner"
-            ],
-            "postalCode": "01844",
-            "state": "MA"
-          }
-        ],
-        "birthDate": "2000-10-15",
-        "communication": [
-          {
-            "language": {
-              "coding": [
-                {
-                  "code": "en-US",
-                  "display": "English (Region=United States)",
-                  "system": "urn:ietf:bcp:47"
-                }
-              ],
-              "text": "English"
+                "eventCoding": {
+                    "code": "notification-admit",
+                    "display": "Admit Notification",
+                    "system": "http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event"
+                },
+                "focus": [
+                    {
+                        "display": "Admit Notification(Unknown (qualifier value))",
+                        "reference": "urn:uuid:5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82"
+                    }
+                ],
+                "responsible": {
+                    "display": "HOLY FAMILY HOSPITAL",
+                    "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
+                },
+                "sender": {
+                    "display": "Da Vinci Intermediary",
+                    "reference": "urn:uuid:4f7c997a-d6a4-11ea-814c-b5baa7182d44"
+                },
+                "source": {
+                    "contact": {
+                        "system": "phone",
+                        "value": "+1-800-555-5555"
+                    },
+                    "endpoint": "https://example.org/Endpoints/P999",
+                    "name": "Da Vinci Intermediary Source Application",
+                    "software": "Acme Patient Manager",
+                    "version": "3.1.45.AABB"
+                },
+                "resourceType": "MessageHeader"
             }
-          }
-        ],
-        "gender": "male",
-        "identifier": [
-          {
-            "system": "https://github.com/synthetichealth/synthea",
-            "value": "06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
-          },
-          {
-            "system": "http://hospital.smarthealthit.org",
-            "type": {
-              "coding": [
-                {
-                  "code": "MR",
-                  "display": "Medical Record Number",
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                }
-              ],
-              "text": "Medical Record Number"
-            },
-            "value": "06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
-          },
-          {
-            "system": "http://hl7.org/fhir/sid/us-ssn",
-            "type": {
-              "coding": [
-                {
-                  "code": "SS",
-                  "display": "Social Security Number",
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                }
-              ],
-              "text": "Social Security Number"
-            },
-            "value": "999-87-1037"
-          },
-          {
-            "system": "urn:oid:2.16.840.1.113883.4.3.25",
-            "type": {
-              "coding": [
-                {
-                  "code": "DL",
-                  "display": "Driver's license number",
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                }
-              ],
-              "text": "Driver's License"
-            },
-            "value": "S99952689"
-          }
-        ],
-        "maritalStatus": {
-          "coding": [
-            {
-              "code": "S",
-              "display": "Never Married",
-              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+        },
+        {
+            "fullUrl": "urn:uuid:2f5fddea-e103-11ea-a0c8-0aa89ff15e09",
+            "resource": {
+                "id": "2f5fddea-e103-11ea-a0c8-0aa89ff15e09",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+                    ]
+                },
+                "activity": {
+                    "coding": [
+                        {
+                            "code": "transmit",
+                            "display": "Transmit Record Lifecycle Event",
+                            "system": "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
+                        }
+                    ],
+                    "text": "Forward the message bundle"
+                },
+                "agent": [
+                    {
+                        "onBehalfOf": {
+                            "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
+                        },
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "author",
+                                    "display": "Author",
+                                    "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type"
+                                }
+                            ]
+                        },
+                        "who": {
+                            "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a"
+                        }
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "transmitter",
+                                    "display": "Transmitter",
+                                    "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type"
+                                }
+                            ]
+                        },
+                        "who": {
+                            "reference": "urn:uuid:4f7c997a-d6a4-11ea-814c-b5baa7182d44"
+                        }
+                    }
+                ],
+                "recorded": "2020-08-18T03:30:38.388714Z",
+                "target": [
+                    {
+                        "reference": "urn:uuid:2f5fb9f0-e103-11ea-a0c8-0aa89ff15e09"
+                    }
+                ],
+                "resourceType": "Provenance"
             }
-          ],
-          "text": "Never Married"
         },
-        "multipleBirthBoolean": false,
-        "name": [
-          {
-            "family": "Halvorson124",
-            "given": [
-              "Elden718"
-            ],
-            "prefix": [
-              "Mr."
-            ],
-            "use": "official"
-          }
-        ],
-        "telecom": [
-          {
-            "system": "phone",
-            "use": "home",
-            "value": "555-903-1143"
-          }
-        ],
-        "resourceType": "Patient"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:09188b81-0d1d-453c-b0fa-203ef88c794c",
-      "resource": {
-        "id": "09188b81-0d1d-453c-b0fa-203ef88c794c",
-        "meta": {
-          "lastUpdated": "2020-04-28T20:27:53.156+00:00",
-          "source": "#pPvYTutotnO7vQfK",
-          "versionId": "4"
-        },
-        "address": {
-          "city": "METHUEN",
-          "country": "US",
-          "line": [
-            "70 EAST STREET"
-          ],
-          "postalCode": "01844",
-          "state": "MA"
-        },
-        "managingOrganization": {
-          "display": "HOLY FAMILY HOSPITAL",
-          "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
-        },
-        "name": "HOLY FAMILY HOSPITAL",
-        "position": {
-          "latitude": 42.742751,
-          "longitude": -71.178588
-        },
-        "status": "active",
-        "telecom": [
-          {
-            "system": "phone",
-            "value": "9786870156"
-          }
-        ],
-        "resourceType": "Location"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a",
-      "resource": {
-        "id": "0000016f-57cb-cdac-0000-00000000014a",
-        "meta": {
-          "lastUpdated": "2020-04-28T20:27:53.186+00:00",
-          "source": "#pPvYTutotnO7vQfK",
-          "versionId": "4"
-        },
-        "active": true,
-        "address": [
-          {
-            "city": "METHUEN",
-            "country": "US",
-            "line": [
-              "70 EAST STREET"
-            ],
-            "postalCode": "01844",
-            "state": "MA"
-          }
-        ],
-        "gender": "female",
-        "identifier": [
-          {
-            "system": "http://hl7.org/fhir/sid/us-npi",
-            "value": "9999999995"
-          }
-        ],
-        "name": [
-          {
-            "family": "Jakubowski832",
-            "given": [
-              "Janeth814"
-            ],
-            "prefix": [
-              "Dr."
-            ]
-          }
-        ],
-        "telecom": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct",
-                "valueBoolean": true
-              }
-            ],
-            "system": "email",
-            "use": "work",
-            "value": "Janeth814.Jakubowski832@example.com"
-          }
-        ],
-        "resourceType": "Practitioner"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983",
-      "resource": {
-        "id": "a9f20dc1-5147-3789-bcef-bbecb41c5983",
-        "meta": {
-          "lastUpdated": "2020-04-28T20:27:52.708+00:00",
-          "source": "#pPvYTutotnO7vQfK",
-          "versionId": "4"
-        },
-        "active": true,
-        "address": [
-          {
-            "city": "METHUEN",
-            "country": "US",
-            "line": [
-              "70 EAST STREET"
-            ],
-            "postalCode": "01844",
-            "state": "MA"
-          }
-        ],
-        "identifier": [
-          {
-            "system": "https://github.com/synthetichealth/synthea",
-            "value": "a9f20dc1-5147-3789-bcef-bbecb41c5983"
-          }
-        ],
-        "name": "HOLY FAMILY HOSPITAL",
-        "telecom": [
-          {
-            "system": "phone",
-            "value": "9786870156"
-          }
-        ],
-        "type": [
-          {
-            "coding": [
-              {
-                "code": "prov",
-                "display": "Healthcare Provider",
-                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
-              }
-            ],
-            "text": "Healthcare Provider"
-          }
-        ],
-        "resourceType": "Organization"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:4ac41715-fcbd-421c-8796-9b2c9706dd3f",
-      "resource": {
-        "id": "4ac41715-fcbd-421c-8796-9b2c9706dd3f",
-        "meta": {
-          "lastUpdated": "2020-04-28T20:28:00.008+00:00",
-          "source": "#cabiJIK51sD2iz4N",
-          "versionId": "10"
-        },
-        "category": [
-          {
-            "coding": [
-              {
-                "code": "encounter-diagnosis",
-                "display": "Encounter Diagnosis",
-                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
-              }
-            ]
-          }
-        ],
-        "clinicalStatus": {
-          "coding": [
-            {
-              "code": "active",
-              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+        {
+            "fullUrl": "urn:uuid:5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82",
+            "resource": {
+                "id": "5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82",
+                "meta": {
+                    "lastUpdated": "2020-04-28T21:32:21.199+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter",
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter"
+                    ],
+                    "source": "#DlfWMd7j9EX8TaLI",
+                    "versionId": "54"
+                },
+                "class": {
+                    "code": "EMER",
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+                },
+                "identifier": [
+                    {
+                        "system": "http://example.org",
+                        "value": "Elden718Halvorson12420181021T2122150700"
+                    }
+                ],
+                "location": [
+                    {
+                        "location": {
+                            "display": "HOLY FAMILY HOSPITAL",
+                            "reference": "urn:uuid:09188b81-0d1d-453c-b0fa-203ef88c794c"
+                        }
+                    }
+                ],
+                "participant": [
+                    {
+                        "individual": {
+                            "display": "Dr. Janeth814 Jakubowski832",
+                            "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2018-10-21T22:22:15-07:00",
+                    "start": "2018-10-21T21:22:15-07:00"
+                },
+                "serviceProvider": {
+                    "display": "HOLY FAMILY HOSPITAL",
+                    "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
+                },
+                "status": "in-progress",
+                "subject": {
+                    "display": "Mr. Elden718 Halvorson124",
+                    "reference": "urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
+                },
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "code": "261665006",
+                                "display": "Unknown (qualifier value)",
+                                "system": "http://snomed.info/sct"
+                            }
+                        ],
+                        "text": "Unknown (qualifier value)"
+                    }
+                ],
+                "resourceType": "Encounter"
             }
-          ]
         },
-        "code": {
-          "coding": [
-            {
-              "code": "1234",
-              "display": "Examplitis",
-              "system": "http://example.org/fhir/conditions"
+        {
+            "fullUrl": "urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b",
+            "resource": {
+                "id": "06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b",
+                "meta": {
+                    "lastUpdated": "2020-04-28T20:27:52.935+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                    ],
+                    "source": "#pPvYTutotnO7vQfK",
+                    "versionId": "4"
+                },
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "ombCategory",
+                                "valueCoding": {
+                                    "code": "2106-3",
+                                    "display": "White",
+                                    "system": "urn:oid:2.16.840.1.113883.6.238"
+                                }
+                            },
+                            {
+                                "url": "text",
+                                "valueString": "White"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "ombCategory",
+                                "valueCoding": {
+                                    "code": "2186-5",
+                                    "display": "Not Hispanic or Latino",
+                                    "system": "urn:oid:2.16.840.1.113883.6.238"
+                                }
+                            },
+                            {
+                                "url": "text",
+                                "valueString": "Not Hispanic or Latino"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+                        "valueString": "Marge692 Yost751"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+                        "valueCode": "M"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+                        "valueAddress": {
+                            "city": "Rockland",
+                            "country": "US",
+                            "state": "Massachusetts"
+                        }
+                    }
+                ],
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "latitude",
+                                        "valueDecimal": 42.757779285956644
+                                    },
+                                    {
+                                        "url": "longitude",
+                                        "valueDecimal": -71.14760946593316
+                                    }
+                                ],
+                                "url": "http://hl7.org/fhir/StructureDefinition/geolocation"
+                            }
+                        ],
+                        "city": "Methuen",
+                        "country": "US",
+                        "line": [
+                            "715 Crona Corner"
+                        ],
+                        "postalCode": "01844",
+                        "state": "MA"
+                    }
+                ],
+                "birthDate": "2000-10-15",
+                "communication": [
+                    {
+                        "language": {
+                            "coding": [
+                                {
+                                    "code": "en-US",
+                                    "display": "English (Region=United States)",
+                                    "system": "urn:ietf:bcp:47"
+                                }
+                            ],
+                            "text": "English"
+                        }
+                    }
+                ],
+                "gender": "male",
+                "identifier": [
+                    {
+                        "system": "https://github.com/synthetichealth/synthea",
+                        "value": "06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
+                    },
+                    {
+                        "system": "http://hospital.smarthealthit.org",
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "MR",
+                                    "display": "Medical Record Number",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                                }
+                            ],
+                            "text": "Medical Record Number"
+                        },
+                        "value": "06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
+                    },
+                    {
+                        "system": "http://hl7.org/fhir/sid/us-ssn",
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "SS",
+                                    "display": "Social Security Number",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                                }
+                            ],
+                            "text": "Social Security Number"
+                        },
+                        "value": "999-87-1037"
+                    },
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.4.3.25",
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "DL",
+                                    "display": "Driver's license number",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                                }
+                            ],
+                            "text": "Driver's License"
+                        },
+                        "value": "S99952689"
+                    }
+                ],
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "code": "S",
+                            "display": "Never Married",
+                            "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+                        }
+                    ],
+                    "text": "Never Married"
+                },
+                "multipleBirthBoolean": false,
+                "name": [
+                    {
+                        "family": "Halvorson124",
+                        "given": [
+                            "Elden718"
+                        ],
+                        "prefix": [
+                            "Mr."
+                        ],
+                        "use": "official"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "home",
+                        "value": "555-903-1143"
+                    }
+                ],
+                "resourceType": "Patient"
             }
-          ],
-          "text": "Examplitis"
         },
-        "encounter": {
-          "reference": "urn:uuid:5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82"
-        },
-        "onsetDateTime": "2018-10-21T21:22:15-07:00",
-        "recordedDate": "2018-10-21T21:22:15-07:00",
-        "subject": {
-          "reference": "urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
-        },
-        "verificationStatus": {
-          "coding": [
-            {
-              "code": "confirmed",
-              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+        {
+            "fullUrl": "urn:uuid:09188b81-0d1d-453c-b0fa-203ef88c794c",
+            "resource": {
+                "id": "09188b81-0d1d-453c-b0fa-203ef88c794c",
+                "meta": {
+                    "lastUpdated": "2020-04-28T20:27:53.156+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+                    ],
+                    "source": "#pPvYTutotnO7vQfK",
+                    "versionId": "4"
+                },
+                "address": {
+                    "city": "METHUEN",
+                    "country": "US",
+                    "line": [
+                        "70 EAST STREET"
+                    ],
+                    "postalCode": "01844",
+                    "state": "MA"
+                },
+                "managingOrganization": {
+                    "display": "HOLY FAMILY HOSPITAL",
+                    "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
+                },
+                "name": "HOLY FAMILY HOSPITAL",
+                "position": {
+                    "latitude": 42.742751,
+                    "longitude": -71.178588
+                },
+                "status": "active",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "9786870156"
+                    }
+                ],
+                "resourceType": "Location"
             }
-          ]
         },
-        "resourceType": "Condition"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:cc6ac2fe-2bf4-11ea-a5f5-a4d18ccf5172",
-      "resource": {
-        "id": "cc6ac2fe-2bf4-11ea-a5f5-a4d18ccf5172",
-        "meta": {
-          "lastUpdated": "2020-04-28T20:27:52.686+00:00",
-          "source": "#pPvYTutotnO7vQfK",
-          "versionId": "10"
+        {
+            "fullUrl": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a",
+            "resource": {
+                "id": "0000016f-57cb-cdac-0000-00000000014a",
+                "meta": {
+                    "lastUpdated": "2020-04-28T20:27:53.186+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+                    ],
+                    "source": "#pPvYTutotnO7vQfK",
+                    "versionId": "4"
+                },
+                "active": true,
+                "address": [
+                    {
+                        "city": "METHUEN",
+                        "country": "US",
+                        "line": [
+                            "70 EAST STREET"
+                        ],
+                        "postalCode": "01844",
+                        "state": "MA"
+                    }
+                ],
+                "gender": "female",
+                "identifier": [
+                    {
+                        "system": "http://hl7.org/fhir/sid/us-npi",
+                        "value": "9999999995"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "Jakubowski832",
+                        "given": [
+                            "Janeth814"
+                        ],
+                        "prefix": [
+                            "Dr."
+                        ]
+                    }
+                ],
+                "telecom": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "system": "email",
+                        "use": "work",
+                        "value": "Janeth814.Jakubowski832@example.com"
+                    }
+                ],
+                "resourceType": "Practitioner"
+            }
         },
-        "beneficiary": {
-          "reference": "urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
+        {
+            "fullUrl": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983",
+            "resource": {
+                "id": "a9f20dc1-5147-3789-bcef-bbecb41c5983",
+                "meta": {
+                    "lastUpdated": "2020-04-28T20:27:52.708+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+                    ],
+                    "source": "#pPvYTutotnO7vQfK",
+                    "versionId": "4"
+                },
+                "active": true,
+                "address": [
+                    {
+                        "city": "METHUEN",
+                        "country": "US",
+                        "line": [
+                            "70 EAST STREET"
+                        ],
+                        "postalCode": "01844",
+                        "state": "MA"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "system": "https://github.com/synthetichealth/synthea",
+                        "value": "a9f20dc1-5147-3789-bcef-bbecb41c5983"
+                    },
+                    {
+                        "system": "http://hl7.org/fhir/sid/us-npi",
+                        "value": "9941339100"
+                    }
+                ],
+                "name": "HOLY FAMILY HOSPITAL",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "9786870156"
+                    }
+                ],
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "code": "prov",
+                                "display": "Healthcare Provider",
+                                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+                            }
+                        ],
+                        "text": "Healthcare Provider"
+                    }
+                ],
+                "resourceType": "Organization"
+            }
         },
-        "payor": [
-          {
-            "display": "Blue Cross Blue Shield",
-            "reference": "urn:uuid:cc6ac93e-2bf4-11ea-a5f5-a4d18ccf5172"
-          }
-        ],
-        "status": "active",
-        "subscriberId": "12345",
-        "type": {
-          "text": "Blue Cross Blue Shield"
+        {
+            "fullUrl": "urn:uuid:4ac41715-fcbd-421c-8796-9b2c9706dd3f",
+            "resource": {
+                "id": "4ac41715-fcbd-421c-8796-9b2c9706dd3f",
+                "meta": {
+                    "lastUpdated": "2020-04-28T20:28:00.008+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition",
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-condition"
+                    ],
+                    "source": "#cabiJIK51sD2iz4N",
+                    "versionId": "10"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "code": "encounter-diagnosis",
+                                "display": "Encounter Diagnosis",
+                                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+                            }
+                        ]
+                    }
+                ],
+                "clinicalStatus": {
+                    "coding": [
+                        {
+                            "code": "active",
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+                        }
+                    ]
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "code": "1234",
+                            "display": "Examplitis",
+                            "system": "http://example.org/fhir/conditions"
+                        }
+                    ],
+                    "text": "Examplitis"
+                },
+                "encounter": {
+                    "reference": "urn:uuid:5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82"
+                },
+                "onsetDateTime": "2018-10-21T21:22:15-07:00",
+                "recordedDate": "2018-10-21T21:22:15-07:00",
+                "subject": {
+                    "reference": "urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
+                },
+                "verificationStatus": {
+                    "coding": [
+                        {
+                            "code": "confirmed",
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+                        }
+                    ]
+                },
+                "resourceType": "Condition"
+            }
         },
-        "resourceType": "Coverage"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:cc6ac93e-2bf4-11ea-a5f5-a4d18ccf5172",
-      "resource": {
-        "id": "cc6ac93e-2bf4-11ea-a5f5-a4d18ccf5172",
-        "meta": {
-          "lastUpdated": "2020-04-28T20:27:53.069+00:00",
-          "source": "#pPvYTutotnO7vQfK",
-          "versionId": "10"
+        {
+            "fullUrl": "urn:uuid:cc6ac2fe-2bf4-11ea-a5f5-a4d18ccf5172",
+            "resource": {
+                "id": "cc6ac2fe-2bf4-11ea-a5f5-a4d18ccf5172",
+                "meta": {
+                    "lastUpdated": "2020-04-28T20:27:52.686+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-coverage"
+                    ],
+                    "source": "#pPvYTutotnO7vQfK",
+                    "versionId": "10"
+                },
+                "beneficiary": {
+                    "reference": "urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
+                },
+                "relationship": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+                            "code": "self"
+                        }
+                    ],
+                    "text": "Self"
+                },
+                "payor": [
+                    {
+                        "display": "Blue Cross Blue Shield",
+                        "reference": "urn:uuid:cc6ac93e-2bf4-11ea-a5f5-a4d18ccf5172"
+                    }
+                ],
+                "status": "active",
+                "subscriberId": "12345",
+                "type": {
+                    "text": "Blue Cross Blue Shield"
+                },
+                "resourceType": "Coverage"
+            }
         },
-        "active": true,
-        "address": [
-          {
-            "city": "Chicago",
-            "line": [
-              "Michigan Plaza"
-            ],
-            "postalCode": "60007",
-            "state": "IL"
-          }
-        ],
-        "identifier": [
-          {
-            "system": "http://hl7.org/fhir/sid/us-npi",
-            "value": "0000010005"
-          }
-        ],
-        "name": "Blue Cross Blue Shield",
-        "telecom": [
-          {
-            "system": "phone",
-            "use": "work",
-            "value": "1-800-262-2583"
-          }
-        ],
-        "resourceType": "Organization"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:4f7c997a-d6a4-11ea-814c-b5baa7182d44",
-      "resource": {
-        "id": "4f7c997a-d6a4-11ea-814c-b5baa7182d44",
-        "active": true,
-        "address": [
-          {
-            "city": "Chicago",
-            "line": [
-              "1 Main"
-            ],
-            "postalCode": "60007",
-            "state": "IL"
-          }
-        ],
-        "identifier": [
-          {
-            "system": "http://hl7.org/fhir/sid/us-npi",
-            "value": "0000010005"
-          }
-        ],
-        "name": "Da Vinci Intermediary",
-        "telecom": [
-          {
-            "system": "phone",
-            "use": "work",
-            "value": "1-800-555-5555"
-          }
-        ],
-        "resourceType": "Organization"
-      }
-    }
-  ],
-  "timestamp": "2020-08-18T03:30:38.388714Z",
-  "type": "message",
-  "resourceType": "Bundle"
+        {
+            "fullUrl": "urn:uuid:cc6ac93e-2bf4-11ea-a5f5-a4d18ccf5172",
+            "resource": {
+                "id": "cc6ac93e-2bf4-11ea-a5f5-a4d18ccf5172",
+                "meta": {
+                    "lastUpdated": "2020-04-28T20:27:53.069+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-hrex/StructureDefinition/hrex-organization"
+                    ],
+                    "source": "#pPvYTutotnO7vQfK",
+                    "versionId": "10"
+                },
+                "active": true,
+                "address": [
+                    {
+                        "city": "Chicago",
+                        "line": [
+                            "Michigan Plaza"
+                        ],
+                        "postalCode": "60007",
+                        "state": "IL"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "system": "http://hl7.org/fhir/sid/us-npi",
+                        "value": "0000010005"
+                    }
+                ],
+                "name": "Blue Cross Blue Shield",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "work",
+                        "value": "1-800-262-2583"
+                    }
+                ],
+                "resourceType": "Organization"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:4f7c997a-d6a4-11ea-814c-b5baa7182d44",
+            "resource": {
+                "id": "4f7c997a-d6a4-11ea-814c-b5baa7182d44",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+                    ]
+                },
+                "active": true,
+                "address": [
+                    {
+                        "city": "Chicago",
+                        "line": [
+                            "1 Main"
+                        ],
+                        "postalCode": "60007",
+                        "state": "IL"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "system": "http://hl7.org/fhir/sid/us-npi",
+                        "value": "0000010005"
+                    }
+                ],
+                "name": "Da Vinci Intermediary",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "work",
+                        "value": "1-800-555-5555"
+                    }
+                ],
+                "resourceType": "Organization"
+            }
+        }
+    ],
+    "timestamp": "2020-08-18T03:30:38.388714Z",
+    "type": "message",
+    "resourceType": "Bundle"
 }

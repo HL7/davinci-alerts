@@ -1,11 +1,6 @@
 [admit-notification-intermediate-translate-bundle]: Bundle-admit-notification-intermediate-translate-bundle.html
 [admit-notification-intermediate-transmit-bundle]: Bundle-admit-notification-intermediate-transmit-bundle.html
 [admit-notification-message-bundle-01]: Bundle-admit-notification-message-bundle-01.html
-[admit-notification-messageheader-01]: MessageHeader-admit-notification-messageheader-01.html
-[admit-notification-messageheader-02]: MessageHeader-admit-notification-messageheader-02.html
-[adt-notification-condition-01]: Condition-adt-notification-condition-01.html
-[adt-notification-coverage-01]: Coverage-adt-notification-coverage-01.html
-[adt-notification-encounter-01]: Encounter-adt-notification-encounter-01.html
 [AdmitNotificationMessageHeader]: StructureDefinition-admit-notification-messageheader.html
 [ADTNotificationConditionProfile]: StructureDefinition-adt-notification-condition.html
 [ADTNotificationCoverageProfile]: StructureDefinition-adt-notification-coverage.html
@@ -21,9 +16,7 @@
 [TransferNotificationMessageHeader]: StructureDefinition-transfer-notification-messageheader.html
 [DirectAlerts]: ConceptMap-direct-alerts.html
 [discharge-notification-message-bundle-01]: Bundle-discharge-notification-message-bundle-01.html
-[discharge-notification-messageheader-01]: MessageHeader-discharge-notification-messageheader-01.html
 [NotificationForwarderCapabilityStatement]: CapabilityStatement-notification-forwarder.html
 [NotificationReceiverCapabilityStatement]: CapabilityStatement-notification-receiver.html
 [NotificationSenderCapabilityStatement]: CapabilityStatement-notification-sender.html
 [transfer-notification-message-bundle-01]: Bundle-transfer-notification-message-bundle-01.html
-[transfer-notification-messageheader-01]: MessageHeader-transfer-notification-messageheader-01.html

@@ -1,6 +1,12 @@
 {
     "resourceType": "StructureDefinition",
     "id": "adt-notification-coverage",
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile",
+            "valueCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage|6.1.0"
+        }
+    ],
     "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-coverage",
     "version": "1.0.0",
     "name": "ADTNotificationCoverageProfile",
@@ -19,7 +25,7 @@
             ]
         }
     ],
-    "description": "The Da Vinci Admit/Discharge/Transfer Notification Coverage Profile is based on the [HRex Coverage Profile](http://build.fhir.org/ig/HL7/davinci-ehrx/StructureDefinition-hrex-coverage.html) and constrains the Patient resource referenced by the `Coverage.beneficiary` element to be found in the same message Bundle.",
+    "description": "The Da Vinci Admit/Discharge/Transfer Notification Coverage Profile is based on the [HRex Coverage Profile](http://build.fhir.org/ig/HL7/davinci-ehrx/StructureDefinition-hrex-coverage.html) and constrains the Patient resource referenced by the `Coverage.beneficiary` element to be found in the same message Bundle.\nThe Da Vinci Admit/Discharge/Transfer Notification Coverage Profile is based on the US Core Coverage Profile and complies with US Core versions 6.1.0, and 7.0.0.  It constrains the resources referenced by the `Coverage.beneficiary` element to the US Core Patient Profile. It also constrains the referenced resource to be an entry in the message Bundle that it populates.",
     "jurisdiction": [
         {
             "coding": [
@@ -34,7 +40,7 @@
     "kind": "resource",
     "abstract": false,
     "type": "Coverage",
-    "baseDefinition": "http://hl7.org/fhir/us/davinci-hrex/StructureDefinition/hrex-coverage",
+    "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage",
     "derivation": "constraint",
     "differential": {
         "element": [
@@ -48,6 +54,9 @@
                 "type": [
                     {
                         "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                        ],
                         "aggregation": [
                             "bundled"
                         ]

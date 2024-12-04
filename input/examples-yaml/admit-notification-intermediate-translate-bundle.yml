@@ -313,6 +313,8 @@ entry:
       identifier:
         - system: 'https://github.com/synthetichealth/synthea'
           value: a9f20dc1-5147-3789-bcef-bbecb41c5983
+        - system: 'http://hl7.org/fhir/sid/us-npi'
+          value: '9941339100'
       name: HOLY FAMILY HOSPITAL
       telecom:
         - system: phone

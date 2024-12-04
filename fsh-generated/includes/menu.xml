@@ -24,9 +24,6 @@
       <li>
         <a href="https://hl7.org/fhir/us/davinci-hrex/2024Sep/davinci-guiding-principles.html">Da Vinci Guiding Principles</a>
       </li>
-      <li>
-        <a href="exchanging.html">Architectural Approach</a>
-      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -47,7 +44,7 @@
         <a href="guidance.html">Framework</a>
       </li>
       <li>
-        <a href="security.html">Security</a>
+        <a href="security.html">Privacy, Safety, and Security</a>
       </li>
       <li>
         <a href="usecases.html">Admit/Discharge/Transfer Use Case</a>
@@ -78,22 +75,32 @@
         <a href="artifacts.html#5">Bundle Examples</a>
       </li>
       <li>
-        <a href="artifacts.html#6">Condition Examples</a>
+        <a href="artifacts.html#6">Capability Statement</a>
       </li>
       <li>
-        <a href="artifacts.html#7">Coverage Examples</a>
+        <a href="artifacts.html#7">Concept Maps</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Base Specs
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://hl7.org/fhir/R4/index.html">FHIR R4 Spec</a>
       </li>
       <li>
-        <a href="artifacts.html#8">Encounter Examples</a>
+        <a href="https://hl7.org/fhir/us/davinci-hrex/STU1.1/index.html">HRex 1.1.0</a>
       </li>
       <li>
-        <a href="artifacts.html#9">MessageHeader Examples</a>
+        <a href="https://hl7.org/fhir/us/core/STU3.1.1/index.html">US Core 3.1.1</a>
       </li>
       <li>
-        <a href="artifacts.html#10">Capability Statement</a>
+        <a href="https://hl7.org/fhir/us/core/STU6.1/index.html">US Core 6.1.0</a>
       </li>
       <li>
-        <a href="artifacts.html#11">Concept Maps</a>
+        <a href="https://hl7.org/fhir/us/core/STU7/index.html">US Core 7.0.0</a>
       </li>
     </ul>
   </li>
@@ -103,13 +110,19 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=51225442">Project Home</a>
+        <a href="https://chat.fhir.org/#narrow/channel/205917-Da-Vinci-Alerts">Discussion Forum</a>
       </li>
       <li>
-        <a href="https://chat.fhir.org/#narrow/stream/179283-Da-Vinci">Discussion Forum</a>
+        <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=51225442">Project Page</a>
       </li>
       <li>
-        <a href="http://hl7.org/fhir-issues">Propose a Change</a>
+        <a href="https://confluence.hl7.org/display/DVP/Notifications+Implementer+Support">Implementer Support</a>
+      </li>
+      <li>
+        <a href="https://jira.hl7.org/secure/Dashboard.jspa?selectPageId=11905">Specification Dashboard</a>
+      </li>
+      <li>
+        <a href="https://jira.hl7.org/secure/">Propose a Change</a>
       </li>
       <li>
         <a href="downloads.html">Downloads</a>

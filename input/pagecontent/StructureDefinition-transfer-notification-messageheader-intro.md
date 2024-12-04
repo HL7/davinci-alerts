@@ -14,10 +14,11 @@ The following data-elements are mandatory (i.e., data MUST be present) or must b
 1. An event code of "notification-transfer"
 1. An event focus reference to the Da Vinci Admit/Discharge/Transfer Notification Encounter Profile which will be bundled in the message
 
-### Examples
+<!-- {% raw %} ### Examples
 
 {% include examples-note.md %}
 
 - [{{base_type}} Example]({{base_type}}-{{base_id}}-01.html)
 
 {% include link-list.md %}
+ {% endraw %} -->

@@ -55,7 +55,7 @@
 [MessageHeader]: {{site.data.fhir.path}}messageheader.html
 [Must Support]: guidance.html#must-support
 [MustSupport flag]: {{site.data.fhir.path}}profiling.html#mustsupport
-[US Core Must Support]: {{site.data.fhir.uscore}}/general-guidance.html#must-support
+[US Core Must Support]: {{site.data.fhir.uscore7}}/must-support.html
 [Notification Sender CapabilityStatement]: CapabilityStatement-notification-sender.html
 [Notification Forwarder CapabilityStatement]: CapabilityStatement-notification-forwarder.html
 [NotificationAdmitDischarge]: GraphDefinition-admit-discharge.html
@@ -70,20 +70,20 @@
 [SMART Backend Services]: https://www.hl7.org/fhir/smart-app-launch/backend-services.html#backend-services
 [Terminology]: artifacts.html#3
 [FHIR security guidance]:{{site.data.fhir.path}}security.html
-[US Core Condition Encounter Diagnosis Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-condition-encounter-diagnosis.html
-[US Core Encounter Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-encounter.html
-[US Core Location Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-location.html
-[US Core Patient Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-patient.html
+[US Core Condition Encounter Diagnosis Profile]: {{site.data.fhir.uscore7}}StructureDefinition-us-core-condition-encounter-diagnosis.html
+[US Core Encounter Profile]: {{site.data.fhir.uscore7}}StructureDefinition-us-core-encounter.html
+[US Core Location Profile]: {{site.data.fhir.uscore7}}StructureDefinition-us-core-location.html
+[US Core Patient Profile]: {{site.data.fhir.uscore7}}StructureDefinition-us-core-patient.html
 [Standard error responses]: {{site.data.fhir.path}}messageheader-operation-process-message.html
 [OperationOutcome]: {{site.data.fhir.path}}operationoutcome.html
-[US Core Provenance Profile]: {{site.data.fhir.uscore}}/StructureDefinition-us-core-provenance.html
-[Basic Provenance for HIE Redistribution and Transformation]: {{site.data.fhir.uscore}}/basic-provenance.html#hie-redistribution
+[US Core Provenance Profile]: {{site.data.fhir.uscore7}}/StructureDefinition-us-core-provenance.html
+[Basic Provenance for HIE Redistribution and Transformation]: {{site.data.fhir.uscore7}}/basic-provenance.html#hie-redistribution
 [Admit Notification Intermediate Translate Bundle]: Bundle-admit-notification-intermediate-translate-bundle.html
 [Admit Notification Intermediate Transmit Bundle]:Bundle-admit-notification-intermediate-transmit-bundle.html
 [HL7 Da Vinci Guiding Principles]: https://confluence.hl7.org/display/DVP/Da+Vinci+Clinical+Advisory+Council+Members?preview=/66940155/66942916/Guiding%20Principles%20for%20Da%20Vinci%20Implementation%20Guides.pdf
-[US Core guidance]: {{site.data.fhir.uscore}}/StructureDefinition-us-core-condition.html#mandatory-and-must-support-data-elements
+[US Core guidance]: {{site.data.fhir.uscore7}}/StructureDefinition-us-core-condition-encounter-diagnosis.html#mandatory-and-must-support-data-elements
 [Da Vinci]: http://www.hl7.org/about/davinci/index.cfm?ref=common
-[US Core]: {{site.data.fhir.uscore}}/index.html
+[US Core]: {{site.data.fhir.uscore7}}/index.html
 [Infrastructure and Messaging (INM)]: http://www.hl7.org/Special/committees/inm/index.cfm
 [Propose a Change]: https://jira.hl7.org/issues/?filter=12844&jql=project%20%3D%20FHIR%20AND%20Specification%20%3D%20%22US%20Da%20Vinci%20Alerts%20(FHIR)%20%5BFHIR-us-davinci-alerts%5D%22
 [V3 Value SetActEncounterCode]: http://terminology.hl7.org/ValueSet/v3-ActEncounterCode
@@ -97,3 +97,7 @@
 [Change Log]: changes.html
 [Unsolicited Notification ImplementationGuide Resource]: ImplementationGuide-hl7.fhir.us.davinci-alerts.html
 [Direct ADT to Da Vinci Alerts ConceptMap]: ConceptMap-direct-alerts.html
+[FHIR R4 core]: {{site.data.fhir.path}}fhir-spec.zip
+[FHIR core downloads]: {{site.data.fhir.path}}downloads.html
+[validator]: https://fhir.github.io/latest-ig-validator/org.hl7.fhir.validator.jar
+[instructions on how to use it]: https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator

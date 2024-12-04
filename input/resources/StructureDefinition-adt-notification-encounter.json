@@ -1,6 +1,16 @@
 {
     "resourceType": "StructureDefinition",
     "id": "adt-notification-encounter",
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile",
+            "valueCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|3.1.1"
+        },
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile",
+            "valueCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0"
+        }
+    ],
     "url": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter",
     "version": "1.0.0",
     "name": "ADTNotificationEncounterProfile",
@@ -19,7 +29,7 @@
             ]
         }
     ],
-    "description": "The Da Vinci Admit/Discharge/Transfer Notification Encounter Profile is based on the [US Core Encounter Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-encounter.html) and constrains the resources referenced by the `Encounter.Subject` to the [US Core patient Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-patient.html) ,`Encounter.participant.individual` to the [US Core Practitioner Profile](http://hl7.org/fhir/us/davinci-hrex/StructureDefinition/hrex-practitioner), and `Encounter.Location` to the [US Core Location Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-location.html). It also constrains these referenced resources to be found in the same message Bundle.",
+    "description": "The Da Vinci Admit/Discharge/Transfer Notification Encounter Profile is based on the US Core Encounter Profile and complies with US Core versions 3.1.1, 6.1.0, and 7.0.0.  It constrains the resources referenced by the `Encounter.Subject` to the US Core Patient Profile ,`Encounter.participant.individual` to the US Core Practitioner Profile and `Encounter.Location` to the US Core Location Profile. It also constrains these referenced resources to be entries in the message Bundle that it populates.",
     "jurisdiction": [
         {
             "coding": [
@@ -76,7 +86,7 @@
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://hl7.org/fhir/us/davinci-hrex/StructureDefinition/hrex-practitioner"
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
                         ],
                         "aggregation": [
                             "bundled"
