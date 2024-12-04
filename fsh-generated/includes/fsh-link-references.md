@@ -1,6 +1,7 @@
 [admit-notification-intermediate-translate-bundle]: Bundle-admit-notification-intermediate-translate-bundle.html
 [admit-notification-intermediate-transmit-bundle]: Bundle-admit-notification-intermediate-transmit-bundle.html
 [admit-notification-message-bundle-01]: Bundle-admit-notification-message-bundle-01.html
+[admit-notification-message-bundle-02]: Bundle-admit-notification-message-bundle-02.html
 [AdmitNotificationMessageHeader]: StructureDefinition-admit-notification-messageheader.html
 [ADTNotificationConditionProfile]: StructureDefinition-adt-notification-condition.html
 [ADTNotificationCoverageProfile]: StructureDefinition-adt-notification-coverage.html

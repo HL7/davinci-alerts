@@ -1,10 +1,7 @@
 
 {% assign base_id = {{include.id}} %}
-{% assign base_type = {{site.data.structuredefinitions.[base_id].type}} %}
-
-### Introduction
-
-{{ site.data.structuredefinitions.[base_id].description }}
+{% assign profile_url = {{site.data.structuredefinitions.[base_id].url}} %}
+ 
 
 ### Mandatory and Must Support Data Elements
 
@@ -19,10 +16,6 @@ The following data-elements are mandatory (i.e., data MUST be present) or must b
 - Note that for the admission/transfer/discharge scenario, `Condition.encounter` is a "reverse link" to the Encounter resource and cannot be traversed from the MessageHeader within the Message Bundle.
 - The `reference` attribute is required for `Condition.encounter` so there is no question how to find the resource inside the bundle - the use of *only* an `identifier` attribute (in other words, a logical reference) is not permitted.
 
-<!-- {% raw %} ### Examples
-
 {% include examples-note.md %}
-
-- [{{base_type}} Example]({{base_type}}-{{base_id}}-01.html) {% endraw %} -->
 
 {% include link-list.md %}

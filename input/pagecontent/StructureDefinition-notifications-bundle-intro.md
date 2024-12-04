@@ -1,9 +1,7 @@
 {% assign base_id = {{include.id}} %}
-{% assign base_type = {{site.data.structuredefinitions.[base_id].type}} %}
+{% assign profile_url = {{site.data.structuredefinitions.[base_id].url}} %}
 
-### Introduction
 
-{{ site.data.structuredefinitions.[base_id].description }}
 
 ### Mandatory and Must Support Data Elements
 
@@ -21,9 +19,7 @@ The following data-elements are mandatory (i.e., data MUST be present) or must b
 
 The elements `Bundle.total`, `Bundle.entry.search`, `Bundle.entry.request`, and `Bundle.entry.response` are Cardinality = 0..0 (in other words, constrained out) because of the invariants `bdl-1`.`bdl-3`.`bdl-3`. and `bdl-4` defined in the FHIR Bundle resource.
 
-<!-- {% raw %} ### Examples
 
-- [Bundle Admit Notification Message Bundle 01]
-- [Bundle Discharge Notification Message Bundle 01] {% endraw %} -->
+{% include examples-note.md %}
 
 {% include link-list.md %}

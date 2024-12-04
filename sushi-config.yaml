@@ -102,6 +102,7 @@ groups:
     description: These are Bundle example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.
     resources:
       - Bundle/admit-notification-message-bundle-01
+      - Bundle/admit-notification-message-bundle-02
       - Bundle/discharge-notification-message-bundle-01
       - Bundle/transfer-notification-message-bundle-01
       - Bundle/admit-notification-intermediate-translate-bundle
@@ -136,7 +137,7 @@ groups:
 
   CapabilityStatement:
     name: CapabilityStatements 
-    description: |
+    description: |-
      There are **3 Capability Statements** defining computable definitions of FHIR conformance expectations of the RESTful transactions and specific profiles for each of the Da Vinci Notification Roles. They provide the base conformance rules that may be used for system compatibility testing, code generation, or as the basis for a conformance assessment.
 
      The following table summarizes how these CapabilityStatements applies to the Da Vinci Notification Roles
@@ -147,7 +148,6 @@ groups:
       |Intermediary |Da Vinci Notification Receiver| Da Vinci Notification Forwarder|
       |Recipient |Da Vinci Notification Receiver |-|
       {: .grid}
-
     resources:
       - CapabilityStatement/notification-sender
       - CapabilityStatement/notification-receiver

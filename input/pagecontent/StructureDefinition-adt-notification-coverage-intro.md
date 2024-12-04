@@ -1,10 +1,8 @@
 
 {% assign base_id = {{include.id}} %}
-{% assign base_type = {{site.data.structuredefinitions.[base_id].type}} %}
+{% assign profile_url = {{site.data.structuredefinitions.[base_id].url}} %}
 
-### Introduction
 
-{{ site.data.structuredefinitions.[base_id].description }}
 
 ### Mandatory and Must Support Data Elements
 
@@ -25,10 +23,6 @@ The following data-elements are mandatory (i.e., data MUST be present) or must b
 - Note that for the admission/transfer/discharge scenario, the `Coverage.beneficiary` is a "reverse link" to the Patient resource and cannot be traversed from the MessageHeader within the Message Bundle.  There is no mechanism to enforce profiles in a message on a reverse link except via GraphDefinition.
 - The `Coverage.payor` references the [HRex Organization Profile] profile to mandate an identifier and support additional identifier types.
 
-<!-- {% raw %} ### Examples
-
 {% include examples-note.md %}
-
-- [{{base_type}} Example]({{base_type}}-{{base_id}}-01.html) {% endraw %} -->
 
 {% include link-list.md %}

@@ -128,7 +128,7 @@
       {
         "id": "CapabilityStatement",
         "name": "CapabilityStatements",
-        "description": "There are **3 Capability Statements** defining computable definitions of FHIR conformance expectations of the RESTful transactions and specific profiles for each of the Da Vinci Notification Roles. They provide the base conformance rules that may be used for system compatibility testing, code generation, or as the basis for a conformance assessment.\n\nThe following table summarizes how these CapabilityStatements applies to the Da Vinci Notification Roles\n\n |Role|server-mode|client-mode|\n | --- | :---: | :---: |\n |Sender |-| Da Vinci Notification Sender|\n |Intermediary |Da Vinci Notification Receiver| Da Vinci Notification Forwarder|\n |Recipient |Da Vinci Notification Receiver |-|\n {: .grid}\n"
+        "description": "There are **3 Capability Statements** defining computable definitions of FHIR conformance expectations of the RESTful transactions and specific profiles for each of the Da Vinci Notification Roles. They provide the base conformance rules that may be used for system compatibility testing, code generation, or as the basis for a conformance assessment.\n\nThe following table summarizes how these CapabilityStatements applies to the Da Vinci Notification Roles\n\n |Role|server-mode|client-mode|\n | --- | :---: | :---: |\n |Sender |-| Da Vinci Notification Sender|\n |Intermediary |Da Vinci Notification Receiver| Da Vinci Notification Forwarder|\n |Recipient |Da Vinci Notification Receiver |-|\n {: .grid}"
       }
     ],
     "resource": [
@@ -155,7 +155,16 @@
           "reference": "Bundle/admit-notification-message-bundle-01"
         },
         "description": "Admit Notification Message Bundle example",
-        "name": "Admit Notification Message Bundle",
+        "name": "Admit Notification Message Bundle 01",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
+        "groupingId": "BundleExamples"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/admit-notification-message-bundle-02"
+        },
+        "description": "This Admit Notification Message Bundle example illustrates referencing a Device for the author and sender in the MessageHeader.",
+        "name": "Admit Notification Message Bundle 02",
         "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
         "groupingId": "BundleExamples"
       },

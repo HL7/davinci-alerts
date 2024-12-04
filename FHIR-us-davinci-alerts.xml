@@ -14,7 +14,8 @@
 <artifact deprecated="true" id="Encounter/admit-discharge-notification-encounter-01" key="Encounter-admit-discharge-notification-encounter-01" name="Admit Discharge Notification Encounter 01"/>
 <artifact id="Bundle/admit-notification-intermediate-translate-bundle" key="Bundle-admit-notification-intermediate-translate-bundle" name="Admit Notification Intermediate Translate Bundle"/>
 <artifact id="Bundle/admit-notification-intermediate-transmit-bundle" key="Bundle-admit-notification-intermediate-transmit-bundle" name="Admit Notification Intermediate Transmit Bundle"/>
-<artifact id="Bundle/admit-notification-message-bundle-01" key="Bundle-admit-notification-message-bundle-01" name="Admit Notification Message Bundle"/>
+<artifact id="Bundle/admit-notification-message-bundle-01" key="Bundle-admit-notification-message-bundle-01" name="Admit Notification Message Bundle 01"/>
+<artifact id="Bundle/admit-notification-message-bundle-02" key="Bundle-admit-notification-message-bundle-02" name="Admit Notification Message Bundle 02"/>
 <artifact deprecated="true" id="MessageHeader/admit-notification-messageheader-01" key="MessageHeader-admit-notification-messageheader-01" name="Admit Notification Messageheader 01"/>
 <artifact deprecated="true" id="Condition/adt-notification-condition-01" key="Condition-adt-notification-condition-01" name="Admit/Transfer/Discharge Notification Condition 01"/>
 <artifact deprecated="true" id="Coverage/adt-notification-coverage-01" key="Coverage-adt-notification-coverage-01" name="Admit/Transfer/Discharge Notification Coverage 01"/>

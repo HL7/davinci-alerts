@@ -1,14 +1,14 @@
 {
-    "id": "admit-notification-message-bundle-01",
+    "id": "admit-notification-message-bundle-02",
     "meta": {
         "extension": [
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Admit Notification Message Bundle 01"
+                "valueString": "Admit Notification Message Bundle 02"
             },
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "Admit Notification Message Bundle example"
+                "valueMarkdown": "This Admit Notification Message Bundle example illustrates referencing a Device for the author and sender in the MessageHeader."
             }
         ],
         "profile": [
@@ -17,23 +17,39 @@
     },
     "entry": [
         {
-            "fullUrl": "urn:uuid:31ab7fe2-e0ad-11ea-bf7c-864d2e68a322",
+            "fullUrl": "urn:uuid:358887d7-8538-45c1-ba51-b4c500eb5263",
             "resource": {
-                "id": "31ab7fe2-e0ad-11ea-bf7c-864d2e68a322",
+                "id": "358887d7-8538-45c1-ba51-b4c500eb5263",
                 "meta": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                            "valueString": "Admit Notification Messageheader with Device"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                            "valueMarkdown": "Admit Notification Messageheader example referencing a Device for the author and sender"
+                        }
+                    ],
                     "profile": [
-                        "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-messageheader",
                         "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/admit-notification-messageheader"
                     ]
                 },
                 "author": {
-                    "display": "Dr. Janeth814 Jakubowski832",
-                    "reference": "urn:uuid:0000016f-57cb-cdac-0000-00000000014a"
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/alternate-reference",
+                            "valueReference": {
+                                "reference": "urn:uuid:554fb743-38f0-459c-9069-237644374b87"
+                            }
+                        }
+                    ],
+                    "display": "automated authoring device"
                 },
                 "destination": [
                     {
                         "endpoint": "https://example.org/Endpoints/DaVinci-Notifications-Intermediary",
-                        "name": "Intermediary-Simulator"
+                        "name": "DaVinci-Notifications-Intermediary"
                     }
                 ],
                 "eventCoding": {
@@ -52,8 +68,15 @@
                     "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
                 },
                 "sender": {
-                    "display": "HOLY FAMILY HOSPITAL",
-                    "reference": "urn:uuid:a9f20dc1-5147-3789-bcef-bbecb41c5983"
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/alternate-reference",
+                            "valueReference": {
+                                "reference": "urn:uuid:554fb743-38f0-459c-9069-237644374b87"
+                            }
+                        }
+                    ],
+                    "display": "automated sending device"
                 },
                 "source": {
                     "contact": {
@@ -360,6 +383,42 @@
                     }
                 ],
                 "resourceType": "Location"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:554fb743-38f0-459c-9069-237644374b87",
+            "resource": {
+                "resourceType": "Device",
+                "id": "554fb743-38f0-459c-9069-237644374b87",
+                "identifier": [
+                    {
+                        "system": "http://example.org/fhir/device-ids",
+                        "value": "12345"
+                    }
+                ],
+                "type": [
+                    {
+                        "text": "Authoring Software"
+                    }
+                ],
+                "deviceName": [
+                    {
+                        "name": "Acme Authoring Device",
+                        "type": "manufacturer-name"
+                    }
+                ],
+                "manufacturer": "Acme",
+                "version": [
+                    {
+                        "value": "10.24-02"
+                    }
+                ],
+                "contact": [
+                    {
+                        "system": "url",
+                        "value": "http://example.org/"
+                    }
+                ]
             }
         },
         {
