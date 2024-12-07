@@ -5,7 +5,7 @@
 [Workflow]: workflow.html
 [Framework]: guidance.html
 [Admit/Discharge/Transfer Use Case]: usecases.html
-[Security]: security.html
+[Privacy, Safety, and Security]: security.html
 [Downloads]: downloads.html
 [Change Log]: changes.html
 [Unsolicited Notification ImplementationGuide Resource]: ImplementationGuide-hl7.fhir.us.davinci-alerts.html

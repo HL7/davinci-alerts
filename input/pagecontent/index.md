@@ -1,10 +1,8 @@
-<div class="note-to-balloters" markdown="1">
-
-**The January 2025 ballot addresses the following**
+<div class="stu-note" markdown="1">
 
 {% include whats-new-1.1.0-snapshot.md %}
 
-</div><!-- note-to-balloters -->
+</div><!-- stu-note -->
 
 Where possible, new and updated pre-publishing content are highlighted with green text and background - **This highlighting will be removed prior to publication**
 {:.new-content}
@@ -20,25 +18,29 @@ The [2019 CMS 45 CFR Part 156 NPRM] focuses on hospitalization notifications due
 
 This Implementation Guide is supported by the [Da Vinci] initiative which is a private effort to accelerate the adoption of Health Level Seven International Fast Healthcare Interoperability Resources (HL7® FHIR®) as the standard to support and integrate value-based care (VBC) data exchange across communities. Like all Da Vinci Implementation Guides, it follows the [HL7 Da Vinci Guiding Principles] for exchange of patient health information.  The guide is based upon the prior work from the [US Core] and [Da Vinci Health Record Exchange (HRex)] Implementation Guides. Changes to this specification are managed by the sponsoring HL7 [Infrastructure and Messaging (INM)] workgroup and are incorporated as part of the standard HL7 balloting process. You can suggest changes to this specification by creating a *change request tracker* by clicking on the [Propose a Change] link at the bottom of any page.
 
-### How to read this Guide (TODO! - Rewrite)
+<div class="bg-success" markdown="1">
+
+### How to read this Guide
 
 This Guide is divided into several pages which are listed at the top of each page in the menu bar.
 
-- [Home]\: The home page provides the introduction and background for the Da Vinci Unsolicited Notifications Project.
-- [Background]\: 
-- [Specification]:
-  - [Security]\: General security requirements and recommendations for {{site.title}} actors.
-  - [Framework]\: These pages provide guidance on the set of FHIR transactions and the FHIR artifacts used in a general framework to enable unsolicited notifications to care team members.
-  - [Admit/Discharge/Transfer Use Case]\: Unsolicited notifications for the Admission/Transfer/Discharge use cases are defined using the framework.
-- [FHIR Artifacts]\: These pages provide detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
-  - [Profiles]\: This page lists the set of Profiles that are defined in this guide.
-  - [Terminology]\: This page lists the value sets and code system defined for this guide.
-  - [Examples]\: List of links to all the examples used in this guide.
-  - [CapabilityStatements]\: This set of pages describes the expected FHIR capabilities of the various Da Vinci Notification actors.
-- [Support]:
-  - [Downloads]\: This page provides links to downloadable artifacts.
-- [Change Log]:
+- **[IG Home]**\: The home page provides the introduction and background for the Da Vinci Unsolicited Notifications Project.
+- **Background**\: This menu item links to:
+     - The Da Vinci Overview page provides an overview of the Da Vinci project, guidance on how to get involved, and where to find the use-case-specific IGs.
+    - The Da Vinci Guiding Principles page describes key principles that underlie all Da Vinci interoperability.
+- **Specification**\:
+  - [Scope and Usage]\: This page delineates the Da Vinci Unsolicited Notifications use case.
+  - [Roles and Actors]\: This page defines the roles and actors for Da Vinci Unsolicited Notifications.
+  - [Workflow]\: This page documents the general notification workflow between unsolicited notification senders and receivers.
+  - [Framework]\: This page defines the set of FHIR transactions and the FHIR artifacts used in a general framework to enable unsolicited notifications to care team members.
+  - [Privacy, Safety, and Security]\: General security requirements and recommendations for {{site.title}} actors.
+  - [Admit/Discharge/Transfer Use Case]\: Unsolicited notifications for the Admission/Transfer/Discharge use cases are defined using the Da Vinci Unsolicited Notifications framework.
+- **[FHIR Artifacts]**\: This page introduces and provides links to the profiles, Operations, ValueSets and other FHIR artifacts used in this implementation guide.
+- **Base Specs**\: This menu item links to the FHIR core specification and the US core specs underlying this IG.
+- **Support**\: This menu item links to support and guidance, download links for this IG, and guidance on tools and support for Da Vinci implementers.
+- **[Change Log]**\: This page documents the changes across the versions of Da Vinci Unsolicited Notifications implementation guide.
 
+</div><!-- new-content -->
 
 ### Credits
 

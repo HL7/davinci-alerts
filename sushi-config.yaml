@@ -193,7 +193,7 @@ pages:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
       valueCode: trial-use
-    title: Security
+    title: Privacy, Safety, and Security
   downloads.md:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status

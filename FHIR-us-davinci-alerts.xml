@@ -65,10 +65,10 @@
 <page key="guidance" name="Framework" url="guidance"/>
 <page key="index" name="Home (index)" url="index"/>
 <page deprecated="true" key="iglist" name="Implementation Registry (registry/iglist)" url="registry"/>
+<page key="security" name="Privacy, Safety, and Security"/>
 <page deprecated="true" key="profiles" name="Profiles and Extensions"/>
 <page key="roles" name="Roles and Actors"/>
 <page key="scope" name="Scope and Usage"/>
-<page key="security" name="Security" url="security"/>
 <page key="toc" name="Table of Contents" url="toc"/>
 <page deprecated="true" key="terminology" name="Terminology" url="terminology"/>
 <page key="ImplementationGuide-hl7.fhir.us.davinci-alerts" name="Unsolicited Notification ImplementationGuide Resource"/>

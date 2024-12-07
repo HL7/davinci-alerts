@@ -362,7 +362,7 @@ definition:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: trial-use
     - nameUrl: security.html
-      title: Security
+      title: Privacy, Safety, and Security
       generation: markdown
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status

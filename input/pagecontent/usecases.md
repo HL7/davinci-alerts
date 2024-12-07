@@ -135,7 +135,7 @@ The following example transactions show examples of using the `$process-message`
 
 <div class="bg-success" markdown="1">
 
-### Direct ADT to Da Vinci Notification Mappings:
+### Direct ADT to Da Vinci Notification Mappings
 
 Since May 1, 2021, CMS has required that hospitals send notifications
 electronically for admit, transfer, and discharge events to the patient's

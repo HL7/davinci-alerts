@@ -22,9 +22,9 @@ This project recognizes the existing FHIR (R2-R4) subscriptions framework as wel
   - The event can be for one or more patients.
 - The Sender has access to the Recipients/Intermediary FHIR endpoints.
   - Typically the discovery and management of this is an 'out-of-band' process
-- System level trust exists between the actors (refer to the [Security] Page for additional guidance).
+- System level trust exists between the actors (refer to the [Privacy, Safety, and Security] Page for additional guidance).
   - Clients have been authorized by the servers.
-- A secure information transport mechanism exists between the actors (refer to the [Security] Page for additional guidance).
+- A secure information transport mechanism exists between the actors (refer to the [Privacy, Safety, and Security] Page for additional guidance).
 - Patient consent allows exchange of data between the relevant systems.
   - It is assumed that consent is managed elsewhere.
 - Trading partners (in other words: Senders, Intermediaries, and Recipients) will use data use agreements (DUAs), business associate agreements (BAAs) and/or contracts to specify the use cases and scope and potential reuse or repurposing of data shared between two parties. These agreements can be directly between trading partners or at a trusted exchange level. See the [HL7 Da Vinci Guiding Principles] for further details.
