@@ -1,18 +1,18 @@
 
 The Da Vinci Unsolicited Notifications Implementation Guide was  supported by the [Da Vinci] initiative.
 
-### Version 1.1.0
+### Version {{site.data.ig.version}}
 
 - url: <https://hl7.org/fhir/us/davinci-alerts/STU1.1>
 - Based on FHIR version : 4.0.1
 
 The changes in this STU Update to Da Vinci Unsolicited Notifications Version 1.0.0 have been reviewed by the public through the HL7 STU update process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Infrastructure and Messaging work group.
 
-#### What's new in Version 1.1.0 of Da Vinci Unsolicited Notifications:
+#### What's new in Version {{site.data.ig.version}} of Da Vinci Unsolicited Notifications:
 
 ...TODO...
 
-#### Updates and Corrected Errata in Version 1.1.0:
+#### Updates and Corrected Errata in Version {{site.data.ig.version}}:
 
 **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
 

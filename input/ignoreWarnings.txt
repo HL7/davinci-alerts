@@ -33,7 +33,7 @@ WARNING: DA VINCI: The Propose a Change link must start with https://jira.hl7.or
 
 # === Other elements in instance match the slice(s) defined in the profile.  We have checked and confirmed that the targeted slices are not intended to match a slice === 
 
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle|1.1.0-preview (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle|1.1.0-snapshot (this may not be a problem, but you should check that it's not intended to match a slice)
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|7.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|7.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|7.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -56,10 +56,10 @@ Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/coverage-class|1.0.0
 
 
-# === The ternminology server is trying to resolve a sham coding system, 'http://example.org/fhir/conditions", for the sham condition code "Examplitis" which is used throughout the IG  demonstrate the transactions ===
+# === The terminology server is trying to resolve a sham coding systems, `http://example.org/fhir/conditions`, for the sham condition code "Examplitis", and `http://example.org/fhir/encounters` for "Examplotomy Encounter" which is used throughout the IG  demonstrate the transactions ===
 
-java.net.UnknownHostException: tx.fhir.org
 A definition for CodeSystem 'http://example.org/fhir/conditions' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://example.org/fhir/encounters' could not be found, so the code cannot be validated
 
 
 # === The Bundle intentionally includes entries that can only be traversed in reverse ( MessageHeader -> Encounter <- Condition ) ===
@@ -75,7 +75,7 @@ INFORMATION: CodeSystem/notification-event: CodeSystem: Most code systems define
 # === Since these profiles specify an aggregation mode(s) for the reference within a Bundle, the examples for them are entries in the Bundle examples ===
 
 The Implementation Guide contains no explicitly linked examples for this profile
-
+The Implementation Guide contains no examples for this profile
 
 # === This discriminator type is inherited from dependent profile (US Core) ===
 
@@ -91,4 +91,8 @@ INFORMATION: ConceptMap/direct-alerts: ConceptMap.group[0].source: Source Code S
 WARNING: ConceptMap/direct-alerts: ConceptMap.group[2]: No Source Code System, so the source codes cannot be checked
 WARNING: ConceptMap/direct-alerts: ConceptMap.group[4]: No Source Code System, so the source codes cannot be checked
 WARNING: ConceptMap/direct-alerts: ConceptMap.group[12]: No Target Code System, so the target codes cannot be checked
+
+# === The following code system is not discoverable because they are code systems in THO, but THO doesn't define the codes due to AHA NUBC Patient Discharge Status Codes IP issues, these codes were checked manually ===
+
+A definition for CodeSystem 'http://www.nubc.org/patient-discharge' could not be found, so the code cannot be validated
 

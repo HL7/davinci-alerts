@@ -16,11 +16,11 @@
     }
   ],
   "url": "http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts",
-  "version": "1.1.0-preview",
+  "version": "1.1.0-snapshot",
   "name": "DaVinciUnsolicitedNotifications",
   "title": "Da Vinci Unsolicited Notifications",
   "status": "active",
-  "date": "2024-08-27",
+  "date": "2024-12-06",
   "publisher": "HL7 International / Infrastructure And Messaging",
   "contact": [
     {
@@ -138,7 +138,7 @@
         },
         "description": "Admit Notification Intermediate Translate Bundle example",
         "name": "Admit Notification Intermediate Translate Bundle",
-        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle|1.1.0-snapshot",
         "groupingId": "BundleExamples"
       },
       {
@@ -147,7 +147,7 @@
         },
         "description": "Admit Notification Intermediate Transmit Bundle example",
         "name": "Admit Notification Intermediate Transmit Bundle",
-        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle|1.1.0-snapshot",
         "groupingId": "BundleExamples"
       },
       {
@@ -156,7 +156,7 @@
         },
         "description": "Admit Notification Message Bundle example",
         "name": "Admit Notification Message Bundle 01",
-        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle|1.1.0-snapshot",
         "groupingId": "BundleExamples"
       },
       {
@@ -165,7 +165,7 @@
         },
         "description": "This Admit Notification Message Bundle example illustrates referencing a Device for the author and sender in the MessageHeader.",
         "name": "Admit Notification Message Bundle 02",
-        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle|1.1.0-snapshot",
         "groupingId": "BundleExamples"
       },
       {
@@ -299,7 +299,7 @@
         },
         "description": "Discharge Notification Message Bundle example",
         "name": "Discharge Notification Message Bundle",
-        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle|1.1.0-snapshot",
         "groupingId": "BundleExamples"
       },
       {
@@ -335,7 +335,7 @@
         },
         "description": "Transfer Notification Message Bundle example",
         "name": "Transfer Notification Message Bundle",
-        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle",
+        "exampleCanonical": "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle|1.1.0-snapshot",
         "groupingId": "BundleExamples"
       }
     ],
