@@ -10,7 +10,7 @@ The changes in this STU Update to Da Vinci Unsolicited Notifications Version 1.0
 
 #### What's new in Version {{site.data.ig.version}} of Da Vinci Unsolicited Notifications:
 
-...TODO...
+{% include whats-new-1.1.0-snapshot.md %}
 
 #### Updates and Corrected Errata in Version {{site.data.ig.version}}:
 
@@ -26,6 +26,9 @@ The changes in this STU Update to Da Vinci Unsolicited Notifications Version 1.0
 8. **Applied**: Clarify that request is an event [FHIR-39546](https://jira.hl7.org/browse/FHIR-39546) See changes [Here](index.html#scope-and-usage) and [Here](index.html#roles)
 9. **Applied**: Fix typo and add links [FHIR-39548](https://jira.hl7.org/browse/FHIR-39548) See change [Here](guidance.html#formally-defining-the-da-vinci-notification-message)
 10. **Applied**: Define Acronym HIN [FHIR-39547](https://jira.hl7.org/browse/FHIR-39547) See change [Here](index.html#actors)
+11. **Applied**: Copy editing changes prior to comment period to ensure accuracy, clarity, and readability. [FHIR-48964](https://jira.hl7.org/browse/FHIR-48964)
+12. **Pre-Applied**: Alignment with Proposed Da Vinci standard pages/menu items. [FHIR-48965](https://jira.hl7.org/browse/FHIR-48965)
+13. **Pre-Applied**: Supports US-Core 3.1.1, 6.1.0, and 7.0.0 FHIR-48963](https://jira.hl7.org/browse/FHIR-48963)
 
 ### Version 1.0.0
 
