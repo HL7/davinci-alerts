@@ -1,6 +1,6 @@
 This Snapshot version of The Da Vinci Clinical Data Exchange (CDex) Implementation Guide is the proposed STU update of this guide. It is published for community review before the final publication of version 1.1.0. The sponsoring HL7 International Payer/Provider Information Exchange Work Group members agreed to and voted on the resolution of the community comments and edits to this guide. Below is an overview of significant changes in this version:
 
 1. Support for [US Core 6.1.0](https://hl7.org/fhir/us/core/STU6.1/) and US [Core 7.0.0](https://hl7.org/fhir/us/core/STU7/)
-2. [A new crossmapping](file:///Users/ehaas/Documents/FHIR/davinci-alerts/output/usecases.html#direct-adt-to-da-vinci-notification-mappings) between the [Direct ADT](https://directtrust.org/what-we-do/direct-secure-messaging) message elements and the Da Vinci Notification Admit-Transfer-Discharge Message Bundle.
+2. [A new crossmapping](usecases.html#direct-adt-to-da-vinci-notification-mappings) between the [Direct ADT](https://directtrust.org/what-we-do/direct-secure-messaging) message elements and the Da Vinci Notification Admit-Transfer-Discharge Message Bundle.
 3. Changes to the menu bar, external links to support and guidance, and rearrangement of the guide's contents to align with proposed Da Vinci standard pages and menu items.
 4. Implementers submitted multiple trackers since the publication of version 1.0.0. We have addressed them and applied the changes where applicable.

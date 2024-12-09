@@ -30,7 +30,7 @@ description: >-
 
 license: CC0-1.0
 date: 2024-12-06
-version: 1.1.0-snapshot
+version: 1.1.0-preview
 fhirVersion: 4.0.1
 
 dependencies:
@@ -249,9 +249,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   #   - comparison-argo/vs-observation-status-us-core-observation-smoking-status-status.html
   # ipa-comparison: 
   #   - '{current}'
-copyrightyear: '2023+'
+copyrightyear: '2024+'
 #releaselabel: CI Build
-releaselabel: STU1
+releaselabel: STU 1.1 Preview  # for publication
 # releaselabel: Ballot
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮

@@ -1,11 +1,11 @@
 {
-   "package-id": "hl7.fhir.us.davinci-alerts",
-   "version": "1.1.0-snapshot",
-   "path": "http://hl7.org/fhir/us/davinci-alerts/STU1.1-snapshot",
-   "mode": "working",
-   "status": "preview",
-   "sequence": "STU1",
-   "descmd": "This Snapshot version of The Da Vinci Clinical Data Exchange (CDex) Implementation Guide is the proposed STU update of this guide. It is published for community review before the final publication of version 1.1.0. The sponsoring HL7 International Payer/Provider Information Exchange Work Group members agreed to and voted on the resolution of the community comments and edits to this guide.",
-   "desc": "This Snapshot version of The Da Vinci Clinical Data Exchange (CDex) Implementation Guide is the proposed STU update of this guide. It is published for community review before the final publication of version 1.1.0. The sponsoring HL7 International Payer/Provider Information Exchange Work Group members agreed to and voted on the resolution of the community comments and edits to this guide.",
-   "changes": "changes.html"
+    "package-id": "hl7.fhir.us.davinci-alerts",
+    "version": "1.1.0-preview",
+    "path": "http://hl7.org/fhir/us/davinci-alerts/STU1.1-snapshot",
+    "mode": "working",
+    "status": "preview",
+    "sequence": "STU 1.1",
+    "descmd": "This preview version of The Da Vinci Clinical Data Exchange (CDex) Implementation Guide is is published for community review before the final publication of the unballoted STU Update version 1.1.0 of this guide. The sponsoring HL7 International / Infrastructure And Messaging Work Group members agreed to and voted on the resolution of the community comments and edits to this guide.",
+    "desc": "This preview of The Da Vinci Clinical Data Exchange (CDex) Implementation Guide is is published for community review before the final publication of the unballoted [*STU Update*](https://confluence.hl7.org/display/TSC/Use+of+STU+Updates+vs+STU+Additional+Ballots+-+2024+update) version 1.1.0 of this guide. The sponsoring [HL7 International / Infrastructure And Messaging Work Group](http://www.hl7.org/Special/committees/inm) members agreed to and voted on the resolution of the community comments and edits to this guide.",
+    "changes": "changes.html"
 }

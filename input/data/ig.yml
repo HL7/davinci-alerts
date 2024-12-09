@@ -8,7 +8,7 @@ extension:
 - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
   valueCode: inm
 url: http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts
-version: 1.1.0-snapshot
+version: 1.1.0-preview
 name: DaVinciUnsolicitedNotifications
 title: Da Vinci Unsolicited Notifications
 status: active
@@ -384,9 +384,9 @@ definition:
       generation: markdown
   parameter:
   - code: copyrightyear
-    value: 2023+
+    value: 2024+
   - code: releaselabel
-    value: STU1
+    value: STU 1.1 Preview
   - code: path-resource
     value: input/resources
   - code: path-resource
