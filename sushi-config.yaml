@@ -55,7 +55,6 @@ dependencies:
       Needed for systems supporting USCDI v1
 
   hl7.fhir.us.davinci-hrex:
-    uri: 'http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/hl7.fhir.us.davinci-hrex'
     version: 1.1.0-ballot  # 1.1.0 for publication
     id: hrex
 
