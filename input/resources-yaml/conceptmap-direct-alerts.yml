@@ -27,8 +27,9 @@ copyright: "\n1. This material contains content from LOINC (http://loinc.org). L
   SNOMED CT, which is copyright \xA9 2002+ International Health Terminology Standards
   Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and
   HL7. Implementer use of SNOMED CT is not covered by this agreement."
-sourceUri: https://directtrust.org/what-we-do/direct-secure-messaging
-targetUri: http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts
+
+# sourceUri: https://directtrust.org/what-we-do/direct-secure-messaging  # must be a valueset
+# targetUri: http://hl7.org/fhir/us/davinci-alerts/ImplementationGuide/hl7.fhir.us.davinci-alerts  # must be a valueset
 group:
 - source: http://loinc.org
   target: http://hl7.org/fhir/us/davinci-alerts/CodeSystem/notification-event

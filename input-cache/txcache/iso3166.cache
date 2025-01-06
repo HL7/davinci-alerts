@@ -1,52 +1,4 @@
 -------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:iso:std:iso:3166",
-  "code" : "US"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "United States of America",
-  "code" : "US",
-  "system" : "urn:iso:std:iso:3166",
-  "version" : "2018",
-  "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:iso:std:iso:3166",
-  "code" : "US"
-}, "url": "http://hl7.org/fhir/ValueSet/jurisdiction--0", "version": "4.0.1", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "United States of America",
-  "code" : "US",
-  "system" : "urn:iso:std:iso:3166",
-  "version" : "2018",
-  "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
 {"hierarchical" : false, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -66,8 +18,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:f1568e09-de1f-4286-ab07-8d79841f324c",
-    "timestamp" : "2024-08-28T05:28:52.313Z",
+    "identifier" : "urn:uuid:d09f3451-33bf-43d6-ab4f-8f956817cbb8",
+    "timestamp" : "2025-01-06T21:55:43.987Z",
     "total" : 249,
     "offset" : 0,
     "parameter" : [{
@@ -1359,8 +1311,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:c49a70be-af12-4a05-94c9-0f2304c7c4f1",
-    "timestamp" : "2024-08-28T05:28:52.438Z",
+    "identifier" : "urn:uuid:141bf089-f742-4a09-8dc4-f554f9e21500",
+    "timestamp" : "2025-01-06T21:55:44.469Z",
     "total" : 249,
     "offset" : 0,
     "parameter" : [{
@@ -2652,8 +2604,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:d5fa9210-1660-46bc-90e1-9e526a93b645",
-    "timestamp" : "2024-08-28T05:28:52.579Z",
+    "identifier" : "urn:uuid:fa5dcb20-d629-45dd-9c3c-7123ad694b7a",
+    "timestamp" : "2025-01-06T21:55:44.953Z",
     "total" : 249,
     "offset" : 0,
     "parameter" : [{
