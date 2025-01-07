@@ -1,11 +1,12 @@
-<div class="stu-note" markdown="1">
 
-{% include whats-new-1.1.0-snapshot.md %}
+<!-- {% raw %}
 
-</div><!-- stu-note -->
+{% include whats-new-1.1.0-snapshot.md %} 
 
 Where possible, new and updated pre-publishing content are highlighted with green text and background - **This highlighting will be removed prior to publication**
 {:.new-content}
+
+ {% endraw %} -->
 
 Key updates and detailed changes between this and prior versions are available on the [Change Log] page.
 {:.stu-note}
@@ -18,7 +19,7 @@ The [2019 CMS 45 CFR Part 156 NPRM] focuses on hospitalization notifications due
 
 This Implementation Guide is supported by the [Da Vinci] initiative which is a private effort to accelerate the adoption of Health Level Seven International Fast Healthcare Interoperability Resources (HL7® FHIR®) as the standard to support and integrate value-based care (VBC) data exchange across communities. Like all Da Vinci Implementation Guides, it follows the [HL7 Da Vinci Guiding Principles] for exchange of patient health information.  The guide is based upon the prior work from the [US Core] and [Da Vinci Health Record Exchange (HRex)] Implementation Guides. Changes to this specification are managed by the sponsoring HL7 [Infrastructure and Messaging (INM)] workgroup and are incorporated as part of the standard HL7 balloting process. You can suggest changes to this specification by creating a *change request tracker* by clicking on the [Propose a Change] link at the bottom of any page.
 
-<div class="bg-success" markdown="1">
+
 
 ### How to read this Guide
 
@@ -40,7 +41,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 - **Support**\: This menu item links to support and guidance, download links for this IG, and guidance on tools and support for Da Vinci implementers.
 - **[Change Log]**\: This page documents the changes across the versions of Da Vinci Unsolicited Notifications implementation guide.
 
-</div><!-- new-content -->
+
 
 ### Credits
 

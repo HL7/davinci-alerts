@@ -1,4 +1,4 @@
-<div class="bg-success" markdown="1">
+
 ### Da Vinci HRex Security and Privacy Requirements
 
 This implementation guide inherits all of the mandatory requirements and recommendations defined in the [HRex Security and Privacy] specification.   Implementers **SHALL** read and adhere to the guidance for the following topics:
@@ -16,7 +16,7 @@ This implementation guide inherits all of the mandatory requirements and recomme
  
 - [SMART Backend Services] **SHOULD** be used for system level authorization between Actors.
 - A future workflow is likely to use the [FHIR at Scale Taskforce (FAST)] National Directory and a common trust framework for discovery and registration.
-</div><!-- new-content -->
+
 
 ---
 

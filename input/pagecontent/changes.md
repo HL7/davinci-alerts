@@ -27,8 +27,8 @@ The Da Vinci Unsolicited Notifications Implementation Guide was  supported by th
 10. **Applied**: Define Acronym HIN [FHIR-39547](https://jira.hl7.org/browse/FHIR-39547) See change [Here](roles.html)
 11. **Applied**: Copy editing changes prior to comment period to ensure accuracy, clarity, and readability. [FHIR-48964](https://jira.hl7.org/browse/FHIR-48964)
 11.  **Applied**: Technical QA changes change to examples and conformance artifacts to meet the ig publication validation rules [FHIR-48966](https://jira.hl7.org/browse/FHIR-48966)
-12. **Pre-Applied**: Alignment with Proposed Da Vinci standard pages/menu items. [FHIR-48965](https://jira.hl7.org/browse/FHIR-48965) For example see changes [Here](index.html#how-to-read-this-guide)
-13. **Pre-Applied**: Supports US-Core 3.1.1, 6.1.0, and 7.0.0 [FHIR-48963](https://jira.hl7.org/browse/FHIR-48963)
+12. **Applied**: Alignment with Proposed Da Vinci standard pages/menu items. [FHIR-48965](https://jira.hl7.org/browse/FHIR-48965) For example see changes [Here](index.html#how-to-read-this-guide)
+13. **Applied**: Supports US-Core 3.1.1, 6.1.0, and 7.0.0 [FHIR-48963](https://jira.hl7.org/browse/FHIR-48963)
 
 ### Version 1.0.0
 

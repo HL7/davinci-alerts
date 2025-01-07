@@ -133,7 +133,7 @@ The following example transactions show examples of using the `$process-message`
 
 [^2]: Based on the [V3 Value SetActEncounterCode]  and [Discharge disposition] value sets.
 
-<div class="bg-success" markdown="1">
+
 
 ### Direct ADT to Da Vinci Notification Mappings
 
@@ -155,6 +155,6 @@ The following table shows the mapping between the Direct ADT message elements an
 
 {% include adt-mapping-table-generator.md %}
 
-</div><!-- new-content -->
+
 
 {% include link-list.md %}
