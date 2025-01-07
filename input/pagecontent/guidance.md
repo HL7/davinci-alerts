@@ -92,9 +92,9 @@ For all Da Vinci Notification Message Bundles, the following resources are manda
 1.  *All* resources needed for the Receiver or Intermediary to be able to interpret the notification and process the message *provided* that the resources have a traversal path to or from `MessageHeader.focus` resource.  These requirements are use case specific and need to be determined by the implementation community based on their data requirements.
 
 
-**Bundle Size:**
+**Bundle Size**
 
-For high-volume systems, implementers may have concerns about notification bundle size. Senders **SHOULD** consider message bundle size when creating a profile to decide what to include in the bundle to avoid large file size errors. There is documented standard approach to handling message bundles that are too big to process, but Recipients (and Intermediaries) **SHOULD** consider this when implementing this guide (e.g., send an error in the operation outcome message).
+For high-volume systems, implementers may have concerns about notification bundle size. Senders **SHOULD** consider message bundle size when creating a profile to decide what to include in the bundle to avoid large file size errors. There is no documented standard approach to handling message bundles that are too big to process, but Recipients (and Intermediaries) **SHOULD** consider this when implementing this guide (e.g., send an error in the operation outcome message).
 
 #### How to define the Message Bundle
 

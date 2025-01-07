@@ -1,17 +1,27 @@
 
-The Da Vinci Unsolicited Notifications Implementation Guide was  supported by the [Da Vinci] initiative.
+The Da Vinci Unsolicited Notifications Implementation Guide was supported by the [Da Vinci] initiative.
 
 ### Version {{site.data.ig.version}}
 
-- Publication Date: *TBD*
-- url: <https://hl7.org/fhir/us/davinci-alerts/STU1.1>
+- Publication Date: 2025-1-15
+- url: <https://hl7.org/fhir/us/davinci-alerts/STU1.1/>
 - Based on FHIR version : 4.0.1
 
-#### What's new in Version {{site.data.ig.version}} of Da Vinci Unsolicited Notifications:
+#### What's new in Version {{site.data.ig.version}} of CDex:
+
+This STU Update of the Da Vinci Clinical Data Exchange (CDex) Implementation Guide is the third published version of this guide. The sponsoring HL7 International/Infrastructure And Messaging Work Group members agreed to and voted on the resolution of the community review comments and edits to this guide. There are no updates from the 1.1.0-preview version. For a detailed list of the changes for previous versions, see the 1.1.0-preview version below.
+
+### Version 1.1.0-preview
+
+- Publication Date: 2024-12-11
+- url: <https://hl7.org/fhir/us/davinci-alerts/STU1.1-snapshot/>
+- Based on FHIR version : 4.0.1
+
+#### What's new in Version 1.1.0-preview of Da Vinci Unsolicited Notifications:
 
 {% include whats-new-1.1.0-snapshot.md %}
 
-#### Updates and Corrected Errata in Version {{site.data.ig.version}}:
+#### Updates and Corrected Errata in Version 1.1.0-preview:
 
 **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
 
