@@ -1,92 +1,88 @@
 == Suppressed Messages ==
 
-
-
-
-# === The Da Vinci Notifications IG inherits all of the mandatory requirements and recommendations defined in the HRex Security which  references the HL7 core security page. Therefore is it not necessary to repeat it in the Da Vinci Notifications IG notification page ===
+# 01. === The Da Vinci Notifications IG inherits all of the mandatory requirements and recommendations defined in the HRex Security, which references the HL7 core security page. Therefore, is it not necessary to repeat it in the Da Vinci Notifications IG notification page ===
 
 WARNING: DA VINCI: The Security page (security.html) should include a reference to the HL7 core security page (http://hl7.org/fhir/R4/security.html).
 
-
-# === Da Vinci Warning: These versions predated detailed change logs in the Da Vinci Notifications IG ===
+# 02. === Da Vinci Warning: These versions predated detailed change logs in the Da Vinci Notifications IG ===
 
 WARNING: DA VINCI: The Change Log page (changes.html) does not include any Jira tracker items links for the section with title Version 0.2.0
 WARNING: DA VINCI: The Change Log page (changes.html) does not include any Jira tracker items links for the section with title Version 0.1.0
 
-# === Da Vinci Warning: These sections will be added to Da Vinci Notifications in the next version ===
+# 03. === Da Vinci Warning: These sections will be added to Da Vinci Notifications in the next version ===
 
 WARNING: DA VINCI: The home page (index.html) must include an h3 section called Content and Organization.
 WARNING: DA VINCI: The home page (index.html) must include an h3 section called Dependencies.
 WARNING: DA VINCI: The home page (index.html) must include an h3 section called Intellectual Property Considerations.
 
-# === Da Vinci Warning: The existing sections will need to be reordered in the next version to meet these requirements ===
+# 04. === Da Vinci Warning: The existing sections and content will need to be rewritten in the next version to meet these requirements ===
 
 WARNING: DA VINCI: The first menu item under Background should have the label Reading this IG.
 WARNING: DA VINCI: The second menu item under Background should have the label Use Cases.
 WARNING: DA VINCI: There must be a menu item under Background called Project and Participants.
 WARNING: DA VINCI: The first menu item under Specification should have the label Conformance Expectations.
 
-# === Da Vinci Warning: applying this suggested link change causes  a build error ===
+# 05. === Da Vinci Warning: applying this suggested link change causes  a build error ===
 
 WARNING: DA VINCI: The Propose a Change link must start with https://jira.hl7.org/secure/CreateIssueDetails!init.jspa?pid=10405&issuetype=10600&customfield_11302=
 
-# === Da Vinci Warning: As a result of the comment period for version 1.1.0 Preview, there are no new Jira tracker items to apply for version 1.1.0. ===
+# 06. === Da Vinci Warning: There were no comments for version 1.1.0 Preview during its review period. Thus,  there are no new Jira tracker items to apply in version 1.1.0. ===
 
 WARNING: DA VINCI: The Change Log page (changes.html) does not include any Jira tracker items links for the section with title Version 1.1.0
 
-# === Other elements in instance match the slice(s) defined in the profile.  We have checked and confirmed that the targeted slices are not intended to match a slice === 
+# 07. === Other elements in instance match the slice(s) defined in the profile.  We have checked and confirmed that the targeted slices are not intended to match a slice === 
 
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# === The profile definitions conform to 3 versions of US Core Practitioner via `meta.profile'. This warning means the examples matches all of them, which is the intent.  Listing of all US conformant US Core profiles is an alternative to creating a single CDex Profile for Patient and Practitioner (or choosing a single US Core Profile) that conforms to  all three US Core versions.  We chose this option because it is direct (vs indirection) and thus easier to understand.  See related chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/multiple.20version.20of.20IG.20in.20meta.20profile.20warning  NOTE that the validator changes the order of the versions ===
+# 08. === The profile definitions conform to 3 versions of US Core Practitioner via `meta.profile'. This warning means the examples match all of them, which is the intent. Listing all US conformant US Core profiles is an alternative to creating a single CDex Profile for Patient and Practitioner (or choosing a single US Core Profile) that conforms to all three US Core versions. We chose this option because it is direct (vs indirection) and thus easier to understand. See related chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/multiple.20version.20of.20IG.20in.20meta.20profile.20warning  ===
 
 Found multiple matching profiles for urn:uuid:0000016f-57cb-cdac-0000-00000000014a among choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0, http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|7.0.0, http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|3.1.1
 
 
-# ===  These CodeSystems and ValueSets are in FHIR Core/THO and not under the direct control of Da Vinci editors === 
+# 09. ===  These CodeSystems and ValueSets are in FHIR Core/THO and not under the direct control of Da Vinci editors === 
 
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|1.0.0
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/coverage-class|1.0.0
 
 
-# === The terminology server is trying to resolve a sham coding systems, `http://example.org/fhir/conditions`, for the sham condition code "Examplitis", and `http://example.org/fhir/encounters` for "Examplotomy Encounter" which is used throughout the IG  demonstrate the transactions ===
+# 10 === The terminology server is trying to resolve a made-up coding system, `http://example.org/fhir/conditions`, for the made-up condition code "Examplitis", and `http://example.org/fhir/encounters` for "Examplotomy Encounter" which is used throughout the IG  demonstrate the transactions ===
 
 A definition for CodeSystem 'http://example.org/fhir/conditions' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://example.org/fhir/encounters' could not be found, so the code cannot be validated
 
 
-# === The Bundle intentionally includes entries that can only be traversed in reverse ( MessageHeader -> Encounter <- Condition ) ===
+# 11. === The Bundle intentionally includes entries that can only be traversed in reverse ( MessageHeader -> Encounter <- Condition ) ===
 
 Entry 'urn:uuid:4ac41715-fcbd-421c-8796-9b2c9706dd3f' isn't reachable by traversing forwards from the MessageHeader. Check that this is meant to be included (needed to process the message)
 Entry 'urn:uuid:cc6ac2fe-2bf4-11ea-a5f5-a4d18ccf5172' isn't reachable by traversing forwards from the MessageHeader. Check that this is meant to be included (needed to process the message)
 
 
-# ===  The Da Vinci Team is aware of this plans to move them in a future publication cycle ===
+# 12. ===  The Da Vinci Team is aware of this plans to move them in a future publication cycle ===
 
 INFORMATION: CodeSystem/notification-event: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-# === Since these profiles specify an aggregation mode(s) for the reference within a Bundle, the examples for them are entries in the Bundle examples ===
+# 13. === Since these profiles specify an aggregation mode(s) for the reference within a Bundle, the examples for them are entries in the Bundle examples ===
 
 The Implementation Guide contains no explicitly linked examples for this profile
 The Implementation Guide contains no examples for this profile
 
-# === This discriminator type is inherited from dependent profile (US Core) ===
+# 14. === This discriminator type is inherited from a dependent profile (US Core) ===
 
 The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 
-# === The Concept Map has been manually mapped and checked ===
+# 15. === The Concept Map has been manually mapped and checked ===
 
 INFORMATION: ConceptMap/direct-alerts: ConceptMap.group[7].target: Target Code System http://snomed.info/sct is only supported on the terminology server, so the target codes are not validated for performance reasons
 INFORMATION: ConceptMap/direct-alerts: ConceptMap.group[0].source: Source Code System http://loinc.org is only supported on the terminology server, so the source codes are not validated for performance reasons
 
-# === These Concepts are extension to the V2 code systems- see teh Concept map comments ===
+# 16. === These Concepts are extension to the V2 code systems- see the Concept Map's "comment" elements ===
 
 WARNING: ConceptMap/direct-alerts: ConceptMap.group[2]: No Source Code System, so the source codes cannot be checked
 WARNING: ConceptMap/direct-alerts: ConceptMap.group[4]: No Source Code System, so the source codes cannot be checked
 WARNING: ConceptMap/direct-alerts: ConceptMap.group[12]: No Target Code System, so the target codes cannot be checked
 
-# === The following code system is not discoverable because they are code systems in THO, but THO doesn't define the codes due to AHA NUBC Patient Discharge Status Codes IP issues, these codes were checked manually ===
+# 17. === The following code system is not discoverable because they are code systems in THO, but THO doesn't define the codes due to IP issues with AHA NUBC Patient Discharge Status Codes. These codes were checked manually. ===
 
 A definition for CodeSystem 'http://www.nubc.org/patient-discharge' could not be found, so the code cannot be validated
 
