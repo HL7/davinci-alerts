@@ -85,7 +85,7 @@ definition:
       on them.
   - id: DaVinciADTNotificationProfiles
     name: Da Vinci Admission/Discharge/Transfer Notification Profiles
-    description: Operations associated with CDex admission/discharge/transfer notifications
+    description: Operations associated with admission/discharge/transfer notifications
   - id: ValueSets
     name: 'Terminology: Value Sets'
     description: These define sets of codes used by systems conforming to this implementation

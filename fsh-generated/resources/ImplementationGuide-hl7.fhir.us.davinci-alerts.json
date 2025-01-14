@@ -108,7 +108,7 @@
       {
         "id": "DaVinciADTNotificationProfiles",
         "name": "Da Vinci Admission/Discharge/Transfer Notification Profiles",
-        "description": "Operations associated with CDex admission/discharge/transfer notifications"
+        "description": "Operations associated with admission/discharge/transfer notifications"
       },
       {
         "id": "ValueSets",
