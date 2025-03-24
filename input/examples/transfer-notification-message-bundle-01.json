@@ -1,5 +1,10 @@
 {
   "id": "transfer-notification-message-bundle-01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/notifications-bundle"
+    ]
+  },
   "entry": [
     {
       "fullUrl": "urn:uuid:7a5df5f4-e0bb-11ea-834a-864d2e68a322",
@@ -59,6 +64,10 @@
         "id": "5fe62cd5-bfcf-4d3b-a1e9-80d6f75d6f82",
         "meta": {
           "lastUpdated": "2020-04-28T21:32:28.234+00:00",
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter",
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+          ],
           "source": "#XuOGgQteQKG8lTEO",
           "versionId": "55"
         },
@@ -134,6 +143,9 @@
         "id": "06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b",
         "meta": {
           "lastUpdated": "2020-04-28T20:27:52.935+00:00",
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ],
           "source": "#pPvYTutotnO7vQfK",
           "versionId": "4"
         },
@@ -318,6 +330,9 @@
         "id": "09188b81-0d1d-453c-b0fa-203ef88c794c",
         "meta": {
           "lastUpdated": "2020-04-28T20:27:53.156+00:00",
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+          ],
           "source": "#pPvYTutotnO7vQfK",
           "versionId": "4"
         },
@@ -355,6 +370,9 @@
         "id": "0000016f-57cb-cdac-0000-00000000014a",
         "meta": {
           "lastUpdated": "2020-04-28T20:27:53.186+00:00",
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+          ],
           "source": "#pPvYTutotnO7vQfK",
           "versionId": "4"
         },
@@ -410,6 +428,9 @@
         "id": "a9f20dc1-5147-3789-bcef-bbecb41c5983",
         "meta": {
           "lastUpdated": "2020-04-28T20:27:52.708+00:00",
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+          ],
           "source": "#pPvYTutotnO7vQfK",
           "versionId": "4"
         },
@@ -463,6 +484,10 @@
         "id": "4ac41715-fcbd-421c-8796-9b2c9706dd3f",
         "meta": {
           "lastUpdated": "2020-04-28T20:28:00.008+00:00",
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-condition",
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+          ],
           "source": "#cabiJIK51sD2iz4N",
           "versionId": "10"
         },
@@ -520,6 +545,9 @@
         "id": "cc6ac2fe-2bf4-11ea-a5f5-a4d18ccf5172",
         "meta": {
           "lastUpdated": "2020-04-28T20:27:52.686+00:00",
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-coverage"
+          ],
           "source": "#pPvYTutotnO7vQfK",
           "versionId": "10"
         },
@@ -555,6 +583,9 @@
         "id": "cc6ac93e-2bf4-11ea-a5f5-a4d18ccf5172",
         "meta": {
           "lastUpdated": "2020-04-28T20:27:53.069+00:00",
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-hrex/StructureDefinition/hrex-organization"
+          ],
           "source": "#pPvYTutotnO7vQfK",
           "versionId": "10"
         },

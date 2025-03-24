@@ -17,7 +17,6 @@ v: {
   "system" : "http://snomed.info/sct",
   "version" : "http://snomed.info/sct/731000124108/version/20240901",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -44,11 +43,91 @@ v: {
   "error" : "The provided code 'http://snomed.info/sct#261665006' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type--0|7.0.0'",
   "class" : "UNKNOWN",
   "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "http://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-in-vs"
+      }],
+      "text" : "The provided code 'http://snomed.info/sct#261665006' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type--0|7.0.0'"
+    },
+    "location" : ["Coding.code"],
+    "expression" : ["Coding.code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "261665006",
+  "display" : "Unknown (qualifier value)"
+}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  },
+  {
+    "name" : "displayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Unknown",
+  "code" : "261665006",
+  "system" : "http://snomed.info/sct",
+  "version" : "http://snomed.info/sct/731000124108/version/20250301",
+  "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "261665006"
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type--0", "version": "7.0.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  },
+  {
+    "name" : "displayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Unknown",
+  "code" : "261665006",
+  "system" : "http://snomed.info/sct",
+  "version" : "http://snomed.info/sct/731000124108/version/20250301",
+  "severity" : "error",
+  "error" : "The provided code 'http://snomed.info/sct#261665006' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type--0|7.0.0'",
+  "class" : "UNKNOWN",
+  "server" : "http://tx.fhir.org/r4",
   "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
     "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
       "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
       "valueUrl" : "http://tx.fhir.org/r4"
     }],
