@@ -67,9 +67,7 @@
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter",
             "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-encounter"
-          ],
-          "source": "#DlfWMd7j9EX8TaLI",
-          "versionId": "54"
+          ]
         },
         "class": {
           "code": "EMER",
@@ -133,9 +131,7 @@
           "lastUpdated": "2020-04-28T20:27:52.935+00:00",
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-          ],
-          "source": "#pPvYTutotnO7vQfK",
-          "versionId": "4"
+          ]
         },
         "extension": [
           {
@@ -233,11 +229,11 @@
         "gender": "male",
         "identifier": [
           {
-            "system": "https://github.com/synthetichealth/synthea",
+            "system": "http://example.org/fhir/pid",
             "value": "06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
           },
           {
-            "system": "http://hospital.smarthealthit.org",
+            "system": "http://example.org/fhir/mrn",
             "type": {
               "coding": [
                 {
@@ -320,9 +316,7 @@
           "lastUpdated": "2020-04-28T20:27:53.156+00:00",
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
-          ],
-          "source": "#pPvYTutotnO7vQfK",
-          "versionId": "4"
+          ]
         },
         "address": {
           "city": "METHUEN",
@@ -360,9 +354,7 @@
           "lastUpdated": "2020-04-28T20:27:53.186+00:00",
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
-          ],
-          "source": "#pPvYTutotnO7vQfK",
-          "versionId": "4"
+          ]
         },
         "active": true,
         "address": [
@@ -418,9 +410,7 @@
           "lastUpdated": "2020-04-28T20:27:52.708+00:00",
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-          ],
-          "source": "#pPvYTutotnO7vQfK",
-          "versionId": "4"
+          ]
         },
         "active": true,
         "address": [
@@ -436,7 +426,7 @@
         ],
         "identifier": [
           {
-            "system": "https://github.com/synthetichealth/synthea",
+            "system": "http://example.org/fhir/pid",
             "value": "a9f20dc1-5147-3789-bcef-bbecb41c5983"
           },
           {
@@ -475,9 +465,7 @@
           "profile": [
             "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-condition",
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
-          ],
-          "source": "#cabiJIK51sD2iz4N",
-          "versionId": "10"
+          ]
         },
         "category": [
           {
@@ -535,9 +523,7 @@
           "lastUpdated": "2020-04-28T20:27:52.686+00:00",
           "profile": [
             "http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-coverage"
-          ],
-          "source": "#pPvYTutotnO7vQfK",
-          "versionId": "10"
+          ]
         },
         "beneficiary": {
           "reference": "urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b"
@@ -573,9 +559,7 @@
           "lastUpdated": "2020-04-28T20:27:53.069+00:00",
           "profile": [
             "http://hl7.org/fhir/us/davinci-hrex/StructureDefinition/hrex-organization"
-          ],
-          "source": "#pPvYTutotnO7vQfK",
-          "versionId": "10"
+          ]
         },
         "active": true,
         "address": [

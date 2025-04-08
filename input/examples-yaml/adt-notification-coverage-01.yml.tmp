@@ -9,8 +9,8 @@ meta:
   profile:
     - >-
       http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-coverage
-  # source: '#pPvYTutotnO7vQfK'
-  #versionId: '10'
+  # 
+  #
 beneficiary:
   reference: 'urn:uuid:06e1f0dd-5fbe-4480-9bb4-6b54ec02d31b'
   

@@ -9,8 +9,8 @@ meta:
   profile:
     - >-
      http://hl7.org/fhir/us/davinci-alerts/StructureDefinition/adt-notification-condition
-  #source: '#cabiJIK51sD2iz4N'
-  #versionId: '10'
+  #
+  #
 category:
   - coding:
       - code: encounter-diagnosis
